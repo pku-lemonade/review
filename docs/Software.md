@@ -25,6 +25,7 @@
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|------------------|--------------|
 | 2009 | CACM | Berkeley | Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures | operational intensity; memory bound; compute bound |
+| 2018 | FCCM | Keio University | Performance Prediction for Large-scale Heterogeneous Platforms | statistical models; scenario-based analysis technique|
 
 ### Performance Analysis
 
