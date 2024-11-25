@@ -25,7 +25,7 @@
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|------------------|--------------|
 | 2009 | CACM | Berkeley | Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures | operational intensity; memory bound; compute bound |
-| 2018 | FCCM | Keio University | Performance Prediction for Large-scale Heterogeneous Platforms | statistical models; scenario-based analysis technique|
+| 2021 | Intelligent Computing | UC Berkeley | Hierarchical Roofline Performance Analysis for Deep Learning Applications | hierarchical roofline model; deep learning |
 
 ### Performance Analysis
 
@@ -35,5 +35,7 @@ Refer to [Compiler](#compiler) techniques.
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|------------------|--------------|
-| 2018 | PPoPP | Tsinghua University| vSensor: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection | fixed-workload snippets; dependency propagation algorithm; lightweight on-line analysis algorithm |
-| 2020 | SC | Tsinghua University| ScalAna: automating scaling loss detection with graph analysis | program structure graph; program performance graph; backtracking root cause detection algorithm |
+| 2014 | ISPASS | Intel | A Top-Down Method for Performance Analysis and Counters Architecture | top Level breakdown; performance monitoring units |
+| 2018 | PPoPP | Tsinghua University | vSensor: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection | fixed-workload snippets; dependency propagation algorithm; lightweight on-line analysis algorithm |
+| 2020 | SC | Tsinghua University | ScalAna: automating scaling loss detection with graph analysis | program structure graph; program performance graph; backtracking root cause detection algorithm |
+| 2022 | PPoPP | Tsinghua University | Vapro: Performance Variance Detection and Diagnosis for Production-Run Parallel Applications | state transition graph; top-down variance diagnosis |
