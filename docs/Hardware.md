@@ -26,6 +26,8 @@
 
 ### Memory Architecture
 
+Refer to [Storage Systems](Software.md/#storage-systems).
+
 #### Cache
 
 #### Prefetcher
@@ -34,13 +36,17 @@
 
 ### Communication Architecture
 
+Refer to [Distributed Systems](Software.md/#distributed-systems).
+
 #### Network-on-Chip
 
 ### Dataflow Architecture
 
-#### Mapping
+Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
-#### Scheduling
+#### Data Mapping
+
+#### Task Scheduling
 
 ### Reconfigurable Architecture
 
