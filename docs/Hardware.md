@@ -7,7 +7,7 @@
 #### Survey
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2020 | Electronics | NUDT | Chiplet Heterogeneous Integration Technology—Status and Challenges | heterogeneous integration technology; interconnect interfaces and protocols; packaging technology|
 | 2022 | CCF THPC | ICT | Survey on chiplets: interface, interconnect and integration methodology | development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology |
 | 2024 | IEEE CASS | Tsinghua University | Chiplet Heterogeneous Integration Technology—Status and Challenges | wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance |
@@ -47,7 +47,7 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 #### Network-on-Chip
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2021 | HPCA | George Washington University | Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures | mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm |
 | 2022 | HPCA | Huawei | Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective | bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism |
 | 2023 | ICCAD | University of Central Florida | ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects | directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm |
@@ -55,7 +55,7 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 #### Router
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2022 | HPCA | Chalmers University of Technology | FastTrackNoC: A NoC with FastTrack Router Datapaths | non-turning hops; direct FastTrack flit path; zero-load latency analysis |
 | 2023 | HPCA | Tsinghua University | A Scalable Methodology for Designing Efficient Interconnection Network of Chiplets | interface grouping; hypercube construction algorithm; deadlock-free adaptive routing algorithm; safe/unsafe flow control; network interleaving method|
 
@@ -64,14 +64,14 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2024 | MICRO | Carnegie Mellon University | The TYR Dataflow Architecture: Improving Locality by Taming Parallelism | local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication |
 | 2024 | MICRO | UC Riverside | Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse | producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture|
 
 #### Data Mapping
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2021 | HPCA | Georgia Institute of Technology | MAGMA: An Optimization Framework for Mapping Multiple DNNs on Multiple Accelerator Cores | sub-accelerator selection; fine-grained job prioritization; MANGA crossover genetic operators |
 | 2023 | ISCA | Tsinghua University | MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search | GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration |
 | 2023 | VLSI | IIT Kharagpur | Application Mapping Onto Manycore Processor Architectures Using Active Search Framework | RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining |
@@ -81,7 +81,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 #### Task Scheduling
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2020 | TCAD | Arizona State University | Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems | offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling |
 | 2023 | ICCAD | Peking University | Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization | topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning|
 
@@ -94,7 +94,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 ### Modeling and Simulation
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2020 | MICRO | Georgia Institute of Technology; NVIDIA | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model |
 | 2022 | OSDI | UC Berkeley | Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning | inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization |
 | 2023 | MICRO | Peking University | TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis | 3D design space of fusion dataflow; tree-based description; tile-centric notation |
@@ -104,5 +104,5 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 ### Performance Analysis
 
 | Year | Venue | Authors | Title | Tags |
-|-|-|-|------------------|--------------|
+|-|-|-|-|-|
 | 2022 | ASPLOS | NC State University | ValueExpert: Exploring Value Patterns in GPU-accelerated Applications value-related inefficiencies | data value pattern recoginition; value flow graph; parallel intervals merging algorithm |
