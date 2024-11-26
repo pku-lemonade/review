@@ -4,6 +4,10 @@ site_author: 'PKU Lemonade'
 
 theme:
   name: material
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
 
 plugins:
   - search
