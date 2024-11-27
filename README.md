@@ -1,6 +1,6 @@
 # About NLR
 
-The New Lemon Review is a paper review list maintained by [LEMONADE](https://www.youwei.xyz) at Peking University. The list is updated regularly by prospective and current PhD students. It is intended to provide a comprehensive overview of the quintessential research ideas in the field of computer architecture and systems.
+The New Lemonade Review is a paper review list maintained by [LEMONADE](https://www.youwei.xyz) at Peking University. The list is updated regularly by prospective and current PhD students. It is intended to provide a comprehensive overview of the quintessential research ideas in the field of computer architecture and systems.
 
 ## Guidelines
 
