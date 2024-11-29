@@ -14,6 +14,17 @@
 
 ### Novel Memory Technologies
 
+#### NDP: DIMM
+
+##### Benchmark
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2021 | ATC | UBC | A Case Study of Processing-in-Memory in off-the-Shelf Systems | benchmark |
+| 2022 | IEEE Access | ETH | Benchmarking a New Paradigm: Experimental Analysis and Characterization of a Real Processing-in-Memory System | benchmark suite "PrIM" |
+| 2024 | CAL | KAIST | Analysis of Data Transfer Bottlenecks in Commercial PIM Systems: A Study With UPMEM-PIM | low MLP; manual data placement; unbalanced thread allocation and scheduling |
+| 2024 | HPCA | KAIST | Pathfinding Future PIM Architectures by Demystifying a Commercial PIM Technology | simulator "uPIMulator" |
+
 #### NDP: 3D-stacked DRAM
 
 #### CIM: SRAM
