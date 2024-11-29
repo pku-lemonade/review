@@ -36,6 +36,16 @@
 
 #### CIM: RRAM
 
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2019 | ASPLOS | Purdue & HP | PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference | Programmable and general-purpose ReRAM based ML Accelerator; Supports an instruction set; Has protential for DNN training; Provides simulator that accepts model |
+
+#### CIM: Hybrid Architecture
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Science | NTHU | Fusion of memristor and digital compute-in-memory processing for energy-efficient edge computing | Fusion of ReRAM and SRAM CiM; ReRAM SLC & MLC Hybrid; Current quantization; Weight shifting with compensation |
+
 #### NVM
 
 ## Computer Architecture
