@@ -67,8 +67,7 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 | 2006 | MICRO | Intel | Molecular Caches: A caching structure for dynamic creation of application-specific Heterogeneous cache regions | molecular cache architecture; application space identifier based cache partition; randy replacement algorithm |
 | 2011 | ISCA | Stanford University | Vantage: Scalable and Efficient Fine-Grain Cache Partitioning | managed-unmanaged region division; churn-based management; feedback-based aperture control |
 
-#### Hybrid Memory
-
+#### Heterogeneous Architecture
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2012 | HPCA | Georgia Institute of Technology | TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture | thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization; TAP-UCP for CPU; TAP-RRIP for GPU |
@@ -91,6 +90,7 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 | 2021 | HPCA | George Washington University | Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures | mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm |
 | 2022 | HPCA | Huawei | Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective | bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism |
 | 2023 | ICCAD | University of Central Florida | ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects | directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm |
+| 2024 | MICRO | Tsinghua University | Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture | Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm |
 
 #### Router
 
@@ -105,19 +105,29 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2019 | ASPLOS | Tsinghua University | Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators | buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm |
 | 2024 | MICRO | Carnegie Mellon University | The TYR Dataflow Architecture: Improving Locality by Taming Parallelism | local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication |
 | 2024 | MICRO | UC Riverside | Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse | producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture|
 
 #### Data Mapping
 
+##### Heuristic Algorithm
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2021 | HPCA | Georgia Tech | Heterogeneous Dataflow Accelerators for Multi-DNN Workloads | heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators |
 | 2021 | HPCA | Georgia Tech | MAGMA: An Optimization Framework for Mapping Multiple DNNs on Multiple Accelerator Cores | sub-accelerator selection; fine-grained job prioritization; MANGA crossover genetic operators |
 | 2023 | ISCA | Tsinghua University | MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search | GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration |
 | 2023 | VLSI | IIT Kharagpur | Application Mapping Onto Manycore Processor Architectures Using Active Search Framework | RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining |
-| 2023 | ISCA | Tsinghua University | Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators | inter-layer encoding method; temperal cut; spatial cut; RA tree analysis |
 | 2024 | HPCA | Tsinghua University | Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators | layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization |
+
+##### Optimization Modeling
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2020 | FPGA | ETH Zurich | Flexible Communication Avoiding Matrix Multiplication on FPGA with High-Level Synthesis | computation and I/O decomposition model for matrix multiplication; 1D array collapse mapping method; internal double buffering |
+| 2021 | HPCA | Georgia Tech | Heterogeneous Dataflow Accelerators for Multi-DNN Workloads | heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators |
+| 2023 | ISCA | Tsinghua University | Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators | inter-layer encoding method; temperal cut; spatial cut; RA tree analysis |
+
 
 #### Task Scheduling
 
@@ -134,15 +144,26 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 ### Modeling and Simulation
 
+#### Dataflow Architectrue
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2020 | MICRO | Georgia Tech; NVIDIA | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model |
+
 | 2022 | OSDI | UC Berkeley | Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning | inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization |
 | 2023 | MICRO | Peking University | TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis | 3D design space of fusion dataflow; tree-based description; tile-centric notation |
-| 2023 | ISPASS | Georgia Tech | ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale | graph-based training-loop execution; multi-dimensional heterogeneous topology construction; analytical network backend |
 | 2024 | ISCA | Stanford University | The Dataflow Abstract Machine Simulator Framework | communicating sequential processes; event-queue free execution; context-channel based description; asynchronous distributed time |
 
+#### Connection Architecture
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2020 | MICRO | Georgia Institute of Technology; NVIDIA | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model |
+| 2023 | ISPASS | Georgia Institute of Technology | ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale | graph-based training-loop execution; multi-dimensional heterogeneous topology construction; analytical network backend |
+| 2024 | ATC | Tsinghua University | Evaluating Chiplet-based Large-Scale Interconnection Networks via Cycle-Accurate Packet-Parallel Simulation | packet-centric simulation; critical resources recorading for process-order-induced deviations; unimportant stages elimination |
+
 ### Performance Analysis
+
+#### Redundancy Detection
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
@@ -150,4 +171,10 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2020 | SC | NC State | GVPROF: A Value Profiler for GPU-Based Clusters | temporal/spatial load/store redundancy; hierarchical sampling for reducing monitoring overhead; bidirectional search algorithm on dependency graph |
 | 2022 | ASPLOS | NC State | ValueExpert: Exploring Value Patterns in GPU-accelerated Applications value-related inefficiencies | data value pattern recoginition; value flow graph; parallel intervals merging algorithm |
 | 2022 | SC | NC State | Graph Neural Networks Based Memory Inefficiency Detection Using Selective Sampling | dead store; silent store; silent load; assembly-level procedural control-flow embedding; dynamic value semantic embedding; relative positional encoding for different compilation options |
-| 2023 | ICPE | NC State | DrGPU: A Top-Down Profiler for GPU | device memory stall; synchronization stall; instruction related stall; shared memory related stall |
+
+#### Stall Attribution
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | ICPE | NC State University | DrGPU: A Top-Down Profiler for GPU | device memory stall; synchronization stall; instruction related stall; shared memory related stall |
+| 2024 | MICRO | NUDT | HyFiSS: A Hybrid Fidelity Stall-Aware Simulator for GPGPUs | memory/compute structual/data stall; synchronization stall; control stall; idle stall; cooperative thread array-sets based SM sampling algorithm |
