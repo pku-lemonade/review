@@ -23,6 +23,12 @@
 | 2019 | NSDI | MIT | Shinjuku: Preemptive Scheduling for µsecond-scale Tail Latency | preemptive scheduling; single-address space OS; hardware-supported virtualization |
 | 2021 | SOSP | UPenn | When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone | reserve cores; non-conserving; request dispatching algorithm |
 
+#### LLM-based Application Scheduling
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | OSDI | SJTU | Parrot: Efficient Serving of LLM-based Applications with Semantic Variable | Semantic Variable; application-level information; LLM applications as first-class citizens |
+
 ## Parallel Computing
 
 ### Storage Systems
@@ -31,12 +37,34 @@
 
 #### LLM Inference Systems
 
+##### Long Sequence LLM Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | OSDI | SJTU & Alibaba | Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache | inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling |
+
 ##### P-D Disaggregated Systems
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | OSDI | PKU | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving | goodput-optimized; prefill-decoding interference；novel placement algorithm for p-d schema |
 | 2024 | ISCA | University of Washington | Splitwise: Efficient Generative LLM Inference Using Phase Splitting | optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments;  |
+
+##### KV Cache Reuse Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | UC Berkeley | BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching | offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests |
+| 2024 | Arxiv | UChicago | CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion |  multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices |
+| 2024 | Arxiv | UChicago | DroidSpeak: Enhancing Cross-LLM Communication | selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model |
+| 2024 | Arxiv | Microsoft | BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching | global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel |
+
+##### Fair Serving Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | Virginia Tech | Ensuring Fair LLM Serving Amid Diverse Applications | multi-tenant LLM platform; overload and
+interaction-driven throttling; weighted service counter |
 
 #### Communication-Computation Overlap
 
@@ -48,6 +76,12 @@
 | 2024 | ASPLOS | UIUC | Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM | distributed SpMM; sparsity-aware partition; Synchronous Stripes and Asynchronous Stripes |
 
 ### Heterogeneous Systems
+
+#### LLM Inference Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | CMU | Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs | LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming |
 
 ## Performance Evaluation
 
