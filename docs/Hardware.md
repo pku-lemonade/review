@@ -73,6 +73,7 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 | 2012 | HPCA | Georgia Institute of Technology | TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture | thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization; TAP-UCP for CPU; TAP-RRIP for GPU |
 | 2017 | TACO | Intel | HAShCache: Heterogeneity-Aware Shared DRAMCache for Integrated Heterogeneous Systems | heterogeneity-aware DRAMCache scheduling PrIS; temporal bypass ByE; spatial occupancy control chaining |
 | 2018 | ICS | NC State  | ProfDP: A Lightweight Profiler to Guide Data Placement in Heterogeneous Memory Systems | latency sensitivity; bandwidth sensitivity; moving factor based data placement |
+| 2023 | HPCA | Tsinghua University | Baryon: Efficient Hybrid Memory Management with Compression and Sub-Blocking | stage area and selective commit for stable block; dual-format metadata scheme; cacheline-aligned compression and two-level replacements |
 | 2024 | SC | Tsinghua University | Hydrogen: Contention-Aware Hybrid Memory for Heterogeneous CPU-GPU Architectures | fast memory decoupled partitioning; token-based slow memory migration; epoch-based sampling method; consistent hashing based reconfiguration |
 
 #### Prefetcher
@@ -90,6 +91,7 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 | 2021 | HPCA | George Washington University | Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures | mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm |
 | 2022 | HPCA | Huawei | Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective | bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism |
 | 2023 | ICCAD | University of Central Florida | ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects | directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm |
+| 2023 | MICRO | Tsinghua University | Heterogeneous Die-to-Die Interfaces: Enabling More Flexible Chiplet Interconnection Systems | heterogeneous interface hetero-PHY and hetero-channel; hetero-channel routing algorithm; application-aware scheduling |
 | 2024 | MICRO | Tsinghua University | Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture | Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm |
 
 #### Router
@@ -126,6 +128,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 |-|-|-|-|-|
 | 2020 | FPGA | ETH Zurich | Flexible Communication Avoiding Matrix Multiplication on FPGA with High-Level Synthesis | computation and I/O decomposition model for matrix multiplication; 1D array collapse mapping method; internal double buffering |
 | 2021 | HPCA | Georgia Tech | Heterogeneous Dataflow Accelerators for Multi-DNN Workloads | heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators |
+| 2023 | MICRO | Alibaba; CUHK | ArchExplorer: Microarchitecture Exploration Via Bottleneck Analysis | dynamic event-dependence graph(EDG); induced DEG based critical path construction; bottleneck-removal-driven DSE |
 | 2023 | ISCA | Tsinghua University | Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators | inter-layer encoding method; temperal cut; spatial cut; RA tree analysis |
 
 
@@ -135,8 +138,16 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 |-|-|-|-|-|
 | 2020 | TCAD | Arizona State University | Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems | offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling |
 | 2023 | ICCAD | Peking University | Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization | topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning|
+| 2023 | MICRO | Duke University | Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI | graph alignment algoithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm |
 
 ### Reconfigurable Architecture
+
+### many-core architecture
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | MICRO | Tsinghua University | MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference | slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm |
+| 2023 | MICRO | Yonsei University | McCore: A Holistic Management of High-Performance Heterogeneous Multicores | cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling |
 
 ## Electronic Design Automation
 
