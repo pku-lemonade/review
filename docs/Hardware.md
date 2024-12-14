@@ -36,9 +36,37 @@
 
 #### CIM: RRAM
 
+##### RRAM CiM Architecture
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2019 | ASPLOS | Purdue & HP | PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference | Programmable and general-purpose ReRAM based ML Accelerator; Supports an instruction set; Has protential for DNN training; Provides simulator that accepts model |
+| 2018 | ICRC | Purdue & HP | Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning | compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance |
+| 2023 | GLSVLSI | Yale | Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing | non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters |
+| 2019 | ASPDAC | POSTECH | In-memory batch-normalization for resistive memory based binary neural network hardware | in-memory batchnormalization schemes; integrate BN layers on crossbar |
+
+##### RRAM CiM: Convolutional layer
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2020 | Nature | THU | Fully hardware-implemented memristor convolutional neural network | fabrication of high-yield, high-performance and uniform memristor crossbar arrays; hybrid-
+training method; replication of multiple identical kernels for processing different inputs in parallel |
+| 2020 | TCAS-I | Georgia Tech | Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures | weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation |
+| 2019 | TED | PKU | Convolutional Neural Networks Based on RRAM Devices for Image Recognition and Online Learning Tasks | RRAM-based hardware implementation of CNN; expand kernel to the size of image |
+| 2021 | TCAD | SJTU | Efficient and Robust RRAM-Based Convolutional Weight Mapping With Shifted and Duplicated Kernel | shift and duplicate kernel (SDK) convolutional weight mapping architecture; parallel-window size allocation algorithm; kernel synchronization method |
+
+
+
+##### RRAM Non-ideal Effects
+
+Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. Refer to [Data Type](#data-type).
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2019 | DATE | Georgia Tech | Design of Reliable DNN Accelerator with Un-reliable ReRAM | dynamical fixed point data representation format; device variation aware training methodology |
+| 2020 | DAC | ASU | Accurate Inference with Inaccurate RRAM Devices: Statistical Data, Model Transfer, and On-line Adaptation | introduce statistical variations in knowledge distillation; On-line sparse adaptation with a small SRAM array |
+| 2020 | DATE | SJTU | Go Unary: A Novel Synapse Coding and Mapping Scheme for Reliable ReRAM-based Neuromorphic Computing | unary coding; priority mapping* |
+| 2022 | TCAD | ASU | Hybrid RRAM/SRAM in-Memory Computing for Robust DNN Acceleration | integrates an RRAM-based IMC macro with a digital SRAM macro using a programmable shifter to compensate for RRAM variations; ensemble learning |
 
 #### CIM: Hybrid Architecture
 
@@ -49,6 +77,16 @@
 #### NVM
 
 ## Computer Architecture
+
+### Data Type
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2017 | SFI | NUS | Beating Floating Point at its Own Game: Posit Arithmetic | Data type for universial number; Replacement for float; Highly adjustable; Dynamic range; regime, exponent and mantissa bits |
+| 2021 | TCAS-II | Ashoka University | Fixed-Posit: A Floating-Point Representation for Error-Resilient Applications | the number of regime and exponent bits are fixed; a design of fixedposit multiplier; |
+| 2022 | MICRO | SJTU | ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization | fixed-length adaptive numerical data type; combines the advantages of float and int for adapting to the importance of different values within a tensor; adaptive framework that selects the best type for each tensor |
+| 2024 | TCAD | HKU | DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference | adaptive data representation with variablelength encoding; hardware-aware quantization framework |
+
 
 ### Domain-specific Accelerators
 
