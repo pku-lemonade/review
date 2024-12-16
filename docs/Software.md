@@ -14,12 +14,6 @@
 
 ### Compiler
 
-#### CPU-GPU Systems
-
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2013 | SOSP | MSR Silicon Valley | Dandelion: a Compiler and Runtime for Heterogeneous  Systems | unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing |
-
 ## Operating Systems
 
 ### Virtualization
@@ -121,6 +115,21 @@ interaction-driven throttling; weighted service counter |
 | 2024 | ASPLOS | UIUC | Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM | distributed SpMM; sparsity-aware partition; Synchronous Stripes and Asynchronous Stripes |
 
 ### Heterogeneous Systems
+
+#### General Applications
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2013 | SOSP | MSR Silicon Valley | Dandelion: a Compiler and Runtime for Heterogeneous  Systems | unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing |
+
+#### Decentralized Training
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2019 | ASPLOS | USC | Hop: Heterogeneity-aware Decentralized Training | iteration gap; queue-based
+synchronization; backup workers and bounded staleness |
+| 2020 | ASPLOS | USC | Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training | Partial All-Reduce to re-
+duce synchronization cost; group scheduling to avoid conflicts |
 
 #### LLM Inference Systems
 
