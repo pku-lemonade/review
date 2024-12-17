@@ -16,6 +16,12 @@
 
 #### NDP: DIMM
 
+##### Communication
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | HPCA | PKU | DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing | high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication |
+| 2024 | ISCA | THU | NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures | gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing |
+
 ##### Benchmark
 
 | Year | Venue | Authors | Title | Tags |
@@ -23,14 +29,31 @@
 | 2021 | ATC | UBC | A Case Study of Processing-in-Memory in off-the-Shelf Systems | benchmark |
 | 2022 | IEEE Access | ETH | Benchmarking a New Paradigm: Experimental Analysis and Characterization of a Real Processing-in-Memory System | benchmark suite "PrIM" |
 | 2024 | CAL | KAIST | Analysis of Data Transfer Bottlenecks in Commercial PIM Systems: A Study With UPMEM-PIM | low MLP; manual data placement; unbalanced thread allocation and scheduling |
+| 2024 | IEEE Access | Univ. of Lisbon | NDPmulator: Enabling Full-System Simulation for Near-Data Accelerators From Caches to DRAM | simulator "PiMulator" based on Ramulator & gem5; full system support; multiple ISA support |
 | 2024 | HPCA | KAIST | Pathfinding Future PIM Architectures by Demystifying a Commercial PIM Technology | simulator "uPIMulator" |
+
+#### NDP: CXL
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2022 | MICRO | UCSB | BEACON: Scalable Near-Data-Processing Accelerators for Genome Analysis near Memory Pool with the CXL Support | scalable hardware accelerator inside CXL switch or bank | lossless memory expansion for CXL memory pools |
+| 2024 | ICS | Samsung | CLAY: CXL-based Scalable NDP Architecture Accelerating Embedding Layers | direct interconnect between DRAM clusters; dedicated memory address mapping scheme; Multi-CLAY system support through customized CXL switch |
+| 2024 | MICRO | SK Hyrix | Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders | CXL.mem protocol instead of CXL.io (DMA) for low-latency; "lightweight" threads to reduce address calculation overhead |
 
 #### NDP: 3D-stacked DRAM
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2013 | PACT | KAIST | Memory-centric System Interconnect Design with Hybrid Memory Cubes | memory-centric network; distributor-based topology for reduced latency; non-minimal routing for higher throughput | 
 | 2024 | DAC | SNU | MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models | NDP for MoE; activation movement; GPU-MoNDE load-balancing scheme |
 | 2024 | ASPLOS | PKU | SpecPIM: Accelerating Speculative Inference on PIM-Enabled System via Architecture-Dataflow Co-Exploration | algorithmic and architectural heterogeneity; PIM resource allocation; multi-model collaboration workflow |
+
+##### Benchmark
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2019 | DAC | ETHZ | NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning | simulator "Ramulator-PIM"; tracefile from Ramulator & run on zsim |
+| 2021 | CAL | Univ. of Virginia | MultiPIM: A Detailed and Configurable Multi-Stack Processing-In-Memory Simulator | simulator "MultiPIM"; multi-stack & virtual memory support; parallel offloading |
 
 #### CIM: SRAM
 
