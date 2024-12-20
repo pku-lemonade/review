@@ -203,10 +203,11 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 ### Reconfigurable Architecture
 
-### many-core architecture
+### Many-core Architecture
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2018 | MICRO | Seoul National University | RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors | graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method |
 | 2023 | MICRO | Tsinghua University | MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference | slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm |
 | 2023 | MICRO | Yonsei University | McCore: A Holistic Management of High-Performance Heterogeneous Multicores | cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling |
 
@@ -228,6 +229,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2014 | JPDC | IN2P3 Computing Center | Versatile, scalable, and accurate simulation of distributed applications and platforms | API based communication&computation description; informed model of TCP for moderate size grids; file based modular network representation technique |
 | 2020 | MICRO | Georgia Institute of Technology; NVIDIA | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model |
 | 2023 | ISPASS | Georgia Institute of Technology | ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale | graph-based training-loop execution; multi-dimensional heterogeneous topology construction; analytical network backend |
 | 2024 | ATC | Tsinghua University | Evaluating Chiplet-based Large-Scale Interconnection Networks via Cycle-Accurate Packet-Parallel Simulation | packet-centric simulation; critical resources recorading for process-order-induced deviations; unimportant stages elimination |
@@ -249,3 +251,11 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 |-|-|-|-|-|
 | 2023 | ICPE | NC State University | DrGPU: A Top-Down Profiler for GPU | device memory stall; synchronization stall; instruction related stall; shared memory related stall |
 | 2024 | MICRO | NUDT | HyFiSS: A Hybrid Fidelity Stall-Aware Simulator for GPGPUs | memory/compute structual/data stall; synchronization stall; control stall; idle stall; cooperative thread array-sets based SM sampling algorithm |
+
+#### Error Pattern
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2015 | IEEE TSM | NTU | Wafer Map Failure Pattern Recognition and Similarity Ranking for Large-Scale Data Sets | wafer map failure pattern; wafer map similarity ranking; radon/geometry-based feature extraction; WM-811K wafer map dataset |
+| 2018 | FAST | University of Chicago | Fail-Slow at Scale: Evidence of Hardware Performance Faults in Large Production Systems | conversion among fail-stop/slow/trasient; permanent/transient/partial slowdown; internal/external root causes |
+| 2019 | ATC | University of Chicago | IASO: A Fail-Slow Detection and Mitigation Framework for Distributed Storage Services | slowdown detection based on peer score; sub-root causes for five kinds of root causes |
