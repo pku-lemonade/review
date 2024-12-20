@@ -35,6 +35,12 @@
 | 2019 | NSDI | MIT | Shinjuku: Preemptive Scheduling for µsecond-scale Tail Latency | preemptive scheduling; single-address space OS; hardware-supported virtualization |
 | 2021 | SOSP | UPenn | When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone | reserve cores; non-conserving; request dispatching algorithm |
 
+#### Speculative Execution (Non-LLM)
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | MSR | Forerunner: Constraint-based Speculative Transaction Execution for Ethereum | constraint-based speculative transaction execution; many-future nature; specialized fast-path program |
+
 #### LLM-Related Scheduling
 
 ##### LLM Request Scheduling
@@ -49,7 +55,19 @@
 |-|-|-|-|-|
 | 2024 | OSDI | SJTU | Parrot: Efficient Serving of LLM-based Applications with Semantic Variable | Semantic Variable; application-level information; LLM applications as first-class citizens |
 | 2024 | OSDI | CUHK | Teola: Towards End-to-End Optimization of LLM-based Applications | mismatch between request-level scheduling and end-to-end  application performance; primitive-level dataflow graph; two-tier scheduling mechanism |
-| 2024 | Arxiv | Yext | SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering | constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements | 
+| 2024 | Arxiv | Yext | SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering | constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements |
+
+##### LLM Speculative Inference
+
+Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | F&M College | AMUSD: Asynchronous Multi-Device Speculative Decoding for LLM Acceleration | simultaneous and independent predictions; asynchronous speculative decoding; rollback mechanism |
+| 2024 | Arxiv | Purdue University | Constrained Decoding with Speculative Lookaheads | computational expense of generating lookaheads; speculated lookaheads; task specific reward function |
+| 2024 | Arxiv | Rutgers University | Interactive Speculative Planning: Enhance Agent Efficiency through Co-design of System and User Interface | active user intervention; speculative planning algorithm; UI-level rescheduling algorithm |
+| 2024 | Arxiv | USTC | Parallel Speculative Decoding with Adaptive Draft Length | adaptive draft length; pre-verify and post-verify; draft-then-verify framework; mutual waiting problem |
+| 2024 | Arxiv | SEU | SEED: Accelerating Reasoning Tree Construction via Scheduled Speculative Decoding | reasoning tree construction; parallel drafting with speculative decoding; FCFS queue verification |
 
 #### DNN Scheduling
 
@@ -74,6 +92,8 @@
 | 2024 | Arxiv | Northeastern University | LLM Inference Serving: Survey of Recent Advances and Opportunities | KV cache and memory management; LLM computation optimization; Cloud LLM deployment; focus on system-level enhancements |
 | 2024 | Arxiv | CSE Huawei | Software Performance Engineering (SPE) for Foundation Model-Powered Software (FMware) | performance concerns are often considered afterthoughts; continuous performance engineering; cognitive architecture design / communication protocols / tuning and optimization / deployment |
 | 2024 | Arxiv | PKU | Retrieval-Augmented Generation for AI-Generated Content: A Survey | Query Transformation; Data Augmentation; Recursive Retrieval; Chunk Optimization; Retriever Finetuning; Hybrid Retrieval; Re-ranking; Retrieval Transformation; Prompt Engineering; Decoding Tuning; Generator Finetuning; Output Rewrite; Adaptive Retrieval; Iterative RAG |
+| 2024 | Arxiv | WHU | A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges | personalized characteristics; perceive environmental information; utilize memory mechanisms; mutual interaction; agent self-reflection |
+| 2024 | Arxiv | PolyU | Deploying Foundation Model Powered Agent Services: A Survey | FM-powered agent services within the edge-cloud environment; low-level hardware perspective; high-level software perspective |
 
 ##### Long Sequence LLM Systems
 
@@ -86,7 +106,8 @@
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | OSDI | PKU | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving | goodput-optimized; prefill-decoding interference；novel placement algorithm for p-d schema |
-| 2024 | ISCA | University of Washington | Splitwise: Efficient Generative LLM Inference Using Phase Splitting | optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments;  |
+| 2024 | ISCA | University of Washington | Splitwise: Efficient Generative LLM Inference Using Phase Splitting | optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments |
+| 2024 | Arxiv | CMU | A System for Microserving of LLMs | fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction | 
 
 ##### KV Cache Reuse Systems
 
@@ -126,16 +147,16 @@ interaction-driven throttling; weighted service counter |
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2019 | ASPLOS | USC | Hop: Heterogeneity-aware Decentralized Training | iteration gap; queue-based
-synchronization; backup workers and bounded staleness |
-| 2020 | ASPLOS | USC | Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training | Partial All-Reduce to re-
-duce synchronization cost; group scheduling to avoid conflicts |
+| 2019 | ASPLOS | USC | Hop: Heterogeneity-aware Decentralized Training | iteration gap; queue-based synchronization; backup workers and bounded staleness |
+| 2020 | ASPLOS | USC | Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training | Partial All-Reduce to reduce synchronization cost; group scheduling to avoid conflicts |
 
 #### LLM Inference Systems
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | Arxiv | CMU | Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs | LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming |
+| 2024 | Arxiv | UIC | Priority-Aware Model-Distributed Inference at Edge Networks | priority-aware model distributed inference algorithm; prioritization of ML inference tasks; model-distributed inferencing mechanism |
+| 2024 | Arxiv | Yonsei University | Uncertainty-Aware Hybrid Inference with On-Device Small and Remote Large Language Models | hybrid language model; selectively skip uplink transmissions; uncertainty-aware |
 
 #### LLM Training Systems
 
