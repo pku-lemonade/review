@@ -59,7 +59,7 @@
 
 ##### LLM Speculative Inference
 
-Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
+Refer to non-LLM [speculative execution](#speculative-execution-non-llm)).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
