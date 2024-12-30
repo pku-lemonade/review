@@ -127,6 +127,8 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 |-|-|-|-|-|
 | 2006 | MICRO | Intel | Molecular Caches: A caching structure for dynamic creation of application-specific Heterogeneous cache regions | molecular cache architecture; application space identifier based cache partition; randy replacement algorithm |
 | 2011 | ISCA | Stanford University | Vantage: Scalable and Efficient Fine-Grain Cache Partitioning | managed-unmanaged region division; churn-based management; feedback-based aperture control |
+| 2016 | HPCA | Intel | Cache QoS: From concept to reality in the Intel® Xeon® processor E5-2600 v3 product family | cache monitoring technology; cache allocation technology; resource monitoring IDs (RMIDs); classes of service (CLOS) |
+| 2018 | EuroSys | PKU | DCAPS: dynamic cache allocation with partial sharing | dynamic fine-grained shared cache management; balance cache utilization and contention; online practical miss rate curve |
 
 #### Heterogeneous Architecture
 | Year | Venue | Authors | Title | Tags |

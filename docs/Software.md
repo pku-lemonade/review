@@ -10,6 +10,20 @@
 |-|-|-|-|-|
 | 2024 | Arxiv | SJTU | Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation | social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue |
 
+### LLM Finetune
+
+#### Coding LLM Finetune
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | UMD | HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages | large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools |
+
+### LLM-Powered AI Agent
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | THU | LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination | hierarchical language agent; real-time human-AI coordination; slow mind & fast mind |
+
 ## Programming
 
 ### Compiler
@@ -40,6 +54,7 @@
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | Arxiv | MSR | Forerunner: Constraint-based Speculative Transaction Execution for Ethereum | constraint-based speculative transaction execution; many-future nature; specialized fast-path program |
+| 2024 | Arxiv | Politecnico di Milano | Minimizing speculation overhead in a parallel recognizer for regular texts | speculation overhead; chunk automaton; reduced-interface DFA |
 
 #### LLM-Related Scheduling
 
@@ -87,10 +102,18 @@ Refer to non-LLM [speculative execution](#speculative-execution-non-llm)).
 
 ##### Surveys
 
+###### System Optimization Surveys
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | Arxiv | Northeastern University | LLM Inference Serving: Survey of Recent Advances and Opportunities | KV cache and memory management; LLM computation optimization; Cloud LLM deployment; focus on system-level enhancements |
 | 2024 | Arxiv | CSE Huawei | Software Performance Engineering (SPE) for Foundation Model-Powered Software (FMware) | performance concerns are often considered afterthoughts; continuous performance engineering; cognitive architecture design / communication protocols / tuning and optimization / deployment |
+| 2024 | Arxiv | CUHK | A Survey on Inference Optimization Techniques for Mixture of Experts Models | model compression; expert skip; expert merge; sparse to dense; expert parallel; expert offloading |
+
+###### Application Surveys
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
 | 2024 | Arxiv | PKU | Retrieval-Augmented Generation for AI-Generated Content: A Survey | Query Transformation; Data Augmentation; Recursive Retrieval; Chunk Optimization; Retriever Finetuning; Hybrid Retrieval; Re-ranking; Retrieval Transformation; Prompt Engineering; Decoding Tuning; Generator Finetuning; Output Rewrite; Adaptive Retrieval; Iterative RAG |
 | 2024 | Arxiv | WHU | A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges | personalized characteristics; perceive environmental information; utilize memory mechanisms; mutual interaction; agent self-reflection |
 | 2024 | Arxiv | PolyU | Deploying Foundation Model Powered Agent Services: A Survey | FM-powered agent services within the edge-cloud environment; low-level hardware perspective; high-level software perspective |
@@ -107,7 +130,14 @@ Refer to non-LLM [speculative execution](#speculative-execution-non-llm)).
 |-|-|-|-|-|
 | 2024 | OSDI | PKU | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving | goodput-optimized; prefill-decoding interference；novel placement algorithm for p-d schema |
 | 2024 | ISCA | University of Washington | Splitwise: Efficient Generative LLM Inference Using Phase Splitting | optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments |
-| 2024 | Arxiv | CMU | A System for Microserving of LLMs | fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction | 
+| 2024 | Arxiv | CMU | A System for Microserving of LLMs | fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction |
+
+##### KV Cache Evict Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | NIPS | UT-Austin | H$_2$O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models | sparsity for small cache size; heavy-hitters; greedy algorithm for low-cost policy |
+| 2024 | Arxiv | Fujitsu | CO2: Precise Attention Score Observation for improving KV Cache Replacement in Large Language Models | long measurement step; decay of the accumulated attention score; adjusting FIFO cache size |
 
 ##### KV Cache Reuse Systems
 
@@ -134,6 +164,7 @@ interaction-driven throttling; weighted service counter |
 | 2024 | ASPLOS | PKU | Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning | communication partition abstraction; hybrid LLM training tasks; 3-level decompose |
 | 2024 | ASPLOS | UW–Madison | T3: Transparent Tracking & Triggering for Fine-grained Overlap of Compute & Collectives | lightweight track and trigger; pre-programmed DMA commands; atomic memory update |
 | 2024 | ASPLOS | UIUC | Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM | distributed SpMM; sparsity-aware partition; Synchronous Stripes and Asynchronous Stripes |
+| 2024 | Arxiv | AMD | Optimizing ML Concurrent Computation and Communication with GPU DMA Engines | concurrent computation and communication; compute and memory interference among concurrent kernels; schedule prioritization and careful resource partitioning |
 
 ### Heterogeneous Systems
 
@@ -150,6 +181,12 @@ interaction-driven throttling; weighted service counter |
 | 2019 | ASPLOS | USC | Hop: Heterogeneity-aware Decentralized Training | iteration gap; queue-based synchronization; backup workers and bounded staleness |
 | 2020 | ASPLOS | USC | Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training | Partial All-Reduce to reduce synchronization cost; group scheduling to avoid conflicts |
 
+#### ML Training Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | SOSP | CMU | Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling | heterogeneity-aware and adaptivity-aware; ILP formulation for scheduling; bootstrapped from observing just a few mini-batches |
+
 #### LLM Inference Systems
 
 | Year | Venue | Authors | Title | Tags |
@@ -164,6 +201,7 @@ interaction-driven throttling; weighted service counter |
 |-|-|-|-|-|
 | 2024 | Arxiv | PKU | Demystifying Workload Imbalances in Large Transformer Model Training over Variable-length Sequences | data sampling imbalance; data packing imbalance; subgraph abstraction |
 | 2024 | Arxiv | Ant Group | EDiT: A Local-SGD-Based Efficient Distributed Training Method for Large Language Models | Local Stochastic Gradient Descent (Local SGD); consistent stragglers within heterogeneous devices; hierarchical distribution strategy on a two-dimensional device mesh; layer by layer forward syncing; pseudo-gradient penalty method |
+| 2024 | Arxiv | ZJU | Frenzy: A Memory-Aware Serverless LLM Training System for Heterogeneous GPU Clusters | efficient and low-overhead task-to-cluster scheduling; bin-packing algorithms; seamless and user-friendly |
 
 ## Performance Evaluation
 
