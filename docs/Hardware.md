@@ -149,13 +149,21 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 
 #### Network-on-Chip
 
+##### Topology
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2021 | HPCA | George Washington University | Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures | mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm |
 | 2022 | HPCA | Huawei | Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective | bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism |
+| 2024 | MICRO | Tsinghua University | Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture | Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm |
+
+##### Interconnect
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2012 | SIGCOMM | Carnegie Mellon University | On-Chip Networks from a Networking Perspective: Congestion and Scalability in Many-Core Interconnects | congestion control mechanism for bufferless NoC; interval-based congestion control algorithm; simple injection throttling algorithm |
 | 2023 | ICCAD | University of Central Florida | ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects | directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm |
 | 2023 | MICRO | Tsinghua University | Heterogeneous Die-to-Die Interfaces: Enabling More Flexible Chiplet Interconnection Systems | heterogeneous interface hetero-PHY and hetero-channel; hetero-channel routing algorithm; application-aware scheduling |
-| 2024 | MICRO | Tsinghua University | Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture | Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm |
 
 #### Router
 
@@ -256,8 +264,24 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 #### Error Pattern
 
+##### Manycore Architecture
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2009 | MICRO | University of Illinois | mSWAT: Low-Cost Hardware Fault Detection and Diagnosis for Multicore Systems | selective Triple Modular Redundant(TMR) replay method; symptom based fault detection; permanent/transient fault |
 | 2015 | IEEE TSM | NTU | Wafer Map Failure Pattern Recognition and Similarity Ranking for Large-Scale Data Sets | wafer map failure pattern; wafer map similarity ranking; radon/geometry-based feature extraction; WM-811K wafer map dataset |
+
+##### System Level
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2017 | SC | Argonne National Lab | Run-to-run Variability on Xeon Phi based Cray XC Systems | OS noise based core-level variability; tile-level varibility; memory mode varibility |
 | 2018 | FAST | University of Chicago | Fail-Slow at Scale: Evidence of Hardware Performance Faults in Large Production Systems | conversion among fail-stop/slow/trasient; permanent/transient/partial slowdown; internal/external root causes |
 | 2019 | ATC | University of Chicago | IASO: A Fail-Slow Detection and Mitigation Framework for Distributed Storage Services | slowdown detection based on peer score; sub-root causes for five kinds of root causes |
+
+#### Hardware Fault
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2014 | DTIS | A Survey on Simulation-Based Fault Injection Tools for Complex Systems | runtime fault injection; compile-time fault injection |
+| 2024 | Arxiv | George Washington University | Algorithmic Strategies for Sustainable Reuse of Neural Network Accelerators with Permanent Faults | stack-at-0/1 faults; weight register fault; invertible scaling and shifting technique; elementary tile operations for mantissa fault |

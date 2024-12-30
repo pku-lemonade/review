@@ -74,7 +74,7 @@
 
 ##### LLM Speculative Inference
 
-Refer to non-LLM [speculative execution](#speculative-execution-non-llm)).
+Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
@@ -228,6 +228,7 @@ Refer to [Compiler](#compiler) techniques.
 | 2020 | SC | Tsinghua University | ScalAna: automating scaling loss detection with graph analysis | program structure graph; program performance graph; backtracking root cause detection algorithm |
 | 2022 | PPoPP | Tsinghua University | Vapro: Performance Variance Detection and Diagnosis for Production-Run Parallel Applications | state transition graph; fixed workload snippets identification clustering algorithm; variance breakdown model; time of factors quantification method |
 | 2024 | Arxiv | UGA | Performance Debugging through Microarchitectural Sensitivity and Causality Analysis | constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis |
+| 2024 | SC | BUAA | GVARP: Detecting Performance Variance on Large-Scale Heterogeneous Systems | asynchronous state transition graph; parameter-based workload estimation method; asynchronous event tracing technology |
 
 ##### Variance Attribution
 
@@ -235,3 +236,9 @@ Refer to [Compiler](#compiler) techniques.
 |-|-|-|-|-|
 | 2014 | ISPASS | Intel | A Top-Down Method for Performance Analysis and Counters Architecture | top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound |
 | 2019 | SC | NC State University | Pinpointing Performance Inefficiencies via Lightweight Variance Profiling | function-level variance detection; stack based deep call chains maintain; on-the-fly binary analysis technique for calling context |
+
+##### Benchmark
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2018 | ICPP | Washington University | Varbench: an Experimental Framework to Measure and Characterize Performance Variability | spatial/temperal variability; Resource Variability (RV) statistic |
