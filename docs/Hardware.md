@@ -57,14 +57,32 @@
 
 #### CIM: SRAM
 
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | TCASAI | Purdue | Algorithm Hardware Co-Design for ADC-Less Compute In-Memory Accelerator | reduce ADC overhead in analog CiM architectures; Quantization-Aware Training; Partial Sum Quantization; ADC-Less hybrid analog-digital CiM hardware architecture HCiM |
+| 2024 | ISCAS | NYCU | CIMR-V: An End-to-End SRAM-based CIM  Accelerator with RISC-V for AI Edge Device | incorporates CIM layer fusion, convolution/max pooling pipeline, and weight fusion; weight fusion: pipelining the CIM convolution and weight loading |
+
 #### CIM: RRAM
 
-##### RRAM CiM Architecture
+
+##### RRAM CiM: Architecture
+
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2019 | ASPLOS | Purdue & HP | PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference | Programmable and general-purpose ReRAM based ML Accelerator; Supports an instruction set; Has protential for DNN training; Provides simulator that accepts model |
 | 2018 | ICRC | Purdue & HP | Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning | compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance |
+| 2024 | DATE | UCAS | PIMSIM-NN: An ISA-based Simulation Framework for Processing-in-Memory Accelerators | event-driven simulation approach; can evaluate the optimizations of software and hardware independently |
+| 2024 | MICRO | HUST | DRCTL: A Disorder-Resistant Computation  Translation Layer Enhancing the Lifetime and  Performance of Memristive CIM Architecture | address conversion method for dynamic scheduling; hierarchical wear-leveling (HWL) strategy for reliability improvement; data layout-aware selective remapping (LASR) to improve communication locality and reduce latency |
+| 2024 | DATE | RWTH Aachen University | CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures | algorithm to decide which parts of NN are duplicated to reduce inference latency; crosslayer scheduling on tiled CIM architectures |
+| 2024 | TC | SJTU | ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity | bitlevel sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme |
+
+
+
+##### RRAM CiM: BatchNorm layer
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
 | 2023 | GLSVLSI | Yale | Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing | non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters |
 | 2019 | ASPDAC | POSTECH | In-memory batch-normalization for resistive memory based binary neural network hardware | in-memory batchnormalization schemes; integrate BN layers on crossbar |
 
@@ -77,8 +95,6 @@ training method; replication of multiple identical kernels for processing differ
 | 2020 | TCAS-I | Georgia Tech | Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures | weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation |
 | 2019 | TED | PKU | Convolutional Neural Networks Based on RRAM Devices for Image Recognition and Online Learning Tasks | RRAM-based hardware implementation of CNN; expand kernel to the size of image |
 | 2021 | TCAD | SJTU | Efficient and Robust RRAM-Based Convolutional Weight Mapping With Shifted and Duplicated Kernel | shift and duplicate kernel (SDK) convolutional weight mapping architecture; parallel-window size allocation algorithm; kernel synchronization method |
-
-
 
 ##### RRAM Non-ideal Effects
 
@@ -113,7 +129,18 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 
 ### Domain-specific Accelerators
 
-#### LLM Inference Accelerators
+#### DNN Accelerators
+
+##### Layer Fusion Accelerators
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2016 | MICRO | SBU | Fused-Layer CNN Accelerators | fuse the processing of multiple CNN layers by modifying the order in which the input data are brought on chip |
+| 2025 | TC | KU Leuven | Stream: Design Space Exploration of Layer-Fused DNNs on Heterogeneous Dataflow Accelerators | fine-grain mapping paradigm; mapping of layer-fused DNNs on heterogeneous dataflow accelerator architectures; memory- and communication-aware latency analysis; constraint optimization |
+| 2024 | SOCC | IIT Hyderabad | Hardware-Aware Network Adaptation using Width and Depth Shrinking including Convolutional and Fully Connected Layer Merging | “Width Shrinking”: reduces the number of feature maps in CNN layers; “Depth Shrinking”: Merge of conv layer and fc layer |
+| 2024 | ICSAI | MIT | LoopTree: Exploring the Fused-Layer Dataflow  Accelerator Design Space | design space that supports set of tiling, recomputation, retention choices, and their combinations; model that validates design space |
+
+##### LLM Inference Accelerators
 
 #### Graph Accelerators
 
