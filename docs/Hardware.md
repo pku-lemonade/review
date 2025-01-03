@@ -55,6 +55,13 @@
 | 2019 | DAC | ETHZ | NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning | simulator "Ramulator-PIM"; tracefile from Ramulator & run on zsim |
 | 2021 | CAL | Univ. of Virginia | MultiPIM: A Detailed and Configurable Multi-Stack Processing-In-Memory Simulator | simulator "MultiPIM"; multi-stack & virtual memory support; parallel offloading |
 
+#### General CiM
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | ISVLSI | USC | Multi-Objective Neural Architecture Search for In-Memory Computing | neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM |
+| 2024 | ISPASS | MIT | CiMLoop: A Flexible, Accurate, and Fast Compute-In-Memory Modeling Tool | flexible specification to describe CiM systems; accurate model/fast statistical model of data-value-dependent component energy |
+
 #### CIM: SRAM
 
 | Year | Venue | Authors | Title | Tags |
@@ -73,6 +80,11 @@
 | 2019 | ASPLOS | Purdue & HP | PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference | Programmable and general-purpose ReRAM based ML Accelerator; Supports an instruction set; Has protential for DNN training; Provides simulator that accepts model |
 | 2018 | ICRC | Purdue & HP | Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning | compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance |
 | 2024 | DATE | UCAS | PIMSIM-NN: An ISA-based Simulation Framework for Processing-in-Memory Accelerators | event-driven simulation approach; can evaluate the optimizations of software and hardware independently |
+
+##### RRAM CiM: Architecture optimization
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
 | 2024 | MICRO | HUST | DRCTL: A Disorder-Resistant Computation  Translation Layer Enhancing the Lifetime and  Performance of Memristive CIM Architecture | address conversion method for dynamic scheduling; hierarchical wear-leveling (HWL) strategy for reliability improvement; data layout-aware selective remapping (LASR) to improve communication locality and reduce latency |
 | 2024 | DATE | RWTH Aachen University | CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures | algorithm to decide which parts of NN are duplicated to reduce inference latency; crosslayer scheduling on tiled CIM architectures |
 | 2024 | TC | SJTU | ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity | bitlevel sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme |
@@ -106,14 +118,22 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2020 | DAC | ASU | Accurate Inference with Inaccurate RRAM Devices: Statistical Data, Model Transfer, and On-line Adaptation | introduce statistical variations in knowledge distillation; On-line sparse adaptation with a small SRAM array |
 | 2020 | DATE | SJTU | Go Unary: A Novel Synapse Coding and Mapping Scheme for Reliable ReRAM-based Neuromorphic Computing | unary coding; priority mapping* |
 | 2022 | TCAD | ASU | Hybrid RRAM/SRAM in-Memory Computing for Robust DNN Acceleration | integrates an RRAM-based IMC macro with a digital SRAM macro using a programmable shifter to compensate for RRAM variations; ensemble learning |
+| 2024 | LATS | AMU | Analysis of Conductance Variability in RRAM for  Accurate Neuromorphic Computing | analyzation and quantification of conductance variability in RRAMs; analysis of conductance variation over multiple cycles |
 
 #### CIM: Hybrid Architecture
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | Science | NTHU | Fusion of memristor and digital compute-in-memory processing for energy-efficient edge computing | Fusion of ReRAM and SRAM CiM; ReRAM SLC & MLC Hybrid; Current quantization; Weight shifting with compensation |
+| 2024 | IPDPS | Georgia Tech | Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators | select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized) |
 
 #### NVM
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | ISCAS | UMCP | On-Chip Adaptation for Reducing Mismatch in Analog Non-Volatile Device Based Neural Networks | float-gate transistors based; hot-electron injection to address the issue of mismatch and variation |
+
+
 
 ## Computer Architecture
 
