@@ -145,6 +145,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2021 | TCAS-II | Ashoka University | Fixed-Posit: A Floating-Point Representation for Error-Resilient Applications | the number of regime and exponent bits are fixed; a design of fixedposit multiplier; |
 | 2022 | MICRO | SJTU | ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization | fixed-length adaptive numerical data type; combines the advantages of float and int for adapting to the importance of different values within a tensor; adaptive framework that selects the best type for each tensor |
 | 2024 | TCAD | HKU | DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference | adaptive data representation with variablelength encoding; hardware-aware quantization framework |
+| 2024 | Arxiv | Harvard | Nanoscaling Floating-Point (NxFP): NanoMantissa, Adaptive Microexponents, and Code Recycling for Direct-Cast Compression of Large Language Models | Nanoscaling Floating-Point (NxFP); NanoMantissa; Adaptive Microexponents; Code Recycling |
 
 
 ### Domain-specific Accelerators

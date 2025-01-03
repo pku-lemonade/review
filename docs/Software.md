@@ -63,6 +63,7 @@
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | Arxiv | UCSB | Multi-Bin Batching for Increasing LLM Inference Throughput | binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality |
+| 2024 | Arxiv | Yale | TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications | segmented generation; time-sensitive scheduling; latency-guided batch size selection |
 
 ##### LLM Application-Level Scheduling
 
@@ -109,6 +110,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | Northeastern University | LLM Inference Serving: Survey of Recent Advances and Opportunities | KV cache and memory management; LLM computation optimization; Cloud LLM deployment; focus on system-level enhancements |
 | 2024 | Arxiv | CSE Huawei | Software Performance Engineering (SPE) for Foundation Model-Powered Software (FMware) | performance concerns are often considered afterthoughts; continuous performance engineering; cognitive architecture design / communication protocols / tuning and optimization / deployment |
 | 2024 | Arxiv | CUHK | A Survey on Inference Optimization Techniques for Mixture of Experts Models | model compression; expert skip; expert merge; sparse to dense; expert parallel; expert offloading |
+| 2024 | Arxiv | PolyU | A Survey on Large Language Model Acceleration based on KV Cache Management | cache selection; budget allocation; cache merging; cache quantization; cache low-rank decomposition; attention grouping and sharing; memory management; hardware-aware design |
 
 ###### Application Surveys
 
@@ -123,6 +125,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | OSDI | SJTU & Alibaba | Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache | inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling |
+| 2024 | Arxiv | SJTU | TokenRing: An Efficient Parallelism Framework for Infinite-Context LLMs via Bidirectional Communication | communication-oriented parallelism framework; inter-node P2P bidirectional communication bandwidth; optimization of attention block communication |
 
 ##### P-D Disaggregated Systems
 
@@ -153,8 +156,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2024 | Arxiv | Virginia Tech | Ensuring Fair LLM Serving Amid Diverse Applications | multi-tenant LLM platform; overload and
-interaction-driven throttling; weighted service counter |
+| 2024 | Arxiv | Virginia Tech | Ensuring Fair LLM Serving Amid Diverse Applications | multi-tenant LLM platform; overload and interaction-driven throttling; weighted service counter |
 
 #### Communication-Computation Overlap
 
@@ -194,6 +196,7 @@ interaction-driven throttling; weighted service counter |
 | 2024 | Arxiv | CMU | Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs | LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming |
 | 2024 | Arxiv | UIC | Priority-Aware Model-Distributed Inference at Edge Networks | priority-aware model distributed inference algorithm; prioritization of ML inference tasks; model-distributed inferencing mechanism |
 | 2024 | Arxiv | Yonsei University | Uncertainty-Aware Hybrid Inference with On-Device Small and Remote Large Language Models | hybrid language model; selectively skip uplink transmissions; uncertainty-aware |
+| 2024 | Arxiv | UMD | Distributed Mixture-of-Agents for Edge Inference with Large Language Models | Mixture-of-Agents; semantics of the data being gossiped and its timeliness; queuing stability |
 
 #### LLM Training Systems
 
