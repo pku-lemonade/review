@@ -232,6 +232,12 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 #### Data Mapping
 
+##### Servey
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2013 | DAC | NUS | Mapping on Multi/Many-core Systems: Survey of Current and Emerging Trends | dense/run-time mapping; centralized/distributred management; hybrid mapping |
+
 ##### Heuristic Algorithm
 
 | Year | Venue | Authors | Title | Tags |
@@ -268,6 +274,13 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2018 | MICRO | Seoul National University | RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors | graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method |
 | 2023 | MICRO | Tsinghua University | MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference | slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm |
 | 2023 | MICRO | Yonsei University | McCore: A Holistic Management of High-Performance Heterogeneous Multicores | cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling |
+
+### Heterogeneous Many-core System
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2018 | ICCAD | Washington State University | Hybrid On-Chip Communication Architectures for Heterogeneous Manycore Systems | many-to-few communication patterns; long range shortcut based wireless NoC ; 3D-TSV based heterogeneous NoC |
+| 2018 | IEEE TC | Washington State University | On-Chip Communication Network for Efficient Training of Deep Convolutional Networks on Heterogeneous Manycore Systems | wireless-enabled heterogeneous NoC; archived multi-objective simulated annealing for network connectivity |
 
 ## Electronic Design Automation
 

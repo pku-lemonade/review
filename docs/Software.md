@@ -233,11 +233,18 @@ Refer to [Compiler](#compiler) techniques.
 | 2024 | Arxiv | UGA | Performance Debugging through Microarchitectural Sensitivity and Causality Analysis | constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis |
 | 2024 | SC | BUAA | GVARP: Detecting Performance Variance on Large-Scale Heterogeneous Systems | asynchronous state transition graph; parameter-based workload estimation method; asynchronous event tracing technology |
 
+##### Bottleneck Optimization
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | Indian Institute of Science | Performance Characterization and Optimizations of Traditional ML Applications | dummy datasets generation; software-based prefetching for neighbour/tree-based workloads; data layout and computation re-ordering algorithm |
+
 ##### Variance Attribution
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2014 | ISPASS | Intel | A Top-Down Method for Performance Analysis and Counters Architecture | top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound |
+| 2016 | TPDS | ICT | Understanding Big Data Analytics Workloads on Modern Processors | top-down analysis for big data workload; pipeline-characteristics basd performance implication analysis; BigDataBench benchmark |
 | 2019 | SC | NC State University | Pinpointing Performance Inefficiencies via Lightweight Variance Profiling | function-level variance detection; stack based deep call chains maintain; on-the-fly binary analysis technique for calling context |
 
 ##### Benchmark
@@ -245,3 +252,4 @@ Refer to [Compiler](#compiler) techniques.
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2018 | ICPP | Washington University | Varbench: an Experimental Framework to Measure and Characterize Performance Variability | spatial/temperal variability; Resource Variability (RV) statistic |
+| 2021 | IEEE Access | D-ITET | DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks | NDP focused workload characterization methodology; memory-bound function identification; locality-based clustering; memory bottlenecks classification |
