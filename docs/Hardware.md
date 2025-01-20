@@ -204,6 +204,12 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 
 #### Prefetcher
 
+##### LLM Inference Prefetching
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | Huawei Zurich | PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving | computational graph-based prefetching; prefetch KV cache to L2 cache; optimal hardware design for prefetching |
+
 #### DRAM
 
 ### Communication Architecture

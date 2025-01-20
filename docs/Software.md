@@ -40,6 +40,37 @@
 |-|-|-|-|-|
 | 2024 | Arxiv | UMich | Mercury: QoS-Aware Tiered Memory System | contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation |
 
+#### LLM Memory Management
+
+##### KV Cache Storage Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | NVIDIA | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving | block-sparse format; customizable attention template; dynamic load-balanced scheduling framework |
+
+##### KV Cache Evict Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | NIPS | UT-Austin | H$_2$O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models | sparsity for small cache size; heavy-hitters; greedy algorithm for low-cost policy |
+| 2024 | Arxiv | Fujitsu | CO2: Precise Attention Score Observation for improving KV Cache Replacement in Large Language Models | long measurement step; decay of the accumulated attention score; adjusting FIFO cache size |
+
+##### KV Cache Reuse Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | Arxiv | UC Berkeley | BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching | offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests |
+| 2024 | Arxiv | UChicago | CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion |  multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices |
+| 2024 | Arxiv | UChicago | DroidSpeak: Enhancing Cross-LLM Communication | selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model |
+| 2024 | Arxiv | Microsoft | BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching | global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel |
+| 2024 | Arxiv | UC Berkeley | Optimizing LLM Queries in Relational Workloads | prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques |
+
+##### Systems with Other Caches (Not / Not just KV Cache)
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | KAIST | Efficient LLM Inference with Activation Checkpointing and Hybrid Caching | activation checkpointing; KV-activation hybrid caching; balanced approach to determine the best ratio |
+
 ### Scheduling
 
 #### General Task Scheduling
@@ -57,6 +88,12 @@
 | 2024 | Arxiv | Politecnico di Milano | Minimizing speculation overhead in a parallel recognizer for regular texts | speculation overhead; chunk automaton; reduced-interface DFA |
 
 #### LLM-Related Scheduling
+
+##### Cloud Datacenter LLM Scheduling
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | Azure | TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms | thermal/power property characterization; dynamically adjust in response to power or cooling failures; thermal- and poweraware manner |
 
 ##### LLM Request Scheduling
 
@@ -99,6 +136,12 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 ### Distrbuted Systems
 
+#### I/O Characterization and Optimization
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | UOregon | Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey | different HPC I/O stack layers; profiling and tracing tools; tuning echniques |
+
 #### LLM Inference Systems
 
 ##### Surveys
@@ -120,6 +163,18 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | WHU | A survey on LLM-based multi-agent systems: workflow, infrastructure, and challenges | personalized characteristics; perceive environmental information; utilize memory mechanisms; mutual interaction; agent self-reflection |
 | 2024 | Arxiv | PolyU | Deploying Foundation Model Powered Agent Services: A Survey | FM-powered agent services within the edge-cloud environment; low-level hardware perspective; high-level software perspective |
 
+##### Mixture-of-Experts Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | HKU | Optimizing Distributed Deployment of Mixture-of-Experts Model Inference in Serverless Computing | Bayesian decision-making for expert selectino prediction; mixed-integer quadratically constrained programming for communication design; Bayesian optimization framework with multiple ε-greedy search |
+
+##### Multimodal Inference Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | Huawei | Efficiently Serving Large Multimedia Models Using EPD Disaggregation | encode-prefill-decode disaggregation; multimodal cache; intra-request parallel |
+
 ##### Long Sequence LLM Systems
 
 | Year | Venue | Authors | Title | Tags |
@@ -135,28 +190,12 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | ISCA | University of Washington | Splitwise: Efficient Generative LLM Inference Using Phase Splitting | optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments |
 | 2024 | Arxiv | CMU | A System for Microserving of LLMs | fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction |
 
-##### KV Cache Evict Systems
-
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2023 | NIPS | UT-Austin | H$_2$O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models | sparsity for small cache size; heavy-hitters; greedy algorithm for low-cost policy |
-| 2024 | Arxiv | Fujitsu | CO2: Precise Attention Score Observation for improving KV Cache Replacement in Large Language Models | long measurement step; decay of the accumulated attention score; adjusting FIFO cache size |
-
-##### KV Cache Reuse Systems
-
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2024 | Arxiv | UC Berkeley | BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching | offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests |
-| 2024 | Arxiv | UChicago | CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion |  multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices |
-| 2024 | Arxiv | UChicago | DroidSpeak: Enhancing Cross-LLM Communication | selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model |
-| 2024 | Arxiv | Microsoft | BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching | global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel |
-| 2024 | Arxiv | UC Berkeley | Optimizing LLM Queries in Relational Workloads | prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques |
-
 ##### Fair Serving Systems
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | Arxiv | Virginia Tech | Ensuring Fair LLM Serving Amid Diverse Applications | multi-tenant LLM platform; overload and interaction-driven throttling; weighted service counter |
+| 2025 | Arxiv | UIUC | Hierarchical Autoscaling for Large Language Model Serving with Chiron | hierarchical backpressure; interactive requests and batch requests; mixed instances |
 
 #### Communication-Computation Overlap
 
@@ -197,6 +236,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | UIC | Priority-Aware Model-Distributed Inference at Edge Networks | priority-aware model distributed inference algorithm; prioritization of ML inference tasks; model-distributed inferencing mechanism |
 | 2024 | Arxiv | Yonsei University | Uncertainty-Aware Hybrid Inference with On-Device Small and Remote Large Language Models | hybrid language model; selectively skip uplink transmissions; uncertainty-aware |
 | 2024 | Arxiv | UMD | Distributed Mixture-of-Agents for Edge Inference with Large Language Models | Mixture-of-Agents; semantics of the data being gossiped and its timeliness; queuing stability |
+| 2025 | Arxiv | USTC | PICE: A Semantic-Driven Progressive Inference System for LLM Serving in Cloud-Edge Networks | progressive inference paradigm; ensemble learning mechanism; semantic-level parallel data processing |
 
 #### LLM Training Systems
 
@@ -205,6 +245,8 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | PKU | Demystifying Workload Imbalances in Large Transformer Model Training over Variable-length Sequences | data sampling imbalance; data packing imbalance; subgraph abstraction |
 | 2024 | Arxiv | Ant Group | EDiT: A Local-SGD-Based Efficient Distributed Training Method for Large Language Models | Local Stochastic Gradient Descent (Local SGD); consistent stragglers within heterogeneous devices; hierarchical distribution strategy on a two-dimensional device mesh; layer by layer forward syncing; pseudo-gradient penalty method |
 | 2024 | Arxiv | ZJU | Frenzy: A Memory-Aware Serverless LLM Training System for Heterogeneous GPU Clusters | efficient and low-overhead task-to-cluster scheduling; bin-packing algorithms; seamless and user-friendly |
+| 2025 | Arxiv | OSU | Scaling Large Language Model Training on Frontier with Low-Bandwidth Partitioning | low-bandwidth interconnects; three-level hierarchical partitioning strategy; improved hierarchical partitioning on top of ZeRO++ |
+| 2025 | Arxiv | PKU | Split Fine-Tuning for Large Language Models in Wireless Networks | split fine-tuning; device and server partition; novel compression scheme and resource management algorithm |
 
 ## Performance Evaluation
 
