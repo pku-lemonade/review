@@ -218,6 +218,12 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 
 #### Network-on-Chip
 
+##### Wafer-Scale
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | SC | Tsinghua University | Switch-Less Dragonfly on Wafers: A Scalable Interconnection Architecture based on Wafer-Scale Integration | four-level topology structure; minimal routing algorithm on dragonfly for VC vumber reduction | 
+
 ##### Topology
 
 | Year | Venue | Authors | Title | Tags |
@@ -225,6 +231,8 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 | 2021 | HPCA | George Washington University | Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures | mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm |
 | 2022 | HPCA | Huawei | Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective | bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism |
 | 2024 | MICRO | Tsinghua University | Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture | Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm |
+| 2024 | Arxiv | Washington State University | Atleus: Accelerating Transformers on the Edge Enabled by 3D Heterogeneous Manycore Architectures | heterogeneous 3D 
+NoC; pipeline design across heterogeneous resources; crossbar-wise quantization |
 
 ##### Interconnect
 
@@ -234,11 +242,19 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 | 2023 | ICCAD | University of Central Florida | ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects | directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm |
 | 2023 | MICRO | Tsinghua University | Heterogeneous Die-to-Die Interfaces: Enabling More Flexible Chiplet Interconnection Systems | heterogeneous interface hetero-PHY and hetero-channel; hetero-channel routing algorithm; application-aware scheduling |
 
+##### Processing on NoC
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2020 | HPCA | Drexel University | SnackNoC: Processing in the Communication Layer | communication fabric quantification; central packet manager for instruction flit; router compute unit as dataflow pe |
+
 #### Router
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2016 | HPCA | KTH Royal Institute of Technology | DVFS for NoCs in CMPs: A Thread Voting Approach | thread voting based DVFS machenism; pre-defined region-based V/F adjustment algorithm |
 | 2022 | HPCA | Chalmers | FastTrackNoC: A NoC with FastTrack Router Datapaths | non-turning hops; direct FastTrack flit path; zero-load latency analysis |
+| 2022 | HPCA | University of Toronto | Stay in your Lane: A NoC with Low-overhead Multi-packet Bypassing | FastFlow flow controll method; time-division-multiplexed (TDM) based non-overlapping FastPass-lanes; FastPass for throughput enhancement |
 | 2023 | HPCA | Tsinghua University | A Scalable Methodology for Designing Efficient Interconnection Network of Chiplets | interface grouping; hypercube construction algorithm; deadlock-free adaptive routing algorithm; safe/unsafe flow control; network interleaving method|
 
 ### Dataflow Architecture
@@ -267,6 +283,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2023 | ISCA | Tsinghua University | MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search | GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration |
 | 2023 | VLSI | IIT Kharagpur | Application Mapping Onto Manycore Processor Architectures Using Active Search Framework | RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining |
 | 2024 | HPCA | Tsinghua University | Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators | layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization |
+| 2024 | ASPLOS | Tsinghua University | Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization | consumption-centric flow based subgraph execution scheme; main/side region based memory management |
 
 ##### Optimization Modeling
 
@@ -282,6 +299,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2017 | HPCA | Ghent University | Reliability-Aware Scheduling on Heterogeneous Multicore Processors | core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm |
 | 2020 | TCAD | Arizona State University | Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems | offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling |
 | 2023 | ICCAD | Peking University | Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization | topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning|
 | 2023 | MICRO | Duke University | Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI | graph alignment algoithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm |
@@ -292,9 +310,20 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2015 | HPCA | Cornel University | Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting | online bandwidth shifting mechanism; prefetch usefulness (PU) level |
+| 2015 | HPCA | IBM | XChange: A Market-based Approach to Scalable Dynamic Multi-resource Allocation in Multicore Architectures | CMP multiresource allocation mechanism XChange; market framework based modeling |
 | 2018 | MICRO | Seoul National University | RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors | graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method |
 | 2023 | MICRO | Tsinghua University | MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference | slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm |
 | 2023 | MICRO | Yonsei University | McCore: A Holistic Management of High-Performance Heterogeneous Multicores | cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling |
+
+#### Application Optimization
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | SC | NUDT | Optimizing Direct Convolutions on ARM Multi-Cores | direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing&packeting |
+| 2023 | SC | NUDT | Optimizing MPI Collectives on Shared Memory Multi-Cores | intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives |
+| 2024 | PPoPP | NUDT | Towards Scalable Unstructured Mesh Computations on Shared Memory Many-Cores | task dependency tree(TDT); tree traversal based parallel algorithm for CPU/GPU |
+
 
 ### Heterogeneous Many-core System
 
