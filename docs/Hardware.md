@@ -61,6 +61,10 @@
 |-|-|-|-|-|
 | 2024 | ISVLSI | USC | Multi-Objective Neural Architecture Search for In-Memory Computing | neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM |
 | 2024 | ISPASS | MIT | CiMLoop: A Flexible, Accurate, and Fast Compute-In-Memory Modeling Tool | flexible specification to describe CiM systems; accurate model/fast statistical model of data-value-dependent component energy |
+| 2018 | TCAD | ASU | NeuroSim: A Circuit-Level Macro Model for Benchmarking Neuro-Inspired Architectures in Online Learning | estimate the circuit-level performance of neuro-inspired architectures; estimates the area, latency, dynamic energy, and leakage power; Support both SRAM and eNVM; tested on 2-layer MLP NN, MNIST |
+| 2019 | IEDM | Geogria Tech | DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies | a python wrapper to interface NeuroSim; for inference only |
+| 2020 | TCAD | ZJU | Eva-CiM: A System-Level Performance and Energy Evaluation Framework for Computing-in-Memory Architectures | models for capturing memory access and dependency-aware ISA traces; models for quantifying interactions between the host CPU and the CiM module |
+
 
 #### CIM: SRAM
 
@@ -68,6 +72,9 @@
 |-|-|-|-|-|
 | 2024 | TCASAI | Purdue | Algorithm Hardware Co-Design for ADC-Less Compute In-Memory Accelerator | reduce ADC overhead in analog CiM architectures; Quantization-Aware Training; Partial Sum Quantization; ADC-Less hybrid analog-digital CiM hardware architecture HCiM |
 | 2024 | ISCAS | NYCU | CIMR-V: An End-to-End SRAM-based CIM  Accelerator with RISC-V for AI Edge Device | incorporates CIM layer fusion, convolution/max pooling pipeline, and weight fusion; weight fusion: pipelining the CIM convolution and weight loading |
+| 2021 | TCAD | Geogria Tech | DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training | non-ideal device properties of NVMS' effect for on-chip training |
+| 2020 | ISCAS | JCU | MemTorch: A Simulation Framework for Deep Memristive Cross-Bar Architectures | supports both GPUs and CPUs; integrates directly with PyTorch; simulate non-idealities of memristive devices within cross-bar, tested on VGG-16, CIFAR-10 |
+
 
 #### CIM: RRAM
 
@@ -80,6 +87,8 @@
 | 2019 | ASPLOS | Purdue & HP | PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference | Programmable and general-purpose ReRAM based ML Accelerator; Supports an instruction set; Has protential for DNN training; Provides simulator that accepts model |
 | 2018 | ICRC | Purdue & HP | Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning | compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance |
 | 2024 | DATE | UCAS | PIMSIM-NN: An ISA-based Simulation Framework for Processing-in-Memory Accelerators | event-driven simulation approach; can evaluate the optimizations of software and hardware independently |
+| 2018 | TCAD | THU | MNSIM: Simulation Platform for Memristor-Based Neuromorphic Computing System | reference design for largescale neuromorphic accelerator and can also be customized; behavior-level computing accuracy model |
+| 2023 | TCAD | THU | MNSIM 2.0: A Behavior-Level Modeling Tool for Processing-In-Memory Architectures | integrated PIM-oriented NN model training and quantization flow; unified PIM memory array model; support for mixed-precision NN operations |
 
 ##### RRAM CiM: Architecture optimization
 
@@ -126,6 +135,12 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 |-|-|-|-|-|
 | 2024 | Science | NTHU | Fusion of memristor and digital compute-in-memory processing for energy-efficient edge computing | Fusion of ReRAM and SRAM CiM; ReRAM SLC & MLC Hybrid; Current quantization; Weight shifting with compensation |
 | 2024 | IPDPS | Georgia Tech | Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators | select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized) |
+
+#### CIM: Quantization
+
+| 2024 | TCAD | BUAA | CIMQ: A Hardware-Efficient Quantization Framework for Computing-In-Memory-Based Neural Network Accelerators | bit-level sparsity induced activation quantization; quantizing partial sums to decrease required resolution of ADCs; arraywise quantization granularity |
+| 2018 | CVPR | Google | Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference | integer-only inference arithmetic; quantizesh both weights and activations as 8-bit integers, bias 32-bit; provides both quantized inference framework and training frame work |
+| 2024 | TCAD | BUAA | CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory | mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM |
 
 #### NVM
 
