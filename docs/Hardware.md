@@ -246,7 +246,17 @@ NoC; pipeline design across heterogeneous resources; crossbar-wise quantization 
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2017 | ISVLSI | Ruhr-Universität Bochum | Data Stream Processing in Network-on-Chip | data stream processing unit(DSPU); operation mode based DSPU programming framework |  
+| 2019 | HPCA | Texas A&M University | Active-Routing: Compute on the Way for Near-Data Processing | active-routing tree; vector processing in cache block for regular access pattern; data prefetch for irregular access pattern |
 | 2020 | HPCA | Drexel University | SnackNoC: Processing in the Communication Layer | communication fabric quantification; central packet manager for instruction flit; router compute unit as dataflow pe |
+
+##### Traffic Controll
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2017 | ISCA | Texas A&M University | APPROX-NoC: A Data Approximation Framework for Network-On-Chip Architectures | value approximate technique VAXX; encoder/decoder module pair for data compression; approximate value compute logic |
+| 2017 | ICCD | HIT | ABDTR: Approximation–Based Dynamic Traffic Regulation for Networks–on–Chip Systems | approximate computing based dynamic traffic regulation technique; lightweight design including controller, throttler and approximater | 
+| 2019 | DATE | SCUT | ACDC: An Accuracy- and Congestion-aware Dynamic Traffic Control Method for Networks-on-Chip | quality loss and network congestion modeling; autoregressive model based flow prediction method | 
 
 #### Router
 
