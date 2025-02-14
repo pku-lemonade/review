@@ -89,6 +89,7 @@
 | 2024 | DATE | UCAS | PIMSIM-NN: An ISA-based Simulation Framework for Processing-in-Memory Accelerators | event-driven simulation approach; can evaluate the optimizations of software and hardware independently |
 | 2018 | TCAD | THU | MNSIM: Simulation Platform for Memristor-Based Neuromorphic Computing System | reference design for largescale neuromorphic accelerator and can also be customized; behavior-level computing accuracy model |
 | 2023 | TCAD | THU | MNSIM 2.0: A Behavior-Level Modeling Tool for Processing-In-Memory Architectures | integrated PIM-oriented NN model training and quantization flow; unified PIM memory array model; support for mixed-precision NN operations |
+| 2024 | VLSI-SoC | RWTH Aachen University | Architecture-Compiler Co-design for ReRAM-Based Multi-core CIM Architectures | inference latency predictions and analysis of the crossbar utilization for CNN |
 
 ##### RRAM CiM: Architecture optimization
 
@@ -98,7 +99,11 @@
 | 2024 | DATE | RWTH Aachen University | CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures | algorithm to decide which parts of NN are duplicated to reduce inference latency; crosslayer scheduling on tiled CIM architectures |
 | 2024 | TC | SJTU | ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity | bitlevel sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme |
 
+##### RRAM CiM: Modeling
 
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | AICAS | RWTH Aachen University | A Calibratable Model for Fast Energy Estimation of MVM Operations on RRAM Crossbars | system energy model for MVM on ReRAM crossbars; methodology to study the effect of the selection transistor and wire parasitics in 1T1R crossbar arrays |
 
 ##### RRAM CiM: BatchNorm layer
 
@@ -116,6 +121,8 @@ training method; replication of multiple identical kernels for processing differ
 | 2020 | TCAS-I | Georgia Tech | Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures | weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation |
 | 2019 | TED | PKU | Convolutional Neural Networks Based on RRAM Devices for Image Recognition and Online Learning Tasks | RRAM-based hardware implementation of CNN; expand kernel to the size of image |
 | 2021 | TCAD | SJTU | Efficient and Robust RRAM-Based Convolutional Weight Mapping With Shifted and Duplicated Kernel | shift and duplicate kernel (SDK) convolutional weight mapping architecture; parallel-window size allocation algorithm; kernel synchronization method |
+| 2023 | VLSI-SoC | RWTH Aachen University | Mapping of CNNs on multi-core RRAM-based CIM architectures | architecture optimized for communication; compiler algorithms for conv2D layer; cycle-accurate simulator|
+| 2023 | TODAES | UCAS | Mathematical Framework for Optimizing Crossbar Allocation for ReRAM-based CNN Accelerators | formulate a crossbar allocation problem for ReRAM-based CNN accelerators; dynamic programming based solver; models the performance considering allocation problem |
 
 ##### RRAM Non-ideal Effects
 
@@ -147,7 +154,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | ISCAS | UMCP | On-Chip Adaptation for Reducing Mismatch in Analog Non-Volatile Device Based Neural Networks | float-gate transistors based; hot-electron injection to address the issue of mismatch and variation |
-
+| 2023 | DATE | UniBo | End-to-End DNN Inference on a Massively Parallel Analog In Memory Computing Architecture | many-core heterogeneous architecture; general-purpose system based on RISC-V cores and nvAIMC cores; based on Phase-Change Memory(PCM); |
 
 
 ## Computer Architecture
