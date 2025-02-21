@@ -11,6 +11,8 @@ theme:
 
 plugins:
   - search
+  - git-revision-date-localized
+  - git-authors
 
 markdown_extensions:
   # Python Markdown
