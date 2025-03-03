@@ -178,6 +178,29 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 #### LLM Inference Systems
 
+#### Many-Core Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2018 | SC | Intel | Many-Core Graph Workload Analysis | multicore simulator sniper; selective caching and prefetching; heterogeneous high-performance low-power cores |
+| 2018 | DATE | UGA | Parallel Code Generation of Synchronous Programs for a Many-core Architecture | banked memory mapping; worst-case response time analysis |
+| 2025 | IPDPS | The University of Chicago | Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems | lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing |
+
+##### Fault Propagation
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2008 | ASPLOS | UIUC | Understanding the Propagation of Hard Errors to Software and Implications for Resilient System Design | stuck-at fault; bridging fault; software failure detection |
+| 2010 | PRDC | UBC | Modeling the Propagation of Intermittent Hardware Faults in Programs | instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling |
+| 2015 | SC | IBM | Understanding the Propagation of Transient Errors in HPC Applications | fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors |
+| 2023 | ISCA | University of Chicago | Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems | NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy |
+
+##### Fault Injection Technique
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2008 | VLSI | DISCA | Enhancement of Fault Injection Techniques Based on the Modification of VHDL Code | saboteurs and mutants technique based fault injection; VHDL level fault-tolerance mechanism | 
+| 2014 | DSN | UBC | Quantifying the Accuracy of High-Level Fault Injection Techniques for Hardware Faults | fault injection quantification; assembly level fault injection; LLVM compiler based fault injector |
+
+
 ##### SLO-Aware Systems
 
 | Year | Venue | Authors | Title | Tags |

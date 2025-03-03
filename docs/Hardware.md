@@ -273,6 +273,15 @@ NoC; pipeline design across heterogeneous resources; crossbar-wise quantization 
 | 2017 | ICCD | HIT | ABDTR: Approximation–Based Dynamic Traffic Regulation for Networks–on–Chip Systems | approximate computing based dynamic traffic regulation technique; lightweight design including controller, throttler and approximater | 
 | 2019 | DATE | SCUT | ACDC: An Accuracy- and Congestion-aware Dynamic Traffic Control Method for Networks-on-Chip | quality loss and network congestion modeling; autoregressive model based flow prediction method | 
 
+##### Fault-Tolerant Communication
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2014 | VLSI | ICT | ZoneDefense: A Fault-Tolerant Routing for 2-D Meshes Without Virtual Channels | fault chains based faulty blocks construction; floor/ceiling rule based defense zone forming; L/F chain routing |
+| 2017 | TPDS | NTU | Path-Diversity-Aware Fault-Tolerant Routing Algorithm for Network-on-Chip Systems | path diversity analysis; fault-location-based path diversity; PDA-FTR algorithm |
+| 2019 | DATE | University of Michigan | SiPterposer: A Fault-Tolerant Substrate for Flexible System-in-Package Design | blowing based customized topology; lightweight ECC module based defect tolerance |
+| 2022 | DATE | Colorado State University | DeFT: A Deadlock-Free and Fault-Tolerant Routing Algorithm for 2.5D Chiplet Networks | virtual network based deadlock freedom; congestion-aware vertical link selection |
+
 #### Router
 
 | Year | Venue | Authors | Title | Tags |
@@ -319,6 +328,12 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2023 | MICRO | Alibaba; CUHK | ArchExplorer: Microarchitecture Exploration Via Bottleneck Analysis | dynamic event-dependence graph(EDG); induced DEG based critical path construction; bottleneck-removal-driven DSE |
 | 2023 | ISCA | Tsinghua University | Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators | inter-layer encoding method; temperal cut; spatial cut; RA tree analysis |
 
+##### Fault Tolerant Mapping
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2017 | SC | NIT | High-performance and energy-efficient fault-tolerance core mapping in NoC | weighted communication energy; placing unmapped vertices region; application core graph; spare core placement algorithm |
+| 2019 | IVLSI | UESTC | Optimized mapping algorithm to extend lifetime of both NoC and cores in many-core system | lifetime budget metric; LBC-LBL mapping algorithm; electro-migration fault model |
 
 #### Task Scheduling
 
@@ -349,7 +364,6 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2023 | SC | NUDT | Optimizing MPI Collectives on Shared Memory Multi-Cores | intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives |
 | 2024 | PPoPP | NUDT | Towards Scalable Unstructured Mesh Computations on Shared Memory Many-Cores | task dependency tree(TDT); tree traversal based parallel algorithm for CPU/GPU |
 
-
 ### Heterogeneous Many-core System
 
 | Year | Venue | Authors | Title | Tags |
@@ -358,6 +372,15 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2018 | IEEE TC | Washington State University | On-Chip Communication Network for Efficient Training of Deep Convolutional Networks on Heterogeneous Manycore Systems | wireless-enabled heterogeneous NoC; archived multi-objective simulated annealing for network connectivity |
 
 ## Electronic Design Automation
+
+### RTL Code Generation
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2013 | DAC | Columbia University | A Method to Abstract RTL IP Blocks into C++ Code and Enable High-Level Synthesis | process communication graph; I/O port loop unrolling; HLS design space expansion |
+| 2023 | DATE | New York University | Benchmarking Large Language Models for Automated Verilog RTL Code Generation | verilog code training corpus; multi-level verilog coding problems for analysis |
+| 2024 | ISEDA | UESTC | GraphRTL: an Agile Design Framework of RTL Code from Data Flow Graphs | graph error detection kernel; DFS based graph equivalent reconstruction; template/scala based DFG and CFG merging |
+| 2024 | Arxiv | UCSD | MAGE: A Multi-Agent Engine for Automated RTL Code Generation | multi-agent; high-temperature sampling and ranking; verilog-state checkpoint debugging |
 
 ## Performance Evaluation
 
