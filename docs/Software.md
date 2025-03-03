@@ -42,11 +42,19 @@
 
 #### LLM Memory Management
 
+##### LLM Quantization Methods
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | UVa | HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference | method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination |
+| 2025 | Arxiv | PKU | Bitnet.cpp: Efficient Edge Inference for Ternary LLMs | ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58 |
+
 ##### KV Cache Storage Systems
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2025 | Arxiv | NVIDIA | FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving | block-sparse format; customizable attention template; dynamic load-balanced scheduling framework |
+| 2025 | Arxiv | PKU | FairKV: Balancing Per-Head KV Cache for Fast Multi-GPU Inference | imbalanced KV cache compression mitigation; fair-copying for load balancing; best-effort assignment |
 
 ##### KV Cache Evict Systems
 
@@ -80,6 +88,13 @@
 | 2019 | NSDI | MIT | Shinjuku: Preemptive Scheduling for µsecond-scale Tail Latency | preemptive scheduling; single-address space OS; hardware-supported virtualization |
 | 2021 | SOSP | UPenn | When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone | reserve cores; non-conserving; request dispatching algorithm |
 
+#### Heterogeneous Device Task Scheduling
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | NUS | Data-aware Dynamic Execution of Irregular Workloads on Heterogeneous Systems | lightweight and input-aware framework; multiobjective and multi-constraint design space; dynamically creating optimal schedules |
+| 2025 | Arxiv | Georgia Tech | HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads | a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators |
+
 #### Speculative Execution (Non-LLM)
 
 | Year | Venue | Authors | Title | Tags |
@@ -109,6 +124,7 @@
 | 2024 | OSDI | SJTU | Parrot: Efficient Serving of LLM-based Applications with Semantic Variable | Semantic Variable; application-level information; LLM applications as first-class citizens |
 | 2024 | OSDI | CUHK | Teola: Towards End-to-End Optimization of LLM-based Applications | mismatch between request-level scheduling and end-to-end  application performance; primitive-level dataflow graph; two-tier scheduling mechanism |
 | 2024 | Arxiv | Yext | SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering | constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements |
+| 2025 | Arxiv | UC Berkeley | Autellix: An Efficient Serving Engine for LLM Agents as General Programs | formalize agentic programs as dynamic, non-deterministic DAGs; non-clairvoyant scheduler; simple load-balancing policy to balance data locality and KV-cache recomputation |
 
 ##### LLM Speculative Inference
 
@@ -168,6 +184,8 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 |-|-|-|-|-|
 | 2025 | ArXiv | UC Berkeley | AdaServe: SLO-Customized LLM Serving with Fine-Grained Speculative Decoding | fine-grained speculative decoding; token tree verification; slo customization |
 | 2025 | ArXiv | UIUC | HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location | online-offline request co-location; interference-aware profiler; latency predictor; adaptive scheduler |
+| 2025 | Arxiv | PKU | Memory Offloading for Large Language Model Inference with Latency SLO Guarantees | effectively captures the tension between meeting SLOs and maximizing host memory usage; dynamic offloading interval; per-bus coordinator |
+| 2025 | Arxiv | Huawei | Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization | hybrid offline-online scheduling; preemptive scheduling for hardware utilization; lagrangian method for cost efficiency evaluation |
 
 ##### Surveys
 
@@ -195,6 +213,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | UW–Madison | LV-XAttn: Distributed Cross-Attention for Long Visual Inputs in Multimodal Large Language Models | query-block distributed exchange; shared visual token recomputation; sequence-parallelism with minimal communication overhead |
 | 2025 | Arxiv | Microsoft | Towards Efficient Large Multimodal Model Serving | fine-grained stage-aware resource management; multimodal workload-specific scheduling; model architecture-specific optimizations |
 | 2025 | Arxiv | Huawei | Efficiently Serving Large Multimedia Models Using EPD Disaggregation | encode-prefill-decode disaggregation; multimodal cache; intra-request parallel |
+| 2025 | Arxiv | TU/e | Fine-tuning Multimodal Transformers on Edge: A Parallel Split Learning Approach | Multimodal Parallel Split Learning; computation-efficient training; server-side loss aggregation mechanism |
 
 ##### Mixture-of-Experts LLM Systems
 
@@ -203,6 +222,8 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | HKU | Optimizing Distributed Deployment of Mixture-of-Experts Model Inference in Serverless Computing | Bayesian decision-making for expert selectino prediction; mixed-integer quadratically constrained programming for communication design; Bayesian optimization framework with multiple ε-greedy search |
 | 2025 | DATE | UC Berkeley | DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference | data-aware offloading; predictive pre-calculation; sequence-specific expert allocation |
 | 2025 | Arxiv | Alibaba | Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference | statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload |
+| 2025 | Arxiv | Georgia Tech | MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing | ILP for expert placement; cross-layer dependencies; minimizing total dispatched token number |
+| 2025 | Arxiv | Stevens Tech | fMoE: Fine-Grained Expert Offloading for Large Mixture-of-Experts Serving | expert map; iteration-level probability distributions; track fine-grained input semantic embeddings; semantic-based and trajectorybased |
 
 ##### Long Sequence LLM Systems
 
@@ -211,6 +232,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | OSDI | SJTU & Alibaba | Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache | inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling |
 | 2024 | Arxiv | SJTU | TokenRing: An Efficient Parallelism Framework for Infinite-Context LLMs via Bidirectional Communication | communication-oriented parallelism framework; inter-node P2P bidirectional communication bandwidth; optimization of attention block communication |
 | 2025 | Arxiv | CWRU | Longer Attention Span: Increasing Transformer Context Length with Sparse Graph Processing Techniques | sparse attention with graph computing perspective; work-optimal graph algorithms; achieve "true sparsity" |
+| 2025 | MLSys | MIT | LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention | unified sparse attention; hybrid static and dynamic sparsity; hierarchical kv cache management with query-centric pruning |
 
 ##### P-D Disaggregated Systems
 
@@ -220,6 +242,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | ISCA | University of Washington | Splitwise: Efficient Generative LLM Inference Using Phase Splitting | optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments |
 | 2024 | Arxiv | CMU | A System for Microserving of LLMs | fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction |
 | 2025 | Arxiv | ByteDance | KVDirect: Distributed Disaggregated LLM Inference | tensor-centric communication mechanism; pull-based KV cache transfer; dynamic GPU resource scheduling via RDMA |
+| 2025 | Arxiv | PKU | ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments | two-level hierarchical optimization; tabu search algorithm for GPU partition; a lightweight re-scheduling mechanism |
 
 ##### Fair Serving Systems
 
@@ -254,6 +277,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2019 | ASPLOS | USC | Hop: Heterogeneity-aware Decentralized Training | iteration gap; queue-based synchronization; backup workers and bounded staleness |
 | 2020 | ASPLOS | USC | Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training | Partial All-Reduce to reduce synchronization cost; group scheduling to avoid conflicts |
 | 2025 | Arxiv | UC Berkeley | DeServe: Towards Affordable Offline LLM Inference via Decentralization |  decentralized LLM inference; high-latency optimization; idle GPU utilization; modular on-chain integration |
+| 2025 | Arxiv | HKUST | DreamDDP: Accelerating Data Parallel Distributed LLM Training with Layer-wise Scheduled Partial Synchronization | partial synchronization based local SGD; DFS algorithm with pruned search space; enables the opportunity of overlapping communication and computation |
 
 #### ML Training Systems
 
@@ -279,6 +303,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 |-|-|-|-|-|
 | 2024 | Arxiv | CMU | Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs | LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming |
 | 2025 | Arxiv | USTC | PICE: A Semantic-Driven Progressive Inference System for LLM Serving in Cloud-Edge Networks | progressive inference paradigm; ensemble learning mechanism; semantic-level parallel data processing |
+| 2025 | ICLR | HKUST | HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment | a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges |
 
 #### LLM Training Systems
 

@@ -142,6 +142,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 |-|-|-|-|-|
 | 2024 | Science | NTHU | Fusion of memristor and digital compute-in-memory processing for energy-efficient edge computing | Fusion of ReRAM and SRAM CiM; ReRAM SLC & MLC Hybrid; Current quantization; Weight shifting with compensation |
 | 2024 | IPDPS | Georgia Tech | Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators | select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized) |
+| 2025 | ASPLOS | CAS | PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System | dynamic parallelism-aware task scheduling for llm decoding; online kernel characterization for heterogeneous architectures; hybrid PIM units for compute-bound and memory-bound kernels |
 
 #### CIM: Quantization
 
@@ -183,7 +184,11 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2024 | SOCC | IIT Hyderabad | Hardware-Aware Network Adaptation using Width and Depth Shrinking including Convolutional and Fully Connected Layer Merging | “Width Shrinking”: reduces the number of feature maps in CNN layers; “Depth Shrinking”: Merge of conv layer and fc layer |
 | 2024 | ICSAI | MIT | LoopTree: Exploring the Fused-Layer Dataflow  Accelerator Design Space | design space that supports set of tiling, recomputation, retention choices, and their combinations; model that validates design space |
 
-##### LLM Inference Accelerators
+##### LLM Accelerators
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | DATE | NTU | ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers| highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs |
 
 #### Graph Accelerators
 
@@ -229,7 +234,9 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2024 | SC | Tsinghua University | Switch-Less Dragonfly on Wafers: A Scalable Interconnection Architecture based on Wafer-Scale Integration | four-level topology structure; minimal routing algorithm on dragonfly for VC vumber reduction | 
+| 2024 | SC | Tsinghua University | Switch-Less Dragonfly on Wafers: A Scalable Interconnection Architecture based on Wafer-Scale Integration | four-level topology structure; minimal routing algorithm on dragonfly for VC vumber reduction |
+| 2024 | TCAS | SYSU | CINOC: Computing in Network-On-Chip With Tiled Many-Core Architectures for Large-Scale General Matrix Multiplications | computable input buffers;  thread execution free from fine-grained instruction control; data-aware
+thread execution |
 
 ##### Topology
 
@@ -240,6 +247,7 @@ Refer to [Distributed Systems](Software.md/#distributed-systems).
 | 2024 | MICRO | Tsinghua University | Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture | Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm |
 | 2024 | Arxiv | Washington State University | Atleus: Accelerating Transformers on the Edge Enabled by 3D Heterogeneous Manycore Architectures | heterogeneous 3D 
 NoC; pipeline design across heterogeneous resources; crossbar-wise quantization |
+| 2024 | ISLPED | WSU | HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration | 3D integration;  distinct planar tiers where each tier is tailor-made for either MHA or the FF network; alleviate memory bottlenecks while preventing frequent rewrites on ReRAM crossbars |
 
 ##### Interconnect
 
