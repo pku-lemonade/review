@@ -175,8 +175,16 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2025 | ArXiv | HKU | Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism | Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications |
+| 2025 | Arxiv | THU | Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism | chronos-aware pipeline parallelism; temporal locality optimization; activation balancing |
+| 2025 | Arxiv | NUS | PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization | selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading |
 
 #### LLM Inference Systems
+
+##### Communication-Focused Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | Apple | SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models | sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction |
 
 #### Many-Core Systems
 
@@ -242,11 +250,11 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2025 | Arxiv | HKU | Optimizing Distributed Deployment of Mixture-of-Experts Model Inference in Serverless Computing | Bayesian decision-making for expert selectino prediction; mixed-integer quadratically constrained programming for communication design; Bayesian optimization framework with multiple ε-greedy search |
 | 2025 | DATE | UC Berkeley | DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference | data-aware offloading; predictive pre-calculation; sequence-specific expert allocation |
 | 2025 | Arxiv | Alibaba | Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference | statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload |
 | 2025 | Arxiv | Georgia Tech | MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing | ILP for expert placement; cross-layer dependencies; minimizing total dispatched token number |
 | 2025 | Arxiv | Stevens Tech | fMoE: Fine-Grained Expert Offloading for Large Mixture-of-Experts Serving | expert map; iteration-level probability distributions; track fine-grained input semantic embeddings; semantic-based and trajectorybased |
+| 2025 | Arxiv | ByteDance | Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts | fine-grained communication-computation overlapping for efficient MoE execution; dependency resolving method; adaptive workload assignment method; shared data buffers between communication and computation operations |
 
 ##### Long Sequence LLM Systems
 
@@ -256,6 +264,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | SJTU | TokenRing: An Efficient Parallelism Framework for Infinite-Context LLMs via Bidirectional Communication | communication-oriented parallelism framework; inter-node P2P bidirectional communication bandwidth; optimization of attention block communication |
 | 2025 | Arxiv | CWRU | Longer Attention Span: Increasing Transformer Context Length with Sparse Graph Processing Techniques | sparse attention with graph computing perspective; work-optimal graph algorithms; achieve "true sparsity" |
 | 2025 | MLSys | MIT | LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention | unified sparse attention; hybrid static and dynamic sparsity; hierarchical kv cache management with query-centric pruning |
+| 2025 | Arxiv | PKU | ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs | hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism |
 
 ##### P-D Disaggregated Systems
 
@@ -337,6 +346,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | ZJU | Frenzy: A Memory-Aware Serverless LLM Training System for Heterogeneous GPU Clusters | efficient and low-overhead task-to-cluster scheduling; bin-packing algorithms; seamless and user-friendly |
 | 2025 | Arxiv | OSU | Scaling Large Language Model Training on Frontier with Low-Bandwidth Partitioning | low-bandwidth interconnects; three-level hierarchical partitioning strategy; improved hierarchical partitioning on top of ZeRO++ |
 | 2025 | Arxiv | PKU | Split Fine-Tuning for Large Language Models in Wireless Networks | split fine-tuning; device and server partition; novel compression scheme and resource management algorithm |
+| 2025 | Arxiv | Neuchatel | SkipPipe: Partial and Reordered Pipelining Framework for Training LLMs in Heterogeneous Networks | partial pipeline parallelism; stage skipping; path scheduling algorithm |
 
 ## Performance Evaluation
 
