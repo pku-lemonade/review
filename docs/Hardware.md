@@ -22,7 +22,16 @@
 | 2023 | HPCA | PKU | DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing | high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication |
 | 2024 | ISCA | THU | NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures | gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing |
 
-##### Benchmark
+#### PIM: (e)DRAM
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2021 | ICCD | ASU | CIDAN: Computing in DRAM with Artificial Neurons | "Threshold Logic Processing Element (TLPE)" for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture |
+| 2025 | arXiv | KAIST | RED: Energy Optimization Framework for eDRAM-based PIM with Reconfigurable Voltage Swing and Retention-aware Scheduling | "RED framework" for energy optimization; reconfigurable eDRAM design; retention-aware scheduling; trade-off analysis between RBL voltage swing, sense amplifier power, and retention time; refresh skipping and sense amplifier power gating |
+
+
+#### PIM & NDP: Benchmarks
+
+##### Benchmarks for Conventional Computing
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
@@ -31,6 +40,11 @@
 | 2024 | CAL | KAIST | Analysis of Data Transfer Bottlenecks in Commercial PIM Systems: A Study With UPMEM-PIM | low MLP; manual data placement; unbalanced thread allocation and scheduling |
 | 2024 | IEEE Access | Univ. of Lisbon | NDPmulator: Enabling Full-System Simulation for Near-Data Accelerators From Caches to DRAM | simulator "PiMulator" based on Ramulator & gem5; full system support; multiple ISA support |
 | 2024 | HPCA | KAIST | Pathfinding Future PIM Architectures by Demystifying a Commercial PIM Technology | simulator "uPIMulator" |
+
+##### Benchmarks for Quantum Computing
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | ASPDAC | NUS | PIMutation: Exploring the Potential of PIM Architecture for Quantum Circuit Simulation | "PIMutation framework" for quantum circuit simulation; gate merging optimization; row swapping instead of matrix multiplication; vector partitioning for separable states; leveraging UPMEM PIM architecture
 
 #### NDP: CXL
 
@@ -55,7 +69,7 @@
 | 2019 | DAC | ETHZ | NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning | simulator "Ramulator-PIM"; tracefile from Ramulator & run on zsim |
 | 2021 | CAL | Univ. of Virginia | MultiPIM: A Detailed and Configurable Multi-Stack Processing-In-Memory Simulator | simulator "MultiPIM"; multi-stack & virtual memory support; parallel offloading |
 
-#### General CiM
+#### General CiM & PiM
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
@@ -64,6 +78,7 @@
 | 2018 | TCAD | ASU | NeuroSim: A Circuit-Level Macro Model for Benchmarking Neuro-Inspired Architectures in Online Learning | estimate the circuit-level performance of neuro-inspired architectures; estimates the area, latency, dynamic energy, and leakage power; Support both SRAM and eNVM; tested on 2-layer MLP NN, MNIST |
 | 2019 | IEDM | Geogria Tech | DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies | a python wrapper to interface NeuroSim; for inference only |
 | 2020 | TCAD | ZJU | Eva-CiM: A System-Level Performance and Energy Evaluation Framework for Computing-in-Memory Architectures | models for capturing memory access and dependency-aware ISA traces; models for quantifying interactions between the host CPU and the CiM module |
+| 2025 | AICAS | Univ. of Virginia | Optimizing and Exploring System Performance in Compact Processing-in-Memory-based Chips | Pipeline Method for Compact PIM Designs; Dynamic Duplication Method (DDM); Maximum NN Size Estimation & Deployment in Compact PIM Design |
 
 
 #### CIM: SRAM
@@ -143,6 +158,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2024 | Science | NTHU | Fusion of memristor and digital compute-in-memory processing for energy-efficient edge computing | Fusion of ReRAM and SRAM CiM; ReRAM SLC & MLC Hybrid; Current quantization; Weight shifting with compensation |
 | 2024 | IPDPS | Georgia Tech | Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators | select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized) |
 | 2025 | ASPLOS | CAS | PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System | dynamic parallelism-aware task scheduling for llm decoding; online kernel characterization for heterogeneous architectures; hybrid PIM units for compute-bound and memory-bound kernels |
+| 2025 | arXiv | PKUIC, Tianyu Jia | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU;  Area-efficient CIM macro design; Mapping engine for generative model inference |
 
 #### CIM: Quantization
 
@@ -402,8 +418,11 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2020 | MICRO | Georgia Institute of Technology; NVIDIA | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model |
 | 2023 | ISPASS | Georgia Institute of Technology | ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale | graph-based training-loop execution; multi-dimensional heterogeneous topology construction; analytical network backend |
 | 2024 | ATC | Tsinghua University | Evaluating Chiplet-based Large-Scale Interconnection Networks via Cycle-Accurate Packet-Parallel Simulation | packet-centric simulation; critical resources recorading for process-order-induced deviations; unimportant stages elimination |
+| 2025 | arXiv | Univ. of Castilla-La Mancha | Understanding Intra-Node Communication in HPC Systems and Datacenters | Intra-/inter-node communication interference; Packet-level simulation (OMNeT++); PCIe/NVLink modeling; LLM communication patterns (DP, TP, PP) impact |
 
 ### Performance Analysis
+
+
 
 #### Redundancy Detection
 
