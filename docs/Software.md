@@ -212,6 +212,12 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2008 | VLSI | DISCA | Enhancement of Fault Injection Techniques Based on the Modification of VHDL Code | saboteurs and mutants technique based fault injection; VHDL level fault-tolerance mechanism | 
 | 2014 | DSN | UBC | Quantifying the Accuracy of High-Level Fault Injection Techniques for Hardware Faults | fault injection quantification; assembly level fault injection; LLVM compiler based fault injector |
 
+##### Communication
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | UCLM | Understanding intra-node communication in HPC systems and Datacenters | intra- and inter-node simulation model; intra-node network interface bottleneck; impacts of communication pattern |
+
 
 ##### SLO-Aware Systems
 

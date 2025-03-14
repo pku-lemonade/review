@@ -264,6 +264,14 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 | 2023 | HPCA | Tsinghua University | Baryon: Efficient Hybrid Memory Management with Compression and Sub-Blocking | stage area and selective commit for stable block; dual-format metadata scheme; cacheline-aligned compression and two-level replacements |
 | 2024 | SC | Tsinghua University | Hydrogen: Contention-Aware Hybrid Memory for Heterogeneous CPU-GPU Architectures | fast memory decoupled partitioning; token-based slow memory migration; epoch-based sampling method; consistent hashing based reconfiguration |
 
+#### Fault-Tolerant Architecture
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2009 | ICCD | NUS | The Salvage Cache: A fault-tolerant cache architecture for next-generation memory technologies | fault-bit protection for divisions; victim map based division replacement |
+| 2011 | CASES | UCSD | FFT-Cache: A Flexible Fault-Tolerant Cache Architecture for Ultra Low Voltage Operation | flexible defect map for faulty block; FDM configuration algorithm; non-functional lines minimization |
+
+
 #### Prefetcher
 
 ##### LLM Inference Prefetching
@@ -385,6 +393,14 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2017 | SC | NIT | High-performance and energy-efficient fault-tolerance core mapping in NoC | weighted communication energy; placing unmapped vertices region; application core graph; spare core placement algorithm |
 | 2019 | IVLSI | UESTC | Optimized mapping algorithm to extend lifetime of both NoC and cores in many-core system | lifetime budget metric; LBC-LBL mapping algorithm; electro-migration fault model |
 
+##### Reliability Management
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2020 | DATE | University of Turku | Thermal-Cycling-aware Dynamic Reliability Management in Many-Core System-on-Chip | Coffin-Mason equation based reliability model; reliability-aware mapping/scheduling; dynamic power management |
+| 2024 | Arxiv | TMU | A Two-Level Thermal Cycling-Aware Task Mapping Technique for Reliability Management in Manycore Systems | temperature based bin packing; task-to-bin assignment; thermal cycling-aware based task-to-core mapping |
+| 2024 | Arxiv | TMU | A Reinforcement Learning-Based Task Mapping Method to Improve the Reliability of Clustered Manycores | mean time to failure; density-based spatial clustering of applications with noise algorithm |
+
 #### Task Scheduling
 
 | Year | Venue | Authors | Title | Tags |
@@ -467,6 +483,13 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2022 | ASPLOS | NC State | ValueExpert: Exploring Value Patterns in GPU-accelerated Applications value-related inefficiencies | data value pattern recoginition; value flow graph; parallel intervals merging algorithm |
 | 2022 | SC | NC State | Graph Neural Networks Based Memory Inefficiency Detection Using Selective Sampling | dead store; silent store; silent load; assembly-level procedural control-flow embedding; dynamic value semantic embedding; relative positional encoding for different compilation options |
 
+#### Variation Impact
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2009 | HPCMP | UCSD | Measuring and Understanding Variation in Benchmark Performance | MPI communication variation; distribution of performance variation |
+| 2016 | SC | UNM | Understanding Performance Interference in Next-Generation HPC Systems | extreme value theory; bulk-synchronous parallel based modeling; gang/earliest deadline first scheduling |
+
 #### Stall Attribution
 
 | Year | Venue | Authors | Title | Tags |
@@ -497,3 +520,11 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 |-|-|-|-|-|
 | 2014 | DTIS | A Survey on Simulation-Based Fault Injection Tools for Complex Systems | runtime fault injection; compile-time fault injection |
 | 2024 | Arxiv | George Washington University | Algorithmic Strategies for Sustainable Reuse of Neural Network Accelerators with Permanent Faults | stack-at-0/1 faults; weight register fault; invertible scaling and shifting technique; elementary tile operations for mantissa fault |
+
+#### Physical Effects
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2004 | ICCAD | UCLA | A thermal-driven floorplanning algorithm for 3D ICs | combined bucket and 2D array; tile stack based model; horizontal and vertical heat flow analysis |
+| 2016 | IJHMT | UCR | Analysis of critical thermal issues in 3D integrated circuits | thermal hotspots; impact of thermal interface materials; power distribution; processor pitch and area |
+| 2019 | DAC | UCF | Noise Injection Adaption: End-to-End ReRAM Crossbar Non-ideal Effect Adaption for Neural Network Mapping | stuck-at-fault; crossbar wire resistance based IR drop; thermal noise model; shot noise; random telegraph noise |
