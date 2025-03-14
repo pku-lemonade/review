@@ -168,6 +168,11 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 ### Distrbuted Systems
 
+#### Remote Memory
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2020 | TC | Georgia Tech | Hierarchical Orchestration of Disaggregated Memory | "XMemPod architecture" for hierarchical memory orchestration; "compressed swap page table (CSPT)" for metadata management; hybrid swap-out algorithm for memory utilization; proactive swap-in optimization for performance; "RDMA-based remote memory sharing" for low-latency access |
+
 #### I/O Characterization and Optimization
 
 | Year | Venue | Authors | Title | Tags |

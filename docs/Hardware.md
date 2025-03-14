@@ -14,6 +14,11 @@
 
 ### Novel Memory Technologies
 
+#### CXL
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | arXiv | CAS-ICT | CXL over Ethernet: A Novel FPGA-based Memory Disaggregation Design in Data Centers | "CXL over Ethernet architecture" for extending memory disaggregation; FPGA-based prototype with cache optimization; switch-independent congestion control algorithm; native memory semantics for transparent access; combining CXL and Ethernet for low-latency remote memory access |
+
 #### NDP: DIMM
 
 ##### Communication
@@ -53,6 +58,8 @@
 | 2022 | MICRO | UCSB | BEACON: Scalable Near-Data-Processing Accelerators for Genome Analysis near Memory Pool with the CXL Support | scalable hardware accelerator inside CXL switch or bank | lossless memory expansion for CXL memory pools |
 | 2024 | ICS | Samsung | CLAY: CXL-based Scalable NDP Architecture Accelerating Embedding Layers | direct interconnect between DRAM clusters; dedicated memory address mapping scheme; Multi-CLAY system support through customized CXL switch |
 | 2024 | MICRO | SK Hyrix | Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders | CXL.mem protocol instead of CXL.io (DMA) for low-latency; "lightweight" threads to reduce address calculation overhead |
+##### CXL-based Memory Pools
+| 2023 | ASPLOS | Virginia Tech | Pond: CXL-Based Memory Pooling Systems for Cloud Platforms | "CXL-based memory pooling"; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory |
 
 #### NDP: 3D-stacked DRAM
 
@@ -333,7 +340,7 @@ NoC; pipeline design across heterogeneous resources; crossbar-wise quantization 
 | 2019 | HPCA | Texas A&M University | Active-Routing: Compute on the Way for Near-Data Processing | active-routing tree; vector processing in cache block for regular access pattern; data prefetch for irregular access pattern |
 | 2020 | HPCA | Drexel University | SnackNoC: Processing in the Communication Layer | communication fabric quantification; central packet manager for instruction flit; router compute unit as dataflow pe |
 
-##### Traffic Controll
+##### Traffic Control
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
@@ -357,7 +364,13 @@ NoC; pipeline design across heterogeneous resources; crossbar-wise quantization 
 | 2016 | HPCA | KTH Royal Institute of Technology | DVFS for NoCs in CMPs: A Thread Voting Approach | thread voting based DVFS machenism; pre-defined region-based V/F adjustment algorithm |
 | 2022 | HPCA | Chalmers | FastTrackNoC: A NoC with FastTrack Router Datapaths | non-turning hops; direct FastTrack flit path; zero-load latency analysis |
 | 2022 | HPCA | University of Toronto | Stay in your Lane: A NoC with Low-overhead Multi-packet Bypassing | FastFlow flow controll method; time-division-multiplexed (TDM) based non-overlapping FastPass-lanes; FastPass for throughput enhancement |
-| 2023 | HPCA | Tsinghua University | A Scalable Methodology for Designing Efficient Interconnection Network of Chiplets | interface grouping; hypercube construction algorithm; deadlock-free adaptive routing algorithm; safe/unsafe flow control; network interleaving method|
+| 2023 | HPCA | THU | A Scalable Methodology for Designing Efficient Interconnection Network of Chiplets | interface grouping; hypercube construction algorithm; deadlock-free adaptive routing algorithm; safe/unsafe flow control; network interleaving method |
+| 2025 | arXiv | SJTU | StreamGrid: Streaming Point Cloud Analytics via Compulsory Splitting and Deterministic Termination | "compulsory splitting" for reducing on-chip buffer size; "deterministic termination" for regularizing non-deterministic operations; line buffer optimization for point cloud pipelines; ILP-based buffer size minimization |
+
+#### RDMA
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | arXiv | UC Riverside | GPUVM: GPU-driven Unified Virtual Memory | "GPUVM" architecture for on-demand paging; RDMA-capable NIC for GPU memory management; GPU thread-based memory management and page migration; reuse-oriented paged memory for efficient eviction; high-level programming abstraction for GPU memory extension |
 
 ### Dataflow Architecture
 
