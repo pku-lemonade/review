@@ -138,6 +138,10 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | USTC | Parallel Speculative Decoding with Adaptive Draft Length | adaptive draft length; pre-verify and post-verify; draft-then-verify framework; mutual waiting problem |
 | 2024 | Arxiv | SEU | SEED: Accelerating Reasoning Tree Construction via Scheduled Speculative Decoding | reasoning tree construction; parallel drafting with speculative decoding; FCFS queue verification |
 
+###### Spec + Others
+
+| 2025 | Arxiv | Huawei | Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling | speculative MoE; speculative token shuffling; speculative expert pre-grouping |
+
 ##### LLM Serving Outages and Incidents
 
 | Year | Venue | Authors | Title | Tags |
@@ -245,16 +249,39 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | Microsoft | Towards Efficient Large Multimodal Model Serving | fine-grained stage-aware resource management; multimodal workload-specific scheduling; model architecture-specific optimizations |
 | 2025 | Arxiv | Huawei | Efficiently Serving Large Multimedia Models Using EPD Disaggregation | encode-prefill-decode disaggregation; multimodal cache; intra-request parallel |
 | 2025 | Arxiv | TU/e | Fine-tuning Multimodal Transformers on Edge: A Parallel Split Learning Approach | Multimodal Parallel Split Learning; computation-efficient training; server-side loss aggregation mechanism |
+| 2025 | Arxiv | HUST | FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework | resource-aware KV-cache memory pool; multimodal KV-cache compression; modality-specific compression |
 
 ##### Mixture-of-Experts LLM Systems
+
+###### Expert Offloading and Placement
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2025 | DATE | UC Berkeley | DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference | data-aware offloading; predictive pre-calculation; sequence-specific expert allocation |
-| 2025 | Arxiv | Alibaba | Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference | statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload |
-| 2025 | Arxiv | Georgia Tech | MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing | ILP for expert placement; cross-layer dependencies; minimizing total dispatched token number |
 | 2025 | Arxiv | Stevens Tech | fMoE: Fine-Grained Expert Offloading for Large Mixture-of-Experts Serving | expert map; iteration-level probability distributions; track fine-grained input semantic embeddings; semantic-based and trajectorybased |
+| 2025 | Arxiv | Georgia Tech | MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing | ILP for expert placement; cross-layer dependencies; minimizing total dispatched token number |
+| 2025 | EuroMLSys | EPFL | Accelerating MoE Model Inference with Expert Sharding | expert sharding for load balancing; tensor sharding for moe experts; fused expert computations for reduced kernel launches |
+
+###### Batching and Scheduling
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | Alibaba | Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference | statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload |
+| 2025 | Arxiv | University of Edinburgh | MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching | module-based batching; high-throughput MoE inference; full KV-cache offloading |
+| 2025 | Arxiv | KTH | Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference | fine-grained preemption; priority-aware scheduling; per-expert queues; expert-level preemption |
+
+###### Memory and Communication Efficiency
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
 | 2025 | Arxiv | ByteDance | Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts | fine-grained communication-computation overlapping for efficient MoE execution; dependency resolving method; adaptive workload assignment method; shared data buffers between communication and computation operations |
+| 2025 | Arxiv | University of Virginia | eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference | expert prediction; task-aware expert loading; task-aware request scheduling |
+
+###### Architectural Innovations
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | Shanghai AI | Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts | linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers |
 
 ##### Long Sequence LLM Systems
 
