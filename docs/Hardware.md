@@ -90,6 +90,7 @@
 | 2021 | TCAD | Geogria Tech | DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training | non-ideal device properties of NVMS' effect for on-chip training |
 | 2020 | ISCAS | JCU | MemTorch: A Simulation Framework for Deep Memristive Cross-Bar Architectures | supports both GPUs and CPUs; integrates directly with PyTorch; simulate non-idealities of memristive devices within cross-bar, tested on VGG-16, CIFAR-10 |
 | 2018 | JSSC | MIT | CONV-SRAM: An Energy-Efficient SRAM With In-Memory Dot-Product Computation for Low-Power Convolutional Neural Networks | SRAM-embedded convolution (dot-product) computation architecture for BNN; support multi-bit input-output |
+| 2022 | TCAD | NTHU | MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks | sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion |
 
 
 #### CIM: RRAM
@@ -188,7 +189,10 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2024 | IPDPS | Georgia Tech | Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators | select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized) |
 | 2023 | GLSVLSI | USC | Heterogeneous Integration of In-Memory Analog Computing Architectures with Tensor Processing Units | hybrid TPU-IMAC architecture; TPU for conv, CIM for fc |
 | 2025 | ASPLOS | CAS | PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System | dynamic parallelism-aware task scheduling for llm decoding; online kernel characterization for heterogeneous architectures; hybrid PIM units for compute-bound and memory-bound kernels |
-| 2025 | arXiv | PKUIC, Tianyu Jia | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU;  Area-efficient CIM macro design; Mapping engine for generative model inference |
+| 2025 | arXiv | PKU | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU;  Area-efficient CIM macro design; Mapping engine for generative model inference |
+| 2025 | arXiv | ASU | H3PIMAP: A Heterogeneity-Aware Multi-Objective DNN Mapping Framework on Electronic-Photonic Processing-in-Memory Architectures | Electronic-Photonic-PIM Accelerator; coresponding mapping framework and evaluation infrastructure |
+| 2024 | ASP-DAC | Keio | OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration | On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM |
+| 2023 | ICCAD | SJTU | TL-nvSRAM-CIM: Ultra-High-Density Three-Level ReRAM-Assisted Computing-in-nvSRAM with DC-Power Free Restore and Ternary MAC Operations | DCpower-free weight-restore from ReRAM; ternary SRAM-CIM mechanism with differential computing scheme |
 
 #### CIM: Quantization
 
@@ -206,6 +210,12 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 |-|-|-|-|-|
 | 2024 | ISCAS | UMCP | On-Chip Adaptation for Reducing Mismatch in Analog Non-Volatile Device Based Neural Networks | float-gate transistors based; hot-electron injection to address the issue of mismatch and variation |
 | 2023 | DATE | UniBo | End-to-End DNN Inference on a Massively Parallel Analog In Memory Computing Architecture | many-core heterogeneous architecture; general-purpose system based on RISC-V cores and nvAIMC cores; based on Phase-Change Memory(PCM); |
+
+## Photonic computing
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2021 | Nature | SUT | 11 TOPS photonic convolutional accelerator for optical neural networks | universal optical convolutional accelerator for vector processing |
 
 
 ## Computer Architecture
@@ -372,10 +382,10 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2021 | HPCA | Georgia Tech | MAGMA: An Optimization Framework for Mapping Multiple DNNs on Multiple Accelerator Cores | sub-accelerator selection; fine-grained job prioritization; MANGA crossover genetic operators |
-| 2023 | ISCA | Tsinghua University | MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search | GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration |
+| 2023 | ISCA | THU | MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search | GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration |
 | 2023 | VLSI | IIT Kharagpur | Application Mapping Onto Manycore Processor Architectures Using Active Search Framework | RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining |
-| 2024 | HPCA | Tsinghua University | Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators | layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization |
-| 2024 | ASPLOS | Tsinghua University | Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization | consumption-centric flow based subgraph execution scheme; main/side region based memory management |
+| 2024 | HPCA | THU | Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators | layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization |
+| 2024 | ASPLOS | THU | Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization | consumption-centric flow based subgraph execution scheme; main/side region based memory management |
 
 ##### Optimization Modeling
 
@@ -384,7 +394,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2020 | FPGA | ETH Zurich | Flexible Communication Avoiding Matrix Multiplication on FPGA with High-Level Synthesis | computation and I/O decomposition model for matrix multiplication; 1D array collapse mapping method; internal double buffering |
 | 2021 | HPCA | Georgia Tech | Heterogeneous Dataflow Accelerators for Multi-DNN Workloads | heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators |
 | 2023 | MICRO | Alibaba; CUHK | ArchExplorer: Microarchitecture Exploration Via Bottleneck Analysis | dynamic event-dependence graph(EDG); induced DEG based critical path construction; bottleneck-removal-driven DSE |
-| 2023 | ISCA | Tsinghua University | Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators | inter-layer encoding method; temperal cut; spatial cut; RA tree analysis |
+| 2023 | ISCA | THU | Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators | inter-layer encoding method; temperal cut; spatial cut; RA tree analysis |
 
 ##### Fault Tolerant Mapping
 
@@ -405,10 +415,10 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2017 | HPCA | Ghent University | Reliability-Aware Scheduling on Heterogeneous Multicore Processors | core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm |
-| 2020 | TCAD | Arizona State University | Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems | offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling |
-| 2023 | ICCAD | Peking University | Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization | topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning|
-| 2023 | MICRO | Duke University | Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI | graph alignment algoithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm |
+| 2017 | HPCA | UGent | Reliability-Aware Scheduling on Heterogeneous Multicore Processors | core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm |
+| 2020 | TCAD | ASU | Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems | offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling |
+| 2023 | ICCAD | PKU | Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization | topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning|
+| 2023 | MICRO | Duke | Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI | graph alignment algoithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm |
 
 ### Reconfigurable Architecture
 
@@ -416,10 +426,10 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2015 | HPCA | Cornel University | Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting | online bandwidth shifting mechanism; prefetch usefulness (PU) level |
+| 2015 | HPCA | Cornel | Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting | online bandwidth shifting mechanism; prefetch usefulness (PU) level |
 | 2015 | HPCA | IBM | XChange: A Market-based Approach to Scalable Dynamic Multi-resource Allocation in Multicore Architectures | CMP multiresource allocation mechanism XChange; market framework based modeling |
-| 2018 | MICRO | Seoul National University | RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors | graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method |
-| 2023 | MICRO | Tsinghua University | MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference | slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm |
+| 2018 | MICRO | SNU | RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors | graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method |
+| 2023 | MICRO | THU | MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference | slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm |
 | 2023 | MICRO | Yonsei University | McCore: A Holistic Management of High-Performance Heterogeneous Multicores | cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling |
 
 #### Application Optimization
@@ -465,10 +475,10 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2014 | JPDC | IN2P3 Computing Center | Versatile, scalable, and accurate simulation of distributed applications and platforms | API based communication&computation description; informed model of TCP for moderate size grids; file based modular network representation technique |
-| 2020 | MICRO | Georgia Institute of Technology; NVIDIA | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model |
-| 2023 | ISPASS | Georgia Institute of Technology | ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale | graph-based training-loop execution; multi-dimensional heterogeneous topology construction; analytical network backend |
-| 2024 | ATC | Tsinghua University | Evaluating Chiplet-based Large-Scale Interconnection Networks via Cycle-Accurate Packet-Parallel Simulation | packet-centric simulation; critical resources recorading for process-order-induced deviations; unimportant stages elimination |
-| 2025 | arXiv | Univ. of Castilla-La Mancha | Understanding Intra-Node Communication in HPC Systems and Datacenters | Intra-/inter-node communication interference; Packet-level simulation (OMNeT++); PCIe/NVLink modeling; LLM communication patterns (DP, TP, PP) impact |
+| 2020 | MICRO | Georgia Tech; NVIDIA | MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings | data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model |
+| 2023 | ISPASS | Georgia Tech | ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale | graph-based training-loop execution; multi-dimensional heterogeneous topology construction; analytical network backend |
+| 2024 | ATC | THU | Evaluating Chiplet-based Large-Scale Interconnection Networks via Cycle-Accurate Packet-Parallel Simulation | packet-centric simulation; critical resources recorading for process-order-induced deviations; unimportant stages elimination |
+| 2025 | arXiv | UCLM | Understanding Intra-Node Communication in HPC Systems and Datacenters | Intra-/inter-node communication interference; Packet-level simulation (OMNeT++); PCIe/NVLink modeling; LLM communication patterns (DP, TP, PP) impact |
 
 ### Performance Analysis
 
