@@ -98,6 +98,8 @@
 | 2020 | ISCAS | JCU | MemTorch: A Simulation Framework for Deep Memristive Cross-Bar Architectures | supports both GPUs and CPUs; integrates directly with PyTorch; simulate non-idealities of memristive devices within cross-bar, tested on VGG-16, CIFAR-10 |
 | 2018 | JSSC | MIT | CONV-SRAM: An Energy-Efficient SRAM With In-Memory Dot-Product Computation for Low-Power Convolutional Neural Networks | SRAM-embedded convolution (dot-product) computation architecture for BNN; support multi-bit input-output |
 | 2022 | TCAD | NTHU | MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks | sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion |
+| 2023 | TCAS-I | UIC | MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence | SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations |
+| 2025 | arXiv | Purdue | Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory | SRAM CIM architecture for accelerating attention; optimized for softmax; finer-granularity pipelining strategy |
 
 
 #### CIM: RRAM
@@ -118,7 +120,6 @@
 | 2019 | ASPLOS | Purdue & HP | PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference | Programmable and general-purpose ReRAM based ML Accelerator; Supports an instruction set; Has potential for DNN training; Provides simulator that accepts model |
 | 2018 | ICRC | Purdue & HP | Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning | compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance |
 | 2023 | NANOARCH | HUST | Heterogeneous Instruction Set Architecture for RRAM-enabled In-memory Computing | General ISA for RRAM CiM & digital heterogeneous architecture; a tile-processing unit-array three-level architecture |
-| 2023 | SC | UCLA | ReFloat: Low-Cost Floating-Point Processing in ReRAM for Accelerating Iterative Linear Solvers | data format and accelerator architecture |
 | 2023 | VLSI | Purdue | X-Former: In-Memory Acceleration of Transformers | in-memory accelerate attention layers; intralayer sequence blocking dataflow; provides a simulator |
 | 2024 | VLSI-SoC | RWTH Aachen University | Architecture-Compiler Co-design for ReRAM-Based Multi-core CIM Architectures | inference latency predictions and analysis of the crossbar utilization for CNN |
 
@@ -149,6 +150,14 @@
 | 2023 | TACO | HUST | A Compilation Tool for Computation Offloading in ReRAM-based CIM Architectures | compilation tool to migrate legacy programs to CPU/CIM heterogeneous architectures; a model to quantify the performance gain |
 | 2023 | DAC | CAS | PIMCOMP: A Universal Compilation Framework for Crossbar-based PIM DNN Accelerators | compiler based on Crossbar/IMA/Tile/Chip hierarchy; "low latency" and "high throughput" mode; genetic algorithm to optimize weight replication and core mapping; scheduling algorithms for complex DNN |
 | 2024 | ASPLOS | CAS | CIM-MLC: A Multi-level Compilation Stack for Computing-In-Memory Accelerators | compilation stack for various CIM accelerators; multi-level DNN scheduling approach |
+
+##### RRAM CiM: Float-Point processing
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | SC | UCLA | ReFloat: Low-Cost Floating-Point Processing in ReRAM for Accelerating Iterative Linear Solvers | data format and accelerator architecture |
+| 2024 | DATE | UESTC | AFPR-CIM: An Analog-Domain Floating-Point RRAM -based Compute- In- Memory Architecture with Dynamic Range Adaptive FP-ADC | all-analog domain CIM architecture for FP8 calculations; adaptive dynamic range FP-ADC & FP-DAC |
+| 2025 | arXiv | GWU | A Hybrid-Domain Floating-Point Compute-in-Memory Architecture for Efficient Acceleration of High-Precision Deep Neural Networks | SRAM based hybrid-domain FP CIM architecture; detailed circuit schematics and physical layouts |
 
 ##### RRAM CiM: BatchNorm layer
 
@@ -210,6 +219,12 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2024 | TCAD | BUAA | CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory | mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM |
 | 2023 | ISLPED | Purdue | Partial-Sum Quantization for Near ADC-Less Compute-In-Memory Accelerators | ADC-Less and near ADC-Less CiM accelerators; CiM hardware aware DNN quantization methodology |
 | 2023 | ICCD | SJTU | PSQ: An Automatic Search Framework for Data-Free Quantization on PIM-based Architecture | post-training quantization framework without retraining; hardware-aware block reassembly |
+
+#### CIM: Digital CIM
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | ISCAS | CAS | StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer | tile-based reconfigurable CIM macro microarchitecture; mixed-stationary cross-forwarding dataflow; ping-pong-like finegrained compute-rewriting pipeline |
 
 #### NVM
 
