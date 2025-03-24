@@ -2,6 +2,20 @@
 
 ## Emerging Technologies
 
+### 3DIC
+
+#### Thermal Evaluation
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | arXiv | SJTU | Cool-3D: An End-to-End Thermal-Aware Framework for Early-Phase Design Space Exploration of Microfluidic-Cooled 3DICs | end-to-end thermal-aware framework; microfluidic cooling integration; Pre-RTL design space exploration; floorplan designer; microfluidic cooling strategy generator |
+
+#### Benchmarks
+
+##### 3DIC Backend
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | arXiv | NJU | Open3DBench: Open-Source Benchmark for 3D-IC Backend Implementation and PPA Evaluation | open-source 3D-IC benchmark; modular 3D partitioning and placement; Open3D-DMP algorithm for cross-die co-placement; comprehensive PPA evaluation with thermal simulation |
+
 ### Chiplets
 
 #### Survey
@@ -271,6 +285,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | DATE | NTU | ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers| highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs |
+| 2025 | arXiv | SJTU | ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM | hybrid ROM-SRAM architecture for on-device LLM; "B-ROM" design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models |
 
 #### Graph Accelerators
 

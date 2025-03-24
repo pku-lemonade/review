@@ -166,6 +166,12 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 ### Storage Systems
 
+#### SSD Management
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | EuroSys | Samsung | Towards Efficient Flash Caches with Emerging NVMe Flexible Data Placement SSDs | "NVMe Flexible Data Placement (FDP) SSDs" for data segregation; targeted data placement for reduced device write amplification; FDP-enabled CacheLib architecture; theoretical DLWA model for CacheLib |
+| 2025 | arXiv | SDU | Managing Hybrid Solid-State Drives Using Large Language Models | "LLM-based auto-tuning framework" for hybrid SSD management; hybrid SSD parameter categorization; performance-sensitive parameter selection; prompt engineering for LLM integration; dynamic configuration optimization in hybrid SSDs |
+
 ### Distrbuted Systems
 
 #### Remote Memory
