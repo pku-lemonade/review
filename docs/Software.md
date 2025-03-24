@@ -141,6 +141,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 ###### Spec + Others
 
 | 2025 | Arxiv | Huawei | Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling | speculative MoE; speculative token shuffling; speculative expert pre-grouping |
+| 2025 | INFOCOM | UoA | SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models | internal neurons sparsification; model-agnostic acceleration framework; dynamic early-exit thresholds; multi-layered feature fusion |
 
 ##### LLM Serving Outages and Incidents
 
@@ -249,6 +250,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | CSE Huawei | Software Performance Engineering (SPE) for Foundation Model-Powered Software (FMware) | performance concerns are often considered afterthoughts; continuous performance engineering; cognitive architecture design / communication protocols / tuning and optimization / deployment |
 | 2024 | Arxiv | CUHK | A Survey on Inference Optimization Techniques for Mixture of Experts Models | model compression; expert skip; expert merge; sparse to dense; expert parallel; expert offloading |
 | 2024 | Arxiv | PolyU | A Survey on Large Language Model Acceleration based on KV Cache Management | cache selection; budget allocation; cache merging; cache quantization; cache low-rank decomposition; attention grouping and sharing; memory management; hardware-aware design |
+| 2025 | Arxiv | THU | Beyond A Single AI Cluster: A Survey of Decentralized LLM Training | resource-driven paradigm; community-driven decentralization; organizational decentralization; decentralized LLM training taxonomy |
 
 ###### Application Surveys
 
@@ -299,6 +301,12 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2025 | Arxiv | Shanghai AI | Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts | linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers |
+
+###### Compute-Kernel-Level Optimizations
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | SJTU | Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores | dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression |
 
 ##### Long Sequence LLM Systems
 

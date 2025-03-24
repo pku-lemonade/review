@@ -316,6 +316,13 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 | 2016 | HPCA | Intel | Cache QoS: From concept to reality in the Intel® Xeon® processor E5-2600 v3 product family | cache monitoring technology; cache allocation technology; resource monitoring IDs (RMIDs); classes of service (CLOS) |
 | 2018 | EuroSys | PKU | DCAPS: dynamic cache allocation with partial sharing | dynamic fine-grained shared cache management; balance cache utilization and contention; online practical miss rate curve |
 
+##### Multi-Level Cache
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2005 | ISCA | IBM | Adaptive mechanisms and policies for managing cache hierarchies in chip multiprocessors | limit unnecessary clean write backs; write back L2 to peer L2; second adaptive mechanism |
+| 2012 | JIP | Tokio Tech | Autonomous L3 Cache Technolgy for High Responsiveness | autonomous L3 cache; trio-configuration architecture; autonomous decentralized multi-layer cache |
+
 #### Heterogeneous Architecture
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
