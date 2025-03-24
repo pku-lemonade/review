@@ -26,6 +26,12 @@
 | 2022 | CCF THPC | ICT | Survey on chiplets: interface, interconnect and integration methodology | development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology |
 | 2024 | IEEE CASS | Tsinghua University | Chiplet Heterogeneous Integration Technology—Status and Challenges | wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance |
 
+#### Cost Analysis
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | ASU | CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems | heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection |
+
 ### Novel Memory Technologies
 
 #### CXL
@@ -253,9 +259,17 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 |-|-|-|-|-|
 | 2021 | Nature | SUT | 11 TOPS photonic convolutional accelerator for optical neural networks | universal optical convolutional accelerator for vector processing |
 
+## 3D IC
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2019 | GLSVLSI | Boston Univeristy | An Overview of Thermal Challenges and Opportunities for Monolithic 3D ICs | TSV-based 3D integration; Mono3D integration with nanoscale monolithic inter-tier vias; influence of lateral heat flow and inter-connection |
+| 2019 | ECTC | TSMC | System on Integrated Chips (SoIC) for 3D Heterogeneous Integration | system on integrated chips; SoIC package integration; reliability of SoIC bond,TSV and TDV |
+| 2020 | DATE | Georgia Tech | Macro-3D: A Physical Design Methodology for Face-to-Face-Stacked Heterogeneous 3D ICs | face-to-face stack; separate 2D floorplans generation; memory-on-logic projection |
+| 2022 | IEEE Micro | Cerebras Systems | Cerebras Architecture Deep Dive: First Look Inside the Hardware/Software Co-Design for Deep Learning | fine-grained dataflow scheduling; high-bandwidth, low-latency fabric design; weight streaming |
 
 ## Computer Architecture
-
+ 
 ### Data Type
 
 | Year | Venue | Authors | Title | Tags |
@@ -573,6 +587,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 |-|-|-|-|-|
 | 2014 | DTIS | A Survey on Simulation-Based Fault Injection Tools for Complex Systems | runtime fault injection; compile-time fault injection |
 | 2024 | Arxiv | George Washington University | Algorithmic Strategies for Sustainable Reuse of Neural Network Accelerators with Permanent Faults | stack-at-0/1 faults; weight register fault; invertible scaling and shifting technique; elementary tile operations for mantissa fault |
+| 2025 | Arxiv | NUDT | FlexStep: Enabling Flexible Error Detection in Multi/Many-core Real-time Systems | register checkpoints based error detection; memory access log unit; data buffering and channelling unit |
 
 #### Physical Effects
 
