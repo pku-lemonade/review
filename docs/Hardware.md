@@ -22,7 +22,7 @@
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2020 | Electronics | NUDT | Chiplet Heterogeneous Integration Technology—Status and Challenges | heterogeneous integration technology; interconnect interfaces and protocols; packaging technology|
+| 2020 | Electronics | NUDT | Chiplet Heterogeneous Integration Technology—Status and Challenges | heterogeneous integration technology; interconnect interfaces and protocols; packaging technology |
 | 2022 | CCF THPC | ICT | Survey on chiplets: interface, interconnect and integration methodology | development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology |
 | 2024 | IEEE CASS | Tsinghua University | Chiplet Heterogeneous Integration Technology—Status and Challenges | wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance |
 
@@ -34,10 +34,13 @@
 
 ### Novel Memory Technologies
 
-#### CXL
+#### CXL Memory
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
+| 2023 | ASPLOS | Virginia Tech | Pond: CXL-Based Memory Pooling Systems for Cloud Platforms | "CXL-based memory pooling"; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory |
 | 2023 | arXiv | CAS-ICT | CXL over Ethernet: A Novel FPGA-based Memory Disaggregation Design in Data Centers | "CXL over Ethernet architecture" for extending memory disaggregation; FPGA-based prototype with cache optimization; switch-independent congestion control algorithm; native memory semantics for transparent access; combining CXL and Ethernet for low-latency remote memory access |
+| 2024 | arXiv | UCSD | Telepathic Datacenters: Fast RPCs using Shared CXL Memory | Solid 3; Novelty 3; Presentation 4; pointer-passing RPC over CXL; MPK-based sandboxing for RPC safety; Seal/Release mechanism for RPC safety; RDMA fallback for RPC scalability; Lease/Quota shared memory management |
+| 2025 | arXiv | Micron | Architectural and System Implications of CXL-enabled Tiered Memory | Solid 4; Novelty 3; Presentation 4; CXL parallelism bottleneck analysis; Unfair queuing analysis; MIKU dynamic request control; ToR-based service time estimation; Hierarchical CXL throttling |
 
 #### NDP: DIMM
 
@@ -46,6 +49,7 @@
 |-|-|-|-|-|
 | 2023 | HPCA | PKU | DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing | high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication |
 | 2024 | ISCA | THU | NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures | gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing |
+| 2025 | HPCA | Samsung | Piccolo: Large-Scale Graph Processing with Fine-Grained In-Memory Scatter-Gather | Solid 3; Novelty 4; Presentation 3; In-DRAM fine-grained scatter-gather via data bus offsets; fine-grained cache architecture using fg-tags; Standard DDR command interpretation for FIM control; Combined graph tiling with fine-grained memory access |
 
 #### PIM: (e)DRAM
 | Year | Venue | Authors | Title | Tags |
@@ -78,8 +82,7 @@
 | 2022 | MICRO | UCSB | BEACON: Scalable Near-Data-Processing Accelerators for Genome Analysis near Memory Pool with the CXL Support | scalable hardware accelerator inside CXL switch or bank | lossless memory expansion for CXL memory pools |
 | 2024 | ICS | Samsung | CLAY: CXL-based Scalable NDP Architecture Accelerating Embedding Layers | direct interconnect between DRAM clusters; dedicated memory address mapping scheme; Multi-CLAY system support through customized CXL switch |
 | 2024 | MICRO | SK Hyrix | Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders | CXL.mem protocol instead of CXL.io (DMA) for low-latency; "lightweight" threads to reduce address calculation overhead |
-##### CXL-based Memory Pools
-| 2023 | ASPLOS | Virginia Tech | Pond: CXL-Based Memory Pooling Systems for Cloud Platforms | "CXL-based memory pooling"; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory |
+
 
 #### NDP: 3D-stacked DRAM
 
@@ -326,11 +329,16 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 #### Heterogeneous Architecture
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2012 | HPCA | Georgia Institute of Technology | TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture | thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization; TAP-UCP for CPU; TAP-RRIP for GPU |
 | 2017 | TACO | Intel | HAShCache: Heterogeneity-Aware Shared DRAMCache for Integrated Heterogeneous Systems | heterogeneity-aware DRAMCache scheduling PrIS; temporal bypass ByE; spatial occupancy control chaining |
 | 2018 | ICS | NC State  | ProfDP: A Lightweight Profiler to Guide Data Placement in Heterogeneous Memory Systems | latency sensitivity; bandwidth sensitivity; moving factor based data placement |
 | 2023 | HPCA | Tsinghua University | Baryon: Efficient Hybrid Memory Management with Compression and Sub-Blocking | stage area and selective commit for stable block; dual-format metadata scheme; cacheline-aligned compression and two-level replacements |
+
+##### CPU-GPU System
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2012 | HPCA | Georgia Institute of Technology | TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture | thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization; TAP-UCP for CPU; TAP-RRIP for GPU |
 | 2024 | SC | Tsinghua University | Hydrogen: Contention-Aware Hybrid Memory for Heterogeneous CPU-GPU Architectures | fast memory decoupled partitioning; token-based slow memory migration; epoch-based sampling method; consistent hashing based reconfiguration |
+| 2024 | arXiv | KTH | Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper | Solid 4; Novelty 3; Presentation 2; Grace Hopper system memory characterization; integrated CPU-GPU page table analysis; first-touch policy impact study; system page size impact study; access-counter page migration evaluation |
 
 #### Fault-Tolerant Architecture
 
@@ -338,6 +346,13 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 |-|-|-|-|-|
 | 2009 | ICCD | NUS | The Salvage Cache: A fault-tolerant cache architecture for next-generation memory technologies | fault-bit protection for divisions; victim map based division replacement |
 | 2011 | CASES | UCSD | FFT-Cache: A Flexible Fault-Tolerant Cache Architecture for Ultra Low Voltage Operation | flexible defect map for faulty block; FDM configuration algorithm; non-functional lines minimization |
+
+
+#### Disaggregated Memory
+##### Survey
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-| 
+| 2025 | arXiv | SJTU | Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters | Solid 2; Novelty 4; Presentation 4;  Cross-layer classification of DM techniques; hardware-level categories; architectural-level classifications; system and runtime-level groupings; application-level optimizations such as general-purpose and domain-specific approaches |
 
 
 #### Prefetcher
@@ -431,7 +446,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 |-|-|-|-|-|
 | 2019 | ASPLOS | Tsinghua University | Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators | buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm |
 | 2024 | MICRO | Carnegie Mellon University | The TYR Dataflow Architecture: Improving Locality by Taming Parallelism | local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication |
-| 2024 | MICRO | UC Riverside | Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse | producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture|
+| 2024 | MICRO | UC Riverside | Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse | producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture |
 
 #### Data Mapping
 
