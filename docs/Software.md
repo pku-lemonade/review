@@ -42,6 +42,12 @@
 
 #### LLM Memory Management
 
+##### General LLM Memory Management
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | THU | Jenga: Effective Memory Management for Serving LLM with Heterogeneity | Solid: 4, Novelty: 3, Presentation: 4; fixed-size embeddings; full-prefix dependency; two-level memory allocator |
+
 ##### LLM Quantization Methods
 
 | Year | Venue | Authors | Title | Tags |
@@ -193,14 +199,8 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | ArXiv | HKU | Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism | Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications |
 | 2025 | Arxiv | THU | Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism | chronos-aware pipeline parallelism; temporal locality optimization; activation balancing |
 | 2025 | Arxiv | NUS | PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization | selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading |
-
-#### LLM Inference Systems
-
-##### Communication-Focused Systems
-
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2025 | Arxiv | Apple | SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models | sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction |
+| 2025 | Arxiv | UCSD | WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training | Solid: 5, Novelty: 2, Presentation: 4; workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents |
+| 2025 | EuroSys | University of Toronto | Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization | Solid: 4, Novelty: 2, Presentation: 4; fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning |
 
 #### Many-Core Systems
 
@@ -230,6 +230,13 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 |-|-|-|-|-|
 | 2025 | Arxiv | UCLM | Understanding intra-node communication in HPC systems and Datacenters | intra- and inter-node simulation model; intra-node network interface bottleneck; impacts of communication pattern |
 
+#### LLM Inference Systems
+
+##### Communication-Focused Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | Apple | SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models | sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction |
 
 ##### SLO-Aware Systems
 
@@ -247,10 +254,10 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | Arxiv | Northeastern University | LLM Inference Serving: Survey of Recent Advances and Opportunities | KV cache and memory management; LLM computation optimization; Cloud LLM deployment; focus on system-level enhancements |
-| 2024 | Arxiv | CSE Huawei | Software Performance Engineering (SPE) for Foundation Model-Powered Software (FMware) | performance concerns are often considered afterthoughts; continuous performance engineering; cognitive architecture design / communication protocols / tuning and optimization / deployment |
 | 2024 | Arxiv | CUHK | A Survey on Inference Optimization Techniques for Mixture of Experts Models | model compression; expert skip; expert merge; sparse to dense; expert parallel; expert offloading |
 | 2024 | Arxiv | PolyU | A Survey on Large Language Model Acceleration based on KV Cache Management | cache selection; budget allocation; cache merging; cache quantization; cache low-rank decomposition; attention grouping and sharing; memory management; hardware-aware design |
 | 2025 | Arxiv | THU | Beyond A Single AI Cluster: A Survey of Decentralized LLM Training | resource-driven paradigm; community-driven decentralization; organizational decentralization; decentralized LLM training taxonomy |
+| 2025 | Arxiv | FIU | Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions | Solid: (Survey), Novelty: (Survey), Presentation: 2; distributed solutions for LMs; workload imbalance in LLM training; M-ICL; model security enhancement |
 
 ###### Application Surveys
 
@@ -325,8 +332,20 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | OSDI | PKU | DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving | goodput-optimized; prefill-decoding interference；novel placement algorithm for p-d schema |
 | 2024 | ISCA | University of Washington | Splitwise: Efficient Generative LLM Inference Using Phase Splitting | optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments |
 | 2024 | Arxiv | CMU | A System for Microserving of LLMs | fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction |
-| 2025 | Arxiv | ByteDance | KVDirect: Distributed Disaggregated LLM Inference | tensor-centric communication mechanism; pull-based KV cache transfer; dynamic GPU resource scheduling via RDMA |
 | 2025 | Arxiv | PKU | ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments | two-level hierarchical optimization; tabu search algorithm for GPU partition; a lightweight re-scheduling mechanism |
+
+###### P-D Disaggregated System Optimizations
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | ByteDance | KVDirect: Distributed Disaggregated LLM Inference | tensor-centric communication mechanism; pull-based KV cache transfer; dynamic GPU resource scheduling via RDMA |
+| 2025 | Arxiv | SYSU | Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation | Solid: 4, Novelty: 3, Presentation: 4; attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling |
+
+##### Throughput-Optimized Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | HKUST | Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation | Solid: 4, Novelty: 3, Presentation: 4; sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling |
 
 ##### Fair Serving Systems
 
