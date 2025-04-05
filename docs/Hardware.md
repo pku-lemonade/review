@@ -116,6 +116,7 @@
 | 2022 | TCAD | NTHU | MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks | sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion |
 | 2023 | TCAS-I | UIC | MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence | SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations |
 | 2025 | arXiv | Purdue | Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory | SRAM CIM architecture for accelerating attention; optimized for softmax; finer-granularity pipelining strategy |
+| 2024 | ESSCIRC | THU | A 65nm 8b-Activation 8b-Weight SRAM-Based Charge-Domain Computing-in-Memory Macro Using A Fully-Parallel Analog Adder Network and A Single-ADC Interface | Solid: 4, Novelty: 4, Presentation: 4; SRAM-based CD-CiM architecture; charge-domain analog adder tree; ReLU-optimized ADC |
 
 
 #### CIM: RRAM
@@ -159,6 +160,7 @@
 |-|-|-|-|-|
 | 2024 | APIN | SWU | Multi-optimization scheme for in-situ training of memristor neural network based on contrastive learning | optimizations to the deployment method, loss function and gradient calculation; compensation measures for non-ideal effects |
 | 2025 | TNNLS | SNU | Efficient Hybrid Training Method for Neuromorphic Hardware Using Analog Nonvolatile Memory | Hybrid offline-online training method |
+| 2023 | Adv. Mater. | UMich | Bulk‐Switching Memristor‐Based Compute‐In‐Memory Module for Deep Neural Network Training | Solid: 4, Novelty: 1, Presentation: 4; Bulk-ReRAM based digital-CIM hybrid architeture for training; CIM for forward, digital for backward |
 
 ##### RRAM CiM: Compiler
 | Year | Venue | Authors | Title | Tags |
@@ -193,12 +195,6 @@ training method; replication of multiple identical kernels for processing differ
 | 2021 | TCAD | SJTU | Efficient and Robust RRAM-Based Convolutional Weight Mapping With Shifted and Duplicated Kernel | shift and duplicate kernel (SDK) convolutional weight mapping architecture; parallel-window size allocation algorithm; kernel synchronization method |
 | 2023 | VLSI-SoC | RWTH Aachen University | Mapping of CNNs on multi-core RRAM-based CIM architectures | architecture optimized for communication; compiler algorithms for conv2D layer; cycle-accurate simulator|
 | 2023 | TODAES | UCAS | Mathematical Framework for Optimizing Crossbar Allocation for ReRAM-based CNN Accelerators | formulate a crossbar allocation problem for ReRAM-based CNN accelerators; dynamic programming based solver; models the performance considering allocation problem |
-
-##### RRAM CiM: Transformer
-
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2024 | TODAES | HUST | A Cascaded ReRAM-based Crossbar Architecture for Transformer Neural Network Acceleration | cascaded crossbar arrays that uses transimpedance amplifiers; data mapping scheme to store signed operands; ADC virtualization scheme |
 
 ##### RRAM Non-ideal Effects
 
@@ -243,6 +239,15 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2025 | ISCAS | CAS | StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer | tile-based reconfigurable CIM macro microarchitecture; mixed-stationary cross-forwarding dataflow; ping-pong-like finegrained compute-rewriting pipeline |
+
+##### CiM: Transformer
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | TODAES | HUST | A Cascaded ReRAM-based Crossbar Architecture for Transformer Neural Network Acceleration | cascaded crossbar arrays that uses transimpedance amplifiers; data mapping scheme to store signed operands; ADC virtualization scheme |
+| 2025 | DATE | PKU | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Solid: 2, Novelty: 4, Presentation: 4; architecture model and simulator for CIM-based TPUs; designed for LLM inference |
+| 2023 | arXiv | UKeio | An 818-TOPS/W CSNR-31dB SQNR-45dB 10-bit Capacitor-Reconfiguring Computing-in-Memory Macro with Software-Analog Co-Design for Transformers | Solid: 4, Novelty: 3, Presentation: 1; Capacitor-Reconfiguring analog CIM architecture |
+| 2025 | arXiv | Purdue | Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory | Solid: 3, Novelty: 2, Presentation: 4; SRAM based softmax-friendly CIM architure for transformer; finer-granularity pipelining strategy |
 
 #### NVM
 
