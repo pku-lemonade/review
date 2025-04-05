@@ -117,7 +117,11 @@
 | 2023 | TCAS-I | UIC | MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence | SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations |
 | 2025 | arXiv | Purdue | Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory | SRAM CIM architecture for accelerating attention; optimized for softmax; finer-granularity pipelining strategy |
 | 2024 | ESSCIRC | THU | A 65nm 8b-Activation 8b-Weight SRAM-Based Charge-Domain Computing-in-Memory Macro Using A Fully-Parallel Analog Adder Network and A Single-ADC Interface | Solid: 4, Novelty: 4, Presentation: 4; SRAM-based CD-CiM architecture; charge-domain analog adder tree; ReLU-optimized ADC |
+| 2021 | ISSCC | TSMC | An 89TOPS/W and 16.3TOPS/mm2 All-Digital SRAM-Based Full-Precision Compute-In Memory Macro in 22nm for Machine-Learning Edge Applications | Solid: 5, Novelty: 1, Presentation: 2; programmable bit-widths for both input and weights; SRAM and CIM mode |
 
+### CIM：DRAM
+
+| 2024 | A-SSCC | UNIST | A 273.48 TOPS/W and 1.58 Mb/mm2 Analog-Digital Hybrid CIM Processor with Transpose Ternary-eDRAM Bitcell | Solid: 4, Novelty: 2, Presentation: 1; analog DRAM CIM for partial sum and digital adder |
 
 #### CIM: RRAM
 
@@ -154,6 +158,7 @@
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2024 | AICAS | RWTH Aachen University | A Calibratable Model for Fast Energy Estimation of MVM Operations on RRAM Crossbars | system energy model for MVM on ReRAM crossbars; methodology to study the effect of the selection transistor and wire parasitics in 1T1R crossbar arrays |
+| 2024 | arXiv | MIT | Modeling Analog-Digital-Converter Energy and Area for Compute-In-Memory Accelerator Design | Solid: 3, Novelty: 3, Presentation: 4; architecture-level model that estimates ADC energy and area |
 
 ##### RRAM CiM: Training optimization
 | Year | Venue | Authors | Title | Tags |
@@ -195,6 +200,7 @@ training method; replication of multiple identical kernels for processing differ
 | 2021 | TCAD | SJTU | Efficient and Robust RRAM-Based Convolutional Weight Mapping With Shifted and Duplicated Kernel | shift and duplicate kernel (SDK) convolutional weight mapping architecture; parallel-window size allocation algorithm; kernel synchronization method |
 | 2023 | VLSI-SoC | RWTH Aachen University | Mapping of CNNs on multi-core RRAM-based CIM architectures | architecture optimized for communication; compiler algorithms for conv2D layer; cycle-accurate simulator|
 | 2023 | TODAES | UCAS | Mathematical Framework for Optimizing Crossbar Allocation for ReRAM-based CNN Accelerators | formulate a crossbar allocation problem for ReRAM-based CNN accelerators; dynamic programming based solver; models the performance considering allocation problem |
+| 2025 | TVLSI | NBU | A 578-TOPS/W RRAM-Based Binary Convolutional Neural Network Macro for Tiny AI Edge Devices | Solid: 4, Novelty: 3, Presentation: 4; ReRAM XNOR cell; BCNN CIM macro with FPGA as the control core |
 
 ##### RRAM Non-ideal Effects
 
@@ -222,6 +228,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2024 | ASP-DAC | Keio | OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration | On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM |
 | 2023 | ICCAD | SJTU | TL-nvSRAM-CIM: Ultra-High-Density Three-Level ReRAM-Assisted Computing-in-nvSRAM with DC-Power Free Restore and Ternary MAC Operations | DCpower-free weight-restore from ReRAM; ternary SRAM-CIM mechanism with differential computing scheme |
 | 2025 | DAC | Chung-Ang Univ. | HH-PIM: Dynamic Optimization of Power and Performance with Heterogeneous-Hybrid PIM for Edge AI Devices | Novelty 2; Solid 4; Presentation 3; heterogeneous-hybrid PIM with HP/LP modules and MRAM/SRAM; dynamic data placement algorithm for energy optimization; dual PIM controller design |
+| 2025 | Nature | TSMC | A mixed-precision memristor and SRAM compute-in-memory AI processor | Novelty 2; Solid 5; Presentation 5; layer based INT-FP hybrid architure; kernel-based mix-CIM (SRAM/ReRAM/digital hybrid architecture) |
 
 #### CIM: Quantization
 
