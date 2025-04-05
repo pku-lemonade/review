@@ -2,20 +2,6 @@
 
 ## Emerging Technologies
 
-### 3DIC
-
-#### Thermal Evaluation
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2025 | arXiv | SJTU | Cool-3D: An End-to-End Thermal-Aware Framework for Early-Phase Design Space Exploration of Microfluidic-Cooled 3DICs | end-to-end thermal-aware framework; microfluidic cooling integration; Pre-RTL design space exploration; floorplan designer; microfluidic cooling strategy generator |
-
-#### Benchmarks
-
-##### 3DIC Backend
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2025 | arXiv | NJU | Open3DBench: Open-Source Benchmark for 3D-IC Backend Implementation and PPA Evaluation | open-source 3D-IC benchmark; modular 3D partitioning and placement; Open3D-DMP algorithm for cross-die co-placement; comprehensive PPA evaluation with thermal simulation |
-
 ### Chiplets
 
 #### Survey
@@ -50,12 +36,19 @@
 | 2023 | HPCA | PKU | DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing | high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication |
 | 2024 | ISCA | THU | NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures | gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing |
 | 2025 | HPCA | Samsung | Piccolo: Large-Scale Graph Processing with Fine-Grained In-Memory Scatter-Gather | Solid 3; Novelty 4; Presentation 3; In-DRAM fine-grained scatter-gather via data bus offsets; fine-grained cache architecture using fg-tags; Standard DDR command interpretation for FIM control; Combined graph tiling with fine-grained memory access |
+| 2025 | arXiv | ETHZ | PIMDAL: Mitigating the Memory Bottleneck in Data Analytics using a Real Processing-in-Memory System | Solid 4; Novelty 2; Presentation 4; PIMDAL library for DB operators; quicksort/mergesort/hashing on UPMEM PIM; scatter/gather/async transfers for PIM communication |
 
 #### PIM: (e)DRAM
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2021 | ICCD | ASU | CIDAN: Computing in DRAM with Artificial Neurons | "Threshold Logic Processing Element (TLPE)" for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture |
 | 2025 | arXiv | KAIST | RED: Energy Optimization Framework for eDRAM-based PIM with Reconfigurable Voltage Swing and Retention-aware Scheduling | "RED framework" for energy optimization; reconfigurable eDRAM design; retention-aware scheduling; trade-off analysis between RBL voltage swing, sense amplifier power, and retention time; refresh skipping and sense amplifier power gating |
+
+#### PIM: In-Cache-Computing
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | arXiv | Univ. of Torino | ARCANE: Adaptive RISC-V Cache Architecture for Near-memory Extensions | Novelty 4; Solid 4; Presentation 3; ARCANE in-cache NMC coprocessor architecture; software-defined matrix ISA for NMC abstraction; cache-integrated control runtime for NMC management |
 
 
 #### PIM & NDP: Benchmarks
@@ -232,6 +225,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2025 | arXiv | ASU | H3PIMAP: A Heterogeneity-Aware Multi-Objective DNN Mapping Framework on Electronic-Photonic Processing-in-Memory Architectures | Electronic-Photonic-PIM Accelerator; coresponding mapping framework and evaluation infrastructure |
 | 2024 | ASP-DAC | Keio | OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration | On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM |
 | 2023 | ICCAD | SJTU | TL-nvSRAM-CIM: Ultra-High-Density Three-Level ReRAM-Assisted Computing-in-nvSRAM with DC-Power Free Restore and Ternary MAC Operations | DCpower-free weight-restore from ReRAM; ternary SRAM-CIM mechanism with differential computing scheme |
+| 2025 | DAC | Chung-Ang Univ. | HH-PIM: Dynamic Optimization of Power and Performance with Heterogeneous-Hybrid PIM for Edge AI Devices | Novelty 2; Solid 4; Presentation 3; heterogeneous-hybrid PIM with HP/LP modules and MRAM/SRAM; dynamic data placement algorithm for energy optimization; dual PIM controller design |
 
 #### CIM: Quantization
 
@@ -242,6 +236,7 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2024 | TCAD | BUAA | CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory | mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM |
 | 2023 | ISLPED | Purdue | Partial-Sum Quantization for Near ADC-Less Compute-In-Memory Accelerators | ADC-Less and near ADC-Less CiM accelerators; CiM hardware aware DNN quantization methodology |
 | 2023 | ICCD | SJTU | PSQ: An Automatic Search Framework for Data-Free Quantization on PIM-based Architecture | post-training quantization framework without retraining; hardware-aware block reassembly |
+| 2025 | arXiv | SC State | PIM-LLM: A High-Throughput Hybrid PIM Architecture for 1-bit LLMs | Novelty 1; Soild 3; Presentation 4; hybrid PIM-Digital architecture; analog PIM for low-precision MatMul; digital systolic array for high-precision matMul |
 
 #### CIM: Digital CIM
 
@@ -270,6 +265,19 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2019 | ECTC | TSMC | System on Integrated Chips (SoIC) for 3D Heterogeneous Integration | system on integrated chips; SoIC package integration; reliability of SoIC bond,TSV and TDV |
 | 2020 | DATE | Georgia Tech | Macro-3D: A Physical Design Methodology for Face-to-Face-Stacked Heterogeneous 3D ICs | face-to-face stack; separate 2D floorplans generation; memory-on-logic projection |
 | 2022 | IEEE Micro | Cerebras Systems | Cerebras Architecture Deep Dive: First Look Inside the Hardware/Software Co-Design for Deep Learning | fine-grained dataflow scheduling; high-bandwidth, low-latency fabric design; weight streaming |
+
+### Thermal Evaluation
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | arXiv | SJTU | Cool-3D: An End-to-End Thermal-Aware Framework for Early-Phase Design Space Exploration of Microfluidic-Cooled 3DICs | end-to-end thermal-aware framework; microfluidic cooling integration; Pre-RTL design space exploration; floorplan designer; microfluidic cooling strategy generator |
+
+### Benchmarks
+
+#### 3DIC Backend
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | arXiv | NJU | Open3DBench: Open-Source Benchmark for 3D-IC Backend Implementation and PPA Evaluation | open-source 3D-IC benchmark; modular 3D partitioning and placement; Open3D-DMP algorithm for cross-die co-placement; comprehensive PPA evaluation with thermal simulation |
 
 ## Computer Architecture
  
@@ -303,6 +311,12 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 |-|-|-|-|-|
 | 2024 | DATE | NTU | ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers| highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs |
 | 2025 | arXiv | SJTU | ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM | hybrid ROM-SRAM architecture for on-device LLM; "B-ROM" design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models |
+
+##### Benchmarks
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | arXiv | Cambridge | Benchmarking Ultra-Low-Power µNPUs | Novelty 2; Solid 4; Presentation 4; "Comparative µNPU Benchmarking" (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification |
 
 #### Graph Accelerators
 
