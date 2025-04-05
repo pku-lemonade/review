@@ -482,8 +482,6 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2021 | HPCA | Georgia Tech | MAGMA: An Optimization Framework for Mapping Multiple DNNs on Multiple Accelerator Cores | sub-accelerator selection; fine-grained job prioritization; MANGA crossover genetic operators |
 | 2023 | ISCA | THU | MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search | GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration |
 | 2023 | VLSI | IIT Kharagpur | Application Mapping Onto Manycore Processor Architectures Using Active Search Framework | RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining |
-| 2024 | HPCA | THU | Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators | layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization |
-| 2024 | ASPLOS | THU | Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization | consumption-centric flow based subgraph execution scheme; main/side region based memory management |
 
 ##### Optimization Modeling
 
@@ -556,6 +554,16 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2024 | ISEDA | UESTC | GraphRTL: an Agile Design Framework of RTL Code from Data Flow Graphs | graph error detection kernel; DFS based graph equivalent reconstruction; template/scala based DFG and CFG merging |
 | 2024 | Arxiv | UCSD | MAGE: A Multi-Agent Engine for Automated RTL Code Generation | multi-agent; high-temperature sampling and ranking; verilog-state checkpoint debugging |
 
+### Architecture DSE
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | HPCA | THU | Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators | layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization |
+| 2024 | ASPLOS | THU | Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization | consumption-centric flow based subgraph execution scheme; main/side region based memory management |
+| 2024 | ASPDAC | CUHK | SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design | Solid: 2, Novelty: 2, Presentation: 3; intercluster distance algorithm; importance-based pruning and initialization |
+| 2025 | Arxiv | THU & UM | MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware | Solid: 3, Novelty: 2, Presentation: 3; IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE |
+| 2025 | Arxiv | PKU | DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization | Solid: 4, Novelty: 3, Presentation: 3; diffusion-based design generation; conditional sampling |
+
 ## Performance Evaluation
 
 ### Modeling and Simulation
@@ -579,8 +587,6 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2025 | arXiv | UCLM | Understanding Intra-Node Communication in HPC Systems and Datacenters | Intra-/inter-node communication interference; Packet-level simulation (OMNeT++); PCIe/NVLink modeling; LLM communication patterns (DP, TP, PP) impact |
 
 ### Performance Analysis
-
-
 
 #### Redundancy Detection
 
@@ -627,8 +633,17 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2014 | DTIS | A Survey on Simulation-Based Fault Injection Tools for Complex Systems | runtime fault injection; compile-time fault injection |
+| 2021 | ASPLOS | UIUC | BayesPerf: Minimizing Performance Monitoring Errors using Bayesian Statistics | Solid: 4, Novelty: 3, Presentation: 3; microarchitectural relationship incorporation; measurement uncertainty quantification; high-frequency sampling reduction |
 | 2024 | Arxiv | George Washington University | Algorithmic Strategies for Sustainable Reuse of Neural Network Accelerators with Permanent Faults | stack-at-0/1 faults; weight register fault; invertible scaling and shifting technique; elementary tile operations for mantissa fault |
 | 2025 | Arxiv | NUDT | FlexStep: Enabling Flexible Error Detection in Multi/Many-core Real-time Systems | register checkpoints based error detection; memory access log unit; data buffering and channelling unit |
+| 2025 | DAC | SEU | MEEK: Re-thinking Heterogeneous Parallel Error Detection Architecture for Real-World OoO Superscalar Processors | Solid: 4, Novelty: 3, Presentation: 3; data extraction unit; bespoke forwarding fabric; little core upgrade |
+
+##### NoC Fault
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2017 | TECS | NTUA | SoftRM: Self-Organized Fault-Tolerant Resource Management for Failure Detection and Recovery in NoC Based Many-Cores | Solid: 4, Novelty: 2, Presentation: 2; permanent fault; tweaked perfect failure detector; paxos algorithm to recover fault |
+| 2017 | DDECS | TTU | From Online Fault Detection to Fault Management in Network-on-Chips: A Ground-Up Approach | Solid: 1, Novelty: 2, Presentation: 3; data-path fault detection; control part fault detection; assertion vector based fault localization |
 
 #### Physical Effects
 

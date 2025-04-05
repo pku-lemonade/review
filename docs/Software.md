@@ -186,6 +186,11 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 |-|-|-|-|-|
 | 2020 | TC | Georgia Tech | Hierarchical Orchestration of Disaggregated Memory | "XMemPod architecture" for hierarchical memory orchestration; "compressed swap page table (CSPT)" for metadata management; hybrid swap-out algorithm for memory utilization; proactive swap-in optimization for performance; "RDMA-based remote memory sharing" for low-latency access |
 
+#### Scratchpad Memory
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | ASPLOS | Cornell University | Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories | Solid: 3, Novelty: 3, Presentation: 3; work-stealing based dynamic task parallelism; stack/task queue in SPM; read-only data duplication |
+
 #### I/O Characterization and Optimization
 
 | Year | Venue | Authors | Title | Tags |
@@ -428,7 +433,9 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2009 | CACM | Berkeley | Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures | operational intensity; memory bound; compute bound |
+| 2014 | | ETH Zurich | Extending the Roofline Model: Bottleneck Analysis with Microarchitectural Constraints | Solid: 4, Novelty: 3, Presentation: 3; dag-based performance model; Tomasulo’s greedy algorithm; scheduled dag based bottleneck modeling |
 | 2021 | Intelligent Computing | UC Berkeley | Hierarchical Roofline Performance Analysis for Deep Learning Applications | Nsight Compute based hierarchical roofline model; FP16、FP32 extension for ERT|
+| 2025 | Arxiv | Google | Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion | Solid: 2, Novelty: 2, Presentation: 3; per-resource throughput analysis; fine-grained performance attribution |
 
 #### LLM Serving
 
