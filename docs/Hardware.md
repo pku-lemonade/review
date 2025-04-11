@@ -391,6 +391,10 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 
 #### DRAM
 
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | UTokyo | MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration | Solid: 4, Novelty: 3, Presentation: 4; GeMV operations for end-to-end low-bit LLM inference using unmodified DRAM; processor-DRAM co-design; on-the-fly vector encoding; horizontal matrix layout |
+
 ### Communication Architecture
 
 Refer to [Distributed Systems](Software.md/#distributed-systems).

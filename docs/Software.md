@@ -28,6 +28,12 @@
 
 ### Compiler
 
+#### Hardware Description Language
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2021 | ASPLOS | Cornell | A compiler infrastructure for accelerator generators | Solid: 3, Novelty: 3, Presentation: 4; a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing |
+
 ## Operating Systems
 
 ### Virtualization
@@ -54,6 +60,7 @@
 |-|-|-|-|-|
 | 2025 | Arxiv | UVa | HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference | method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination |
 | 2025 | Arxiv | PKU | Bitnet.cpp: Efficient Edge Inference for Ternary LLMs | ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58 |
+| 2025 | Arxiv | SJTU | MILLION: Mastering Long-Context LLM Inference Via Outlier-Immunized KV Product Quantization | Solid: 4, Novelty: 2, Presentation: 3; a non-uniform quantization algorithm based on product quantization; leverages sparse computation and asynchronous quantization; distributes quantization power unevenly across channels |
 
 ##### KV Cache Storage Systems
 
@@ -122,6 +129,7 @@
 |-|-|-|-|-|
 | 2024 | Arxiv | UCSB | Multi-Bin Batching for Increasing LLM Inference Throughput | binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality |
 | 2024 | Arxiv | Yale | TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications | segmented generation; time-sensitive scheduling; latency-guided batch size selection |
+| 2025 | Arxiv | MSRI | Niyama : Breaking the Silos of LLM Inference Serving | Solid: 4, Novelty: 3, Presentation: 4; QoS-driven LLM inference serving system; co-scheduling requests with diverse QoS targets on a shared rather than siloed infrastructure; allows graceful service degradation during overload conditions; deadline slack; a hybrid prioritization and an eager relegation policy |
 
 ##### LLM Application-Level Scheduling
 
@@ -131,6 +139,7 @@
 | 2024 | OSDI | CUHK | Teola: Towards End-to-End Optimization of LLM-based Applications | mismatch between request-level scheduling and end-to-end  application performance; primitive-level dataflow graph; two-tier scheduling mechanism |
 | 2024 | Arxiv | Yext | SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering | constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements |
 | 2025 | Arxiv | UC Berkeley | Autellix: An Efficient Serving Engine for LLM Agents as General Programs | formalize agentic programs as dynamic, non-deterministic DAGs; non-clairvoyant scheduler; simple load-balancing policy to balance data locality and KV-cache recomputation |
+| 2025 | ICDCS | SJTU | LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications | Solid: 4, Novelty: 3, Presentation: 4; a DAG with regular stage, LLM stage, dynamic stage; bayesian network-based profiler; identify uncertainty-reducing stages |
 
 ##### LLM Speculative Inference
 
@@ -199,13 +208,36 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 
 #### LLM Training Systems
 
+##### General Optimizations
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2025 | ArXiv | HKU | Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism | Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications |
 | 2025 | Arxiv | THU | Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism | chronos-aware pipeline parallelism; temporal locality optimization; activation balancing |
 | 2025 | Arxiv | NUS | PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization | selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading |
 | 2025 | Arxiv | UCSD | WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training | Solid: 5, Novelty: 2, Presentation: 4; workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents |
 | 2025 | EuroSys | University of Toronto | Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization | Solid: 4, Novelty: 2, Presentation: 4; fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning |
+
+##### Optimizations on Special Scene
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | ArXiv | HKU | Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism | Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications |
+
+##### Experiments
+
+| 2025 | Arxiv | JSC | Memory and Bandwidth are All You Need for Fully Sharded Data Parallel | Solid: 4, Novelty: 1, Presentation: 2; an extensive analysis of the FSDP training distribution strategy; a grid search methodology; both simulation and empirical results |
+
+##### Multi-Modal Optimizations
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | ByteDance | OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training | Solid: 4, Novelty: 3, Presentation: 4; multimodal mini-batch imbalance; batch post-balancing algorithm; node-wise all-to-all communicator for practical rearrangement of mini-batches |
+
+##### Kernel-Level Optimizations
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | Arxiv | HUST | CFP: Low-overhead Profiling-based Intra-operator Parallelism Generation by Preserving Communication-Free Structures | Solid: 5, Novelty: 3, Presentation: 4; model segment profile-based cost model; communication-free tensor partition propagation property; extracting a set of unique model segments; Communication-Free Preserve |
 
 #### Many-Core Systems
 
@@ -216,6 +248,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | IPDPS | The University of Chicago | Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems | lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing |
 
 ##### Fault Propagation
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2008 | ASPLOS | UIUC | Understanding the Propagation of Hard Errors to Software and Implications for Resilient System Design | stuck-at fault; bridging fault; software failure detection |
@@ -224,6 +257,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2023 | ISCA | University of Chicago | Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems | NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy |
 
 ##### Fault Injection Technique
+
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2008 | VLSI | DISCA | Enhancement of Fault Injection Techniques Based on the Modification of VHDL Code | saboteurs and mutants technique based fault injection; VHDL level fault-tolerance mechanism | 
@@ -292,6 +326,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | Stevens Tech | fMoE: Fine-Grained Expert Offloading for Large Mixture-of-Experts Serving | expert map; iteration-level probability distributions; track fine-grained input semantic embeddings; semantic-based and trajectorybased |
 | 2025 | Arxiv | Georgia Tech | MoETuner: Optimized Mixture of Expert Serving with Balanced Expert Placement and Token Routing | ILP for expert placement; cross-layer dependencies; minimizing total dispatched token number |
 | 2025 | EuroMLSys | EPFL | Accelerating MoE Model Inference with Expert Sharding | expert sharding for load balancing; tensor sharding for moe experts; fused expert computations for reduced kernel launches |
+| 2025 | DAC | PKU | HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference | Solid: 4, Novelty: 2, Presentation: 3; dynamically balances workloads across GPUs and CPUs; impact-driven prefetching; MoE-specialized cache management |
 
 ###### Batching and Scheduling
 
@@ -313,6 +348,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2025 | Arxiv | Shanghai AI | Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts | linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers |
+| 2025 | Arxiv | UC Berkeley | HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs | Solid: 5, Novelty: 3, Presentation: 4; zebra parallelism; attention-expert disaggregation; asymmetric expert assignment mechanism; gather and squeeze strategy |
 
 ###### Compute-Kernel-Level Optimizations
 
@@ -345,6 +381,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 |-|-|-|-|-|
 | 2025 | Arxiv | ByteDance | KVDirect: Distributed Disaggregated LLM Inference | tensor-centric communication mechanism; pull-based KV cache transfer; dynamic GPU resource scheduling via RDMA |
 | 2025 | Arxiv | SYSU | Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation | Solid: 4, Novelty: 3, Presentation: 4; attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling |
+| 2025 | Arxiv | Alibaba | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | Solid: 4, Novelty: 2, Presentation: 4; analyze the communication patterns; KV cache structure adjustment method; load-aware scheduling |
 
 ##### Throughput-Optimized Systems
 
