@@ -443,6 +443,7 @@ NoC; pipeline design across heterogeneous resources; crossbar-wise quantization 
 | 2017 | ISCA | Texas A&M University | APPROX-NoC: A Data Approximation Framework for Network-On-Chip Architectures | value approximate technique VAXX; encoder/decoder module pair for data compression; approximate value compute logic |
 | 2017 | ICCD | HIT | ABDTR: Approximation–Based Dynamic Traffic Regulation for Networks–on–Chip Systems | approximate computing based dynamic traffic regulation technique; lightweight design including controller, throttler and approximater | 
 | 2019 | DATE | SCUT | ACDC: An Accuracy- and Congestion-aware Dynamic Traffic Control Method for Networks-on-Chip | quality loss and network congestion modeling; autoregressive model based flow prediction method | 
+| 2025 | Arxiv | NTU | Learning Cache Coherence Traffic for NoC Routing Design | Solid: 3, Novelty: 2, Presentation: 2; cache coherence traffic analyzer; DRL based topology selection and routing design |
 
 ##### Fault-Tolerant Communication
 
@@ -477,6 +478,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2019 | ASPLOS | Tsinghua University | Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators | buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm |
 | 2024 | MICRO | Carnegie Mellon University | The TYR Dataflow Architecture: Improving Locality by Taming Parallelism | local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication |
 | 2024 | MICRO | UC Riverside | Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse | producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture |
+| 2025 | Arxiv | UCSB | FETTA: Flexible and Efficient Hardware Accelerator for Tensorized Neural Network Training | Solid: 4, Novelty: 3, Presentation: 3; contraction sequence search engine; tensor contraction unit; distribution/reduction network |
 
 #### Data Mapping
 
@@ -657,6 +659,18 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 | 2017 | DDECS | TTU | From Online Fault Detection to Fault Management in Network-on-Chips: A Ground-Up Approach | Solid: 1, Novelty: 2, Presentation: 3; data-path fault detection; control part fault detection; assertion vector based fault localization |
 
 #### Physical Effects
+
+##### DRAM
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2015 | RACS | NTU | Thermal/Performance Characterization of CMPs with 3D-stacked DRAMs under Synergistic Voltage-Frequency Control of Cores and DRAMs | Solid: 2, Novelty: 2, Presentation: 3; coordinate dynamic voltage and frequency scaling; thermal efficiency quantification |
+| 2017 | IEEE Access | Yuan Ze University | Thermal- and Performance-Aware Address Mapping for the Multi-Channel Three-Dimensional DRAM Systems | Solid: 3, Novelty: 2, Presentation: 3; inter-channel bank swapping; inter-channel bank reordering |
+| 2020 | TCAD | BUAA | Temperature-Aware DRAM Cache Management—Relaxing Thermal Constraints in 3-D Systems | Solid: 3, Novelty: 2, Presentation: 4; temperature-safe cache operation; exploration on cache remapping; write-back optimization |
+| 2024 | TCAD | IIT | 3D-TemPo: Optimizing 3-D DRAM Performance Under Temperature and Power Constraints | Solid: 3, Novelty: 2, Presentation: 3; reward-based dynamic power budgeting; adjacency awareness; DRAM low-power-based DTM |
+
+
+##### Other
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
