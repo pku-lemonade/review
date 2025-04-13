@@ -12,7 +12,11 @@ theme:
 plugins:
   - search
   - git-revision-date-localized
-  - git-authors
+  - git-authors:
+      show_contribution: true
+      sort_authors_by: contribution
+      show_line_count: true
+
 
 markdown_extensions:
   # Python Markdown

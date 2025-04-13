@@ -22,7 +22,7 @@ The New Lemonade Review is a paper review list maintained by [LEMONADE](https://
     1. Do not use general tags like "performance" or "architecture" that describe areas or topics.
     1. Use specific tags that describe the techniques or contributions of the paper, such as "xxx algorithm", "yyy model", "zzz architecture", etc.
     1. Do not use "features" as tags, such as "expresiveness", "scalability", "efficiency", etc. However, it is appropriate to use "xxx algorithm for scalability" as a tag to highlight the motivation of each technique.
-    1. If the tags contain weired acronyms, use double quotes and explain them. 
+    1. If the tags contain weired acronyms, use double quotes and explain them.
 1. Links
     1. Section and its subsections are implicitly linked.
     1. Do not create links if the subsections are linked by transitivity.
@@ -31,4 +31,3 @@ The New Lemonade Review is a paper review list maintained by [LEMONADE](https://
     1. All papers should be placed in subsections at level 4 or level 5.
     1. There should be **at least 2 papers** in the same subsection. If there is only one paper suitable for the subsection, find another paper, or connect the subsection with a link from or to another paper.
     1. There should be **no more than 5 papers** in the same subsection. If more than 5 papers are suitable for the subsection, create a new subsection, or mark the most recent papers as delete.
-       
