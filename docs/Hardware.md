@@ -43,6 +43,8 @@
 |-|-|-|-|-|
 | 2021 | ICCD | ASU | CIDAN: Computing in DRAM with Artificial Neurons | "Threshold Logic Processing Element (TLPE)" for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture |
 | 2025 | arXiv | KAIST | RED: Energy Optimization Framework for eDRAM-based PIM with Reconfigurable Voltage Swing and Retention-aware Scheduling | "RED framework" for energy optimization; reconfigurable eDRAM design; retention-aware scheduling; trade-off analysis between RBL voltage swing, sense amplifier power, and retention time; refresh skipping and sense amplifier power gating |
+| 2024 | npj Unconv. Comput. | UMich | PIM GPT a hybrid process in memory accelerator for autoregressive transformers | Solid: 2, Novelty: 2, Presentation: 3; hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution |
+| 2022 | HPCA | UCSD | TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer | Solid: 2, Novelty: 4, Presentation: 4; token-based dataflow for general Transformer-based models; modifications on HBM architecture |
 
 #### PIM: In-Cache-Computing
 
@@ -119,8 +121,17 @@
 | 2024 | ESSCIRC | THU | A 65nm 8b-Activation 8b-Weight SRAM-Based Charge-Domain Computing-in-Memory Macro Using A Fully-Parallel Analog Adder Network and A Single-ADC Interface | Solid: 4, Novelty: 4, Presentation: 4; SRAM-based CD-CiM architecture; charge-domain analog adder tree; ReLU-optimized ADC |
 | 2021 | ISSCC | TSMC | An 89TOPS/W and 16.3TOPS/mm2 All-Digital SRAM-Based Full-Precision Compute-In Memory Macro in 22nm for Machine-Learning Edge Applications | Solid: 5, Novelty: 1, Presentation: 2; programmable bit-widths for both input and weights; SRAM and CIM mode |
 
-### CIM：DRAM
+##### SRAM CIM: Transformer Accelerator
 
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | DATE | PKU | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Solid: 2, Novelty: 4, Presentation: 4; architecture model and simulator for CIM-based TPUs; designed for LLM inference |
+| 2023 | arXiv | UKeio | An 818-TOPS/W CSNR-31dB SQNR-45dB 10-bit Capacitor-Reconfiguring Computing-in-Memory Macro with Software-Analog Co-Design for Transformers | Solid: 4, Novelty: 3, Presentation: 1; Capacitor-Reconfiguring analog CIM architecture |
+| 2025 | arXiv | Purdue | Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory | Solid: 3, Novelty: 2, Presentation: 4; SRAM based softmax-friendly CIM architecture for transformer; finer-granularity pipelining strategy |
+#### CIM：DRAM
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
 | 2024 | A-SSCC | UNIST | A 273.48 TOPS/W and 1.58 Mb/mm2 Analog-Digital Hybrid CIM Processor with Transpose Ternary-eDRAM Bitcell | Solid: 4, Novelty: 2, Presentation: 1; analog DRAM CIM for partial sum and digital adder |
 
 #### CIM: RRAM
@@ -182,13 +193,6 @@
 | 2024 | DATE | UESTC | AFPR-CIM: An Analog-Domain Floating-Point RRAM -based Compute- In- Memory Architecture with Dynamic Range Adaptive FP-ADC | all-analog domain CIM architecture for FP8 calculations; adaptive dynamic range FP-ADC & FP-DAC |
 | 2025 | arXiv | GWU | A Hybrid-Domain Floating-Point Compute-in-Memory Architecture for Efficient Acceleration of High-Precision Deep Neural Networks | SRAM based hybrid-domain FP CIM architecture; detailed circuit schematics and physical layouts |
 
-##### RRAM CiM: BatchNorm layer
-
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2023 | GLSVLSI | Yale | Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing | non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters |
-| 2019 | ASPDAC | POSTECH | In-memory batch-normalization for resistive memory based binary neural network hardware | in-memory batchnormalization schemes; integrate BN layers on crossbar |
-
 ##### RRAM CiM: Convolutional layer
 
 | Year | Venue | Authors | Title | Tags |
@@ -201,6 +205,22 @@ training method; replication of multiple identical kernels for processing differ
 | 2023 | VLSI-SoC | RWTH Aachen University | Mapping of CNNs on multi-core RRAM-based CIM architectures | architecture optimized for communication; compiler algorithms for conv2D layer; cycle-accurate simulator|
 | 2023 | TODAES | UCAS | Mathematical Framework for Optimizing Crossbar Allocation for ReRAM-based CNN Accelerators | formulate a crossbar allocation problem for ReRAM-based CNN accelerators; dynamic programming based solver; models the performance considering allocation problem |
 | 2025 | TVLSI | NBU | A 578-TOPS/W RRAM-Based Binary Convolutional Neural Network Macro for Tiny AI Edge Devices | Solid: 4, Novelty: 3, Presentation: 4; ReRAM XNOR cell; BCNN CIM macro with FPGA as the control core |
+
+##### RRAM CIM: Transformer Accelerator
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2024 | TODAES | HUST | A Cascaded ReRAM-based Crossbar Architecture for Transformer Neural Network Acceleration | cascaded crossbar arrays that uses transimpedance amplifiers; data mapping scheme to store signed operands; ADC virtualization scheme |
+| 2023 | VLSI | HUST | An RRAM-Based Computing-in-Memory Architecture and Its Application in Accelerating Transformer Inference | Solid: 3, Novelty: 4, Presentation: 3; RRAM-based in-memory floating-point computation architecture (RIME); pipelined implementations of MatMul and softmax |
+| 2020 | ICCAD | Duke | ReTransformer: ReRAM-based processing-in-memory architecture for transformer acceleration | Solid: 3, Novelty: 3, Presentation: 4; MatMul does matrix decomposition in scaled dot-product attention; in-memory logic techniques for softmax; sub-matrix pipeline |
+
+##### RRAM CiM: Special Usage
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | GLSVLSI | Yale | Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing | non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters |
+| 2019 | ASPDAC | POSTECH | In-memory batch-normalization for resistive memory based binary neural network hardware | in-memory batchnormalization schemes; integrate BN layers on crossbar |
+| 2024 | TRETS | UFRGS | Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators | Solid: 3, Novelty: 4, Presentation: 4; perform typical non-linear operations using ReRAM |
 
 ##### RRAM Non-ideal Effects
 
@@ -246,15 +266,6 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2025 | ISCAS | CAS | StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer | tile-based reconfigurable CIM macro microarchitecture; mixed-stationary cross-forwarding dataflow; ping-pong-like finegrained compute-rewriting pipeline |
-
-##### CiM: Transformer
-
-| Year | Venue | Authors | Title | Tags |
-|-|-|-|-|-|
-| 2024 | TODAES | HUST | A Cascaded ReRAM-based Crossbar Architecture for Transformer Neural Network Acceleration | cascaded crossbar arrays that uses transimpedance amplifiers; data mapping scheme to store signed operands; ADC virtualization scheme |
-| 2025 | DATE | PKU | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Solid: 2, Novelty: 4, Presentation: 4; architecture model and simulator for CIM-based TPUs; designed for LLM inference |
-| 2023 | arXiv | UKeio | An 818-TOPS/W CSNR-31dB SQNR-45dB 10-bit Capacitor-Reconfiguring Computing-in-Memory Macro with Software-Analog Co-Design for Transformers | Solid: 4, Novelty: 3, Presentation: 1; Capacitor-Reconfiguring analog CIM architecture |
-| 2025 | arXiv | Purdue | Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory | Solid: 3, Novelty: 2, Presentation: 4; SRAM based softmax-friendly CIM architure for transformer; finer-granularity pipelining strategy |
 
 #### NVM
 
