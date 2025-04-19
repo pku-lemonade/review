@@ -18,6 +18,14 @@
 |-|-|-|-|-|
 | 2025 | Arxiv | ASU | CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems | heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection |
 
+### Vector Processors
+
+#### Vector Memory Access
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | CF Companion | ETHZ | AraOS: Analyzing the Impact of Virtual Memory Management on Vector Unit Performance |Solid 2; Novelty 1; Presentation 2; virtual memory management for RVV; performance analysis of virtual memory overhead |
+| 2025 | arXiv | THU | Efficient Architecture for RISC-V Vector Memory Access | Solid 4; Novelty 3; Presentation 2; data reorganization module; load/store data organization; row/column-accessible vector register file |
+
 ### Novel Memory Technologies
 
 #### CXL Memory
@@ -30,13 +38,23 @@
 
 #### NDP: DIMM
 
-##### Communication
+##### Evaluation
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
-| 2023 | HPCA | PKU | DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing | high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication |
+| 2025 | HPCA | THU | UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures |  Solid 5; Novelty 2; Presentation 3; unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator |
+
+##### Inter-DIMM Communication
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
 | 2024 | ISCA | THU | NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures | gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing |
 | 2025 | HPCA | Samsung | Piccolo: Large-Scale Graph Processing with Fine-Grained In-Memory Scatter-Gather | Solid 3; Novelty 4; Presentation 3; In-DRAM fine-grained scatter-gather via data bus offsets; fine-grained cache architecture using fg-tags; Standard DDR command interpretation for FIM control; Combined graph tiling with fine-grained memory access |
 | 2025 | arXiv | ETHZ | PIMDAL: Mitigating the Memory Bottleneck in Data Analytics using a Real Processing-in-Memory System | Solid 4; Novelty 2; Presentation 4; PIMDAL library for DB operators; quicksort/mergesort/hashing on UPMEM PIM; scatter/gather/async transfers for PIM communication |
+
+##### Intra-DIMM Communication
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | HPCA | PKU | DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing | high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication |
+| 2025 | HPCA | SJTU | AsyncDIMM: Achieving Asynchronous Execution in DIMM-Based Near-Memory Processing | Solid 4; Novelty 3; Presentation 2; Offload-Schedule-Return mechanism; switch-recovery scheduling; explicit/implicit synchronization |
 
 #### PIM: (e)DRAM
 | Year | Venue | Authors | Title | Tags |
@@ -289,6 +307,12 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2020 | DATE | Georgia Tech | Macro-3D: A Physical Design Methodology for Face-to-Face-Stacked Heterogeneous 3D ICs | face-to-face stack; separate 2D floorplans generation; memory-on-logic projection |
 | 2022 | IEEE Micro | Cerebras Systems | Cerebras Architecture Deep Dive: First Look Inside the Hardware/Software Co-Design for Deep Learning | fine-grained dataflow scheduling; high-bandwidth, low-latency fabric design; weight streaming |
 
+### Interconnection
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | HPCA | Fudan | EIGEN: Enabling Efficient 3DIC Interconnect with Heterogeneous Dual-Layer Network-on-Active-Interposer | Solid 2; Novelty 3; Presentation 3; Dual-layer interconnect architecture, Reinforcement learning routing, Switch-programmable interconnect |
+
 ### Thermal Evaluation
 
 | Year | Venue | Authors | Title | Tags |
@@ -386,10 +410,16 @@ Refer to [Storage Systems](Software.md/#storage-systems).
 
 
 #### Disaggregated Memory
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | ASPLOS | Yale | PULSE: Accelerating Distributed Pointer-Traversals on Disaggregated Memory | Solid 4; Novelty 3; Presentation 3; iterator-based programming model; disaggregated accelerator architecture; in-network routing for distributed traversal |
+| 2025 | ASPLOS | Purdue | EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation | Solid 4; Novelty 4; Presentation 4; Ethernet PHY network stack; PHY in-network scheduler; PHY intra-frame preemption |
+
 ##### Survey
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-| 
-| 2025 | arXiv | SJTU | Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters | Solid 2; Novelty 4; Presentation 4;  Cross-layer classification of DM techniques; hardware-level categories; architectural-level classifications; system and runtime-level groupings; application-level optimizations such as general-purpose and domain-specific approaches |
+| 2025 | arXiv | SJTU | Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters | Solid (Survey); Novelty (Survey); Presentation 4; Cross-layer classification of DM techniques; hardware-level categories; architectural-level classifications; system and runtime-level groupings; application-level optimizations such as general-purpose and domain-specific approaches |
 
 
 #### Prefetcher
@@ -493,7 +523,7 @@ Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 
 #### Data Mapping
 
-##### Servey
+##### Survey
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|

@@ -414,6 +414,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
 | 2013 | SOSP | MSR Silicon Valley | Dandelion: a Compiler and Runtime for Heterogeneous  Systems | unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing |
+| 2025 | EuroSys | SJTU | Improving GPU Sharing Performance through Adaptive Bubbleless Spatial-Temporal Sharing | Solid 3; Novelty 2; Presentation 4; "Bubble-less" spatial-temporal sharing; kernel squad scheduling; fine-grained concurrent kernel management |
 
 #### Decentralized Serving
 
@@ -449,6 +450,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | CMU | Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs | LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming |
 | 2025 | Arxiv | USTC | PICE: A Semantic-Driven Progressive Inference System for LLM Serving in Cloud-Edge Networks | progressive inference paradigm; ensemble learning mechanism; semantic-level parallel data processing |
 | 2025 | ICLR | HKUST | HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment | a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges |
+| 2025 | arXiv | CMU | Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures | Solid 3; Novelty 2; Presentation 2; SKIP profiling tool; TKLQT metric for CPU/GPU boundedness; proximity score kernel fusion |
 
 #### LLM Training Systems
 
