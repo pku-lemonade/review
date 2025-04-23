@@ -309,6 +309,24 @@ Non-ideal Aware Methods: data types, training algorithm, SRAM for compensation. 
 |-|-|-|-|-|
 | 2021 | Nature | SUT | 11 TOPS photonic convolutional accelerator for optical neural networks | universal optical convolutional accelerator for vector processing |
 
+## Hardware Performance Counter
+
+### Survey
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2013 | TODAES | TUC | A Survey and Taxonomy of On-Chip Monitoring of Multicore Systems-on-Chip | Novelty 1; Solid 4; Presentation 2; debugging/performance/QoS monitor; physical parameter monitor; methodology based taxonomy |
+| 2016 | CSUR | Oak Ridge Lab | Understanding GPU Power: A Survey of Profiling, Modeling, and Simulation Methods | Novelty 1; Solid 3; Presentation 3; external/internal power measurement; HPC based power model; GPU power simulation |
+| 2019 | SP | UNC | SoK: The Challenges, Pitfalls, and Perils of Using Hardware Performance Counters for Security | Novelty 1; Solid 4; Presentation 3; non-determinism and overcounting effects; performance monitoring interrupt |
+
+### Specific Application
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2004 | SC | University of Maryland | Using Hardware Counters to Automatically Improve Memory Performance | Novelty 3; Solid 4; Presentation 3; two-phase dynamic page migration algorithm; sun fire link counter |
+| 2013 | ISPASS | University of Texas | Non-determinism and overcount on modern hardware performance counter implementations | Novelty 2; Solid 4; Presentation 2; nondeterministic hardware interrupts; float point unit related overcount; retired instruction overcount |
+| 2020 | CONECCT | IIIT | Power, Performance And Thermal Management Using Hardware Performance Counters | Novelty 2; Solid 4; Presentation 2; fine-grained dynamic voltage and frequency scaling; PMC-based power and temperature correlation model; thermal zone and partition-based management |
+
 ## 3D IC
 
 | Year | Venue | Authors | Title | Tags |
