@@ -285,6 +285,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | ArXiv | UIUC | HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location | online-offline request co-location; interference-aware profiler; latency predictor; adaptive scheduler |
 | 2025 | Arxiv | PKU | Memory Offloading for Large Language Model Inference with Latency SLO Guarantees | effectively captures the tension between meeting SLOs and maximizing host memory usage; dynamic offloading interval; per-bus coordinator |
 | 2025 | Arxiv | Huawei | Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization | hybrid offline-online scheduling; preemptive scheduling for hardware utilization; lagrangian method for cost efficiency evaluation |
+| 2025 | FAST | THU | Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot | Solid: 4, Novelty: 2, Presentation: 3; PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage |
 
 ##### Surveys
 
@@ -382,6 +383,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | ByteDance | KVDirect: Distributed Disaggregated LLM Inference | tensor-centric communication mechanism; pull-based KV cache transfer; dynamic GPU resource scheduling via RDMA |
 | 2025 | Arxiv | SYSU | Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation | Solid: 4, Novelty: 3, Presentation: 4; attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling |
 | 2025 | Arxiv | Alibaba | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | Solid: 4, Novelty: 2, Presentation: 4; analyze the communication patterns; KV cache structure adjustment method; load-aware scheduling |
+| 2025 | Arxiv | Huawei | Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation | Solid: 3, Novelty: 2, Presentation: 3; attention disaggregation and offloading; load-aware offloading cchedule; resource-efficient prefill colocation |
 
 ##### Throughput-Optimized Systems
 
@@ -397,6 +399,13 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | UIUC | Hierarchical Autoscaling for Large Language Model Serving with Chiron | hierarchical backpressure; interactive requests and batch requests; mixed instances |
 | 2025 | Arxiv | UC Berkeley | Locality-aware Fair Scheduling in LLM Serving | deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis |
 
+##### Prefix Cache
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | Nips  | Stanford  | SGLang: Efficient Execution of Structured Language Model Programs | Solid: 4, Novelty: 3, Presentation: 4; KV-Cache share; python-like DSL; compute graph; LRU cache management stragety |
+| 2024 | arXiv | Microsoft | ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition | Solid: 4, Novelty: 2, Presentation: 3 prefix aware attention compute; manage kv-cache chunks as prefix tree; reduce kv-cache redundancy |
+
 #### Communication-Computation Overlap
 
 | Year | Venue | Authors | Title | Tags |
@@ -406,6 +415,12 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | ASPLOS | UW–Madison | T3: Transparent Tracking & Triggering for Fine-grained Overlap of Compute & Collectives | lightweight track and trigger; pre-programmed DMA commands; atomic memory update |
 | 2024 | ASPLOS | UIUC | Two-Face: Combining Collective and One-Sided Communication for Efficient Distributed SpMM | distributed SpMM; sparsity-aware partition; Synchronous Stripes and Asynchronous Stripes |
 | 2024 | Arxiv | AMD | Optimizing ML Concurrent Computation and Communication with GPU DMA Engines | concurrent computation and communication; compute and memory interference among concurrent kernels; schedule prioritization and careful resource partitioning |
+
+#### Tensor Execution Optimization
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | OSDI  | PKU     | Mirage: A Multi-Level Superoptimizer for Tensor Programs | Solid: 4, Novelty: 3, Presentation: 4; auto algebraically transfer tensor; using DAG to search configuration space; auto generate kernel function |
 
 ### Heterogeneous Systems
 
