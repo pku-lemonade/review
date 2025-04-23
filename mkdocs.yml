@@ -11,6 +11,7 @@ theme:
 
 plugins:
   - search
+  - macros
   - git-revision-date-localized
   - git-authors:
       show_contribution: true
