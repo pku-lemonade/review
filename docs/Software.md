@@ -61,6 +61,7 @@
 | 2025 | Arxiv | UVa | HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference | method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination |
 | 2025 | Arxiv | PKU | Bitnet.cpp: Efficient Edge Inference for Ternary LLMs | ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58 |
 | 2025 | Arxiv | SJTU | MILLION: Mastering Long-Context LLM Inference Via Outlier-Immunized KV Product Quantization | Solid: 4, Novelty: 2, Presentation: 3; a non-uniform quantization algorithm based on product quantization; leverages sparse computation and asynchronous quantization; distributes quantization power unevenly across channels |
+| 2025 | Arxiv | Rice University | 70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float | Solid: 4, Novelty: 4, Presentation: 4; dynamic-length float; preserving bit-for-bit identical outputs; BFloat16 exponents carry significantly less information than their allocated bit width |
 
 ##### KV Cache Storage Systems
 
@@ -130,6 +131,7 @@
 | 2024 | Arxiv | UCSB | Multi-Bin Batching for Increasing LLM Inference Throughput | binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality |
 | 2024 | Arxiv | Yale | TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications | segmented generation; time-sensitive scheduling; latency-guided batch size selection |
 | 2025 | Arxiv | MSRI | Niyama : Breaking the Silos of LLM Inference Serving | Solid: 4, Novelty: 3, Presentation: 4; QoS-driven LLM inference serving system; co-scheduling requests with diverse QoS targets on a shared rather than siloed infrastructure; allows graceful service degradation during overload conditions; deadline slack; a hybrid prioritization and an eager relegation policy |
+| 2025 | Arxiv | MIT | Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints | Solid: 4, Novelty: 2, Presentation: 3; fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments |
 
 ##### LLM Application-Level Scheduling
 
@@ -239,6 +241,12 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 |-|-|-|-|-|
 | 2025 | Arxiv | HUST | CFP: Low-overhead Profiling-based Intra-operator Parallelism Generation by Preserving Communication-Free Structures | Solid: 5, Novelty: 3, Presentation: 4; model segment profile-based cost model; communication-free tensor partition propagation property; extracting a set of unique model segments; Communication-Free Preserve |
 
+##### Performance Modeling
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | MLSys | Cornell | Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training | Solid: 4, Novelty: 2, Presentation: 3; trace-driven performance modeling and estimation toolkit; the first system to provide accurate performance models that effectively capture the execution behaviors of LLMs; modify and generate new execution graphs from existing traces |
+
 #### Many-Core Systems
 
 | Year | Venue | Authors | Title | Tags |
@@ -336,6 +344,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | Alibaba | Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference | statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload |
 | 2025 | Arxiv | University of Edinburgh | MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching | module-based batching; high-throughput MoE inference; full KV-cache offloading |
 | 2025 | Arxiv | KTH | Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference | fine-grained preemption; priority-aware scheduling; per-expert queues; expert-level preemption |
+| 2025 | Arxiv | UMich | MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints | Solid: 4, Novelty: 2, Presentation: 4; two-stage performance modeling; analyzes the theoretical performance upper bound; captures how system execution mechanisms |
 
 ###### Memory and Communication Efficiency
 
@@ -383,7 +392,7 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2025 | Arxiv | ByteDance | KVDirect: Distributed Disaggregated LLM Inference | tensor-centric communication mechanism; pull-based KV cache transfer; dynamic GPU resource scheduling via RDMA |
 | 2025 | Arxiv | SYSU | Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation | Solid: 4, Novelty: 3, Presentation: 4; attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling |
 | 2025 | Arxiv | Alibaba | FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling | Solid: 4, Novelty: 2, Presentation: 4; analyze the communication patterns; KV cache structure adjustment method; load-aware scheduling |
-| 2025 | Arxiv | Huawei | Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation | Solid: 3, Novelty: 2, Presentation: 3; attention disaggregation and offloading; load-aware offloading cchedule; resource-efficient prefill colocation |
+| 2025 | Arxiv | NUS & USTC | DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving | Solid: 4, Novelty: 2, Presentation: 3; a novel Tandem Serving execution model; two virtual subrequests; explicitly permit the two subrequests to execute on either GPU instance |
 
 ##### Throughput-Optimized Systems
 
@@ -398,6 +407,13 @@ Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
 | 2024 | Arxiv | Virginia Tech | Ensuring Fair LLM Serving Amid Diverse Applications | multi-tenant LLM platform; overload and interaction-driven throttling; weighted service counter |
 | 2025 | Arxiv | UIUC | Hierarchical Autoscaling for Large Language Model Serving with Chiron | hierarchical backpressure; interactive requests and batch requests; mixed instances |
 | 2025 | Arxiv | UC Berkeley | Locality-aware Fair Scheduling in LLM Serving | deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis |
+
+
+##### CPU-GPU Systems
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2025 | ISPASS | CMU | Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures | Solid: 4, Novelty: 2, Presentation: 3; Effective regions for balanced utilization of PUs; Proximity-based kernel fusion recommendation; operator-kernel dependency graphs from PyTorch Profiler traces |
 
 ##### Prefix Cache
 
