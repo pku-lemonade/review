@@ -146,6 +146,9 @@
 | 2025 | DATE | PKU | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Solid: 2, Novelty: 4, Presentation: 4; architecture model and simulator for CIM-based TPUs; designed for LLM inference |
 | 2023 | arXiv | UKeio | An 818-TOPS/W CSNR-31dB SQNR-45dB 10-bit Capacitor-Reconfiguring Computing-in-Memory Macro with Software-Analog Co-Design for Transformers | Solid: 4, Novelty: 3, Presentation: 1; Capacitor-Reconfiguring analog CIM architecture |
 | 2025 | arXiv | Purdue | Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory | Solid: 3, Novelty: 2, Presentation: 4; SRAM based softmax-friendly CIM architecture for transformer; finer-granularity pipelining strategy |
+| 2025 | arXiv | PKU | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU;  Area-efficient CIM macro design; Mapping engine for generative model inference |
+| 2024 | JSSC | THU | MulTCIM: Digital Computing-in-Memory-Based Multimodal Transformer Accelerator With Attention-Token-Bit Hybrid Sparsity | Solid: 4, Novelty: 3, Presentation: 5; long reuse elimination scheduler (LRES) to dynamically reshape the attention matrix; runtime token pruner (RTP) to remove insignificant tokens; modal-adaptive CIM network (MACN) to dynamically divide CIM cores into Pipeline; effective-bits-balanced CIM (EBBCIM) macro architecture |
+
 #### CIM：DRAM
 
 | Year | Venue | Authors | Title | Tags |
@@ -170,7 +173,6 @@
 | 2019 | ASPLOS | Purdue & HP | PUMA: A Programmable Ultra-efficient Memristor-based Accelerator for Machine Learning Inference | Programmable and general-purpose ReRAM based ML Accelerator; Supports an instruction set; Has potential for DNN training; Provides simulator that accepts model |
 | 2018 | ICRC | Purdue & HP | Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning | compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance |
 | 2023 | NANOARCH | HUST | Heterogeneous Instruction Set Architecture for RRAM-enabled In-memory Computing | General ISA for RRAM CiM & digital heterogeneous architecture; a tile-processing unit-array three-level architecture |
-| 2023 | VLSI | Purdue | X-Former: In-Memory Acceleration of Transformers | in-memory accelerate attention layers; intralayer sequence blocking dataflow; provides a simulator |
 | 2024 | VLSI-SoC | RWTH Aachen University | Architecture-Compiler Co-design for ReRAM-Based Multi-core CIM Architectures | inference latency predictions and analysis of the crossbar utilization for CNN |
 
 ##### RRAM CiM: Architecture optimization
@@ -231,6 +233,8 @@ training method; replication of multiple identical kernels for processing differ
 | 2024 | TODAES | HUST | A Cascaded ReRAM-based Crossbar Architecture for Transformer Neural Network Acceleration | cascaded crossbar arrays that uses transimpedance amplifiers; data mapping scheme to store signed operands; ADC virtualization scheme |
 | 2023 | VLSI | HUST | An RRAM-Based Computing-in-Memory Architecture and Its Application in Accelerating Transformer Inference | Solid: 3, Novelty: 4, Presentation: 3; RRAM-based in-memory floating-point computation architecture (RIME); pipelined implementations of MatMul and softmax |
 | 2020 | ICCAD | Duke | ReTransformer: ReRAM-based processing-in-memory architecture for transformer acceleration | Solid: 3, Novelty: 3, Presentation: 4; MatMul does matrix decomposition in scaled dot-product attention; in-memory logic techniques for softmax; sub-matrix pipeline |
+| 2022 | TCAD | KAIST | A Framework for Accelerating Transformer-Based Language Model on ReRAM-Based Architecture | Solid: 2, Novelty: 3, Presentation: 4; window self-attention and window-size search algorithm; ReRAM hardware design optimized for this algorithm |
+| 2020 | ICCD | LSU | ATT: A Fault-Tolerant ReRAM Accelerator for Attention-based Neural Networks | Solid: 2, Novelty: 2, Presentation: 3; ReRAM-based accelerator with pipeline for AttNNs; heuristic redundancy algorithm |
 
 ##### RRAM CiM: Special Usage
 
@@ -242,7 +246,7 @@ training method; replication of multiple identical kernels for processing differ
 
 ##### RRAM Non-ideal Effects
 
-Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. Refer to [Data Type](#data-type).
+Non-ideal Aware Methods: data types, training algorithm, SRAM for compensation. Refer to [Data Type](#data-type).
 
 | Year | Venue | Authors | Title | Tags |
 |-|-|-|-|-|
@@ -261,12 +265,19 @@ Non-ideal Aware Methods: data types, training algiruthm, SRAM for compensation. 
 | 2024 | IPDPS | Georgia Tech | Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators | select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized) |
 | 2023 | GLSVLSI | USC | Heterogeneous Integration of In-Memory Analog Computing Architectures with Tensor Processing Units | hybrid TPU-IMAC architecture; TPU for conv, CIM for fc |
 | 2025 | ASPLOS | CAS | PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System | dynamic parallelism-aware task scheduling for llm decoding; online kernel characterization for heterogeneous architectures; hybrid PIM units for compute-bound and memory-bound kernels |
-| 2025 | arXiv | PKU | Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs | Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU;  Area-efficient CIM macro design; Mapping engine for generative model inference |
 | 2025 | arXiv | ASU | H3PIMAP: A Heterogeneity-Aware Multi-Objective DNN Mapping Framework on Electronic-Photonic Processing-in-Memory Architectures | Electronic-Photonic-PIM Accelerator; coresponding mapping framework and evaluation infrastructure |
 | 2024 | ASP-DAC | Keio | OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration | On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM |
 | 2023 | ICCAD | SJTU | TL-nvSRAM-CIM: Ultra-High-Density Three-Level ReRAM-Assisted Computing-in-nvSRAM with DC-Power Free Restore and Ternary MAC Operations | DCpower-free weight-restore from ReRAM; ternary SRAM-CIM mechanism with differential computing scheme |
 | 2025 | DAC | Chung-Ang Univ. | HH-PIM: Dynamic Optimization of Power and Performance with Heterogeneous-Hybrid PIM for Edge AI Devices | Novelty 2; Solid 4; Presentation 3; heterogeneous-hybrid PIM with HP/LP modules and MRAM/SRAM; dynamic data placement algorithm for energy optimization; dual PIM controller design |
 | 2025 | Nature | TSMC | A mixed-precision memristor and SRAM compute-in-memory AI processor | Novelty 2; Solid 5; Presentation 5; layer based INT-FP hybrid architure; kernel-based mix-CIM (SRAM/ReRAM/digital hybrid architecture) |
+
+##### Hybrid CIM: Transformer Accelerator
+
+| Year | Venue | Authors | Title | Tags |
+|-|-|-|-|-|
+| 2023 | VLSI | Purdue | X-Former: In-Memory Acceleration of Transformers | in-memory accelerate attention layers; intralayer sequence blocking dataflow; provides a simulator |
+| 2023 | arXiv | HP | RACE-IT: A Reconfigurable Analog CAM-Crossbar Engine for In-Memory Transformer Acceleration | Novelty 4; Solid 3; Presentation 3; Compute Analog Content Addressable Memory (Compute-ACAM) structure; accelerator based on crossbars and Compute-ACAMs; encoding-based optimization |
+| 2024 | VLSI | FDU | HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer | Novelty 3; Solid 3; Presentation 4; product-quantization-based sparse self-attention algorithm; ADC-free ReRAM-CIM macro; ReRAM-CIM for front-end attention sparsification, SRAM-CIM for back-end sparse attention |
 
 #### CIM: Quantization
 
