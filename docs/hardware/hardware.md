@@ -1,3 +1,3 @@
-# Processor Architecture
+# Hardware
 
 {{ render_custom_format(page=page) }}

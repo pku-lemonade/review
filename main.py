@@ -176,26 +176,36 @@ def render_structure_to_markdown(header, structure, level=2):
 
 
 # Main macro function exposed to MkDocs
-def render_custom_format(relative_data_path, page):
+def render_custom_format(page):
     """
     Parses the custom structured file and renders it as Markdown.
     """
+    # Get the source path of the current markdown file relative to the 'docs' dir
+    # e.g., 'hardware/emerging.md'
     md_src_path = page.file.src_path
 
-    # Get the directory part of the markdown file's path relative to 'docs' dir
-    # e.g., 'section'
-    md_dir = os.path.dirname(md_src_path)
+    # Get the directory part relative to 'docs' (e.g., 'hardware')
+    md_parent_dir = os.path.dirname(md_src_path)
 
-    # Combine the markdown file's directory with the relative path to the data file
-    # e.g., os.path.join('section', 'data/hardware_structured.txt')
-    # This gives the path relative to the 'docs' directory
-    data_path_relative_to_docs = os.path.normpath(os.path.join(md_dir, relative_data_path))
+    # Get the markdown filename without extension (e.g., 'emerging')
+    md_filename_stem = os.path.splitext(os.path.basename(md_src_path))[0]
+
+    # Construct the expected data filename (e.g., 'emerging.csv')
+    data_filename = f"{md_filename_stem}.csv"  # Using .csv extension
+
+    # Construct the path relative to the 'docs' directory
+    # Assumes structure like 'docs/data/hardware/emerging.csv'
+    data_dir_base = "data"  # Assumes a top-level 'data' dir inside 'docs'
+    data_path_relative_to_docs = os.path.join(data_dir_base, md_parent_dir, data_filename)
+    data_path_relative_to_docs = os.path.normpath(data_path_relative_to_docs)  # Clean up path
 
     print(f"DEBUG: Markdown source path: {md_src_path}")
-    print(f"DEBUG: Relative data path from MD: {relative_data_path}")
-    print(f"DEBUG: Calculated data path relative to docs/: {data_path_relative_to_docs}")
+    print(f"DEBUG: Derived data path relative to docs/: {data_path_relative_to_docs}")
 
+    # --- Call the parser with the derived path ---
     header, structure = parse_custom_structured_file(data_path_relative_to_docs)
+
+    # --- Render the result ---
     if header and structure:
         return render_structure_to_markdown(header, structure, level=2)  # Start sections at H2
     elif header and not structure:

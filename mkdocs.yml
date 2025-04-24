@@ -6,17 +6,14 @@ theme:
   name: material
   features:
     - navigation.tracking
-    - navigation.sections
+    # - navigation.sections
     - navigation.expand
+    - navigation.indexes
 
 plugins:
   - search
-  - macros
+  - macros  
   - git-revision-date-localized
-  - git-authors:
-      show_contribution: true
-      sort_authors_by: contribution
-      show_line_count: true
 
 markdown_extensions:
   # Python Markdown
@@ -37,17 +34,20 @@ extra_css:
 nav:
   - README: index.md
   - Hardware: 
+    - hardware/hardware.md
     - Processor Architecture: hardware/processor.md
     - Parallel and Multi-Processor Architecture: hardware/parallel.md
     - Memory Architecture: hardware/memory.md
     - Domain-Specific Accelerators: hardware/accelerators.md
-    # - Interconnection Networks: hardware/interconnect.md
-    # - Security and Reliability: hardware/security.md
+    # - Interconnection Networks: hardware/network.md
+    - Security and Reliability: hardware/fail.md
     - Emerging Technologies: hardware/emerging.md
   - Software:
-    - Programming Languages and Software Engineering: software/plse.md
+    - software/software.md
+    - Programming Languages and Software Engineering: software/pl.md
     - Operating Systems: software/os.md
     - Runtime Systems: software/runtime.md
+    # - Computer Networks: software/network.md
     # - Database Systems: software/db.md
     - High-Performance Computing: software/hpc.md
     # - Security: software/security.md

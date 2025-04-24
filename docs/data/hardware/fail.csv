@@ -1,0 +1,28 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# #### Error Pattern
+# ##### Manycore Architecture
+2009,MICRO,UIUC,mSWAT: Low-Cost Hardware Fault Detection and Diagnosis for Multicore Systems,selective Triple Modular Redundant(TMR) replay method; symptom based fault detection; permanent/transient fault,,,
+2015,IEEE TSM,NTU,Wafer Map Failure Pattern Recognition and Similarity Ranking for Large-Scale Data Sets,wafer map failure pattern; wafer map similarity ranking; radon/geometry-based feature extraction; WM-811K wafer map dataset,,,
+# ##### System Level
+2017,SC,Argonne National Lab,Run-to-run Variability on Xeon Phi based Cray XC Systems,OS noise based core-level variability; tile-level varibility; memory mode varibility,,,
+2018,FAST,UChicago,Fail-Slow at Scale: Evidence of Hardware Performance Faults in Large Production Systems,conversion among fail-stop/slow/trasient; permanent/transient/partial slowdown; internal/external root causes,,,
+2019,ATC,UChicago,IASO: A Fail-Slow Detection and Mitigation Framework for Distributed Storage Services,slowdown detection based on peer score; sub-root causes for five kinds of root causes,,,
+# #### Hardware Fault
+2014,DTIS,LIRMM,A Survey on Simulation-Based Fault Injection Tools for Complex Systems,runtime fault injection; compile-time fault injection,,,
+2021,ASPLOS,UIUC,BayesPerf: Minimizing Performance Monitoring Errors using Bayesian Statistics,microarchitectural relationship incorporation; measurement uncertainty quantification; high-frequency sampling reduction,3,4,3
+2024,arXiv,GWU,Algorithmic Strategies for Sustainable Reuse of Neural Network Accelerators with Permanent Faults,stack-at-0/1 faults; weight register fault; invertible scaling and shifting technique; elementary tile operations for mantissa fault,,,
+2025,arXiv,NUDT,FlexStep: Enabling Flexible Error Detection in Multi/Many-core Real-time Systems,register checkpoints based error detection; memory access log unit; data buffering and channelling unit,,,
+2025,DAC,SEU,MEEK: Re-thinking Heterogeneous Parallel Error Detection Architecture for Real-World OoO Superscalar Processors,data extraction unit; bespoke forwarding fabric; little core upgrade,3,4,3
+# ##### NoC Fault
+2017,TECS,NTUA,SoftRM: Self-Organized Fault-Tolerant Resource Management for Failure Detection and Recovery in NoC Based Many-Cores,permanent fault; tweaked perfect failure detector; paxos algorithm to recover fault,2,4,2
+2017,DDECS,TTU,From Online Fault Detection to Fault Management in Network-on-Chips: A Ground-Up Approach,data-path fault detection; control part fault detection; assertion vector based fault localization,3,1,2
+# #### Physical Effects
+# ##### DRAM
+2015,RACS,NTU,Thermal/Performance Characterization of CMPs with 3D-stacked DRAMs under Synergistic Voltage-Frequency Control of Cores and DRAMs,coordinate dynamic voltage and frequency scaling; thermal efficiency quantification,3,2,2
+2017,IEEE Access,Yuan Ze University,Thermal- and Performance-Aware Address Mapping for the Multi-Channel Three-Dimensional DRAM Systems,inter-channel bank swapping; inter-channel bank reordering,3,3,2
+2020,TCAD,BUAA,Temperature-Aware DRAM Cache Management—Relaxing Thermal Constraints in 3-D Systems,temperature-safe cache operation; exploration on cache remapping; write-back optimization,4,3,2
+2024,TCAD,IIT,3D-TemPo: Optimizing 3-D DRAM Performance Under Temperature and Power Constraints,reward-based dynamic power budgeting; adjacency awareness; DRAM low-power-based DTM,3,3,2
+# ##### Other
+2004,ICCAD,UCLA,A thermal-driven floorplanning algorithm for 3D ICs,combined bucket and 2D array; tile stack based model; horizontal and vertical heat flow analysis,,,
+2016,IJHMT,UCR,Analysis of critical thermal issues in 3D integrated circuits,thermal hotspots; impact of thermal interface materials; power distribution; processor pitch and area,,,
+2019,DAC,UCF,Noise Injection Adaption: End-to-End ReRAM Crossbar Non-ideal Effect Adaption for Neural Network Mapping,stuck-at-fault; crossbar wire resistance based IR drop; thermal noise model; shot noise; random telegraph noise,,,
