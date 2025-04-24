@@ -55,7 +55,7 @@ nav:
     - Performance Analysis (to be deleted): hardware/perf.md
   - Software:
     - software/index.md
-    - Algorithms, Theory, and Formal Methods: software/algorithm.md
+    - Algorithms: software/algorithm.md
     - Programming Languages: software/pl.md
     - Operating Systems: software/os.md
     - Distributed Systems: software/runtime.md
