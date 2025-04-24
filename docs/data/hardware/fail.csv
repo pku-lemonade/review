@@ -26,3 +26,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2004,ICCAD,UCLA,A thermal-driven floorplanning algorithm for 3D ICs,combined bucket and 2D array; tile stack based model; horizontal and vertical heat flow analysis,,,
 2016,IJHMT,UCR,Analysis of critical thermal issues in 3D integrated circuits,thermal hotspots; impact of thermal interface materials; power distribution; processor pitch and area,,,
 2019,DAC,UCF,Noise Injection Adaption: End-to-End ReRAM Crossbar Non-ideal Effect Adaption for Neural Network Mapping,stuck-at-fault; crossbar wire resistance based IR drop; thermal noise model; shot noise; random telegraph noise,,,
+# #### Fault-Tolerant Cache
+2009,ICCD,NUS,The Salvage Cache: A fault-tolerant cache architecture for next-generation memory technologies,fault-bit protection for divisions; victim map based division replacement,,,
+2011,CASES,UCSD,FFT-Cache: A Flexible Fault-Tolerant Cache Architecture for Ultra Low Voltage Operation,flexible defect map for faulty block; FDM configuration algorithm; non-functional lines minimization,,,

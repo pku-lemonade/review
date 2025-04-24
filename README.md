@@ -17,7 +17,7 @@ The New Lemonade Review is a paper review list maintained by [LEMONADE](https://
 1. Sort the papers by year in descending order in the same subsection.
 1. Authors
     1. Use the **affiliation** of the **corresponding/last author**.
-    1. If the affiliation name is **longer than 3 words**, use abbreviations to avoid too many new lines in a table cell. For example, always use abbreviations like "HKUST"，"UC xxx", or "Georgia Tech".
+    1. If the affiliation name is **longer than 3 words**, use abbreviations to avoid too many new lines in a table cell. For example, always use abbreviations like "HKUST"，"Georgia Tech". 
 1. Tags
     1. Do not use general tags like "performance" or "architecture" that describe areas or topics.
     1. Use specific tags that describe the techniques or contributions of the paper, such as "xxx algorithm", "yyy model", "zzz architecture", etc.

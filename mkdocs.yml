@@ -32,18 +32,20 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - README: index.md
+  - README: README.md
   - Hardware: 
-    - hardware/hardware.md
+    - hardware/index.md
     - Processor Architecture: hardware/processor.md
     - Parallel and Multi-Processor Architecture: hardware/parallel.md
     - Memory Architecture: hardware/memory.md
     - Domain-Specific Accelerators: hardware/accelerators.md
-    # - Interconnection Networks: hardware/network.md
+    - Interconnection Networks: hardware/network.md
+    - Electronic Design Automation: hardware/eda.md
     - Security and Reliability: hardware/fail.md
     - Emerging Technologies: hardware/emerging.md
+    - Performance Analysis (to be deleted): hardware/perf.md
   - Software:
-    - software/software.md
+    - software/index.md
     - Programming Languages and Software Engineering: software/pl.md
     - Operating Systems: software/os.md
     - Runtime Systems: software/runtime.md

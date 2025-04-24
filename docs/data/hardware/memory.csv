@@ -144,3 +144,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### NVM
 2024,ISCAS,UMCP,On-Chip Adaptation for Reducing Mismatch in Analog Non-Volatile Device Based Neural Networks,float-gate transistors based; hot-electron injection to address the issue of mismatch and variation,,,
 2023,DATE,UniBo,End-to-End DNN Inference on a Massively Parallel Analog In Memory Computing Architecture,many-core heterogeneous architecture; general-purpose system based on RISC-V cores and nvAIMC cores; based on Phase-Change Memory(PCM);,,,
+# #### Vector Memory Access
+2025,CF Companion,ETHZ,AraOS: Analyzing the Impact of Virtual Memory Management on Vector Unit Performance,virtual memory management for RVV; performance analysis of virtual memory overhead,2,2,1
+2025,arXiv,THU,Efficient Architecture for RISC-V Vector Memory Access,data reorganization module; load/store data organization; row/column-accessible vector register file,2,4,3
+# #### DRAM
+2025,arXiv,UTokyo,MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration,GeMV operations for end-to-end low-bit LLM inference using unmodified DRAM; processor-DRAM co-design; on-the-fly vector encoding; horizontal matrix layout,4,4,3
