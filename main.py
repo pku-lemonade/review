@@ -93,17 +93,13 @@ def parse_custom_structured_file(filepath):
                     continue
 
                 # Update current path based on level
-                current_path = current_path[
-                    :level
-                ]  # Trim path back to the parent level
+                current_path = current_path[:level]  # Trim path back to the parent level
                 current_path.append(title)
-                print(f"DEBUG: Set Path: {current_path}")
+                # print(f"DEBUG: Set Path: {current_path}")
 
             else:  # Should be a data line
                 if not current_path:
-                    print(
-                        f"Warning: Data found before any section marker at line {line_num}. Skipping: {line}"
-                    )
+                    print(f"Warning: Data found before any section marker at line {line_num}. Skipping: {line}")
                     continue
                 try:
                     # Parse the single data line using csv.reader
@@ -112,9 +108,7 @@ def parse_custom_structured_file(filepath):
                         data_dict_for_row = OrderedDict(zip(header, data_values))
                         # Associate this data with the current path
                         # Helper function needed here to navigate/create nested dict path
-                        set_nested_item(
-                            parsed_structure, current_path, data_dict_for_row
-                        )
+                        set_nested_item(parsed_structure, current_path, data_dict_for_row)
                         # print(f"DEBUG: Added data to {'/'.join(current_path)}")
                     else:
                         print(
@@ -174,28 +168,36 @@ def render_structure_to_markdown(header, structure, level=2):
 
         # Recursively render children, increasing the heading level
         # Pass only the children dict, excluding the '_data' key
-        children_structure = OrderedDict(
-            (k, v) for k, v in value.items() if k != "_data"
-        )
+        children_structure = OrderedDict((k, v) for k, v in value.items() if k != "_data")
         if children_structure:
-            markdown_output += render_structure_to_markdown(
-                header, children_structure, level + 1
-            )
+            markdown_output += render_structure_to_markdown(header, children_structure, level + 1)
 
     return markdown_output
 
 
 # Main macro function exposed to MkDocs
-def render_custom_format(filepath):
+def render_custom_format(relative_data_path, page):
     """
     Parses the custom structured file and renders it as Markdown.
     """
-    print(f"Attempting to parse and render: {filepath}")
-    header, structure = parse_custom_structured_file(filepath)
+    md_src_path = page.file.src_path
+
+    # Get the directory part of the markdown file's path relative to 'docs' dir
+    # e.g., 'section'
+    md_dir = os.path.dirname(md_src_path)
+
+    # Combine the markdown file's directory with the relative path to the data file
+    # e.g., os.path.join('section', 'data/hardware_structured.txt')
+    # This gives the path relative to the 'docs' directory
+    data_path_relative_to_docs = os.path.normpath(os.path.join(md_dir, relative_data_path))
+
+    print(f"DEBUG: Markdown source path: {md_src_path}")
+    print(f"DEBUG: Relative data path from MD: {relative_data_path}")
+    print(f"DEBUG: Calculated data path relative to docs/: {data_path_relative_to_docs}")
+
+    header, structure = parse_custom_structured_file(data_path_relative_to_docs)
     if header and structure:
-        return render_structure_to_markdown(
-            header, structure, level=2
-        )  # Start sections at H2
+        return render_structure_to_markdown(header, structure, level=2)  # Start sections at H2
     elif header and not structure:
         return "<p><em>File parsed, header found, but no valid sections or data were identified.</em></p>"
     else:
