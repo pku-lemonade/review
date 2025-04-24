@@ -14,8 +14,8 @@ Focuses on a single processing core and its components. Includes:
 
 Covers systems with multiple processing units and their interactions. Includes:
 
-* Multi-core processor design
-* Many-core processor design
+* Multi-core processor architecture
+* Many-core processor architecture
 * GPU architecture
 * Cache coherence protocols
 * Memory consistency models
@@ -28,7 +28,7 @@ Covers systems with multiple processing units and their interactions. Includes:
 Concerns memory subsystems and their interactions. Includes:
 
 * Memory hierarchy design
-* 存算 (Processing/Computation within or near memory), such as:
+* 存算
     * Processing-in-Memory (PIM)
     * Processing-Near-Memory (PNM)
     * Computation-in-Memory (CIM)
