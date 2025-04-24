@@ -4,11 +4,18 @@ site_author: 'PKU Lemonade'
 
 theme:
   name: material
+  icon:
+    logo: fontawesome/regular/lemon
   features:
+    - navigation.instant
+    - navigation.instant.progress
     - navigation.tracking
-    # - navigation.sections
+    - navigation.sections
     - navigation.expand
     - navigation.indexes
+    - toc.follow
+    # - toc.integrate
+    - navigation.top
 
 plugins:
   - search
@@ -25,8 +32,10 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
-
   # Python Markdown Extensions
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
   - stylesheets/extra.css

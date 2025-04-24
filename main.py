@@ -1,131 +1,167 @@
+# In main.py
+
 import csv
 import io
 import os
-from collections import OrderedDict  # Use OrderedDict to maintain insertion order
+import html
+import logging
+from collections import OrderedDict
+from pathlib import Path
+from typing import Dict, List, Tuple, Union, Optional, Any
+
+# Constants for configuration and magic strings
+DOCS_DIR = "docs"
+DATA_DIR_BASE = "data"
+CONTENT_KEY = "_content"
+COMMENT_TYPE = "comment"
+
+# Section header prefixes mapped to their nesting levels
+SECTION_HEADERS = {"# ####### ": 5, "# ###### ": 4, "# ##### ": 3, "# #### ": 2, "# ### ": 1, "# ## ": 0}
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
+logger = logging.getLogger(__name__)
 
 
-# Helper function to navigate/create nested dictionary path
-def set_nested_item(data_dict, path, value):
-    """Sets item in nested dictionary, creating keys if necessary."""
-    for key in path[:-1]:
-        # Use setdefault which returns the value if key exists,
-        # or inserts key with a default value and returns the default value.
-        # We store data rows in a list under the key '_data'.
-        # Child nodes are stored under their own keys.
-        data_dict = data_dict.setdefault(key, OrderedDict())
-        # Ensure _data list exists even for intermediate nodes
-        data_dict.setdefault("_data", [])
-    # Set the value at the final key
-    final_key = path[-1]
-    data_dict = data_dict.setdefault(final_key, OrderedDict())
-    data_dict.setdefault("_data", []).append(value)
-
-
-def parse_custom_structured_file(filepath):
+def set_nested_item(data_dict: Dict, path: List[str], value: Any) -> None:
     """
-    Parses the custom file format with #-based headers and one data header.
+    Sets item in nested dictionary under the '_content' key.
 
     Args:
-        filepath (str): Path to the custom structured file.
+        data_dict: The dictionary to modify
+        path: List of keys representing the hierarchy path
+        value: The value to append to the content list
+    """
+    current_dict = data_dict
+    # Navigate to the second-to-last level
+    for key in path[:-1]:
+        current_dict = current_dict.setdefault(key, OrderedDict())
+        current_dict.setdefault(CONTENT_KEY, [])
+
+    # Handle the final key
+    final_key = path[-1]
+    current_dict = current_dict.setdefault(final_key, OrderedDict())
+    current_dict.setdefault(CONTENT_KEY, []).append(value)
+
+
+def parse_header(lines: List[str]) -> Tuple[Optional[List[str]], int]:
+    """
+    Parse the header line from the file content.
+
+    Args:
+        lines: List of file lines
 
     Returns:
-        tuple: (header_list, nested_data_structure) or (None, None) on error.
-                nested_data_structure is an OrderedDict.
+        Tuple of (header fields list, line number) or (None, 0) if not found
     """
-    header = None
-    # Use OrderedDict to preserve the order of sections as found in the file
+    for line_num, line in enumerate(lines, 1):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+
+        try:
+            header = next(csv.reader([line]))
+            logger.info(f"Found header: {header}")
+            return header, line_num
+        except Exception as e:
+            logger.error(f"Error parsing header line {line_num}: {e}")
+            return None, 0
+
+    logger.error("Reached EOF before finding header")
+    return None, 0
+
+
+def parse_section_header(line: str) -> Tuple[int, Optional[str]]:
+    """
+    Parse a section header line to determine level and title.
+
+    Args:
+        line: Input line to parse
+
+    Returns:
+        Tuple of (level, title) or (-1, None) if not a section header
+    """
+    for prefix, level in SECTION_HEADERS.items():
+        if line.startswith(prefix):
+            title = line[len(prefix) :].strip()
+            return level, title
+
+    return -1, None
+
+
+def parse_custom_structured_file(filepath_relative_to_docs: str) -> Tuple[Optional[List[str]], Optional[Dict]]:
+    """
+    Parses the custom file format, capturing section headers, data rows,
+    and regular comments into the '_content' list.
+
+    Args:
+        filepath_relative_to_docs: Path to the data file, relative to docs directory
+
+    Returns:
+        Tuple of (header, parsed_structure) or (None, None) on error
+    """
     parsed_structure = OrderedDict()
-    current_path = []  # Stores the current section path, e.g., ['Science', 'Physics']
+    current_path = []
+    full_filepath = Path(DOCS_DIR) / filepath_relative_to_docs
+
+    logger.info(f"Opening file: {full_filepath}")
+
     try:
-        with io.open(os.path.join("docs", filepath), "r", encoding="utf-8-sig") as f:
-            # Cannot use csv.reader directly due to comments and changing context
+        # Read the file content
+        with io.open(full_filepath, "r", newline="", encoding="utf-8-sig") as f:
             lines = f.readlines()
 
-        line_iterator = iter(lines)
-        line_num = 0
-
-        while True:  # Find the single header line
-            line_num += 1
-            try:
-                line = next(line_iterator).strip()
-                if not line or line.startswith("#"):
-                    continue  # Skip comments and empty lines before header
-                # Assume first non-comment line is the header
-                # Use csv.reader just for this line to handle potential quoting
-                header = next(csv.reader([line]))
-                print(f"DEBUG: Found Header: {header}")
-                break  # Header found
-            except StopIteration:
-                print("Error: Reached end of file without finding header row.")
-                return None, None  # No header found
-            except Exception as e:
-                print(f"Error parsing presumed header line {line_num}: {e}")
-                return None, None
-
+        # Find header
+        header, line_num = parse_header(lines)
         if not header:
-            print("Error: Header not identified.")
             return None, None
 
-        # Process remaining lines for sections and data
-        for line in line_iterator:
-            line_num += 1
+        # Process remaining lines
+        for line_idx, line in enumerate(lines[line_num:]):
+            current_line_num = line_num + line_idx + 1
             line = line.strip()
-
-            if not line:  # Skip empty lines
+            if not line:
                 continue
 
             if line.startswith("#"):
-                # Check for section markers (simple string checks, per user note)
-                if line.startswith("# ##### "):
-                    level = 3
-                    title = line[len("# ##### ") :].strip()
-                elif line.startswith("# #### "):
-                    level = 2
-                    title = line[len("# #### ") :].strip()
-                elif line.startswith("# ### "):
-                    level = 1
-                    title = line[len("# ### ") :].strip()
-                elif line.startswith("# ## "):
-                    level = 0
-                    title = line[len("# ## ") :].strip()
+                # Check if it's a section header
+                level, title = parse_section_header(line)
+
+                if level != -1 and title is not None:
+                    # Update the current path based on section nesting level
+                    current_path = current_path[:level] + [title]
                 else:
-                    # It's just a regular comment, ignore
-                    continue
+                    # Handle regular comments
+                    if current_path:
+                        comment_text = line.lstrip("#")
+                        if comment_text.startswith(" "):
+                            comment_text = comment_text[1:]
+                        comment_text = comment_text.rstrip("\n\r")
 
-                # Update current path based on level
-                current_path = current_path[:level]  # Trim path back to the parent level
-                current_path.append(title)
-                # print(f"DEBUG: Set Path: {current_path}")
-
-            else:  # Should be a data line
+                        # Store comment tuple in _content list
+                        set_nested_item(parsed_structure, current_path, (COMMENT_TYPE, comment_text))
+            else:
+                # Process data line
                 if not current_path:
-                    print(f"Warning: Data found before any section marker at line {line_num}. Skipping: {line}")
                     continue
+
                 try:
-                    # Parse the single data line using csv.reader
                     data_values = next(csv.reader([line]))
                     if len(data_values) == len(header):
                         data_dict_for_row = OrderedDict(zip(header, data_values))
-                        # Associate this data with the current path
-                        # Helper function needed here to navigate/create nested dict path
                         set_nested_item(parsed_structure, current_path, data_dict_for_row)
-                        # print(f"DEBUG: Added data to {'/'.join(current_path)}")
                     else:
-                        print(
-                            f"Warning: Data line {line_num} has wrong column count. Expected {len(header)}, got {len(data_values)}. Line: '{line}'"
+                        logger.warning(
+                            f"Line {current_line_num} column mismatch: expected {len(header)}, got {len(data_values)}"
                         )
-                except StopIteration:  # Handle empty line case if needed by csv.reader
-                    continue
                 except Exception as e:
-                    print(f"Error parsing data line {line_num}: {e}. Line: '{line}'")
-                    # Decide how to proceed - maybe skip line?
-                    continue
+                    logger.error(f"Error parsing data line {current_line_num}: {e}")
 
     except FileNotFoundError:
-        print(f"Error: File not found at '{filepath}'")
+        logger.error(f"File not found: '{full_filepath}'")
         return None, None
     except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        logger.error(f"Unexpected error parsing '{full_filepath}': {e}")
         return None, None
 
     return header, parsed_structure
@@ -133,90 +169,126 @@ def parse_custom_structured_file(filepath):
 
 def render_structure_to_markdown(header, structure, level=2):
     """
-    Recursively renders the parsed structure into Markdown.
+    Recursively renders the parsed structure (including comments) into Markdown.
 
-    Args:
-        header (list): The header list for data tables.
-        structure (OrderedDict): The nested data structure.
-        level (int): The starting Markdown header level (e.g., 2 for ##).
+    Parameters:
+        header (list): Column headers for data tables
+        structure (OrderedDict): Nested dictionary structure representing sections and content
+        level (int): Current heading level (default: 2)
 
     Returns:
-        str: The generated Markdown string.
+        str: Generated Markdown content
     """
-    markdown_output = ""
     if not header:
-        return ""  # Need header to render tables
+        return "<p style='color:red;'>Error: Cannot render without header.</p>"
+
+    result = []  # Use a list for better performance with many string concatenations
+
+    def render_table(rows):
+        """Helper function to render a Markdown table"""
+        if not rows:
+            return []
+
+        table_lines = []
+        # Header row
+        header_cells = [escape_md_table_cell(h) for h in header]
+        table_lines.append("| " + " | ".join(header_cells) + " |")
+        # Separator row
+        table_lines.append("| " + " | ".join(["---"] * len(header)) + " |")
+        # Data rows
+        for row_dict in rows:
+            try:
+                row_values = [escape_md_table_cell(str(row_dict.get(h, ""))) for h in header]
+                table_lines.append("| " + " | ".join(row_values) + " |")
+            except Exception as e:
+                logger.warning(f"Error rendering table row {row_dict}: {e}")
+                # Add a placeholder for the problematic row
+                table_lines.append(f"| {'ERROR' + ' | ERROR' * (len(header) - 1)} |")
+
+        table_lines.append("")  # Extra newline after table
+        return table_lines
+
+    def escape_md_table_cell(text):
+        """Escape pipe characters in Markdown table cells"""
+        return text.replace("|", "\\|").replace("\n", "<br>")
 
     for key, value in structure.items():
-        if key == "_data":  # Skip internal data key
-            continue
+        if key == CONTENT_KEY:
+            continue  # Skip internal content key
 
-        # Add heading for the current key
-        markdown_output += f"{'#' * level} {key}\n\n"
+        # Add section heading
+        result.append(f"{'#' * level} {key}\n")
 
-        # Check if this node has data directly associated with it
-        node_data = value.get("_data", [])
-        if node_data:
-            # Generate table for data rows at this level
-            markdown_output += "| " + " | ".join(header) + " |\n"
-            markdown_output += "| " + " | ".join(["---"] * len(header)) + " |\n"
-            for data_row_dict in node_data:
-                # Ensure values are printed in the correct header order
-                row_values = [str(data_row_dict.get(h, "")) for h in header]
-                markdown_output += "| " + " | ".join(row_values) + " |\n"
-            markdown_output += "\n"
+        # Process the content list for this section
+        content_list = value.get(CONTENT_KEY, [])
+        data_rows = []
 
-        # Recursively render children, increasing the heading level
-        # Pass only the children dict, excluding the '_data' key
-        children_structure = OrderedDict((k, v) for k, v in value.items() if k != "_data")
-        if children_structure:
-            markdown_output += render_structure_to_markdown(header, children_structure, level + 1)
+        for item in content_list:
+            if isinstance(item, tuple) and item[0] == COMMENT_TYPE:
+                # Output table before comment if data rows were accumulated
+                if data_rows:
+                    result.extend(render_table(data_rows))
+                    data_rows = []  # Reset after rendering
 
-    return markdown_output
+                # Render comment text
+                result.append(f"{item[1]}\n")
+            elif isinstance(item, dict):
+                # Accumulate data row
+                data_rows.append(item)
+
+        # Render any remaining table data
+        if data_rows:
+            result.extend(render_table(data_rows))
+
+        # Process child sections recursively
+        children = OrderedDict((k, v) for k, v in value.items() if k != CONTENT_KEY)
+        if children:
+            child_content = render_structure_to_markdown(header, children, level + 1)
+            result.append(child_content)
+
+    return "\n".join(result)
 
 
-# Main macro function exposed to MkDocs
 def render_custom_format(page):
     """
-    Parses the custom structured file and renders it as Markdown.
+    Main entry point to render custom CSV data files into Markdown.
+
+    Args:
+        page: The page object provided by MkDocs
+
+    Returns:
+        str: Rendered Markdown content or error message
     """
-    # Get the source path of the current markdown file relative to the 'docs' dir
-    # e.g., 'hardware/emerging.md'
-    md_src_path = page.file.src_path
+    try:
+        # Derive data file path based on markdown file
+        md_src_path = page.file.src_path
+        md_parent_dir = os.path.dirname(md_src_path)
+        md_filename_stem = os.path.splitext(os.path.basename(md_src_path))[0]
+        data_filename = f"{md_filename_stem}.csv"
+        data_path = Path(DATA_DIR_BASE) / md_parent_dir / data_filename
+        data_path_relative_to_docs = str(data_path)
 
-    # Get the directory part relative to 'docs' (e.g., 'hardware')
-    md_parent_dir = os.path.dirname(md_src_path)
+        logger.info(f"Processing data file: {data_path_relative_to_docs}")
 
-    # Get the markdown filename without extension (e.g., 'emerging')
-    md_filename_stem = os.path.splitext(os.path.basename(md_src_path))[0]
+        # Parse and render the data
+        header, structure = parse_custom_structured_file(data_path_relative_to_docs)
 
-    # Construct the expected data filename (e.g., 'emerging.csv')
-    data_filename = f"{md_filename_stem}.csv"  # Using .csv extension
+        if header and structure:
+            return render_structure_to_markdown(header, structure, level=2)
+        elif header and not structure:
+            return f"<p><em>File '{html.escape(data_path_relative_to_docs)}' parsed (header found), but no valid sections or data were identified.</em></p>"
+        else:
+            return f"<p style='color:red;'><strong>Error processing data file '{html.escape(data_path_relative_to_docs)}' referenced implicitly by page '{html.escape(md_src_path)}'. Check build logs.</strong></p>"
 
-    # Construct the path relative to the 'docs' directory
-    # Assumes structure like 'docs/data/hardware/emerging.csv'
-    data_dir_base = "data"  # Assumes a top-level 'data' dir inside 'docs'
-    data_path_relative_to_docs = os.path.join(data_dir_base, md_parent_dir, data_filename)
-    data_path_relative_to_docs = os.path.normpath(data_path_relative_to_docs)  # Clean up path
-
-    print(f"DEBUG: Markdown source path: {md_src_path}")
-    print(f"DEBUG: Derived data path relative to docs/: {data_path_relative_to_docs}")
-
-    # --- Call the parser with the derived path ---
-    header, structure = parse_custom_structured_file(data_path_relative_to_docs)
-
-    # --- Render the result ---
-    if header and structure:
-        return render_structure_to_markdown(header, structure, level=2)  # Start sections at H2
-    elif header and not structure:
-        return "<p><em>File parsed, header found, but no valid sections or data were identified.</em></p>"
-    else:
-        # Error messages printed during parsing
-        return "<p style='color:red;'><strong>Error processing file. Check build logs.</strong></p>"
+    except AttributeError:
+        return "<p style='color:red;'><strong>Error: 'page' object not passed correctly or missing attributes. Ensure macro call is `{{ render_custom_format(page=page) }}`.</strong></p>"
+    except Exception as e:
+        logger.error(
+            f"Error in render_custom_format for page {getattr(page, 'file', {}).get('src_path', 'UNKNOWN')}: {e}"
+        )
+        return f"<p style='color:red;'><strong>An unexpected error occurred processing data for this page. Check build logs.</strong></p>"
 
 
-# Hook function for mkdocs-macros-plugin
 def define_env(env):
-    """Hook function"""
-    # Expose the main rendering function to the Jinja2 environment
+    """Hook function for MkDocs plugin integration"""
     env.macro(render_custom_format)

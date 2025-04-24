@@ -111,7 +111,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 # ##### RRAM Non-ideal Effects
-# Non-ideal Aware Methods: data types, training algorithm, SRAM for compensation. Refer to [Data Type](#data-type).,,,,,
+# Non-ideal Aware Methods: data types, training algorithm, SRAM for compensation. Refer to [Data Type](#data-type).
 2019,DATE,Georgia Tech,Design of Reliable DNN Accelerator with Un-reliable ReRAM,dynamical fixed point data representation format; device variation aware training methodology,,,
 2020,DAC,ASU,"Accurate Inference with Inaccurate RRAM Devices: Statistical Data, Model Transfer, and On-line Adaptation",introduce statistical variations in knowledge distillation; On-line sparse adaptation with a small SRAM array,,,
 2020,DATE,SJTU,Go Unary: A Novel Synapse Coding and Mapping Scheme for Reliable ReRAM-based Neuromorphic Computing,unary coding; priority mapping*,,,
