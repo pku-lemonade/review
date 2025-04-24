@@ -1,7 +1,17 @@
 # Contributing to LEMONADE reviews
 
-Please read and check the following boxes:
+Please review the project guidelines and check the boxes below.
 
-- [ ] Create links between subsections that are related to each other.
-- [ ] There are **at least 2 papers** in the same subsection.
-- [ ] There are **no more than 5 papers** in the same subsection.
+**Subsections:**
+
+- [ ] Place papers only in **Level 3** or **Level 4** subsections.
+- [ ] Each subsection state the **common challenge** addressed.
+- [ ] Each subsection has **at least 2 papers**.
+- [ ] Each subsection has **no more than 5 papers**.
+
+**Tags:**
+
+- [ ] Tags used are **specific techniques or contributions**
+- [ ] **No** broad area tags (like "performance") were used.
+- [ ] **No** vague feature tags (like "efficiency") were used *alone*.
+- [ ] Any potentially unclear acronyms in tags are **quoted** and **explained**.
