@@ -55,11 +55,13 @@ nav:
     - Performance Analysis (to be deleted): hardware/perf.md
   - Software:
     - software/index.md
-    - Programming Languages and Software Engineering: software/pl.md
+    - Algorithms, Theory, and Formal Methods: software/algorithm.md
+    - Programming Languages: software/pl.md
     - Operating Systems: software/os.md
-    - Runtime Systems: software/runtime.md
+    - Distributed Systems: software/runtime.md
     # - Computer Networks: software/network.md
     # - Database Systems: software/db.md
-    - High-Performance Computing: software/hpc.md
     # - Security: software/security.md
+    - High-Performance Computing: software/hpc.md
+    - Performance Analysis: software/perf.md
 

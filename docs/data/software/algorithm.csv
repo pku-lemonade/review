@@ -1,0 +1,10 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ### LLM Alignment
+# #### Self-Alignment
+2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
+# ### LLM Finetune
+# #### Coding LLM Finetune
+2024,arXiv,UMD,HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages,large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools,,,
+# ### LLM-Powered AI Agent
+2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
+# ## Programming
