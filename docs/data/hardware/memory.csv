@@ -11,7 +11,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,MEMSYS,UCLA,AIM: Accelerating Computational Genomics through Scalable and Noninvasive Accelerator-Interposed Memory,placing FPGA chip between DIMM and the conventional memory network; multi-drop bus for inter-accelerator communication, 1,2,2
 2023,HPCA,PKU,DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing,high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication,,,
 2025,HPCA,SJTU,AsyncDIMM: Achieving Asynchronous Execution in DIMM-Based Near-Memory Processing,Offload-Schedule-Return mechanism; switch-recovery scheduling; explicit/implicit synchronization,2,4,3
-# ##### Host-DIMM Communication
 2018,MICRO,UIUC,Application-Transparent Near-Memory Processing Architecture with Memory Channel Network, integrates a processor on a buffered DIMM; application-transparent near-memory processing; leverages memory channels for high-bandwidth/low-latency inter-processor communication,3,4,4 
 # #### PIM: (e)DRAM
 2021,ICCD,ASU,CIDAN: Computing in DRAM with Artificial Neurons,Threshold Logic Processing Element (TLPE) for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture,,,
