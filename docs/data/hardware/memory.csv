@@ -15,7 +15,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### PIM: (e)DRAM
 2021,ICCD,ASU,CIDAN: Computing in DRAM with Artificial Neurons,Threshold Logic Processing Element (TLPE) for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture,,,
 2025,arXiv,KAIST,RED: Energy Optimization Framework for eDRAM-based PIM with Reconfigurable Voltage Swing and Retention-aware Scheduling,"RED framework for energy optimization; reconfigurable eDRAM design; retention-aware scheduling; trade-off analysis between RBL voltage swing, sense amplifier power, and retention time; refresh skipping and sense amplifier power gating",,,
-2022,HPCA,UCSD,TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer,token-based dataflow for general Transformer-based models; modifications on HBM architecture,4,2,4
+2022,HPCA,UCSD,TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer,token-based dataflow for general Transformer-based models; ring-based data broadcast in modified HBM,4,2,4
 ##### Concurrent Host and PIM operations
 2024,npj Unconv. Comput.,UMich,PIM GPT a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
 2024,ASPLOS,KAIST,NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing,dual row buffer architecture; sub-batch interleaving; greedy min-load bin packing algorithm,3,4,3
