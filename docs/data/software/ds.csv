@@ -84,6 +84,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
 # ##### Optimizations on Special Scene
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
+2025,arXiv,SJTU,PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline,dynamic interleaved pipeline; hierarchical schedule space for rapid pipeline schedule search; spatialtemporal subgraph reuse,3,4,2
 # ##### Experiments
 2025,arXiv,JSC,Memory and Bandwidth are All You Need for Fully Sharded Data Parallel,an extensive analysis of the FSDP training distribution strategy; a grid search methodology; both simulation and empirical results,2,4,1
 # ##### Multi-Modal Optimizations
@@ -144,6 +145,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Edinburgh,MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching,module-based batching; high-throughput MoE inference; full KV-cache offloading,,,
 2025,arXiv,KTH,Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference,fine-grained preemption; priority-aware scheduling; per-expert queues; expert-level preemption,,,
 2025,arXiv,UMich,MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints,two-stage performance modeling; analyzes the theoretical performance upper bound; captures how system execution mechanisms,4,4,2
+2025,Arxiv,Nvidia,MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core,decouples parallelization strategies for attention and MoE layers; flexible and efficient token-level dispatcher; 5-D hybrid parallelism,4,5,2
 # ###### Memory and Communication Efficiency
 2025,arXiv,ByteDance,Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts,fine-grained communication-computation overlapping for efficient MoE execution; dependency resolving method; adaptive workload assignment method; shared data buffers between communication and computation operations,,,
 2025,arXiv,UVA,eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference,expert prediction; task-aware expert loading; task-aware request scheduling,,,
@@ -159,7 +161,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MLSys,MIT,LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention,unified sparse attention; hybrid static and dynamic sparsity; hierarchical kv cache management with query-centric pruning,,,
 2025,arXiv,PKU,"ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs",hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism,,,
 # ##### P-D Disaggregated Systems
-2024,OSDI,PKU,DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving,goodput-optimized; prefill-decoding interference；novel placement algorithm for p-d schema,,,
+2024,OSDI,PKU,DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving,goodput-optimized; prefill-decoding interference;novel placement algorithm for p-d schema,,,
 2024,ISCA,UW,Splitwise: Efficient Generative LLM Inference Using Phase Splitting,optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments,,,
 2024,arXiv,CMU,A System for Microserving of LLMs,fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction,,,
 2025,arXiv,PKU,ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments,two-level hierarchical optimization; tabu search algorithm for GPU partition; a lightweight re-scheduling mechanism,,,
@@ -210,6 +212,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,USTC,PICE: A Semantic-Driven Progressive Inference System for LLM Serving in Cloud-Edge Networks,progressive inference paradigm; ensemble learning mechanism; semantic-level parallel data processing,,,
 2025,ICLR,HKUST,HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment,a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges,,,
 2025,arXiv,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,SKIP profiling tool; TKLQT metric for CPU/GPU boundedness; proximity score kernel fusion,2,3,2
+2025,SPAA,Huawei,WindVE: Collaborative CPU-NPU Vector Embedding,Solid 4; Novelty 2; Presentation 3; seamless CPU-NPU collaboration for vector embedding; linear regression based estimator; high-throughput offloading vector embedding,2,3,4
 # #### LLM Training Systems
 2024,arXiv,PKU,Demystifying Workload Imbalances in Large Transformer Model Training over Variable-length Sequences,data sampling imbalance; data packing imbalance; subgraph abstraction,,,
 2024,arXiv,Ant Group,EDiT: A Local-SGD-Based Efficient Distributed Training Method for Large Language Models,Local Stochastic Gradient Descent (Local SGD); consistent stragglers within heterogeneous devices; hierarchical distribution strategy on a two-dimensional device mesh; layer by layer forward syncing; pseudo-gradient penalty method,,,
