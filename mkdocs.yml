@@ -58,7 +58,7 @@ nav:
     - Algorithms: software/algorithm.md
     - Programming Languages: software/pl.md
     - Operating Systems: software/os.md
-    - Distributed Systems: software/runtime.md
+    - Distributed Systems: software/ds.md
     # - Computer Networks: software/network.md
     # - Database Systems: software/db.md
     # - Security: software/security.md
