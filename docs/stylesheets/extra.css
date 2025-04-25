@@ -42,3 +42,9 @@
 /* .md-grid {
     max-width: 1440px; 
 } */
+
+:root  > * {
+    /* --md-primary-fg-color: #397B9F; */
+    --md-primary-fg-color: #5F4A89;
+    /* --md-primary-fg-color: #824375; */
+}
