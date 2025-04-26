@@ -14,4 +14,4 @@ Please review the project guidelines and check the boxes below.
 - [ ] Tags are **specific techniques or contributions**
 - [ ] **No** broad area tags (like "performance") were used.
 - [ ] **No** vague feature tags (like "efficiency") were used *alone*.
-- [ ] Any potentially unclear acronyms in tags are **quoted** and **explained**.
+- [ ] Any potentially unclear acronyms in tags are **explained**.
