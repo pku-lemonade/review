@@ -1,11 +1,14 @@
-site_name: New Lemon Review
+site_name: New Lemonade Review
 site_url: https://review.youwei.xyz
-site_author: 'PKU Lemonade'
+site_author: Youwei Zhuo
+repo_url: https://github.com/pku-lemonade/review
+repo_name: pku-lemonade/review
 
 theme:
   name: material
   icon:
     logo: fontawesome/regular/lemon
+    repo: fontawesome/brands/github
   features:
     - navigation.instant
     - navigation.instant.progress
