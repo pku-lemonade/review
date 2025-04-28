@@ -16,7 +16,7 @@ The New Lemonade Review is a paper review list maintained by prospective and cur
 
 - Goal: Get a broad overview of the topic.
 - Method: Search in Google Scholar or read survey papers.
-- Pace: 10+ papers/week (**mostly skimming**).
+- Pace: 5+ papers/week (**mostly skimming**).
 
 ### **Author-Focused Search**
 
@@ -55,7 +55,8 @@ The New Lemonade Review is a paper review list maintained by prospective and cur
 ### Format
 
 - Sort papers by year in each subsection.
-- Use quotes (" ") around titles or tags containing commas "," (for correct CSV format)
+- CSV: Use quotes (" ") around titles and tags containing commas ","
+- PR: Include search strategy, keywords, and note which papers, if any, were read carefully (as opposed to skimmed) in PR title and description.
 
 ### Authors
 
@@ -105,13 +106,14 @@ The New Lemonade Review is a paper review list maintained by prospective and cur
 
 ### Novelty
 
-> [!Tip]
-> **Read carefully**: Compare with related papers.
+> [!Note]
+> **Requires careful reading**: Assessing novelty means comparing the paper critically to related work. If you only skimmed the paper, either skip this score or assign at most 2.
 
-- 5: Totally new idea.
-- 4: New take on old ideas, or combines them smartly.
-- 3: An old idea applied to a totally new area/topic.
-- 2: An old idea applied to a similar problem.
+- 5: Totally new idea; groundbreaking.
+- 4: New take on existing ideas, or combines them smartly.
+- 3: An existing idea applied to a new area/topic.
+- 2: An existing idea applied to the same problem with standard incremental contributions.
+- 1: An existing idea applied to the same problem with minor variations.
 
 ### Relevance
 
