@@ -56,7 +56,7 @@ The New Lemonade Review is a paper review list maintained by prospective and cur
 
 - Sort papers by year in each subsection.
 - CSV: Use quotes (" ") around titles and tags containing commas ","
-- PR: Include search strategy, keywords, and note which papers, if any, were read carefully (as opposed to skimmed) in PR title and description.
+- PR Title/Description: Include search strategy, keywords, and note any papers read carefully (as opposed to skimmed).
 
 ### Authors
 
