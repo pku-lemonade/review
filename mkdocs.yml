@@ -3,6 +3,7 @@ site_url: https://review.youwei.xyz
 site_author: Youwei Zhuo
 repo_url: https://github.com/pku-lemonade/review
 repo_name: pku-lemonade/review
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -17,13 +18,19 @@ theme:
     - navigation.expand
     - navigation.indexes
     - toc.follow
-    # - toc.integrate
     - navigation.top
+    - content.action.edit
+    - content.action.view
+    - search.highlight
+    - search.share
+    - search.suggest
 
 plugins:
   - search
   - macros
-  - git-revision-date-localized
+  - git-revision-date-localized:
+    branch: main
+  # - ezlinks
 
 markdown_extensions:
   # Python Markdown
@@ -42,6 +49,11 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  analytics:
+    provider: google
+    property: G-JXHKVQ8LKS
 
 nav:
   - README: README.md
