@@ -30,7 +30,7 @@ plugins:
   - macros
   - git-revision-date-localized:
     branch: main
-  # - ezlinks
+  - ezlinks
 
 markdown_extensions:
   # Python Markdown
