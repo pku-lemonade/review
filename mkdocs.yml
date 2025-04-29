@@ -28,8 +28,7 @@ theme:
 plugins:
   - search
   - macros
-  - git-revision-date-localized:
-    branch: main
+  - git-revision-date-localized
   - ezlinks
 
 markdown_extensions:
