@@ -1,0 +1,40 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+
+# ## Kernel design and implementation
+
+# ## Process and thread management
+
+
+# ## Memory management
+# Memory management in OS is concerned with the allocation and reclamation of both physical and virtual memory.
+
+# ### Memory Partitioning
+2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
+
+# ### Cache Evict
+# This section is focusing on the cache eviction algorithms.
+# Cache eviction is the process of removing data from the cache to make space for new data. We think it is a kind of memory management.
+2024,NSDI,CMU,Sieve is Simpler than LRU: an Efficient Turn-Key Eviction Algorithm for Web Caches,web cache management; fifo-like schedule; recognizing the importance of objects,3,3,3
+
+# ### LLM Memory Management
+# This LLM Memory Management in OS type focuses on the memory management algorithms like pagedAttention.
+# The memory management cross multi GPUs or hybrid memory systems, like pd disaggregate systems, is in the [Distributed Systems](https://review.youwei.xyz/software/ds/) section.
+
+
+# ## File systems and storage
+
+# ### Storage Systems
+# This section is focusing on the management of storage systems, including SSDs, HDDs, and other storage devices.
+
+# #### SSD Management
+# This section is focusing on the management of SSDs.
+2025,EuroSys,Samsung,Towards Efficient Flash Caches with Emerging NVMe Flexible Data Placement SSDs,NVMe Flexible Data Placement (FDP) SSDs for data segregation; targeted data placement for reduced device write amplification; FDP-enabled CacheLib architecture; theoretical DLWA model for CacheLib,,,
+2025,arXiv,SDU,Managing Hybrid Solid-State Drives Using Large Language Models,LLM-based auto-tuning framework for hybrid SSD management; hybrid SSD parameter categorization; performance-sensitive parameter selection; prompt engineering for LLM integration; dynamic configuration optimization in hybrid SSDs,,,
+
+
+# ## Virtualization
+# This section is focusing on the virtualization of OS.
+
+
+# ## Synchronization
+# This section is focusing on the synchronization of OS.

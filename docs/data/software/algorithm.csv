@@ -1,10 +1,48 @@
 Year,Venue,Authors,Title,Tags,P,E,N
-# ### LLM Alignment
-# #### Self-Alignment
+
+# ## Algorithm design and analysis (including ML/DL algorithms)
+
+# ### LLM Algorithm
+
+# #### LLM Alignment
+# The LLM alignment is a process of making the LLM more aligned with the user's intent.
+# This section includes the algorithms for LLM alignment.
+
 2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
-# ### LLM Finetune
-# #### Coding LLM Finetune
+
+# #### LLM Finetune
+# Finetune is a process of fine-tuning the LLM on a specific task.
+# This section includes the algorithms for LLM finetune.
+
 2024,arXiv,UMD,HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages,large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools,,,
-# ### LLM-Powered AI Agent
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
-# ## Programming
+
+# ### Quantization
+# Quantization is a process of quantizing the LLM parameters to reduce the memory and computational cost.
+
+# #### LLM Quantization Methods
+# This section includes the algorithms for LLM quantization.
+# The none-LLM quantization methods are in the [None-LLM Quantization Methods](#None-LLM-Quantization-Methods) section.
+2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,,,
+2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
+2025,arXiv,SJTU,MILLION: Mastering Long-Context LLM Inference Via Outlier-Immunized KV Product Quantization,a non-uniform quantization algorithm based on product quantization; leverages sparse computation and asynchronous quantization; distributes quantization power unevenly across channels,3,4,2
+2025,arXiv,Rice,"70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float",dynamic-length float; preserving bit-for-bit identical outputs; BFloat16 exponents carry significantly less information than their allocated bit width,4,4,4
+
+# #### None-LLM Quantization Methods
+# This section includes the algorithms for none-LLM quantization.
+# The LLM quantization methods are in the [LLM Quantization Methods](#LLM-Quantization-Methods) section.
+
+
+
+# ## Data structures
+
+
+
+# ## Computational complexity
+
+
+
+# ## Computability theory
+
+
+
