@@ -19,6 +19,6 @@
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound,,,
 2016,TPDS,ICT,Understanding Big Data Analytics Workloads on Modern Processors,top-down analysis for big data workload; pipeline-characteristics basd performance implication analysis; BigDataBench benchmark,,,
 2019,SC,NCSU,Pinpointing Performance Inefficiencies via Lightweight Variance Profiling,function-level variance detection; stack based deep call chains maintain; on-the-fly binary analysis technique for calling context,,,
-# ##### Benchmark Suites
+# ##### Benchmark
 2018,ICPP,WUSTL,Varbench: an Experimental Framework to Measure and Characterize Performance Variability,spatial/temperal variability; Resource Variability (RV) statistic,,,
 2021,IEEE Access,D-ITET,DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,NDP focused workload characterization methodology; memory-bound function identification; locality-based clustering; memory bottlenecks classification,,,

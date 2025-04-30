@@ -7,9 +7,4 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,UMD,HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages,large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools,,,
 # ### LLM-Powered AI Agent
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
-# ### Data Type
-# #### DNN & LLM Quantization
-2022,MICRO,SJTU,ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization,fixed-length adaptive numerical data type; combines the advantages of float and int for adapting to the importance of different values within a tensor; adaptive framework that selects the best type for each tensor,,,
-2024,TCAD,HKU,DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference,adaptive data representation with variablelength encoding; hardware-aware quantization framework,,,
-2024,arXiv,Harvard,"Nanoscaling Floating-Point (NxFP): NanoMantissa, Adaptive Microexponents, and Code Recycling for Direct-Cast Compression of Large Language Models",Nanoscaling Floating-Point (NxFP); NanoMantissa; Adaptive Microexponents; Code Recycling,,,
 # ## Programming

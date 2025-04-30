@@ -4,6 +4,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,Samsung,Towards Efficient Flash Caches with Emerging NVMe Flexible Data Placement SSDs,NVMe Flexible Data Placement (FDP) SSDs for data segregation; targeted data placement for reduced device write amplification; FDP-enabled CacheLib architecture; theoretical DLWA model for CacheLib,,,
 2025,arXiv,SDU,Managing Hybrid Solid-State Drives Using Large Language Models,LLM-based auto-tuning framework for hybrid SSD management; hybrid SSD parameter categorization; performance-sensitive parameter selection; prompt engineering for LLM integration; dynamic configuration optimization in hybrid SSDs,,,
 # ### Memory
+# #### Memory Partitioning
+2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
 # #### Cache Evict
 2024,NSDI,CMU,Sieve is Simpler than LRU: an Efficient Turn-Key Eviction Algorithm for Web Caches,web cache management; fifo-like schedule; recognizing the importance of objects,3,3,3
 # #### LLM Memory Management
@@ -29,13 +31,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
 # ##### Systems with Other Caches (Not / Not just KV Cache)
 2025,arXiv,KAIST,Efficient LLM Inference with Activation Checkpointing and Hybrid Caching,activation checkpointing; KV-activation hybrid caching; balanced approach to determine the best ratio,,,
-# ##### LLM Prefetching
-2025,arXiv,Huawei Zurich,PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving,computational graph-based prefetching; prefetch KV cache to L2 cache,,,
 # ### Scheduling
 # #### General Task Scheduling
-2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
 2019,NSDI,MIT,Shinjuku: Preemptive Scheduling for µsecond-scale Tail Latency,preemptive scheduling; single-address space OS; hardware-supported virtualization,,,
-2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
 2021,SOSP,UPenn,When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone,reserve cores; non-conserving; request dispatching algorithm,,,
 # #### Heterogeneous Device Task Scheduling
 2025,arXiv,NUS,Data-aware Dynamic Execution of Irregular Workloads on Heterogeneous Systems,lightweight and input-aware framework; multiobjective and multi-constraint design space; dynamically creating optimal schedules,,,
