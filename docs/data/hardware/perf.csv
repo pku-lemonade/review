@@ -1,5 +1,6 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 # ## Hardware Performance Counter
+# Motivation: Use hardware performance counters (HPC) to monitor and analyze system performance; power consumption and thermal behavior.
 # ### Survey
 2013,TODAES,Crete,A Survey and Taxonomy of On-Chip Monitoring of Multicore Systems-on-Chip,debugging/performance/QoS monitor; physical parameter monitor; methodology based taxonomy,2,4,1
 2016,CSUR,Oak Ridge Lab,"Understanding GPU Power: A Survey of Profiling, Modeling, and Simulation Methods",external/internal power measurement; HPC based power model; GPU power simulation,3,3,1
@@ -10,7 +11,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,CONECCT,IIIT,"Power, Performance And Thermal Management Using Hardware Performance Counters",fine-grained dynamic voltage and frequency scaling; PMC-based power and temperature correlation model; thermal zone and partition-based management,2,4,2
 # ### Modeling and Simulation
 # #### Dataflow Architectrue
-# TODO move alpa to software and link to it
 2022,OSDI,Berkeley,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,,,
 2023,MICRO,Peking University,TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis,3D design space of fusion dataflow; tree-based description; tile-centric notation,,,
 2024,ISCA,Stanford University,The Dataflow Abstract Machine Simulator Framework,communicating sequential processes; event-queue free execution; context-channel based description; asynchronous distributed time,,,

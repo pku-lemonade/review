@@ -33,5 +33,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,HPCA,UToronto,Stay in your Lane: A NoC with Low-overhead Multi-packet Bypassing,FastFlow flow controll method; time-division-multiplexed (TDM) based non-overlapping FastPass-lanes; FastPass for throughput enhancement,,,
 2023,HPCA,THU,A Scalable Methodology for Designing Efficient Interconnection Network of Chiplets,interface grouping; hypercube construction algorithm; deadlock-free adaptive routing algorithm; safe/unsafe flow control; network interleaving method,,,
 2025,arXiv,SJTU,StreamGrid: Streaming Point Cloud Analytics via Compulsory Splitting and Deterministic Termination,compulsory splitting for reducing on-chip buffer size; deterministic termination for regularizing non-deterministic operations; line buffer optimization for point cloud pipelines; ILP-based buffer size minimization,,,
+# #### Remote Procedure Call
+2023,arXiv,ICT,CXL over Ethernet: A Novel FPGA-based Memory Disaggregation Design in Data Centers,combining CXL and Ethernet for low-latency remote memory access; FPGA-based prototype with cache optimization; switch-independent congestion control algorithm; native memory semantics for transparent access,,,
+2024,arXiv,UCSD,Telepathic Datacenters: Fast RPCs using Shared CXL Memory,pointer-passing RPC over CXL; MPK-based sandboxing for RPC safety; Seal/Release mechanism for RPC safety; RDMA fallback for RPC scalability; Lease/Quota shared memory management,4,3,3
 # #### RDMA
 2024,arXiv,UCR,GPUVM: GPU-driven Unified Virtual Memory,GPUVM architecture for on-demand paging; RDMA-capable NIC for GPU memory management; GPU thread-based memory management and page migration; reuse-oriented paged memory for efficient eviction; high-level programming abstraction for GPU memory extension,,,

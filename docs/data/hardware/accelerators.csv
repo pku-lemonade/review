@@ -13,7 +13,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # #### Graph Accelerators
 # ### Dataflow Architecture
-# Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
 2019,ASPLOS,THU,Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators,buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm,,,
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
 2024,MICRO,UCR,Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse,producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture,,,
@@ -38,10 +37,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,WUSTL,A Two-Level Thermal Cycling-Aware Task Mapping Technique for Reliability Management in Manycore Systems,temperature based bin packing; task-to-bin assignment; thermal cycling-aware based task-to-core mapping,,,
 2024,arXiv,WUSTL,A Reinforcement Learning-Based Task Mapping Method to Improve the Reliability of Clustered Manycores,mean time to failure; density-based spatial clustering of applications with noise algorithm,,,
 # #### Task Scheduling
-2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
-2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
 2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,,,
-2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algoithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
+2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
 # ### Many-core Architecture
 2015,HPCA,Cornel,Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting,online bandwidth shifting mechanism; prefetch usefulness (PU) level,,,
 2015,HPCA,IBM,XChange: A Market-based Approach to Scalable Dynamic Multi-resource Allocation in Multicore Architectures,CMP multiresource allocation mechanism XChange; market framework based modeling,,,
@@ -49,7 +46,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,MICRO,THU,MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
 2023,MICRO,Yonsei,McCore: A Holistic Management of High-Performance Heterogeneous Multicores,cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling,,,
 # #### Application Optimization
-2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing&packeting,,,
+2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing & packeting,,,
 2023,SC,NUDT,Optimizing MPI Collectives on Shared Memory Multi-Cores,intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives,,,
 2024,PPoPP,NUDT,Towards Scalable Unstructured Mesh Computations on Shared Memory Many-Cores,task dependency tree(TDT); tree traversal based parallel algorithm for CPU/GPU,,,
 # ### Heterogeneous Many-core System
