@@ -6,9 +6,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Memory
 # #### Memory Partitioning
 2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
+# #### Cache Evict
+2024,NSDI,CMU,Sieve is Simpler than LRU: an Efficient Turn-Key Eviction Algorithm for Web Caches,web cache management; fifo-like schedule; recognizing the importance of objects,3,3,3
 # #### LLM Memory Management
 # ##### General LLM Memory Management
 2025,arXiv,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,fixed-size embeddings; full-prefix dependency; two-level memory allocator,4,4,3
+2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
 # ##### LLM Quantization Methods
 2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,,,
 2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
@@ -83,6 +86,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
+# ##### Parallel Stragety
+2022,ACL,NUS,Sequence Parallelism: Long Sequence Training from System Perspective,splits input sequences into chunks; Ring Self-Attention; sparse attention,3,4,3
 # ##### Optimizations on Special Scene
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
 2025,arXiv,SJTU,PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline,dynamic interleaved pipeline; hierarchical schedule space for rapid pipeline schedule search; spatialtemporal subgraph reuse,3,4,2
@@ -151,6 +156,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,ByteDance,Comet: Fine-grained Computation-communication Overlapping for Mixture-of-Experts,fine-grained communication-computation overlapping for efficient MoE execution; dependency resolving method; adaptive workload assignment method; shared data buffers between communication and computation operations,,,
 2025,arXiv,UVA,eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference,expert prediction; task-aware expert loading; task-aware request scheduling,,,
 2025,mobiCom,HKUST,D$^{2}$MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving,dually sparselygated Mixture-of-Experts; token-adaptive bit-width selection; matryoshka weight quantization; bit-width-aware I/O-compute pipeline,3,4,4
+2025,ODSI,SJTU,Fast and Live Model Auto Scaling with O(1) Host Caching,auto-scaling with minimal caching; optimize parameter loading; enabling fine-grained layer-level scale,3,3,2
 # ###### Architectural Innovations
 2025,arXiv,Shanghai AI,Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts,linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers,,,
 2025,arXiv,Berkeley,HeterMoE: Efficient Training of Mixture-of-Experts Models on Heterogeneous GPUs,zebra parallelism; attention-expert disaggregation; asymmetric expert assignment mechanism; gather and squeeze strategy,4,5,3
@@ -195,6 +201,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General Applications
 2013,SOSP,MSR Silicon Valley,Dandelion: a Compiler and Runtime for Heterogeneous  Systems,unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing,,,
 2025,EuroSys,SJTU,Improving GPU Sharing Performance through Adaptive Bubbleless Spatial-Temporal Sharing,Bubble-less spatial-temporal sharing; kernel squad scheduling; fine-grained concurrent kernel management,4,3,2
+2020,ASPLOS,PKU,FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System,tvm auto schedule; RL based stragety find; auto optimizing in large configuration space,4,4,3
 # #### Decentralized Serving
 2019,ASPLOS,USC,Hop: Heterogeneity-aware Decentralized Training,iteration gap; queue-based synchronization; backup workers and bounded staleness,,,
 2020,ASPLOS,USC,Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training,Partial All-Reduce to reduce synchronization cost; group scheduling to avoid conflicts,,,
