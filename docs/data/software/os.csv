@@ -19,6 +19,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### LLM Memory Management
 # This LLM Memory Management in OS type focuses on the memory management algorithms like pagedAttention.
 # The memory management cross multi GPUs or hybrid memory systems, like pd disaggregate systems, is in the [Distributed Systems](https://review.youwei.xyz/software/ds/) section.
+2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
 
 
 # ## File systems and storage

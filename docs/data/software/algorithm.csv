@@ -1,8 +1,10 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 
-# ## Algorithm design and analysis (including ML/DL algorithms)
+# ## Algorithm design and analysis
+# Focusing on the algorithm design and analysis, including ML/DL algorithms.
 
 # ### LLM Algorithm
+# Specializing in the algorithms for LLMs. The ML algorithms are in the [ML Algorithms](#ML-Algorithms) section.
 
 # #### LLM Alignment
 # The LLM alignment is a process of making the LLM more aligned with the user's intent.
@@ -32,17 +34,24 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # This section includes the algorithms for none-LLM quantization.
 # The LLM quantization methods are in the [LLM Quantization Methods](#LLM-Quantization-Methods) section.
 
+# ### ML Algorithms
+# The ML algorithms are in the [ML Algorithms](#ML-Algorithms) section.
+
+# #### RL Algorithms
+# Reinforcement learning algorithms.
 
 
 # ## Data structures
+# Focusing on the data structure design for better performance.
 
 
 
 # ## Computational complexity
-
+# Focusing on the computational complexity of the algorithms.
 
 
 # ## Computability theory
+# Focusing on the computability theory of the algorithms.
 
 
 
