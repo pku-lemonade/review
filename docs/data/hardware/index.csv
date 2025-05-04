@@ -3,5 +3,4 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # please scatter them to different categories according to target architecture and then link them
 2017,SFI,NUS,Beating Floating Point at its Own Game: Posit Arithmetic,"Data type for universial number; Replacement for float; Highly adjustable; Dynamic range; regime, exponent and mantissa bits",,,
 2021,TCAS-II,Ashoka University,Fixed-Posit: A Floating-Point Representation for Error-Resilient Applications,the number of regime and exponent bits are fixed; a design of fixedposit multiplier;,,,
-# #### Prefetcher
 

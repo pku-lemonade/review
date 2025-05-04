@@ -1,5 +1,7 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 # ### RTL Code Generation
+# Motivation: RTL code generation is a critical step in the hardware design process; enabling the transformation of high-level specifications into synthesizable hardware descriptions.
+# Solution: Use advanced techniques such as LLM; graph-based approaches; and domain-specific languages to automate and optimize the RTL code generation process.
 2013,DAC,Columbia,A Method to Abstract RTL IP Blocks into C++ Code and Enable High-Level Synthesis,process communication graph; I/O port loop unrolling; HLS design space expansion,,,
 2021,ASPLOS,Cornell,A compiler infrastructure for accelerator generators,a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing,4,3,3
 2023,DATE,NYU,Benchmarking Large Language Models for Automated Verilog RTL Code Generation,verilog code training corpus; multi-level verilog coding problems for analysis,,,

@@ -1,5 +1,6 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 # #### Network-on-Chip
+# NoC provides a flexible and high-bandwidth communication infrastructure for heterogeneous chiplets; enables efficient data movement and processing in heterogeneous many-core architectures.
 # ##### Wafer-Scale
 2024,SC,THU,Switch-Less Dragonfly on Wafers: A Scalable Interconnection Architecture based on Wafer-Scale Integration,four-level topology structure; minimal routing algorithm on dragonfly for VC vumber reduction,,,
 2024,TCAS,SYSU,CINOC: Computing in Network-On-Chip With Tiled Many-Core Architectures for Large-Scale General Matrix Multiplications,computable input buffers;  thread execution free from fine-grained instruction control; data-aware thread execution,,,

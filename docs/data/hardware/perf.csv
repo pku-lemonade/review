@@ -1,6 +1,6 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 # ## Hardware Performance Counter
-# Motivation: Use hardware performance counters (HPC) to monitor and analyze system performance; power consumption and thermal behavior.
+# Motivation: Use hardware performance counters to monitor and analyze system performance; power consumption and thermal behavior.
 # ### Survey
 2013,TODAES,Crete,A Survey and Taxonomy of On-Chip Monitoring of Multicore Systems-on-Chip,debugging/performance/QoS monitor; physical parameter monitor; methodology based taxonomy,2,4,1
 2016,CSUR,Oak Ridge Lab,"Understanding GPU Power: A Survey of Profiling, Modeling, and Simulation Methods",external/internal power measurement; HPC based power model; GPU power simulation,3,3,1

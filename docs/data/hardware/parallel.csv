@@ -7,13 +7,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,KTH,Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper,Grace Hopper system memory characterization; integrated CPU-GPU page table analysis; first-touch policy impact study; system page size impact study; access-counter page migration evaluation,2,4,3
 # #### Disaggregated Memory
 # Challenge: CXL and NVM offer higher speed & bandwidth than storage devices with byte-level access. Memory disaggregation using DRAM (high-speed/BW + small capacity) and NVM (low-speed/BW + large capacity), faces latency, bandwidth, and consistency challenges.
-# ##### Survey
-2025,arXiv,SJTU,Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters,Cross-layer classification of DM techniques; hardware-level categories; architectural-level classifications; system and runtime-level groupings; application-level optimizations such as general-purpose and domain-specific approaches,,,
-# #### Disaggregated Memory
 2025,ASPLOS,Yale,PULSE: Accelerating Distributed Pointer-Traversals on Disaggregated Memory,iterator-based programming model; disaggregated accelerator architecture; in-network routing for distributed traversal,3,4,3
 2025,ASPLOS,Purdue,EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation,Ethernet PHY network stack; PHY in-network scheduler; PHY intra-frame preemption,4,4,4
-# #### CXL Memory
 2025,arXiv,Micron,Architectural and System Implications of CXL-enabled Tiered Memory,CXL parallelism bottleneck analysis; Unfair queuing analysis; MIKU dynamic request control; ToR-based service time estimation; Hierarchical CXL throttling,4,4,3
+# ##### Survey
+2025,arXiv,SJTU,Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters,Cross-layer classification of DM techniques; hardware-level categories; architectural-level classifications; system and runtime-level groupings; application-level optimizations such as general-purpose and domain-specific approaches,,,
 # ### Chiplets
 # Motivation: Chiplets enable more flexible and cost-effective system designs by allowing the integration of specialized dies manufactured using optimal processes; leading to improved performance and yield.
 # #### Survey
@@ -23,8 +21,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Cost Analysis
 2025,arXiv,ASU,CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems,"heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection",,,
 # ### 3D IC
-# #### General 3D IC
 # Motivation: 3DIC technology enables higher integration density; shorter interconnects; and improved performance by stacking multiple active layers in a single device.
+# #### General 3D IC
 2019,GLSVLSI,Boston Univeristy,An Overview of Thermal Challenges and Opportunities for Monolithic 3D ICs,TSV-based 3D integration; Mono3D integration with nanoscale monolithic inter-tier vias; influence of lateral heat flow and inter-connection,,,
 2019,ECTC,TSMC,System on Integrated Chips (SoIC) for 3D Heterogeneous Integration,"system on integrated chips; SoIC package integration; reliability of SoIC bond,TSV and TDV",,,
 2020,DATE,Georgia Tech,Macro-3D: A Physical Design Methodology for Face-to-Face-Stacked Heterogeneous 3D ICs,face-to-face stack; separate 2D floorplans generation; memory-on-logic projection,,,
