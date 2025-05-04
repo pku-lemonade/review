@@ -1,18 +1,18 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Distributed algorithms
-# This section is focusing on the distributed algorithms, such as consensus and replication, like RAFT.
+# Focusing on the distributed algorithms, such as consensus and replication, like RAFT.
 
 # ### Parallel Strategies
 # Focusing on the parallel strategies for distributed systems.
 
 # #### LLM-specific Parallel Strategies
-# This section is focusing on the parallel strategies for LLM-specific deep learning systems.
+# Focusing on the parallel strategies for LLM-specific deep learning systems.
 2022,ACL,NUS,Sequence Parallelism: Long Sequence Training from System Perspective,splits input sequences into chunks; Ring Self-Attention; sparse attention,3,4,3
 
 
 # ## Cloud computing platforms and architectures
-# This section is focusing on the cloud computing platforms and architectures.
+# Focusing on the cloud computing platforms and architectures.
 
 # ### Cloud Platform LLM Scheduling
 # Focusing on the scheduling algorithms for LLM inference in cloud datacenters, specifically for the cloud providers.
@@ -20,7 +20,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## Microservices
-# This section is focusing on the microservices.
+# Focusing on the microservices.
 
 
 # ## Memory Management
@@ -56,7 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,UChicago,DroidSpeak: Enhancing Cross-LLM Communication,selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model,,,
 
 # ##### Other Techniques
-# This section is focusing on the other techniques for KV cache reuse, beyond prefix sharing.
+# Focusing on the other techniques for KV cache reuse, beyond prefix sharing.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
 2024,arXiv,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices,,,
 
@@ -66,50 +66,50 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,PKU,FairKV: Balancing Per-Head KV Cache for Fast Multi-GPU Inference,imbalanced KV cache compression mitigation; fair-copying for load balancing; best-effort assignment,,,
 
 # #### KV Cache Evict Systems
-# This section is focusing on the algorithms for KV cache eviction.
+# Focusing on the algorithms for KV cache eviction.
 2023,NIPS,UT-Austin,H$_2$O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models,sparsity for small cache size; heavy-hitters; greedy algorithm for low-cost policy,,,
 2024,arXiv,Fujitsu,CO2: Precise Attention Score Observation for improving KV Cache Replacement in Large Language Models,long measurement step; decay of the accumulated attention score; adjusting FIFO cache size,,,
 
 # #### Systems with Other Caches
-# This section is focusing on the systems that use other caches (not just KV cache).
+# Focusing on the systems that use other caches (not just KV cache).
 2025,arXiv,KAIST,Efficient LLM Inference with Activation Checkpointing and Hybrid Caching,activation checkpointing; KV-activation hybrid caching; balanced approach to determine the best ratio,,,
 
 
 # ## Communication-Centric Optimization
-# This section is focusing on the optimization of communication operations, for that communication is a bottleneck of some distributed systems.
+# Focusing on the optimization of communication operations, for that communication is a bottleneck of some distributed systems.
 
 # ### I/O Characterization and Optimization
-# This section is focusing on the optimization of I/O between different devicess.
+# Focusing on the optimization of I/O between different devicess.
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
 
 # ### GPU-GPU Communication
-# This section is focusing on the communication between GPUs.
+# Focusing on the communication between GPUs.
 2025,arXiv,Apple,SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models,sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction,,,
 
 
 # ## Many-Core Systems
-# This section is focusing on the many-core systems.
+# Focusing on the many-core systems.
 
 # ### Workload Characterization
-# This section is focusing on the workload characterization in many-core systems.
+# Focusing on the workload characterization in many-core systems.
 2018,SC,Intel,Many-Core Graph Workload Analysis,multicore simulator sniper; selective caching and prefetching; heterogeneous high-performance low-power cores,,,
 2018,DATE,UGA,Parallel Code Generation of Synchronous Programs for a Many-core Architecture,banked memory mapping; worst-case response time analysis,,,
 2025,IPDPS,UChicago,Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems,lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing,,,
 
 # ### Fault Propagation
-# This section is focusing on the fault propagation in many-core systems.
+# Focusing on the fault propagation in many-core systems.
 2008,ASPLOS,UIUC,Understanding the Propagation of Hard Errors to Software and Implications for Resilient System Design,stuck-at fault; bridging fault; software failure detection,,,
 2010,PRDC,UBC,Modeling the Propagation of Intermittent Hardware Faults in Programs,instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling,,,
 2015,SC,IBM,Understanding the Propagation of Transient Errors in HPC Applications,"fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors",,,
 2023,ISCA,UChicago,Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems,"NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy",,,
 
 # ### Fault Injection Technique
-# This section is focusing on the fault injection technique.
+# Focusing on the fault injection technique.
 2008,VLSI,DISCA,Enhancement of Fault Injection Techniques Based on the Modification of VHDL Code,saboteurs and mutants technique based fault injection; VHDL level fault-tolerance mechanism,,,
 2014,DSN,UBC,Quantifying the Accuracy of High-Level Fault Injection Techniques for Hardware Faults,fault injection quantification; assembly level fault injection; LLVM compiler based fault injector,,,
 
 # ### Communication
-# This section is focusing on the communication between different cores.
+# Focusing on the communication between different cores.
 2025,arXiv,UCLM,Understanding intra-node communication in HPC systems and Datacenters,intra- and inter-node simulation model; intra-node network interface bottleneck; impacts of communication pattern,,,
 
 
@@ -169,21 +169,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Focusing on the schedule optimization for heterogeneous systems. The papers are mainly focusing on the scheduling algorithms.
 
 # ### General Task Scheduling
-# This section is focusing on the general task scheduling algorithms.
+# Focusing on the general task scheduling algorithms.
 2019,NSDI,MIT,Shinjuku: Preemptive Scheduling for µsecond-scale Tail Latency,preemptive scheduling; single-address space OS; hardware-supported virtualization,,,
 2021,SOSP,UPenn,When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone,reserve cores; non-conserving; request dispatching algorithm,,,
 
 # ### Speculative Execution (Non-LLM)
-# This section is focusing on the speculative execution algorithms for non-LLM tasks.
+# Focusing on the speculative execution algorithms for non-LLM tasks.
 # The LLM-related scheduling is in the [LLM-Related Scheduling](#LLM-Related-Scheduling) section.
 2024,arXiv,MSR,Forerunner: Constraint-based Speculative Transaction Execution for Ethereum,constraint-based speculative transaction execution; many-future nature; specialized fast-path program,,,
 2024,arXiv,Politecnico di Milano,Minimizing speculation overhead in a parallel recognizer for regular texts,speculation overhead; chunk automaton; reduced-interface DFA,,,
 
 # ### LLM-Related Scheduling
-# This section is focusing on the scheduling algorithms for LLM-related tasks.
+# Focusing on the scheduling algorithms for LLM-related tasks.
 
 # #### LLM Request Scheduling
-# This section is focusing on the scheduling algorithms for LLM inference requests.
+# Focusing on the scheduling algorithms for LLM inference requests.
 2024,arXiv,UCSB,Multi-Bin Batching for Increasing LLM Inference Throughput,binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality,,,
 2024,arXiv,Yale,TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications,segmented generation; time-sensitive scheduling; latency-guided batch size selection,,,
 2025,arXiv,MSRI,Niyama : Breaking the Silos of LLM Inference Serving,QoS-driven LLM inference serving system; co-scheduling requests with diverse QoS targets on a shared rather than siloed infrastructure; allows graceful service degradation during overload conditions; deadline slack; a hybrid prioritization and an eager relegation policy,4,4,3
@@ -218,7 +218,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UvA,GREEN-CODE: Optimizing Energy Efficiency in Large Language Models for Code Generation,dynamic early exit; energy-aware code generation; reinforcement learning for llms,,,
 
 # ### DNN Scheduling
-# This section is focusing on the scheduling algorithms for DNNs.
+# Focusing on the scheduling algorithms for DNNs.
 # Refer to [LLM-Related Scheduling](#LLM-Related-Scheduling) for the LLM-related scheduling algorithms.
 
 # #### Task Offloading
@@ -233,7 +233,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Focusing on the optimizations for LLM training systems.
 
 # #### General Optimizations
-# This section is focusing on the general optimizations for LLM training systems.
+# Focusing on the general optimizations for LLM training systems.
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2

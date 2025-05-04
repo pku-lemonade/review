@@ -39,11 +39,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### RL Algorithms
 # Reinforcement learning algorithms.
-
+2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
 
 # ## Data structures
 # Focusing on the data structure design for better performance.
-
 
 
 # ## Computational complexity
@@ -52,6 +51,3 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Computability theory
 # Focusing on the computability theory of the algorithms.
-
-
-
