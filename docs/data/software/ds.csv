@@ -165,9 +165,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # This section is focusing on the scheduling algorithms for LLM-related tasks.
 
 # #### Cloud Datacenter LLM Scheduling
-# This section is focusing on the scheduling algorithms for LLM inference in cloud datacenters.
+# Focusing on the scheduling algorithms for LLM inference in cloud datacenters, specifically for the cloud providers.
 2025,arXiv,Azure,TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms,thermal/power property characterization; dynamically adjust in response to power or cooling failures; thermal- and poweraware manner,,,
+
 # #### LLM Request Scheduling
+# This section is focusing on the scheduling algorithms for LLM inference requests.
 2024,arXiv,UCSB,Multi-Bin Batching for Increasing LLM Inference Throughput,binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality,,,
 2024,arXiv,Yale,TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications,segmented generation; time-sensitive scheduling; latency-guided batch size selection,,,
 2025,arXiv,MSRI,Niyama : Breaking the Silos of LLM Inference Serving,QoS-driven LLM inference serving system; co-scheduling requests with diverse QoS targets on a shared rather than siloed infrastructure; allows graceful service degradation during overload conditions; deadline slack; a hybrid prioritization and an eager relegation policy,4,4,3
@@ -175,6 +177,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
 
 # #### LLM Application-Level Scheduling
+# Application-Level is focusing on an application using multiple LLM instances. These papers are focusing on the scheduling algorithms to minimize the end-to-end latency of the application.
 2024,OSDI,SJTU,Parrot: Efficient Serving of LLM-based Applications with Semantic Variable,Semantic Variable; application-level information; LLM applications as first-class citizens,,,
 2024,OSDI,CUHK,Teola: Towards End-to-End Optimization of LLM-based Applications,mismatch between request-level scheduling and end-to-end  application performance; primitive-level dataflow graph; two-tier scheduling mechanism,,,
 2024,arXiv,Yext,SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering,constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements,,,
@@ -190,6 +193,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,SEU,SEED: Accelerating Reasoning Tree Construction via Scheduled Speculative Decoding,reasoning tree construction; parallel drafting with speculative decoding; FCFS queue verification,,,
 
 # ##### Spec + Others
+# Focusing on the speculative execution and other related algorithms.
 2025,arXiv,Huawei,Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling,speculative MoE; speculative token shuffling; speculative expert pre-grouping,,,
 2025,INFOCOM,UoA,SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models,internal neurons sparsification; model-agnostic acceleration framework; dynamic early-exit thresholds; multi-layered feature fusion,,,
 
@@ -201,25 +205,28 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### DNN Scheduling
 # This section is focusing on the scheduling algorithms for DNNs.
+# Refer to [LLM-Related Scheduling](#LLM-Related-Scheduling) for the LLM-related scheduling algorithms.
 
 # #### Task Offloading
 2024,arXiv,USTC,Collaborative Inference for Large Models with Task Offloading and Early Exiting,early exit mechanism; jointly optimize its offloading strategy and the confidence threshold; distributed task offloading algorithm,,,
 
 
 # ## General optimizations for Deep Learning Systems
-# This section is focusing on the general optimizations for deep learning systems.
+# Focusing on the general optimizations for deep learning systems.
 # If the paper is focusing on an above-mentioned specific scene (e.g., memory, scheduling, IO, etc.), it will be put in the corresponding section.
 
 # ### LLM Training Systems
-# This section is focusing on the general optimizations for LLM training systems.
+# Focusing on the optimizations for LLM training systems.
 
 # #### General Optimizations
+# This section is focusing on the general optimizations for LLM training systems.
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
 
 # #### Optimizations on Special Scene
+# Focusing on the the training optimizations for specific scenes.
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
 2025,arXiv,SJTU,PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline,dynamic interleaved pipeline; hierarchical schedule space for rapid pipeline schedule search; spatialtemporal subgraph reuse,3,4,2
 
@@ -232,10 +239,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Kernel-Level Optimizations
 2025,arXiv,HUST,CFP: Low-overhead Profiling-based Intra-operator Parallelism Generation by Preserving Communication-Free Structures,model segment profile-based cost model; communication-free tensor partition propagation property; extracting a set of unique model segments; Communication-Free Preserve,4,5,3
 
-
 # ### LLM Inference Systems
+# Focusing on the optimizations for LLM inference systems.
 
 # #### SLO-Aware Systems
+# SLO-Aware Systems is pursuing to provide service for users with specific latency requirements.
 2025,arXiv,Berkeley,AdaServe: SLO-Customized LLM Serving with Fine-Grained Speculative Decoding,fine-grained speculative decoding; token tree verification; slo customization,,,
 2025,arXiv,UIUC,HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location,online-offline request co-location; interference-aware profiler; latency predictor; adaptive scheduler,,,
 2025,arXiv,PKU,Memory Offloading for Large Language Model Inference with Latency SLO Guarantees,effectively captures the tension between meeting SLOs and maximizing host memory usage; dynamic offloading interval; per-bus coordinator,,,
@@ -243,7 +251,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 
 # #### Surveys
-# This section is focusing on the surveys of LLM inference systems.
+# Focusing on the surveys of LLM inference systems.
 
 # ##### System Optimization Surveys
 2024,arXiv,NEU,LLM Inference Serving: Survey of Recent Advances and Opportunities,KV cache and memory management; LLM computation optimization; Cloud LLM deployment; focus on system-level enhancements,,,

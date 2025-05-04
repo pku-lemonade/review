@@ -1,7 +1,10 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Parallel programming models
+# Focusing on the parallel programming models for HPC systems.
 
 # ## Scientific computing applications and libraries
+# Focusing on the scientific computing applications and libraries for HPC systems.
 
 # ## Parallel algorithms
+# Focusing on the parallel algorithms for HPC systems.
