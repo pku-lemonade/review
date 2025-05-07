@@ -13,7 +13,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Survey
 2025,arXiv,SJTU,Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters,Cross-layer classification of DM techniques; hardware-level categories; architectural-level classifications; system and runtime-level groupings; application-level optimizations such as general-purpose and domain-specific approaches,,,
 # ### Chiplets
-# Motivation: Chiplets enable more flexible and cost-effective system designs by allowing the integration of specialized dies manufactured using optimal processes; leading to improved performance and yield.
+# Solution: Chiplets enable more flexible and cost-effective system designs by allowing the integration of specialized dies manufactured using optimal processes; leading to improved performance and yield.
 # #### Survey
 2020,Electronics,NUDT,Chiplet Heterogeneous Integration Technology—Status and Challenges,heterogeneous integration technology; interconnect interfaces and protocols; packaging technology,,,
 2022,CCF THPC,ICT,"Survey on chiplets: interface, interconnect and integration methodology",development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology,,,
@@ -21,7 +21,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Cost Analysis
 2025,arXiv,ASU,CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems,"heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection",,,
 # ### 3D IC
-# Motivation: 3DIC technology enables higher integration density; shorter interconnects; and improved performance by stacking multiple active layers in a single device.
+# Solution: 3DIC technology enables higher integration density; shorter interconnects; and improved performance by stacking multiple active layers in a single device.
 # #### General 3D IC
 2019,GLSVLSI,Boston Univeristy,An Overview of Thermal Challenges and Opportunities for Monolithic 3D ICs,TSV-based 3D integration; Mono3D integration with nanoscale monolithic inter-tier vias; influence of lateral heat flow and inter-connection,,,
 2019,ECTC,TSMC,System on Integrated Chips (SoIC) for 3D Heterogeneous Integration,"system on integrated chips; SoIC package integration; reliability of SoIC bond,TSV and TDV",,,

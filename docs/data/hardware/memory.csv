@@ -5,19 +5,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Evaluation
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 # ##### Inter-DIMM Communication
-# Challenge: High latency of inter-DIMM (cross-bank) communication via CPU forwarding.
+# Challenge: High latency of inter-DIMM (cross-bank) communication via host CPU forwarding.
 2024,ISCA,THU,NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures,"gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing",,,
 2025,HPCA,Samsung,Piccolo: Large-Scale Graph Processing with Fine-Grained In-Memory Scatter-Gather,In-DRAM fine-grained scatter-gather via data bus offsets; fine-grained cache architecture using fg-tags; Standard DDR command interpretation for FIM control; Combined graph tiling with fine-grained memory access,3,3,4
 2025,arXiv,ETHZ,PIMDAL: Mitigating the Memory Bottleneck in Data Analytics using a Real Processing-in-Memory System,PIMDAL library for DB operators; quicksort/mergesort/hashing on UPMEM PIM; scatter/gather/async transfers for PIM communication,4,4,2
 2025,ISCA,KAIST,PIMnet: A Domain-Specific Network for Efficient Collective Communication in Scalable PIM, domain-specific PIM interconnect; hierarchical network for PIM packaging; PIM-controlled deterministic scheduling, 2,4,3
 # ##### Intra-DIMM Communication
-# Challenge: High latency of intra-DIMM (cross-DIMM) communication via CPU forwarding.
+# Challenge: High latency of intra-DIMM (cross-DIMM) communication via host CPU forwarding.
 2017,MEMSYS,UCLA,AIM: Accelerating Computational Genomics through Scalable and Noninvasive Accelerator-Interposed Memory,placing FPGA chip between DIMM and the conventional memory network; multi-drop bus for inter-accelerator communication, 1,2,2
 2023,HPCA,PKU,DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing,high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication,,,
 2025,HPCA,SJTU,AsyncDIMM: Achieving Asynchronous Execution in DIMM-Based Near-Memory Processing,Offload-Schedule-Return mechanism; switch-recovery scheduling; explicit/implicit synchronization,2,4,3
 2018,MICRO,UIUC,Application-Transparent Near-Memory Processing Architecture with Memory Channel Network, integrates a processor on a buffered DIMM; application-transparent near-memory processing; leverages memory channels for high-bandwidth/low-latency inter-processor communication,3,4,4 
 # #### Concurrent Host and PIM operations
-# Challenge: High latency of concurrent host CPU/GPU and PIM operations via CPU forwarding. 
+# Challenge: High latency of concurrent host CPU/GPU and PIM operations via host CPU forwarding. 
 2024,npj Unconv. Comput.,UMich,PIM GPT a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
 2024,ASPLOS,KAIST,NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing,dual row buffer architecture; sub-batch interleaving; greedy min-load bin packing algorithm,3,4,3
 2025,HPCA,ICT,Make LLM Inference Affordable to Everyone: Augmenting GPU Memory with NDP-DIMM,activation sparsity-based hot(GPU)/cold(NDP) neuron partitioning; offline ILP + online predictor for neuron partition; window-based online remapping for GPU-NDP & NDP-NDP load balance,2,3,4
@@ -41,7 +41,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,SK Hyrix,Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders,CXL.mem protocol instead of CXL.io (DMA) for low-latency; lightweight threads to reduce address calculation overhead,,,
 # #### NDP: 3D-stacked DRAM 
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. 
-# Solution: Use of TSVs for inter-bank communication & band-to-logic layer communication.
+# Solution: Use TSVs to provide TB/s level bandwidth in inter-bank communication & band-to-logic layer communication.
 2013,PACT,KAIST,Memory-centric System Interconnect Design with Hybrid Memory Cubes,memory-centric network; distributor-based topology for reduced latency; non-minimal routing for higher throughput,,,
 2024,DAC,SNU,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models,NDP for MoE; activation movement; GPU-MoNDE load-balancing scheme,,,
 2024,ASPLOS,PKU,SpecPIM: Accelerating Speculative Inference on PIM-Enabled System via Architecture-Dataflow Co-Exploration,algorithmic and architectural heterogeneity; PIM resource allocation; multi-model collaboration workflow,,,
@@ -49,6 +49,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,DAC,ETHZ,NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning,simulator Ramulator-PIM; tracefile from Ramulator & run on zsim,,,
 2021,CAL,UVA,MultiPIM: A Detailed and Configurable Multi-Stack Processing-In-Memory Simulator,simulator MultiPIM; multi-stack & virtual memory support; parallel offloading,,,
 # #### General CiM
+# ##### Specific Application & Algorithm
 2024,ISVLSI,USC,Multi-Objective Neural Architecture Search for In-Memory Computing,"neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM",,,
 2025,AICAS,UVA,Optimizing and Exploring System Performance in Compact Processing-in-Memory-based Chips,Pipeline Method for Compact PIM Designs; Dynamic Duplication Method (DDM); Maximum NN Size Estimation & Deployment in Compact PIM Design,,,
 # ##### Modeling & Simulation
@@ -86,6 +87,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,PKU,Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs,Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU; Area-efficient CIM macro design; Mapping engine for generative model inference,,,
 2024,JSSC,THU,MulTCIM: Digital Computing-in-Memory-Based Multimodal Transformer Accelerator With Attention-Token-Bit Hybrid Sparsity,long reuse elimination scheduler (LRES) to dynamically reshape the attention matrix; runtime token pruner (RTP) to remove insignificant tokens; modal-adaptive CIM network (MACN) to dynamically divide CIM cores into Pipeline; effective-bits-balanced CIM (EBBCIM) macro architecture,5,4,3
 # #### CIM: RRAM
+# Challenge: RRAM devices are non-volatile and have high density; suitable for CIM applications. However; RRAM devices have non-ideal effects that can cause significant performance degradation.
 # ##### RRAM CiM: Simulator
 2018,TCAD,THU,MNSIM: Simulation Platform for Memristor-Based Neuromorphic Computing System,reference design for largescale neuromorphic accelerator and can also be customized; behavior-level computing accuracy model,,,
 2023,TCAD,THU,MNSIM 2.0: A Behavior-Level Modeling Tool for Processing-In-Memory Architectures,integrated PIM-oriented NN model training and quantization flow; unified PIM memory array model; support for mixed-precision NN operations,,,
@@ -117,7 +119,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,SC,UCLA,ReFloat: Low-Cost Floating-Point Processing in ReRAM for Accelerating Iterative Linear Solvers,data format and accelerator architecture,,,
 2024,DATE,UESTC,AFPR-CIM: An Analog-Domain Floating-Point RRAM -based Compute- In- Memory Architecture with Dynamic Range Adaptive FP-ADC,all-analog domain CIM architecture for FP8 calculations; adaptive dynamic range FP-ADC & FP-DAC,,,
 2025,arXiv,GWU,A Hybrid-Domain Floating-Point Compute-in-Memory Architecture for Efficient Acceleration of High-Precision Deep Neural Networks,SRAM based hybrid-domain FP CIM architecture; detailed circuit schematics and physical layouts,,,
-# ##### RRAM CiM: Convolutional layer
+# ##### RRAM CiM: Convolutional Layer
 # Challenge: Convolutional layer is the most compute-intensive layer in CNNs. RRAM CIM architecture is quite suitable for convolutional layer operations but face challenges related to non-ideal effects and performance degradation.
 2020,Nature,THU,Fully hardware-implemented memristor convolutional neural network,"fabrication of high-yield, high-performance and uniform memristor crossbar arrays; hybrid-training method; replication of multiple identical kernels for processing different inputs in parallel",,,
 2020,TCAS-I,Georgia Tech,Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures,weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation,,,
@@ -127,6 +129,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,TODAES,UCAS,Mathematical Framework for Optimizing Crossbar Allocation for ReRAM-based CNN Accelerators,formulate a crossbar allocation problem for ReRAM-based CNN accelerators; dynamic programming based solver; models the performance considering allocation problem,,,
 2025,TVLSI,NBU,A 578-TOPS/W RRAM-Based Binary Convolutional Neural Network Macro for Tiny AI Edge Devices,ReRAM XNOR cell; BCNN CIM macro with FPGA as the control core,4,4,3
 # ##### RRAM CIM: Transformer Accelerator
+# Challenge: RRAM's cross-bar architecture is suitable for matrix operations.
+2023,VLSI,Purdue,X-Former: In-Memory Acceleration of Transformers,in-memory accelerate attention layers; intralayer sequence blocking dataflow; provides a simulator,,,
 2024,TODAES,HUST,A Cascaded ReRAM-based Crossbar Architecture for Transformer Neural Network Acceleration,cascaded crossbar arrays that uses transimpedance amplifiers; data mapping scheme to store signed operands; ADC virtualization scheme,,,
 2023,VLSI,HUST,An RRAM-Based Computing-in-Memory Architecture and Its Application in Accelerating Transformer Inference,RRAM-based in-memory floating-point computation architecture (RIME); pipelined implementations of MatMul and softmax,3,3,4
 2020,ICCAD,Duke,ReTransformer: ReRAM-based processing-in-memory architecture for transformer acceleration,MatMul does matrix decomposition in scaled dot-product attention; in-memory logic techniques for softmax; sub-matrix pipeline,4,3,3
@@ -137,29 +141,23 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 # ##### RRAM Non-ideal Effects
-# Challenge: Non-ideal effects of RRAM devices (e.g. device-to-device variation; cycle-to-cycle variation; etc.) can cause significant performance degradation.
-# Non-ideal Aware Methods: data types, training algorithm, SRAM for compensation. Refer to [Data Type](#data-type).
-2019,DATE,Georgia Tech,Design of Reliable DNN Accelerator with Un-reliable ReRAM,dynamical fixed point data representation format; device variation aware training methodology,,,
-2020,DAC,ASU,"Accurate Inference with Inaccurate RRAM Devices: Statistical Data, Model Transfer, and On-line Adaptation",introduce statistical variations in knowledge distillation; On-line sparse adaptation with a small SRAM array,,,
-2020,DATE,SJTU,Go Unary: A Novel Synapse Coding and Mapping Scheme for Reliable ReRAM-based Neuromorphic Computing,unary coding; priority mapping*,,,
-2022,TCAD,ASU,Hybrid RRAM/SRAM in-Memory Computing for Robust DNN Acceleration,integrates an RRAM-based IMC macro with a digital SRAM macro using a programmable shifter to compensate for RRAM variations; ensemble learning,,,
-2024,LATS,AMU,Analysis of Conductance Variability in RRAM for  Accurate Neuromorphic Computing,analyzation and quantification of conductance variability in RRAMs; analysis of conductance variation over multiple cycles,,,
-2023,ISCAS,TAMU,Memristor-based Offset Cancellation Technique in Analog Crossbars,peripheral circuitry to remove the systematic offset of crossbar,,,
+Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] section.
 # #### CIM: Hybrid Architecture
 # Solution: Use hybrid architecture (like SRAM + RRAM) to overcome the limitations of single device (e.g. RRAM's non-ideal effects).
-2024,Science,NTHU,Fusion of memristor and digital compute-in-memory processing for energy-efficient edge computing,Fusion of ReRAM and SRAM CiM; ReRAM SLC & MLC Hybrid; Current quantization; Weight shifting with compensation,,,
-2024,IPDPS,Georgia Tech,Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators,select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized),,,
+# ##### Hybrid CIM: SRAM + General Logic
 2023,GLSVLSI,USC,Heterogeneous Integration of In-Memory Analog Computing Architectures with Tensor Processing Units,"hybrid TPU-IMAC architecture; TPU for conv, CIM for fc",,,
 2025,ASPLOS,CAS,PAPI: Exploiting Dynamic Parallelism in Large Language Model Decoding with a Processing-In-Memory-Enabled Computing System,dynamic parallelism-aware task scheduling for llm decoding; online kernel characterization for heterogeneous architectures; hybrid PIM units for compute-bound and memory-bound kernels,,,
-2025,arXiv,ASU,H3PIMAP: A Heterogeneity-Aware Multi-Objective DNN Mapping Framework on Electronic-Photonic Processing-in-Memory Architectures,Electronic-Photonic-PIM Accelerator; coresponding mapping framework and evaluation infrastructure,,,
-2024,ASP-DAC,Keio,OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration,On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM,,,
+# ##### Hybrid CIM: SRAM + RRAM
+2024,Science,NTHU,Fusion of memristor and digital compute-in-memory processing for energy-efficient edge computing,Fusion of ReRAM and SRAM CiM; ReRAM SLC & MLC Hybrid; Current quantization; Weight shifting with compensation,,,
+2024,IPDPS,Georgia Tech,Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators,select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized),,,
 2023,ICCAD,SJTU,TL-nvSRAM-CIM: Ultra-High-Density Three-Level ReRAM-Assisted Computing-in-nvSRAM with DC-Power Free Restore and Ternary MAC Operations,DCpower-free weight-restore from ReRAM; ternary SRAM-CIM mechanism with differential computing scheme,,,
-2025,DAC,Chung-Ang Univ.,HH-PIM: Dynamic Optimization of Power and Performance with Heterogeneous-Hybrid PIM for Edge AI Devices,heterogeneous-hybrid PIM with HP/LP modules and MRAM/SRAM; dynamic data placement algorithm for energy optimization; dual PIM controller design,3,4,2
+# ##### Hybrid CIM: Memristor/MRAM + SRAM
 2025,Nature,TSMC,A mixed-precision memristor and SRAM compute-in-memory AI processor,layer based INT-FP hybrid architure; kernel-based mix-CIM (SRAM/ReRAM/digital hybrid architecture),5,5,2
-# ##### Hybrid CIM: Transformer Accelerator
-2023,VLSI,Purdue,X-Former: In-Memory Acceleration of Transformers,in-memory accelerate attention layers; intralayer sequence blocking dataflow; provides a simulator,,,
+2025,DAC,Chung-Ang Univ.,HH-PIM: Dynamic Optimization of Power and Performance with Heterogeneous-Hybrid PIM for Edge AI Devices,heterogeneous-hybrid PIM with HP/LP modules and MRAM/SRAM; dynamic data placement algorithm for energy optimization; dual PIM controller design,3,4,2
+# ##### Hybrid CIM: Analog + Digital
 2023,arXiv,HP,RACE-IT: A Reconfigurable Analog CAM-Crossbar Engine for In-Memory Transformer Acceleration,Compute Analog Content Addressable Memory (Compute-ACAM) structure; accelerator based on crossbars and Compute-ACAMs; encoding-based optimization,3,3,4
 2024,VLSI,FDU,HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer,"product-quantization-based sparse self-attention algorithm; ADC-free ReRAM-CIM macro; ReRAM-CIM for front-end attention sparsification, SRAM-CIM for back-end sparse attention",4,3,3
+2024,ASP-DAC,Keio,OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration,On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM,,,
 # #### CIM: Quantization
 # Challenge: Limited by the precision & area & power trade-off of the ADC; certain CIM devices like RRAM are not suitable for high-precision computation (e.g. FP32). Quantization is needed to reduce the precision of the data.
 2024,TCAD,BUAA,CIMQ: A Hardware-Efficient Quantization Framework for Computing-In-Memory-Based Neural Network Accelerators,bit-level sparsity induced activation quantization; quantizing partial sums to decrease required resolution of ADCs; arraywise quantization granularity,,,
