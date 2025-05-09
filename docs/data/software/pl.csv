@@ -6,6 +6,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Compiler construction and optimization
 # Focusing on the compiler construction and optimization for programming languages.
 
+# ### Hardware Description Languages
+# Focusing on languages designed for hardware description and verification, including Verilog, VHDL and modern alternatives.
+
+# #### Streaming Computation Models
+# Focusing on computation models and languages optimized for streaming data processing and real-time analytics.
+2020,ASPLOS,Stanford,Fleet: A Framework for Massively Parallel Streaming on FPGAs,user write serial code for parallel; multi-stream parallelism; ready-valid signaling,3,4,3
+
+#### HLS Code Generation and Automation
+# Focusing on tools, techniques, and automation for High-Level Synthesis (HLS) code generation, conversion, and program transformation.
+2011,FPGA,UToronto,LegUp: high-level synthesis for FPGA-based processor/accelerator systems,C to hybrid hardware/software; LLVM-based HLS; automatic C to Verilog,4,4,4
+2022,ASPLOS,UCLA,HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair,automated test generation; dependence-guided search space pruning; early candidate rejection using coding styles,3,4,3
+2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,4
+2024,ASPLOS,UIUC,HIDA: A Hierarchical Dataflow Compiler for High-Level Synthesis,hierarchical dataflow IR (HIDA-IR); multi-level dataflow optimizer (HIDA-OPT); pattern-driven task fusion,3,5,4
+2025,FPGA,UCLA,Stream-HLS: Towards Automatic Dataflow Acceleration,automatic dataflow HLS; global scheduling for streaming; MINLP for HLS optimization,4,4,4
+
 # ## Program analysis
 # Focusing on the program analysis for programming languages.
 
