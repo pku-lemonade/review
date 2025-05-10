@@ -55,6 +55,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Berkeley,BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching,offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests,,,
 2024,arXiv,UChicago,DroidSpeak: Enhancing Cross-LLM Communication,selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model,,,
 
+# ##### KV cache store
+# Focusing on store the KV cache in the memory or other storage device. In this way, can load the KV cache when needed.
+2024,ATC,Huawei,Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention,store KV cache in the memory; multi level KV cache management; position mask modified,3,3,3
+
 # ##### Other Techniques
 # Focusing on the other techniques for KV cache reuse, beyond prefix sharing.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
