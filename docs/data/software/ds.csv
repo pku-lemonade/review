@@ -9,7 +9,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Tensor Parallelism
 # Focusing on the tensor parallelism for distributed systems.
 2014,OSDI,CMU,Scaling Distributed Machine Learning with the Parameter Server,the foundation of tensor parallel; parameter server; pull-based data transfer,4,5,3
-2019,,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
+2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
 
 # #### Data Parallelism
 # Compare to tensor [parallelism](#Tensor-Parallelism), data parallelism is dividing the data into different GPUs, and each GPU has a complete model.
