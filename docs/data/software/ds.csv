@@ -6,6 +6,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Parallel Strategies
 # Focusing on the parallel strategies for distributed systems.
 
+# #### Tensor Parallelism
+# Focusing on the tensor parallelism for distributed systems.
+2014,OSDI,CMU,Scaling Distributed Machine Learning with the Parameter Server,the foundation of tensor parallel; parameter server; pull-based data transfer,4,5,3
+2019,,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
+
+# #### Data Parallelism
+# Compare to tensor [parallelism](#Tensor-Parallelism), data parallelism is dividing the data into different GPUs, and each GPU has a complete model.
+2012,Nips,Google,Large Scale Distributed Deep Networks,data parallel; use many model to optimize the same data; distributed model training,3,4,3
+
 # #### LLM-specific Parallel Strategies
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
 2022,ACL,NUS,Sequence Parallelism: Long Sequence Training from System Perspective,splits input sequences into chunks; Ring Self-Attention; sparse attention,3,4,3
