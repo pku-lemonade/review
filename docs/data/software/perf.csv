@@ -5,6 +5,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Detection
 
 # #### Bottleneck Analysis
+# Challenge: Bottleneck Analysis faces challenges of high system complexity, unexpected real-world factors and the resource constraints when detecting.
 2018,PPoPP,THU,vSensor: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection,fixed-workload snippets; dependency propagation algorithm; lightweight on-line analysis algorithm,,,
 2020,SC,THU,ScalAna: automating scaling loss detection with graph analysis,program structure graph; program performance graph; backtracking root cause detection algorithm,,,
 2022,PPoPP,THU,Vapro: Performance Variance Detection and Diagnosis for Production-Run Parallel Applications,state transition graph; fixed workload snippets identification clustering algorithm; variance breakdown model; time of factors quantification method,,,
@@ -17,6 +18,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,SC,NCSU,Pinpointing Performance Inefficiencies via Lightweight Variance Profiling,function-level variance detection; stack based deep call chains maintain; on-the-fly binary analysis technique for calling context,,,
 
 # ## Simulators and emulators (for software/system analysis)
+# Challenge: how to balance the accuracy, time cost and complexity of a simulator.
 
 # ### General Performance Modeling
 # Focusing on the performance modeling for general systems. The LLM performance modeling is in the [LLM Performance Modeling](#LLM-Performance-Modeling) section.
@@ -25,8 +27,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,Intelligent Computing,Berkeley,Hierarchical Roofline Performance Analysis for Deep Learning Applications,Nsight Compute based hierarchical roofline model; FP16、FP32 extension for ERT,,,
 2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
 
-# ### LLM Performance Modeling
-# Focusing on the performance modeling for LLM systems.
+# ### LLM Performance Modeling <a name="LLM-Performance-Modeling"></a>
+# Solution: LLM inference is expensive, performance modeling can help decide on the best configuration for the given system without actually running the LLM.
 
 # #### LLM Serving Performance Modeling
 2024,arXiv,KAIST,LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale,iteration-level simulation; computation reuse optimization; heterogeneous accelerator mapping,,,
@@ -39,7 +41,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Benchmarking methodologies and suites
 
 # ### Benchmark
-Focusing on the benchmark suites for performance analysis and characterization.
-
+# Solution: benchmark targeted at performance analysis and characterization.
 2018,ICPP,WUSTL,Varbench: an Experimental Framework to Measure and Characterize Performance Variability,spatial/temperal variability; Resource Variability (RV) statistic,,,
 2021,IEEE Access,D-ITET,DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,NDP focused workload characterization methodology; memory-bound function identification; locality-based clustering; memory bottlenecks classification,,,

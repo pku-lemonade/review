@@ -41,6 +41,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,TCAD,HKU,DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference,adaptive data representation with variablelength encoding; hardware-aware quantization framework,,,
 2024,arXiv,Harvard,"Nanoscaling Floating-Point (NxFP): NanoMantissa, Adaptive Microexponents, and Code Recycling for Direct-Cast Compression of Large Language Models",Nanoscaling Floating-Point (NxFP); NanoMantissa; Adaptive Microexponents; Code Recycling,,,
 
+
 # ## Data structures
 # Focusing on the data structure design for better performance.
 
