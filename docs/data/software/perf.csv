@@ -23,7 +23,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### General Performance Modeling
 # Focusing on the performance modeling for general systems. The LLM performance modeling is in the [LLM Performance Modeling](#LLM-Performance-Modeling) section.
 2009,CACM,Berkeley,Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures,operational intensity; memory bound; compute bound,,,
-2014,IISWC,ETH Zurich,Extending the Roofline Model: Bottleneck Analysis with Microarchitectural Constraints,dag-based performance model; Tomasulo’s greedy algorithm; scheduled dag based bottleneck modeling,3,4,3
+2014,IISWC,ETH Zurich,Extending the Roofline Model: Bottleneck Analysis with Microarchitectural Constraints,dag-based performance model; Tomasulo's greedy algorithm; scheduled dag based bottleneck modeling,3,4,3
 2021,Intelligent Computing,Berkeley,Hierarchical Roofline Performance Analysis for Deep Learning Applications,Nsight Compute based hierarchical roofline model; FP16、FP32 extension for ERT,,,
 2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
 

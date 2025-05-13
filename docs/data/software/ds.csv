@@ -39,7 +39,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Memory management is a hot topic in LLM systems.
 
 # #### General LLM Memory Management
-# Focusing on the general LLM memory management algorithms.
+# Challenge: LLM memory management faces challenges like limited HBM memory, efficiency KV Cache management, memory sharing between multiple GPUs, multi-level memory management.
+2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
 2025,arXiv,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,fixed-size embeddings; full-prefix dependency; two-level memory allocator,4,4,3
 2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2

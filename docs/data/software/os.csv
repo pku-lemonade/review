@@ -7,40 +7,40 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Process and thread management
 # Focusing on the process and thread management for general systems.
 
+
 # ## Memory management
-# Memory management in OS is concerned with the allocation and reclamation of both physical and virtual memory.
+# Memory management is the basic of system design.
 
 # ### Memory Partitioning
+# Solution: efficiently and securely divide physical memory among multiple processes or systems
+# Challenge: ensuring processes get enough memory without waste, while preventing interference and maintaining system performance and security.
 2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
 2012,HPCA,Georgia Institute of Technology,TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture,thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization,,,
 2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
 
 # ### Page Migration
+# Challenge: the trade-off between migration overhead and potential performance gains, complicated by prediction accuracy and hardware complexities
 2024,SC,THU,Hydrogen: Contention-Aware Hybrid Memory for Heterogeneous CPU-GPU Architectures,fast memory decoupled partitioning; token-based slow memory migration; epoch-based sampling method; consistent hashing based reconfiguration,,,
 2024,OSDI,UT Arlington, Nomad: Non-Exclusive Memory Tiering via Transactional Page Migration, Memory allocator for hardware tiering to mitigate outliers,,,
 
 # ### Memory Pooling
+# Solution: Memory Pooling reduces the overhead of frequent memory allocation and deallocation by maintaining a pool of pre-allocated memory blocks for reuse.
 2023,ASPLOS,Virginia Tech,Pond: CXL-Based Memory Pooling Systems for Cloud Platforms,CXL-based memory pooling; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory,,,
 
 # ### Cache Evict
-# Focusing on the cache eviction algorithms.
-# Cache eviction is the process of removing data from the cache to make space for new data. We think it is a kind of memory management.
+# Challenge: to balance the cache hit ratio and the cache miss penalty.
+# The cache here not only includes the cache in the processors, but also the software concept in systems.
 2024,NSDI,CMU,Sieve is Simpler than LRU: an Efficient Turn-Key Eviction Algorithm for Web Caches,web cache management; fifo-like schedule; recognizing the importance of objects,3,3,3
-
-# ### LLM Memory Management
-# This LLM Memory Management in OS type focuses on the memory management algorithms like pagedAttention.
-# The memory management cross multi GPUs or hybrid memory systems, like pd disaggregate systems, is in the [Distributed Systems](https://review.youwei.xyz/software/ds/) section.
-2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
 
 
 # ## File systems and storage
 # Focusing on the file systems and storage systems.
 
 # ### Storage Systems
-# Focusing on the management of storage systems, including SSDs, HDDs, and other storage devices.
+# Solution: eficient, reliable, and secure management of data storage across diverse hardware while achieving balance between performance, durability, efficiency, and scalability .
 
 # #### SSD Management
-# Focusing on the management of SSDs.
+# Challenge: limited write endurance, garbage collection, wear leveling, and the mismatch between erase and write operations, while optimizing performance and extending device lifespan
 2025,EuroSys,Samsung,Towards Efficient Flash Caches with Emerging NVMe Flexible Data Placement SSDs,NVMe Flexible Data Placement (FDP) SSDs for data segregation; targeted data placement for reduced device write amplification; FDP-enabled CacheLib architecture; theoretical DLWA model for CacheLib,,,
 2025,arXiv,SDU,Managing Hybrid Solid-State Drives Using Large Language Models,LLM-based auto-tuning framework for hybrid SSD management; hybrid SSD parameter categorization; performance-sensitive parameter selection; prompt engineering for LLM integration; dynamic configuration optimization in hybrid SSDs,,,
 
