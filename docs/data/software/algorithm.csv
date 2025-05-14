@@ -1,59 +1,54 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Algorithm design and analysis
-# Focusing on the algorithm design and analysis, including ML/DL algorithms.
+# Solution: an algorithm is a well-defined, finite sequence of steps that solves a specific problem or accomplishes a particular task. We focus on algorithms that can solving problems.
 
-# ### LLM Algorithm
-# Specializing in the algorithms for LLMs. The ML algorithms are in the [ML Algorithms](#ML-Algorithms) section.
+# ### ML Algorithms
+# Soultion: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
 
-# #### LLM Alignment
-# The LLM alignment is a process of making the LLM more aligned with the user's intent.
-# This section includes the algorithms for LLM alignment.
+# #### LLM Algorithm
+# Solution: enable ai chat with human, some people think is the way to AGI.
 
+# ##### LLM Alignment
+# Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
 2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
 
-# #### LLM Finetune
-# Finetune is a process of fine-tuning the LLM on a specific task.
-# This section includes the algorithms for LLM finetune.
+# ##### LLM Finetune
+# Solution: finetune adapts a pre-trained model to a specific task or domain. By doing so, the model can better fit the specific task or domain.
 
-# ##### Coding LLM Finetune
+# ###### Coding LLM Finetune
 2024,arXiv,UMD,HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages,large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools,,,
 
-# ##### LLM-Powered AI Agent
+# ###### LLM-Powered AI Agent
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
 
+# #### RL Algorithms
+# Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
+2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
+
 # ### Quantization
-# Quantization is a process of quantizing the LLM parameters to reduce the memory and computational cost.
+# Solution: Quantization are focusing on tradeoffs of accuracy and computation/memory. The challenges are how to run models in high performance and low memory/computation cost.
 
 # #### LLM Quantization Methods
-# This section includes the algorithms for LLM quantization.
 # The none-LLM quantization methods are in the [None-LLM Quantization Methods](#None-LLM-Quantization-Methods) section.
 2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,,,
 2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
 2025,arXiv,SJTU,MILLION: Mastering Long-Context LLM Inference Via Outlier-Immunized KV Product Quantization,a non-uniform quantization algorithm based on product quantization; leverages sparse computation and asynchronous quantization; distributes quantization power unevenly across channels,3,4,2
 2025,arXiv,Rice,"70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float",dynamic-length float; preserving bit-for-bit identical outputs; BFloat16 exponents carry significantly less information than their allocated bit width,4,4,4
 
-# #### None-LLM Quantization Methods
-# This section includes the algorithms for none-LLM quantization.
-# The LLM quantization methods are in the [LLM Quantization Methods](#LLM-Quantization-Methods) section.
+# #### None-LLM Quantization Methods <a name="None-LLM-Quantization-Methods"></a>
 2022,MICRO,SJTU,ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization,fixed-length adaptive numerical data type; combines the advantages of float and int for adapting to the importance of different values within a tensor; adaptive framework that selects the best type for each tensor,,,
 2024,TCAD,HKU,DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference,adaptive data representation with variablelength encoding; hardware-aware quantization framework,,,
 2024,arXiv,Harvard,"Nanoscaling Floating-Point (NxFP): NanoMantissa, Adaptive Microexponents, and Code Recycling for Direct-Cast Compression of Large Language Models",Nanoscaling Floating-Point (NxFP); NanoMantissa; Adaptive Microexponents; Code Recycling,,,
 
-# ### ML Algorithms
-# The ML algorithms are in the [ML Algorithms](#ML-Algorithms) section.
-
-# #### RL Algorithms
-# Reinforcement learning algorithms.
-2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
 
 # ## Data structures
-# Focusing on the data structure design for better performance.
+# Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
 
 # ## Computational complexity
-# Focusing on the computational complexity of the algorithms.
+# Solution: analyzing and classifying how the time and space requirements of an algorithm grow as the input size increases.
 
 
 # ## Computability theory
-# Focusing on the computability theory of the algorithms.
+# Solution: helping to identify the fundamental limits of what can be computed, regardless of time or space constraints.
