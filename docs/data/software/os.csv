@@ -1,11 +1,11 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Kernel design and implementation
-# Focusing on the kernel design and implementation for general systems.
+# Solution: abstracting the underlying hardware and providing a secure, managed, and efficient environment for user-level applications to run concurrently and share system resources
 
 
 # ## Process and thread management
-# Focusing on the process and thread management for general systems.
+# Solution: ensuring fair resource allocation, smooth multitasking, and proper coordination between processes and threads to maximize system performance and responsiveness.
 
 
 # ## Memory management
@@ -34,7 +34,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## File systems and storage
-# Focusing on the file systems and storage systems.
+# Solution: organizing, storing, and retrieving data efficiently and reliably on storage devices, manage disk space, and ensure data integrity and security.
 
 # ### Storage Systems
 # Solution: eficient, reliable, and secure management of data storage across diverse hardware while achieving balance between performance, durability, efficiency, and scalability .
@@ -46,8 +46,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## Virtualization
-# Focusing on the virtualization of OS.
+# Solution: efficiently managing and isolating multiple virtual machines (VMs) or containers on a single physical machine, allowing them to share hardware resources securely and independently while maintaining performance and flexibility.
 
 
 # ## Synchronization
-# Focusing on the synchronization of OS.
+# Solution: coordinating access to shared resources among multiple processes or threads to prevent conflicts, ensure data consistency, and avoid issues like race conditions, deadlocks, and resource starvation.

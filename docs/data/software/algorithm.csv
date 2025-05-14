@@ -43,12 +43,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## Data structures
-# Focusing on the data structure design for better performance.
+# Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
 
 # ## Computational complexity
-# Focusing on the computational complexity of the algorithms.
+# Solution: analyzing and classifying how the time and space requirements of an algorithm grow as the input size increases.
 
 
 # ## Computability theory
-# Focusing on the computability theory of the algorithms.
+# Solution: helping to identify the fundamental limits of what can be computed, regardless of time or space constraints.
