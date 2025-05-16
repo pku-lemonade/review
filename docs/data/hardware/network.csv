@@ -1,9 +1,12 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 # #### Network-on-Chip
+# Challenge: The bandwidth limitations and low communication efficiency faced by traditional bus architectures in on-chip multi-core & many-core systems.
+# Solution: NoC provides a flexible and high-bandwidth communication infrastructure for heterogeneous chiplets; enables efficient data movement and processing in heterogeneous many-core architectures.
 # ##### Wafer-Scale
 2024,SC,THU,Switch-Less Dragonfly on Wafers: A Scalable Interconnection Architecture based on Wafer-Scale Integration,four-level topology structure; minimal routing algorithm on dragonfly for VC vumber reduction,,,
 2024,TCAS,SYSU,CINOC: Computing in Network-On-Chip With Tiled Many-Core Architectures for Large-Scale General Matrix Multiplications,computable input buffers;  thread execution free from fine-grained instruction control; data-aware thread execution,,,
 # ##### Topology
+# Challenge: Current NoC topologies are often rigid and not adaptable to the specific needs of heterogeneous chiplets.
 2021,HPCA,GWU,Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures,mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm,,,
 2022,HPCA,Huawei,Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective,bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism,,,
 2024,MICRO,THU,Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture,Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm,,,
@@ -14,10 +17,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ICCAD,UCF,ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects,directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm,,,
 2023,MICRO,THU,Heterogeneous Die-to-Die Interfaces: Enabling More Flexible Chiplet Interconnection Systems,heterogeneous interface hetero-PHY and hetero-channel; hetero-channel routing algorithm; application-aware scheduling,,,
 # ##### Processing on NoC
+# Challenge: The need for efficient data processing and computation on-chip to reduce data movement and improve performance.
 2017,ISVLSI,Ruhr-Universität Bochum,Data Stream Processing in Network-on-Chip,data stream processing unit(DSPU); operation mode based DSPU programming framework,,,
 2019,HPCA,TAMU,Active-Routing: Compute on the Way for Near-Data Processing,active-routing tree; vector processing in cache block for regular access pattern; data prefetch for irregular access pattern,,,
 2020,HPCA,Drexel University,SnackNoC: Processing in the Communication Layer,communication fabric quantification; central packet manager for instruction flit; router compute unit as dataflow pe,,,
 # ##### Traffic Control
+# Challenge: The need for efficient traffic control to manage network traffic and reduce congestion and power consumption.
 2017,ISCA,TAMU,APPROX-NoC: A Data Approximation Framework for Network-On-Chip Architectures,value approximate technique VAXX; encoder/decoder module pair for data compression; approximate value compute logic,,,
 2017,ICCD,HIT,ABDTR: Approximation–Based Dynamic Traffic Regulation for Networks–on–Chip Systems,"approximate computing based dynamic traffic regulation technique; lightweight design including controller, throttler and approximater",,,
 2019,DATE,SCUT,ACDC: An Accuracy- and Congestion-aware Dynamic Traffic Control Method for Networks-on-Chip,quality loss and network congestion modeling; autoregressive model based flow prediction method,,,
@@ -33,5 +38,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,HPCA,UToronto,Stay in your Lane: A NoC with Low-overhead Multi-packet Bypassing,FastFlow flow controll method; time-division-multiplexed (TDM) based non-overlapping FastPass-lanes; FastPass for throughput enhancement,,,
 2023,HPCA,THU,A Scalable Methodology for Designing Efficient Interconnection Network of Chiplets,interface grouping; hypercube construction algorithm; deadlock-free adaptive routing algorithm; safe/unsafe flow control; network interleaving method,,,
 2025,arXiv,SJTU,StreamGrid: Streaming Point Cloud Analytics via Compulsory Splitting and Deterministic Termination,compulsory splitting for reducing on-chip buffer size; deterministic termination for regularizing non-deterministic operations; line buffer optimization for point cloud pipelines; ILP-based buffer size minimization,,,
+# #### Remote Procedure Call
+2023,arXiv,ICT,CXL over Ethernet: A Novel FPGA-based Memory Disaggregation Design in Data Centers,combining CXL and Ethernet for low-latency remote memory access; FPGA-based prototype with cache optimization; switch-independent congestion control algorithm; native memory semantics for transparent access,,,
+2024,arXiv,UCSD,Telepathic Datacenters: Fast RPCs using Shared CXL Memory,pointer-passing RPC over CXL; MPK-based sandboxing for RPC safety; Seal/Release mechanism for RPC safety; RDMA fallback for RPC scalability; Lease/Quota shared memory management,4,3,3
 # #### RDMA
 2024,arXiv,UCR,GPUVM: GPU-driven Unified Virtual Memory,GPUVM architecture for on-demand paging; RDMA-capable NIC for GPU memory management; GPU thread-based memory management and page migration; reuse-oriented paged memory for efficient eviction; high-level programming abstraction for GPU memory extension,,,
