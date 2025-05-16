@@ -23,8 +23,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,ASE,eBay,Groot: An Event-graph-based Approach for Root Cause Analysis in Industrial Settings,event-graph based RCA; service dependency graph; event causality graph; pagerank based root cause ranking,4,5,2
 
 # #### Network Tomography
-2003,IEEE TSP,Rice University,Network Delay Tomography,end-to-end packet pair link delay distribution estimation; FFT based expectation-maximization acceleration algorithm,3,3,2
+
+# ##### Survey
+2004,STAT SCI,Berkeley,Network Tomography: Recent Developments,tomography linear model; multicast delay distribution inference; origin–destination traffic matrix inference,3,1,1
+
+# ##### Passive Inference
 2003,IMC,AT&T Laboratories,Simple Network Performance Tomography,smallest consistent failure set algorithm; seperable performance; false positive/coverage probability estimation of bad links,3,3,3
+2014,ICDCS,ZJU,Domo: Passive Per-Packet Delay Tomography in Wireless Ad-hoc Networks,FIFO/order/sum-of-delays constraints for delay reconstruction; semi-definite relaxation based optimization,4,3,2
+
+# ##### Active Inference
+2022,ICASSP,UMich,Unicast-based inference of network link delay distributions using mixed finite mixture models,dirac delta based mixed finite mixture model; EM algorithm for parameter evaluation,3,2,2
+2003,IEEE TSP,Rice University,Network Delay Tomography,end-to-end packet pair link delay distribution estimation; FFT based expectation-maximization acceleration algorithm,3,3,2
 2021,IEEE TNSM,QMUL,Optimal Estimation of Link Delays Based on End-to-End Active Measurements,active network monitoring framework; ILP/heuristic/meta-heuristic algorithm for monitoring flows selection,3,3,2
 
 # ## Simulators and emulators (for software/system analysis)
