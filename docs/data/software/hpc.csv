@@ -1,10 +1,10 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Parallel programming models
-# Focusing on the parallel programming models for HPC systems.
+# Challenge: the complexity of great number of cores and the heterogeneity of the hardware
 
 # ## Scientific computing applications and libraries
-# Focusing on the scientific computing applications and libraries for HPC systems.
+# Solution: enable researchers to model physical phenomena, process large datasets, and accelerate discoveries across fields on HPC systems
 
 # ## Parallel algorithms
-# Focusing on the parallel algorithms for HPC systems.
+# Solution: develop parallel algorithms for HPC systems, enabling scalable performance

@@ -1,24 +1,26 @@
 Year,Venue,Authors,Title,Tags,P,E,N
-# ### Domain-specific Accelerators
-# #### DNN Accelerators
-# ##### Layer Fusion Accelerators
+# ### DNN Accelerators
+# #### Layer Fusion Accelerators
+# Solution: Use layer fusion to combine multiple layers of a neural network into a single layer. This can help reduce the number of computations and memory accesses required during inference; leading to faster execution times and lower power consumption.
 2016,MICRO,SBU,Fused-Layer CNN Accelerators,fuse the processing of multiple CNN layers by modifying the order in which the input data are brought on chip,,,
 2025,TC,KU Leuven,Stream: Design Space Exploration of Layer-Fused DNNs on Heterogeneous Dataflow Accelerators,fine-grain mapping paradigm; mapping of layer-fused DNNs on heterogeneous dataflow accelerator architectures; memory- and communication-aware latency analysis; constraint optimization,,,
 2024,SOCC,IIT Hyderabad,Hardware-Aware Network Adaptation using Width and Depth Shrinking including Convolutional and Fully Connected Layer Merging,Width Shrinking: reduces the number of feature maps in CNN layers; Depth Shrinking: Merge of conv layer and fc layer,,,
 2024,ICSAI,MIT,LoopTree: Exploring the Fused-Layer Dataflow  Accelerator Design Space,"design space that supports set of tiling, recomputation, retention choices, and their combinations; model that validates design space",,,
-# ##### LLM Accelerators
+# #### LLM Accelerators
+# Challenge: LLM accelerators face challenges in terms of memory bandwidth; power consumption; and the need for efficient data movement.
 2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
 2025,arXiv,SJTU,ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM,hybrid ROM-SRAM architecture for on-device LLM; B-ROM design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models,,,
-# ##### Benchmarks
+# #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # #### Graph Accelerators
 # ### Dataflow Architecture
-# Refer to [Heterogeneous Systems](Software.md/#heterogeneous-systems).
+# Solution: Dataflow architecture allows the execution of instructions based on the availability of data rather than a predetermined sequence; leading to more efficient use of resources and better performance in parallel processing and real-time systems.
 2019,ASPLOS,THU,Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators,buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm,,,
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
 2024,MICRO,UCR,Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse,producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture,,,
 2025,arXiv,UCSB,FETTA: Flexible and Efficient Hardware Accelerator for Tensorized Neural Network Training,contraction sequence search engine; tensor contraction unit; distribution/reduction network,3,4,3
 # #### Data Mapping
+# Solution: Assign data to specific locations in memory or storage to optimize performance; reduce latency; and improve resource utilization.
 # ##### Survey
 2013,DAC,NUS,Mapping on Multi/Many-core Systems: Survey of Current and Emerging Trends,dense/run-time mapping; centralized/distributred management; hybrid mapping,,,
 # ##### Heuristic Algorithm
@@ -34,28 +36,28 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,SC,NIT,High-performance and energy-efficient fault-tolerance core mapping in NoC,weighted communication energy; placing unmapped vertices region; application core graph; spare core placement algorithm,,,
 2019,IVLSI,UESTC,Optimized mapping algorithm to extend lifetime of both NoC and cores in many-core system,lifetime budget metric; LBC-LBL mapping algorithm; electro-migration fault model,,,
 # ##### Reliability Management
-2020,DATE,Turku,Thermal-Cycling-aware Dynamic Reliability Management in Many-Core System-on-Chip,Coffin-Mason equation based reliability model; reliability-aware mapping/scheduling; dynamic power management,,,
+2020,DATE,Turku,Thermal-Cycling-aware Dynamic Reliability Management in -Core System-on-Chip,Coffin-Mason equation based reliability model; reliability-aware mapping/scheduling; dynamic power management,,,
 2024,arXiv,WUSTL,A Two-Level Thermal Cycling-Aware Task Mapping Technique for Reliability Management in Manycore Systems,temperature based bin packing; task-to-bin assignment; thermal cycling-aware based task-to-core mapping,,,
 2024,arXiv,WUSTL,A Reinforcement Learning-Based Task Mapping Method to Improve the Reliability of Clustered Manycores,mean time to failure; density-based spatial clustering of applications with noise algorithm,,,
 # #### Task Scheduling
-2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
-2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
 2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,,,
-2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algoithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
+2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
 # ### Many-core Architecture
+# Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.
 2015,HPCA,Cornel,Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting,online bandwidth shifting mechanism; prefetch usefulness (PU) level,,,
 2015,HPCA,IBM,XChange: A Market-based Approach to Scalable Dynamic Multi-resource Allocation in Multicore Architectures,CMP multiresource allocation mechanism XChange; market framework based modeling,,,
 2018,MICRO,SNU,RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors,graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method,,,
-2023,MICRO,THU,MAICC : A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
+2023,MICRO,THU,MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
 2023,MICRO,Yonsei,McCore: A Holistic Management of High-Performance Heterogeneous Multicores,cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling,,,
 # #### Application Optimization
-2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing&packeting,,,
+2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing & packeting,,,
 2023,SC,NUDT,Optimizing MPI Collectives on Shared Memory Multi-Cores,intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives,,,
 2024,PPoPP,NUDT,Towards Scalable Unstructured Mesh Computations on Shared Memory Many-Cores,task dependency tree(TDT); tree traversal based parallel algorithm for CPU/GPU,,,
 # ### Heterogeneous Many-core System
 2018,ICCAD,WSU,Hybrid On-Chip Communication Architectures for Heterogeneous Manycore Systems,many-to-few communication patterns; long range shortcut based wireless NoC ; 3D-TSV based heterogeneous NoC,,,
 2018,IEEE TC,WSU,On-Chip Communication Network for Efficient Training of Deep Convolutional Networks on Heterogeneous Manycore Systems,wireless-enabled heterogeneous NoC; archived multi-objective simulated annealing for network connectivity,,,
 # ### Architecture DSE
+# Challenge: It's crucial to find the optimal hardware configurations that meet performance; power; and area constraints for specific applications.
 2024,HPCA,THU,Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators,layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization,,,
 2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
 2024,ASPDAC,CUHK,SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design,intercluster distance algorithm; importance-based pruning and initialization,3,2,2

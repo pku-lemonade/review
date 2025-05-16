@@ -1,10 +1,10 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Language design and semantics
-# Focusing on the language design and semantics for programming languages.
+# Solution: user-friendly, resource-efficient, and secure programming languages
 
 # ## Compiler construction and optimization
-# Focusing on the compiler construction and optimization for programming languages.
+# Solution: improving performance, reducing resource usage, and ensuring correctness
 
 # ### Hardware Description Languages
 # Focusing on languages designed for hardware description and verification, including Verilog, VHDL and modern alternatives.
@@ -22,5 +22,5 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,FPGA,UCLA,Stream-HLS: Towards Automatic Dataflow Acceleration,automatic dataflow HLS; global scheduling for streaming; MINLP for HLS optimization,4,4,4
 
 # ## Program analysis
-# Focusing on the program analysis for programming languages.
+# Solution: statically or dynamically analyzing programs to understand their behavior, detect errors, and optimize performance
 
