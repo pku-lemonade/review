@@ -111,7 +111,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,MIT,Modeling Analog-Digital-Converter Energy and Area for Compute-In-Memory Accelerator Design,architecture-level model that estimates ADC energy and area,4,3,3
 # ##### RRAM CiM: Training optimization
 2023,arXiv,UND,U-SWIM: Universal Selective Write-Verify for Computing-in-Memory Neural Accelerators,only do write-verify for important weights; based on weight second derivatives as a guide,3,3,3
-2023,Adv. Mater.,UMich,Bulk‐Switching Memristor‐Based Compute‐In‐Memory Module for Deep Neural Network Training,"Bulk-ReRAM based digital-CIM hybrid architeture for training; CIM for forward, digital for backward",4,4,1
+2023,Adv. Mater.,UMich,Bulk‐Switching Memristor‐Based Compute‐In‐Memory Module for Deep Neural Network Training,"Bulk-ReRAM based digital-CIM hybrid architecture for training; CIM for forward, digital for backward",4,4,1
 2024,APIN,SWU,Multi-optimization scheme for in-situ training of memristor neural network based on contrastive learning,"optimizations to the deployment method, loss function and gradient calculation; compensation measures for non-ideal effects",,,
 2025,TNNLS,SNU,Efficient Hybrid Training Method for Neuromorphic Hardware Using Analog Nonvolatile Memory,Hybrid offline-online training method,,,
 # ##### RRAM CiM: Compiler
