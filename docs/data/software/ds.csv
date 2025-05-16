@@ -189,7 +189,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,SOSP,UPenn,When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone,reserve cores; non-conserving; request dispatching algorithm,,,
 2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
 2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
-2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture,"Virtual PIM" framework, dynamic "DPU" allocation for multitasking, fine-grained scheduling |
+2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture,"Virtual PIM" framework; dynamic DPU allocation for multitasking;fine-grained scheduling,3,2,2
 
 # ### Speculative Execution (Non-LLM) <a name="Speculative-Execution-Non-LLM"></a>
 # Solution: balancing the potential performance gains from speculative executions, including accurately predicting outcomes, handling incorrect speculations and their side effects across multiple nodes.
