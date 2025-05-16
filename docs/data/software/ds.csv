@@ -91,6 +91,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### I/O Characterization and Optimization
 # Challenge: minimize data movement and maximize resource utilization across heterogeneous distributed environments.
+2020,ASPLOS,CMU,Livia: Data-Centric Computing Throughout the Memory Hierarchy, Memory service programming model; task graphs linked to data location; dynamic task/data scheduling for minimal movement,2,4,3
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
 
 # ### GPU-GPU Communication
@@ -188,6 +189,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,SOSP,UPenn,When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone,reserve cores; non-conserving; request dispatching algorithm,,,
 2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
 2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
+2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture,"Virtual PIM" framework, dynamic "DPU" allocation for multitasking, fine-grained scheduling |
 
 # ### Speculative Execution (Non-LLM) <a name="Speculative-Execution-Non-LLM"></a>
 # Solution: balancing the potential performance gains from speculative executions, including accurately predicting outcomes, handling incorrect speculations and their side effects across multiple nodes.
