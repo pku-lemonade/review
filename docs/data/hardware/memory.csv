@@ -174,7 +174,7 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 2024,TCAD,BUAA,CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory,mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM,,,
 2024,ICCAD,TU Delft,Hardware-Aware Quantization for Accurate Memristor-Based Neural Networks,analysis of fixed-point quantization impact on conductance variation; weight quantization tuning technique; approach to reduce the residual error,3,2,3
 # ##### CIM Quantization: For all CIM
-2018,CVPR,Google,Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference,"integer-only inference arithmetic; quantizesh both weights and activations as 8-bit integers, bias 32-bit; provides both quantized inference framework and training frame work",,,
+2018,CVPR,Google,Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference,"integer-only inference arithmetic; quantizes both weights and activations as 8-bit integers, bias 32-bit; provides both quantized inference framework and training frame work",,,
 2023,ICCD,SJTU,PSQ: An Automatic Search Framework for Data-Free Quantization on PIM-based Architecture,post-training quantization framework without retraining; hardware-aware block reassembly,,,
 # #### CIM: Digital CIM
 2025,ISCAS,CAS,StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer,tile-based reconfigurable CIM macro microarchitecture; mixed-stationary cross-forwarding dataflow; ping-pong-like finegrained compute-rewriting pipeline,,,
