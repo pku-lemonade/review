@@ -2,9 +2,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Distributed algorithms
 # Focusing on the distributed algorithms, such as consensus and replication, like RAFT.
+# Challenge: concurrency, synchronous and communication complexities across independent nodes
+# Solution: problems that require coordination, computation, and data management across multiple independent computer systems.
 
 # ### Parallel Strategies
-# Focusing on the parallel strategies for distributed systems.
+# Soultion: using the computation and memory resources of multiple processors to solve a problem.
+# Challenge: communication overhead and load balancing
 
 # #### LLM-specific Parallel Strategies
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
@@ -12,10 +15,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## Cloud computing platforms and architectures
-# Focusing on the cloud computing platforms and architectures.
+# Challenge: when providing services to users, facing scalability, resource management, fault tolerance, and cost-effectiveness for building and deploying large-scale distributed applications and services.
 
 # ### Cloud Platform LLM Scheduling
-# Focusing on the scheduling algorithms for LLM inference in cloud datacenters, specifically for the cloud providers.
+# Challenge: meet the SLO when providing LLM service on cloud platform.
 2025,arXiv,Azure,TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms,thermal/power property characterization; dynamically adjust in response to power or cooling failures; thermal- and poweraware manner,,,
 
 
@@ -24,31 +27,34 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## Memory Management
-# Focusing on the memory management in distributed systems.
-# The memory management algorithm should be in [Operating Systems](https://review.youwei.xyz/software/os/#memory-management) page.
+# Challenge: coordinating memory access and maintaining data consistency across multiple independent nodes with their own local memories, especially when dealing with shared data.
 
 # ### Remote Memory
-# Focusing on the remote memory management in distributed systems.
+# Challenge: efficiently providing access to memory on a remote node while minimizing latency and overhead, and ensuring consistency and reliability despite network communication complexities and potential failures.
 2020,TC,Georgia Tech,Hierarchical Orchestration of Disaggregated Memory,XMemPod architecture for hierarchical memory orchestration; compressed swap page table (CSPT) for metadata management; hybrid swap-out algorithm for memory utilization; proactive swap-in optimization for performance; RDMA-based remote memory sharing for low-latency access,,,
 
 # ### Scratchpad Memory
-# Focusing on the scratchpad memory in distributed systems.
+# Challenge: efficiently allocating and coordinating limited fast memory across distributed nodes to minimize access latency and contention, while ensuring data consistency and scalability.
 2023,ASPLOS,Cornell,Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories,work-stealing based dynamic task parallelism; stack/task queue in SPM; read-only data duplication,3,3,3
 
 # ### LLM Memory Management
-# Memory management is a hot topic in LLM systems.
+# Solution: efficient memory management can reduce memory usage, thus enable larger batch size and higher throughput.
+
+# #### Memory Management Algorithms
+# Solution: efficient memory management algorithms, like virtual memory, page table, etc.
+2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
+2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
 
 # #### General LLM Memory Management
-# Focusing on the general LLM memory management algorithms.
+# Challenge: LLM memory management faces challenges like limited HBM memory, efficient KV Cache management, memory sharing between multiple GPUs, multi-level memory management.
 2025,arXiv,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,fixed-size embeddings; full-prefix dependency; two-level memory allocator,4,4,3
-2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 
 # #### KV Cache Reuse Systems
-# KV Cache reuse is a technique to reuse the KV cache to reduce the memory usage.
+# Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
 
 # ##### Prefix Sharing
-# Prefix sharing is matching the prefix of the input with the KV cache, if the prefix is already in the KV cache, then the KV cache can be reused.
+# Solution: reuse KV Cache when the input sequence has shared or repeated parts, use prefix tree to manage KV Cache.
 2023,Nips,Stanford,SGLang: Efficient Execution of Structured Language Model Programs,KV-Cache share; python-like DSL; compute graph; LRU cache management stragety,4,4,3
 2024,ACL,Microsoft,ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition,prefix aware attention compute; manage kv-cache chunks as prefix tree; reduce kv-cache redundancy,3,4,2
 2024,arXiv,Microsoft,BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching,global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel,,,
@@ -56,69 +62,71 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,UChicago,DroidSpeak: Enhancing Cross-LLM Communication,selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model,,,
 
 # ##### Other Techniques
-# Focusing on the other techniques for KV cache reuse, beyond prefix sharing.
+# Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
 2024,arXiv,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices,,,
 
 # #### KV Cache Storage Systems
-# Recent works tries to store the KV cache in the memory or other storage device.
+# Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
+# Challenge: the prefetch and eviction of the KV cache, the balance between saving GPU memory and refetching time from the storage device.
 2025,arXiv,NVIDIA,FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving,block-sparse format; customizable attention template; dynamic load-balanced scheduling framework,,,
 2025,arXiv,PKU,FairKV: Balancing Per-Head KV Cache for Fast Multi-GPU Inference,imbalanced KV cache compression mitigation; fair-copying for load balancing; best-effort assignment,,,
 
 # #### KV Cache Evict Systems
-# Focusing on the algorithms for KV cache eviction.
+# Challenge: selectively discard the least important key-value pairs to free up memory for longer contexts or larger batch sizes without significantly degrading the model's generation quality or increasing computational overhead for the eviction process itself.
 2023,NIPS,UT-Austin,H$_2$O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models,sparsity for small cache size; heavy-hitters; greedy algorithm for low-cost policy,,,
 2024,arXiv,Fujitsu,CO2: Precise Attention Score Observation for improving KV Cache Replacement in Large Language Models,long measurement step; decay of the accumulated attention score; adjusting FIFO cache size,,,
 
 # #### Systems with Other Caches
-# Focusing on the systems that use other caches (not just KV cache).
+# Solution: use other caches (not just KV cache) to improve the performance of LLM inference.
 2025,arXiv,KAIST,Efficient LLM Inference with Activation Checkpointing and Hybrid Caching,activation checkpointing; KV-activation hybrid caching; balanced approach to determine the best ratio,,,
 
 # ##### LLM Prefetching
-# Focusing on prefetch to avoid memory transfer between different devices.
+# Solution: prefetch to avoid memory transfer between different devices, reduce the latency of memory access.
 2025,arXiv,Huawei Zurich,PRESERVE: Prefetching Model Weights and KV-Cache in Distributed LLM Serving,computational graph-based prefetching; prefetch KV cache to L2 cache,,,
 
 
 # ## Communication-Centric Optimization
-# Focusing on the optimization of communication operations, for that communication is a bottleneck of some distributed systems.
+# Challenge: communication is a bottleneck of some distributed systems, trying to reduce the communication.
 
 # ### I/O Characterization and Optimization
-# Focusing on the optimization of I/O between different devicess.
+# Challenge: minimize data movement and maximize resource utilization across heterogeneous distributed environments.
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
 
 # ### GPU-GPU Communication
-# Focusing on the communication between GPUs.
+# Challenge: limited interconnect bandwidth between GPUs using nvLink, PCIe, synchronization delays in parallel workloads, load imbalance across GPUs
 2025,arXiv,Apple,SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models,sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction,,,
 
 
 # ## Many-Core Systems
-# Focusing on the many-core systems.
+# Challenge: the heterogeneity of cores, the load imbalance, and the communication overhead.
 
 # ### Workload Characterization
-# Focusing on the workload characterization in many-core systems.
+# Challenge: dynamic workloads across numerous cores, resource contention for shared hardware.
 2018,SC,Intel,Many-Core Graph Workload Analysis,multicore simulator sniper; selective caching and prefetching; heterogeneous high-performance low-power cores,,,
 2018,DATE,UGA,Parallel Code Generation of Synchronous Programs for a Many-core Architecture,banked memory mapping; worst-case response time analysis,,,
 2025,IPDPS,UChicago,Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems,lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing,,,
 
 # ### Fault Propagation
-# Focusing on the fault propagation in many-core systems.
+# Challenge: one core or component can easily spread to others due to shared resources, leading to system-wide reliability issues. Core counts grow make it hard to predict, detect, and contain errors effectively.
 2008,ASPLOS,UIUC,Understanding the Propagation of Hard Errors to Software and Implications for Resilient System Design,stuck-at fault; bridging fault; software failure detection,,,
 2010,PRDC,UBC,Modeling the Propagation of Intermittent Hardware Faults in Programs,instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling,,,
 2015,SC,IBM,Understanding the Propagation of Transient Errors in HPC Applications,"fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors",,,
 2023,ISCA,UChicago,Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems,"NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy",,,
 
 # ### Fault Injection Technique
-# Focusing on the fault injection technique.
+# Challenge: It is difficult to target specific components, reproduce realistic fault scenarios, and observe system behavior without disturbing normal operation, especially as system scale and complexity increase.
 2008,VLSI,DISCA,Enhancement of Fault Injection Techniques Based on the Modification of VHDL Code,saboteurs and mutants technique based fault injection; VHDL level fault-tolerance mechanism,,,
 2014,DSN,UBC,Quantifying the Accuracy of High-Level Fault Injection Techniques for Hardware Faults,fault injection quantification; assembly level fault injection; LLVM compiler based fault injector,,,
 
 # ### Communication
-# Focusing on the communication between different cores.
+# Challenge: efficiently managing data exchange between a large number of cores, due to limited bandwidth, high latency, and contention in shared resources like interconnects and memory.
 2025,arXiv,UCLM,Understanding intra-node communication in HPC systems and Datacenters,intra- and inter-node simulation model; intra-node network interface bottleneck; impacts of communication pattern,,,
 
 
 # ## Heterogeneous Systems
 # Heterogeneous systems are systems that have different types of processors, such as CPUs and GPUs.
+# Solution: ultilize the heterogeneous resources to improve the performance.
 
 # ### General Applications
 2013,SOSP,MSR Silicon Valley,Dandelion: a Compiler and Runtime for Heterogeneous  Systems,unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing,,,
@@ -127,19 +135,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISPASS,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,Effective regions for balanced utilization of PUs; Proximity-based kernel fusion recommendation; operator-kernel dependency graphs from PyTorch Profiler traces,3,4,2
 
 # ### Decentralized Serving
+# Challenge: managing diverse hardware and software environments, balancing workloads across uneven resources, minimizing communication overhead, ensuring consistency without centralized control.
 2019,ASPLOS,USC,Hop: Heterogeneity-aware Decentralized Training,iteration gap; queue-based synchronization; backup workers and bounded staleness,,,
 2020,ASPLOS,USC,Prague: High-Performance Heterogeneity-Aware Asynchronous Decentralized Training,Partial All-Reduce to reduce synchronization cost; group scheduling to avoid conflicts,,,
 2025,arXiv,Berkeley,DeServe: Towards Affordable Offline LLM Inference via Decentralization, decentralized LLM inference; high-latency optimization; idle GPU utilization; modular on-chain integration,,,
 2025,arXiv,HKUST,DreamDDP: Accelerating Data Parallel Distributed LLM Training with Layer-wise Scheduled Partial Synchronization,partial synchronization based local SGD; DFS algorithm with pruned search space; enables the opportunity of overlapping communication and computation,,,
 
 # ### ML Training Systems
+# Solution: balance between faster training and high precision.
 2023,SOSP,CMU,"Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling",heterogeneity-aware and adaptivity-aware; ILP formulation for scheduling; bootstrapped from observing just a few mini-batches,,,
 
-# ### LLM Inference Heterogeneous Systems
-# Focusing on the heterogeneous systems for LLM inference.
+# ### LLM Inference Heterogeneous Systems <a name="LLM-Inference-Heterogeneous-Systems"></a>
+# Solution: managing diverse hardware and software environments, balancing workloads across uneven resources, meeting the SLO.
 
 # #### Mobile & Edge-Network Serving
-# Inference on mobile and edge devices.
+# Challenge: limited computation, memory, power coupled with intermittent and unreliable network connectivity, making it difficult to perform computationally intensive training tasks, manage large datasets, and ensure efficient communication and synchronization across distributed edge nodes.
 2024,arXiv,UIC,Priority-Aware Model-Distributed Inference at Edge Networks,priority-aware model distributed inference algorithm; prioritization of ML inference tasks; model-distributed inferencing mechanism,,,
 2024,arXiv,Yonsei,Uncertainty-Aware Hybrid Inference with On-Device Small and Remote Large Language Models,hybrid language model; selectively skip uplink transmissions; uncertainty-aware,,,
 2024,arXiv,UMD,Distributed Mixture-of-Agents for Edge Inference with Large Language Models,Mixture-of-Agents; semantics of the data being gossiped and its timeliness; queuing stability,,,
@@ -147,7 +157,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SJTU,HeteroLLM: Accelerating Large Language Model Inference on Mobile SoCs platform with Heterogeneous AI Accelerators,both layer-level and tensor-level GPU-NPU parallelism; different tensor partition strategies; fast synchronization mechanism based on predictable kernel waiting times; tensor partition solver,,,
 
 # #### Large Heterogeneous System Serving
-# Inference on large heterogeneous systems.
+# Challenge: effectively managing and coordinating diverse hardware (CPUs, GPUs, TPUs), interconnects, and memory hierarchies
 2024,arXiv,CMU,Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs,LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming,,,
 2025,ICLR,HKUST,HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment,a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges,,,
 2025,arXiv,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,SKIP profiling tool; TKLQT metric for CPU/GPU boundedness; proximity score kernel fusion,2,3,2
@@ -155,12 +165,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Huawei,High-Throughput LLM inference on Heterogeneous Clusters,lightweight profiling while avoiding resource-intensive throughput benchmarks; a scheduler that accounts for both instance computational capacity and memory usage; exhaustive search method,2,4,2
 
 # #### Heterogeneous Device Task Scheduling
-# Focusing on the task scheduling algorithms in heterogeneous devices scenarios.
+# Solution: assigning different parts of the LLM serving workload to the most suitable heterogeneous devices to maximize throughput and minimize latency.
 2025,arXiv,NUS,Data-aware Dynamic Execution of Irregular Workloads on Heterogeneous Systems,lightweight and input-aware framework; multiobjective and multi-constraint design space; dynamically creating optimal schedules,,,
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
 
 # ### LLM Training Heterogeneous Systems
-# Focusing on the heterogeneous systems for LLM training.
+# Solution: compared to [LLM Inference Heterogeneous Systems](#LLM-Inference-Heterogeneous-Systems), need to solve the backward compatibility and heterogeneity issues.
 2024,arXiv,PKU,Demystifying Workload Imbalances in Large Transformer Model Training over Variable-length Sequences,data sampling imbalance; data packing imbalance; subgraph abstraction,,,
 2024,arXiv,Ant Group,EDiT: A Local-SGD-Based Efficient Distributed Training Method for Large Language Models,Local Stochastic Gradient Descent (Local SGD); consistent stragglers within heterogeneous devices; hierarchical distribution strategy on a two-dimensional device mesh; layer by layer forward syncing; pseudo-gradient penalty method,,,
 2024,arXiv,ZJU,Frenzy: A Memory-Aware Serverless LLM Training System for Heterogeneous GPU Clusters,efficient and low-overhead task-to-cluster scheduling; bin-packing algorithms; seamless and user-friendly,,,
@@ -170,26 +180,26 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## Schedule Optimization
-# Focusing on the schedule optimization for heterogeneous systems. The papers are mainly focusing on the scheduling algorithms.
+# Solution: develop task schedule algorithms, to achieve efficient overall system performance despite incomplete and evolving system state information.performance.
 
 # ### General Task Scheduling
-# Focusing on the general task scheduling algorithms.
+# Solution: optimizing the allocation and execution of diverse and dynamic workloads.
 2019,NSDI,MIT,Shinjuku: Preemptive Scheduling for µsecond-scale Tail Latency,preemptive scheduling; single-address space OS; hardware-supported virtualization,,,
 2021,SOSP,UPenn,When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone,reserve cores; non-conserving; request dispatching algorithm,,,
 2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
 2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
 
-# ### Speculative Execution (Non-LLM)
-# Focusing on the speculative execution algorithms for non-LLM tasks.
-# The LLM-related scheduling is in the [LLM-Related Scheduling](#LLM-Related-Scheduling) section.
+# ### Speculative Execution (Non-LLM) <a name="Speculative-Execution-Non-LLM"></a>
+# Solution: balancing the potential performance gains from speculative executions, including accurately predicting outcomes, handling incorrect speculations and their side effects across multiple nodes.
+# Refer to [Speculative Execution](#Speculative-Execution-LLM) for the speculative execution algorithms for LLM.
 2024,arXiv,MSR,Forerunner: Constraint-based Speculative Transaction Execution for Ethereum,constraint-based speculative transaction execution; many-future nature; specialized fast-path program,,,
 2024,arXiv,Politecnico di Milano,Minimizing speculation overhead in a parallel recognizer for regular texts,speculation overhead; chunk automaton; reduced-interface DFA,,,
 
-# ### LLM-Related Scheduling
-# Focusing on the scheduling algorithms for LLM-related tasks.
+# ### LLM-Related Scheduling <a name="LLM-Related-Scheduling"></a>
+# Challenge: efficiently managing the immense computational and memory demands of training and inference across numerous interconnected devices, requiring sophisticated strategies to partition massive models.
 
 # #### LLM Request Scheduling
-# Focusing on the scheduling algorithms for LLM inference requests.
+# Solution: develop intelligent strategies to route requests, prioritize urgent or critical tasks, handle varying input lengths and complexities, manage resource contention to meet the SLO requirements.
 2024,arXiv,UCSB,Multi-Bin Batching for Increasing LLM Inference Throughput,binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality,,,
 2024,arXiv,Yale,TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications,segmented generation; time-sensitive scheduling; latency-guided batch size selection,,,
 2025,arXiv,MSRI,Niyama : Breaking the Silos of LLM Inference Serving,QoS-driven LLM inference serving system; co-scheduling requests with diverse QoS targets on a shared rather than siloed infrastructure; allows graceful service degradation during overload conditions; deadline slack; a hybrid prioritization and an eager relegation policy,4,4,3
@@ -197,15 +207,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
 
 # #### LLM Application-Level Scheduling
-# Application-Level is focusing on an application using multiple LLM instances. These papers are focusing on the scheduling algorithms to minimize the end-to-end latency of the application.
+# Solution: to optimize the end-to-end latency of the application, including the scheduling of the LLM instances.
 2024,OSDI,SJTU,Parrot: Efficient Serving of LLM-based Applications with Semantic Variable,Semantic Variable; application-level information; LLM applications as first-class citizens,,,
 2024,OSDI,CUHK,Teola: Towards End-to-End Optimization of LLM-based Applications,mismatch between request-level scheduling and end-to-end  application performance; primitive-level dataflow graph; two-tier scheduling mechanism,,,
 2024,arXiv,Yext,SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering,constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements,,,
 2025,arXiv,Berkeley,Autellix: An Efficient Serving Engine for LLM Agents as General Programs,"formalize agentic programs as dynamic, non-deterministic DAGs; non-clairvoyant scheduler; simple load-balancing policy to balance data locality and KV-cache recomputation",,,
 2025,ICDCS,SJTU,LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications,"a DAG with regular stage, LLM stage, dynamic stage; bayesian network-based profiler; identify uncertainty-reducing stages",4,4,3
 
-# #### LLM Speculative Inference
-# Refer to non-LLM [speculative execution](#Speculative-Execution-(Non-LLM)).
+# #### LLM Speculative Inference <a name="Speculative-Execution-LLM"></a>
+# Refer to non-LLM [speculative execution](#Speculative-Execution-Non-LLM).
 2024,arXiv,F&M College,AMUSD: Asynchronous Multi-Device Speculative Decoding for LLM Acceleration,simultaneous and independent predictions; asynchronous speculative decoding; rollback mechanism,,,
 2024,arXiv,Purdue,Constrained Decoding with Speculative Lookaheads,computational expense of generating lookaheads; speculated lookaheads; task specific reward function,,,
 2024,arXiv,Rutgers,Interactive Speculative Planning: Enhance Agent Efficiency through Co-design of System and User Interface,active user intervention; speculative planning algorithm; UI-level rescheduling algorithm,,,
@@ -213,7 +223,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,SEU,SEED: Accelerating Reasoning Tree Construction via Scheduled Speculative Decoding,reasoning tree construction; parallel drafting with speculative decoding; FCFS queue verification,,,
 
 # ##### Spec + Others
-# Focusing on the speculative execution and other related algorithms.
 2025,arXiv,Huawei,Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling,speculative MoE; speculative token shuffling; speculative expert pre-grouping,,,
 2025,INFOCOM,UoA,SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models,internal neurons sparsification; model-agnostic acceleration framework; dynamic early-exit thresholds; multi-layered feature fusion,,,
 
@@ -224,7 +233,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UvA,GREEN-CODE: Optimizing Energy Efficiency in Large Language Models for Code Generation,dynamic early exit; energy-aware code generation; reinforcement learning for llms,,,
 
 # ### DNN Scheduling
-# Focusing on the scheduling algorithms for DNNs.
+# Solution: optimizing data parallelism and model parallelism while minimizing communication overhead between nodes, effectively managing limited GPU memory and other resources to achieve scalability and high throughput.
 # Refer to [LLM-Related Scheduling](#LLM-Related-Scheduling) for the LLM-related scheduling algorithms.
 
 # #### Task Offloading
@@ -232,21 +241,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## General optimizations for Deep Learning Systems
-# Focusing on the general optimizations for deep learning systems.
+# Solution: general optimizations for deep learning systems.
 # If the paper is focusing on an above-mentioned specific scene (e.g., memory, scheduling, IO, etc.), it will be put in the corresponding section.
 
 # ### LLM Training Systems
-# Focusing on the optimizations for LLM training systems.
+# Solution: arrange model parameters and data across multiple devices, reduce the time spent communicating, scale up smoothly as models and data keep growing—all while staying efficient and speeding up training.
 
 # #### General Optimizations
-# Focusing on the general optimizations for LLM training systems.
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
 
 # #### Optimizations on Special Scene
-# Focusing on the the training optimizations for specific scenes.
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
 2025,arXiv,SJTU,PipeWeaver: Addressing Data Dynamicity in Large Multimodal Model Training with Dynamic Interleaved Pipeline,dynamic interleaved pipeline; hierarchical schedule space for rapid pipeline schedule search; spatialtemporal subgraph reuse,3,4,2
 
@@ -254,6 +261,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,JSC,Memory and Bandwidth are All You Need for Fully Sharded Data Parallel,an extensive analysis of the FSDP training distribution strategy; a grid search methodology; both simulation and empirical results,2,4,1
 
 # #### Multi-Modal Optimizations
+# Challenge: multimodal data is more complex and requires more resources to train.
 2025,arXiv,ByteDance,OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training,multimodal mini-batch imbalance; batch post-balancing algorithm; node-wise all-to-all communicator for practical rearrangement of mini-batches,4,4,3
 
 # #### Kernel-Level Optimizations
@@ -263,14 +271,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Focusing on the optimizations for LLM inference systems.
 
 # #### SLO-Aware Systems
-# SLO-Aware Systems is pursuing to provide service for users with specific latency requirements.
+# Challenge: providing service for users to meet specific latency requirements with limited resources.
 2025,arXiv,Berkeley,AdaServe: SLO-Customized LLM Serving with Fine-Grained Speculative Decoding,fine-grained speculative decoding; token tree verification; slo customization,,,
 2025,arXiv,UIUC,HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location,online-offline request co-location; interference-aware profiler; latency predictor; adaptive scheduler,,,
 2025,arXiv,PKU,Memory Offloading for Large Language Model Inference with Latency SLO Guarantees,effectively captures the tension between meeting SLOs and maximizing host memory usage; dynamic offloading interval; per-bus coordinator,,,
 2025,arXiv,Huawei,Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization,hybrid offline-online scheduling; preemptive scheduling for hardware utilization; lagrangian method for cost efficiency evaluation,,,
 
 # #### Surveys
-# Focusing on the surveys of LLM inference systems.
 
 # ##### System Optimization Surveys
 2024,arXiv,NEU,LLM Inference Serving: Survey of Recent Advances and Opportunities,KV cache and memory management; LLM computation optimization; Cloud LLM deployment; focus on system-level enhancements,,,
@@ -292,7 +299,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,HUST,FastCache: Optimizing Multimodal LLM Serving through Lightweight KV-Cache Compression Framework,resource-aware KV-cache memory pool; multimodal KV-cache compression; modality-specific compression,,,
 
 # #### Mixture-of-Experts LLM Systems
-# Mixture-of-Experts (MoE) is a model that has a single input and multiple outputs, and each output is computed by a different expert.
+# Challenge: efficiently coordinating and scaling expert models across multiple nodes, leading to issues like uneven workload distribution, high communication overhead, and difficulty in fault tolerance.
 
 # ##### Expert Offloading and Placement
 2025,DATE,Berkeley,DAOP: Data-Aware Offloading and Predictive Pre-Calculation for Efficient MoE Inference,data-aware offloading; predictive pre-calculation; sequence-specific expert allocation,,,
@@ -349,7 +356,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Berkeley,Locality-aware Fair Scheduling in LLM Serving,deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis,,,
 
 # ### Communication-Computation Overlap
-# Focusing on the communication-computation overlap for deep learning systems.
+# Challenge: effectively hiding communication latency by overlapping it with computation, which requires careful scheduling and resource management to avoid bottlenecks and ensure that both communication and computation proceed efficiently without stalling each other.
 2023,NSDI,KAIST,ARK: GPU-driven Code Execution for Distributed Deep Learning,communication-motivated DL system; pipeline DMA engine; GPU-direct-controlled DMA,,,
 2024,ASPLOS,PKU,Centauri: Enabling Efficient Scheduling for Communication-Computation Overlap in Large Model Training via Communication Partitioning,communication partition abstraction; hybrid LLM training tasks; 3-level decompose,,,
 2024,ASPLOS,UW–Madison,T3: Transparent Tracking & Triggering for Fine-grained Overlap of Compute & Collectives,lightweight track and trigger; pre-programmed DMA commands; atomic memory update,,,
@@ -357,5 +364,5 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,AMD,Optimizing ML Concurrent Computation and Communication with GPU DMA Engines,concurrent computation and communication; compute and memory interference among concurrent kernels; schedule prioritization and careful resource partitioning,,,
 
 # ### Configuration Optimization
-# Focusing on the configuration optimization for deep learning systems, automatically searching the best configuration for the given system.
+# Challenge: the configuration space is too large to be searched manually.
 2025,OSDI,PKU,Mirage: A Multi-Level Superoptimizer for Tensor Programs,auto algebraically transfer tensor; using DAG to search configuration space; auto generate kernel function,4,4,3
