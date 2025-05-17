@@ -14,6 +14,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Modern DNN acceleration systems commonly use the combination of [data parallelism](#Data-Parallelism) and [model parallelism](#Model-Parallelism).
 2012,Nips,Google,Large Scale Distributed Deep Networks,data parallel; use many model to optimize the same data; distributed model training,3,4,3
 2014,OSDI,CMU,Scaling Distributed Machine Learning with the Parameter Server,the foundation of tensor parallel; parameter server; pull-based data transfer,4,5,3
+2020,SC,Miscrosoft,ZeRO: Memory Optimizations Toward Training Trillion Parameter Models,fix the problem that dp cannot reduce the memory usage on single GPU,3,4,3
 
 # #### Model Parallelism <a name="Model-Parallelism"></a>
 # Solution: Model parallelism addresses scenarios where the model's size exceeds the processing and memory capacity of a single GPU. There are two types of model parallelism:
