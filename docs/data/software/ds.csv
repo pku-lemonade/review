@@ -9,13 +9,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Soultion: using the computation and memory resources of multiple processors to solve a problem.
 # Challenge: communication overhead and load balancing
 
-# #### Data Parallelism
-# Solution: Data parallelism distributes training by partitioning the dataset across multiple GPUs, each housing a complete model. A central manager aggregates and updates the model weights.
+# #### Data Parallelism <a name="Data-Parallelism"></a>
+# Solution: Data parallelism addresses scenarios where a single GPU can accommodate the model, but the dataset's size necessitates distribution across multiple GPUs for efficient processing and accelerated training.
+# Modern DNN acceleration systems commonly use the combination of [data parallelism](#Data-Parallelism) and [model parallelism](#Model-Parallelism).
 2012,Nips,Google,Large Scale Distributed Deep Networks,data parallel; use many model to optimize the same data; distributed model training,3,4,3
 2014,OSDI,CMU,Scaling Distributed Machine Learning with the Parameter Server,the foundation of tensor parallel; parameter server; pull-based data transfer,4,5,3
 
-# #### Tensor Parallelism
-# Solution: Tensor parallelism alleviates computational demands by sharding individual tensors across multiple GPUs, enabling the processing of large models that would otherwise exceed the memory capacity of a single device.
+# #### Model Parallelism <a name="Model-Parallelism"></a>
+# Solution: Model parallelism addresses scenarios where the model's size exceeds the processing and memory capacity of a single GPU. There are two types of model parallelism:
+# 1. Pipeline parallelism: divide the model as pipeline stages, each gpu processes one or more stages.
+# 2. Tensor parallelism: divide the tensor into different GPUs.
+# Usually, pipeline parallelism and tensor parallelism are used together.
 2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
 
 # #### LLM-specific Parallel Strategies
