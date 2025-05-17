@@ -5,6 +5,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: concurrency, synchronous and communication complexities across independent nodes
 # Solution: problems that require coordination, computation, and data management across multiple independent computer systems.
 
+# ### Computing Framework
+# Solution: Developing distributed algorithms requires a clear understanding of the computing framework, which scales small computing units to achieve a more clear data processing. The common computing frameworks are MapReduce, Spark, etc.
+2004,OSDI,Google,MapReduce: simplified data processing on large clusters,divife the data processing into map and reduce stages; use master-worker architecture,4,5,5
+
 # ### Parallel Strategies
 # Soultion: using the computation and memory resources of multiple processors to solve a problem.
 # Challenge: communication overhead and load balancing
