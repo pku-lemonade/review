@@ -4,15 +4,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
 # ##### Evaluation
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
-# ##### Inter-DIMM Communication
-# Challenge: High latency of inter-DIMM (cross-bank) communication via host CPU forwarding.
+# ##### Intra-DIMM Communication
+# Challenge: High latency of intra-DIMM (cross-bank) communication via host CPU forwarding.
 2024,ISCA,THU,NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures,"gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing",,,
 2025,HPCA,Samsung,Piccolo: Large-Scale Graph Processing with Fine-Grained In-Memory Scatter-Gather,In-DRAM fine-grained scatter-gather via data bus offsets; fine-grained cache architecture using fg-tags; Standard DDR command interpretation for FIM control; Combined graph tiling with fine-grained memory access,3,3,4
 2025,arXiv,ETHZ,PIMDAL: Mitigating the Memory Bottleneck in Data Analytics using a Real Processing-in-Memory System,PIMDAL library for DB operators; quicksort/mergesort/hashing on UPMEM PIM; scatter/gather/async transfers for PIM communication,4,4,2
-2025,ISCA,KAIST,PIMnet: A Domain-Specific Network for Efficient Collective Communication in Scalable PIM, domain-specific PIM interconnect; hierarchical network for PIM packaging; PIM-controlled deterministic scheduling, 2,4,3
-# ##### Intra-DIMM Communication
-# Challenge: High latency of intra-DIMM (cross-DIMM) communication via host CPU forwarding.
+2024,arXiv,Seoul National,PID-Comm: A Fast and Flexible Collective Communication Framework for Commodity Processing-in-DIMM Devices,Virtual hypercube PIM model; PE-assisted data reordering; in-register and cross-domain data modulation,3,4,3
+2025,ISCA,KAIST,PIMnet: A Domain-Specific Network for Efficient Collective Communication in Scalable PIM, domain-specific PIM interconnect; hierarchical network for PIM packaging; PIM-controlled deterministic scheduling,2,4,3
+# ##### Inter-DIMM Communication
+# Challenge: High latency of inter-DIMM (cross-DIMM) communication via host CPU forwarding.
 2017,MEMSYS,UCLA,AIM: Accelerating Computational Genomics through Scalable and Noninvasive Accelerator-Interposed Memory,placing FPGA chip between DIMM and the conventional memory network; multi-drop bus for inter-accelerator communication, 1,2,2
+2023,ASPLOS,THU,ABNDP: Co-optimizing Data Access and Load Balance in Near-Data Processing,Traveller Cache; hybrid task scheduling; hybrid scheduling leveraging distributed cache,4,3,4
 2023,HPCA,PKU,DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing,high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication,,,
 2025,HPCA,SJTU,AsyncDIMM: Achieving Asynchronous Execution in DIMM-Based Near-Memory Processing,Offload-Schedule-Return mechanism; switch-recovery scheduling; explicit/implicit synchronization,2,4,3
 2018,MICRO,UIUC,Application-Transparent Near-Memory Processing Architecture with Memory Channel Network, integrates a processor on a buffered DIMM; application-transparent near-memory processing; leverages memory channels for high-bandwidth/low-latency inter-processor communication,3,4,4 
