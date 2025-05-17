@@ -179,10 +179,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,PKU,SplitLLM: Hierarchical Split Learning for Large Language Model over Wireless Network,hierarchical split learning; edge-cloud collaboration; LoRA adapter update,,,
 2025,arXiv,SJTU,HeteroLLM: Accelerating Large Language Model Inference on Mobile SoCs platform with Heterogeneous AI Accelerators,both layer-level and tensor-level GPU-NPU parallelism; different tensor partition strategies; fast synchronization mechanism based on predictable kernel waiting times; tensor partition solver,,,
 
-# #### Large Heterogeneous System Serving
-# Challenge: effectively managing and coordinating diverse hardware (CPUs, GPUs, TPUs), interconnects, and memory hierarchies
+# #### GPU-GPU Heterogeneous System
+# Solution: the system is composed of heterogeneous GPUs and not inferencing on CPU/ The system need to manage the heterogeneous GPUs' communication and memory.
 2024,arXiv,CMU,Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs,LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming,,,
 2025,ICLR,HKUST,HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment,a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges,,,
+
+# #### XPU-GPU Heterogeneous System
+# Challenge: effectively managing and coordinating diverse hardware (CPUs, TPUs, etc.), interconnects, and memory hierarchies
+2023,ICML,Stanford,FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU,dynamic offload tensor; quantize the weights to 4-bits; linear aggregation of the store and load operations,4,4,3
 2025,arXiv,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,SKIP profiling tool; TKLQT metric for CPU/GPU boundedness; proximity score kernel fusion,2,3,2
 2025,SPAA,Huawei,WindVE: Collaborative CPU-NPU Vector Embedding,seamless CPU-NPU collaboration for vector embedding; linear regression based estimator; high-throughput offloading vector embedding,2,4,3
 2025,arXiv,Huawei,High-Throughput LLM inference on Heterogeneous Clusters,lightweight profiling while avoiding resource-intensive throughput benchmarks; a scheduler that accounts for both instance computational capacity and memory usage; exhaustive search method,2,4,2
