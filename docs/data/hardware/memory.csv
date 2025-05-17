@@ -53,13 +53,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General CiM
 # ##### Specific Application & Algorithm
 2024,ISVLSI,USC,Multi-Objective Neural Architecture Search for In-Memory Computing,"neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM",,,
+2024,arXiv,Intel,CiMNet: Towards Joint Optimization for DNN Architecture and Configuration for Compute-In-Memory Hardware,framework that jointly searches for optimal sub-networks and hardware configurations for CiM architectures; multi-objective evolutionary search method,4,2,4
 2025,AICAS,UVA,Optimizing and Exploring System Performance in Compact Processing-in-Memory-based Chips,Pipeline Method for Compact PIM Designs; Dynamic Duplication Method (DDM); Maximum NN Size Estimation & Deployment in Compact PIM Design,,,
 # ##### Modeling & Simulation
 2018,TCAD,ASU,NeuroSim: A Circuit-Level Macro Model for Benchmarking Neuro-Inspired Architectures in Online Learning,"estimate the circuit-level performance of neuro-inspired architectures; estimates the area, latency, dynamic energy, and leakage power; Support both SRAM and eNVM; tested on 2-layer MLP NN, MNIST",,,
 2019,IEDM,Georgia Tech,DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies,a python wrapper to interface NeuroSim; for inference only,,,
 2020,TCAD,ZJU,Eva-CiM: A System-Level Performance and Energy Evaluation Framework for Computing-in-Memory Architectures,models for capturing memory access and dependency-aware ISA traces; models for quantifying interactions between the host CPU and the CiM module,,,
 2024,ISPASS,MIT,"CiMLoop: A Flexible, Accurate, and Fast Compute-In-Memory Modeling Tool",flexible specification to describe CiM systems; accurate model/fast statistical model of data-value-dependent component energy,,,
-# #### CIM：DRAM
+2025,ASPDAC,HKUST,MICSim: A Modular Simulator for Mixed-signal Compute-in-Memory based AI Accelerator,modulared Neurosim; data statistic-based average-mode instead of trace-based mode,4,3,2
+# #### CIM: DRAM
 # Solution: Rather than placing logic units into DRAM; modify the physical structure of DRAM/eDRAM to enable in-memory computing.
 2021,ICCD,ASU,CIDAN: Computing in DRAM with Artificial Neurons,Threshold Logic Processing Element (TLPE) for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture,,,
 2022,HPCA,UCSD,TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer,token-based dataflow for general Transformer-based models; ring-based data broadcast in modified HBM,4,2,4
@@ -99,18 +101,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ICRC,Purdue & HP,Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning,compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance,,,
 2023,NANOARCH,HUST,Heterogeneous Instruction Set Architecture for RRAM-enabled In-memory Computing,General ISA for RRAM CiM & digital heterogeneous architecture; a tile-processing unit-array three-level architecture,,,
 2024,VLSI-SoC,RWTH Aachen University,Architecture-Compiler Co-design for ReRAM-Based Multi-core CIM Architectures,inference latency predictions and analysis of the crossbar utilization for CNN,,,
+2024,arXiv,CAS,A Fully Hardware Implemented Accelerator Design in ReRAM Analog Computing without ADCs,Based on Stochastic Binary Neural Networks; Winner-Take-All (WTA) strategy; Hardware implemented sigmoid and softmax,4,3,4
 # ##### RRAM CiM: Architecture optimization
 2024,MICRO,HUST,DRCTL: A Disorder-Resistant Computation  Translation Layer Enhancing the Lifetime and  Performance of Memristive CIM Architecture,address conversion method for dynamic scheduling; hierarchical wear-leveling (HWL) strategy for reliability improvement; data layout-aware selective remapping (LASR) to improve communication locality and reduce latency,,,
 2024,DATE,RWTH Aachen University,CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures,algorithm to decide which parts of NN are duplicated to reduce inference latency; cross layer scheduling on tiled CIM architectures,,,
 2024,TC,SJTU,ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity,bit-level sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme,,,
 2023,TETCI,TU Delft,Accurate and Energy-Efficient Bit-Slicing for RRAM-Based Neural Networks,unbalanced bit-slicing scheme for higher accuracy; holistic solution using 2's compliment,,,
+2024,Science,USC,Programming memristor arrays with arbitrarily high precision for analog computing,represent high-precision numbers using multiple relatively low-precision analog devices;using RRAM CIM to solve PDEs,5,4,3
 # ##### RRAM CiM: Modeling
 2024,AICAS,RWTH Aachen University,A Calibratable Model for Fast Energy Estimation of MVM Operations on RRAM Crossbars,system energy model for MVM on ReRAM crossbars; methodology to study the effect of the selection transistor and wire parasitics in 1T1R crossbar arrays,,,
 2024,arXiv,MIT,Modeling Analog-Digital-Converter Energy and Area for Compute-In-Memory Accelerator Design,architecture-level model that estimates ADC energy and area,4,3,3
 # ##### RRAM CiM: Training optimization
+2023,arXiv,UND,U-SWIM: Universal Selective Write-Verify for Computing-in-Memory Neural Accelerators,only do write-verify for important weights; based on weight second derivatives as a guide,3,3,3
+2023,Adv. Mater.,UMich,Bulk‐Switching Memristor‐Based Compute‐In‐Memory Module for Deep Neural Network Training,"Bulk-ReRAM based digital-CIM hybrid architecture for training; CIM for forward, digital for backward",4,4,1
 2024,APIN,SWU,Multi-optimization scheme for in-situ training of memristor neural network based on contrastive learning,"optimizations to the deployment method, loss function and gradient calculation; compensation measures for non-ideal effects",,,
 2025,TNNLS,SNU,Efficient Hybrid Training Method for Neuromorphic Hardware Using Analog Nonvolatile Memory,Hybrid offline-online training method,,,
-2023,Adv. Mater.,UMich,Bulk‐Switching Memristor‐Based Compute‐In‐Memory Module for Deep Neural Network Training,"Bulk-ReRAM based digital-CIM hybrid architeture for training; CIM for forward, digital for backward",4,4,1
 # ##### RRAM CiM: Compiler
 # Challenge: Compiler for RRAM CIM is not well studied. Existing compilers are either for specific architecture or not efficient.
 2023,TACO,HUST,A Compilation Tool for Computation Offloading in ReRAM-based CIM Architectures,compilation tool to migrate legacy programs to CPU/CIM heterogeneous architectures; a model to quantify the performance gain,,,
@@ -142,6 +147,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,GLSVLSI,Yale,Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing,non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters,,,
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
+2019,Adv. Funct. Mater.,HUST,Functional Demonstration of a Memristive Arithmetic Logic Unit (MemALU) for In‐Memory Computing,non-volatile Boolean logic using RRAM crossbar;reconfigurable boolean logic gates,3,4,3
 # ##### RRAM Non-ideal Effects
 Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] section.
 # #### CIM: Hybrid Architecture
@@ -160,16 +166,22 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 2023,arXiv,HP,RACE-IT: A Reconfigurable Analog CAM-Crossbar Engine for In-Memory Transformer Acceleration,Compute Analog Content Addressable Memory (Compute-ACAM) structure; accelerator based on crossbars and Compute-ACAMs; encoding-based optimization,3,3,4
 2024,VLSI,FDU,HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer,"product-quantization-based sparse self-attention algorithm; ADC-free ReRAM-CIM macro; ReRAM-CIM for front-end attention sparsification, SRAM-CIM for back-end sparse attention",4,3,3
 2024,ASP-DAC,Keio,OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration,On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM,,,
+2025,arXiv,South Carolina,PIM-LLM: A High-Throughput Hybrid PIM Architecture for 1-bit LLMs,hybrid PIM-Digital architecture; analog PIM for low-precision MatMul; digital systolic array for high-precision matMul,4,3,1
+2024,ESSERC,UCSD,An Analog and Digital Hybrid Attention Accelerator for Transformers with Charge-based In-memory Computing,"analog CIM for low-score tokens, digital processor for high",3,4,2
 # #### CIM: Quantization
 # Challenge: Limited by the precision & area & power trade-off of the ADC; certain CIM devices like RRAM are not suitable for high-precision computation (e.g. FP32). Quantization is needed to reduce the precision of the data.
-2024,TCAD,BUAA,CIMQ: A Hardware-Efficient Quantization Framework for Computing-In-Memory-Based Neural Network Accelerators,bit-level sparsity induced activation quantization; quantizing partial sums to decrease required resolution of ADCs; arraywise quantization granularity,,,
-2018,CVPR,Google,Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference,"integer-only inference arithmetic; quantizesh both weights and activations as 8-bit integers, bias 32-bit; provides both quantized inference framework and training frame work",,,
-2024,TCAD,BUAA,CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory,mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM,,,
+# ##### CIM Quantization: For Analog CIM
 2023,ISLPED,Purdue,Partial-Sum Quantization for Near ADC-Less Compute-In-Memory Accelerators,ADC-Less and near ADC-Less CiM accelerators; CiM hardware aware DNN quantization methodology,,,
+2024,TCAD,BUAA,CIMQ: A Hardware-Efficient Quantization Framework for Computing-In-Memory-Based Neural Network Accelerators,bit-level sparsity induced activation quantization; quantizing partial sums to decrease required resolution of ADCs; arraywise quantization granularity,,,
+2024,TCAD,BUAA,CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory,mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM,,,
+2024,ICCAD,TU Delft,Hardware-Aware Quantization for Accurate Memristor-Based Neural Networks,analysis of fixed-point quantization impact on conductance variation; weight quantization tuning technique; approach to reduce the residual error,3,2,3
+# ##### CIM Quantization: For all CIM
+2018,CVPR,Google,Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference,"integer-only inference arithmetic; quantizes both weights and activations as 8-bit integers, bias 32-bit; provides both quantized inference framework and training frame work",,,
 2023,ICCD,SJTU,PSQ: An Automatic Search Framework for Data-Free Quantization on PIM-based Architecture,post-training quantization framework without retraining; hardware-aware block reassembly,,,
-2025,arXiv,South Carolina,PIM-LLM: A High-Throughput Hybrid PIM Architecture for 1-bit LLMs,hybrid PIM-Digital architecture; analog PIM for low-precision MatMul; digital systolic array for high-precision matMul,4,3,1
 # #### CIM: Digital CIM
 2025,ISCAS,CAS,StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer,tile-based reconfigurable CIM macro microarchitecture; mixed-stationary cross-forwarding dataflow; ping-pong-like finegrained compute-rewriting pipeline,,,
 # #### NVM
 2024,ISCAS,UMCP,On-Chip Adaptation for Reducing Mismatch in Analog Non-Volatile Device Based Neural Networks,float-gate transistors based; hot-electron injection to address the issue of mismatch and variation,,,
 2023,DATE,UniBo,End-to-End DNN Inference on a Massively Parallel Analog In Memory Computing Architecture,many-core heterogeneous architecture; general-purpose system based on RISC-V cores and nvAIMC cores; based on Phase-Change Memory(PCM);,,,
+
+
