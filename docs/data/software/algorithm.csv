@@ -46,6 +46,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
+# ### Dynamic Graph Processing
+# Solution: data structures for processing dynamic graphs, which are graphs that change over time.
+
+# #### Architecture-specific Data Structures
+# Solution: Data structures targeting specific hardware architectures
+2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
+2024,VLDB,PKU,Towards Sufficient GPU-Accelerated Dynamic Graph Management: Survey and Experiment,topology structure; attribute storage; auxiliary structures,4,4,2
 
 # ## Computational complexity
 # Solution: analyzing and classifying how the time and space requirements of an algorithm grow as the input size increases.
