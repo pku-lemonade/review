@@ -296,6 +296,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
+2025,ISCA,DeepSeek,Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures,software-hardware co-design for deepseek-v3; insight into hardware for ai architectures,5,5,4
 
 # #### SLO-Aware Systems
 # Challenge: providing service for users to meet specific latency requirements with limited resources.
