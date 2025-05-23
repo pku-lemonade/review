@@ -154,7 +154,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### General Applications
 2013,SOSP,MSR Silicon Valley,Dandelion: a Compiler and Runtime for Heterogeneous  Systems,unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing,,,
 2025,EuroSys,SJTU,Improving GPU Sharing Performance through Adaptive Bubbleless Spatial-Temporal Sharing,Bubble-less spatial-temporal sharing; kernel squad scheduling; fine-grained concurrent kernel management,4,3,2
-2020,ASPLOS,PKU,FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System,tvm auto schedule; RL based stragety find; auto optimizing in large configuration space,4,4,3
 2025,ISPASS,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,Effective regions for balanced utilization of PUs; Proximity-based kernel fusion recommendation; operator-kernel dependency graphs from PyTorch Profiler traces,3,4,2
 
 # ### Decentralized Serving
@@ -394,3 +393,4 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Configuration Optimization
 # Challenge: the configuration space is too large to be searched manually.
 2025,OSDI,PKU,Mirage: A Multi-Level Superoptimizer for Tensor Programs,auto algebraically transfer tensor; using DAG to search configuration space; auto generate kernel function,4,4,3
+2020,ASPLOS,PKU,FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System,tvm auto schedule; RL based stragety find; auto optimizing in large configuration space,4,4,3
