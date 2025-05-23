@@ -10,7 +10,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Existing NDP architecture has numerous independent memory spaces; lacks unified management; and features inefficient memory allocation.
 2024,ISCA,SJTU,UM-PIM: DRAM-based PIM with Uniform & Shared Memory Space,Uniform shared CPU-PIM memory; dual-track memory management; zero-copy data re-layout,3,3,4
 2024,ISCA,KAIST,PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memory (PIM) Architectures,PIM-specific memory allocator; hierarchical memory allocation scheme; hardware metadata cache,4,2,3
-2024,arXiv,ETHZ,PUMA: Efficient and Low-Cost Memory Allocation and Alignment Support for Processing-Using-Memory Architectures,aligned memory allocator for PUM; DRAM-aware memory allocation",2,3,2
+2024,arXiv,ETHZ,PUMA: Efficient and Low-Cost Memory Allocation and Alignment Support for Processing-Using-Memory Architectures,aligned memory allocator for PUM; DRAM-aware memory allocation,2,3,2
 # ##### Evaluation
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 # ##### Intra-DIMM Communication
