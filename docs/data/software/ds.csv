@@ -303,6 +303,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UIUC,HyGen: Efficient LLM Serving via Elastic Online-Offline Request Co-location,online-offline request co-location; interference-aware profiler; latency predictor; adaptive scheduler,,,
 2025,arXiv,PKU,Memory Offloading for Large Language Model Inference with Latency SLO Guarantees,effectively captures the tension between meeting SLOs and maximizing host memory usage; dynamic offloading interval; per-bus coordinator,,,
 2025,arXiv,Huawei,Hybrid Offline-online Scheduling Method for Large Language Model Inference Optimization,hybrid offline-online scheduling; preemptive scheduling for hardware utilization; lagrangian method for cost efficiency evaluation,,,
+2025,ASPLOS,BUAA,Past-Future Scheduler for LLM Serving under SLA Guarantees,lightLLM; predict future system memory usage; reduce evict by better request scheduling,3,2,3
 
 # #### Surveys
 
