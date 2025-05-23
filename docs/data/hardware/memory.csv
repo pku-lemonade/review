@@ -2,6 +2,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### NDP: DIMM
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
+# ##### NDP cores
+2024,ISCA,Samsung,pSyncPIM: Partially Synchronous Execution of Sparse Matrix Operations for All-Bank PIM Architectures,partially synchronous PIM control; predicated execution; sparse matrix distribution & compaction;,3,3,3
+# ##### Memory Allocation & Management
+# Challenge: Existing NDP architecture has numerous independent memory spaces; lacks unified management; and features inefficient memory allocation.
+2024,ISCA,SJTU,UM-PIM: DRAM-based PIM with Uniform & Shared Memory Space,Uniform shared CPU-PIM memory; dual-track memory management; zero-copy data re-layout,3,3,4
+2024,ISCA,KAIST,PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memory (PIM) Architectures,PIM-specific memory allocator; hierarchical memory allocation scheme; hardware metadata cache,4,2,3
+2024,arXiv,ETHZ,PUMA: Efficient and Low-Cost Memory Allocation and Alignment Support for Processing-Using-Memory Architectures,aligned memory allocator for PUM; DRAM-aware memory allocation",2,3,2
 # ##### Evaluation
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 # ##### Intra-DIMM Communication
@@ -41,6 +48,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,MICRO,UCSB,BEACON: Scalable Near-Data-Processing Accelerators for Genome Analysis near Memory Pool with the CXL Support,scalable hardware accelerator inside CXL switch or bank; lossless memory expansion for CXL memory pools,,,
 2024,ICS,Samsung,CLAY: CXL-based Scalable NDP Architecture Accelerating Embedding Layers,direct interconnect between DRAM clusters; dedicated memory address mapping scheme; Multi-CLAY system support through customized CXL switch,,,
 2024,MICRO,SK Hyrix,Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders,CXL.mem protocol instead of CXL.io (DMA) for low-latency; lightweight threads to reduce address calculation overhead,,,
+2025,ISCA,Seoul National,COSMOS: A CXL-Based Full In-Memory System for Approximate Nearest Neighbor Search,CXL core-based ANNS task offload; rank-level parallel distance computation; adjacency-aware data placement algorithm,2,2,2
 # #### NDP: 3D-stacked DRAM 
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. 
 # Solution: Use TSVs to provide TB/s level bandwidth in inter-bank communication & band-to-logic layer communication.
