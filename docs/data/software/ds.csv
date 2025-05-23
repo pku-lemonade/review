@@ -360,9 +360,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
 2024,arXiv,SJTU,TokenRing: An Efficient Parallelism Framework for Infinite-Context LLMs via Bidirectional Communication,communication-oriented parallelism framework; inter-node P2P bidirectional communication bandwidth; optimization of attention block communication,,,
+2025,arXiv,PKU,"ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs",hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism,,,
+
+# ##### Sparse Attention
+# Solution: handle the prompt token by token introduce high latency, trying to use sparse attention to reduce the computation and memory burden. This can be achieved by not using the full attention matrix, but only the upper triangular part.
 2025,arXiv,CWRU,Longer Attention Span: Increasing Transformer Context Length with Sparse Graph Processing Techniques,sparse attention with graph computing perspective; work-optimal graph algorithms; achieve true sparsity,,,
 2025,MLSys,MIT,LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention,unified sparse attention; hybrid static and dynamic sparsity; hierarchical kv cache management with query-centric pruning,,,
-2025,arXiv,PKU,"ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs",hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism,,,
+2025,arXiv,THU,Twilight: Adaptive Attention Sparsity with Hierarchical Top-$p$ Pruning, use top-p method, p means the sum of chosen tokens' scores,3,3,3
+
 
 # #### P-D Disaggregated Systems
 2024,OSDI,PKU,DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving,goodput-optimized; prefill-decoding interference;novel placement algorithm for p-d schema,,,
