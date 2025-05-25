@@ -14,7 +14,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Architecture Design
 2006,ASPLOS,UW–Madison,A Performance Counter Architecture for Computing Accurate CPI Components,interval analysis based performance model; frontend miss table(FMT); shared FMT,3,3,2
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound; top-down performance events,3,5,3
-2015,ISCA,ANU,Computer Performance Microscopy with SHIM, double-time error correction; sample periods randomizing; CMP core samping for low overhead,4,4,3
+2015,ISCA,ANU,Computer Performance Microscopy with SHIM, double-time error correction; sample periods randomizing; CMP core sampling for low overhead,4,4,3
 # ### Dataflow Architecture
 2022,OSDI,UCB,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,,,
 2023,MICRO,PKU,TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis,3D design space of fusion dataflow; tree-based description; tile-centric notation,,,
