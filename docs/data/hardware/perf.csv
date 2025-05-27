@@ -12,6 +12,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2013,ISPASS,UTAustin,Non-determinism and overcount on modern hardware performance counter implementations,nondeterministic hardware interrupts; float point unit related overcount; retired instruction overcount,2,4,2
 2020,CONECCT,IIIT,"Power, Performance And Thermal Management Using Hardware Performance Counters",fine-grained dynamic voltage and frequency scaling; PMC-based power and temperature correlation model; thermal zone and partition-based management,2,4,2
 # #### Architecture Design
+# Challenge: Existing hardware performance counters provide limited information; expansion is needed to support more hardware behavior data.
 2006,ASPLOS,UW–Madison,A Performance Counter Architecture for Computing Accurate CPI Components,interval analysis based performance model; frontend miss table(FMT); shared FMT,3,3,2
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound; top-down performance events,3,5,3
 2015,ISCA,ANU,Computer Performance Microscopy with SHIM, double-time error correction; sample periods randomizing; CMP core samping for low overhead,4,4,3
