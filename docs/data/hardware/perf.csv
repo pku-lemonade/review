@@ -7,10 +7,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2016,CSUR,Oak Ridge Lab,"Understanding GPU Power: A Survey of Profiling, Modeling, and Simulation Methods",external/internal power measurement; HPC based power model; GPU power simulation,3,3,1
 2019,SP,UNC-Chapel Hill,"SoK: The Challenges, Pitfalls, and Perils of Using Hardware Performance Counters for Security",non-determinism and overcounting effects; performance monitoring interrupt,3,4,1
 # #### Specific Application
+2000,SC,UT,A Scalable Cross-Platform Infrastructure for Application Performance Tuning Using Hardware Counters, portable and machine-dependent layers based architecture; eventset for group management; counter multiplexing,2,4,2
 2004,SC,UMD,Using Hardware Counters to Automatically Improve Memory Performance,two-phase dynamic page migration algorithm; sun fire link counter,3,4,3
 2013,ISPASS,UTAustin,Non-determinism and overcount on modern hardware performance counter implementations,nondeterministic hardware interrupts; float point unit related overcount; retired instruction overcount,2,4,2
 2020,CONECCT,IIIT,"Power, Performance And Thermal Management Using Hardware Performance Counters",fine-grained dynamic voltage and frequency scaling; PMC-based power and temperature correlation model; thermal zone and partition-based management,2,4,2
-# #### Modeling and Simulation
+# #### Architecture Design
+# Challenge: Existing hardware performance counters provide limited information; expansion is needed to support more hardware behavior data.
+2006,ASPLOS,UW–Madison,A Performance Counter Architecture for Computing Accurate CPI Components,interval analysis based performance model; frontend miss table(FMT); shared FMT,3,3,2
+2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound; top-down performance events,3,5,3
+2015,ISCA,ANU,Computer Performance Microscopy with SHIM, double-time error correction; sample periods randomizing; CMP core sampling for low overhead,4,4,3
 # ### Dataflow Architecture
 2022,OSDI,UCB,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,,,
 2023,MICRO,PKU,TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis,3D design space of fusion dataflow; tree-based description; tile-centric notation,,,
