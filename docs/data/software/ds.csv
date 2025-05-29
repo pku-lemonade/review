@@ -5,9 +5,27 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: concurrency, synchronous and communication complexities across independent nodes
 # Solution: problems that require coordination, computation, and data management across multiple independent computer systems.
 
+# ### Computing Framework
+# Solution: Developing distributed algorithms requires a clear understanding of the computing framework, which scales small computing units to achieve a more clear data processing. The common computing frameworks are MapReduce, Spark, etc.
+2004,OSDI,Google,MapReduce: simplified data processing on large clusters,divife the data processing into map and reduce stages; use master-worker architecture,4,5,5
+
 # ### Parallel Strategies
 # Soultion: using the computation and memory resources of multiple processors to solve a problem.
 # Challenge: communication overhead and load balancing
+
+# #### Data Parallelism <a name="Data-Parallelism"></a>
+# Solution: Data parallelism addresses scenarios where a single GPU can accommodate the model, but the dataset's size necessitates distribution across multiple GPUs for efficient processing and accelerated training.
+# Modern DNN acceleration systems commonly use the combination of [data parallelism](#Data-Parallelism) and [model parallelism](#Model-Parallelism).
+2012,Nips,Google,Large Scale Distributed Deep Networks,data parallel; use many model to optimize the same data; distributed model training,3,4,3
+2014,OSDI,CMU,Scaling Distributed Machine Learning with the Parameter Server,the foundation of tensor parallel; parameter server; pull-based data transfer,4,5,3
+2020,SC,Miscrosoft,ZeRO: Memory Optimizations Toward Training Trillion Parameter Models,fix the problem that dp cannot reduce the memory usage on single GPU,3,4,3
+
+# #### Model Parallelism <a name="Model-Parallelism"></a>
+# Solution: Model parallelism addresses scenarios where the model's size exceeds the processing and memory capacity of a single GPU. There are two types of model parallelism:
+# 1. Pipeline parallelism: divide the model as pipeline stages, each gpu processes one or more stages.
+# 2. Tensor parallelism: divide the tensor into different GPUs.
+# Usually, pipeline parallelism and tensor parallelism are used together.
+2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
 
 # #### LLM-specific Parallel Strategies
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
@@ -61,6 +79,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Berkeley,BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching,offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests,,,
 2024,arXiv,UChicago,DroidSpeak: Enhancing Cross-LLM Communication,selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model,,,
 
+# ##### KV cache store
+# Solution: store the KV cache in the memory or other storage device, supporting multi-level storage.
+2024,ATC,Huawei,Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention,store KV cache in the memory; multi level KV cache management; position mask modified,3,3,3
+
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
@@ -91,6 +113,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### I/O Characterization and Optimization
 # Challenge: minimize data movement and maximize resource utilization across heterogeneous distributed environments.
+2020,ASPLOS,CMU,Livia: Data-Centric Computing Throughout the Memory Hierarchy, Memory service programming model; task graphs linked to data location; dynamic task/data scheduling for minimal movement,2,4,3
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
 
 # ### GPU-GPU Communication
@@ -156,10 +179,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,PKU,SplitLLM: Hierarchical Split Learning for Large Language Model over Wireless Network,hierarchical split learning; edge-cloud collaboration; LoRA adapter update,,,
 2025,arXiv,SJTU,HeteroLLM: Accelerating Large Language Model Inference on Mobile SoCs platform with Heterogeneous AI Accelerators,both layer-level and tensor-level GPU-NPU parallelism; different tensor partition strategies; fast synchronization mechanism based on predictable kernel waiting times; tensor partition solver,,,
 
-# #### Large Heterogeneous System Serving
-# Challenge: effectively managing and coordinating diverse hardware (CPUs, GPUs, TPUs), interconnects, and memory hierarchies
+# #### GPU-GPU Heterogeneous System
+# Solution: the system is composed of heterogeneous GPUs and not inferencing on CPU/ The system need to manage the heterogeneous GPUs' communication and memory.
 2024,arXiv,CMU,Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs,LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming,,,
 2025,ICLR,HKUST,HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment,a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges,,,
+
+# #### XPU-GPU Heterogeneous System
+# Challenge: effectively managing and coordinating diverse hardware (CPUs, TPUs, etc.), interconnects, and memory hierarchies
+2023,ICML,Stanford,FlexGen: High-Throughput Generative Inference of Large Language Models with a Single GPU,dynamic offload tensor; quantize the weights to 4-bits; linear aggregation of the store and load operations,4,4,3
 2025,arXiv,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,SKIP profiling tool; TKLQT metric for CPU/GPU boundedness; proximity score kernel fusion,2,3,2
 2025,SPAA,Huawei,WindVE: Collaborative CPU-NPU Vector Embedding,seamless CPU-NPU collaboration for vector embedding; linear regression based estimator; high-throughput offloading vector embedding,2,4,3
 2025,arXiv,Huawei,High-Throughput LLM inference on Heterogeneous Clusters,lightweight profiling while avoiding resource-intensive throughput benchmarks; a scheduler that accounts for both instance computational capacity and memory usage; exhaustive search method,2,4,2
@@ -188,6 +215,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,SOSP,UPenn,When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone,reserve cores; non-conserving; request dispatching algorithm,,,
 2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
 2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
+2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture,"Virtual PIM" framework; dynamic DPU allocation for multitasking;fine-grained scheduling,3,2,2
 
 # ### Speculative Execution (Non-LLM) <a name="Speculative-Execution-Non-LLM"></a>
 # Solution: balancing the potential performance gains from speculative executions, including accurately predicting outcomes, handling incorrect speculations and their side effects across multiple nodes.
