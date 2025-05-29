@@ -6,6 +6,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Compiler construction and optimization
 # Solution: improving performance, reducing resource usage, and ensuring correctness
 
+# ### Domain-Specific Languages
+# Solution: formal semantics definition, tool generation automation, cross-domain generalization
+
+# #### Sparse Tensor Algebra Compilers
+# Solution: multi-format iteration efficiency, format combination optimization, architecture-agnostic code generation
+2018,OOPSLA,MIT,Format Abstraction for Sparse Tensor Algebra Compilers,coordinate hierarchies; level formats abstraction; property-based merge lattice optimizations; level iterator conversion,4,4,3
+2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
+2022,OOPSLA,MIT,Compilation of Dynamic Sparse Tensor Algebra,node schema language; assembly abstract interface; map function generation; iterator optimization; dynamic tensor format composition,4,4,3
+
 # ### Hardware Description Languages
 # Focusing on languages designed for hardware description and verification, including Verilog, VHDL and modern alternatives.
 
