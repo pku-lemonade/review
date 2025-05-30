@@ -9,6 +9,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
 
+# ##### LLM Transformer
+# Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
+2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
+
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
 2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
@@ -16,6 +20,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### LLM Finetune
 # Solution: finetune adapts a pre-trained model to a specific task or domain. By doing so, the model can better fit the specific task or domain.
+2021,ICLR,Miscrosoft,LoRA: Low-Rank Adaptation of Large Language Models,split the weight matrix into two parts; reduce the number of parameters to finetune,2,4,4
 
 # ###### Coding LLM Finetune
 2024,arXiv,UMD,HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages,large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools,,,
@@ -53,6 +58,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
+# ### Dynamic Graph Processing
+# Solution: data structures for processing dynamic graphs, which are graphs that change over time.
+
+# #### Architecture-specific Data Structures
+# Solution: Data structures targeting specific hardware architectures
+2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
+2024,VLDB,PKU,Towards Sufficient GPU-Accelerated Dynamic Graph Management: Survey and Experiment,topology structure; attribute storage; auxiliary structures,4,4,2
 
 # ## Computational complexity
 # Solution: analyzing and classifying how the time and space requirements of an algorithm grow as the input size increases.
