@@ -6,6 +6,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Compiler construction and optimization
 # Solution: improving performance, reducing resource usage, and ensuring correctness
 
+# ### Deep Learning Compilers
+# Solution: Graph transformations, Kernel fusion, Tensor optimization for compute and memory
+2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
+
 # ### Domain-Specific Languages
 # Solution: formal semantics definition, tool generation automation, cross-domain generalization
 
