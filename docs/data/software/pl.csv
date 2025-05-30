@@ -16,20 +16,40 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,OOPSLA,MIT,Compilation of Dynamic Sparse Tensor Algebra,node schema language; assembly abstract interface; map function generation; iterator optimization; dynamic tensor format composition,4,4,3
 
 # ### Hardware Description Languages
-# Focusing on languages designed for hardware description and verification, including Verilog, VHDL and modern alternatives.
+# Solution: expressive hardware specification, efficient simulation and synthesis, robust verification methodologies
 
 # #### Streaming Computation Models
-# Focusing on computation models and languages optimized for streaming data processing and real-time analytics.
+# Solution: high-throughput data processing, real-time analytics, efficient resource utilization for continuous data
 2020,ASPLOS,Stanford,Fleet: A Framework for Massively Parallel Streaming on FPGAs,user write serial code for parallel; multi-stream parallelism; ready-valid signaling,3,4,3
 
 # #### HLS Code Generation and Automation
-# Focusing on tools, techniques, and automation for High-Level Synthesis (HLS) code generation, conversion, and program transformation.
+# Solution: bridging high-level languages to hardware, design space exploration, QoR improvement automation
+
+# ##### General HLS Compiler
+# C/C++/SystemC to RTL, microarchitecture optimization, resource sharing and scheduling
 2011,FPGA,UToronto,LegUp: high-level synthesis for FPGA-based processor/accelerator systems,C to hybrid hardware/software; LLVM-based HLS; automatic C to Verilog,4,4,4
 2022,ASPLOS,UCLA,HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair,automated test generation; dependence-guided search space pruning; early candidate rejection using coding styles,3,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,4
+2022,FPGA,Cornell,HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs,Decoupled data placement; Unified data placement primitive; Multi-level memory hierarchy optimization,4,4,4
+2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
+
+# ##### Dataflow HLS acceleration
+# Solution: exploiting task-level parallelism, optimizing inter-kernel communication, maximizing pipeline throughput
 2024,ASPLOS,UIUC,HIDA: A Hierarchical Dataflow Compiler for High-Level Synthesis,hierarchical dataflow IR (HIDA-IR); multi-level dataflow optimizer (HIDA-OPT); pattern-driven task fusion,3,5,4
 2025,FPGA,UCLA,Stream-HLS: Towards Automatic Dataflow Acceleration,automatic dataflow HLS; global scheduling for streaming; MINLP for HLS optimization,4,4,4
+
+# ##### HLS for specialized hardware
+# Solution: target-specific code generation, custom memory interface synthesis, co-optimization with physical constraints
+2023,FPGA,UoP,DONGLE: Direct FPGA-Orchestrated NVMe Storage for HLS,HLS direct NVMe access; FPGA-orchestrated storage; Unified HLS storage interface; Single-source HLS for storage; DONGLE architecture,4,4,4
+2023,FPGA,HKUST,FADO: Floorplan-Aware Directive Optimization for High-Level Synthesis Designs on Multi-Die FPGAs,Floorplan-aware HLS; Multi-die FPGA optimization; Directive-floorplan co-optimization; Incremental floorplanning for HLS; MMBP for HLS DSE,3,4,4
+2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
 
 # ## Program analysis
 # Solution: statically or dynamically analyzing programs to understand their behavior, detect errors, and optimize performance
 
+# ### Domain-specific program analysis
+# Solution: leveraging domain knowledge for precise analysis, specialized bug detection, targeted optimization insights
+
+# #### HLS program analysis
+# Solution: verifying functional correctness of HLS, analyzing performance bottlenecks, ensuring interface compatibility
+2025,FPGA,UoE,Latency Insensitivity Testing for Dataflow HLS Designs,Automated Latency Insensitivity Testing; Parallel Hardware-Accelerated Testing Platform; Test space reduction; Stalling Units (SU),4,4,4
