@@ -359,7 +359,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
-2024,arXiv,SJTU,TokenRing: An Efficient Parallelism Framework for Infinite-Context LLMs via Bidirectional Communication,communication-oriented parallelism framework; inter-node P2P bidirectional communication bandwidth; optimization of attention block communication,,,
 2025,arXiv,PKU,"ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs",hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism,,,
 
 # ##### Sparse Attention
@@ -367,6 +366,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,CWRU,Longer Attention Span: Increasing Transformer Context Length with Sparse Graph Processing Techniques,sparse attention with graph computing perspective; work-optimal graph algorithms; achieve true sparsity,,,
 2025,MLSys,MIT,LServe: Efficient Long-sequence LLM Serving with Unified Sparse Attention,unified sparse attention; hybrid static and dynamic sparsity; hierarchical kv cache management with query-centric pruning,,,
 2025,arXiv,THU,Twilight: Adaptive Attention Sparsity with Hierarchical Top-$p$ Pruning, use top-p method, p means the sum of chosen tokens' scores,3,3,3
+
+# ##### Ring Computation
+# Solution: use the device layout to reduce the communication overhead. The key idea is to parallel the computation and communication.
+2023,Nips,UCB,Ring Attention with Blockwise Transformers for Near-Infinite Context,divide the input into blocks and each block is processed by a single GPU; ring-type device layout,4,3,3
+2024,arXiv,SJTU,TokenRing: An Efficient Parallelism Framework for Infinite-Context LLMs via Bidirectional Communication,communication-oriented parallelism framework; inter-node P2P bidirectional communication bandwidth; optimization of attention block communication,,,
 
 
 # #### P-D Disaggregated Systems
