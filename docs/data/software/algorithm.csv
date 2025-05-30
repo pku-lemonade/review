@@ -39,7 +39,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### None-LLM Quantization Methods <a name="None-LLM-Quantization-Methods"></a>
 # ##### Adaptive Datatype
-2022,ICLR,Snap Inc.,F8Net: Fixed-Point 8-bit Only Multiplication for Network Quantization,method to determine the fixed-point format for weights and activations using their variance;training algorithm for fixed-point models,3,3,2
+# Solution: Adaptive datatypes aim to optimize numerical representation by dynamically adjusting to the precision and range requirements of data. The challenge lies in balancing computational efficiency, memory usage, and accuracy across diverse tasks and hardware constraints.
+2022,ICLR,Snap Inc.,F8Net: Fixed-Point 8-bit Only Multiplication for Network Quantization,variance-based fixed-point format selection for weights and activations; training algorithm for fixed-point models,3,3,2
 2022,MICRO,SJTU,ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization,fixed-length adaptive numerical data type; combines the advantages of float and int for adapting to the importance of different values within a tensor; adaptive framework that selects the best type for each tensor,,,
 2024,TCAD,HKU,DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference,adaptive data representation with variablelength encoding; hardware-aware quantization framework,,,
 2024,arXiv,Harvard,"Nanoscaling Floating-Point (NxFP): NanoMantissa, Adaptive Microexponents, and Code Recycling for Direct-Cast Compression of Large Language Models",Nanoscaling Floating-Point (NxFP); NanoMantissa; Adaptive Microexponents; Code Recycling,,,
@@ -47,7 +48,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### General method
 # Solution: General quantization methods aim to optimize the trade-off between model accuracy and computational efficiency. Challenges include addressing layer-specific quantization errors, enhancing fault tolerance, and finding optimal bit-width configurations.
 2018,AAAI,SUTD,Adaptive Quantization for Deep Neural Network,measurement to estimate the effect of parameter quantization errors in individual layers;optimization process for finding optimal quantization bit-width for each layer,3,3,4
-2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to inhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
+2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to enhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
 
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
