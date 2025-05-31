@@ -1,0 +1,38 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ### Heterogeneous Architecture
+# Challenge: Classic Heterogeneous Architecture faces challenges in the data movement and memory access patterns; leading to performance bottlenecks.
+2017,TACO,Intel,HAShCache: Heterogeneity-Aware Shared DRAMCache for Integrated Heterogeneous Systems,heterogeneity-aware DRAMCache scheduling PrIS; temporal bypass ByE; spatial occupancy control chaining,,,
+2018,ICS,NC State,ProfDP: A Lightweight Profiler to Guide Data Placement in Heterogeneous Memory Systems,latency sensitivity; bandwidth sensitivity; moving factor based data placement,,,
+2023,HPCA,THU,Baryon: Efficient Hybrid Memory Management with Compression and Sub-Blocking,stage area and selective commit for stable block; dual-format metadata scheme; cacheline-aligned compression and two-level replacements,,,
+# #### CPU-GPU System
+2024,arXiv,KTH,Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper,Grace Hopper system memory characterization; integrated CPU-GPU page table analysis; first-touch policy impact study; system page size impact study; access-counter page migration evaluation,2,4,3
+# ### Disaggregated Memory
+# Challenge: CXL and NVM offer higher speed & bandwidth than storage devices with byte-level access. Memory disaggregation using DRAM (high-speed/BW + small capacity) and NVM (low-speed/BW + large capacity), faces latency, bandwidth, and consistency challenges.
+# #### CXL-based Disaggregated Memory
+2025,ASPLOS,Yale,PULSE: Accelerating Distributed Pointer-Traversals on Disaggregated Memory,iterator-based programming model; disaggregated accelerator architecture; in-network routing for distributed traversal,3,4,3
+2025,ASPLOS,Purdue,EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation,Ethernet PHY network stack; PHY in-network scheduler; PHY intra-frame preemption,4,4,4
+2025,arXiv,Micron,Architectural and System Implications of CXL-enabled Tiered Memory,CXL parallelism bottleneck analysis; Unfair queuing analysis; MIKU dynamic request control; ToR-based service time estimation; Hierarchical CXL throttling,4,4,3
+# #### Survey
+2025,arXiv,SJTU,Survey of Disaggregated Memory: Cross-layer Technique Insights for Next-Generation Datacenters,Cross-layer classification of DM techniques; hardware-level categories; architectural-level classifications; system and runtime-level groupings; application-level optimizations such as general-purpose and domain-specific approaches,,,
+# ### Chiplets
+# Challenge: Current chip designs are often monolithic and inflexible; leading to high costs and limited performance optimization opportunities.
+# Solution: Use chiplets to enable more flexible and cost-effective system designs by allowing the integration of specialized dies manufactured using optimal processes; leading to improved performance and yield.
+# ### Survey
+2020,Electronics,NUDT,Chiplet Heterogeneous Integration Technology—Status and Challenges,heterogeneous integration technology; interconnect interfaces and protocols; packaging technology,,,
+2022,CCF THPC,ICT,"Survey on chiplets: interface, interconnect and integration methodology",development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology,,,
+2024,IEEE CASS,THU,Chiplet Heterogeneous Integration Technology—Status and Challenges,wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance,,,
+# ### Cost Analysis
+2025,arXiv,ASU,CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems,"heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection",,,
+# ### 3D IC
+# Solution: 3DIC technology enables higher integration density; shorter interconnects; and improved performance by stacking multiple active layers in a single device.
+# ### General 3D IC
+2019,GLSVLSI,Boston Univeristy,An Overview of Thermal Challenges and Opportunities for Monolithic 3D ICs,TSV-based 3D integration; Mono3D integration with nanoscale monolithic inter-tier vias; influence of lateral heat flow and inter-connection,,,
+2019,ECTC,TSMC,System on Integrated Chips (SoIC) for 3D Heterogeneous Integration,"system on integrated chips; SoIC package integration; reliability of SoIC bond,TSV and TDV",,,
+2020,DATE,Georgia Tech,Macro-3D: A Physical Design Methodology for Face-to-Face-Stacked Heterogeneous 3D ICs,face-to-face stack; separate 2D floorplans generation; memory-on-logic projection,,,
+2022,IEEE Micro,Cerebras,Cerebras Architecture Deep Dive: First Look Inside the Hardware/Software Co-Design for Deep Learning,"fine-grained dataflow scheduling; high-bandwidth, low-latency fabric design; weight streaming",,,
+# ### Interconnection
+2025,HPCA,Fudan,EIGEN: Enabling Efficient 3DIC Interconnect with Heterogeneous Dual-Layer Network-on-Active-Interposer,"Dual-layer interconnect architecture, Reinforcement learning routing, Switch-programmable interconnect",3,2,3
+# ### Design Space Exploration
+2025,arXiv,SJTU,Cool-3D: An End-to-End Thermal-Aware Framework for Early-Phase Design Space Exploration of Microfluidic-Cooled 3DICs,end-to-end thermal-aware framework; microfluidic cooling integration; Pre-RTL design space exploration; floorplan designer; microfluidic cooling strategy generator,,,
+# ### Benchmarks
+2025,arXiv,NJU,Open3DBench: Open-Source Benchmark for 3D-IC Backend Implementation and PPA Evaluation,open-source 3D-IC benchmark; modular 3D partitioning and placement; Open3D-DMP algorithm for cross-die co-placement; comprehensive PPA evaluation with thermal simulation,,,
