@@ -34,11 +34,11 @@ The New Lemonade Review is a paper review list maintained by prospective and cur
 ### **arXiv Monitoring**
 
 - Goal: Stay updated with the latest research developments
-- Method: Check:
-  - [arXiv.DC](https://papers.cool/arxiv/cs.DC)
-  - [arXiv.ET](https://papers.cool/arxiv/cs.ET)
-  - [arXiv.AR](https://papers.cool/arxiv/cs.AR)
-  - [arXiv.PF](https://papers.cool/arxiv/cs.PF)
+- Method: Try AI immersive reading with [Cool papers](https://github.com/bojone/papers.cool#体验) in the following categories:
+  - [Distributed, Parallel, and Cluster Computing](https://papers.cool/arxiv/cs.DC)
+  - [Emerging Technologies](https://papers.cool/arxiv/cs.ET)
+  - [Hardware Architecture](https://papers.cool/arxiv/cs.AR)
+  - [Performance](https://papers.cool/arxiv/cs.PF)
 - Pace: 0+ papers/week (**mostly skimming**).
 
 ## What papers should be included?
