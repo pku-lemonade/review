@@ -16,7 +16,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,KAIST,PIM-MMU: A Memory Management Unit for Accelerating Data Transfers in Commercial PIM Systems,data copy engine for host-PIM transfers; PIM-aware memory scheduler for MLP maximization; memory remapping unit for dual address mapping,2,4,3
 # #### PIM Compiler & ISA Extension
 # Challenge: Existing compilers are not optimized for locality-aware PIM architectures and require specialized programming models to fully utilize PIM capabilities.
-2015,ISCA,Seoul National,PIM-Enabled Instructions: A Low-Overhead; Locality-Aware Processing-in-Memory Architecture,PIM-Enabled Instructionsfor ISA extension; PIM directory for atomicity and coherence; single-cache-block restriction,3,4,4
+2015,ISCA,Seoul National,PIM-Enabled Instructions: A Low-Overhead; Locality-Aware Processing-in-Memory Architecture,PIM-Enabled Instructions for ISA extension; PIM directory for atomicity and coherence; single-cache-block restriction,3,4,4
 2020,ISCA,UCSB,iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture, Single-Instruction-Multiple-Bank ISA; register allocation; instruction reordering,4,4,2
 # #### Evaluation
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
