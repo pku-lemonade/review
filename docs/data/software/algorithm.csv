@@ -8,7 +8,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
-2020,arXiv,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
+2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
 
 # ##### LLM Transformer
 # Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
