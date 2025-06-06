@@ -12,6 +12,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### LLM Transformer
 # Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
+2019,arXiv,Google,Fast Transformer Decoding: One Write-Head is All You Need,MQA; share same KV cache for all heads; multi-query attention,1,4,3
 2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
 
