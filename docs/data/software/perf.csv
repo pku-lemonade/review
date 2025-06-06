@@ -27,7 +27,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Burst Detection
 # Challenge: maintaining accuracy at high speed data streams, tradeoff between memory usage and detection accuracy.
-2019,CloudNet,PKU,Dynamic Sketch: EfficientandAdjustable Heavy Hitter Detection forSoftwarePacket Processing,door keeper mechanism for high memory efficiency; bucket sampling for accuracy monitoring,3,3,1
+2019,CloudNet,PKU,Dynamic Sketch: Efficient and Adjustable Heavy Hitter Detection for Software Packet Processing,door keeper mechanism for high memory efficiency; bucket sampling for accuracy monitoring,3,3,1
 2021,SIGMOD,PKU,BurstSketch: Finding Bursts in Data Streams,running track based burst item filtering; snapshotting based burst item detection,3,3,1
 2024,IFIP NPC,PKU,2FA Sketch: Two-Factor Armor Sketch for Accurate and Efficient Heavy Hitter Detection in Data Streams,improved arbitration strategy for in-bucket competition; cross-bucket conflict avoidance hashing scheme,2,3,1
 2024,IEEE ICDE,PKU,Scalable Overspeed Item Detection in Streams,bucket sharing based basic speedsketch algorithm; global-clock for reducing timestamp overhead; counter-flip technique for compression,3,4,2
