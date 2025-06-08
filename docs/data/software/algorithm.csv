@@ -60,6 +60,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,ISCA,SJTU,DRQ: Dynamic Region-based Quantization for Deep Neural Network Acceleration,dynamic region-based quantization algorithm; sub-feature map quantization; accelerator architecture for proposing dynamic region-based quantization,4,3,2
 2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to enhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
 
+# ### Statistical Parameter Estimation
+# Solution: infer the distribution of variables using statistical methods from observed data
+1977,JRSSB,Harvard,Maximum Likelihood from Incomplete Data via the EM Algorithm,incomplete data; maximum likelihood expectation algorithm,2,1,3
+2016,Big Data,LPNU,"Machine Learning, Linear and Bayesian Models for Logistic Regression in Failure Detection Problems",extreme gradient boosting classifier; generalized linear model,2,1,2
+2023,J Process Contr,UA,Modeling and Bayesian inference for processes characterized by abrupt variations,dynamic latent variable model; variational Bayesian inference framework,3,2,2
+
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
