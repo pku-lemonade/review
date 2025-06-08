@@ -32,11 +32,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### General HLS Compiler
 # C/C++/SystemC to RTL, microarchitecture optimization, resource sharing and scheduling
-2011,FPGA,UToronto,LegUp: high-level synthesis for FPGA-based processor/accelerator systems,C to hybrid hardware/software; LLVM-based HLS; automatic C to Verilog,4,4,4
 2022,ASPLOS,UCLA,HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair,automated test generation; dependence-guided search space pruning; early candidate rejection using coding styles,3,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,4
 2022,FPGA,Cornell,HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs,Decoupled data placement; Unified data placement primitive; Multi-level memory hierarchy optimization,4,4,4
+2024,DATE,UIUC,Subgraph Extraction-Based Feedback-Guided Iterative Scheduling for HLS,ISDC iterative SDC scheduling; subgraph extraction-based low-level feedback; fanout and window-based subgraph extraction mechanism,4,4,4
 2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
+
+# ##### HLS Verification and Testing
+# Solution: automated bug detection, verification dataset generation, LLM-aided debugging for HLS designs
+2024,LAD,UIUC,An Iteratively-refined Dataset for High-Level Synthesis Functional Verification through LLM-Aided Bug Injection,Chrysalis dataset with bug injection; ICL+RAG+CoT bug injection methodology; iteratively-refined HLS verification dataset,4,4,4
 
 # ##### Dataflow HLS acceleration
 # Solution: exploiting task-level parallelism, optimizing inter-kernel communication, maximizing pipeline throughput

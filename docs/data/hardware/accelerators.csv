@@ -62,8 +62,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,IEEE TC,WSU,On-Chip Communication Network for Efficient Training of Deep Convolutional Networks on Heterogeneous Manycore Systems,wireless-enabled heterogeneous NoC; archived multi-objective simulated annealing for network connectivity,,,
 # ### Architecture DSE
 # Challenge: It's crucial to find the optimal hardware configurations that meet performance; power; and area constraints for specific applications.
+
+# #### Mapping & Co-Exploration DSE
+# Challenge: Efficiently co-optimize DNN mapping and hardware architecture under complex constraints.
+2020,ICCAD,UIUC,DNNExplorer: A Framework for Modeling and Exploring a Novel Paradigm of FPGA-based DNN Accelerator,two-level (global and local) automatic DSE engine; dynamic design space exploration framework; high-dimensional design space support,4,4,4
 2024,HPCA,THU,Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators,layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization,,,
 2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
 2024,ASPDAC,CUHK,SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design,intercluster distance algorithm; importance-based pruning and initialization,3,2,2
+
+# #### Microarchitecture & Cross-Architecture DSE
+# Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
 2025,arXiv,THU & Macau,MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware,IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE,3,3,2
 2025,arXiv,PKU,DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization,diffusion-based design generation; conditional sampling,3,4,3
