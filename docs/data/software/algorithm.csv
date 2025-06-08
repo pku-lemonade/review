@@ -8,10 +8,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
-2020,arXiv,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
+2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
 
 # ##### LLM Transformer
 # Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
+2019,arXiv,Google,Fast Transformer Decoding: One Write-Head is All You Need,MQA; share same KV cache for all heads; multi-query attention,1,4,3
 2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
 

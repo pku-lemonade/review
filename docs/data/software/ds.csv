@@ -393,6 +393,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UIUC,Hierarchical Autoscaling for Large Language Model Serving with Chiron,hierarchical backpressure; interactive requests and batch requests; mixed instances,,,
 2025,arXiv,Berkeley,Locality-aware Fair Scheduling in LLM Serving,deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis,,,
 
+# ### RLHF System
+# Challenge: RLHF system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
+2025,EuroSys,HKU,HybridFlow: A Flexible and Efficient RLHF Framework,auto-mapping model placement; 3D-HybridEngine to reduce the communication overhead; hybrid programming,4,4,3
+
+
 # ### Communication-Computation Overlap
 # Challenge: effectively hiding communication latency by overlapping it with computation, which requires careful scheduling and resource management to avoid bottlenecks and ensure that both communication and computation proceed efficiently without stalling each other.
 2023,NSDI,KAIST,ARK: GPU-driven Code Execution for Distributed Deep Learning,communication-motivated DL system; pipeline DMA engine; GPU-direct-controlled DMA,,,
