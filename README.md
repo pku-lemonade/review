@@ -1,5 +1,8 @@
 # Lemonade Review Guidelines
 
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/) [![Commit Activity](https://img.shields.io/github/commit-activity/y/pku-lemonade/review)](https://github.com/pku-lemonade/review/pulse/monthly)
+
+
 ## About
 
 The New Lemonade Review is a paper review list maintained by prospective and current PhD students @pku-lemonade/phds at [LEMONADE](https://www.youwei.xyz), Peking University. It is intended to provide a comprehensive overview of the quintessential research ideas in the field of computer architecture and systems.
@@ -10,7 +13,7 @@ The New Lemonade Review is a paper review list maintained by prospective and cur
 > Choose one of the first three strategies as your focus **each week**, depending on your current research needs.
 
 > [!IMPORTANT]
-> Check arXiv **every day**, as an ongoing habit!
+> Check arXiv **every day** to make it a regular habit!
 
 ### **Broad Search**
 
