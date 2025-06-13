@@ -54,7 +54,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: General quantization methods aim to optimize the trade-off between model accuracy and computational efficiency. Challenges include addressing layer-specific quantization errors, enhancing fault tolerance, and finding optimal bit-width configurations.
 # ##### For LLM
 2023,ISCA,SJTU,OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization,outlier-victim pair that sacrifices the colocated normal values to accommodate the outliers;OVP-based quantization framework and architectural implementation,4,4,2
-2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,,,
+2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,2,2,3
 2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
 2025,arXiv,SJTU,MILLION: Mastering Long-Context LLM Inference Via Outlier-Immunized KV Product Quantization,a non-uniform quantization algorithm based on product quantization; leverages sparse computation and asynchronous quantization; distributes quantization power unevenly across channels,3,4,2
 
