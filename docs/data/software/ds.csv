@@ -68,6 +68,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: LLM memory management faces challenges like limited HBM memory, efficient KV Cache management, memory sharing between multiple GPUs, multi-level memory management.
 2025,arXiv,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,fixed-size embeddings; full-prefix dependency; two-level memory allocator,4,4,3
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
+2022,SC,Miscrosoft,DeepSpeed- Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale,kernel fusion; GPU-CPU-NVMe heterogeneous memory; PCIe-based memory prefetch,4,4,3
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
