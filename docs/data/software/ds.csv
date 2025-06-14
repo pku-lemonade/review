@@ -128,6 +128,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Workload Characterization
 # Challenge: dynamic workloads across numerous cores, resource contention for shared hardware.
+2015,VLDB,Intel,GraphMat: High performance graph analytics made productive,vertex program to sparse matrix mapping; generalized SPMV for graph analytics; single-node multicore framework,4,4,4
 2018,SC,Intel,Many-Core Graph Workload Analysis,multicore simulator sniper; selective caching and prefetching; heterogeneous high-performance low-power cores,,,
 2018,DATE,UGA,Parallel Code Generation of Synchronous Programs for a Many-core Architecture,banked memory mapping; worst-case response time analysis,,,
 2025,IPDPS,UChicago,Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems,lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing,,,
