@@ -5,9 +5,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Application-Specific Optimization
 # Challenge: Existing NDP architecture are designed for general-purpose computing; not efficient for specific tasks like LLM.
 2022,ISCA,Micron,To PIM or Not for Emerging General Purpose Processing in DDR Memory Systems, vector engine inside NDP bank; intelligent code offload decision,2,3,2
-2023,arXiv,ETHZ,A Framework for High-throughput Sequence Alignment using Real Processing-in-Memory Systems,Alignment-in-Memory framework; hybrid WRAM-MRAM sketch data management for PIM,2,3,4
 2024,ISCA,Samsung,pSyncPIM: Partially Synchronous Execution of Sparse Matrix Operations for All-Bank PIM Architectures,partially synchronous PIM control; predicated execution; sparse matrix distribution & compaction;,3,3,3
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
+2025,arxiv,ETHZ,MARS: Processing-In-Memory Acceleration of Raw Signal Genome Analysis Inside the Storage Subsystem,PIM module inside the SSD controller; early signal quantization; read filtering,3,3,2
 # #### Memory Allocation & Management
 # Challenge: Existing NDP architecture has numerous independent memory spaces; lacks unified management; and features inefficient memory allocation.
 2024,ISCA,SJTU,UM-PIM: DRAM-based PIM with Uniform & Shared Memory Space,Uniform shared CPU-PIM memory; dual-track memory management; zero-copy data re-layout,3,3,4
@@ -18,8 +18,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Existing compilers are not optimized for locality-aware PIM architectures and require specialized programming models to fully utilize PIM capabilities.
 2015,ISCA,Seoul National,PIM-Enabled Instructions: A Low-Overhead; Locality-Aware Processing-in-Memory Architecture,PIM-Enabled Instructions for ISA extension; PIM directory for atomicity and coherence; single-cache-block restriction,3,4,4
 2020,ISCA,UCSB,iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture, Single-Instruction-Multiple-Bank ISA; register allocation; instruction reordering,4,4,2
-# #### Evaluation
+# #### Evaluation & Simulators
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
+2025,arXiv,ETHZ,EasyDRAM: An FPGA-based Infrastructure for Fast and Accurate End-to-End Evaluation of Emerging DRAM Techniques,FPGA-based DRAM evaluation framework; C++ high-level language for description; time scaling for accurate modeling,3,4,3
 # #### Intra-DIMM Communication
 # Challenge: High latency of intra-DIMM (cross-bank) communication via host CPU forwarding.
 2024,ISCA,THU,NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures,"gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing",,,
@@ -34,12 +35,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,HPCA,PKU,DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing,high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication,,,
 2025,HPCA,SJTU,AsyncDIMM: Achieving Asynchronous Execution in DIMM-Based Near-Memory Processing,Offload-Schedule-Return mechanism; switch-recovery scheduling; explicit/implicit synchronization,2,4,3
 2018,MICRO,UIUC,Application-Transparent Near-Memory Processing Architecture with Memory Channel Network, integrates a processor on a buffered DIMM; application-transparent near-memory processing; leverages memory channels for high-bandwidth/low-latency inter-processor communication,3,4,4 
-# ### Concurrent Host and PIM operations
+# #### Concurrent Host and PIM operations
 # Challenge: High latency of concurrent host CPU/GPU and PIM operations via host CPU forwarding.
 2024,IEEE CA,KAIST,Analysis of Data Transfer Bottlenecks in Commercial PIM Systems: A Study With UPMEM-PIM, runtime data transposition causing high CPU overhead; PIM-integrated system memory mapping impact,2,2,2
 2024,ASPLOS,KAIST,NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing,dual row buffer architecture; sub-batch interleaving; greedy min-load bin packing algorithm,3,4,3
 2025,HPCA,ICT,Make LLM Inference Affordable to Everyone: Augmenting GPU Memory with NDP-DIMM,activation sparsity-based hot(GPU)/cold(NDP) neuron partitioning; offline ILP + online predictor for neuron partition; window-based online remapping for GPU-NDP & NDP-NDP load balance,2,3,4
 2025,ISCA,Univ. of Virginia,Membrane: Accelerating Database Analytics with Bank-Level DRAM-PIM Filtering,bank-level DRAM-PIM filtering; CPU-PIM cooperative query execution; denormalization for PIM-amenable filtering,3,3,2
+# #### Optimizations on UPMEM-PIM
+# Challenge: The original UMPEM API library is not well-suited for all workloads especially for those with cross-bank communication.
+2023,arXiv,ETHZ,A Framework for High-throughput Sequence Alignment using Real Processing-in-Memory Systems,Alignment-in-Memory framework; hybrid WRAM-MRAM sketch data management for PIM,2,3,4
+2025,arXiv,ETHZ,PIMDAL: Mitigating the Memory Bottleneck in Data Analytics using a Real Processing-in-Memory System,PIMDAL library on UPMEM PIM system for data analytics; scatter/gather-aware transfers for inter-PIM communication; Apache Arrow for host memory management,3,3,3
 # ### PIM: In-Cache-Computing
 2025,arXiv,Torino,ARCANE: Adaptive RISC-V Cache Architecture for Near-memory Extensions,ARCANE in-cache NMC coprocessor architecture; software-defined matrix ISA for NMC abstraction; cache-integrated control runtime for NMC management,3,4,4
 # ### PIM & NDP: Benchmarks
