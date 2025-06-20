@@ -26,6 +26,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # 2. Tensor parallelism: divide the tensor into different GPUs.
 # Usually, pipeline parallelism and tensor parallelism are used together.
 2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
+2021,SC,NVIDIA,Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM,Megatron2; dive deep into tensor parallelism; how to train a LLM on 1000 GPUs,4,4,3
+2022,arXiv,NVIDIA,Reducing Activation Recomputation in Large Transformer Models,Megatron3; sequence parallel; selective activation recomputation; reduce the amount of recomputed activation,3,4,3
 
 # #### LLM-specific Parallel Strategies
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
