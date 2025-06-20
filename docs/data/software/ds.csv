@@ -9,6 +9,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Developing distributed algorithms requires a clear understanding of the computing framework, which scales small computing units to achieve a more clear data processing. The common computing frameworks are MapReduce, Spark, etc.
 2004,OSDI,Google,MapReduce: simplified data processing on large clusters,divife the data processing into map and reduce stages; use master-worker architecture,4,5,5
 
+# #### Domain Specific Computing Framework
+# Challenge: specific bounds of different situations
+2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
+
 # ### Parallel Strategies
 # Soultion: using the computation and memory resources of multiple processors to solve a problem.
 # Challenge: communication overhead and load balancing
@@ -54,6 +58,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Scratchpad Memory
 # Challenge: efficiently allocating and coordinating limited fast memory across distributed nodes to minimize access latency and contention, while ensuring data consistency and scalability.
 2023,ASPLOS,Cornell,Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories,work-stealing based dynamic task parallelism; stack/task queue in SPM; read-only data duplication,3,3,3
+
+# ### Memory Optimization for Graph Processing
+# Challenge: efficiently optimize huge memory requirement from graph processing.
+2024,PPoPP,KAIST,INFINEL: An efficient GPU-based processing method for unpredictable large output graph queries,unpredictable large output queries; one-phase GPU graph processing; kernel stop/restart,4,4,3
 
 # ### LLM Memory Management
 # Solution: efficient memory management can reduce memory usage, thus enable larger batch size and higher throughput.
