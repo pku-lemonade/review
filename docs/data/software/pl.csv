@@ -59,6 +59,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Domain-specific program analysis
 # Solution: leveraging domain knowledge for precise analysis, specialized bug detection, targeted optimization insights
+2024,PPoPP,Information Engineering University,A Holistic Approach to Automatic Mixed-Precision Code Generation and Tuning for Affine Programs,holistic code generation and tuning; polyhedral model for mixed-precision; model-driven autotuning,4,5,4
+2024,PPoPP,University of Delaware,Recurrence Analysis for Automatic Parallelization of Subscripted Subscripts,recurrence analysis for parallelization; subscripted subscript analysis; intermittent monotonicity detection,3,4,3
 
 # #### HLS program analysis
 # Solution: verifying functional correctness of HLS, analyzing performance bottlenecks, ensuring interface compatibility
