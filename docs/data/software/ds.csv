@@ -62,6 +62,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: efficient memory management algorithms, like virtual memory, page table, etc.
 2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
 2025,ASPLOS,Miscrosoft,vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention,use cuda hardware page table instead of vllm's; hack cuda's driver to support page table modify,2,3,3
+2025,arXiv,SJTU,eLLM: Elastic Memory Management Framework for Efficient LLM Serving,activation weight paged; all scene virtual memory; cpu memory swap,3,2,2
 2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
 
 # #### General LLM Memory Management
@@ -242,6 +243,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Yext,SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering,constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements,,,
 2025,arXiv,Berkeley,Autellix: An Efficient Serving Engine for LLM Agents as General Programs,"formalize agentic programs as dynamic, non-deterministic DAGs; non-clairvoyant scheduler; simple load-balancing policy to balance data locality and KV-cache recomputation",,,
 2025,ICDCS,SJTU,LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications,"a DAG with regular stage, LLM stage, dynamic stage; bayesian network-based profiler; identify uncertainty-reducing stages",4,4,3
+2025,arXiv,SJTU,Efficient Serving of LLM Applications with Probabilistic Demand Modeling,DAG-based scheduling; dynamic excution; cpu excutor warmup,3,1,1
 
 # #### LLM Speculative Inference <a name="Speculative-Execution-LLM"></a>
 # Refer to non-LLM [speculative execution](#Speculative-Execution-Non-LLM).
