@@ -194,7 +194,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Heterogeneous Device Task Scheduling
 # Solution: assigning different parts of the LLM serving workload to the most suitable heterogeneous devices to maximize throughput and minimize latency.
-2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture, dynamic DPU allocation for multitasking;fine-grained scheduling,3,2,2
+2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture, dynamic DPU allocation for multitasking; fine-grained scheduling,3,2,2
 2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
 2025,arXiv,NUS,Data-aware Dynamic Execution of Irregular Workloads on Heterogeneous Systems,lightweight and input-aware framework; multiobjective and multi-constraint design space; dynamically creating optimal schedules,,,
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
