@@ -32,6 +32,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,IFIP NPC,PKU,2FA Sketch: Two-Factor Armor Sketch for Accurate and Efficient Heavy Hitter Detection in Data Streams,improved arbitration strategy for in-bucket competition; cross-bucket conflict avoidance hashing scheme,2,3,1
 2024,IEEE ICDE,PKU,Scalable Overspeed Item Detection in Streams,bucket sharing based basic speedsketch algorithm; global-clock for reducing timestamp overhead; counter-flip technique for compression,3,4,2
 
+# #### Straggler Analysis
+# Challenge: stragglers can arise from various complex factors, identifying their root causes and quantifying their impact on performance is difficult.
+2025,Arxiv,NYU&ByteDance,Understanding Stragglers in Large Model Training Using What-if Analysis,what-if analysis; dependency model based simulation; SMon monitoring system,3,4,2
+
 # #### Network Tomography
 
 # ##### Survey
