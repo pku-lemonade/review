@@ -235,6 +235,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,MIT,Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints,fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments,3,4,2
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
 
+# ##### Info Predict Scheduling
+# Challenge: The general schedule if for better batching and meeting the SLO requirements. By predicting the information of the requests, we can make the schedule more efficient.
+2023,Nips,Harvard,S3: Increasing GPU Utilization during Generative Inference for Higher Throughput,predict the length of LLM request to fixed types; Orca based dynamic batching,3,2,3
+2024,ASPLOS,UIUC,Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction,length prediction; left time prediction; bert-based proxy model,4,3,2
+
 # #### LLM Application-Level Scheduling
 # Solution: to optimize the end-to-end latency of the application, including the scheduling of the LLM instances.
 2024,OSDI,SJTU,Parrot: Efficient Serving of LLM-based Applications with Semantic Variable,Semantic Variable; application-level information; LLM applications as first-class citizens,,,
