@@ -304,6 +304,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
 2025,ISCA,DeepSeek,Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures,software-hardware co-design for deepseek-v3; insight into hardware for ai architectures,5,5,4
+2024,Mlsys,SJTU,FlashDecoding++: Faster Large Language Model Inference on GPUs,asynchronized softmax with unified max value; flat GEMM optimization with double buffering; heuristic dataflow with hardware resource adaptation,4,4,3
 
 # #### SLO-Aware Systems
 # Challenge: providing service for users to meet specific latency requirements with limited resources.
