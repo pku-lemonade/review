@@ -34,6 +34,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Straggler Analysis
 # Challenge: stragglers can arise from various complex factors, identifying their root causes and quantifying their impact on performance is difficult.
+2019,TSC,BUAA,Straggler Root-Cause and Impact Analysis for Massive-scale Virtualized Cloud Datacenters,detailing straggler filtration based root cause analysis; DoS-indexf for straggler detection,3,3,1
+2020,TJSC,QMUL&NUDT,Tails in the cloud: a survey and taxonomy of straggler management within large‑scale cloud data centres,taxonomy of straggler causes; straggler management technique,3,1,1
+2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
 2025,Arxiv,NYU&ByteDance,Understanding Stragglers in Large Model Training Using What-if Analysis,what-if analysis; dependency model based simulation; SMon monitoring system,3,4,2
 
 # #### Network Tomography
