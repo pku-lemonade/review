@@ -1,4 +1,8 @@
 Year,Venue,Authors,Title,Tags,P,E,N
+# ### NDP: SSDs
+# Solution: Intergrate the compute unit into the SSD controller to process the capacity-sensitive applications.
+2024,HPCA,UCLA,BeaconGNN: Large-Scale GNN Acceleration with Out-of-Order Streaming In-Storage Computing,DirectGraph format for out-of-order sampling; die-level processing units; channel-level command router,4,2,3
+2025,ISCA,ETHZ,REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing,In-Storage processing,2,4,3
 # ### NDP: DIMM
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -18,6 +22,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Existing compilers are not optimized for locality-aware PIM architectures and require specialized programming models to fully utilize PIM capabilities.
 2015,ISCA,Seoul National,PIM-Enabled Instructions: A Low-Overhead; Locality-Aware Processing-in-Memory Architecture,PIM-Enabled Instructions for ISA extension; PIM directory for atomicity and coherence; single-cache-block restriction,3,4,4
 2020,ISCA,UCSB,iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture, Single-Instruction-Multiple-Bank ISA; register allocation; instruction reordering,4,4,2
+2025,ISCA,POSTECH,ATIM: Autotuning Tensor Programs for Processing-in-DRAM,autotuning framework for DRAM PIM; search-based optimizing tensor compiler; balanced evolutionary search algorithm,3,3,4
 # #### Evaluation & Simulators
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 2025,arXiv,ETHZ,EasyDRAM: An FPGA-based Infrastructure for Fast and Accurate End-to-End Evaluation of Emerging DRAM Techniques,FPGA-based DRAM evaluation framework; C++ high-level language for description; time scaling for accurate modeling,3,4,3
