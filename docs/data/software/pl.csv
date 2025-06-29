@@ -11,6 +11,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2013,PLDI,MIT,Halide: A Language and Compiler for Optimizing Parallelism Locality and Recomputation in Image Processing Pipelines,image process DSL; Compute and Schedule Separation IR Design Idea; Pipeline optimization,4,4,3
 2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
 2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
+2025,arXiv,PKU,TileLang: A Composable Tiled Programming Model for AI Systems,tile-based programming; tvm-based compiler; compared to trition is more flexible,4,4,3
 
 # ### Domain-Specific Languages
 # Solution: formal semantics definition, tool generation automation, cross-domain generalization
