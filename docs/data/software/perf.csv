@@ -27,10 +27,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Burst Detection
 # Challenge: maintaining accuracy at high speed data streams, tradeoff between memory usage and detection accuracy.
+
+# ##### Heavy Hitter Burst
 2019,CloudNet,PKU,Dynamic Sketch: Efficient and Adjustable Heavy Hitter Detection for Software Packet Processing,door keeper mechanism for high memory efficiency; bucket sampling for accuracy monitoring,3,3,1
 2021,SIGMOD,PKU,BurstSketch: Finding Bursts in Data Streams,running track based burst item filtering; snapshotting based burst item detection,3,3,1
+2023,SIGMOD,PKU,Double-Anonymous Sketch: Achieving Top-𝐾-fairness for Finding Global Top-𝐾 Frequent Items,double-anonymity technique; randomized admission policy for top-k stage; CMM sketch for count stage,3,4,2
 2024,IFIP NPC,PKU,2FA Sketch: Two-Factor Armor Sketch for Accurate and Efficient Heavy Hitter Detection in Data Streams,improved arbitration strategy for in-bucket competition; cross-bucket conflict avoidance hashing scheme,2,3,1
 2024,IEEE ICDE,PKU,Scalable Overspeed Item Detection in Streams,bucket sharing based basic speedsketch algorithm; global-clock for reducing timestamp overhead; counter-flip technique for compression,3,4,2
+
 
 # #### Straggler Analysis
 # Challenge: stragglers can arise from various complex factors, identifying their root causes and quantifying their impact on performance is difficult.
@@ -38,6 +42,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,TJSC,QMUL&NUDT,Tails in the cloud: a survey and taxonomy of straggler management within large‑scale cloud data centres,taxonomy of straggler causes; straggler management technique,3,1,1
 2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
 2025,Arxiv,NYU&ByteDance,Understanding Stragglers in Large Model Training Using What-if Analysis,what-if analysis; dependency model based simulation; SMon monitoring system,3,4,2
+
+# ##### Other Bursts
+2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
+2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
+2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
+
 
 # #### Network Tomography
 
@@ -52,6 +62,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,ICASSP,UMich,Unicast-based inference of network link delay distributions using mixed finite mixture models,dirac delta based mixed finite mixture model; EM algorithm for parameter evaluation,3,2,2
 2003,IEEE TSP,Rice University,Network Delay Tomography,end-to-end packet pair link delay distribution estimation; FFT based expectation-maximization acceleration algorithm,3,3,2
 2021,IEEE TNSM,QMUL,Optimal Estimation of Link Delays Based on End-to-End Active Measurements,active network monitoring framework; ILP/heuristic/meta-heuristic algorithm for monitoring flows selection,3,3,2
+
+# ### Profiling Techniques
+
+# #### Extended Berkeley Packet Filter
+# Solution: A technique used for dynamically programing the kernel for efficient networking, observability, tracing, and security.
+2020,CSUR,UFMG,Fast Packet Processing with eBPF and XDP: Concepts, Code, Challenges, and Applications,eBPF machine architecture; eBPF system workflow; current limitationss on eBPF,3,1,1
+2024,eBPF,THU,Understanding Performance of eBPF Maps,eBPF map benchmark; impact of cache hotness on eBPF map; volume discount feature of eBPF program,4,4,2
+2025,OSDI,HKU,NEUTRINO: Fine-grained GPU Kernel Profiling via Programmable Probing,densified memory access timeline; snippet,tracepoint,map based probe design; python DSL based user interface,4,5,2
+2025,EuroSys,UW–Madison,Revealing the Unstable Foundations of eBPF-Based Kernel Extensions,potential mismatches dataset; dependency surface/set analysis,4,4,2
 
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.

@@ -9,6 +9,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Developing distributed algorithms requires a clear understanding of the computing framework, which scales small computing units to achieve a more clear data processing. The common computing frameworks are MapReduce, Spark, etc.
 2004,OSDI,Google,MapReduce: simplified data processing on large clusters,divife the data processing into map and reduce stages; use master-worker architecture,4,5,5
 
+# #### Domain Specific Computing Framework
+# Challenge: specific bounds of different situations
+2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
+
 # ### Parallel Strategies
 # Soultion: using the computation and memory resources of multiple processors to solve a problem.
 # Challenge: communication overhead and load balancing
@@ -26,6 +30,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # 2. Tensor parallelism: divide the tensor into different GPUs.
 # Usually, pipeline parallelism and tensor parallelism are used together.
 2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
+2021,SC,NVIDIA,Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM,Megatron2; dive deep into tensor parallelism; how to train a LLM on 1000 GPUs,4,4,3
+2022,arXiv,NVIDIA,Reducing Activation Recomputation in Large Transformer Models,Megatron3; sequence parallel; selective activation recomputation; reduce the amount of recomputed activation,3,4,3
 
 # #### LLM-specific Parallel Strategies
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
@@ -55,6 +61,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: efficiently allocating and coordinating limited fast memory across distributed nodes to minimize access latency and contention, while ensuring data consistency and scalability.
 2023,ASPLOS,Cornell,Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories,work-stealing based dynamic task parallelism; stack/task queue in SPM; read-only data duplication,3,3,3
 
+# ### Memory Optimization for Graph Processing
+# Challenge: efficiently optimize huge memory requirement from graph processing.
+2024,PPoPP,KAIST,INFINEL: An efficient GPU-based processing method for unpredictable large output graph queries,unpredictable large output queries; one-phase GPU graph processing; kernel stop/restart,4,4,3
+
 # ### LLM Memory Management
 # Solution: efficient memory management can reduce memory usage, thus enable larger batch size and higher throughput.
 
@@ -62,6 +72,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: efficient memory management algorithms, like virtual memory, page table, etc.
 2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
 2025,ASPLOS,Miscrosoft,vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention,use cuda hardware page table instead of vllm's; hack cuda's driver to support page table modify,2,3,3
+2025,arXiv,SJTU,eLLM: Elastic Memory Management Framework for Efficient LLM Serving,activation weight paged; all scene virtual memory; cpu memory swap,3,2,2
 2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
 
 # #### General LLM Memory Management
@@ -128,6 +139,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Workload Characterization
 # Challenge: dynamic workloads across numerous cores, resource contention for shared hardware.
+2015,VLDB,Intel,GraphMat: High performance graph analytics made productive,vertex program to sparse matrix mapping; generalized SPMV for graph analytics; single-node multicore framework,4,4,4
 2018,SC,Intel,Many-Core Graph Workload Analysis,multicore simulator sniper; selective caching and prefetching; heterogeneous high-performance low-power cores,,,
 2018,DATE,UGA,Parallel Code Generation of Synchronous Programs for a Many-core Architecture,banked memory mapping; worst-case response time analysis,,,
 2025,IPDPS,UChicago,Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems,lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing,,,
@@ -191,11 +203,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,SKIP profiling tool; TKLQT metric for CPU/GPU boundedness; proximity score kernel fusion,2,3,2
 2025,SPAA,Huawei,WindVE: Collaborative CPU-NPU Vector Embedding,seamless CPU-NPU collaboration for vector embedding; linear regression based estimator; high-throughput offloading vector embedding,2,4,3
 2025,arXiv,Huawei,High-Throughput LLM inference on Heterogeneous Clusters,lightweight profiling while avoiding resource-intensive throughput benchmarks; a scheduler that accounts for both instance computational capacity and memory usage; exhaustive search method,2,4,2
-
+2025,ISCA,KAIST,EOD: Enabling Low Latency GNN Inference via Near-Memory Concatenate Aggregation, concatenated ZVC compression; precomputation for neighborhood explosion problem,2,3,2
 # #### Heterogeneous Device Task Scheduling
 # Solution: assigning different parts of the LLM serving workload to the most suitable heterogeneous devices to maximize throughput and minimize latency.
+2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture, dynamic DPU allocation for multitasking; fine-grained scheduling,3,2,2
+2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
 2025,arXiv,NUS,Data-aware Dynamic Execution of Irregular Workloads on Heterogeneous Systems,lightweight and input-aware framework; multiobjective and multi-constraint design space; dynamically creating optimal schedules,,,
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
+2025,HPCA,Samsung,PAISE: PIM-Accelerated Inference Scheduling Engine for Transformer-based LLM, task scheduling algorithm across host and PIM; interleave-batched GEMM; data layout adjustment,2,3,3
 
 # ### LLM Training Heterogeneous Systems
 # Solution: compared to [LLM Inference Heterogeneous Systems](#LLM-Inference-Heterogeneous-Systems), need to solve the backward compatibility and heterogeneity issues.
@@ -216,7 +231,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,SOSP,UPenn,When Idling is Ideal: Optimizing Tail-Latency for Heavy-Tailed Datacenter Workloads with Perséphone,reserve cores; non-conserving; request dispatching algorithm,,,
 2017,HPCA,UGent,Reliability-Aware Scheduling on Heterogeneous Multicore Processors,core reliability characteristics difference; system soft error rate; sampling-based reliability-aware scheduling algorithm,,,
 2020,TCAD,ASU,Runtime Task Scheduling Using Imitation Learning for Heterogeneous Many-Core Systems,offline Oracle optimizaion strategy; hierarchical imitation learning based scheduling; two-level scheduling,,,
-2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture,"Virtual PIM" framework; dynamic DPU allocation for multitasking;fine-grained scheduling,3,2,2
 
 # ### Speculative Execution (Non-LLM) <a name="Speculative-Execution-Non-LLM"></a>
 # Solution: balancing the potential performance gains from speculative executions, including accurately predicting outcomes, handling incorrect speculations and their side effects across multiple nodes.
@@ -235,6 +249,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,MIT,Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints,fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments,3,4,2
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
 
+# ##### Info Predict Scheduling
+# Challenge: The general schedule if for better batching and meeting the SLO requirements. By predicting the information of the requests, we can make the schedule more efficient.
+2023,Nips,Harvard,S3: Increasing GPU Utilization during Generative Inference for Higher Throughput,predict the length of LLM request to fixed types; Orca based dynamic batching,3,2,3
+2024,ASPLOS,UIUC,Efficient Interactive LLM Serving with Proxy Model-based Sequence Length Prediction,length prediction; left time prediction; bert-based proxy model,4,3,2
+
 # #### LLM Application-Level Scheduling
 # Solution: to optimize the end-to-end latency of the application, including the scheduling of the LLM instances.
 2024,OSDI,SJTU,Parrot: Efficient Serving of LLM-based Applications with Semantic Variable,Semantic Variable; application-level information; LLM applications as first-class citizens,,,
@@ -242,6 +261,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Yext,SLA Management in Reconfigurable Multi-Agent RAG: A Systems Approach to Question Answering,constantly changing and sometimes adverse conditions; Dynamically Reconfigurable Horizontal Scaling Framework; dynamically adjust resource allocation based on query requirements,,,
 2025,arXiv,Berkeley,Autellix: An Efficient Serving Engine for LLM Agents as General Programs,"formalize agentic programs as dynamic, non-deterministic DAGs; non-clairvoyant scheduler; simple load-balancing policy to balance data locality and KV-cache recomputation",,,
 2025,ICDCS,SJTU,LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications,"a DAG with regular stage, LLM stage, dynamic stage; bayesian network-based profiler; identify uncertainty-reducing stages",4,4,3
+2025,arXiv,SJTU,Efficient Serving of LLM Applications with Probabilistic Demand Modeling,DAG-based scheduling; dynamic excution; cpu excutor warmup,3,1,1
 
 # #### LLM Speculative Inference <a name="Speculative-Execution-LLM"></a>
 # Refer to non-LLM [speculative execution](#Speculative-Execution-Non-LLM).
@@ -267,7 +287,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Task Offloading
 2024,arXiv,USTC,Collaborative Inference for Large Models with Task Offloading and Early Exiting,early exit mechanism; jointly optimize its offloading strategy and the confidence threshold; distributed task offloading algorithm,,,
-
+2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,integer linear programming for offload optimization; PIM-friendly mapping representation; accurate cost modeling for data layout,4,2,3
 
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
@@ -299,6 +319,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
 2025,ISCA,DeepSeek,Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures,software-hardware co-design for deepseek-v3; insight into hardware for ai architectures,5,5,4
+2024,Mlsys,SJTU,FlashDecoding++: Faster Large Language Model Inference on GPUs,asynchronized softmax with unified max value; flat GEMM optimization with double buffering; heuristic dataflow with hardware resource adaptation,4,4,3
 
 # #### SLO-Aware Systems
 # Challenge: providing service for users to meet specific latency requirements with limited resources.
@@ -398,6 +419,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### RLHF System
 # Challenge: RLHF system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
 2025,EuroSys,HKU,HybridFlow: A Flexible and Efficient RLHF Framework,auto-mapping model placement; 3D-HybridEngine to reduce the communication overhead; hybrid programming,4,4,3
+2025,arXiv,Alibaba,Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library,bind many LLMs in one device cluster; fix the batch problem of long tail requests; reuse many utils in HybridFlow,4,4,2
 
 
 # ### Communication-Computation Overlap
