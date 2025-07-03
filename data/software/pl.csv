@@ -1,0 +1,68 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+
+# ## Language design and semantics
+# Solution: user-friendly, resource-efficient, and secure programming languages
+
+# ## Compiler construction and optimization
+# Solution: improving performance, reducing resource usage, and ensuring correctness
+
+# ### Deep Learning Compilers
+# Solution: Graph transformations, Kernel fusion, Tensor optimization for compute and memory
+2013,PLDI,MIT,Halide: A Language and Compiler for Optimizing Parallelism Locality and Recomputation in Image Processing Pipelines,image process DSL; Compute and Schedule Separation IR Design Idea; Pipeline optimization,4,4,3
+2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
+2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
+2025,arXiv,PKU,TileLang: A Composable Tiled Programming Model for AI Systems,tile-based programming; tvm-based compiler; compared to trition is more flexible,4,4,3
+
+# ### Domain-Specific Languages
+# Solution: formal semantics definition, tool generation automation, cross-domain generalization
+
+# #### Sparse Tensor Algebra Compilers
+# Solution: multi-format iteration efficiency, format combination optimization, architecture-agnostic code generation
+2018,OOPSLA,MIT,Format Abstraction for Sparse Tensor Algebra Compilers,coordinate hierarchies; level formats abstraction; property-based merge lattice optimizations; level iterator conversion,4,4,3
+2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
+2022,OOPSLA,MIT,Compilation of Dynamic Sparse Tensor Algebra,node schema language; assembly abstract interface; map function generation; iterator optimization; dynamic tensor format composition,4,4,3
+
+# ### Hardware Description Languages
+# Solution: expressive hardware specification, efficient simulation and synthesis, robust verification methodologies
+
+# #### Streaming Computation Models
+# Solution: high-throughput data processing, real-time analytics, efficient resource utilization for continuous data
+2020,ASPLOS,Stanford,Fleet: A Framework for Massively Parallel Streaming on FPGAs,user write serial code for parallel; multi-stream parallelism; ready-valid signaling,3,4,3
+
+# #### HLS Code Generation and Automation
+# Solution: bridging high-level languages to hardware, design space exploration, QoR improvement automation
+
+# ##### General HLS Compiler
+# C/C++/SystemC to RTL, microarchitecture optimization, resource sharing and scheduling
+2022,ASPLOS,UCLA,HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair,automated test generation; dependence-guided search space pruning; early candidate rejection using coding styles,3,4,3
+2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,4
+2022,FPGA,Cornell,HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs,Decoupled data placement; Unified data placement primitive; Multi-level memory hierarchy optimization,4,4,4
+2024,DATE,UIUC,Subgraph Extraction-Based Feedback-Guided Iterative Scheduling for HLS,ISDC iterative SDC scheduling; subgraph extraction-based low-level feedback; fanout and window-based subgraph extraction mechanism,4,4,4
+2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
+
+# ##### HLS Verification and Testing
+# Solution: automated bug detection, verification dataset generation, LLM-aided debugging for HLS designs
+2024,LAD,UIUC,An Iteratively-refined Dataset for High-Level Synthesis Functional Verification through LLM-Aided Bug Injection,Chrysalis dataset with bug injection; ICL+RAG+CoT bug injection methodology; iteratively-refined HLS verification dataset,4,4,4
+
+# ##### Dataflow HLS acceleration
+# Solution: exploiting task-level parallelism, optimizing inter-kernel communication, maximizing pipeline throughput
+2024,ASPLOS,UIUC,HIDA: A Hierarchical Dataflow Compiler for High-Level Synthesis,hierarchical dataflow IR (HIDA-IR); multi-level dataflow optimizer (HIDA-OPT); pattern-driven task fusion,3,5,4
+2025,FPGA,UCLA,Stream-HLS: Towards Automatic Dataflow Acceleration,automatic dataflow HLS; global scheduling for streaming; MINLP for HLS optimization,4,4,4
+
+# ##### HLS for specialized hardware
+# Solution: target-specific code generation, custom memory interface synthesis, co-optimization with physical constraints
+2023,FPGA,UoP,DONGLE: Direct FPGA-Orchestrated NVMe Storage for HLS,HLS direct NVMe access; FPGA-orchestrated storage; Unified HLS storage interface; Single-source HLS for storage; DONGLE architecture,4,4,4
+2023,FPGA,HKUST,FADO: Floorplan-Aware Directive Optimization for High-Level Synthesis Designs on Multi-Die FPGAs,Floorplan-aware HLS; Multi-die FPGA optimization; Directive-floorplan co-optimization; Incremental floorplanning for HLS; MMBP for HLS DSE,3,4,4
+2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
+
+# ## Program analysis
+# Solution: statically or dynamically analyzing programs to understand their behavior, detect errors, and optimize performance
+
+# ### Domain-specific program analysis
+# Solution: leveraging domain knowledge for precise analysis, specialized bug detection, targeted optimization insights
+2024,PPoPP,Information Engineering University,A Holistic Approach to Automatic Mixed-Precision Code Generation and Tuning for Affine Programs,holistic code generation and tuning; polyhedral model for mixed-precision; model-driven autotuning,4,5,4
+2024,PPoPP,University of Delaware,Recurrence Analysis for Automatic Parallelization of Subscripted Subscripts,recurrence analysis for parallelization; subscripted subscript analysis; intermittent monotonicity detection,3,4,3
+
+# #### HLS program analysis
+# Solution: verifying functional correctness of HLS, analyzing performance bottlenecks, ensuring interface compatibility
+2025,FPGA,UoE,Latency Insensitivity Testing for Dataflow HLS Designs,Automated Latency Insensitivity Testing; Parallel Hardware-Accelerated Testing Platform; Test space reduction; Stalling Units (SU),4,4,4

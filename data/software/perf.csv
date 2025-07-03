@@ -1,0 +1,101 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+
+# ## Profilers (sampling, instrumentation)
+
+# ### Detection
+
+# #### Bottleneck Analysis
+# Challenge: Bottleneck Analysis faces challenges of high system complexity, unexpected real-world factors and the resource constraints when detecting.
+2018,PPoPP,THU,vSensor: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection,fixed-workload snippets; dependency propagation algorithm; lightweight on-line analysis algorithm,,,
+2020,SC,THU,ScalAna: automating scaling loss detection with graph analysis,program structure graph; program performance graph; backtracking root cause detection algorithm,,,
+2022,PPoPP,THU,Vapro: Performance Variance Detection and Diagnosis for Production-Run Parallel Applications,state transition graph; fixed workload snippets identification clustering algorithm; variance breakdown model; time of factors quantification method,,,
+2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
+2024,SC,BUAA,GVARP: Detecting Performance Variance on Large-Scale Heterogeneous Systems,asynchronous state transition graph; parameter-based workload estimation method; asynchronous event tracing technology,,,
+
+# #### Variance Attribution
+2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound,,,
+2016,TPDS,ICT,Understanding Big Data Analytics Workloads on Modern Processors,top-down analysis for big data workload; pipeline-characteristics basd performance implication analysis; BigDataBench benchmark,,,
+2019,SC,NCSU,Pinpointing Performance Inefficiencies via Lightweight Variance Profiling,function-level variance detection; stack based deep call chains maintain; on-the-fly binary analysis technique for calling context,,,
+
+# #### Root Cause Analysis
+# Challenge: difficulties in dependency graph modeling, scalability of detection algorithm for large-scale applications.
+2003,TISSEC,IBM,Clustering Intrusion Detection Alarms to Support Root Cause Analysis,attribute-oriented induction based clustering algorithm; generalized alarm analysis,2,3,2
+2017,Arxiv,Intel; CA technologies,Survey on Models and Techniques for Root-Cause Analysis,deterministic/probabilistic model; RCA learning algorithms; RCA inference algorithms,4,1,1
+2021,ASE,eBay,Groot: An Event-graph-based Approach for Root Cause Analysis in Industrial Settings,event-graph based RCA; service dependency graph; event causality graph; pagerank based root cause ranking,4,5,2
+2021,ASPLOS,Cornell,Sage: Practical & Scalable ML-Driven Performance Debugging in Microservices,RPC latency decomposition model; Markov based RPC latency propagation; causal bayesian network based dependency model,3,3,2
+2023,ASPLOS,Alibaba,Sleuth: A Trace-Based Root Cause Analysis System for Large-Scale Microservices with Graph Neural Networks,HDBSCAN trace clustering algorithm; GNN based dependency modeling,3,3,2
+
+# #### Burst Detection
+# Challenge: maintaining accuracy at high speed data streams, tradeoff between memory usage and detection accuracy.
+
+# ##### Heavy Hitter Burst
+2019,CloudNet,PKU,Dynamic Sketch: Efficient and Adjustable Heavy Hitter Detection for Software Packet Processing,door keeper mechanism for high memory efficiency; bucket sampling for accuracy monitoring,3,3,1
+2021,SIGMOD,PKU,BurstSketch: Finding Bursts in Data Streams,running track based burst item filtering; snapshotting based burst item detection,3,3,1
+2023,SIGMOD,PKU,Double-Anonymous Sketch: Achieving Top-𝐾-fairness for Finding Global Top-𝐾 Frequent Items,double-anonymity technique; randomized admission policy for top-k stage; CMM sketch for count stage,3,4,2
+2024,IFIP NPC,PKU,2FA Sketch: Two-Factor Armor Sketch for Accurate and Efficient Heavy Hitter Detection in Data Streams,improved arbitration strategy for in-bucket competition; cross-bucket conflict avoidance hashing scheme,2,3,1
+2024,IEEE ICDE,PKU,Scalable Overspeed Item Detection in Streams,bucket sharing based basic speedsketch algorithm; global-clock for reducing timestamp overhead; counter-flip technique for compression,3,4,2
+
+
+# #### Straggler Analysis
+# Challenge: stragglers can arise from various complex factors, identifying their root causes and quantifying their impact on performance is difficult.
+2019,TSC,BUAA,Straggler Root-Cause and Impact Analysis for Massive-scale Virtualized Cloud Datacenters,detailing straggler filtration based root cause analysis; DoS-indexf for straggler detection,3,3,1
+2020,TJSC,QMUL&NUDT,Tails in the cloud: a survey and taxonomy of straggler management within large‑scale cloud data centres,taxonomy of straggler causes; straggler management technique,3,1,1
+2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
+2025,Arxiv,NYU&ByteDance,Understanding Stragglers in Large Model Training Using What-if Analysis,what-if analysis; dependency model based simulation; SMon monitoring system,3,4,2
+
+# ##### Other Bursts
+2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
+2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
+2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
+
+
+# #### Network Tomography
+
+# ##### Survey
+2004,STAT SCI,Berkeley,Network Tomography: Recent Developments,tomography linear model; multicast delay distribution inference; origin–destination traffic matrix inference,3,1,1
+
+# ##### Passive Inference
+2003,IMC,AT&T Laboratories,Simple Network Performance Tomography,smallest consistent failure set algorithm; seperable performance; false positive/coverage probability estimation of bad links,3,3,3
+2014,ICDCS,ZJU,Domo: Passive Per-Packet Delay Tomography in Wireless Ad-hoc Networks,FIFO/order/sum-of-delays constraints for delay reconstruction; semi-definite relaxation based optimization,4,3,2
+
+# ##### Active Inference
+2022,ICASSP,UMich,Unicast-based inference of network link delay distributions using mixed finite mixture models,dirac delta based mixed finite mixture model; EM algorithm for parameter evaluation,3,2,2
+2003,IEEE TSP,Rice University,Network Delay Tomography,end-to-end packet pair link delay distribution estimation; FFT based expectation-maximization acceleration algorithm,3,3,2
+2021,IEEE TNSM,QMUL,Optimal Estimation of Link Delays Based on End-to-End Active Measurements,active network monitoring framework; ILP/heuristic/meta-heuristic algorithm for monitoring flows selection,3,3,2
+
+# ### Profiling Techniques
+
+# #### Extended Berkeley Packet Filter
+# Solution: A technique used for dynamically programing the kernel for efficient networking, observability, tracing, and security.
+2020,CSUR,UFMG,Fast Packet Processing with eBPF and XDP: Concepts, Code, Challenges, and Applications,eBPF machine architecture; eBPF system workflow; current limitationss on eBPF,3,1,1
+2024,eBPF,THU,Understanding Performance of eBPF Maps,eBPF map benchmark; impact of cache hotness on eBPF map; volume discount feature of eBPF program,4,4,2
+2025,OSDI,HKU,NEUTRINO: Fine-grained GPU Kernel Profiling via Programmable Probing,densified memory access timeline; snippet,tracepoint,map based probe design; python DSL based user interface,4,5,2
+2025,EuroSys,UW–Madison,Revealing the Unstable Foundations of eBPF-Based Kernel Extensions,potential mismatches dataset; dependency surface/set analysis,4,4,2
+
+# ## Simulators and emulators (for software/system analysis)
+# Challenge: how to balance the accuracy, time cost and complexity of a simulator.
+
+# ### General Performance Modeling
+# Focusing on the performance modeling for general systems. The LLM performance modeling is in the [LLM Performance Modeling](#LLM-Performance-Modeling) section.
+2009,CACM,Berkeley,Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures,operational intensity; memory bound; compute bound,,,
+2014,IISWC,ETH Zurich,Extending the Roofline Model: Bottleneck Analysis with Microarchitectural Constraints,dag-based performance model; Tomasulo's greedy algorithm; scheduled dag based bottleneck modeling,3,4,3
+2021,Intelligent Computing,Berkeley,Hierarchical Roofline Performance Analysis for Deep Learning Applications,Nsight Compute based hierarchical roofline model; FP16、FP32 extension for ERT,,,
+2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
+
+# ### LLM Performance Modeling <a name="LLM-Performance-Modeling"></a>
+# Solution: LLM inference is expensive, performance modeling can help decide on the best configuration for the given system without actually running the LLM.
+
+# #### LLM Serving Performance Modeling
+2024,arXiv,KAIST,LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale,iteration-level simulation; computation reuse optimization; heterogeneous accelerator mapping,,,
+2024,Mlsys,GIT,Vidur: A Large-Scale Simulation Framework For LLM Inference,Operation-level simulation; Using the simulator to search the best configuration for the given system,3,3,3
+
+# #### LLM Training Performance Modeling
+2025,MLSys,Cornell,Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training,trace-driven performance modeling and estimation toolkit; the first system to provide accurate performance models that effectively capture the execution behaviors of LLMs; modify and generate new execution graphs from existing traces,3,4,2
+
+
+# ## Benchmarking methodologies and suites
+
+# ### Benchmark
+# Solution: benchmark targeted at performance analysis and characterization.
+2018,ICPP,WUSTL,Varbench: an Experimental Framework to Measure and Characterize Performance Variability,spatial/temperal variability; Resource Variability (RV) statistic,,,
+2021,IEEE Access,D-ITET,DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,NDP focused workload characterization methodology; memory-bound function identification; locality-based clustering; memory bottlenecks classification,,,

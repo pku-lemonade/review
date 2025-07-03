@@ -1,0 +1,101 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+
+# ## Algorithm design and analysis
+# Solution: an algorithm is a well-defined, finite sequence of steps that solves a specific problem or accomplishes a particular task. We focus on algorithms that can solving problems.
+
+# ### ML Algorithms
+# Soultion: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
+
+# #### LLM Algorithm
+# Solution: enable ai chat with human, some people think is the way to AGI.
+2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
+
+# ##### LLM Transformer
+# Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
+2019,arXiv,Google,Fast Transformer Decoding: One Write-Head is All You Need,MQA; share same KV cache for all heads; multi-query attention,1,4,3
+2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
+2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
+
+# ##### LLM Alignment
+# Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
+2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
+2025,ICLR,Princeton,Safety Alignment Should Be Made More Than Just a Few Tokens Deep,ai-savety centered alignment; enhance sacety on deeper tokens and data,3,3,3
+
+# ##### LLM Finetune
+# Solution: finetune adapts a pre-trained model to a specific task or domain. By doing so, the model can better fit the specific task or domain.
+2021,ICLR,Miscrosoft,LoRA: Low-Rank Adaptation of Large Language Models,split the weight matrix into two parts; reduce the number of parameters to finetune,2,4,4
+
+# ###### Coding LLM Finetune
+2024,arXiv,UMD,HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages,large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools,,,
+
+# ###### LLM-Powered AI Agent
+2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
+
+# #### RL Algorithms
+# Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
+2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
+
+# ### Quantization
+# Solution: Quantization are focusing on tradeoffs of accuracy and computation/memory. The challenges are how to run models in high performance and low memory/computation cost.
+# #### Adaptive Datatype
+# Solution: Adaptive datatypes aim to optimize numerical representation by dynamically adjusting to the precision and range requirements of data. The challenge lies in balancing computational efficiency, memory usage, and accuracy across diverse tasks and hardware constraints.
+# ##### For LLM
+2025,arXiv,Rice,"70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float",dynamic-length float; preserving bit-for-bit identical outputs; BFloat16 exponents carry significantly less information than their allocated bit width,4,4,4
+2025,HPCA,SJTU,M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type,group-wise quantization for both weight and KV cache; new encoding paradigm to improve information utilization in group-wise quantization; specific processing element for encoding paradigm,4,4,2
+2025,HPCA,Cornell,BitMoD: Bit-serial Mixture-of-Datatype LLM Acceleration,introduce additional asymmetry to FP by repurposing a redundant zero value with another special value; hardware accelerator design,3,3,3
+
+# ##### For Non-LLM
+2020,CVPR,ByteDance Inc.,AdaBits: Neural Network Quantization With Adaptive Bit-Widths,joint-quantization method applied in training;Switchable Clipping Level (SCL) between layers,4,3,3
+2022,ICLR,Snap Inc.,F8Net: Fixed-Point 8-bit Only Multiplication for Network Quantization,variance-based fixed-point format selection for weights and activations; training algorithm for fixed-point models,3,3,2
+2022,MICRO,SJTU,ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization,fixed-length adaptive numerical data type; combines the advantages of float and int for adapting to the importance of different values within a tensor; adaptive framework that selects the best type for each tensor,,,
+2024,TCAD,HKU,DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference,adaptive data representation with variablelength encoding; hardware-aware quantization framework,,,
+2024,arXiv,Harvard,"Nanoscaling Floating-Point (NxFP): NanoMantissa, Adaptive Microexponents, and Code Recycling for Direct-Cast Compression of Large Language Models",Nanoscaling Floating-Point (NxFP); NanoMantissa; Adaptive Microexponents; Code Recycling,,,
+
+# #### General method
+# Solution: General quantization methods aim to optimize the trade-off between model accuracy and computational efficiency. Challenges include addressing layer-specific quantization errors, enhancing fault tolerance, and finding optimal bit-width configurations.
+# ##### For General LLM
+2023,ISCA,SJTU,OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization,outlier-victim pair that sacrifices the colocated normal values to accommodate the outliers;OVP-based quantization framework and architectural implementation,4,4,2
+2023,ICML,MIT,SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models,offline migrates the quantization difficulty from activations to weights,4,5,3
+2024,ISCA,SNU,Tender: Accelerating Large Language Models via Tensor Decomposition and Runtime Requantization,“power of 2” channel decomposition rule; Tender accelerator design,4,3,2
+2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
+2025,AAAI,ByteDance,ABQ-LLM: Arbitrary-Bit Quantized Inference Acceleration for Large Language Models,block-wise distribution correction and compensation scheme; bit balance strategy,4,3,2
+
+# ###### KV Cache specialized
+2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,2,2,3
+2025,arXiv,SJTU,MILLION: Mastering Long-Context LLM Inference Via Outlier-Immunized KV Product Quantization,a non-uniform quantization algorithm based on product quantization; leverages sparse computation and asynchronous quantization; distributes quantization power unevenly across channels,3,4,2
+
+# ##### For Non-LLM
+2018,AAAI,SUTD,Adaptive Quantization for Deep Neural Network,measurement to estimate the effect of parameter quantization errors in individual layers;optimization process for finding optimal quantization bit-width for each layer,3,3,4
+2020,ISCA,SJTU,DRQ: Dynamic Region-based Quantization for Deep Neural Network Acceleration,dynamic region-based quantization algorithm; sub-feature map quantization; accelerator architecture for proposing dynamic region-based quantization,4,3,2
+2021,MLSys,Nvidia,VS-Quant: Per-vector Scaled Quantization for Accurate Low-Precision Neural Network Inference,per-vector(≈16-64 elements) scaled quantization technique; two-level scaling scheme and algorithm; modified MAC unit in accelerator,4,3,5 
+2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to enhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
+2023,ACML,KOBE-U,A Mixed-Precision Quantization Method without Accuracy Degradation Using Semilayers,semilayers based on whether loss difference is positive or negative,3,2,2
+
+# ### DNN Compression
+# Solution: DNN compression aims to reduce the size and computational requirements of deep neural networks
+2016,ICLR,Stanford,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding","three stage pipeline: pruning, trained quantization and Huffman coding",4,4,4
+2020,JSTSP,Fraunhofer HHI,DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks,identify set of priors in DNN; redefine CABAC's core scheme to capture priors,3,5,3
+
+# ### Statistical Parameter Estimation
+# Solution: infer the distribution of variables using statistical methods from observed data
+1977,JRSSB,Harvard,Maximum Likelihood from Incomplete Data via the EM Algorithm,incomplete data; maximum likelihood expectation algorithm,2,1,3
+2016,Big Data,LPNU,"Machine Learning, Linear and Bayesian Models for Logistic Regression in Failure Detection Problems",extreme gradient boosting classifier; generalized linear model,2,1,2
+2023,J Process Contr,UA,Modeling and Bayesian inference for processes characterized by abrupt variations,dynamic latent variable model; variational Bayesian inference framework,3,2,2
+
+# ## Data structures
+# Solution: organizing and storing data efficiently to enable fast access, modification, and processing
+
+# ### Dynamic Graph Processing
+# Solution: data structures for processing dynamic graphs, which are graphs that change over time.
+
+# #### Architecture-specific Data Structures
+# Solution: Data structures targeting specific hardware architectures
+2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
+2024,VLDB,PKU,Towards Sufficient GPU-Accelerated Dynamic Graph Management: Survey and Experiment,topology structure; attribute storage; auxiliary structures,4,4,2
+
+# ## Computational complexity
+# Solution: analyzing and classifying how the time and space requirements of an algorithm grow as the input size increases.
+
+
+# ## Computability theory
+# Solution: helping to identify the fundamental limits of what can be computed, regardless of time or space constraints.
