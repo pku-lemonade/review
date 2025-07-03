@@ -282,6 +282,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Energy-Optimized LLM Scheduling
 2025,arXiv,UvA,GREEN-CODE: Optimizing Energy Efficiency in Large Language Models for Code Generation,dynamic early exit; energy-aware code generation; reinforcement learning for llms,,,
 
+# #### Multi-LLM Scheduling
+2025,arXiv,UCLA,Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving,Long-tail model popularity; Frequent idle periods; Rapid workload fluctuations,3,4,2
+
 # ### DNN Scheduling
 # Solution: optimizing data parallelism and model parallelism while minimizing communication overhead between nodes, effectively managing limited GPU memory and other resources to achieve scalability and high throughput.
 # Refer to [LLM-Related Scheduling](#LLM-Related-Scheduling) for the LLM-related scheduling algorithms.
