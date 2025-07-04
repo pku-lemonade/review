@@ -78,7 +78,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,UW–Madison,Revealing the Unstable Foundations of eBPF-Based Kernel Extensions,potential mismatches dataset; dependency surface/set analysis,4,4,2
 
 # ##### eBPF Like Applications
+2024,TNET,UCR,SPRIGHT: High-Performance eBPF-Based Event-Driven, Shared-Memory Processing for Serverless Computing,event-driven shared memory processing; direct function routing;zero-copy message delivery method,3,4,3
 2025,OSDI,HKU,NEUTRINO: Fine-grained GPU Kernel Profiling via Programmable Probing,densified memory access timeline; snippet,tracepoint,map based probe design; python DSL based user interface,4,5,2
+2025,HCDS,UCSC,eGPU: Extending eBPF Programmability and Observability to GPUs,dynamic PTX injection; real-time synchronization to avoid race conditions,3,2,2
 
 
 # ## Simulators and emulators (for software/system analysis)
