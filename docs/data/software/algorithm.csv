@@ -71,6 +71,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to enhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
 2023,ACML,KOBE-U,A Mixed-Precision Quantization Method without Accuracy Degradation Using Semilayers,semilayers based on whether loss difference is positive or negative,3,2,2
 
+# ##### Quantization-Aware Training
+# Solution: Quantization-aware training (QAT) is a technique that simulates the effects of quantization during the training process, allowing the model to learn to adapt to the quantization noise.
+2018,arXiv,IBM,PACT: Parameterized Clipping Activation for Quantized Neural Networks,activation quantization scheme for finding the optimal quantization scale during training,3,4,3
+2020,ICLR,IBM,Learned Step Size Quantization,approximate the gradient to the quantizer step size; heuristic to bring the magnitude of step size updates into better balance with weight updates,3,4,3
+
 # ### DNN Compression
 # Solution: DNN compression aims to reduce the size and computational requirements of deep neural networks
 2016,ICLR,Stanford,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding","three stage pipeline: pruning, trained quantization and Huffman coding",4,4,4
