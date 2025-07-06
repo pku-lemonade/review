@@ -280,6 +280,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Spec + Others
 2025,arXiv,Huawei,Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling,speculative MoE; speculative token shuffling; speculative expert pre-grouping,,,
 2025,INFOCOM,UoA,SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models,internal neurons sparsification; model-agnostic acceleration framework; dynamic early-exit thresholds; multi-layered feature fusion,,,
+2025,arXic,SUST,FlowSpec: Continuous Pipelined Speculative Decoding for Efficient Distributed LLM Inference,SPEC on memory limited dedvices; Efficient draft management with tree pruning and early stop reduces redundancy and maintains causal relationships,3,3,3
 
 # #### LLM Serving Outages and Incidents
 2025,arXiv,Vrije Universiteit Amsterdam,An Empirical Characterization of Outages and Incidents in Public Services for Large Language Models,empirical characterization of outages; failure recovery optimization; public LLM service reliability,,,
