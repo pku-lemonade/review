@@ -213,7 +213,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,Samsung,PAISE: PIM-Accelerated Inference Scheduling Engine for Transformer-based LLM, task scheduling algorithm across host and PIM; interleave-batched GEMM; data layout adjustment,2,3,3
 
 # ##### Task Scheduling for specific tasks
-# Solution: In specific scene, the schedule goal is different. Assigning tasks to differnets can fix the gap between the characteristics of devices' and tasks'.
+# Solution: In specific scene, the schedule goal is different. Assigning tasks to differnet devices can fix the gap between the characteristics of devices' and tasks'.
 2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
 2025,arXiv,PKU,Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC,agent application-specific scheduling on heterogeneous SoC; heterogeneous execution graph with eastic kernels; bandwidth-aware dispatch for NPU-iGPU contention mitigation,3,2,3
