@@ -95,11 +95,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### KV cache store
 # Solution: store the KV cache in the memory or other storage device, supporting multi-level storage.
 2024,ATC,Huawei,Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention,store KV cache in the memory; multi level KV cache management; position mask modified,3,3,3
+2024,SIGCOMM,UChicago,CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving,efficient KV Cache streaming; KV Cache compression; knowledge delivery network; The transfer part of LMCache,3,4,3
+2024,EuroSys,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices; The system intro of LMCache,3,4,3
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
-2024,arXiv,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices,,,
 
 # #### KV Cache Storage Systems
 # Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
