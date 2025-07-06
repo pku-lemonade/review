@@ -3,6 +3,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Intergrate the compute unit into the SSD controller to process the capacity-sensitive applications.
 2024,HPCA,UCLA,BeaconGNN: Large-Scale GNN Acceleration with Out-of-Order Streaming In-Storage Computing,DirectGraph format for out-of-order sampling; die-level processing units; channel-level command router,4,2,3
 2025,ISCA,ETHZ,REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing,In-Storage processing,2,4,3
+2025,ISCA,UCSD,In-Storage Acceleration of Retrieval Augmented Generation as a Service,metamorphic in-storage accelerator; Metadata Navigation Unit for dynamic data access,4,3,2
 # ### NDP: DIMM
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -79,6 +80,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Benchmark
 2019,DAC,ETHZ,NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning,simulator Ramulator-PIM; tracefile from Ramulator & run on zsim,,,
 2021,CAL,UVA,MultiPIM: A Detailed and Configurable Multi-Stack Processing-In-Memory Simulator,simulator MultiPIM; multi-stack & virtual memory support; parallel offloading,,,
+# #### NDP: Heterogeneous Architecture
+# Challenge: Different PIM architectures have different characteristics and performance trade-offs; communicating between different PIM architectures is challenging.
+2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
 # ### General CiM
 # #### Specific Application & Algorithm
 2024,ISVLSI,USC,Multi-Objective Neural Architecture Search for In-Memory Computing,"neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM",,,
