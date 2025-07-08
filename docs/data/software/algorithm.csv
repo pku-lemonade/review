@@ -73,7 +73,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Fault Tolerance
 # Solution: Fault tolerance in quantization ensures that models remain robust and reliable despite errors or noise
-2019,DFT,Xilinx,Efficient Error-Tolerant Quantized Neural Network Accelerators,selective channel replication; fault-aware scheduling of  processing elements for folded implementations,3,2,3
+2019,DFT,Xilinx,Efficient Error-Tolerant Quantized Neural Network Accelerators,selective channel replication; fault-aware scheduling of processing elements for folded implementations,3,2,3
 2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to enhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
 
 # ##### Quantization-Aware Training
