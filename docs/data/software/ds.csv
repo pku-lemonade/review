@@ -95,11 +95,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### KV cache store
 # Solution: store the KV cache in the memory or other storage device, supporting multi-level storage.
 2024,ATC,Huawei,Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention,store KV cache in the memory; multi level KV cache management; position mask modified,3,3,3
+2024,SIGCOMM,UChicago,CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving,efficient KV Cache streaming; KV Cache compression; knowledge delivery network; The transfer part of LMCache,3,4,3
+2024,EuroSys,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices; The system intro of LMCache,3,4,3
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
-2024,arXiv,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices,,,
 
 # #### KV Cache Storage Systems
 # Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
@@ -204,13 +205,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SPAA,Huawei,WindVE: Collaborative CPU-NPU Vector Embedding,seamless CPU-NPU collaboration for vector embedding; linear regression based estimator; high-throughput offloading vector embedding,2,4,3
 2025,arXiv,Huawei,High-Throughput LLM inference on Heterogeneous Clusters,lightweight profiling while avoiding resource-intensive throughput benchmarks; a scheduler that accounts for both instance computational capacity and memory usage; exhaustive search method,2,4,2
 2025,ISCA,KAIST,EOD: Enabling Low Latency GNN Inference via Near-Memory Concatenate Aggregation, concatenated ZVC compression; precomputation for neighborhood explosion problem,2,3,2
+
 # #### Heterogeneous Device Task Scheduling
 # Solution: assigning different parts of the LLM serving workload to the most suitable heterogeneous devices to maximize throughput and minimize latency.
 2023,PACT,Yonsei,Virtual PIM: Resource-aware Dynamic DPU Allocation and Workload Scheduling Framework for Multi-DPU PIM Architecture, dynamic DPU allocation for multitasking; fine-grained scheduling,3,2,2
-2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
 2025,arXiv,NUS,Data-aware Dynamic Execution of Irregular Workloads on Heterogeneous Systems,lightweight and input-aware framework; multiobjective and multi-constraint design space; dynamically creating optimal schedules,,,
-2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
 2025,HPCA,Samsung,PAISE: PIM-Accelerated Inference Scheduling Engine for Transformer-based LLM, task scheduling algorithm across host and PIM; interleave-batched GEMM; data layout adjustment,2,3,3
+
+# ##### Task Scheduling for specific tasks
+# Solution: In specific scene, the schedule goal is different. Assigning tasks to differnet devices can fix the gap between the characteristics of devices' and tasks'.
+2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
+2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
+2025,arXiv,PKU,Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC,agent application-specific scheduling on heterogeneous SoC; heterogeneous execution graph with eastic kernels; bandwidth-aware dispatch for NPU-iGPU contention mitigation,3,2,3
 
 # ### LLM Training Heterogeneous Systems
 # Solution: compared to [LLM Inference Heterogeneous Systems](#LLM-Inference-Heterogeneous-Systems), need to solve the backward compatibility and heterogeneity issues.
@@ -274,6 +280,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Spec + Others
 2025,arXiv,Huawei,Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling,speculative MoE; speculative token shuffling; speculative expert pre-grouping,,,
 2025,INFOCOM,UoA,SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models,internal neurons sparsification; model-agnostic acceleration framework; dynamic early-exit thresholds; multi-layered feature fusion,,,
+2025,arXic,SUST,FlowSpec: Continuous Pipelined Speculative Decoding for Efficient Distributed LLM Inference,SPEC on memory limited dedvices; Efficient draft management with tree pruning and early stop reduces redundancy and maintains causal relationships,3,3,3
 
 # #### LLM Serving Outages and Incidents
 2025,arXiv,Vrije Universiteit Amsterdam,An Empirical Characterization of Outages and Incidents in Public Services for Large Language Models,empirical characterization of outages; failure recovery optimization; public LLM service reliability,,,

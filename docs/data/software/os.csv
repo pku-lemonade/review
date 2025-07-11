@@ -22,7 +22,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: the trade-off between migration overhead and potential performance gains, complicated by prediction accuracy and hardware complexities
 2024,SC,THU,Hydrogen: Contention-Aware Hybrid Memory for Heterogeneous CPU-GPU Architectures,fast memory decoupled partitioning; token-based slow memory migration; epoch-based sampling method; consistent hashing based reconfiguration,,,
 2024,OSDI,UT Arlington, Nomad: Non-Exclusive Memory Tiering via Transactional Page Migration, Memory allocator for hardware tiering to mitigate outliers,,,
-
+2025,ISCA,XMU,ArtMem: Adaptive Migration in Reinforcement Learning-Enabled Tiered Memory,reinforcement learning for tiered memory management; dynamic adjustment of migration scope,2,4,3
 # ### Memory Pooling
 # Solution: Memory Pooling reduces the overhead of frequent memory allocation and deallocation by maintaining a pool of pre-allocated memory blocks for reuse.
 2023,ASPLOS,Virginia Tech,Pond: CXL-Based Memory Pooling Systems for Cloud Platforms,CXL-based memory pooling; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory,,,

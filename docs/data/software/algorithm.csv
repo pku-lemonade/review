@@ -68,8 +68,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,AAAI,SUTD,Adaptive Quantization for Deep Neural Network,measurement to estimate the effect of parameter quantization errors in individual layers;optimization process for finding optimal quantization bit-width for each layer,3,3,4
 2020,ISCA,SJTU,DRQ: Dynamic Region-based Quantization for Deep Neural Network Acceleration,dynamic region-based quantization algorithm; sub-feature map quantization; accelerator architecture for proposing dynamic region-based quantization,4,3,2
 2021,MLSys,Nvidia,VS-Quant: Per-vector Scaled Quantization for Accurate Low-Precision Neural Network Inference,per-vector(≈16-64 elements) scaled quantization technique; two-level scaling scheme and algorithm; modified MAC unit in accelerator,4,3,5 
-2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to enhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
+2021,ICML,Intel,Accurate Post Training Quantization With Small Calibration Sets,layer-by-layer optimization method; integer programming; para-normalization,3,3,3
 2023,ACML,KOBE-U,A Mixed-Precision Quantization Method without Accuracy Degradation Using Semilayers,semilayers based on whether loss difference is positive or negative,3,2,2
+
+# ##### Fault Tolerance
+# Solution: Fault tolerance in quantization ensures that models remain robust and reliable despite errors or noise
+2019,DFT,Xilinx,Efficient Error-Tolerant Quantized Neural Network Accelerators,selective channel replication; fault-aware scheduling of processing elements for folded implementations,3,2,3
+2023,DAC,Yonsei,RQ-DNN: Reliable Quantization for Fault-tolerant Deep Neural Networks,quantization to enhance fault tolerance caused by fault in memory; quantize to bimodal,3,3,3
+
+# ##### Quantization-Aware Training
+# Solution: Quantization-aware training (QAT) is a technique that simulates the effects of quantization during the training process, allowing the model to learn to adapt to the quantization noise.
+2018,arXiv,IBM,PACT: Parameterized Clipping Activation for Quantized Neural Networks,activation quantization scheme for finding the optimal quantization scale during training,3,4,3
+2020,ICLR,IBM,Learned Step Size Quantization,approximate the gradient to the quantizer step size; heuristic to bring the magnitude of step size updates into better balance with weight updates,3,4,3
 
 # ### DNN Compression
 # Solution: DNN compression aims to reduce the size and computational requirements of deep neural networks
