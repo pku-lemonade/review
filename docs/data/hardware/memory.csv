@@ -112,11 +112,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,TCAD,NTHU,MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks,sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion,,,
 2024,ESSCIRC,THU,A 65nm 8b-Activation 8b-Weight SRAM-Based Charge-Domain Computing-in-Memory Macro Using A Fully-Parallel Analog Adder Network and A Single-ADC Interface,SRAM-based CD-CiM architecture; charge-domain analog adder tree; ReLU-optimized ADC,4,4,4
 2021,ISSCC,TSMC,An 89TOPS/W and 16.3TOPS/mm2 All-Digital SRAM-Based Full-Precision Compute-In Memory Macro in 22nm for Machine-Learning Edge Applications,programmable bit-widths for both input and weights; SRAM and CIM mode,2,5,1
-# #### SRAM CIM: Specific Application
+# #### SRAM CIM: Specific Use or Application
 2023,TCAS-I,UIC,MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence,SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations,,,
+2024,TCAD,BUAA,DDC-PIM: Efficient Algorithm/Architecture Co-Design for Doubling Data Capacity of SRAM-Based Processing-in-Memory,doubling the equivalent data capacity of SRAM-based PIM; FCC algorithm to obtain bitwise complementary filters,4,4,2
 # #### SRAM CIM: Simulator & Modeling
 2020,ISCAS,JCU,MemTorch: A Simulation Framework for Deep Memristive Cross-Bar Architectures,"supports both GPUs and CPUs; integrates directly with PyTorch; simulate non-idealities of memristive devices within cross-bar, tested on VGG-16, CIFAR-10",,,
 2021,TCAD,Geogia Tech,DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training,non-ideal device properties of NVMS' effect for on-chip training,,,
+2025,DAC,BUAA,CIMFlow: An Integrated Framework for Systematic Design and Evaluation of Digital CIM Architectures,workflow for implementing and evaluating DNN workloads on digital CIM architectures; CIM-specific ISA design; compilation flow built on the MLIR infrastructure,4,2,3
 # #### SRAM CIM: Transformer Accelerator
 # Challenge: Transformer architecture is widely used in NLP and CV tasks. Existing SRAM CIM architectures are not suitable for transformer acceleration.
 2025,DATE,PKU,Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs,architecture model and simulator for CIM-based TPUs; designed for LLM inference,4,2,4
