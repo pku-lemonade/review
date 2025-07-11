@@ -6,6 +6,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,SC,THU,Switch-Less Dragonfly on Wafers: A Scalable Interconnection Architecture based on Wafer-Scale Integration,four-level topology structure; minimal routing algorithm on dragonfly for VC vumber reduction,,,
 2024,TCAS,SYSU,CINOC: Computing in Network-On-Chip With Tiled Many-Core Architectures for Large-Scale General Matrix Multiplications,computable input buffers;  thread execution free from fine-grained instruction control; data-aware thread execution,,,
 2025,ISCA,THU,PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer,mesh-switch physical topology; dual-granularity logical topology,4,3,2
+2025,ISCA,THU,WSC-LLM: Efficient LLM Service and Architecture Co-exploration for Wafer-scale Chips,optimal resource partition algorithm; optimal KV cache placement algorithm,4,3,2
+2025,ISCA,Georgia Tech‌,FRED: A Wafer-scale Fabric for 3D Parallel DNN Training,microswitch based distributed on-wafer topology; conflict-free collective routing algorithm; congestion-aware device placement policy,3,3,2
 # #### Topology
 # Challenge: Current NoC topologies are often rigid and not adaptable to the specific needs of heterogeneous chiplets.
 2021,HPCA,GWU,Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures,mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm,,,
