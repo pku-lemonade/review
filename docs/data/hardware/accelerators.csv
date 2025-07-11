@@ -1,4 +1,11 @@
 Year,Venue,Authors,Title,Tags,P,E,N
+# ### Graph Accelerators
+# Challenge: Massive memory requirement, Non-ordered memory access
+2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
+# #### Hypergraph Accelerators
+# Solution: Realize the shared parts in hyperedges
+2022,MICRO,HUST,A Data-Centric Accelerator for High-Performance Hypergraph Processing,Data-Centric; Load-Trigger-Reduce (LTR); Adaptive Data Loading,4,4,3
+2025,HPCA,HUST,MeHyper: Accelerating Hypergraph Neural Networks by Exploring Implicit Dataflows, Microedge; Microedge-Centric Dataflow; RePAG Execution Model,4,3,4
 # ### DNN Accelerators
 # #### Layer Fusion Accelerators
 # Solution: Use layer fusion to combine multiple layers of a neural network into a single layer. This can help reduce the number of computations and memory accesses required during inference; leading to faster execution times and lower power consumption.
@@ -17,8 +24,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
-# #### Graph Accelerators
-2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
 # ### Dataflow Architecture
 # Solution: Dataflow architecture allows the execution of instructions based on the availability of data rather than a predetermined sequence; leading to more efficient use of resources and better performance in parallel processing and real-time systems.
 2019,ASPLOS,THU,Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators,buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm,,,
