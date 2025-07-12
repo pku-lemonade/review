@@ -40,6 +40,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Adaptive Datatype
 # Solution: Adaptive datatypes aim to optimize numerical representation by dynamically adjusting to the precision and range requirements of data. The challenge lies in balancing computational efficiency, memory usage, and accuracy across diverse tasks and hardware constraints.
 # ##### For LLM
+2023,ISCA,SJTU,OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization,outlier-victim pair that sacrifices the colocated normal values to accommodate the outliers;OVP-based quantization framework and architectural implementation,4,4,2
 2025,arXiv,Rice,"70% Size, 100% Accuracy: Lossless LLM Compression for Efficient GPU Inference via Dynamic-Length Float",dynamic-length float; preserving bit-for-bit identical outputs; BFloat16 exponents carry significantly less information than their allocated bit width,4,4,4
 2025,HPCA,SJTU,M-ANT: Efficient Low-bit Group Quantization for LLMs via Mathematically Adaptive Numerical Type,group-wise quantization for both weight and KV cache; new encoding paradigm to improve information utilization in group-wise quantization; specific processing element for encoding paradigm,4,4,2
 2025,HPCA,Cornell,BitMoD: Bit-serial Mixture-of-Datatype LLM Acceleration,introduce additional asymmetry to FP by repurposing a redundant zero value with another special value; hardware accelerator design,3,3,3
@@ -54,11 +55,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General method
 # Solution: General quantization methods aim to optimize the trade-off between model accuracy and computational efficiency. Challenges include addressing layer-specific quantization errors, enhancing fault tolerance, and finding optimal bit-width configurations.
 # ##### For General LLM
-2023,ISCA,SJTU,OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization,outlier-victim pair that sacrifices the colocated normal values to accommodate the outliers;OVP-based quantization framework and architectural implementation,4,4,2
 2023,ICML,MIT,SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models,offline migrates the quantization difficulty from activations to weights,4,5,3
 2024,ISCA,SNU,Tender: Accelerating Large Language Models via Tensor Decomposition and Runtime Requantization,“power of 2” channel decomposition rule; Tender accelerator design,4,3,2
 2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
 2025,AAAI,ByteDance,ABQ-LLM: Arbitrary-Bit Quantized Inference Acceleration for Large Language Models,block-wise distribution correction and compensation scheme; bit balance strategy,4,3,2
+2025,ICML,"Huawei,THU",FlatQuant: Flatness Matters for LLM Quantization,post-training quantization method to enhance the flatness of both weights and activations in LLMs,4,4,3
 
 # ###### KV Cache specialized
 2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,2,2,3
