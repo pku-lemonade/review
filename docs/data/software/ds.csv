@@ -56,7 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Remote Memory
 # Challenge: efficiently providing access to memory on a remote node while minimizing latency and overhead, and ensuring consistency and reliability despite network communication complexities and potential failures.
 2020,TC,Georgia Tech,Hierarchical Orchestration of Disaggregated Memory,XMemPod architecture for hierarchical memory orchestration; compressed swap page table (CSPT) for metadata management; hybrid swap-out algorithm for memory utilization; proactive swap-in optimization for performance; RDMA-based remote memory sharing for low-latency access,,,
-
+2025,ATC,HUST,Fast Distributed Transactions for RDMA-based Disaggregated Memory,fast commit protocol by coalescing validation and commit phases; RDMA-enabled offloading for data synchronization; priority-based locking for mission-critical transactions,2,3,4
 # ### Scratchpad Memory
 # Challenge: efficiently allocating and coordinating limited fast memory across distributed nodes to minimize access latency and contention, while ensuring data consistency and scalability.
 2023,ASPLOS,Cornell,Beyond Static Parallel Loops: Supporting Dynamic Task Parallelism on Manycore Architectures with Software-Managed Scratchpad Memories,work-stealing based dynamic task parallelism; stack/task queue in SPM; read-only data duplication,3,3,3
