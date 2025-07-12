@@ -73,13 +73,22 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
 2025,ASPLOS,Miscrosoft,vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention,use cuda hardware page table instead of vllm's; hack cuda's driver to support page table modify,2,3,3
 2025,arXiv,SJTU,eLLM: Elastic Memory Management Framework for Efficient LLM Serving,activation weight paged; all scene virtual memory; cpu memory swap,3,2,2
+
+# ##### Tradeoff between compute and memory
+# Solution: Transformer is a compute-bound model. To improve the performance, sometimes can use recomputation to reduce the memory usage.
 2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
+2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation,4,4,3
+2024,Nips,Stanford,FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision,Hopper architecture based optimization; fp8 quantization; backward support,3,3,3
 
 # #### General LLM Memory Management
 # Challenge: LLM memory management faces challenges like limited HBM memory, efficient KV Cache management, memory sharing between multiple GPUs, multi-level memory management.
 2025,arXiv,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,fixed-size embeddings; full-prefix dependency; two-level memory allocator,4,4,3
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 2022,SC,Miscrosoft,DeepSpeed- Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale,kernel fusion; GPU-CPU-NVMe heterogeneous memory; PCIe-based memory prefetch,4,4,3
+
+# ##### Application specific memory management
+# Solution: Memory management is actually the core for request scheduleing. Application specific memory management use the application information to manage the memory.
+2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,3,3
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -268,6 +277,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Berkeley,Autellix: An Efficient Serving Engine for LLM Agents as General Programs,"formalize agentic programs as dynamic, non-deterministic DAGs; non-clairvoyant scheduler; simple load-balancing policy to balance data locality and KV-cache recomputation",,,
 2025,ICDCS,SJTU,LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications,"a DAG with regular stage, LLM stage, dynamic stage; bayesian network-based profiler; identify uncertainty-reducing stages",4,4,3
 2025,arXiv,SJTU,Efficient Serving of LLM Applications with Probabilistic Demand Modeling,DAG-based scheduling; dynamic excution; cpu excutor warmup,3,1,1
+
+
 
 # #### LLM Speculative Inference <a name="Speculative-Execution-LLM"></a>
 # Refer to non-LLM [speculative execution](#Speculative-Execution-Non-LLM).
