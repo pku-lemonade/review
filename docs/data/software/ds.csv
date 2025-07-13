@@ -88,7 +88,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Application specific memory management
 # Solution: Memory management is actually the core for request scheduleing. Application specific memory management use the application information to manage the memory.
-2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,3,3
+2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -277,8 +277,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Berkeley,Autellix: An Efficient Serving Engine for LLM Agents as General Programs,"formalize agentic programs as dynamic, non-deterministic DAGs; non-clairvoyant scheduler; simple load-balancing policy to balance data locality and KV-cache recomputation",,,
 2025,ICDCS,SJTU,LLMSched: Uncertainty-Aware Workload Scheduling for Compound LLM Applications,"a DAG with regular stage, LLM stage, dynamic stage; bayesian network-based profiler; identify uncertainty-reducing stages",4,4,3
 2025,arXiv,SJTU,Efficient Serving of LLM Applications with Probabilistic Demand Modeling,DAG-based scheduling; dynamic excution; cpu excutor warmup,3,1,1
-
-
 
 # #### LLM Speculative Inference <a name="Speculative-Execution-LLM"></a>
 # Refer to non-LLM [speculative execution](#Speculative-Execution-Non-LLM).
