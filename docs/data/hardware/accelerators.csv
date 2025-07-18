@@ -22,6 +22,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
 2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
+# #### Reconfigurable Accelerators
+2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandiwdth optimization; ART based virtual neuron construction,4,3,2
+2023,ASPLOS,UM & Georgia Tech,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern,4,3,2
+
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture
