@@ -142,6 +142,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### GPU-GPU Communication
 # Challenge: limited interconnect bandwidth between GPUs using nvLink, PCIe, synchronization delays in parallel workloads, load imbalance across GPUs
 2025,arXiv,Apple,SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models,sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction,,,
+2025,arXiv,Miscrosoft,Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters,heterogeneous pipeline stages with flexible GPU counts and types; CPU offloading of both parameters and activations,4,4,2
 
 
 # ## Many-Core Systems
@@ -328,6 +329,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Multi-Modal Optimizations
 # Challenge: multimodal data is more complex and requires more resources to train.
 2025,arXiv,ByteDance,OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training,multimodal mini-batch imbalance; batch post-balancing algorithm; node-wise all-to-all communicator for practical rearrangement of mini-batches,4,4,3
+2025,arXiv,ICT,ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism,unified prefix cache fusing vision and text tokens; modality-aware load balancer for bursty vision traffic,2,3,2
 
 # #### Kernel-Level Optimizations
 2025,arXiv,HUST,CFP: Low-overhead Profiling-based Intra-operator Parallelism Generation by Preserving Communication-Free Structures,model segment profile-based cost model; communication-free tensor partition propagation property; extracting a set of unique model segments; Communication-Free Preserve,4,5,3
@@ -388,6 +390,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UVA,eMoE: Task-aware Memory Efficient Mixture-of-Experts-Based (MoE) Model Inference,expert prediction; task-aware expert loading; task-aware request scheduling,,,
 2025,mobiCom,HKUST,D$^{2}$MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving,dually sparselygated Mixture-of-Experts; token-adaptive bit-width selection; matryoshka weight quantization; bit-width-aware I/O-compute pipeline,3,4,4
 2025,ODSI,SJTU,Fast and Live Model Auto Scaling with O(1) Host Caching,auto-scaling with minimal caching; optimize parameter loading; enabling fine-grained layer-level scale,3,3,2
+2023,ASPLOS,Google,TelaMalloc: Efficient On-Chip Memory Allocation for Production Machine Learning Accelerators,hybrid heuristic-solver memory allocator for ML accelerators; contention-aware phased allocation strategy,4,4,3
 
 # ##### Architectural Innovations
 2025,arXiv,Shanghai AI,Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts,linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers,,,
@@ -399,6 +402,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
 2025,arXiv,PKU,"ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs",hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism,,,
+2025,ICML,ByteDance,ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference,offload value cache to CPU and keep outliers on GPU; landmark-guided sparse KV selection per chunk,3,3,3
+
 
 # ##### Sparse Attention
 # Solution: handle the prompt token by token introduce high latency, trying to use sparse attention to reduce the computation and memory burden. This can be achieved by not using the full attention matrix, but only the upper triangular part.
