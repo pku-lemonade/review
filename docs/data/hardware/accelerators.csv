@@ -77,6 +77,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,HPCA,THU,Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators,layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization,,,
 2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
 2024,ASPDAC,CUHK,SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design,intercluster distance algorithm; importance-based pruning and initialization,3,2,2
+2024,Arxiv,Georgia Tech,PIPEORGAN: Efficient Inter-operation Pipelining with Flexible Spatial Org,spatial organization strategy pipeorgan for inter-operator pipelining; augmented mesh for pipelining(AMP) topology,4,2,2
 
 # #### Microarchitecture & Cross-Architecture DSE
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
