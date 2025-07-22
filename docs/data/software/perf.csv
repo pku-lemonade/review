@@ -67,10 +67,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Extended Berkeley Packet Filter
 # Solution: A technique used for dynamically programing the kernel for efficient networking, observability, tracing, and security.
+
+# ##### Survey
 2020,CSUR,UFMG,Fast Packet Processing with eBPF and XDP: Concepts, Code, Challenges, and Applications,eBPF machine architecture; eBPF system workflow; current limitationss on eBPF,3,1,1
+2024,AICIT,NUDT,eBPF: Pioneering Kernel Programmability and System Observability – Past, Present, and Future Insights,eBPF development toolchains; network monitoring; linux kernel security,2,1,1
+
+# ##### eBPF Component Analysis
 2024,eBPF,THU,Understanding Performance of eBPF Maps,eBPF map benchmark; impact of cache hotness on eBPF map; volume discount feature of eBPF program,4,4,2
-2025,OSDI,HKU,NEUTRINO: Fine-grained GPU Kernel Profiling via Programmable Probing,densified memory access timeline; snippet,tracepoint,map based probe design; python DSL based user interface,4,5,2
+2024,OSDI,ETH Zurich,Validating the eBPF Verifier via State Embedding,state embedding mechanism for eBPF verifier bug detection; SEV pratical realization,4,4,3
 2025,EuroSys,UW–Madison,Revealing the Unstable Foundations of eBPF-Based Kernel Extensions,potential mismatches dataset; dependency surface/set analysis,4,4,2
+
+# ##### eBPF Like Applications
+2024,TNET,UCR,SPRIGHT: High-Performance eBPF-Based Event-Driven, Shared-Memory Processing for Serverless Computing,event-driven shared memory processing; direct function routing;zero-copy message delivery method,3,4,3
+2025,OSDI,HKU,NEUTRINO: Fine-grained GPU Kernel Profiling via Programmable Probing,densified memory access timeline; snippet,tracepoint,map based probe design; python DSL based user interface,4,5,2
+2025,HCDS,UCSC,eGPU: Extending eBPF Programmability and Observability to GPUs,dynamic PTX injection; real-time synchronization to avoid race conditions,3,2,2
+
 
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.
@@ -99,3 +110,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: benchmark targeted at performance analysis and characterization.
 2018,ICPP,WUSTL,Varbench: an Experimental Framework to Measure and Characterize Performance Variability,spatial/temperal variability; Resource Variability (RV) statistic,,,
 2021,IEEE Access,D-ITET,DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,NDP focused workload characterization methodology; memory-bound function identification; locality-based clustering; memory bottlenecks classification,,,
+
+# ### LLM Serving Benchmarks
+# Challenge: There is different optimize targets for different LLM serving systems. Develop a fair benchmark is crucial.
+2025,arXiv,Intel,On Evaluating Performance of LLM Inference Serving Systems,introduces a practical checklist to avoid misleading benchmarks,3,3,2
