@@ -23,7 +23,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
 2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
 # #### Reconfigurable Accelerators
-# Solution: Reconfigurable accelerators not only break the trade-off of flexibility and performance, buty also enable hardware to adapt to algorithm changes as quickly as software while maintaining high energy efficiency.
+# Solution: Reconfigurable accelerators not only break the trade-off of flexibility and performance, but also enable hardware to adapt to algorithm changes as quickly as software while maintaining high energy efficiency.
 2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandiwdth optimization; ART based virtual neuron construction,4,3,2
 2019,JETCAS,MIT,Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices,hierarchical mesh NoC for multiple transmission modes; sparse PE architecture,5,4,2
 2020,HPCA,Georgia Tech & Intel,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,3,2
