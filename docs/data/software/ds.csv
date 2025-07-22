@@ -90,6 +90,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Memory management is actually the core for request scheduleing. Application specific memory management use the application information to manage the memory.
 2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
 
+# ##### Application specific memory management
+# Solution: Memory management is actually the core for request scheduleing. Application specific memory management use the application information to manage the memory.
+2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
+
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
 
