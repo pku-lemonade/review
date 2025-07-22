@@ -13,6 +13,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,ISCA,Micron,To PIM or Not for Emerging General Purpose Processing in DDR Memory Systems, vector engine inside NDP bank; intelligent code offload decision,2,3,2
 2024,ISCA,Samsung,pSyncPIM: Partially Synchronous Execution of Sparse Matrix Operations for All-Bank PIM Architectures,partially synchronous PIM control; predicated execution; sparse matrix distribution & compaction,3,3,3
 2025,arxiv,ETHZ,MARS: Processing-In-Memory Acceleration of Raw Signal Genome Analysis Inside the Storage Subsystem,PIM module inside the SSD controller; early signal quantization; read filtering,3,3,2
+2025,ATC,RUC,Turbocharge ANNS on Real Processing-in-Memory by Enabling Fine-Grained Per-PIM-Core Scheduling,per-PU scheduling; persistent PIM kernel; per-PU dispatching with selective replication,3,4,4
 2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
 # #### LLM-Specific Optimization
 # Challenge: LLM inference is fundamentally bottlenecked by memory bandwidth; HBM is expensive and not scalable.
