@@ -99,3 +99,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: benchmark targeted at performance analysis and characterization.
 2018,ICPP,WUSTL,Varbench: an Experimental Framework to Measure and Characterize Performance Variability,spatial/temperal variability; Resource Variability (RV) statistic,,,
 2021,IEEE Access,D-ITET,DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,NDP focused workload characterization methodology; memory-bound function identification; locality-based clustering; memory bottlenecks classification,,,
+
+# ### LLM Serving Benchmarks
+# Challenge: There is different optimize targets for different LLM serving systems. Develop a fair benchmark is crucial.
+2025,arXiv,Intel,On Evaluating Performance of LLM Inference Serving Systems,introduces a practical checklist to avoid misleading benchmarks,3,3,2
