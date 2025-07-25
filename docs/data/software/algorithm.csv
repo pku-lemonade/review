@@ -37,7 +37,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### DNN Training Algorithms
 # Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
-2017,ICLR,Stanford,DSD: Dense-Sparse-Dense Training for Deep Neural Networks,3 step dense-sparse-dense training;,3,5,4
+2017,ICLR,Stanford,DSD: Dense-Sparse-Dense Training for Deep Neural Networks,3 step dense-sparse-dense training,3,5,4
 2020,NeurIPS,MIT,Differentiable Augmentation for Data-Efficient GAN Training,Differentiable Augmentation to improve data efficiency in generative adversarial networks training,3,4,4
 
 # #### Multi-task Learning
