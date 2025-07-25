@@ -7,6 +7,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### CPU-GPU System
 2024,arXiv,KTH,Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper,Grace Hopper system memory characterization; integrated CPU-GPU page table analysis; first-touch policy impact study; system page size impact study; access-counter page migration evaluation,2,4,3
 2025,ATC,THU,HYPERECA: Distributed Heterogeneous In-Memory Embedding Database for Training Recommender Models,embedding database in host memory and GPU memory; 2-Fold Parallel strategy; contention-free ring schedule,2,3,3
+# #### GPU System
+2022,Mlsys,MIT,TORCHSPARSE: EFFICIENT POINT CLOUD INFERENCE ENGINE, 3D Sparse Convolution; optimize Gather-Matmul-Scatter dataflow; Adaptive Matmul Grouping; Quantized and Vectorized Memory access,,,
+2023,Mlsys,THU&&SJTU,EXPLOITING HARDWARE UTILIZATION AND ADAPTIVE DATAFLOW FOREFFICIENT SPARSE CONVOLUTION IN 3D POINT CLOUDS, 3D Sparse Convolution; optimize Gather-Matmul-Scatter and fetch-on-demand dataflow; Dynamic dataflow changing; coded-CSR mapping; Parallel Processing of different workloads without padding; Pointer,,,
+2023,MICRO,MIT,TorchSparse++: Efficient Training and Inference Framework for Sparse Convolution on GPUs, 3D Sparse Convolution; optimize Implicit Gather-Matmul-Scatter; Cuda Sparse Kernel; Sparse Autotuner by detailed workload,,,
 # ### Disaggregated Memory
 # Challenge: CXL and NVM offer higher speed & bandwidth than storage devices with byte-level access. Memory disaggregation using DRAM (high-speed/BW + small capacity) and NVM (low-speed/BW + large capacity), faces latency, bandwidth, and consistency challenges.
 # #### CXL-based Disaggregated Memory
