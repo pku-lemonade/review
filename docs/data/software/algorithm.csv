@@ -35,6 +35,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
 2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
 
+# #### DNN Training Algorithms
+# Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
+2017,ICLR,Stanford,DSD: Dense-Sparse-Dense Training for Deep Neural Networks,3 step dense-sparse-dense training;,3,5,4
+
 # #### Multi-task Learning
 # Solution: Multi-task learning (MTL) is a machine learning paradigm where multiple related tasks are learned simultaneously, leveraging shared representations to improve performance across tasks.
 2018,NeurIPS,Intel,Multi-Task Learning as Multi-Objective Optimization,Frank-Wolfe-based optimizer that scales to high-dimensional problems; provide an upper bound for the MGDA(multiple-gradient descent algorithm) optimization objective,3,4,4
