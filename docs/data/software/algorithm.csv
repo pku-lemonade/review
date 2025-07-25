@@ -34,6 +34,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
 2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
+2025,arXiv,DeepReinforce,CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning,contrastive RL-driven CUDA optimization without human priors; LLM-based CUDA kernel optimize; reward design for CUDA kernel,4,4,2
 
 # #### Multi-task Learning
 # Solution: Multi-task learning (MTL) is a machine learning paradigm where multiple related tasks are learned simultaneously, leveraging shared representations to improve performance across tasks.
