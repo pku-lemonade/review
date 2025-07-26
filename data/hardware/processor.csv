@@ -1,0 +1,16 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ## Cache
+# Challenge: Managing shared cache resources (e.g. LLC) efficiently in multi-core/multi-programmed environments.
+2006,MICRO,Intel,Molecular Caches: A caching structure for dynamic creation of application-specific Heterogeneous cache regions,molecular cache architecture; application space identifier based cache partition; randy replacement algorithm,,,
+2011,ISCA,Stanford,Vantage: Scalable and Efficient Fine-Grain Cache Partitioning,managed-unmanaged region division; churn-based management; feedback-based aperture control,,,
+2016,HPCA,Intel,Cache QoS: From concept to reality in the Intel® Xeon® processor E5-2600 v3 product family,cache monitoring technology; cache allocation technology; resource monitoring IDs (RMIDs); classes of service (CLOS),,,
+2018,EuroSys,PKU,DCAPS: dynamic cache allocation with partial sharing,dynamic fine-grained shared cache management; balance cache utilization and contention; online practical miss rate curve,,,
+# ### Multi-Level Cache
+# Challenge: Optimizing the interaction and data movement between different levels of the cache hierarchy (e.g. L1 - L2 - L3) in Chip Multi-Processors is complex.
+2005,ISCA,IBM,Adaptive mechanisms and policies for managing cache hierarchies in chip multiprocessors,limit unnecessary clean write backs; write back L2 to peer L2; second adaptive mechanism,,,
+2012,JIP,Tokio Tech,Autonomous L3 Cache Technolgy for High Responsiveness,autonomous L3 cache; trio-configuration architecture; autonomous decentralized multi-layer cache,,,
+# ### Vector Unit
+# #### Memory Access
+# Challenge: Vector memory access is not well supported & optimized in the current microarchitecture like RISC-V.
+2025,CF Companion,ETHZ,AraOS: Analyzing the Impact of Virtual Memory Management on Vector Unit Performance,virtual memory management for RVV; performance analysis of virtual memory overhead,2,2,1
+2025,arXiv,THU,Efficient Architecture for RISC-V Vector Memory Access,data reorganization module; load/store data organization; row/column-accessible vector register file,2,4,3
