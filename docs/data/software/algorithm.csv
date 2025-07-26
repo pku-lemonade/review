@@ -101,6 +101,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2016,Big Data,LPNU,"Machine Learning, Linear and Bayesian Models for Logistic Regression in Failure Detection Problems",extreme gradient boosting classifier; generalized linear model,2,1,2
 2023,J Process Contr,UA,Modeling and Bayesian inference for processes characterized by abrupt variations,dynamic latent variable model; variational Bayesian inference framework,3,2,2
 
+# ### Time Synchronization
+1993,JACM,W&M,The Cost of Conservative Synchronization in Parallel Discrete Event Simulations,windowing mechanism based conservative synchronization; lower-bound performance analysis based on stochastic modeling,2,3,2
+2002,TPDS,Dartmouth‌,Composite Synchronization in Parallel Discrete-Event Simulation,composite synchronization mechanism; mathematical model based on synchronization overhead optimization,3,3,2
+2013,PDES,MSOE,Synchronization methods in parallel and distributed discrete-event simulation,conservative/optimistic synchronization methods; chandy-misra-bryant algorithm; time warp mechanism,3,1,1
+
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
