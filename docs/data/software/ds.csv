@@ -182,6 +182,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2013,SOSP,MSR Silicon Valley,Dandelion: a Compiler and Runtime for Heterogeneous  Systems,unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing,,,
 2025,EuroSys,SJTU,Improving GPU Sharing Performance through Adaptive Bubbleless Spatial-Temporal Sharing,Bubble-less spatial-temporal sharing; kernel squad scheduling; fine-grained concurrent kernel management,4,3,2
 2025,ISPASS,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,Effective regions for balanced utilization of PUs; Proximity-based kernel fusion recommendation; operator-kernel dependency graphs from PyTorch Profiler traces,3,4,2
+2025,OSDI,SJTU,XSched: Preemptive Scheduling for Diverse XPUs,a unified XPU usage interface layer; queue abstraction turns every XPU into a preemptible command queue; enable microsecond preemption on closed-source CUDA kernels,4,4,3
 
 # ### Decentralized Serving
 # Challenge: managing diverse hardware and software environments, balancing workloads across uneven resources, minimizing communication overhead, ensuring consistency without centralized control.
