@@ -23,6 +23,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
 2022,OOPSLA,MIT,Compilation of Dynamic Sparse Tensor Algebra,node schema language; assembly abstract interface; map function generation; iterator optimization; dynamic tensor format composition,4,4,3
 
+# ### Transpilers
+# Solution: automatic, correct, and performant source-to-source code translation across different hardware ecosystems
+2025,OSDI,CAS,"QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach",neural-symbolic synthesis; LLM-assisted transcompilation; SMT-based code repair; hierarchical auto-tuning,3,4,2
+
 # ### Hardware Description Languages
 # Solution: expressive hardware specification, efficient simulation and synthesis, robust verification methodologies
 
