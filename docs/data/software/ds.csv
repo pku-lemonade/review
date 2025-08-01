@@ -229,6 +229,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
 2025,arXiv,PKU,Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC,agent application-specific scheduling on heterogeneous SoC; heterogeneous execution graph with eastic kernels; bandwidth-aware dispatch for NPU-iGPU contention mitigation,3,2,3
+2025,arXiv,Stanford,Efficient and Scalable Agentic AI with Heterogeneous Systems,mapping agent worloads to heterogeneous accelerators; MLIR based excution graph; cost model based device choose,2,1,1
 
 # ### LLM Training Heterogeneous Systems
 # Solution: compared to [LLM Inference Heterogeneous Systems](#LLM-Inference-Heterogeneous-Systems), need to solve the backward compatibility and heterogeneity issues.
