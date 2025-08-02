@@ -39,6 +39,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
 2017,ICLR,Stanford,DSD: Dense-Sparse-Dense Training for Deep Neural Networks,3 step dense-sparse-dense training,3,5,4
 2020,NeurIPS,MIT,Differentiable Augmentation for Data-Efficient GAN Training,Differentiable Augmentation to improve data efficiency in generative adversarial networks training,3,4,4
+2025,ASPLOS,Nvidia&CMU&MIT,GraphPipe: Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism,graph pipeline parallelism; topology-aware stage partitioning and scheduling algorithm,4,3,2
 
 # #### Multi-task Learning
 # Solution: Multi-task learning (MTL) is a machine learning paradigm where multiple related tasks are learned simultaneously, leveraging shared representations to improve performance across tasks.

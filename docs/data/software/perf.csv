@@ -82,6 +82,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,OSDI,HKU,NEUTRINO: Fine-grained GPU Kernel Profiling via Programmable Probing,densified memory access timeline; snippet,tracepoint,map based probe design; python DSL based user interface,4,5,2
 2025,HCDS,UCSC,eGPU: Extending eBPF Programmability and Observability to GPUs,dynamic PTX injection; real-time synchronization to avoid race conditions,3,2,2
 
+# #### Distributed Tracing
+# Solution: A technique used for monitoring and diagnosing errors in microserves systems by recording full request paths.
+2025,ASPLOS,SYSU&Alibaba,Mint: Cost-Efficient Tracing with All Requests Collection via Commonality and Variability Analysis,commonality and variability based tracing strategy; pattern exraction at the span level and trace level,4,4,2
 
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.
