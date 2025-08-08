@@ -1,0 +1,54 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+
+# ## Kernel design and implementation
+# Solution: abstracting the underlying hardware and providing a secure, managed, and efficient environment for user-level applications to run concurrently and share system resources
+
+
+# ## Process and thread management
+# Solution: ensuring fair resource allocation, smooth multitasking, and proper coordination between processes and threads to maximize system performance and responsiveness.
+
+
+# ## Memory management
+# Memory management is the basic of system design.
+
+# ### Memory Partitioning & Mapping
+# Solution: efficiently and securely divide physical memory among multiple processes or systems
+# Challenge: ensuring processes get enough memory without waste, while preventing interference and maintaining system performance and security.
+2012,HPCA,Georgia Institute of Technology,TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture,thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization,,,
+2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
+2025,HPCA,Seoul National,FACIL: Flexible DRAM Address Mapping for SoC-PIM Cooperative On-device LLM Inference,flexible PIM address mapping and remapping; OS paging mechanism extension for MapID; user-level mapping selector,3,2,3
+
+# ### Page Migration
+# Challenge: the trade-off between migration overhead and potential performance gains, complicated by prediction accuracy and hardware complexities
+2024,SC,THU,Hydrogen: Contention-Aware Hybrid Memory for Heterogeneous CPU-GPU Architectures,fast memory decoupled partitioning; token-based slow memory migration; epoch-based sampling method; consistent hashing based reconfiguration,,,
+2024,OSDI,UT Arlington, Nomad: Non-Exclusive Memory Tiering via Transactional Page Migration, Memory allocator for hardware tiering to mitigate outliers,,,
+2025,ISCA,XMU,ArtMem: Adaptive Migration in Reinforcement Learning-Enabled Tiered Memory,reinforcement learning for tiered memory management; dynamic adjustment of migration scope,2,4,3
+# ### Memory Pooling
+# Solution: Memory Pooling reduces the overhead of frequent memory allocation and deallocation by maintaining a pool of pre-allocated memory blocks for reuse.
+2023,ASPLOS,Virginia Tech,Pond: CXL-Based Memory Pooling Systems for Cloud Platforms,CXL-based memory pooling; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory,,,
+
+# ### Cache Evict
+# Challenge: to balance the cache hit ratio and the cache miss penalty.
+# The cache here not only includes the cache in the processors, but also the software concept in systems.
+2024,NSDI,CMU,Sieve is Simpler than LRU: an Efficient Turn-Key Eviction Algorithm for Web Caches,web cache management; fifo-like schedule; recognizing the importance of objects,3,3,3
+
+
+# ## File systems and storage
+# Solution: organizing, storing, and retrieving data efficiently and reliably on storage devices, manage disk space, and ensure data integrity and security.
+
+# ### Storage Systems
+# Solution: eficient, reliable, and secure management of data storage across diverse hardware while achieving balance between performance, durability, efficiency, and scalability .
+
+# #### SSD Management
+# Challenge: limited write endurance, garbage collection, wear leveling, and the mismatch between erase and write operations, while optimizing performance and extending device lifespan
+2025,EuroSys,Samsung,Towards Efficient Flash Caches with Emerging NVMe Flexible Data Placement SSDs,NVMe Flexible Data Placement (FDP) SSDs for data segregation; targeted data placement for reduced device write amplification; FDP-enabled CacheLib architecture; theoretical DLWA model for CacheLib,,,
+2025,arXiv,SDU,Managing Hybrid Solid-State Drives Using Large Language Models,LLM-based auto-tuning framework for hybrid SSD management; hybrid SSD parameter categorization; performance-sensitive parameter selection; prompt engineering for LLM integration; dynamic configuration optimization in hybrid SSDs,,,
+2025,arXiv,ETHZ,Harmonia: A Multi-Agent Reinforcement Learning Approach to Data Placement and Migration in Hybrid Storage Systems,dual RL agents for data placement & migration; I/O latency-based reward shaping,3,4,4
+
+
+# ## Virtualization
+# Solution: efficiently managing and isolating multiple virtual machines (VMs) or containers on a single physical machine, allowing them to share hardware resources securely and independently while maintaining performance and flexibility.
+
+
+# ## Synchronization
+# Solution: coordinating access to shared resources among multiple processes or threads to prevent conflicts, ensure data consistency, and avoid issues like race conditions, deadlocks, and resource starvation.
