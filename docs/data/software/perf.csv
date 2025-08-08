@@ -76,7 +76,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,eBPF,THU,Understanding Performance of eBPF Maps,eBPF map benchmark; impact of cache hotness on eBPF map; volume discount feature of eBPF program,4,4,2
 2024,OSDI,ETH Zurich,Validating the eBPF Verifier via State Embedding,state embedding mechanism for eBPF verifier bug detection; SEV pratical realization,4,4,3
 2025,EuroSys,UW–Madison,Revealing the Unstable Foundations of eBPF-Based Kernel Extensions,potential mismatches dataset; dependency surface/set analysis,4,4,2
-2025,OSDI,UCSD,"KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads",compiler-centric profiling infrastructure; multi-level IR instrumentation; region-based timing tool; trace replay for overhead correction,4,4,3
+2025,OSDI,UCSD,KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads,compiler-centric profiling infrastructure; multi-level IR instrumentation; region-based timing tool; trace replay for overhead correction,4,4,3
 
 # ##### eBPF Like Applications
 2024,TNET,UCR,SPRIGHT: High-Performance eBPF-Based Event-Driven, Shared-Memory Processing for Serverless Computing,event-driven shared memory processing; direct function routing;zero-copy message delivery method,3,4,3
@@ -108,8 +108,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Benchmarking methodologies and suites
 
 # ### Systematic Optimization Methodologies
-# Challenge: Performance optimization often relies on ad-hoc expertise and intuition.
-2025,OSDI,GIT,"Principles and Methodologies for Serial Performance Optimization",3 optimization principles (removal, replacement, reordering); 8 optimization methodologies; systematic performance framework; SysGPT assistant,4,4,2
+# Soluntion: general systematic optimization methods through benchmarking
+2025,OSDI,GIT,Principles and Methodologies for Serial Performance Optimization,3 optimization principles (removal, replacement, reordering); 8 optimization methodologies; systematic performance framework; SysGPT assistant,4,4,2
 
 # ### Benchmark
 # Solution: benchmark targeted at performance analysis and characterization.
