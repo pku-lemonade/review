@@ -270,6 +270,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,MIT,Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints,fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments,3,4,2
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
 
+# #### Batching for Better Throughput
+# Challenge: the batching is a trade-off between the throughput and the latency. The requests in the same batch also call for different resources. Split different compute pattern request for different batches is a good idea.
+2025,OSDI,UA,NanoFlow: Towards Optimal Large Language Model Serving Throughput,LLM inference is indeed compute-bound; model-based batch size analysis; micro batch split for overlapping between all resources,4,4,3
+
 # ##### Info Predict Scheduling
 # Challenge: The general schedule if for better batching and meeting the SLO requirements. By predicting the information of the requests, we can make the schedule more efficient.
 2023,Nips,Harvard,S3: Increasing GPU Utilization during Generative Inference for Higher Throughput,predict the length of LLM request to fixed types; Orca based dynamic batching,3,2,3
