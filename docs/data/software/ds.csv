@@ -263,11 +263,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### LLM Request Scheduling
 # Solution: develop intelligent strategies to route requests, prioritize urgent or critical tasks, handle varying input lengths and complexities, manage resource contention to meet the SLO requirements.
-2024,arXiv,UCSB,Multi-Bin Batching for Increasing LLM Inference Throughput,binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality,,,
 2024,arXiv,Yale,TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications,segmented generation; time-sensitive scheduling; latency-guided batch size selection,,,
 2025,arXiv,MSRI,Niyama : Breaking the Silos of LLM Inference Serving,QoS-driven LLM inference serving system; co-scheduling requests with diverse QoS targets on a shared rather than siloed infrastructure; allows graceful service degradation during overload conditions; deadline slack; a hybrid prioritization and an eager relegation policy,4,4,3
 2025,arXiv,MIT,Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints,fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments,3,4,2
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
+2025,SOSP,UChicago,PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications,prefill-only workload; hybrid prefilling; continuous JCT calibration; JCT-aware scheduling,4,4,4
 
 # ##### Info Predict Scheduling
 # Challenge: The general schedule if for better batching and meeting the SLO requirements. By predicting the information of the requests, we can make the schedule more efficient.
