@@ -25,7 +25,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Transpilers
 # Solution: automatic, correct, and performant source-to-source code translation across different hardware ecosystems
-2025,OSDI,CAS,"QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach",neural-symbolic synthesis; LLM-assisted transcompilation; SMT-based code repair; hierarchical auto-tuning,3,4,2
+2025,OSDI,CAS,QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach,neural-symbolic synthesis; LLM-assisted transcompilation; SMT-based code repair; hierarchical auto-tuning,3,4,2
 
 # ### Hardware Description Languages
 # Solution: expressive hardware specification, efficient simulation and synthesis, robust verification methodologies
