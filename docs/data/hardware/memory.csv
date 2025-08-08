@@ -17,7 +17,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
 # #### LLM-Specific Optimization
 # Challenge: LLM inference is fundamentally bottlenecked by memory bandwidth; HBM is expensive and not scalable.
+2022,PACT,PKU,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing,splitting reduce operations to NDP units; narrow-shard strategy for data reuse; hybrid graph partition strategy for load balancing,4,3,3
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
+2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
 # #### Memory Allocation & Management
 # Challenge: Existing NDP architecture has numerous independent memory spaces; lacks unified management; and features inefficient memory allocation.
