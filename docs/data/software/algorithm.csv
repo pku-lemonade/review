@@ -20,6 +20,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
 2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
 2025,ICLR,Princeton,Safety Alignment Should Be Made More Than Just a Few Tokens Deep,ai-savety centered alignment; enhance sacety on deeper tokens and data,3,3,3
+2025,ACL,PKU,Language Models Resist Alignment: Evidence From Data Compression,LLM have inner resistance to alignment; the larger scale in pre-train increase the resistance,4,3,4
 
 # ##### LLM Finetune
 # Solution: finetune adapts a pre-trained model to a specific task or domain. By doing so, the model can better fit the specific task or domain.
