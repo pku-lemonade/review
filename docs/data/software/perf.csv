@@ -87,6 +87,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: A technique used for monitoring and diagnosing errors in microserves systems by recording full request paths.
 2025,ASPLOS,SYSU&Alibaba,Mint: Cost-Efficient Tracing with All Requests Collection via Commonality and Variability Analysis,commonality and variability based tracing strategy; pattern exraction at the span level and trace level,4,4,2
 
+# ### Profiling with LLM
+# Solution: using LLMs to generate profile results.
+2025,SOSP,UChicago,METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation,LLM-based query profiler; rule-based configuration pruning; resource-aware joint scheduling; per-query configuration adaptation,3,4,2
+
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.
 
