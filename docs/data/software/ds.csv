@@ -73,6 +73,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,SOSP,UCB,Efficient Memory Management for Large Language Model Serving with PagedAttention,Paged KV-Cache management; Better memory management for larger batch size; Preemptive memory scheduling,4,5,3
 2025,ASPLOS,Miscrosoft,vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention,use cuda hardware page table instead of vllm's; hack cuda's driver to support page table modify,2,3,3
 2025,arXiv,SJTU,eLLM: Elastic Memory Management Framework for Efficient LLM Serving,activation weight paged; all scene virtual memory; cpu memory swap,3,2,2
+2025,arXiv,SJTU,Reducing GPU Memory Fragmentation via Spatio-Temporal Planning for Efficient Large-Scale Model Training,offline planning and online patch; MoE-aware reuse pockets; time-aware reuse,3,3,2
 
 # ##### Tradeoff between compute and memory
 # Solution: Transformer is a compute-bound model. To improve the performance, sometimes can use recomputation to reduce the memory usage.
@@ -85,10 +86,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,SC,Miscrosoft,DeepSpeed-Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale,kernel fusion; GPU-CPU-NVMe heterogeneous memory; PCIe-based memory prefetch,4,4,3
 2025,arXiv,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,fixed-size embeddings; full-prefix dependency; two-level memory allocator,4,4,3
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
-
-# ##### Application specific memory management
-# Solution: Memory management is actually the core for request scheduleing. Application specific memory management use the application information to manage the memory.
-2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
+2025,SOSP,SJTU,KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider,real-world KVCache trace anatomy; workload-aware eviction; analysis of KVCache hit in the real-world,4,4,2
 
 # ##### Application specific memory management
 # Solution: Memory management is actually the core for request scheduleing. Application specific memory management use the application information to manage the memory.
@@ -184,6 +182,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2013,SOSP,MSR Silicon Valley,Dandelion: a Compiler and Runtime for Heterogeneous  Systems,unified programming model; “single machine” abstraction; a rich object-oriented programming language for data-parallel computing,,,
 2025,EuroSys,SJTU,Improving GPU Sharing Performance through Adaptive Bubbleless Spatial-Temporal Sharing,Bubble-less spatial-temporal sharing; kernel squad scheduling; fine-grained concurrent kernel management,4,3,2
 2025,ISPASS,CMU,Characterizing and Optimizing LLM Inference Workloads on CPU-GPU Coupled Architectures,Effective regions for balanced utilization of PUs; Proximity-based kernel fusion recommendation; operator-kernel dependency graphs from PyTorch Profiler traces,3,4,2
+2025,OSDI,SJTU,XSched: Preemptive Scheduling for Diverse XPUs,a unified XPU usage interface layer; queue abstraction turns every XPU into a preemptible command queue; enable microsecond preemption on closed-source CUDA kernels,4,4,3
 
 # ### Decentralized Serving
 # Challenge: managing diverse hardware and software environments, balancing workloads across uneven resources, minimizing communication overhead, ensuring consistency without centralized control.
@@ -231,6 +230,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
 2025,arXiv,PKU,Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC,agent application-specific scheduling on heterogeneous SoC; heterogeneous execution graph with eastic kernels; bandwidth-aware dispatch for NPU-iGPU contention mitigation,3,2,3
+2025,arXiv,Stanford,Efficient and Scalable Agentic AI with Heterogeneous Systems,mapping agent worloads to heterogeneous accelerators; MLIR based excution graph; cost model based device choose,2,1,1
 
 # ### LLM Training Heterogeneous Systems
 # Solution: compared to [LLM Inference Heterogeneous Systems](#LLM-Inference-Heterogeneous-Systems), need to solve the backward compatibility and heterogeneity issues.
@@ -425,6 +425,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # #### P-D Disaggregated Systems
+# Solution: prefill and decode have different computation characteristics, so we can disaggregate them to different GPUs.
 2024,OSDI,PKU,DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving,goodput-optimized; prefill-decoding interference;novel placement algorithm for p-d schema,,,
 2024,ISCA,UW,Splitwise: Efficient Generative LLM Inference Using Phase Splitting,optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments,,,
 2024,arXiv,CMU,A System for Microserving of LLMs,fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction,,,
@@ -435,6 +436,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SYSU,Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation,attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling,4,4,3
 2025,arXiv,Alibaba,FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling,analyze the communication patterns; KV cache structure adjustment method; load-aware scheduling,4,4,2
 2025,arXiv,NUS & USTC,DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving,a novel Tandem Serving execution model; two virtual subrequests; explicitly permit the two subrequests to execute on either GPU instance,3,4,2
+
+# ##### A-F Disaggregated Systems
+# Challenge: In the decode stage, **the attention need memory access while the FFN only need compute**. The increasingly sparse FFN in MoE models make the GPU computation ultilization low. Disaggregate the attention and FFN module to different can make better batching and heterogeneous devices implement.
+2025,arXiv,ByteDance,MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism,the first the disaggregated attention and FFN disaggregate; ping-pong pipeline parallel; high performance M2N communication,4,3,3
+2025,arXiv,StepFun,Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding,detailed AFD math analysis; co-design of model and system; low decode latenty implementation,3,4,2
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
@@ -448,6 +454,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: RLHF system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
 2025,EuroSys,HKU,HybridFlow: A Flexible and Efficient RLHF Framework,auto-mapping model placement; 3D-HybridEngine to reduce the communication overhead; hybrid programming,4,4,3
 2025,arXiv,Alibaba,Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library,bind many LLMs in one device cluster; fix the batch problem of long tail requests; reuse many utils in HybridFlow,4,4,2
+2025,arXiv,FDU,DistFlow: A Fully Distributed RL Framework for Scalable and Efficient LLM Post-Training,distributed controller for better scalability; fully decoupled DAG-defined RL pipeline; linear scalability,3,3,2
 
 
 # ### Communication-Computation Overlap

@@ -76,12 +76,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,eBPF,THU,Understanding Performance of eBPF Maps,eBPF map benchmark; impact of cache hotness on eBPF map; volume discount feature of eBPF program,4,4,2
 2024,OSDI,ETH Zurich,Validating the eBPF Verifier via State Embedding,state embedding mechanism for eBPF verifier bug detection; SEV pratical realization,4,4,3
 2025,EuroSys,UW–Madison,Revealing the Unstable Foundations of eBPF-Based Kernel Extensions,potential mismatches dataset; dependency surface/set analysis,4,4,2
+2025,OSDI,UCSD,KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads,compiler-centric profiling infrastructure; multi-level IR instrumentation; region-based timing tool; trace replay for overhead correction,4,4,3
 
 # ##### eBPF Like Applications
 2024,TNET,UCR,SPRIGHT: High-Performance eBPF-Based Event-Driven, Shared-Memory Processing for Serverless Computing,event-driven shared memory processing; direct function routing;zero-copy message delivery method,3,4,3
 2025,OSDI,HKU,NEUTRINO: Fine-grained GPU Kernel Profiling via Programmable Probing,densified memory access timeline; snippet,tracepoint,map based probe design; python DSL based user interface,4,5,2
 2025,HCDS,UCSC,eGPU: Extending eBPF Programmability and Observability to GPUs,dynamic PTX injection; real-time synchronization to avoid race conditions,3,2,2
 
+# #### Distributed Tracing
+# Solution: A technique used for monitoring and diagnosing errors in microserves systems by recording full request paths.
+2025,ASPLOS,SYSU&Alibaba,Mint: Cost-Efficient Tracing with All Requests Collection via Commonality and Variability Analysis,commonality and variability based tracing strategy; pattern exraction at the span level and trace level,4,4,2
 
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.
@@ -92,6 +96,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2014,IISWC,ETH Zurich,Extending the Roofline Model: Bottleneck Analysis with Microarchitectural Constraints,dag-based performance model; Tomasulo's greedy algorithm; scheduled dag based bottleneck modeling,3,4,3
 2021,Intelligent Computing,Berkeley,Hierarchical Roofline Performance Analysis for Deep Learning Applications,Nsight Compute based hierarchical roofline model; FP16、FP32 extension for ERT,,,
 2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
+2025,ASPLOS,Georgia Tech,Forecasting GPU Performance for Deep Learning Training and Inference,tile-level kernal decomposition; fundamental performance laws bounded prediction; ML based utilization prediction,3,4,2
 
 # ### LLM Performance Modeling <a name="LLM-Performance-Modeling"></a>
 # Solution: LLM inference is expensive, performance modeling can help decide on the best configuration for the given system without actually running the LLM.
@@ -105,6 +110,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ## Benchmarking methodologies and suites
+
+# ### Systematic Optimization Methodologies
+# Soluntion: general systematic optimization methods through benchmarking
+2025,OSDI,GIT,Principles and Methodologies for Serial Performance Optimization,3 optimization principles (removal, replacement, reordering); 8 optimization methodologies; systematic performance framework; SysGPT assistant,4,4,2
 
 # ### Benchmark
 # Solution: benchmark targeted at performance analysis and characterization.

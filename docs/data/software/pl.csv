@@ -14,6 +14,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,PKU,TileLang: A Composable Tiled Programming Model for AI Systems,tile-based programming; tvm-based compiler; compared to trition is more flexible,4,4,3
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
 
+# #### Sparse Tensor Compilers
+# Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
+2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations,4,3,3
+
 # ### Domain-Specific Languages
 # Solution: formal semantics definition, tool generation automation, cross-domain generalization
 
@@ -22,6 +26,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,OOPSLA,MIT,Format Abstraction for Sparse Tensor Algebra Compilers,coordinate hierarchies; level formats abstraction; property-based merge lattice optimizations; level iterator conversion,4,4,3
 2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
 2022,OOPSLA,MIT,Compilation of Dynamic Sparse Tensor Algebra,node schema language; assembly abstract interface; map function generation; iterator optimization; dynamic tensor format composition,4,4,3
+
+# ### Transpilers
+# Solution: automatic, correct, and performant source-to-source code translation across different hardware ecosystems
+2025,OSDI,CAS,QiMeng-Xpiler: Transcompiling Tensor Programs for Deep Learning Systems with a Neural-Symbolic Approach,neural-symbolic synthesis; LLM-assisted transcompilation; SMT-based code repair; hierarchical auto-tuning,3,4,2
 
 # ### Hardware Description Languages
 # Solution: expressive hardware specification, efficient simulation and synthesis, robust verification methodologies
