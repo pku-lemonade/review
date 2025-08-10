@@ -85,6 +85,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Distributed Tracing
 # Solution: A technique used for monitoring and diagnosing errors in microserves systems by recording full request paths.
+2015,SOSP,Brown,Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems,happened-beforejoin for arbitrary event correlation; dynamic instrumentation; metadata propagation technique baggage,4,3,2
+2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
+2021,ICWS,SYSU,Sieve: Attention-based Sampling of End-to-End Trace Data in Distributed Microservice Systems,path vector encoding; attention score based biased sampler,3,3,2
+2023,NSDI,Emory‌&Princeton,The Benefit of Hindsight: Tracing Edge-Cases in Distributed Systems,retroactive trace sampling; trace coherence mechanism (breadcrumb); lateral tracing across requests,4,4,2
 2025,ASPLOS,SYSU&Alibaba,Mint: Cost-Efficient Tracing with All Requests Collection via Commonality and Variability Analysis,commonality and variability based tracing strategy; pattern exraction at the span level and trace level,4,4,2
 
 # ## Simulators and emulators (for software/system analysis)
