@@ -1,0 +1,43 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ### Hardware Performance Counter
+# Challenge: Software performance analysis and optimization is often limited by the lack of accurate and detailed information about the underlying hardware behavior.
+# Solution: Use hardware performance counters to gather data on CPU usage; memory access patterns; cache hits/misses; branch predictions; and other metrics that can help analyze the performance of software applications and hardware systems.
+# #### Survey
+2013,TODAES,Crete,A Survey and Taxonomy of On-Chip Monitoring of Multicore Systems-on-Chip,debugging/performance/QoS monitor; physical parameter monitor; methodology based taxonomy,2,4,1
+2016,CSUR,Oak Ridge Lab,"Understanding GPU Power: A Survey of Profiling, Modeling, and Simulation Methods",external/internal power measurement; HPC based power model; GPU power simulation,3,3,1
+2019,SP,UNC-Chapel Hill,"SoK: The Challenges, Pitfalls, and Perils of Using Hardware Performance Counters for Security",non-determinism and overcounting effects; performance monitoring interrupt,3,4,1
+# #### Specific Application
+2000,SC,UT,A Scalable Cross-Platform Infrastructure for Application Performance Tuning Using Hardware Counters, portable and machine-dependent layers based architecture; eventset for group management; counter multiplexing,2,4,2
+2004,SC,UMD,Using Hardware Counters to Automatically Improve Memory Performance,two-phase dynamic page migration algorithm; sun fire link counter,3,4,3
+2013,ISPASS,UTAustin,Non-determinism and overcount on modern hardware performance counter implementations,nondeterministic hardware interrupts; float point unit related overcount; retired instruction overcount,2,4,2
+2020,CONECCT,IIIT,"Power, Performance And Thermal Management Using Hardware Performance Counters",fine-grained dynamic voltage and frequency scaling; PMC-based power and temperature correlation model; thermal zone and partition-based management,2,4,2
+# #### Architecture Design
+# Challenge: Existing hardware performance counters provide limited information; expansion is needed to support more hardware behavior data.
+2006,ASPLOS,UW–Madison,A Performance Counter Architecture for Computing Accurate CPI Components,interval analysis based performance model; frontend miss table(FMT); shared FMT,3,3,2
+2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound; top-down performance events,3,5,3
+2015,ISCA,ANU,Computer Performance Microscopy with SHIM, double-time error correction; sample periods randomizing; CMP core sampling for low overhead,4,4,3
+# ### Dataflow Architecture
+2022,OSDI,UCB,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,,,
+2023,MICRO,PKU,TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis,3D design space of fusion dataflow; tree-based description; tile-centric notation,,,
+2024,ISCA,Stanford,The Dataflow Abstract Machine Simulator Framework,communicating sequential processes; event-queue free execution; context-channel based description; asynchronous distributed time,,,
+# ### Connection Architecture
+2014,JPDC,Inria,"Versatile, scalable, and accurate simulation of distributed applications and platforms",API based communication&computation description; informed model of TCP for moderate size grids; file based modular network representation technique,,,
+2020,MICRO,Georgia Tech; NVIDIA,"MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings",data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model,,,
+2023,ISPASS,Georgia Tech,ASTRA-sim2.0: Modeling Hierarchical Networks and Disaggregated Systems for Large-model Training at Scale,graph-based training-loop execution; multi-dimensional heterogeneous topology construction; analytical network backend,,,
+2024,ATC,THU,Evaluating Chiplet-based Large-Scale Interconnection Networks via Cycle-Accurate Packet-Parallel Simulation,packet-centric simulation; critical resources recorading for process-order-induced deviations; unimportant stages elimination,,,
+2025,arXiv,UCLM,Understanding Intra-Node Communication in HPC Systems and Datacenters,"Intra-/inter-node communication interference; Packet-level simulation (OMNeT++); PCIe/NVLink modeling; LLM communication patterns (DP, TP, PP) impact",,,
+# ### Performance Analysis
+# ### Redundancy Detection
+# Challenge: Redundant zeros in data can lead to inefficiencies in software performance; making it important to detect and eliminate them.
+2020,SC,NC State,ZeroSpy: Exploring Software Inefficiency with Redundant Zeros,code-centric analysis for instruction detection; data-centric analysis for data detection,,,
+2020,SC,NC State,GVPROF: A Value Profiler for GPU-Based Clusters,temporal/spatial load/store redundancy; hierarchical sampling for reducing monitoring overhead; bidirectional search algorithm on dependency graph,,,
+2022,ASPLOS,NC State,ValueExpert: Exploring Value Patterns in GPU-accelerated Applications value-related inefficiencies,data value pattern recoginition; value flow graph; parallel intervals merging algorithm,,,
+2022,SC,NC State,Graph Neural Networks Based Memory Inefficiency Detection Using Selective Sampling,dead store; silent store; silent load; assembly-level procedural control-flow embedding; dynamic value semantic embedding; relative positional encoding for different compilation options,,,
+# ### Variation Impact
+# Solution: Characterize sources of variation (hardware; software; environment); develop models to predict variation impact; implement techniques to reduce variation (e.g., dynamic voltage and frequency scaling, adaptive scheduling).
+2009,HPCMP,UCSD,Measuring and Understanding Variation in Benchmark Performance,MPI communication variation; distribution of performance variation,,,
+2016,SC,UNM,Understanding Performance Interference in Next-Generation HPC Systems,extreme value theory; bulk-synchronous parallel based modeling; gang/earliest deadline first scheduling,,,
+# ### Stall Attribution
+# Challenge: Stall can be caused by hardware or software; identifying the root cause of stalls and their impact on performance is crucial for performance optimization.
+2023,ICPE,NC State University,DrGPU: A Top-Down Profiler for GPU,device memory stall; synchronization stall; instruction related stall; shared memory related stall,,,
+2024,MICRO,NUDT,HyFiSS: A Hybrid Fidelity Stall-Aware Simulator for GPGPUs,memory/compute structual/data stall; synchronization stall; control stall; idle stall; cooperative thread array-sets based SM sampling algorithm,,,
