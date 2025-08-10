@@ -4,6 +4,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,HPCA,UCLA,BeaconGNN: Large-Scale GNN Acceleration with Out-of-Order Streaming In-Storage Computing,DirectGraph format for out-of-order sampling; die-level processing units; channel-level command router,4,2,3
 2025,ISCA,ETHZ,REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing,In-Storage processing,2,4,3
 2025,ISCA,UCSD,In-Storage Acceleration of Retrieval Augmented Generation as a Service,metamorphic in-storage accelerator; Metadata Navigation Unit for dynamic data access,4,3,2
+2025,ISCA,Seoul National,AiF: Accelerating On-Device LLM Inference Using In-Flash Processing,in-flash GEMV computation; charge-recycling read to skip precharge/discharge steps in flash memory,3,3,4
+2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
 # ### NDP: DIMM
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -21,6 +23,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
 2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
+
 # #### Memory Allocation & Management
 # Challenge: Existing NDP architecture has numerous independent memory spaces; lacks unified management; and features inefficient memory allocation.
 2024,ISCA,SJTU,UM-PIM: DRAM-based PIM with Uniform & Shared Memory Space,Uniform shared CPU-PIM memory; dual-track memory management; zero-copy data re-layout,3,3,4
