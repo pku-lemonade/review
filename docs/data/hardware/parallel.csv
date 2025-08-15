@@ -4,6 +4,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,TACO,Intel,HAShCache: Heterogeneity-Aware Shared DRAMCache for Integrated Heterogeneous Systems,heterogeneity-aware DRAMCache scheduling PrIS; temporal bypass ByE; spatial occupancy control chaining,,,
 2018,ICS,NC State,ProfDP: A Lightweight Profiler to Guide Data Placement in Heterogeneous Memory Systems,latency sensitivity; bandwidth sensitivity; moving factor based data placement,,,
 2023,HPCA,THU,Baryon: Efficient Hybrid Memory Management with Compression and Sub-Blocking,stage area and selective commit for stable block; dual-format metadata scheme; cacheline-aligned compression and two-level replacements,,,
+# #### Multiple Domain Specific Accelerator
+2024,HPCA,UCSD&&Univeristy of Kansas,Data Motion Acceleration: Chaining Cross-Domain Multi Accelerators,Proposes Data Motion Acceleration (DMX);Data Restructuring Accelerator (DRX),3,4,3
 # #### CPU-GPU System
 2024,arXiv,KTH,Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper,Grace Hopper system memory characterization; integrated CPU-GPU page table analysis; first-touch policy impact study; system page size impact study; access-counter page migration evaluation,2,4,3
 2025,ATC,THU,HYPERECA: Distributed Heterogeneous In-Memory Embedding Database for Training Recommender Models,embedding database in host memory and GPU memory; 2-Fold Parallel strategy; contention-free ring schedule,2,3,3
@@ -30,6 +32,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,Electronics,NUDT,Chiplet Heterogeneous Integration Technology—Status and Challenges,heterogeneous integration technology; interconnect interfaces and protocols; packaging technology,,,
 2022,CCF THPC,ICT,"Survey on chiplets: interface, interconnect and integration methodology",development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology,,,
 2024,IEEE CASS,THU,Chiplet Heterogeneous Integration Technology—Status and Challenges,wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance,,,
+# ### Multimodal AI chiplets
+2024,MICRO,CA,SCAR: Scheduling Multi-Model AI Workloads on Heterogeneous Multi-Chiplet Module Accelerators,Hierarchical Scheduling Framework;Time Windowing;Chiplet-level Scheduling,3,3,3
 # ### Cost Analysis
 2025,arXiv,ASU,CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems,"heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection",,,
 # ### 3D IC

@@ -337,6 +337,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: multimodal data is more complex and requires more resources to train.
 2025,arXiv,ByteDance,OrchMLLM: Orchestrate Multimodal Data with Batch Post-Balancing to Accelerate Multimodal Large Language Model Training,multimodal mini-batch imbalance; batch post-balancing algorithm; node-wise all-to-all communicator for practical rearrangement of mini-batches,4,4,3
 2025,arXiv,ICT,ElasticMM: Efficient Multimodal LLMs Serving with Elastic Multimodal Parallelism,unified prefix cache fusing vision and text tokens; modality-aware load balancer for bursty vision traffic,2,3,2
+2024,NSDI,OSU&&Amazon,DISTMM：Accelerating Distributed Multimodal Model Training,Heterogeneous Submodules;Modality-aware Partitioner;Data Load Balancer;Heterogeneity-aware Placement Manager;Pipeline Executor,5,5,4
+2025,ATC,Harvard&&ByteDance&&USC,Optimus: Accelerating Large-Scale Multimodal LLM Training by Bubble Exploitation,Separate Parallel Plans;Dual-Stage Dependency Management;Kernel-Level Bubble Scheduling;Schedule encoder computations within LLM bubbles,4,5,4
 
 # #### Kernel-Level Optimizations
 2025,arXiv,HUST,CFP: Low-overhead Profiling-based Intra-operator Parallelism Generation by Preserving Communication-Free Structures,model segment profile-based cost model; communication-free tensor partition propagation property; extracting a set of unique model segments; Communication-Free Preserve,4,5,3
