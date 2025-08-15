@@ -34,6 +34,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
 2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
+2025,arXiv,DeepReinforce,CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning,contrastive RL-driven CUDA optimization without human priors; LLM-based CUDA kernel optimization; reward design for CUDA kernel,4,4,2
+
+# #### DNN Training Algorithms
+# Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
+2017,ICLR,Stanford,DSD: Dense-Sparse-Dense Training for Deep Neural Networks,3 step dense-sparse-dense training,3,5,4
+2020,NeurIPS,MIT,Differentiable Augmentation for Data-Efficient GAN Training,Differentiable Augmentation to improve data efficiency in generative adversarial networks training,3,4,4
+2025,ASPLOS,Nvidia&CMU&MIT,GraphPipe: Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism,graph pipeline parallelism; topology-aware stage partitioning and scheduling algorithm,4,3,2
 
 # #### Multi-task Learning
 # Solution: Multi-task learning (MTL) is a machine learning paradigm where multiple related tasks are learned simultaneously, leveraging shared representations to improve performance across tasks.
@@ -100,6 +107,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 1977,JRSSB,Harvard,Maximum Likelihood from Incomplete Data via the EM Algorithm,incomplete data; maximum likelihood expectation algorithm,2,1,3
 2016,Big Data,LPNU,"Machine Learning, Linear and Bayesian Models for Logistic Regression in Failure Detection Problems",extreme gradient boosting classifier; generalized linear model,2,1,2
 2023,J Process Contr,UA,Modeling and Bayesian inference for processes characterized by abrupt variations,dynamic latent variable model; variational Bayesian inference framework,3,2,2
+
+# ### Time Synchronization
+# Solution: designing appropriate synchronization strategies, and improving the performance and adaptability of discrete event simulation
+1993,JACM,W&M,The Cost of Conservative Synchronization in Parallel Discrete Event Simulations,windowing mechanism based conservative synchronization; lower-bound performance analysis based on stochastic modeling,2,3,2
+2002,TPDS,Dartmouth‌,Composite Synchronization in Parallel Discrete-Event Simulation,composite synchronization mechanism; mathematical model based on synchronization overhead optimization,3,3,2
+2013,PDES,MSOE,Synchronization methods in parallel and distributed discrete-event simulation,conservative/optimistic synchronization methods; chandy-misra-bryant algorithm; time warp mechanism,3,1,1
 
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
