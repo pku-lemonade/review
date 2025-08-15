@@ -94,3 +94,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
 2025,arXiv,THU & Macau,MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware,IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE,3,3,2
 2025,arXiv,PKU,DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization,diffusion-based design generation; conditional sampling,3,4,3
+
+# ### Data Access Accelerators
+# Challenge: Indirect and sparse memory access patterns; low memory bandwidth utilization; core structural limitations
+2025,ISCA,UMich,DX100: Programmable Data Access Accelerator for Indirection,indirect memory access accelerator; bulk memory access reordering; DRAM row-buffer hit rate optimization; programmable data access ISA,4,3,2
