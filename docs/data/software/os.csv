@@ -39,6 +39,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Storage Systems
 # Solution: eficient, reliable, and secure management of data storage across diverse hardware while achieving balance between performance, durability, efficiency, and scalability .
 
+# #### Out-of-Core Processing
+# Challenge: performance penalty of slow disk I/O
+2018,OSDI,UCLA,RStream: Marrying Relational Algebra with Streaming for Efficient Graph Mining on A Single Machine,single-machine out-of-core graph mining; tuple streaming; relational algebra on graphs; GRAS programming model,4,4,4
+
 # #### SSD Management
 # Challenge: limited write endurance, garbage collection, wear leveling, and the mismatch between erase and write operations, while optimizing performance and extending device lifespan
 2025,EuroSys,Samsung,Towards Efficient Flash Caches with Emerging NVMe Flexible Data Placement SSDs,NVMe Flexible Data Placement (FDP) SSDs for data segregation; targeted data placement for reduced device write amplification; FDP-enabled CacheLib architecture; theoretical DLWA model for CacheLib,,,

@@ -13,6 +13,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: specific bounds of different situations
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
 
+# #### Graph Mining Frameworks
+# Challenge: inefficient algorithms and communication patterns
+2015,SOSP,QCRI,Arabesque: A System for Distributed Graph Mining,distributed graph mining; think like an embedding paradigm; filter-process model; ODAG embedding storage,4,4,4
+2023,ASPLOS,Purdue,Khuzdul: Efficient and Scalable Distributed Graph Pattern Mining Engine,distributed graph mining engine; extendable embedding abstraction; fine-grained task scheduling; BFS-DFS hybrid exploration,4,4,4
+
 # ### Parallel Strategies
 # Soultion: using the computation and memory resources of multiple processors to solve a problem.
 # Challenge: communication overhead and load balancing
