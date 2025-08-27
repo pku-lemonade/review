@@ -18,6 +18,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
 2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations,4,3,3
 
+# ### Graph Mining Compilers
+# Challenge: generic runtime algorithms, automatically compile high-level specifications into efficient code.
+2019,SOSP,CSM,AutoMine: Harmonizing High-Level Abstraction and High Performance for Graph Mining,automatic algorithm generation; set-based embedding representation; schedule generation via graph tournament,4,4,4
+
 # ### Domain-Specific Languages
 # Solution: formal semantics definition, tool generation automation, cross-domain generalization
 
