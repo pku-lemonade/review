@@ -21,6 +21,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: LLM accelerators face challenges in terms of memory bandwidth; power consumption; and the need for efficient data movement.
 2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
 2025,arXiv,SJTU,ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM,hybrid ROM-SRAM architecture for on-device LLM; B-ROM design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models,,,
+2025,ISCA,Duke,Ecco: Improving Memory Bandwidth and Capacity for LLMs via Entropy-Aware Cache Compression,entropy-aware cache compression for LLMs; group-wise non-uniform quantization; shared k-means patterns; parallel Huffman hardware decoder,4,3,3
 # #### Quantized DNN Accelerators
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
@@ -67,11 +68,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
 # ### Many-core Architecture
 # Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.
+# #### Resource Management
+# Challenge: Cores share resources with each other, how to achieve high performance by coordinating access among cores to prevent conflicts and ensure data consistency is a problem.
 2015,HPCA,Cornel,Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting,online bandwidth shifting mechanism; prefetch usefulness (PU) level,,,
 2015,HPCA,IBM,XChange: A Market-based Approach to Scalable Dynamic Multi-resource Allocation in Multicore Architectures,CMP multiresource allocation mechanism XChange; market framework based modeling,,,
 2018,MICRO,SNU,RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors,graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method,,,
-2023,MICRO,THU,MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
 2023,MICRO,Yonsei,McCore: A Holistic Management of High-Performance Heterogeneous Multicores,cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling,,,
+# #### Hardware Design
+# Solution: Hardware implementation for many-core architecture to achieve massive parallelism. 
+2016,SCIS,THU&BNU&CAS,The Sunway TaihuLight supercomputer: system and applications,Sunway TaihuLight's composition; scientific computing applications on TaihuLight,3,4,2
+2017,IPDPSW,SJTU&Tokyo Tech,Benchmarking SW26010 Many-core Processor,hand-coded assembly benchmark for SW26010; CPE pipeline&memory hierarchy&RLC mechanism benchmarking,3,4,2
+2023,MICRO,THU,MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
 # #### Application Optimization
 2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing & packeting,,,
 2023,SC,NUDT,Optimizing MPI Collectives on Shared Memory Multi-Cores,intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives,,,
@@ -94,3 +101,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
 2025,arXiv,THU & Macau,MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware,IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE,3,3,2
 2025,arXiv,PKU,DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization,diffusion-based design generation; conditional sampling,3,4,3
+
+# ### Data Access Accelerators
+# Challenge: Indirect and sparse memory access patterns; low memory bandwidth utilization; core structural limitations
+2025,ISCA,UMich,DX100: Programmable Data Access Accelerator for Indirection,indirect memory access accelerator; bulk memory access reordering; DRAM row-buffer hit rate optimization; programmable data access ISA,4,3,2
