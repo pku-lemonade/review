@@ -107,6 +107,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Microsoft,BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching,global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel,,,
 2024,arXiv,Berkeley,BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching,offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests,,,
 2024,arXiv,UChicago,DroidSpeak: Enhancing Cross-LLM Communication,selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model,,,
+2025,arXiv,PKU,TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving,bipartite matching dispatching; segment level cache pooling,3,3,2
 
 # ##### KV cache store
 # Solution: store the KV cache in the memory or other storage device, supporting multi-level storage.
