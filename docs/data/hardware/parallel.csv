@@ -5,7 +5,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ICS,NC State,ProfDP: A Lightweight Profiler to Guide Data Placement in Heterogeneous Memory Systems,latency sensitivity; bandwidth sensitivity; moving factor based data placement,,,
 2023,HPCA,THU,Baryon: Efficient Hybrid Memory Management with Compression and Sub-Blocking,stage area and selective commit for stable block; dual-format metadata scheme; cacheline-aligned compression and two-level replacements,,,
 # #### Multiple Domain Specific Accelerator
-2024,HPCA,UCSD&&Univeristy of Kansas,Data Motion Acceleration: Chaining Cross-Domain Multi Accelerators,Proposes Data Motion Acceleration (DMX);Data Restructuring Accelerator (DRX),3,4,3
+2024,HPCA,UCSD && Univ. of Kansas,Data Motion Acceleration: Chaining Cross-Domain Multi Accelerators,Proposes Data Motion Acceleration (DMX);Data Restructuring Accelerator (DRX),3,4,3
+2025,ISCA,HyperAccel,Hybe: GPU-NPU Hybrid System for Efficient LLM Inference with Million-Token Context Window,GPU-NPU hybrid system for LLM; prefill-decode stage separation; fine-grained KV cache transmission; stage-wise pipelining,4,3,2
 # #### CPU-GPU System
 2024,arXiv,KTH,Harnessing Integrated CPU-GPU System Memory for HPC: a first look into Grace Hopper,Grace Hopper system memory characterization; integrated CPU-GPU page table analysis; first-touch policy impact study; system page size impact study; access-counter page migration evaluation,2,4,3
 2025,ATC,THU,HYPERECA: Distributed Heterogeneous In-Memory Embedding Database for Training Recommender Models,embedding database in host memory and GPU memory; 2-Fold Parallel strategy; contention-free ring schedule,2,3,3
