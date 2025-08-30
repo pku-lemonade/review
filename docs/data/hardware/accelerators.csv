@@ -68,11 +68,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
 # ### Many-core Architecture
 # Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.
+# #### Resource Management
+# Challenge: Cores share resources with each other, how to achieve high performance by coordinating access among cores to prevent conflicts and ensure data consistency is a problem.
 2015,HPCA,Cornel,Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting,online bandwidth shifting mechanism; prefetch usefulness (PU) level,,,
 2015,HPCA,IBM,XChange: A Market-based Approach to Scalable Dynamic Multi-resource Allocation in Multicore Architectures,CMP multiresource allocation mechanism XChange; market framework based modeling,,,
 2018,MICRO,SNU,RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors,graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method,,,
-2023,MICRO,THU,MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
 2023,MICRO,Yonsei,McCore: A Holistic Management of High-Performance Heterogeneous Multicores,cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling,,,
+# #### Hardware Design
+# Solution: Hardware implementation for many-core architecture to achieve massive parallelism. 
+2016,SCIS,THU&BNU&CAS,The Sunway TaihuLight supercomputer: system and applications,Sunway TaihuLight's composition; scientific computing applications on TaihuLight,3,4,2
+2017,IPDPSW,SJTU&Tokyo Tech,Benchmarking SW26010 Many-core Processor,hand-coded assembly benchmark for SW26010; CPE pipeline&memory hierarchy&RLC mechanism benchmarking,3,4,2
+2023,MICRO,THU,MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
 # #### Application Optimization
 2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing & packeting,,,
 2023,SC,NUDT,Optimizing MPI Collectives on Shared Memory Multi-Cores,intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives,,,

@@ -56,3 +56,4 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Synchronization
 # Solution: coordinating access to shared resources among multiple processes or threads to prevent conflicts, ensure data consistency, and avoid issues like race conditions, deadlocks, and resource starvation.
+2019,ASPLOS,THU&USC,pLock: A Fast Lock for Architectures with Explicit Inter-core Message Passing,chaining lock for direct lock transfering; hierarchical lock for non-uniform network,4,4,2
