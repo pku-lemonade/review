@@ -199,6 +199,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### ML Training Systems
 # Solution: balance between faster training and high precision.
 2023,SOSP,CMU,"Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling",heterogeneity-aware and adaptivity-aware; ILP formulation for scheduling; bootstrapped from observing just a few mini-batches,,,
+2023,SOSP,Rice&AWS,Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints,holistic trace analysis; cross-layer failure detection; checkpoint partition algorithm,4,4,2
 
 # ### LLM Inference Heterogeneous Systems <a name="LLM-Inference-Heterogeneous-Systems"></a>
 # Solution: managing diverse hardware and software environments, balancing workloads across uneven resources, meeting the SLO.
