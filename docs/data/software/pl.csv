@@ -48,10 +48,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### General HLS Compiler
 # C/C++/SystemC to RTL, microarchitecture optimization, resource sharing and scheduling
 2022,ASPLOS,UCLA,HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair,automated test generation; dependence-guided search space pruning; early candidate rejection using coding styles,3,4,3
-2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,4
 2022,FPGA,Cornell,HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs,Decoupled data placement; Unified data placement primitive; Multi-level memory hierarchy optimization,4,4,4
 2024,DATE,UIUC,Subgraph Extraction-Based Feedback-Guided Iterative Scheduling for HLS,ISDC iterative SDC scheduling; subgraph extraction-based low-level feedback; fanout and window-based subgraph extraction mechanism,4,4,4
 2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
+
+##### MLIR-based HLS Frameworks
+# Solution: Leveraging modern compiler infrastructures like MLIR to build modular, extensible, and reusable HLS frameworks.
+2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,3
+2023,ASPLOS,IISc,HIR: An MLIR-based Intermediate Representation for Hardware Accelerator Description,MLIR-based hardware IR; datapath + schedule model; explicit scheduling via time variables; automatic FSM synthesis,4,4,4
+2024,HPCA,SJTU,An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation,polyhedral model for HLS; MLIR-based HLS framework; automatic design space exploration,4,4,4
 
 # ##### HLS Verification and Testing
 # Solution: automated bug detection, verification dataset generation, LLM-aided debugging for HLS designs
