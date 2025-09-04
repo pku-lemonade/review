@@ -15,11 +15,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,arXiv,Google,Fast Transformer Decoding: One Write-Head is All You Need,MQA; share same KV cache for all heads; multi-query attention,1,4,3
 2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
+2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning,3,4,3
 
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
 2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
 2025,ICLR,Princeton,Safety Alignment Should Be Made More Than Just a Few Tokens Deep,ai-savety centered alignment; enhance sacety on deeper tokens and data,3,3,3
+2025,ACL,PKU,Language Models Resist Alignment: Evidence From Data Compression,LLM have inner resistance to alignment; the larger scale in pre-train increase the resistance,4,3,4
 
 # ##### LLM Finetune
 # Solution: finetune adapts a pre-trained model to a specific task or domain. By doing so, the model can better fit the specific task or domain.
@@ -96,7 +98,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Quantization-aware training (QAT) is a technique that simulates the effects of quantization during the training process, allowing the model to learn to adapt to the quantization noise.
 2018,arXiv,IBM,PACT: Parameterized Clipping Activation for Quantized Neural Networks,activation quantization scheme for finding the optimal quantization scale during training,3,4,3
 2020,ICLR,IBM,Learned Step Size Quantization,approximate the gradient to the quantizer step size; heuristic to bring the magnitude of step size updates into better balance with weight updates,3,4,3
-
+2022,CVPR,HKUST,Nonuniform-to-Uniform Quantization: Towards Accurate Quantization via Generalized Straight-Through Estimation,Nonuniform-to-Uniform Quantizer (N2UQ) via learning input thresholds; Generalized Straight-Through Estimator (GSTE) to tackle intractable gradient computation in N2UQ,3,3,3
+2025,arXiv,HKU & ByteDance,Scaling Law for Quantization-Aware Training,a mathematical model for QAT quantization error,4,4,4
 # ### DNN Compression
 # Solution: DNN compression aims to reduce the size and computational requirements of deep neural networks
 2016,ICLR,Stanford,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding","three stage pipeline: pruning, trained quantization and Huffman coding",4,4,4
