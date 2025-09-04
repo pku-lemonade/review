@@ -131,11 +131,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,TCAD,NTHU,MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks,sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion,3,3,2
 2023,TCAD,UCSB,"SDP: Co-Designing Algorithm, Dataflow, and Architecture for In-SRAM Sparse NN Acceleration",double-broadcast hybridgrained pruning method; bit-serial booth inSRAM (BBS) multiplication dataflow,3,3,2
 2024,TCAD,BUAA,DDC-PIM: Efficient Algorithm/Architecture Co-Design for Doubling Data Capacity of SRAM-Based Processing-in-Memory,doubling the equivalent data capacity of SRAM-based PIM; FCC algorithm to obtain bitwise complementary filters,4,4,2
-2024,TCASAI,Purdue,Algorithm Hardware Co-Design for ADC-Less Compute In-Memory Accelerator,reduce ADC overhead in analog CiM architectures; Quantization-Aware Training; Partial Sum Quantization; ADC-Less hybrid analog-digital CiM hardware architecture HCiM,3,3,3
+2024,TCASAI,Purdue,Algorithm Hardware Co-Design for ADC-Less Compute In-Memory Accelerator,reduce ADC overhead in analog CiM architectures; Quantization-Aware Training; Partial Sum Quantization; ADC-Less hybrid analog-digital CiM hardware architecture HCiM,3,3,
 2025,TCAD,BUAA,Efficient SRAM-PIM Co-design by Joint Exploration of Value-Level and Bit-Level Sparsity,hybrid-grained pruning algorithm; customized Dyadic Block PIM (DB-PIM) architecture,4,3,2
 # #### SRAM CIM: Simulator & Modeling
 2020,ISCAS,JCU,MemTorch: A Simulation Framework for Deep Memristive Cross-Bar Architectures,"supports both GPUs and CPUs; integrates directly with PyTorch; simulate non-idealities of memristive devices within cross-bar, tested on VGG-16, CIFAR-10",,,
-2021,TCAD,Georgia Tech,DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training,non-ideal device properties of NVMS' effect for on-chip training,3,3,2
+2021,TCAD,Geogia Tech,DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training,non-ideal device properties of NVMS' effect for on-chip training,3,3,2
 2025,DAC,BUAA,CIMFlow: An Integrated Framework for Systematic Design and Evaluation of Digital CIM Architectures,workflow for implementing and evaluating DNN workloads on digital CIM architectures; CIM-specific ISA design; compilation flow built on the MLIR infrastructure,4,2,3
 # #### SRAM CIM: Transformer Accelerator
 # Challenge: Transformer architecture is widely used in NLP and CV tasks. Existing SRAM CIM architectures are not suitable for transformer acceleration.
