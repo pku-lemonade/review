@@ -109,6 +109,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,TCAD,ASU,NeuroSim: A Circuit-Level Macro Model for Benchmarking Neuro-Inspired Architectures in Online Learning,"estimate the circuit-level performance of neuro-inspired architectures; estimates the area, latency, dynamic energy, and leakage power; Support both SRAM and eNVM; tested on 2-layer MLP NN, MNIST",,,
 2019,IEDM,Georgia Tech,DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies,a python wrapper to interface NeuroSim; for inference only,,,
 2020,TCAD,ZJU,Eva-CiM: A System-Level Performance and Energy Evaluation Framework for Computing-in-Memory Architectures,models for capturing memory access and dependency-aware ISA traces; models for quantifying interactions between the host CPU and the CiM module,,,
+2022,ICCAD,Purdue,Design Space and Memory Technology Co-Exploration for In-Memory Computing Based Machine Learning Accelerators,simulation framework to evaluate the systemlevel performance of IMC architecture; area-aware weight mapping strategy,4,3,2
 2024,ISPASS,MIT,"CiMLoop: A Flexible, Accurate, and Fast Compute-In-Memory Modeling Tool",flexible specification to describe CiM systems; accurate model/fast statistical model of data-value-dependent component energy,,,
 2025,ASPDAC,HKUST,MICSim: A Modular Simulator for Mixed-signal Compute-in-Memory based AI Accelerator,modulared Neurosim; data statistic-based average-mode instead of trace-based mode,4,3,2
 # ### CIM: DRAM
@@ -122,21 +123,25 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory; DIMM-based NDP causing high energy consumption; area overhead and low performance efficiency.
 # Solution: Generally modify the physical structure of SRAM to enable in-memory computing; rather than placing logic units into SRAM.
 # #### SRAM CIM: General Architecture
-2024,TCASAI,Purdue,Algorithm Hardware Co-Design for ADC-Less Compute In-Memory Accelerator,reduce ADC overhead in analog CiM architectures; Quantization-Aware Training; Partial Sum Quantization; ADC-Less hybrid analog-digital CiM hardware architecture HCiM,,,
 2024,ISCAS,NYCU,CIMR-V: An End-to-End SRAM-based CIM Accelerator with RISC-V for AI Edge Device,"incorporates CIM layer fusion, convolution/max pooling pipeline, and weight fusion; weight fusion: pipelining the CIM convolution and weight loading",,,
 2018,JSSC,MIT,CONV-SRAM: An Energy-Efficient SRAM With In-Memory Dot-Product Computation for Low-Power Convolutional Neural Networks,SRAM-embedded convolution (dot-product) computation architecture for BNN; support multi-bit input-output,,,
-2022,TCAD,NTHU,MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks,sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion,,,
 2024,ESSCIRC,THU,A 65nm 8b-Activation 8b-Weight SRAM-Based Charge-Domain Computing-in-Memory Macro Using A Fully-Parallel Analog Adder Network and A Single-ADC Interface,SRAM-based CD-CiM architecture; charge-domain analog adder tree; ReLU-optimized ADC,4,4,4
 2021,ISSCC,TSMC,An 89TOPS/W and 16.3TOPS/mm2 All-Digital SRAM-Based Full-Precision Compute-In Memory Macro in 22nm for Machine-Learning Edge Applications,programmable bit-widths for both input and weights; SRAM and CIM mode,2,5,1
+2021,JSSC,KAIST,Z-PIM: A Sparsity-Aware Processing-in-Memory Architecture With Fully Variable Weight Bit-Precision for Energy-Efficient Deep Neural Networks,bit-serial operation to support variable weight bit-precision; data mapping and computation flow for sparsity handling,3,4,4
 # #### SRAM CIM: Specific Use or Application
 2023,TCAS-I,UIC,MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence,SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations,,,
 2024,DAC,GWU,Addition is Most You Need: Efficient Floating-Point SRAM Compute-in-Memory by Harnessing Mantissa Addition,decomposing FP mantissa multiplication into sub-ADD and sub-MUL; hybrid-domain SRAM CIM architecture,3,3,2
+2025,A-SSCC,Georgia Tech,A 28nm 1.80Mb/mm2 Digital/Analog Hybrid SRAM-CIM Macro Using 2D-Weighted Capacitor Array for Complex Number Mac Operations,Hybrid DCIM/ACIM SRAM; lightweight correction schemes; complex CIM-SRAM units,2,4,2
+2025,arXiv,GWU,Unicorn-CIM: Uncovering the Vulnerability and Improving the Resilience of High-Precision Compute-in-Memory,SRAM-CIM for FP DNNs; a fault-injection framework for FP DNNs; a ECC scheme for FP DNNs,3,2,3
 # #### SRAM CIM: Hardware-Software Co-Design
+2022,TCAD,NTHU,MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks,sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion,3,3,2
+2023,TCAD,UCSB,"SDP: Co-Designing Algorithm, Dataflow, and Architecture for In-SRAM Sparse NN Acceleration",double-broadcast hybridgrained pruning method; bit-serial booth inSRAM (BBS) multiplication dataflow,3,3,2
 2024,TCAD,BUAA,DDC-PIM: Efficient Algorithm/Architecture Co-Design for Doubling Data Capacity of SRAM-Based Processing-in-Memory,doubling the equivalent data capacity of SRAM-based PIM; FCC algorithm to obtain bitwise complementary filters,4,4,2
+2024,TCASAI,Purdue,Algorithm Hardware Co-Design for ADC-Less Compute In-Memory Accelerator,reduce ADC overhead in analog CiM architectures; Quantization-Aware Training; Partial Sum Quantization; ADC-Less hybrid analog-digital CiM hardware architecture HCiM,3,3,
 2025,TCAD,BUAA,Efficient SRAM-PIM Co-design by Joint Exploration of Value-Level and Bit-Level Sparsity,hybrid-grained pruning algorithm; customized Dyadic Block PIM (DB-PIM) architecture,4,3,2
 # #### SRAM CIM: Simulator & Modeling
 2020,ISCAS,JCU,MemTorch: A Simulation Framework for Deep Memristive Cross-Bar Architectures,"supports both GPUs and CPUs; integrates directly with PyTorch; simulate non-idealities of memristive devices within cross-bar, tested on VGG-16, CIFAR-10",,,
-2021,TCAD,Geogia Tech,DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training,non-ideal device properties of NVMS' effect for on-chip training,,,
+2021,TCAD,Geogia Tech,DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for On-Chip Training,non-ideal device properties of NVMS' effect for on-chip training,3,3,2
 2025,DAC,BUAA,CIMFlow: An Integrated Framework for Systematic Design and Evaluation of Digital CIM Architectures,workflow for implementing and evaluating DNN workloads on digital CIM architectures; CIM-specific ISA design; compilation flow built on the MLIR infrastructure,4,2,3
 # #### SRAM CIM: Transformer Accelerator
 # Challenge: Transformer architecture is widely used in NLP and CV tasks. Existing SRAM CIM architectures are not suitable for transformer acceleration.
@@ -218,6 +223,7 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 # #### Hybrid CIM: Memristor/MRAM + SRAM
 2025,Nature,TSMC,A mixed-precision memristor and SRAM compute-in-memory AI processor,layer based INT-FP hybrid architure; kernel-based mix-CIM (SRAM/ReRAM/digital hybrid architecture),5,5,2
 2025,DAC,Chung-Ang Univ.,HH-PIM: Dynamic Optimization of Power and Performance with Heterogeneous-Hybrid PIM for Edge AI Devices,heterogeneous-hybrid PIM with HP/LP modules and MRAM/SRAM; dynamic data placement algorithm for energy optimization; dual PIM controller design,3,4,2
+2025,arXiv,AaltoU,Acore-CIM: build accurate and reliable mixed-signal CIM cores with RISC-V controlled self-calibration,reliability-focused MAC cell; proof-of-concept SoC composed of a CIM core and a RISC-V control processor; automated Built-In Self-Calibration (BISC) routine,3,3,4
 # #### Hybrid CIM: Analog + Digital
 2023,arXiv,HP,RACE-IT: A Reconfigurable Analog CAM-Crossbar Engine for In-Memory Transformer Acceleration,Compute Analog Content Addressable Memory (Compute-ACAM) structure; accelerator based on crossbars and Compute-ACAMs; encoding-based optimization,3,3,4
 2024,VLSI,FDU,HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer,"product-quantization-based sparse self-attention algorithm; ADC-free ReRAM-CIM macro; ReRAM-CIM for front-end attention sparsification, SRAM-CIM for back-end sparse attention",4,3,3
@@ -238,6 +244,7 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 # ### CIM: Digital CIM
 2025,ISCAS,CAS,StreamDCIM: A Tile-based Streaming Digital CIM Accelerator with Mixed-stationary Cross-forwarding Dataflow for Multimodal Transformer,tile-based reconfigurable CIM macro microarchitecture; mixed-stationary cross-forwarding dataflow; ping-pong-like finegrained compute-rewriting pipeline,,,
 # ### NVM
+2020,GLSVLSI,UND,Benchmarking Computing-in-Memory for Design Space Exploration,uniform benchmarking of CiM designs based on different memory technologies,3,3,2
 2024,ISCAS,UMCP,On-Chip Adaptation for Reducing Mismatch in Analog Non-Volatile Device Based Neural Networks,float-gate transistors based; hot-electron injection to address the issue of mismatch and variation,,,
 2023,DATE,UniBo,End-to-End DNN Inference on a Massively Parallel Analog In Memory Computing Architecture,many-core heterogeneous architecture; general-purpose system based on RISC-V cores and nvAIMC cores; based on Phase-Change Memory(PCM);,,,
 

@@ -13,6 +13,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: specific bounds of different situations
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
 
+# #### Graph Mining Frameworks
+# Challenge: inefficient algorithms and communication patterns
+2015,SOSP,QCRI,Arabesque: A System for Distributed Graph Mining,distributed graph mining; think like an embedding paradigm; filter-process model; ODAG embedding storage,4,4,4
+2023,ASPLOS,Purdue,Khuzdul: Efficient and Scalable Distributed Graph Pattern Mining Engine,distributed graph mining engine; extendable embedding abstraction; fine-grained task scheduling; BFS-DFS hybrid exploration,4,4,4
+
 # ### Parallel Strategies
 # Soultion: using the computation and memory resources of multiple processors to solve a problem.
 # Challenge: communication overhead and load balancing
@@ -84,7 +89,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General LLM Memory Management
 # Challenge: LLM memory management faces challenges like limited HBM memory, efficient KV Cache management, memory sharing between multiple GPUs, multi-level memory management.
 2022,SC,Miscrosoft,DeepSpeed-Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale,kernel fusion; GPU-CPU-NVMe heterogeneous memory; PCIe-based memory prefetch,4,4,3
-2025,arXiv,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,fixed-size embeddings; full-prefix dependency; two-level memory allocator,4,4,3
+2025,SOSP,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,two-level LCM allocator; customizable prefix caching; request-aware allocation,4,4,2
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 2025,SOSP,SJTU,KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider,real-world KVCache trace anatomy; workload-aware eviction; analysis of KVCache hit in the real-world,4,4,2
 
@@ -102,6 +107,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Microsoft,BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching,global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel,,,
 2024,arXiv,Berkeley,BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching,offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests,,,
 2024,arXiv,UChicago,DroidSpeak: Enhancing Cross-LLM Communication,selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model,,,
+2025,arXiv,PKU,TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving,bipartite matching dispatching; segment level cache pooling,3,3,2
 
 # ##### KV cache store
 # Solution: store the KV cache in the memory or other storage device, supporting multi-level storage.
@@ -142,9 +148,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
 
 # ### GPU-GPU Communication
-# Challenge: limited interconnect bandwidth between GPUs using nvLink, PCIe, synchronization delays in parallel workloads, load imbalance across GPUs
+# Challenge: limited interconnect bandwidth between GPUs using nvLink, PCIe, synchronization delays in parallel workloads, load imbalance across GPUs. The GPU-GPU can also across different nodes.
 2025,arXiv,Apple,SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models,sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction,,,
 2025,arXiv,Miscrosoft,Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters,heterogeneous pipeline stages with flexible GPU counts and types; CPU offloading of both parameters and activations,4,4,2
+2025,SIGCOMM,PKU,InfiniteHBD: Building Datacenter-Scale High-Bandwidth Domain for LLM with Optical Circuit Switching Transceivers,optical circuit switching; node-level fault isolation; optimize TP in DCN network,4,3,3
 
 
 # ## Many-Core Systems
@@ -194,6 +201,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### ML Training Systems
 # Solution: balance between faster training and high precision.
 2023,SOSP,CMU,"Sia: Heterogeneity-aware, goodput-optimized ML-cluster scheduling",heterogeneity-aware and adaptivity-aware; ILP formulation for scheduling; bootstrapped from observing just a few mini-batches,,,
+2023,SOSP,Rice&AWS,Gemini: Fast Failure Recovery in Distributed Training with In-Memory Checkpoints,holistic trace analysis; cross-layer failure detection; checkpoint partition algorithm,4,4,2
 
 # ### LLM Inference Heterogeneous Systems <a name="LLM-Inference-Heterogeneous-Systems"></a>
 # Solution: managing diverse hardware and software environments, balancing workloads across uneven resources, meeting the SLO.
@@ -263,11 +271,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### LLM Request Scheduling
 # Solution: develop intelligent strategies to route requests, prioritize urgent or critical tasks, handle varying input lengths and complexities, manage resource contention to meet the SLO requirements.
-2024,arXiv,UCSB,Multi-Bin Batching for Increasing LLM Inference Throughput,binning-based scheduling strategy; queueing-theoretical analysis; asymptotical throughput optimality,,,
 2024,arXiv,Yale,TimelyLLM: Segmented LLM Serving System for Time-sensitive Robotic Applications,segmented generation; time-sensitive scheduling; latency-guided batch size selection,,,
 2025,arXiv,MSRI,Niyama : Breaking the Silos of LLM Inference Serving,QoS-driven LLM inference serving system; co-scheduling requests with diverse QoS targets on a shared rather than siloed infrastructure; allows graceful service degradation during overload conditions; deadline slack; a hybrid prioritization and an eager relegation policy,4,4,3
 2025,arXiv,MIT,Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints,fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments,3,4,2
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
+2025,SOSP,UChicago,PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications,prefill-only workload; hybrid prefilling; continuous JCT calibration; JCT-aware scheduling,4,4,4
+
+# #### Batching for Better Throughput
+# Challenge: the batching is a trade-off between the throughput and the latency. The requests in the same batch also call for different resources. Split different compute pattern request for different batches is a good idea.
+2025,OSDI,UA,NanoFlow: Towards Optimal Large Language Model Serving Throughput,LLM inference is indeed compute-bound; model-based batch size analysis; micro batch split for overlapping between all resources,4,4,3
 
 # ##### Info Predict Scheduling
 # Challenge: The general schedule if for better batching and meeting the SLO requirements. By predicting the information of the requests, we can make the schedule more efficient.
@@ -445,6 +457,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
+
+# #### Diffusion LLM Systems
+# Challenge: traditional LLM use an auto-regressive model to generate the text, which is slow. Diffusion LLM have a parallel generation ability, which is fast.
+2025,arXiv,SJTU,dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching,training-free adaptive caching mechanism; V-verify mechanism for caching,4,3,3
+2025,arXiv,SJTU,Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing,First dLLM faster than AR LLM; fuse KV-cached autoregression with parallel diffusion decoding; inter-block parallelism without full denoise,4,3,4
 
 # #### Fair Serving Systems
 2024,arXiv,Virginia Tech,Ensuring Fair LLM Serving Amid Diverse Applications,multi-tenant LLM platform; overload and interaction-driven throttling; weighted service counter,,,
