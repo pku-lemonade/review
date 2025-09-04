@@ -7,6 +7,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Process and thread management
 # Solution: ensuring fair resource allocation, smooth multitasking, and proper coordination between processes and threads to maximize system performance and responsiveness.
 
+# ### GPU Checkpoint and Restore
+# Challenge: Saving and restoring the complete state for GPUs is difficult without causing long application stalls
+2025,SOSP,SJTU,PHOENIXOS: Concurrent OS-level GPU Checkpoint and Restore with Validated Speculation,validated speculation; concurrent GPU checkpoint and restore; soft copy-on-write; GPU context pool,4,4,4
 
 # ## Memory management
 # Memory management is the basic of system design.
@@ -56,3 +59,4 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Synchronization
 # Solution: coordinating access to shared resources among multiple processes or threads to prevent conflicts, ensure data consistency, and avoid issues like race conditions, deadlocks, and resource starvation.
+2019,ASPLOS,THU&USC,pLock: A Fast Lock for Architectures with Explicit Inter-core Message Passing,chaining lock for direct lock transfering; hierarchical lock for non-uniform network,4,4,2

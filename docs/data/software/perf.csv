@@ -85,7 +85,26 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Distributed Tracing
 # Solution: A technique used for monitoring and diagnosing errors in microserves systems by recording full request paths.
+2015,SOSP,Brown,Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems,happened-beforejoin for arbitrary event correlation; dynamic instrumentation; metadata propagation technique baggage,4,3,2
+2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
+
+# ##### Tracing Optimization
+2015,SOSP,Brown,Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems,happened-beforejoin for arbitrary event correlation; dynamic instrumentation; metadata propagation technique baggage,4,3,2
+2021,ICWS,SYSU,Sieve: Attention-based Sampling of End-to-End Trace Data in Distributed Microservice Systems,path vector encoding; attention score based biased sampler,3,3,2
+2023,NSDI,Emory‌&Princeton,The Benefit of Hindsight: Tracing Edge-Cases in Distributed Systems,retroactive trace sampling; trace coherence mechanism (breadcrumb); lateral tracing across requests,4,4,2
 2025,ASPLOS,SYSU&Alibaba,Mint: Cost-Efficient Tracing with All Requests Collection via Commonality and Variability Analysis,commonality and variability based tracing strategy; pattern exraction at the span level and trace level,4,4,2
+
+
+# ### Profiling with LLM
+# Solution: using LLMs to generate profile results.
+2025,SOSP,UChicago,METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation,LLM-based query profiler; rule-based configuration pruning; resource-aware joint scheduling; per-query configuration adaptation,3,4,2
+
+# ##### Diagnosis and Analysis
+2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
+2022,SIGCOMM,THU&UPENN,PrintQueue: Performance Diagnosis via Queue Measurement in the Data Plane,congestion regime taxonomy; hierarchical, probabilistic flow-tracking data structure; queue monitor for original culprits,3,4,2
+2023,NSDI,BUPT&ByteDance,Hostping: Diagnosing Intra-host Network Bottlenecks in RDMA Servers,loopback tests between RNICs and endpoints; bus utilization monitoring; binary network tomography inspired path analysis,3,4,2
+2024,NSDI,ByteDance&PKU,MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs,CUDA event monitor; 3D parallel training visualization; tail-latency-aware load balancing,3,4,2
+
 
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.

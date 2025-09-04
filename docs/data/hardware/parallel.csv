@@ -33,6 +33,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,Electronics,NUDT,Chiplet Heterogeneous Integration Technology—Status and Challenges,heterogeneous integration technology; interconnect interfaces and protocols; packaging technology,,,
 2022,CCF THPC,ICT,"Survey on chiplets: interface, interconnect and integration methodology",development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology,,,
 2024,IEEE CASS,THU,Chiplet Heterogeneous Integration Technology—Status and Challenges,wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance,,,
+2024,IEEE CASS,THU,Wafer-scale Computing: Advancements, Challenges, and Future Perspectives,wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance,,,
+2024,JETCAS,Chip and Package-Scale Interconnects for General-Purpose, Domain-Specific, and Quantum Computing Systems—Overview, Challenges, and Opportunities,interconnection technology; communication-centric challenges,3,1,1
 # ### Multimodal AI chiplets
 2024,MICRO,CA,SCAR: Scheduling Multi-Model AI Workloads on Heterogeneous Multi-Chiplet Module Accelerators,Hierarchical Scheduling Framework;Time Windowing;Chiplet-level Scheduling,3,3,3
 # ### Cost Analysis
