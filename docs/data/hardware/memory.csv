@@ -125,6 +125,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### SRAM CIM: Specific Use or Application
 2023,TCAS-I,UIC,MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence,SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations,,,
 2024,DAC,GWU,Addition is Most You Need: Efficient Floating-Point SRAM Compute-in-Memory by Harnessing Mantissa Addition,decomposing FP mantissa multiplication into sub-ADD and sub-MUL; hybrid-domain SRAM CIM architecture,3,3,2
+2025,A-SSCC,Georgia Tech,A 28nm 1.80Mb/mm2 Digital/Analog Hybrid SRAM-CIM Macro Using 2D-Weighted Capacitor Array for Complex Number Mac Operations,Hybrid DCIM/ACIM SRAM; lightweight correction schemes; complex CIM-SRAM units,2,4,2
+2025,arXiv,GWU,Unicorn-CIM: Uncovering the Vulnerability and Improving the Resilience of High-Precision Compute-in-Memory,SRAM-CIM for FP DNNs; a fault-injection framework for FP DNNs; a ECC scheme for FP DNNs,3,2,3
 # #### SRAM CIM: Hardware-Software Co-Design
 2022,TCAD,NTHU,MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks,sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion,3,3,2
 2023,TCAD,UCSB,"SDP: Co-Designing Algorithm, Dataflow, and Architecture for In-SRAM Sparse NN Acceleration",double-broadcast hybridgrained pruning method; bit-serial booth inSRAM (BBS) multiplication dataflow,3,3,2
@@ -215,6 +217,7 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 # #### Hybrid CIM: Memristor/MRAM + SRAM
 2025,Nature,TSMC,A mixed-precision memristor and SRAM compute-in-memory AI processor,layer based INT-FP hybrid architure; kernel-based mix-CIM (SRAM/ReRAM/digital hybrid architecture),5,5,2
 2025,DAC,Chung-Ang Univ.,HH-PIM: Dynamic Optimization of Power and Performance with Heterogeneous-Hybrid PIM for Edge AI Devices,heterogeneous-hybrid PIM with HP/LP modules and MRAM/SRAM; dynamic data placement algorithm for energy optimization; dual PIM controller design,3,4,2
+2025,arXiv,AaltoU,Acore-CIM: build accurate and reliable mixed-signal CIM cores with RISC-V controlled self-calibration,reliability-focused MAC cell; proof-of-concept SoC composed of a CIM core and a RISC-V control processor; automated Built-In Self-Calibration (BISC) routine,3,3,4
 # #### Hybrid CIM: Analog + Digital
 2023,arXiv,HP,RACE-IT: A Reconfigurable Analog CAM-Crossbar Engine for In-Memory Transformer Acceleration,Compute Analog Content Addressable Memory (Compute-ACAM) structure; accelerator based on crossbars and Compute-ACAMs; encoding-based optimization,3,3,4
 2024,VLSI,FDU,HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer,"product-quantization-based sparse self-attention algorithm; ADC-free ReRAM-CIM macro; ReRAM-CIM for front-end attention sparsification, SRAM-CIM for back-end sparse attention",4,3,3
