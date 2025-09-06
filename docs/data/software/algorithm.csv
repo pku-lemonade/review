@@ -15,7 +15,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,arXiv,Google,Fast Transformer Decoding: One Write-Head is All You Need,MQA; share same KV cache for all heads; multi-query attention,1,4,3
 2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
-2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning,3,4,3
+
+# ##### Diffusion LLMs
+# Challenge: diffusion generate result from noise, 
+2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning; inter-block AR while in-block diffusion,3,4,3
+2025,arXiv,HKU,Dream 7B: Diffusion Large Language Models,based on AR model's pre-train; inter-block diffusion,3,3,3
 
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
