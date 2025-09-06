@@ -117,6 +117,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2002,TPDS,Dartmouth‌,Composite Synchronization in Parallel Discrete-Event Simulation,composite synchronization mechanism; mathematical model based on synchronization overhead optimization,3,3,2
 2013,PDES,MSOE,Synchronization methods in parallel and distributed discrete-event simulation,conservative/optimistic synchronization methods; chandy-misra-bryant algorithm; time warp mechanism,3,1,1
 
+# ### Communication Optimization
+# Solution: modeling and searching the parameter space of collective communication libraries, dynamically selecting optimal configurations under real training/analyzing workloads
+2024,SIGCOMM,UPenn&Microsoft,Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem,traffic engineering based collective communication optimization; mixed-integer linear program; A* technique for scaling,4,3,2
+2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
+2025,SC,THU,TraceFlow: Efficient Trace Analysis for Large-Scale Parallel Applications via Interaction Pattern-Aware Trace Distribution,communication skeleton tree; interaction-aware trace distribution; communication-minimized trace shuffling,4,4,2
+
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
