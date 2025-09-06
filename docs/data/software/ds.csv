@@ -356,6 +356,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Kernel-Level Optimizations
 2025,arXiv,HUST,CFP: Low-overhead Profiling-based Intra-operator Parallelism Generation by Preserving Communication-Free Structures,model segment profile-based cost model; communication-free tensor partition propagation property; extracting a set of unique model segments; Communication-Free Preserve,4,5,3
 
+# #### SFT and Fine-tuning Optimizations
+# Challenge: SFT plays an important role to enhance model's ability on specific tasks. Thus SFT has a strong taks's pattern, like the distribution of input-output length.
+2025,arXiv,PKU,LobRA: Multi-tenant Fine-tuning over Heterogeneous Data,Deploys different model replicas to handle varied workloads; balancing different LoRAs' workload caused by dataset,3,3,2
+
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
 2025,ISCA,DeepSeek,Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures,software-hardware co-design for deepseek-v3; insight into hardware for ai architectures,5,5,4
