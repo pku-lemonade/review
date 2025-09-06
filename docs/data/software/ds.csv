@@ -494,3 +494,4 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: serving diffusion models need sequential iterative process, which creates prohibitive latency for generating high-resolution images in real-time and is inherently difficult to parallelize.
 2024,CVPR,MIT,DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models,displaced patch parallelism; asynchronous GroupNorm for distributed normalization,3,4,2
 2024,arXiv,Tencent,PipeFusion: Patch-level Pipeline Parallelism for Diffusion Transformers Inference,patch-level pipeline parallelism; reusing one-step stale feature maps to exploit temporal redundancy; simultaneous image patch and model layer partitioning,4,4,2
+2025,arXiv,UMASS,HADIS: Hybrid Adaptive Diffusion Model Serving for Efficient Text-to-Image Generation,offline analysis based router choose; LIP based resource allocation,2,3,2
