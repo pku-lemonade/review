@@ -168,6 +168,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,TC,SJTU,ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity,bit-level sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme,,,
 2023,TETCI,TU Delft,Accurate and Energy-Efficient Bit-Slicing for RRAM-Based Neural Networks,unbalanced bit-slicing scheme for higher accuracy; holistic solution using 2's compliment,,,
 2024,Science,USC,Programming memristor arrays with arbitrarily high precision for analog computing,represent high-precision numbers using multiple relatively low-precision analog devices;using RRAM CIM to solve PDEs,5,4,3
+# #### RRAM CiM: Design Space Exploration
+2025,arXiv,RWTH Aachen,Optimizing Binary and Ternary Neural Network Inference on RRAM Crossbars using CIM-Explorer,Tensor Virtual Machine (TVM)-based compiler; implementation of different mapping techniques; DSE flow to analyze the impact of parameters,3,3,3
 # #### RRAM CiM: Modeling
 2024,AICAS,RWTH Aachen University,A Calibratable Model for Fast Energy Estimation of MVM Operations on RRAM Crossbars,system energy model for MVM on ReRAM crossbars; methodology to study the effect of the selection transistor and wire parasitics in 1T1R crossbar arrays,,,
 2024,arXiv,MIT,Modeling Analog-Digital-Converter Energy and Area for Compute-In-Memory Accelerator Design,architecture-level model that estimates ADC energy and area,4,3,3
