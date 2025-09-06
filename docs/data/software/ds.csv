@@ -463,6 +463,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
+2025,EuroSys,SJTU,TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling,brust scene target; tradeoff between TTFT and throughout; slowdown some TOT to human's read speed,4,3,2
 
 # #### Diffusion LLM Systems
 # Challenge: traditional LLM use an auto-regressive model to generate the text, which is slow. Diffusion LLM have a parallel generation ability, which is fast.
