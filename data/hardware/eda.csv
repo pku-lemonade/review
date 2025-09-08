@@ -1,0 +1,9 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ### RTL Code Generation
+# Challenge: The need for automated RTL code generation tools to reduce the time and effort required for hardware design.
+# Solution: Use advanced techniques such as LLM; graph-based approaches; and domain-specific languages to automate and optimize the RTL code generation process and integrate into existing design tools.
+2013,DAC,Columbia,A Method to Abstract RTL IP Blocks into C++ Code and Enable High-Level Synthesis,process communication graph; I/O port loop unrolling; HLS design space expansion,,,
+2021,ASPLOS,Cornell,A compiler infrastructure for accelerator generators,a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing,4,3,3
+2023,DATE,NYU,Benchmarking Large Language Models for Automated Verilog RTL Code Generation,verilog code training corpus; multi-level verilog coding problems for analysis,,,
+2024,ISEDA,UESTC,GraphRTL: an Agile Design Framework of RTL Code from Data Flow Graphs,graph error detection kernel; DFS based graph equivalent reconstruction; template/scala based DFG and CFG merging,,,
+2024,arXiv,UCSD,MAGE: A Multi-Agent Engine for Automated RTL Code Generation,multi-agent; high-temperature sampling and ranking; verilog-state checkpoint debugging,,,
