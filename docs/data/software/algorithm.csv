@@ -4,8 +4,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: an algorithm is a well-defined, finite sequence of steps that solves a specific problem or accomplishes a particular task. We focus on algorithms that can solving problems.
 
 # ### ML Algorithms
-# Soultion: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
+# Solution: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
 
+# #### Diffusion Models
+# Solution: Diffusion models are generative models that learn to reverse a gradual noising process to generate data from noise.
+2023,arXiv,UC Berkeley,Scalable Diffusion Models with Transformers,Diffusion Transformer (DiT) architecture; replace the original U-Net with transformer blocks; adaptive layer norm (adaLN-Zero) for conditioning,3,5,5
+2024,NeurIPS,PKU,Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction,VAR modeling with next-scale prediction; multi-scale quantization for coarse-to-fine tokenization; power-law scaling laws for visual AR models,4,5,5
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
 2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
@@ -16,7 +20,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
 2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning,3,4,3
-
+2025,arXiv,ByteDance,Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference,two-stage training with mask-based and edit-based noise; constrained-order training by filtering optimal generation paths; direct training to reduce generation steps,3,3,5
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
 2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
