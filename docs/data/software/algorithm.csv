@@ -4,8 +4,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: an algorithm is a well-defined, finite sequence of steps that solves a specific problem or accomplishes a particular task. We focus on algorithms that can solving problems.
 
 # ### ML Algorithms
-# Soultion: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
+# Solution: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
 
+# #### Diffusion Models
+# Solution: Diffusion models are generative models that learn to reverse a gradual noising process to generate data from noise.
+2023,arXiv,UC Berkeley,Scalable Diffusion Models with Transformers,Diffusion Transformer (DiT) architecture; replace the original U-Net with transformer blocks; adaptive layer norm (adaLN-Zero) for conditioning,3,5,5
+2024,NeurIPS,PKU,Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction,VAR modeling with next-scale prediction; multi-scale quantization for coarse-to-fine tokenization; power-law scaling laws for visual AR models,4,5,5
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
 2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
@@ -20,7 +24,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: diffusion generate result from noise, this is different from tradition's AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the deneration of diffusion's random output index.
 2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning; inter-block AR while in-block diffusion,3,4,3
 2025,arXiv,HKU,Dream 7B: Diffusion Large Language Models,based on AR model's pre-train; inter-block diffusion,3,3,3
-
+2025,arXiv,ByteDance,Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference,two-stage training with mask-based and edit-based noise; constrained-order training by filtering optimal generation paths; direct training to reduce generation steps,3,3,5
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
 2024,arXiv,SJTU,Self-Alignment of Large Language Models via Monopolylogue-based Social Scene Simulation,social scene simulation; emulate realistic multiparty interactions and consequences; monopolylogue,,,
@@ -120,6 +124,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 1993,JACM,W&M,The Cost of Conservative Synchronization in Parallel Discrete Event Simulations,windowing mechanism based conservative synchronization; lower-bound performance analysis based on stochastic modeling,2,3,2
 2002,TPDS,Dartmouth‌,Composite Synchronization in Parallel Discrete-Event Simulation,composite synchronization mechanism; mathematical model based on synchronization overhead optimization,3,3,2
 2013,PDES,MSOE,Synchronization methods in parallel and distributed discrete-event simulation,conservative/optimistic synchronization methods; chandy-misra-bryant algorithm; time warp mechanism,3,1,1
+
+# ### Communication Optimization
+# Solution: modeling and searching the parameter space of collective communication libraries, dynamically selecting optimal configurations under real training/analyzing workloads
+2024,SIGCOMM,UPenn&Microsoft,Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem,traffic engineering based collective communication optimization; mixed-integer linear program; A* technique for scaling,4,3,2
+2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
+2025,SC,THU,TraceFlow: Efficient Trace Analysis for Large-Scale Parallel Applications via Interaction Pattern-Aware Trace Distribution,communication skeleton tree; interaction-aware trace distribution; communication-minimized trace shuffling,4,4,2
 
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing

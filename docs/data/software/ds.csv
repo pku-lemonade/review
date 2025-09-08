@@ -500,3 +500,5 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,CVPR,MIT,DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models,displaced patch parallelism; asynchronous GroupNorm for distributed normalization,3,4,2
 2024,arXiv,Tencent,PipeFusion: Patch-level Pipeline Parallelism for Diffusion Transformers Inference,patch-level pipeline parallelism; reusing one-step stale feature maps to exploit temporal redundancy; simultaneous image patch and model layer partitioning,4,4,2
 2025,arXiv,UMASS,HADIS: Hybrid Adaptive Diffusion Model Serving for Efficient Text-to-Image Generation,offline analysis based router choose; LIP based resource allocation,2,3,2
+2024,arXiv,Tencent,xDiT: an Inference Engine for Diffusion Transformers (DiTs) with Massive Parallelism,hybrid of sequence parallelism & PipeFusion & classifier-free guidance parallelism; patch parallelism for the VAE decoder to prevent out-of-memory errors,3,3,2
+2025,arXiv,NVIDIA,Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding,block-wise approximate KV Cache for diffusion LLMs; confidence-aware parallel decoding strategy,3,3,4
