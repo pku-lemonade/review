@@ -54,6 +54,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Microservices
 # Focusing on the microservices.
 
+# ### Root Cause analysis
+# Challenge: accurately and efficiently identify true root causes from massive, noisy, and interdependent monitoring data in complex online service systems.
+2020,ISSRE,THU&NKU,Unsupervised Detection of Microservice Trace Anomalies through Service-Level Deep Bayesian Networks,service trace vector(STV); deep bayesian networks with posterior flows; STV based RCA algorithm,3,3,2
+2022,SIGKDD,THU&BizSeer,Causal Inference-Based Root Cause Analysis for Online Service Systems with Intervention Recognition,intervention recognition criterion; causal bayesian network; regression-based hypothesis testing; descendant adjustment,3,3,2
+2023,DATE,IIE-CAS,ImpactTracer: Root Cause Localization in Microservices Based on Fault Propagation Modeling,isolation forest for outlier detection; backward tracing algorithm; fault propagation modeling,4,3,2
+2023,SIGKDD,Microsoft,Root Cause Analysis for Microservice Systems via Hierarchical Reinforcement Learning from Human Feedback,site reliability engineer experimence for RCA's first stage; human-in-the-loop training; temporal dimension extension,3,4,2
 
 # ## Memory Management
 # Challenge: coordinating memory access and maintaining data consistency across multiple independent nodes with their own local memories, especially when dealing with shared data.
