@@ -21,11 +21,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: difficulties in dependency graph modeling, scalability of detection algorithm for large-scale applications.
 
 # ##### Heuristic Approaches
+# Solution: trace system failures rely on dependency graphs, expert rules, or statistical correlations.
 2003,TISSEC,IBM,Clustering Intrusion Detection Alarms to Support Root Cause Analysis,attribute-oriented induction based clustering algorithm; generalized alarm analysis,2,3,2
 2017,Arxiv,Intel; CA technologies,Survey on Models and Techniques for Root-Cause Analysis,deterministic/probabilistic model; RCA learning algorithms; RCA inference algorithms,4,1,1
 2021,ASE,eBay,Groot: An Event-graph-based Approach for Root Cause Analysis in Industrial Settings,event-graph based RCA; service dependency graph; event causality graph; pagerank based root cause ranking,4,5,2
 
 # ##### Machine Learning
+# Solution: employ machine learning models, like graph neural networks, to automatically learn complex causal patterns.
 2021,ASPLOS,Cornell,Sage: Practical & Scalable ML-Driven Performance Debugging in Microservices,RPC latency decomposition model; Markov based RPC latency propagation; causal bayesian network based dependency model,3,3,2
 2023,ASPLOS,Alibaba,Sleuth: A Trace-Based Root Cause Analysis System for Large-Scale Microservices with Graph Neural Networks,HDBSCAN trace clustering algorithm; GNN based dependency modeling,3,3,2
 2023,SIGKDD,UCF,Interdependent Causal Networks for Root Cause Localization,GNN based topological causal discovery; extreme value theory based individual causal discovery; causal integration,4,3,2
