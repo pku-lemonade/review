@@ -133,6 +133,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,DAC,GWU,Addition is Most You Need: Efficient Floating-Point SRAM Compute-in-Memory by Harnessing Mantissa Addition,decomposing FP mantissa multiplication into sub-ADD and sub-MUL; hybrid-domain SRAM CIM architecture,3,3,2
 2025,A-SSCC,Georgia Tech,A 28nm 1.80Mb/mm2 Digital/Analog Hybrid SRAM-CIM Macro Using 2D-Weighted Capacitor Array for Complex Number Mac Operations,Hybrid DCIM/ACIM SRAM; lightweight correction schemes; complex CIM-SRAM units,2,4,2
 2025,arXiv,GWU,Unicorn-CIM: Uncovering the Vulnerability and Improving the Resilience of High-Precision Compute-in-Memory,SRAM-CIM for FP DNNs; a fault-injection framework for FP DNNs; a ECC scheme for FP DNNs,3,2,3
+2025,ISCAS,KAUST,Reconfigurable Precision INT4-8/FP8 Digital Compute-in-Memory Macro for AI Acceleration,parallel-input approach; mantissa parallel-alignment technique,3,2,2
 # #### SRAM CIM: Hardware-Software Co-Design
 2022,TCAD,NTHU,MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks,sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion,3,3,2
 2023,TCAD,UCSB,"SDP: Co-Designing Algorithm, Dataflow, and Architecture for In-SRAM Sparse NN Acceleration",double-broadcast hybridgrained pruning method; bit-serial booth inSRAM (BBS) multiplication dataflow,3,3,2
