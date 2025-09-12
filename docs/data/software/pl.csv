@@ -56,7 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,DATE,UIUC,Subgraph Extraction-Based Feedback-Guided Iterative Scheduling for HLS,ISDC iterative SDC scheduling; subgraph extraction-based low-level feedback; fanout and window-based subgraph extraction mechanism,4,4,4
 2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
 
-##### MLIR-based HLS Frameworks
+# ##### MLIR-based HLS Frameworks
 # Solution: Leveraging modern compiler infrastructures like MLIR to build modular, extensible, and reusable HLS frameworks.
 2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic componenent; time graph transformation,4,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,3
