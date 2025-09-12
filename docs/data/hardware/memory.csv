@@ -192,12 +192,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### RRAM CiM: Convolutional Layer
 # Challenge: Convolutional layer is the most compute-intensive layer in CNNs. RRAM CIM architecture is quite suitable for convolutional layer operations but face challenges related to non-ideal effects and performance degradation.
 2020,Nature,THU,Fully hardware-implemented memristor convolutional neural network,"fabrication of high-yield, high-performance and uniform memristor crossbar arrays; hybrid-training method; replication of multiple identical kernels for processing different inputs in parallel",,,
-2020,TCAS-I,Georgia Tech,Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures,weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation,,,
 2019,TED,PKU,Convolutional Neural Networks Based on RRAM Devices for Image Recognition and Online Learning Tasks,RRAM-based hardware implementation of CNN; expand kernel to the size of image,,,
+2025,TVLSI,NBU,A 578-TOPS/W RRAM-Based Binary Convolutional Neural Network Macro for Tiny AI Edge Devices,ReRAM XNOR cell; BCNN CIM macro with FPGA as the control core,4,4,3
+# ##### RRAM CiM: Mapping for CNN
+# Challenge: Efficient mapping of CNN layers onto RRAM CIM architecture is crucial for performance.
+2020,TCAS-I,Georgia Tech,Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures,weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation,,,
 2021,TCAD,SJTU,Efficient and Robust RRAM-Based Convolutional Weight Mapping With Shifted and Duplicated Kernel,shift and duplicate kernel (SDK) convolutional weight mapping architecture; parallel-window size allocation algorithm; kernel synchronization method,,,
 2023,VLSI-SoC,Aachen,Mapping of CNNs on multi-core RRAM-based CIM architectures,architecture optimized for communication; compiler algorithms for conv2D layer; cycle-accurate simulator,,,
 2023,TODAES,UCAS,Mathematical Framework for Optimizing Crossbar Allocation for ReRAM-based CNN Accelerators,formulate a crossbar allocation problem for ReRAM-based CNN accelerators; dynamic programming based solver; models the performance considering allocation problem,,,
-2025,TVLSI,NBU,A 578-TOPS/W RRAM-Based Binary Convolutional Neural Network Macro for Tiny AI Edge Devices,ReRAM XNOR cell; BCNN CIM macro with FPGA as the control core,4,4,3
+2025,IEEE Access,UTehran,SCiMA: A Systolic CiM-Based Accelerator With a New Weight Mapping for CNNs—A Virtual Framework Approach,kernel-major inter-crossbar weight mapping (KM-InterCWM) for convolution layers; structured pruning techniques; system-level virtual framework,4,2,2
 # #### RRAM CIM: Transformer Accelerator
 # Challenge: RRAM's cross-bar architecture is suitable for matrix operations.
 2023,VLSI,Purdue,X-Former: In-Memory Acceleration of Transformers,in-memory accelerate attention layers; intralayer sequence blocking dataflow; provides a simulator,,,
