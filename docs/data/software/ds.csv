@@ -218,6 +218,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: the system is composed of heterogeneous GPUs and not inferencing on CPU/ The system need to manage the heterogeneous GPUs' communication and memory.
 2024,arXiv,CMU,Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs,LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming,,,
 2025,ICLR,HKUST,HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment,a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges,,,
+2025,arXiv,UM,Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism,dynamic parallelism design; LLM module level optimization; selective parallelism for dense modules,3,3,3
 
 # #### XPU-GPU Heterogeneous System
 # Challenge: effectively managing and coordinating diverse hardware (CPUs, TPUs, etc.), interconnects, and memory hierarchies
@@ -475,8 +476,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UIUC,Hierarchical Autoscaling for Large Language Model Serving with Chiron,hierarchical backpressure; interactive requests and batch requests; mixed instances,,,
 2025,arXiv,Berkeley,Locality-aware Fair Scheduling in LLM Serving,deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis,,,
 
-# ### RLHF System
-# Challenge: RLHF system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
+# ### RL System
+# Challenge: RL contains both backward and frontward. This need to handle the interaction between multi step and task, posing challenge to parallelism and synchronization.
+2018,OSDI,UCB,Ray: A Distributed Framework for Emerging AI Applications,unified actor and task model; stateless architecture via global control store; bottom-up distributed scheduling,4,4,3
+
+# #### RLHF System
+# Challenge: RL system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
 2025,EuroSys,HKU,HybridFlow: A Flexible and Efficient RLHF Framework,auto-mapping model placement; 3D-HybridEngine to reduce the communication overhead; hybrid programming,4,4,3
 2025,arXiv,Alibaba,Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library,bind many LLMs in one device cluster; fix the batch problem of long tail requests; reuse many utils in HybridFlow,4,4,2
 2025,arXiv,FDU,DistFlow: A Fully Distributed RL Framework for Scalable and Efficient LLM Post-Training,distributed controller for better scalability; fully decoupled DAG-defined RL pipeline; linear scalability,3,3,2
