@@ -1,0 +1,10 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+
+# ## Parallel programming models
+# Challenge: the complexity of great number of cores and the heterogeneity of the hardware
+
+# ## Scientific computing applications and libraries
+# Solution: enable researchers to model physical phenomena, process large datasets, and accelerate discoveries across fields on HPC systems
+
+# ## Parallel algorithms
+# Solution: develop parallel algorithms for HPC systems, enabling scalable performance

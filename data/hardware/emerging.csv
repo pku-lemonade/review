@@ -1,0 +1,5 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ## Photonic computing
+# Solution: Uses light (photons) instead of electricity (electrons) to perform calculations and process information. It leverages the unique properties of light; such as its speed and parallelism; to achieve high-performance computing.
+2021,Nature,Swinburne,11 TOPS photonic convolutional accelerator for optical neural networks,universal optical convolutional accelerator for vector processing,,,
+2025,arXiv,ASU,H3PIMAP: A Heterogeneity-Aware Multi-Objective DNN Mapping Framework on Electronic-Photonic Processing-in-Memory Architectures,Electronic-Photonic-PIM Accelerator; coresponding mapping framework and evaluation infrastructure,,,

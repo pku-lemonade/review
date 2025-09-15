@@ -1,0 +1,50 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ### Error Pattern
+# #### Manycore Architecture
+2009,MICRO,UIUC,mSWAT: Low-Cost Hardware Fault Detection and Diagnosis for Multicore Systems,selective Triple Modular Redundant(TMR) replay method; symptom based fault detection; permanent/transient fault,,,
+2015,IEEE TSM,NTU,Wafer Map Failure Pattern Recognition and Similarity Ranking for Large-Scale Data Sets,wafer map failure pattern; wafer map similarity ranking; radon/geometry-based feature extraction; WM-811K wafer map dataset,,,
+# #### System Level
+2017,SC,Argonne National Lab,Run-to-run Variability on Xeon Phi based Cray XC Systems,OS noise based core-level variability; tile-level varibility; memory mode varibility,,,
+2018,FAST,UChicago,Fail-Slow at Scale: Evidence of Hardware Performance Faults in Large Production Systems,conversion among fail-stop/slow/trasient; permanent/transient/partial slowdown; internal/external root causes,,,
+# ### Hardware Fault
+2014,DTIS,LIRMM,A Survey on Simulation-Based Fault Injection Tools for Complex Systems,runtime fault injection; compile-time fault injection,,,
+2021,ASPLOS,UIUC,BayesPerf: Minimizing Performance Monitoring Errors using Bayesian Statistics,microarchitectural relationship incorporation; measurement uncertainty quantification; high-frequency sampling reduction,3,4,3
+2024,arXiv,GWU,Algorithmic Strategies for Sustainable Reuse of Neural Network Accelerators with Permanent Faults,stack-at-0/1 faults; weight register fault; invertible scaling and shifting technique; elementary tile operations for mantissa fault,,,
+2025,arXiv,NUDT,FlexStep: Enabling Flexible Error Detection in Multi/Many-core Real-time Systems,register checkpoints based error detection; memory access log unit; data buffering and channelling unit,,,
+2025,DAC,SEU,MEEK: Re-thinking Heterogeneous Parallel Error Detection Architecture for Real-World OoO Superscalar Processors,data extraction unit; bespoke forwarding fabric; little core upgrade,3,4,3
+# #### NoC Fault
+2006,IOLTS,UBC & WSU,On-line Fault Detection and Location for NoC Interconnects,code-disjoint based error detection algorithm; code-disjoint switch design,2,2,2
+2011,ASPDAC,NTHU,On the Design and Analysis of Fault Tolerant NoC Architecture Using Spare Routers,shift-and-replace allocation algorithm; defect-awareness-path allocation algorithm,3,2,2
+2013,TVLSI,NUDT,Addressing Transient and Permanent Faults in NoC With Efficient Fault-Tolerant Deflection Router,link-level error control scheme; on-line fault diagnosis mechanism;RL based fault-tolerant deflection routing,4,2,2
+2017,TECS,NTUA,SoftRM: Self-Organized Fault-Tolerant Resource Management for Failure Detection and Recovery in NoC Based Many-Cores,permanent fault; tweaked perfect failure detector; paxos algorithm to recover fault,2,4,2
+2017,DDECS,TTU,From Online Fault Detection to Fault Management in Network-on-Chips: A Ground-Up Approach,data-path fault detection; control part fault detection; assertion vector based fault localization,3,1,2
+# #### Fail-Slow
+# Challenge: Fail-slow faults can cause performance degradation without complete failure; making them difficult to detect and diagnose than the fail-stop failure.
+2019,ATC,UChicago,IASO: A Fail-Slow Detection and Mitigation Framework for Distributed Storage Services,slowdown detection based on peer score; sub-root causes for five kinds of root causes,,,
+2022,ATC,SJTU & Alibaba,NVMe SSD Failures in the Field: the Fail-Stop and the Fail-Slow,hardware infant mortality; write amplification factor; intra-node/rock failure,3,4,2
+2023,FAST,SJTU & Alibaba,PERSEUS: A Fail-Slow Detection Framework for Cloud Storage Systems,outlier data detection; regression model for detection threshold; risk evaluating algorithm,4,4,3
+2025,ASPDAC,Xiamen University,A Fail-Slow Detection Framework for HBM Devices,outlier data detection; regression model for detection threshold; risk evaluating algorithm,2,4,2
+# ### Physical Effects
+# #### RRAM
+# Challenge: Non-ideal effects of RRAM devices (e.g. device-to-device variation; cycle-to-cycle variation; etc.) can cause significant performance degradation.
+# Solution: Data types; training algorithm; SRAM for compensation. 
+2019,DAC,UCF,Noise Injection Adaption: End-to-End ReRAM Crossbar Non-ideal Effect Adaption for Neural Network Mapping,stuck-at-fault; crossbar wire resistance based IR drop; thermal noise model; shot noise; random telegraph noise,,,
+2019,DATE,Georgia Tech,Design of Reliable DNN Accelerator with Un-reliable ReRAM,dynamical fixed point data representation format; device variation aware training methodology,,,
+2020,DAC,ASU,"Accurate Inference with Inaccurate RRAM Devices: Statistical Data, Model Transfer, and On-line Adaptation",introduce statistical variations in knowledge distillation; On-line sparse adaptation with a small SRAM array,,,
+2020,DATE,SJTU,Go Unary: A Novel Synapse Coding and Mapping Scheme for Reliable ReRAM-based Neuromorphic Computing,unary coding; priority mapping*,,,
+2022,TCAD,ASU,Hybrid RRAM/SRAM in-Memory Computing for Robust DNN Acceleration,integrates an RRAM-based IMC macro with a digital SRAM macro using a programmable shifter to compensate for RRAM variations; ensemble learning,,,
+2023,ISCAS,TAMU,Memristor-based Offset Cancellation Technique in Analog Crossbars,peripheral circuitry to remove the systematic offset of crossbar,,,
+2024,LATS,AMU,Analysis of Conductance Variability in RRAM for Accurate Neuromorphic Computing,analyzation and quantification of conductance variability in RRAMs; analysis of conductance variation over multiple cycles,,,
+2025,arXiv,AMU,Energy-Efficient RRAM-Based Neuromorphic Computing with Adaptive Voltage and Frequency Scaling,energy-efficient RRAM-based neuromorphic computing; adaptive voltage and frequency scaling; energy-efficient RRAM-based neuromorphic computing,2,4,3
+# #### DRAM
+# Challenge: DRAM devices are sensitive to temperature and voltage variations; which can lead to performance degradation and reliability issues.
+2015,RACS,NTU,Thermal/Performance Characterization of CMPs with 3D-stacked DRAMs under Synergistic Voltage-Frequency Control of Cores and DRAMs,coordinate dynamic voltage and frequency scaling; thermal efficiency quantification,3,2,2
+2017,IEEE Access,Yuan Ze University,Thermal- and Performance-Aware Address Mapping for the Multi-Channel Three-Dimensional DRAM Systems,inter-channel bank swapping; inter-channel bank reordering,3,3,2
+2020,TCAD,BUAA,Temperature-Aware DRAM Cache Management—Relaxing Thermal Constraints in 3-D Systems,temperature-safe cache operation; exploration on cache remapping; write-back optimization,4,3,2
+2024,TCAD,IIT,3D-TemPo: Optimizing 3-D DRAM Performance Under Temperature and Power Constraints,reward-based dynamic power budgeting; adjacency awareness; DRAM low-power-based DTM,3,3,2
+# #### 3DIC
+2004,ICCAD,UCLA,A thermal-driven floorplanning algorithm for 3D ICs,combined bucket and 2D array; tile stack based model; horizontal and vertical heat flow analysis,,,
+2016,IJHMT,UCR,Analysis of critical thermal issues in 3D integrated circuits,thermal hotspots; impact of thermal interface materials; power distribution; processor pitch and area,,,
+# ### Fault-Tolerant Cache
+2009,ICCD,NUS,The Salvage Cache: A fault-tolerant cache architecture for next-generation memory technologies,fault-bit protection for divisions; victim map based division replacement,,,
+2011,CASES,UCSD,FFT-Cache: A Flexible Fault-Tolerant Cache Architecture for Ultra Low Voltage Operation,flexible defect map for faulty block; FDM configuration algorithm; non-functional lines minimization,,,
