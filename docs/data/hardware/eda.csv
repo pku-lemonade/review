@@ -8,6 +8,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,UCSD,MAGE: A Multi-Agent Engine for Automated RTL Code Generation,multi-agent; high-temperature sampling and ranking; verilog-state checkpoint debugging,,,
 2024,ICCAD,PKU,OriGen: Enhancing RTL Code Generation with Code-to-Code Augmentation and Self-Reflection,self-reflection mechanism; dataset augmentation methodology; VerilogFixEval benchmark,2,4,2
 
+# #### Higher-Level RTL Code Generation
+# Challenge: raise the level of abstraction to specifically target the construction of applications
+2022,PLDI,Cornell University,PDL: A High-Level Hardware Design Language for Pipelined Processors,one-instruction-at-a-time semantics; hardware description language; hazard locks; speculation API; guaranteed-correct pipelining,3,3,3
+
 # #### RTL Code Generation Benchmarks
 # Challenge: The lack of standardized benchmarks for evaluating RTL code generation tools.
 2023,DATE,NYU,Benchmarking Large Language Models for Automated Verilog RTL Code Generation,verilog code training corpus; multi-level verilog coding problems for analysis,,,
