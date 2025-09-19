@@ -34,7 +34,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,HPCA,Georgia Tech & Intel,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,3,2
 2023,ASPLOS,UM & Georgia Tech,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern,4,3,2
 # #### Application-Specific Accelerators
-# Solution: Application-specific accelerators are designed to efficiently execute specific types of neural networks or machine
+# Solution: Application-specific accelerators are designed to efficiently execute specific types of neural networks or machine learning workloads, providing optimized performance and energy efficiency for targeted applications.
 2022,PLDI,University of Edinburgh,Bind the Gap: Compiling Real Software to Hardware FFT Accelerators,IO-based synthesis; adapter generation; multi-level mismatch resolution; neural code classification; generate-and-test verification,4,4,3
 
 # #### Benchmarks
