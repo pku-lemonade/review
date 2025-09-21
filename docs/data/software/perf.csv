@@ -109,6 +109,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,SIGCOMM,THU&UPENN,PrintQueue: Performance Diagnosis via Queue Measurement in the Data Plane,congestion regime taxonomy; hierarchical, probabilistic flow-tracking data structure; queue monitor for original culprits,3,4,2
 2023,NSDI,BUPT&ByteDance,Hostping: Diagnosing Intra-host Network Bottlenecks in RDMA Servers,loopback tests between RNICs and endpoints; bus utilization monitoring; binary network tomography inspired path analysis,3,4,2
 2024,NSDI,ByteDance&PKU,MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs,CUDA event monitor; 3D parallel training visualization; tail-latency-aware load balancing,3,4,2
+2025,Arxiv,Alibaba,PerfTracker: Online Performance Troubleshooting for Large-scale Model Training in Production,runtime behavior pattern representation; critical path identification; distance from expectation&differential distance based localization,4,4,2
 
 # ### Profiling with LLM
 # Solution: using LLMs to generate profile results.
