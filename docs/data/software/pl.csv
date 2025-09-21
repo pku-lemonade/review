@@ -38,6 +38,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Hardware Description Languages
 # Solution: expressive hardware specification, efficient simulation and synthesis, robust verification methodologies
 
+# #### HDL Language Design
+# Challenge: balancing expressiveness, usability, and synthesis efficiency in HDL design
+2024,FPGA,PKU,Cement: Streamlining FPGA Hardware Design with Cycle-Deterministic eHDL and Synthesis,incorporates an event layer and the ctrl sub-language; event-based extension; cycle-level timing analysis and control synthesis techniques,4,4,4
+
 # #### Streaming Computation Models
 # Solution: high-throughput data processing, real-time analytics, efficient resource utilization for continuous data
 2020,ASPLOS,Stanford,Fleet: A Framework for Massively Parallel Streaming on FPGAs,user write serial code for parallel; multi-stream parallelism; ready-valid signaling,3,4,3
@@ -52,14 +56,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,DATE,UIUC,Subgraph Extraction-Based Feedback-Guided Iterative Scheduling for HLS,ISDC iterative SDC scheduling; subgraph extraction-based low-level feedback; fanout and window-based subgraph extraction mechanism,4,4,4
 2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
 
-##### MLIR-based HLS Frameworks
+# ##### MLIR-based HLS Frameworks
 # Solution: Leveraging modern compiler infrastructures like MLIR to build modular, extensible, and reusable HLS frameworks.
+2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic componenent; time graph transformation,4,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,3
 2023,ASPLOS,IISc,HIR: An MLIR-based Intermediate Representation for Hardware Accelerator Description,MLIR-based hardware IR; datapath + schedule model; explicit scheduling via time variables; automatic FSM synthesis,4,4,4
 2024,HPCA,SJTU,An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation,polyhedral model for HLS; MLIR-based HLS framework; automatic design space exploration,4,4,4
 
 # ##### HLS Verification and Testing
 # Solution: automated bug detection, verification dataset generation, LLM-aided debugging for HLS designs
+2024,MICRO,PKU,Hestia: An Efficient Cross-level Debugger for High-level Synthesis, allowing inspection at multiple granularities; establishes the correspondence at different levels; a multi-level interpreter for three levels,4,4,4
 2024,LAD,UIUC,An Iteratively-refined Dataset for High-Level Synthesis Functional Verification through LLM-Aided Bug Injection,Chrysalis dataset with bug injection; ICL+RAG+CoT bug injection methodology; iteratively-refined HLS verification dataset,4,4,4
 
 # ##### Dataflow HLS acceleration
