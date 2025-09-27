@@ -210,6 +210,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,ICCAD,Duke,ReTransformer: ReRAM-based processing-in-memory architecture for transformer acceleration,MatMul does matrix decomposition in scaled dot-product attention; in-memory logic techniques for softmax; sub-matrix pipeline,4,3,3
 2022,TCAD,KAIST,A Framework for Accelerating Transformer-Based Language Model on ReRAM-Based Architecture,window self-attention and window-size search algorithm; ReRAM hardware design optimized for this algorithm,4,2,3
 2020,ICCD,LSU,ATT: A Fault-Tolerant ReRAM Accelerator for Attention-based Neural Networks,ReRAM-based accelerator with pipeline for AttNNs; heuristic redundancy algorithm,3,2,2
+2025,ISCA,UCSD,Hybrid SLC-MLC RRAM Mixed-Signal Processing-in-Memory Architecture for Transformer Acceleration via Gradient Redistribution, architectural and circuit-level hardware designs supporting importance-based data flow with hybrid SLC-MLC ReRAM; gradient redistribution technique,3,2,4
 # #### RRAM CiM: Special Usage
 2023,GLSVLSI,Yale,Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing,non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters,,,
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
