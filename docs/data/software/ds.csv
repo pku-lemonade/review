@@ -176,6 +176,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2010,PRDC,UBC,Modeling the Propagation of Intermittent Hardware Faults in Programs,instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling,,,
 2015,SC,IBM,Understanding the Propagation of Transient Errors in HPC Applications,"fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors",,,
 2023,ISCA,UChicago,Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems,"NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy",,,
+2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
 
 # ### Fault Injection Technique
 # Challenge: It is difficult to target specific components, reproduce realistic fault scenarios, and observe system behavior without disturbing normal operation, especially as system scale and complexity increase.
@@ -348,6 +349,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
+2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
 
 # #### Optimizations on Special Scene
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
@@ -372,6 +374,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,DeepSeek,Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures,software-hardware co-design for deepseek-v3; insight into hardware for ai architectures,5,5,4
 2024,Mlsys,SJTU,FlashDecoding++: Faster Large Language Model Inference on GPUs,asynchronized softmax with unified max value; flat GEMM optimization with double buffering; heuristic dataflow with hardware resource adaptation,4,4,3
 2024,MICRO,UC Irvine,SCAR: Scheduling Multi-Model AI Workloads on Heterogeneous Multi-Chiplet Module Accelerators,two-level scheduling framework; greedy layer packing algorithm for time window assignment; inter-chiplet pipelining and dynamic chiplet regrouping,3,4,2
+2025,PPoPP,ISTA,MARLIN: Mixed-Precision Auto-Regressive Parallel Inference on Large Language Models,mixed-precision inference kernel, batched inference optimization; GPU kernel optimization; 2:4 structured sparsity,4,4,4
+
 # #### SLO-Aware Systems
 # Challenge: providing service for users to meet specific latency requirements with limited resources.
 2025,arXiv,Berkeley,AdaServe: SLO-Customized LLM Serving with Fine-Grained Speculative Decoding,fine-grained speculative decoding; token tree verification; slo customization,,,
