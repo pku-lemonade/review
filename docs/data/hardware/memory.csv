@@ -1,11 +1,12 @@
 Year,Venue,Authors,Title,Tags,P,E,N
-# ### NDP: SSDs
+# ### NDP: Flash
 # #### General Application-Specific Optimization
 # Solution: Intergrate the compute unit into the SSD controller to process the capacity-sensitive applications.
 2024,HPCA,UCLA,BeaconGNN: Large-Scale GNN Acceleration with Out-of-Order Streaming In-Storage Computing,DirectGraph format for out-of-order sampling; die-level processing units; channel-level command router,4,2,3
 2025,ISCA,ETHZ,REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing,In-Storage processing,2,4,3
 2025,ISCA,UCSD,In-Storage Acceleration of Retrieval Augmented Generation as a Service,metamorphic in-storage accelerator; Metadata Navigation Unit for dynamic data access,4,3,2
 2025,arxiv,ETHZ,MARS: Processing-In-Memory Acceleration of Raw Signal Genome Analysis Inside the Storage Subsystem,PIM module inside the SSD controller; early signal quantization; read filtering,3,3,2
+2024,arXiv,ICT,Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM, chiplet-based NPU & NAND flash hybrid architecture; Hardware-aware tiling for NPU-flash workload distribution,4,3,2
 # #### LLM-Specific Optimization
 # Solution: Store weights in flash memory as read-only to prevent failures caused by write operations.
 2025,ISCA,Seoul National,AiF: Accelerating On-Device LLM Inference Using In-Flash Processing,in-flash GEMV computation; charge-recycling read to skip precharge/discharge steps in flash memory,3,3,4
