@@ -233,6 +233,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SPAA,Huawei,WindVE: Collaborative CPU-NPU Vector Embedding,seamless CPU-NPU collaboration for vector embedding; linear regression based estimator; high-throughput offloading vector embedding,2,4,3
 2025,arXiv,Huawei,High-Throughput LLM inference on Heterogeneous Clusters,lightweight profiling while avoiding resource-intensive throughput benchmarks; a scheduler that accounts for both instance computational capacity and memory usage; exhaustive search method,2,4,2
 2025,ISCA,KAIST,EOD: Enabling Low Latency GNN Inference via Near-Memory Concatenate Aggregation, concatenated ZVC compression; precomputation for neighborhood explosion problem,2,3,2
+2025,ISCA,UIUC,LIA: A Single-GPU LLM Inference Acceleration with Cooperative AMX-Enabled CPU-GPU Computation and CXL Offloading,heterogeneous LLM offloading via AMX; optimal compute-offloading policy for LLM inference; CXL-DDR hybrid memory offloading for throughput,3,4,2
 
 # #### Heterogeneous Device Task Scheduling
 # Solution: assigning different parts of the LLM serving workload to the most suitable heterogeneous devices to maximize throughput and minimize latency.
