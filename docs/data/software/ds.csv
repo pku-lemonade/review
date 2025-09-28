@@ -331,6 +331,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,USTC,Collaborative Inference for Large Models with Task Offloading and Early Exiting,early exit mechanism; jointly optimize its offloading strategy and the confidence threshold; distributed task offloading algorithm,,,
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,integer linear programming for offload optimization; PIM-friendly mapping representation; accurate cost modeling for data layout,4,2,3
 
+# ### Thermal-Aware Scheduling
+# Challenge: balancing real-time performance with thermal safety under tight power budgets
+2019,TECS,UMich,Thermal-Aware Scheduling for Integrated CPUs–GPU Platforms,thermally-balanced task-to-core assignment; CPUs–GPU thermal coupling model,3,3,2
+2022,TPDS,SUT,TherMa-MiCs: Thermal-Aware Scheduling for Fault-Tolerant Mixed-Criticality Systems,thermal safe power abstraction; maximum safe simultaneous active cores (MSSAC) factor; offline&online co-scheduling,4,4,2
+
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
 # If the paper is focusing on an above-mentioned specific scene (e.g., memory, scheduling, IO, etc.), it will be put in the corresponding section.
