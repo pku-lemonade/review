@@ -26,13 +26,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
+2023,HPCA,KAIST,Sibia: Signed Bit-slice Architecture for Dense DNN Acceleration with Slice-level Sparsity Exploitation,signed bit-slice representation;flexible zero skipping processing element,3,3,4
 2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
+2025,HPCA,POSTECH,Panacea: Novel DNN Accelerator using Accuracy-Preserving Asymmetric Quantization and Energy-Saving Bit-Slice Sparsity,Asymmetrically-Quantized bit-Slice GEMM; Zero-Point Manipulation and Distribution-based Bit-Slicing to increase sparsity,3,3,4
 # #### Reconfigurable Accelerators
 # Solution: Reconfigurable accelerators not only break the trade-off of flexibility and performance, but also enable hardware to adapt to algorithm changes as quickly as software while maintaining high energy efficiency.
 2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandiwdth optimization; ART based virtual neuron construction,4,3,2
 2019,JETCAS,MIT,Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices,hierarchical mesh NoC for multiple transmission modes; sparse PE architecture,5,4,2
 2020,HPCA,Georgia Tech & Intel,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,3,2
 2023,ASPLOS,UM & Georgia Tech,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern,4,3,2
+# #### Application-Specific Accelerators
+# Solution: Application-specific accelerators are designed to efficiently execute specific types of neural networks or machine learning workloads, providing optimized performance and energy efficiency for targeted applications.
+2022,PLDI,University of Edinburgh,Bind the Gap: Compiling Real Software to Hardware FFT Accelerators,IO-based synthesis; adapter generation; multi-level mismatch resolution; neural code classification; generate-and-test verification,4,4,3
 
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2

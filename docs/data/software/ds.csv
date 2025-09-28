@@ -176,6 +176,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2010,PRDC,UBC,Modeling the Propagation of Intermittent Hardware Faults in Programs,instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling,,,
 2015,SC,IBM,Understanding the Propagation of Transient Errors in HPC Applications,"fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors",,,
 2023,ISCA,UChicago,Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems,"NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy",,,
+2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
 
 # ### Fault Injection Technique
 # Challenge: It is difficult to target specific components, reproduce realistic fault scenarios, and observe system behavior without disturbing normal operation, especially as system scale and complexity increase.
@@ -224,6 +225,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: the system is composed of heterogeneous GPUs and not inferencing on CPU/ The system need to manage the heterogeneous GPUs' communication and memory.
 2024,arXiv,CMU,Helix: Distributed Serving of Large Language Models via Max-Flow on Heterogeneous GPUs,LLM model placement as a max-flow problem; per-request pipeline; mixed integer linear programming,,,
 2025,ICLR,HKUST,HexGen-2: Disaggregated Generative Inference of LLMs in Heterogeneous Environment,a combination of graph partitioning and max-flow algorithm; TP and PP with disaggregation; bottleneck and underutilized edges; swap edges,,,
+2025,arXiv,UM,Hetis: Serving LLMs in Heterogeneous GPU Clusters with Fine-grained and Dynamic Parallelism,dynamic parallelism design; LLM module level optimization; selective parallelism for dense modules,3,3,3
 
 # #### XPU-GPU Heterogeneous System
 # Challenge: effectively managing and coordinating diverse hardware (CPUs, TPUs, etc.), interconnects, and memory hierarchies
@@ -232,6 +234,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SPAA,Huawei,WindVE: Collaborative CPU-NPU Vector Embedding,seamless CPU-NPU collaboration for vector embedding; linear regression based estimator; high-throughput offloading vector embedding,2,4,3
 2025,arXiv,Huawei,High-Throughput LLM inference on Heterogeneous Clusters,lightweight profiling while avoiding resource-intensive throughput benchmarks; a scheduler that accounts for both instance computational capacity and memory usage; exhaustive search method,2,4,2
 2025,ISCA,KAIST,EOD: Enabling Low Latency GNN Inference via Near-Memory Concatenate Aggregation, concatenated ZVC compression; precomputation for neighborhood explosion problem,2,3,2
+2025,ISCA,UIUC,LIA: A Single-GPU LLM Inference Acceleration with Cooperative AMX-Enabled CPU-GPU Computation and CXL Offloading,heterogeneous LLM offloading via AMX; optimal compute-offloading policy for LLM inference; CXL-DDR hybrid memory offloading for throughput,3,4,2
 
 # #### Heterogeneous Device Task Scheduling
 # Solution: assigning different parts of the LLM serving workload to the most suitable heterogeneous devices to maximize throughput and minimize latency.
@@ -331,6 +334,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,USTC,Collaborative Inference for Large Models with Task Offloading and Early Exiting,early exit mechanism; jointly optimize its offloading strategy and the confidence threshold; distributed task offloading algorithm,,,
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,integer linear programming for offload optimization; PIM-friendly mapping representation; accurate cost modeling for data layout,4,2,3
 
+# ### Thermal-Aware Scheduling
+# Challenge: balancing real-time performance with thermal safety under tight power budgets
+2019,TECS,UMich,Thermal-Aware Scheduling for Integrated CPUs–GPU Platforms,thermally-balanced task-to-core assignment; CPUs–GPU thermal coupling model,3,3,2
+2022,TPDS,SUT,TherMa-MiCs: Thermal-Aware Scheduling for Fault-Tolerant Mixed-Criticality Systems,thermal safe power abstraction; maximum safe simultaneous active cores (MSSAC) factor; offline&online co-scheduling,4,4,2
+
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
 # If the paper is focusing on an above-mentioned specific scene (e.g., memory, scheduling, IO, etc.), it will be put in the corresponding section.
@@ -343,6 +351,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
+2025,arXiv,ByteDance,veScale: Consistent and Efficient Tensor Programming with Eager-Mode SPMD,guaranteed single device consistency; zero overhead tensor alloc mode; fused communication,3,3,3
+2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
 
 # #### Optimizations on Special Scene
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
@@ -362,11 +372,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Kernel-Level Optimizations
 2025,arXiv,HUST,CFP: Low-overhead Profiling-based Intra-operator Parallelism Generation by Preserving Communication-Free Structures,model segment profile-based cost model; communication-free tensor partition propagation property; extracting a set of unique model segments; Communication-Free Preserve,4,5,3
 
+# #### SFT and Fine-tuning Optimizations
+# Challenge: SFT plays an important role to enhance model's ability on specific tasks. Thus SFT has a strong taks's pattern, like the distribution of input-output length.
+2025,arXiv,PKU,LobRA: Multi-tenant Fine-tuning over Heterogeneous Data,Deploys different model replicas to handle varied workloads; balancing different LoRAs' workload caused by dataset,3,3,2
+
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
 2025,ISCA,DeepSeek,Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures,software-hardware co-design for deepseek-v3; insight into hardware for ai architectures,5,5,4
 2024,Mlsys,SJTU,FlashDecoding++: Faster Large Language Model Inference on GPUs,asynchronized softmax with unified max value; flat GEMM optimization with double buffering; heuristic dataflow with hardware resource adaptation,4,4,3
 2024,MICRO,UC Irvine,SCAR: Scheduling Multi-Model AI Workloads on Heterogeneous Multi-Chiplet Module Accelerators,two-level scheduling framework; greedy layer packing algorithm for time window assignment; inter-chiplet pipelining and dynamic chiplet regrouping,3,4,2
+2025,PPoPP,ISTA,MARLIN: Mixed-Precision Auto-Regressive Parallel Inference on Large Language Models,mixed-precision inference kernel, batched inference optimization; GPU kernel optimization; 2:4 structured sparsity,4,4,4
+
 # #### SLO-Aware Systems
 # Challenge: providing service for users to meet specific latency requirements with limited resources.
 2025,arXiv,Berkeley,AdaServe: SLO-Customized LLM Serving with Fine-Grained Speculative Decoding,fine-grained speculative decoding; token tree verification; slo customization,,,
@@ -465,19 +481,27 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
+2025,EuroSys,SJTU,TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling,brust scene target; tradeoff between TTFT and throughout; slowdown some TOT to human's read speed,4,3,2
 
 # #### Diffusion LLM Systems
 # Challenge: traditional LLM use an auto-regressive model to generate the text, which is slow. Diffusion LLM have a parallel generation ability, which is fast.
 2025,arXiv,SJTU,dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching,training-free adaptive caching mechanism; V-verify mechanism for caching,4,3,3
 2025,arXiv,SJTU,Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing,First dLLM faster than AR LLM; fuse KV-cached autoregression with parallel diffusion decoding; inter-block parallelism without full denoise,4,3,4
+2025,arXiv,NVIDIA,Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding,block-wise approximate KV Cache for diffusion LLMs; confidence-aware parallel decoding strategy,3,3,4
+2025,arXiv,Cornell,Remasking Discrete Diffusion Models with Inference-Time Scaling,ReMDM sampler for iterative refinement; inference-time compute scaling via token remasking; custom remasking backward process for pre-trained models,3,4,3
+2025,arXiv,Univ. of Virginia,Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion,speculative diffusion Decoding; discrete diffusion models as non-autoregressive drafters; parallelized draft sequence generation,3,3,3
 
 # #### Fair Serving Systems
 2024,arXiv,Virginia Tech,Ensuring Fair LLM Serving Amid Diverse Applications,multi-tenant LLM platform; overload and interaction-driven throttling; weighted service counter,,,
 2025,arXiv,UIUC,Hierarchical Autoscaling for Large Language Model Serving with Chiron,hierarchical backpressure; interactive requests and batch requests; mixed instances,,,
 2025,arXiv,Berkeley,Locality-aware Fair Scheduling in LLM Serving,deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis,,,
 
-# ### RLHF System
-# Challenge: RLHF system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
+# ### RL System
+# Challenge: RL contains both backward and frontward. This need to handle the interaction between multi step and task, posing challenge to parallelism and synchronization.
+2018,OSDI,UCB,Ray: A Distributed Framework for Emerging AI Applications,unified actor and task model; stateless architecture via global control store; bottom-up distributed scheduling,4,4,3
+
+# #### RLHF System
+# Challenge: RL system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
 2025,EuroSys,HKU,HybridFlow: A Flexible and Efficient RLHF Framework,auto-mapping model placement; 3D-HybridEngine to reduce the communication overhead; hybrid programming,4,4,3
 2025,arXiv,Alibaba,Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library,bind many LLMs in one device cluster; fix the batch problem of long tail requests; reuse many utils in HybridFlow,4,4,2
 2025,arXiv,FDU,DistFlow: A Fully Distributed RL Framework for Scalable and Efficient LLM Post-Training,distributed controller for better scalability; fully decoupled DAG-defined RL pipeline; linear scalability,3,3,2
@@ -500,5 +524,5 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: serving diffusion models need sequential iterative process, which creates prohibitive latency for generating high-resolution images in real-time and is inherently difficult to parallelize.
 2024,CVPR,MIT,DistriFusion: Distributed Parallel Inference for High-Resolution Diffusion Models,displaced patch parallelism; asynchronous GroupNorm for distributed normalization,3,4,2
 2024,arXiv,Tencent,PipeFusion: Patch-level Pipeline Parallelism for Diffusion Transformers Inference,patch-level pipeline parallelism; reusing one-step stale feature maps to exploit temporal redundancy; simultaneous image patch and model layer partitioning,4,4,2
+2025,arXiv,UMASS,HADIS: Hybrid Adaptive Diffusion Model Serving for Efficient Text-to-Image Generation,offline analysis based router choose; LIP based resource allocation,2,3,2
 2024,arXiv,Tencent,xDiT: an Inference Engine for Diffusion Transformers (DiTs) with Massive Parallelism,hybrid of sequence parallelism & PipeFusion & classifier-free guidance parallelism; patch parallelism for the VAE decoder to prevent out-of-memory errors,3,3,2
-2025,arXiv,NVIDIA,Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding,block-wise approximate KV Cache for diffusion LLMs; confidence-aware parallel decoding strategy,3,3,4
