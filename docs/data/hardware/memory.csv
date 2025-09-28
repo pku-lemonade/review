@@ -1,12 +1,17 @@
 Year,Venue,Authors,Title,Tags,P,E,N
-# ### NDP: SSDs
+# ### NDP: Flash
+# #### General Application-Specific Optimization
 # Solution: Intergrate the compute unit into the SSD controller to process the capacity-sensitive applications.
 2024,HPCA,UCLA,BeaconGNN: Large-Scale GNN Acceleration with Out-of-Order Streaming In-Storage Computing,DirectGraph format for out-of-order sampling; die-level processing units; channel-level command router,4,2,3
 2025,ISCA,ETHZ,REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing,In-Storage processing,2,4,3
 2025,ISCA,UCSD,In-Storage Acceleration of Retrieval Augmented Generation as a Service,metamorphic in-storage accelerator; Metadata Navigation Unit for dynamic data access,4,3,2
+2025,arxiv,ETHZ,MARS: Processing-In-Memory Acceleration of Raw Signal Genome Analysis Inside the Storage Subsystem,PIM module inside the SSD controller; early signal quantization; read filtering,3,3,2
+2024,arXiv,ICT,Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM, chiplet-based NPU & NAND flash hybrid architecture; Hardware-aware tiling for NPU-flash workload distribution,4,3,2
+# #### LLM-Specific Optimization
+# Solution: Store weights in flash memory as read-only to prevent failures caused by write operations.
 2025,ISCA,Seoul National,AiF: Accelerating On-Device LLM Inference Using In-Flash Processing,in-flash GEMV computation; charge-recycling read to skip precharge/discharge steps in flash memory,3,3,4
 2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
-2025,arxiv,ETHZ,MARS: Processing-In-Memory Acceleration of Raw Signal Genome Analysis Inside the Storage Subsystem,PIM module inside the SSD controller; early signal quantization; read filtering,3,3,2
+2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
 # ### NDP: DIMM
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -100,6 +105,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### NDP: Heterogeneous Architecture
 # Challenge: Different PIM architectures have different characteristics and performance trade-offs; communicating between different PIM architectures is challenging.
 2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
+2025,arXiv,NUS,LEAP: LLM Inference on Scalable PIM-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism,data dynamicity-aware task assignment to PIM or NoC; fine-grained model partitioning and heuristically optimized spatial mapping strategy,3,4,3
+2025,arXiv,THU,CompAir: Synergizing Complementary PIMs and In-Transit NoC Computation for Efficient LLM Acceleration,heterogeneous DRAM-PIM and SRAM-PIM architecture with hybrid bonding; in-transit NoC computation with Curry ALU; hierarchical ISA for hybrid PIM systems,3,4,2
 # ### General CiM
 # #### Specific Application & Algorithm
 2024,ISVLSI,USC,Multi-Objective Neural Architecture Search for In-Memory Computing,"neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM",,,

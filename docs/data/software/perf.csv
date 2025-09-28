@@ -19,11 +19,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Root Cause Analysis
 # Challenge: difficulties in dependency graph modeling, scalability of detection algorithm for large-scale applications.
+
+# ##### Heuristic Approaches
+# Solution: trace system failures rely on dependency graphs, expert rules, or statistical correlations.
 2003,TISSEC,IBM,Clustering Intrusion Detection Alarms to Support Root Cause Analysis,attribute-oriented induction based clustering algorithm; generalized alarm analysis,2,3,2
 2017,Arxiv,Intel; CA technologies,Survey on Models and Techniques for Root-Cause Analysis,deterministic/probabilistic model; RCA learning algorithms; RCA inference algorithms,4,1,1
 2021,ASE,eBay,Groot: An Event-graph-based Approach for Root Cause Analysis in Industrial Settings,event-graph based RCA; service dependency graph; event causality graph; pagerank based root cause ranking,4,5,2
+
+# ##### Machine Learning
+# Solution: employ machine learning models, like graph neural networks, to automatically learn complex causal patterns.
 2021,ASPLOS,Cornell,Sage: Practical & Scalable ML-Driven Performance Debugging in Microservices,RPC latency decomposition model; Markov based RPC latency propagation; causal bayesian network based dependency model,3,3,2
 2023,ASPLOS,Alibaba,Sleuth: A Trace-Based Root Cause Analysis System for Large-Scale Microservices with Graph Neural Networks,HDBSCAN trace clustering algorithm; GNN based dependency modeling,3,3,2
+2023,SIGKDD,UCF,Interdependent Causal Networks for Root Cause Localization,GNN based topological causal discovery; extreme value theory based individual causal discovery; causal integration,4,3,2
+2023,SIGKDD,UCF,Incremental Causal Graph Learning for Online Root Cause Analysis,trigger point detection; incremental desentangled causal graph learning; random walk with restart based root cause localization,3,3,2
 
 # #### Burst Detection
 # Challenge: maintaining accuracy at high speed data streams, tradeoff between memory usage and detection accuracy.
@@ -89,22 +97,23 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
 
 # ##### Tracing Optimization
+# Challenge: Tradeoff between tracing storage overhead and the effectiveness of preserved data. 
 2015,SOSP,Brown,Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems,happened-beforejoin for arbitrary event correlation; dynamic instrumentation; metadata propagation technique baggage,4,3,2
 2021,ICWS,SYSU,Sieve: Attention-based Sampling of End-to-End Trace Data in Distributed Microservice Systems,path vector encoding; attention score based biased sampler,3,3,2
 2023,NSDI,Emory‌&Princeton,The Benefit of Hindsight: Tracing Edge-Cases in Distributed Systems,retroactive trace sampling; trace coherence mechanism (breadcrumb); lateral tracing across requests,4,4,2
 2025,ASPLOS,SYSU&Alibaba,Mint: Cost-Efficient Tracing with All Requests Collection via Commonality and Variability Analysis,commonality and variability based tracing strategy; pattern exraction at the span level and trace level,4,4,2
 
-
-# ### Profiling with LLM
-# Solution: using LLMs to generate profile results.
-2025,SOSP,UChicago,METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation,LLM-based query profiler; rule-based configuration pruning; resource-aware joint scheduling; per-query configuration adaptation,3,4,2
-
 # ##### Diagnosis and Analysis
+# Challenge: How to use the trace data to accurately locate failures or bottlenecks, especially in large‑scale systems.
 2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
 2022,SIGCOMM,THU&UPENN,PrintQueue: Performance Diagnosis via Queue Measurement in the Data Plane,congestion regime taxonomy; hierarchical, probabilistic flow-tracking data structure; queue monitor for original culprits,3,4,2
 2023,NSDI,BUPT&ByteDance,Hostping: Diagnosing Intra-host Network Bottlenecks in RDMA Servers,loopback tests between RNICs and endpoints; bus utilization monitoring; binary network tomography inspired path analysis,3,4,2
 2024,NSDI,ByteDance&PKU,MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs,CUDA event monitor; 3D parallel training visualization; tail-latency-aware load balancing,3,4,2
+2025,Arxiv,Alibaba,PerfTracker: Online Performance Troubleshooting for Large-scale Model Training in Production,runtime behavior pattern representation; critical path identification; distance from expectation&differential distance based localization,4,4,2
 
+# ### Profiling with LLM
+# Solution: using LLMs to generate profile results.
+2025,SOSP,UChicago,METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation,LLM-based query profiler; rule-based configuration pruning; resource-aware joint scheduling; per-query configuration adaptation,3,4,2
 
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.
@@ -127,6 +136,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM Training Performance Modeling
 2025,MLSys,Cornell,Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training,trace-driven performance modeling and estimation toolkit; the first system to provide accurate performance models that effectively capture the execution behaviors of LLMs; modify and generate new execution graphs from existing traces,3,4,2
 
+# ### Thermal Modeling
+# Challenge: precisely capturing the nonlinear, multi-scale and heterogeneous thermal behaviors on different architecture
+2003,ISCA,Virginia,Temperature-Aware Microarchitecture,architecture level thermal modeling; temperature-tracking frequency scaling; local feedback-controlled fetch toggling,3,3,2
+2024,ICCAD,PKU,FaStTherm: Fast and Stable Full-Chip Transient Thermal Predictor Considering Nonlinear Effects,ResNet-18-based deep autoencoder; unrolled training and noise injection for stability; GA-based training data generation,4,3,2
+2024,ISEDA,PKU,ATSim3D: Towards Accurate Thermal Simulator for Heterogeneous 3D-IC Systems Considering Nonlinear Leakage and Conductivity,global-local approach for simulation with ultrahigh resolution; Kirchhoff transformation for nonlinear conductivity,3,3,2
 
 # ## Benchmarking methodologies and suites
 
