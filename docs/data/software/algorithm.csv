@@ -55,7 +55,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
 2017,ICLR,Stanford,DSD: Dense-Sparse-Dense Training for Deep Neural Networks,3 step dense-sparse-dense training,3,5,4
 2020,NeurIPS,MIT,Differentiable Augmentation for Data-Efficient GAN Training,Differentiable Augmentation to improve data efficiency in generative adversarial networks training,3,4,4
+2020,CVPR,NTHU,Robust Processing-In-Memory Neural Networks via Noise-Aware Normalization,noise-aware calibration in BatchNorm statistics,3,3,3
 2025,ASPLOS,Nvidia&CMU&MIT,GraphPipe: Improving Performance and Scalability of DNN Training with Graph Pipeline Parallelism,graph pipeline parallelism; topology-aware stage partitioning and scheduling algorithm,4,3,2
+2025,arXiv,ZhiCun,Extending Straight-Through Estimation for Robust Neural Networks on Analog CIM Hardware, extension of STE for complex noise environments; STE-based gradient approximation strategy,3,3,3
 
 # #### Multi-task Learning
 # Solution: Multi-task learning (MTL) is a machine learning paradigm where multiple related tasks are learned simultaneously, leveraging shared representations to improve performance across tasks.
@@ -81,6 +83,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,MICRO,SJTU,ANT: Exploiting Adaptive Numerical Data Type for Low-bit Deep Neural Network Quantization,fixed-length adaptive numerical data type; combines the advantages of float and int for adapting to the importance of different values within a tensor; adaptive framework that selects the best type for each tensor,,,
 2024,TCAD,HKU,DyBit: Dynamic Bit-Precision Numbers for Efficient Quantized Neural Network Inference,adaptive data representation with variablelength encoding; hardware-aware quantization framework,,,
 2024,arXiv,Harvard,"Nanoscaling Floating-Point (NxFP): NanoMantissa, Adaptive Microexponents, and Code Recycling for Direct-Cast Compression of Large Language Models",Nanoscaling Floating-Point (NxFP); NanoMantissa; Adaptive Microexponents; Code Recycling,,,
+2025,ISCA,SJTU,FATE: Boosting the Performance of Hyper-Dimensional Computing Intelligence with Flexible Numerical DAta TypE, dimensional fuzzing-distance importance measure; fine-grained compression framework, 4,3,4
 
 # #### General method
 # Solution: General quantization methods aim to optimize the trade-off between model accuracy and computational efficiency. Challenges include addressing layer-specific quantization errors, enhancing fault tolerance, and finding optimal bit-width configurations.

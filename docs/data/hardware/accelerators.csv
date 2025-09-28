@@ -26,7 +26,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
+2023,HPCA,KAIST,Sibia: Signed Bit-slice Architecture for Dense DNN Acceleration with Slice-level Sparsity Exploitation,signed bit-slice representation;flexible zero skipping processing element,3,3,4
 2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
+2025,HPCA,POSTECH,Panacea: Novel DNN Accelerator using Accuracy-Preserving Asymmetric Quantization and Energy-Saving Bit-Slice Sparsity,Asymmetrically-Quantized bit-Slice GEMM; Zero-Point Manipulation and Distribution-based Bit-Slicing to increase sparsity,3,3,4
 # #### Reconfigurable Accelerators
 # Solution: Reconfigurable accelerators not only break the trade-off of flexibility and performance, but also enable hardware to adapt to algorithm changes as quickly as software while maintaining high energy efficiency.
 2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandiwdth optimization; ART based virtual neuron construction,4,3,2

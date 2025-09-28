@@ -140,6 +140,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,DAC,GWU,Addition is Most You Need: Efficient Floating-Point SRAM Compute-in-Memory by Harnessing Mantissa Addition,decomposing FP mantissa multiplication into sub-ADD and sub-MUL; hybrid-domain SRAM CIM architecture,3,3,2
 2025,A-SSCC,Georgia Tech,A 28nm 1.80Mb/mm2 Digital/Analog Hybrid SRAM-CIM Macro Using 2D-Weighted Capacitor Array for Complex Number Mac Operations,Hybrid DCIM/ACIM SRAM; lightweight correction schemes; complex CIM-SRAM units,2,4,2
 2025,arXiv,GWU,Unicorn-CIM: Uncovering the Vulnerability and Improving the Resilience of High-Precision Compute-in-Memory,SRAM-CIM for FP DNNs; a fault-injection framework for FP DNNs; a ECC scheme for FP DNNs,3,2,3
+2025,ISCAS,KAUST,Reconfigurable Precision INT4-8/FP8 Digital Compute-in-Memory Macro for AI Acceleration,parallel-input approach; mantissa parallel-alignment technique,3,2,2
 # #### SRAM CIM: Hardware-Software Co-Design
 2022,TCAD,NTHU,MARS: Multi-macro Architecture SRAM CIM-Based Accelerator with Co-designed Compressed Neural Networks,sparsity algorithm designed for SRAM CiM; quantization algorithm with BN fusion,3,3,2
 2023,TCAD,UCSB,"SDP: Co-Designing Algorithm, Dataflow, and Architecture for In-SRAM Sparse NN Acceleration",double-broadcast hybridgrained pruning method; bit-serial booth inSRAM (BBS) multiplication dataflow,3,3,2
@@ -175,6 +176,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,TC,SJTU,ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity,bit-level sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme,,,
 2023,TETCI,TU Delft,Accurate and Energy-Efficient Bit-Slicing for RRAM-Based Neural Networks,unbalanced bit-slicing scheme for higher accuracy; holistic solution using 2's compliment,,,
 2024,Science,USC,Programming memristor arrays with arbitrarily high precision for analog computing,represent high-precision numbers using multiple relatively low-precision analog devices;using RRAM CIM to solve PDEs,5,4,3
+# #### RRAM CiM: Design Space Exploration
+2025,arXiv,RWTH Aachen,Optimizing Binary and Ternary Neural Network Inference on RRAM Crossbars using CIM-Explorer,Tensor Virtual Machine (TVM)-based compiler; implementation of different mapping techniques; DSE flow to analyze the impact of parameters,3,3,3
 # #### RRAM CiM: Modeling
 2024,AICAS,RWTH Aachen University,A Calibratable Model for Fast Energy Estimation of MVM Operations on RRAM Crossbars,system energy model for MVM on ReRAM crossbars; methodology to study the effect of the selection transistor and wire parasitics in 1T1R crossbar arrays,,,
 2024,arXiv,MIT,Modeling Analog-Digital-Converter Energy and Area for Compute-In-Memory Accelerator Design,architecture-level model that estimates ADC energy and area,4,3,3
@@ -197,12 +200,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### RRAM CiM: Convolutional Layer
 # Challenge: Convolutional layer is the most compute-intensive layer in CNNs. RRAM CIM architecture is quite suitable for convolutional layer operations but face challenges related to non-ideal effects and performance degradation.
 2020,Nature,THU,Fully hardware-implemented memristor convolutional neural network,"fabrication of high-yield, high-performance and uniform memristor crossbar arrays; hybrid-training method; replication of multiple identical kernels for processing different inputs in parallel",,,
-2020,TCAS-I,Georgia Tech,Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures,weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation,,,
 2019,TED,PKU,Convolutional Neural Networks Based on RRAM Devices for Image Recognition and Online Learning Tasks,RRAM-based hardware implementation of CNN; expand kernel to the size of image,,,
+2025,TVLSI,NBU,A 578-TOPS/W RRAM-Based Binary Convolutional Neural Network Macro for Tiny AI Edge Devices,ReRAM XNOR cell; BCNN CIM macro with FPGA as the control core,4,4,3
+# ##### RRAM CiM: Mapping for CNN
+# Challenge: Efficient mapping of CNN layers onto RRAM CIM architecture is crucial for performance.
+2020,TCAS-I,Georgia Tech,Optimizing Weight Mapping and Data Flow for Convolutional Neural Networks on Processing-in-Memory Architectures,weight mapping to avoid multiple access to input; pipeline architecture for conv layer calculation,,,
 2021,TCAD,SJTU,Efficient and Robust RRAM-Based Convolutional Weight Mapping With Shifted and Duplicated Kernel,shift and duplicate kernel (SDK) convolutional weight mapping architecture; parallel-window size allocation algorithm; kernel synchronization method,,,
 2023,VLSI-SoC,Aachen,Mapping of CNNs on multi-core RRAM-based CIM architectures,architecture optimized for communication; compiler algorithms for conv2D layer; cycle-accurate simulator,,,
 2023,TODAES,UCAS,Mathematical Framework for Optimizing Crossbar Allocation for ReRAM-based CNN Accelerators,formulate a crossbar allocation problem for ReRAM-based CNN accelerators; dynamic programming based solver; models the performance considering allocation problem,,,
-2025,TVLSI,NBU,A 578-TOPS/W RRAM-Based Binary Convolutional Neural Network Macro for Tiny AI Edge Devices,ReRAM XNOR cell; BCNN CIM macro with FPGA as the control core,4,4,3
+2025,IEEE Access,UTehran,SCiMA: A Systolic CiM-Based Accelerator With a New Weight Mapping for CNNs—A Virtual Framework Approach,kernel-major inter-crossbar weight mapping (KM-InterCWM) for convolution layers; structured pruning techniques; system-level virtual framework,4,2,2
 # #### RRAM CIM: Transformer Accelerator
 # Challenge: RRAM's cross-bar architecture is suitable for matrix operations.
 2023,VLSI,Purdue,X-Former: In-Memory Acceleration of Transformers,in-memory accelerate attention layers; intralayer sequence blocking dataflow; provides a simulator,,,
@@ -211,6 +217,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,ICCAD,Duke,ReTransformer: ReRAM-based processing-in-memory architecture for transformer acceleration,MatMul does matrix decomposition in scaled dot-product attention; in-memory logic techniques for softmax; sub-matrix pipeline,4,3,3
 2022,TCAD,KAIST,A Framework for Accelerating Transformer-Based Language Model on ReRAM-Based Architecture,window self-attention and window-size search algorithm; ReRAM hardware design optimized for this algorithm,4,2,3
 2020,ICCD,LSU,ATT: A Fault-Tolerant ReRAM Accelerator for Attention-based Neural Networks,ReRAM-based accelerator with pipeline for AttNNs; heuristic redundancy algorithm,3,2,2
+2025,ISCA,UCSD,Hybrid SLC-MLC RRAM Mixed-Signal Processing-in-Memory Architecture for Transformer Acceleration via Gradient Redistribution, architectural and circuit-level hardware designs supporting importance-based data flow with hybrid SLC-MLC ReRAM; gradient redistribution technique,3,2,4
 # #### RRAM CiM: Special Usage
 2023,GLSVLSI,Yale,Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing,non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters,,,
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
