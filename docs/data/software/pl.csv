@@ -5,6 +5,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Compiler construction and optimization
 # Solution: improving performance, reducing resource usage, and ensuring correctness
+2024,MICRO,Georgia Tech,Unleashing CPU Potential for Executing GPU Programs through Compiler/Runtime Optimizations,anti-coalescing transformation; block size invariant analysis; tail block adaptive synchronization; GPU-block dynamic tiling,2,4,3
 
 # ### Deep Learning Compilers
 # Solution: Graph transformations, Kernel fusion, Tensor optimization for compute and memory
@@ -58,6 +59,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,ASPLOS,UCLA,HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair,automated test generation; dependence-guided search space pruning; early candidate rejection using coding styles,3,4,3
 2022,FPGA,Cornell,HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs,Decoupled data placement; Unified data placement primitive; Multi-level memory hierarchy optimization,4,4,4
 2024,DATE,UIUC,Subgraph Extraction-Based Feedback-Guided Iterative Scheduling for HLS,ISDC iterative SDC scheduling; subgraph extraction-based low-level feedback; fanout and window-based subgraph extraction mechanism,4,4,4
+2024,MICRO,HUST,A Scalable Efficient and Robust Dynamic Memory Management Library for HLS-based FPGAs,DMM as graph analytics; request-guided graph traversal; data-centric concurrent traversal; shortcut-assisted fast traversal,4,4,3
 2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
 
 # ##### MLIR-based HLS Frameworks

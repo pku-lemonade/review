@@ -134,6 +134,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,Mlsys,GIT,Vidur: A Large-Scale Simulation Framework For LLM Inference,Operation-level simulation; Using the simulator to search the best configuration for the given system,3,3,3
 
 # #### LLM Training Performance Modeling
+2024,MICRO,KAIST,vTrain: A Simulation Framework for Evaluating Cost-effective and Compute-optimal Large Language Model Training,profiling-driven LLM training simulation; operator-to-task lookup table; cost-effective training plan exploration; compute-optimal chinchilla point estimation,3,4,2
 2025,MLSys,Cornell,Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training,trace-driven performance modeling and estimation toolkit; the first system to provide accurate performance models that effectively capture the execution behaviors of LLMs; modify and generate new execution graphs from existing traces,3,4,2
 
 # ### Thermal Modeling
