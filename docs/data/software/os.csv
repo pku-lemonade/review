@@ -56,6 +56,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Virtualization
 # Solution: efficiently managing and isolating multiple virtual machines (VMs) or containers on a single physical machine, allowing them to share hardware resources securely and independently while maintaining performance and flexibility.
 
+# ### Container Management
+# Challenge: container is a abstract of specific OS functions, managing containers need to solve the problem of blocking useless information and only keep the necessary information.
+2024,SOSP,THU,TrEnv: Transparently Share Serverless Execution Environments Across Different Functions and Nodes,share function excution between containers; byte-addressable CXL memory attach with CoW; Browser-multiplexing for LLM agents inside VMs,3,4,4
 
 # ## Synchronization
 # Solution: coordinating access to shared resources among multiple processes or threads to prevent conflicts, ensure data consistency, and avoid issues like race conditions, deadlocks, and resource starvation.

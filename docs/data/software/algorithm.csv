@@ -24,9 +24,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
 
 # ##### Diffusion LLMs
-# Challenge: Auto-regressive models generate content by next-token prediction, which is slow, especially during the decoding stage. 
+# Challenge: diffusion generate result from noise, this is different from tradition's AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the deneration of diffusion's random output index.
+2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning; inter-block AR while in-block diffusion,3,4,3
+2025,arXiv,HKU,Dream 7B: Diffusion Large Language Models,based on AR model's pre-train; inter-block diffusion,3,3,3
 2025,arXiv,THU,Survey on Diffusion Language Models,"survey on training strategies, inference optimization, multimodal and applications of diffusion language models",4,2,2
-2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning,3,4,3
 2025,arXiv,ByteDance,Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference,two-stage training with mask-based and edit-based noise; constrained-order training by filtering optimal generation paths; direct training to reduce generation steps,3,3,5
 2025,arXiv,RUC,LLaDA-V: Large Language Diffusion Models with Visual Instruction Tuning, visual instruction tuning for diffusion models; multi-stage training for multimodal reasoning; visual instruction tuning for diffusion models,2,3,4
 
