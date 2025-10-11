@@ -1,9 +1,9 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 # ## Cache
 # Challenge: Managing shared cache resources (e.g. LLC) efficiently in multi-core/multi-programmed environments.
-2006,MICRO,Intel,Molecular Caches: A caching structure for dynamic creation of application-specific Heterogeneous cache regions,molecular cache architecture; application space identifier based cache partition; randy replacement algorithm,,,
 2011,ISCA,Stanford,Vantage: Scalable and Efficient Fine-Grain Cache Partitioning,managed-unmanaged region division; churn-based management; feedback-based aperture control,,,
 2018,EuroSys,PKU,DCAPS: dynamic cache allocation with partial sharing,dynamic fine-grained shared cache management; balance cache utilization and contention; online practical miss rate curve,,,
+2021,ISCA,EPFL,Large-Scale Graph Processing on FPGAs with Caches for Thousands of Simultaneous Misses,miss-optimized memory system (MOMS); extreme non-blocking cache; two-level MOMS architecture; caches for irregular accesses,4,4,4
 2024,MICRO,Sungkyunkwan University,CacheCraft: Enhancing GPU Performance under Memory Protection through Reconstructed Caching,reconstructed caching; memory-oriented sector size; single-access in-band ECC; balanced memory layout for mixed-size sectors,3,3,2
 2025,ISCA,UW-Madison,The XOR Cache: A Catalyst for Compression,XOR compression; cache inclusion redundancy; inter-line & intra-line synergy; map table for pairing,4,3,4
 # ### Multi-Level Cache
