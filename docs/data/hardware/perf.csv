@@ -40,6 +40,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,SC,NC State,GVPROF: A Value Profiler for GPU-Based Clusters,temporal/spatial load/store redundancy; hierarchical sampling for reducing monitoring overhead; bidirectional search algorithm on dependency graph,,,
 2022,ASPLOS,NC State,ValueExpert: Exploring Value Patterns in GPU-accelerated Applications value-related inefficiencies,data value pattern recoginition; value flow graph; parallel intervals merging algorithm,,,
 2022,SC,NC State,Graph Neural Networks Based Memory Inefficiency Detection Using Selective Sampling,dead store; silent store; silent load; assembly-level procedural control-flow embedding; dynamic value semantic embedding; relative positional encoding for different compilation options,,,
+# ### Task Scheduling for Accelerators
+# Challenge: Efficiently scheduling tasks on heterogeneous accelerators while considering their unique characteristics and constraints.
+2023,ISCA,Tsinghua University,Shogun: A Task Scheduling Framework for Graph Mining Accelerators,locality-aware out-of-order task scheduling; task tree for decoupling; task tree splitting; search tree merging,4,4,3
 # ### Variation Impact
 # Solution: Characterize sources of variation (hardware; software; environment); develop models to predict variation impact; implement techniques to reduce variation (e.g., dynamic voltage and frequency scaling, adaptive scheduling).
 2009,HPCMP,UCSD,Measuring and Understanding Variation in Benchmark Performance,MPI communication variation; distribution of performance variation,,,
