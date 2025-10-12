@@ -491,6 +491,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Cornell,Remasking Discrete Diffusion Models with Inference-Time Scaling,ReMDM sampler for iterative refinement; inference-time compute scaling via token remasking; custom remasking backward process for pre-trained models,3,4,3
 2025,arXiv,Univ. of Virginia,Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion,speculative diffusion Decoding; discrete diffusion models as non-autoregressive drafters; parallelized draft sequence generation,3,3,3
 
+# #### Visual Auto-Regressive Models Serving System
+# Challenge: as the VAR model moves to large scales (e.g. 1024x1024), the number of tokens to be processed explodes, making final steps expensive compared to the initial coarse steps.
+2025,ICCV,THU,FastVAR: Linear Visual Autoregressive Modeling via Cached Token Pruning, token pruning cache for resolution scaling; frequency-based pivotal token selection; cached token restoration from previous scales,4,3,3
+2025,arXiv,UESTC,SkipVAR: Accelerating Visual Autoregressive Modeling via Adaptive Frequency-Aware Skipping, frequency-aware adaptive acceleration; step-skipping for step redundancy; unconditional branch replacement for branch redundancy,3,2,3
+
 # #### Fair Serving Systems
 2024,arXiv,Virginia Tech,Ensuring Fair LLM Serving Amid Diverse Applications,multi-tenant LLM platform; overload and interaction-driven throttling; weighted service counter,,,
 2025,arXiv,UIUC,Hierarchical Autoscaling for Large Language Model Serving with Chiron,hierarchical backpressure; interactive requests and batch requests; mixed instances,,,
