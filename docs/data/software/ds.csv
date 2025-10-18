@@ -152,6 +152,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: minimize data movement and maximize resource utilization across heterogeneous distributed environments.
 2020,ASPLOS,CMU,Livia: Data-Centric Computing Throughout the Memory Hierarchy, Memory service programming model; task graphs linked to data location; dynamic task/data scheduling for minimal movement,2,4,3
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
+2025,arXiv,ETH,TeraAgent: A Distributed Agent-Based Simulation Engine for Simulating Half a Trillion Agents,IO optimization for large scale agent simulation; distributed agent simulation engine; communication optimization for agent scenarios,3,2,2
 
 # ### GPU-GPU Communication
 # Challenge: limited interconnect bandwidth between GPUs using nvLink, PCIe, synchronization delays in parallel workloads, load imbalance across GPUs. The GPU-GPU can also across different nodes.
