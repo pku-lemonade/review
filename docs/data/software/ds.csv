@@ -11,6 +11,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Domain Specific Computing Framework
 # Challenge: specific bounds of different situations
+2018,PLDI,UT Austin & UIUC,Gluon: A Communication-Optimizing Substrate for Distributed Heterogeneous Graph Analytics,communication-optimizing substrate; heterogeneous processor support; structural/temporal invariant-based communication optimization; memoization of address translation,4,4,4
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
 
 # #### Graph Mining Frameworks
