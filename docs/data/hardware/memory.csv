@@ -224,6 +224,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 2019,Adv. Funct. Mater.,HUST,Functional Demonstration of a Memristive Arithmetic Logic Unit (MemALU) for In‐Memory Computing,non-volatile Boolean logic using RRAM crossbar;reconfigurable boolean logic gates,3,4,3
+2025,Nat.Elec.,PKU,Precise and scalable analogue matrix equation solving using resistive random-access memory chips,Mixed-Precision Iterative Algorithm for High-Precision Analogue Computing; Scalable Hardware Implementation with BlockAMC algorithm,3,5,4
 # #### RRAM Non-ideal Effects
 Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] section.
 # ### CIM: Hybrid Architecture
