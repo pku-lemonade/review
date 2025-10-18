@@ -23,6 +23,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,ATC,UChicago,IASO: A Fail-Slow Detection and Mitigation Framework for Distributed Storage Services,slowdown detection based on peer score; sub-root causes for five kinds of root causes,,,
 2022,ATC,SJTU & Alibaba,NVMe SSD Failures in the Field: the Fail-Stop and the Fail-Slow,hardware infant mortality; write amplification factor; intra-node/rock failure,3,4,2
 2023,FAST,SJTU & Alibaba,PERSEUS: A Fail-Slow Detection Framework for Cloud Storage Systems,outlier data detection; regression model for detection threshold; risk evaluating algorithm,4,4,3
+2024,MICRO,MIT,DelayAVF: Calculating Architectural Vulnerability Factors for Delay Faults,architectural vulnerability factors; tractable two-step derivation for AVF computation,3,3,2
 2025,ASPDAC,Xiamen University,A Fail-Slow Detection Framework for HBM Devices,outlier data detection; regression model for detection threshold; risk evaluating algorithm,2,4,2
 # ### Physical Effects
 # #### RRAM
