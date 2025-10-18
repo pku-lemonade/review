@@ -336,9 +336,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Thermal-Aware Scheduling
 # Challenge: balancing real-time performance with thermal safety under tight power budgets
-2012,VLSI,SU,A Multi-Agent Framework for Thermal Aware Task Migration in Many-Core Systems,steady-state temperature-based migration; temperature prediction-based migration; master-slave communication,3,3,2
-2015,VLSI,UCR,Task Migrations for Distributed Thermal Management Considering Transient Effects,effective initial temperature; frequency-domain moment matching,3,3,2
-2019,VLSI,Soton,Predictive Thermal Management for Energy-Efficient Execution of Concurrent Applications on Heterogeneous Multicores,temperature predictor with error correction algorithm; dynamic temperature management,3,4,2
+2012,TVLSI,SU,A Multi-Agent Framework for Thermal Aware Task Migration in Many-Core Systems,steady-state temperature-based migration; temperature prediction-based migration; master-slave communication,3,3,2
+2015,TVLSI,UCR,Task Migrations for Distributed Thermal Management Considering Transient Effects,effective initial temperature; frequency-domain moment matching,3,3,2
+2019,TVLSI,Soton,Predictive Thermal Management for Energy-Efficient Execution of Concurrent Applications on Heterogeneous Multicores,temperature predictor with error correction algorithm; dynamic temperature management,3,4,2
 2019,TECS,UMich,Thermal-Aware Scheduling for Integrated CPUs–GPU Platforms,thermally-balanced task-to-core assignment; CPUs–GPU thermal coupling model,3,3,2
 2022,TPDS,SUT,TherMa-MiCs: Thermal-Aware Scheduling for Fault-Tolerant Mixed-Criticality Systems,thermal safe power abstraction; maximum safe simultaneous active cores (MSSAC) factor; offline&online co-scheduling,4,4,2
 
