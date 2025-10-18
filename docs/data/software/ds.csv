@@ -481,6 +481,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: In the decode stage, **the attention need memory access while the FFN only need compute**. The increasingly sparse FFN in MoE models make the GPU computation ultilization low. Disaggregate the attention and FFN module to different can make better batching and heterogeneous devices implement.
 2025,arXiv,ByteDance,MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism,the first the disaggregated attention and FFN disaggregate; ping-pong pipeline parallel; high performance M2N communication,4,3,3
 2025,arXiv,StepFun,Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding,detailed AFD math analysis; co-design of model and system; low decode latenty implementation,3,4,2
+2025,arXiv,SJTU,Expert-as-a-Service: Towards Efficient Scalable and Robust Large-scale MoE Serving,treat expert on independent servers; expert as a service enable scalable MoE serving,3,3,2
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
