@@ -17,6 +17,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ISLPED,WSU,HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration,3D integration;  distinct planar tiers where each tier is tailor-made for either MHA or the FF network; alleviate memory bottlenecks while preventing frequent rewrites on ReRAM crossbars,,,
 # #### Interconnect
 2012,SIGCOMM,CMU,On-Chip Networks from a Networking Perspective: Congestion and Scalability in Many-Core Interconnects,congestion control mechanism for bufferless NoC; interval-based congestion control algorithm; simple injection throttling algorithm,,,
+2021,IPDPSW,FAU,"Fast HBM Access with FPGAs: Analysis, Architectures, and Applications",HBM lateral routing contention analysis; Memory Access Optimizer (MAO) IP; hierarchical HBM interconnect; HBM address interleaving on FPGA,3,4,3
 2023,ICCAD,UCF,ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects,directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm,,,
 2023,MICRO,THU,Heterogeneous Die-to-Die Interfaces: Enabling More Flexible Chiplet Interconnection Systems,heterogeneous interface hetero-PHY and hetero-channel; hetero-channel routing algorithm; application-aware scheduling,,,
 # #### Processing on NoC
