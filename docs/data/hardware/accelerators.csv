@@ -2,6 +2,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Graph Accelerators
 # Challenge: Massive memory requirement, Non-ordered memory access
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
+2019,FPL,NUS,On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs,on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture,3,4,2
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 # #### Hypergraph Accelerators
 # Solution: Realize the shared parts in hyperedges
@@ -9,7 +10,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,HUST,MeHyper: Accelerating Hypergraph Neural Networks by Exploring Implicit Dataflows, Microedge; Microedge-Centric Dataflow; RePAG Execution Model,4,3,4
 # #### Dynamic Graph Accelerators
 # Challenge: Edge update, Graph store data structure design
+2022,ISCA,HUST,TDGraph: A Topology-Driven Accelerator for High-Performance Streaming Graph Processing,topology-driven incremental execution; streaming graph processing; regularized state propagation; vertex states coalescing,4,4,3
 2024,TRETS,UoV,Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs,a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning,4,4,3
+# #### Graph Mining Accelerators
+# Challenge: Complex graph algorithms, Irregular access patterns
+2021,ISCA,MIT,FlexMiner: A Pattern-Aware Accelerator for Graph Pattern Mining,pattern-aware GPM accelerator; software/hardware co-design; pattern-specific execution plan; connectivity map (c-map),4,4,3
 # ### DNN Accelerators
 # #### Layer Fusion Accelerators
 # Solution: Use layer fusion to combine multiple layers of a neural network into a single layer. This can help reduce the number of computations and memory accesses required during inference; leading to faster execution times and lower power consumption.
