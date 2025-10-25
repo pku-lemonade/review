@@ -348,7 +348,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: maximizing performance and reliability within dark silicon constraints
 2018,DATE,NTU,HiMap: A Hierarchical Mapping Approach for Enhancing Lifetime Reliability of Dark Silicon Manycore Systems,two-level hierarchical mapping for lifetime reliability; block-based selection; cluster-based adjustment,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance- and aging-aware objective formulation; reaction–diffusion (R–D)-based NBTI aging model,3,3,2
-2020,IEEE Access,SCUT,Dynamic Allocation/Reallocation of Dark Cores in Many-Core Systems for Improved System Performance,dynamic programming network (DPN) framework; region-based geometric shaping; heartbeat-based workload modeling,4,2,2
 
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
