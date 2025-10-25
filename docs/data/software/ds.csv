@@ -335,6 +335,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Task Offloading
 2024,arXiv,USTC,Collaborative Inference for Large Models with Task Offloading and Early Exiting,early exit mechanism; jointly optimize its offloading strategy and the confidence threshold; distributed task offloading algorithm,,,
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,integer linear programming for offload optimization; PIM-friendly mapping representation; accurate cost modeling for data layout,4,2,3
+2025,MICRO,Crane: Inter-Layer Scheduling Framework for DNN Inference and Training Co-Support on Tiled Architecture,hierarchical table-format representation; MILP based scheduling optimization; joint modeling of execution, fusion, and recomputation,4,3,2
 
 # ### Thermal-Aware Scheduling
 # Challenge: balancing real-time performance with thermal safety under tight power budgets
