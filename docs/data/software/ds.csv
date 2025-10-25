@@ -346,6 +346,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Dark Silicon Optimization
 # Challenge: maximizing performance and reliability within dark silicon constraints
+2011,ISCA,Washington&WISC,Dark Silicon and the End of Multicore Scaling,power-limited transistor under-utilization; device/core/multicore scaling model; corollary for symmetric, asymmetric, dynamic, and composed multicore topologies,4,3,3
+2015,DATE,NYU,Variability-Aware Dark Silicon Management in On-Chip Many-Core Systems,variability-aware dark core patterning; joint thread-to-core mapping and power-state control; temperature-dependent leakage feedback modeling,3,3,2
 2018,DATE,NTU,HiMap: A Hierarchical Mapping Approach for Enhancing Lifetime Reliability of Dark Silicon Manycore Systems,two-level hierarchical mapping for lifetime reliability; block-based selection; cluster-based adjustment,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance- and aging-aware objective formulation; reaction–diffusion (R–D)-based NBTI aging model,3,3,2
 
