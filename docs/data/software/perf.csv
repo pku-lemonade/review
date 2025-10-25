@@ -126,6 +126,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
 2025,ASPLOS,Georgia Tech,Forecasting GPU Performance for Deep Learning Training and Inference,tile-level kernal decomposition; fundamental performance laws bounded prediction; ML based utilization prediction,3,4,2
 
+
+# ### Memory Subsystem Simulators
+# Challenge: Current simulator approaches fail to fully exploit parallelism and are difficult to extend.
+2024,MICRO,Barcelona Supercomputing Center,"A Mess of Memory System Benchmarking, Simulation and Application Profiling", inaccuracy of simulators like Ramulator and DRAMsim3; analytical memory simulator "Mess" based on bandwidth-latency curves,4,2,2
+2025,arXiv,ETHZ,Cleaning up the Mess, refuting Mess paper's claims via identifying simulator configuration errors; correcting Mess paper's evaluation via identifying erroneous statistics usage; Mess Request Generator for a corrected Ramulator 2 evaluation,3,2,3
+2025,arXiv,Cornell,gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration,LLM-powered agent for computer architecture DSE; state machine-driven exploration loop (ANA-GEN-QA-EXIT); prompt engineering for results retrospection and baseline preservation,3,2,3
+
 # ### LLM Performance Modeling <a name="LLM-Performance-Modeling"></a>
 # Solution: LLM inference is expensive, performance modeling can help decide on the best configuration for the given system without actually running the LLM.
 
