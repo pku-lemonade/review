@@ -451,6 +451,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,mobiCom,HKUST,D$^{2}$MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving,dually sparselygated Mixture-of-Experts; token-adaptive bit-width selection; matryoshka weight quantization; bit-width-aware I/O-compute pipeline,3,4,4
 2025,ODSI,SJTU,Fast and Live Model Auto Scaling with O(1) Host Caching,auto-scaling with minimal caching; optimize parameter loading; enabling fine-grained layer-level scale,3,3,2
 2023,ASPLOS,Google,TelaMalloc: Efficient On-Chip Memory Allocation for Production Machine Learning Accelerators,hybrid heuristic-solver memory allocator for ML accelerators; contention-aware phased allocation strategy,4,4,3
+2025,MICRO,Duke,LLM.265: Video Codecs are Secretly Tensor Codecs,use video compress hardware on GPU to compress LLM tensor; existing idle hardware video encoders and decoders (NVENC/NVDEC) found on modern GPUs,4,4,4
 
 # ##### Architectural Innovations
 2025,arXiv,Shanghai AI,Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts,linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers,,,
