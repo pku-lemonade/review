@@ -178,7 +178,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2010,PRDC,UBC,Modeling the Propagation of Intermittent Hardware Faults in Programs,instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling,,,
 2015,SC,IBM,Understanding the Propagation of Transient Errors in HPC Applications,"fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors",,,
 2023,ISCA,UChicago,Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems,"NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy",,,
-2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
 
 # ### Fault Injection Technique
 # Challenge: It is difficult to target specific components, reproduce realistic fault scenarios, and observe system behavior without disturbing normal operation, especially as system scale and complexity increase.
@@ -386,6 +385,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### SFT and Fine-tuning Optimizations
 # Challenge: SFT plays an important role to enhance model's ability on specific tasks. Thus SFT has a strong taks's pattern, like the distribution of input-output length.
 2025,arXiv,PKU,LobRA: Multi-tenant Fine-tuning over Heterogeneous Data,Deploys different model replicas to handle varied workloads; balancing different LoRAs' workload caused by dataset,3,3,2
+
+# #### Fault tolerance Optimizations
+2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
+2025,arXiv,UCR,FT-Transformer: Resilient and Reliable Transformer with End-to-End Fault Tolerant Attention,Flashattn+ABFT; GPU based runtime optimization,3,3,2
+2025,HPDC,GMU,FT2: First-Token-Inspired Online Fault Tolerance on Critical Layers for Generative Large Language Models,inference-oriented error detection; clip based fault recovery; first token get range,3,2,2
+2025,arXiv,Gensyn,All is Not Lost: LLM Recovery without Checkpoints,replace two layer's value to recover from fault; out-of-order pipeline execution to tolerate crash,2,1,2
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
