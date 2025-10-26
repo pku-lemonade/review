@@ -115,3 +115,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Data Access Accelerators
 # Challenge: Indirect and sparse memory access patterns; low memory bandwidth utilization; core structural limitations
 2025,ISCA,UMich,DX100: Programmable Data Access Accelerator for Indirection,indirect memory access accelerator; bulk memory access reordering; DRAM row-buffer hit rate optimization; programmable data access ISA,4,3,2
+
+# ### GEMM Accelerators
+# Challenge: High computational intensity; memory bandwidth bottlenecks; energy efficiency
+2020,HPCA,Georgia Tech,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,2,3
