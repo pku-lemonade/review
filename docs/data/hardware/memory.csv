@@ -229,6 +229,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 2019,Adv. Funct. Mater.,HUST,Functional Demonstration of a Memristive Arithmetic Logic Unit (MemALU) for In‐Memory Computing,non-volatile Boolean logic using RRAM crossbar;reconfigurable boolean logic gates,3,4,3
 # #### RRAM CiM: Matrix Equation Solver
+2024,DATE,PKU,BlockAMC: Scalable In-Memory Analog Matrix Computing for Solving Linear Systems, Novel scalable algorithm for matrix equation solving; reconfigurable BlockAMC macros design,3,3,3
 2025,Sci.Adv.,HUST,Fully analog iteration for solving matrix equations with in-memory computing, Analog Iteration with Digital Refinement solver,4,4,3 
 2025,Nat.Elec.,PKU,Precise and scalable analogue matrix equation solving using resistive random-access memory chips,Mixed-Precision Iterative Algorithm for High-Precision Analogue Computing; Scalable Hardware Implementation with BlockAMC algorithm,3,5,4
 # #### RRAM Non-ideal Effects
