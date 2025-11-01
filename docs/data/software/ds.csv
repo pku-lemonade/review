@@ -373,6 +373,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Experiments
 2025,arXiv,JSC,Memory and Bandwidth are All You Need for Fully Sharded Data Parallel,an extensive analysis of the FSDP training distribution strategy; a grid search methodology; both simulation and empirical results,2,4,1
+2025,MICRO,Gatech,Characterizing the Efficiency of Distributed Training: A Power, Performance, and Thermal Perspective,scale-up vs. scale-out performance trade-offs; communication inefficiencies in TP+PP; microbatch scaling limitation,3,4,1
 
 # #### Multi-Modal Optimizations
 # Challenge: multimodal data is more complex and requires more resources to train.
