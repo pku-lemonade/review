@@ -525,6 +525,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### RL System
 # Challenge: RL contains both backward and frontward. This need to handle the interaction between multi step and task, posing challenge to parallelism and synchronization.
 2018,OSDI,UCB,Ray: A Distributed Framework for Emerging AI Applications,unified actor and task model; stateless architecture via global control store; bottom-up distributed scheduling,4,4,3
+2025,arXiv,NTU,ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems,spec in RL LLM acceleration; dynamic batch size adjustment in runtime; lets the drafter chase high-reward modes only,4,3,3
 
 # #### RLHF System
 # Challenge: RL system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
