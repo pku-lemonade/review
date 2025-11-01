@@ -3,6 +3,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Algorithm design and analysis
 # Solution: an algorithm is a well-defined, finite sequence of steps that solves a specific problem or accomplishes a particular task. We focus on algorithms that can solving problems.
 
+# ### Dynamic Graph Algorithms
+# Solution: Dynamic graph algorithms efficiently update solutions to graph problems as the graph evolves, addressing the challenge of frequent changes in structure and data.
+2023,ASPLOS,UCR,CommonGraph: Graph Analytics on Evolving Data,convert deletions to additions; common graph concept; Triangular Grid (TG) for work sharing; mutation-free representation,3,4,4
+
 # ### ML Algorithms
 # Solution: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
 
