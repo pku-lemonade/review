@@ -147,6 +147,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Thermal Modeling
 # Challenge: precisely capturing the nonlinear, multi-scale and heterogeneous thermal behaviors on different architecture
 2003,ISCA,Virginia,Temperature-Aware Microarchitecture,architecture level thermal modeling; temperature-tracking frequency scaling; local feedback-controlled fetch toggling,3,3,2
+2009,MICRO,ND&UCSD,McPAT: An Integrated Power, Area, and Timing Modeling Framework for Multicore and Manycore Architectures,multicore architecture level modeling; circuit level modeling; technology level modeling,3,3,2
 2024,ICCAD,PKU,FaStTherm: Fast and Stable Full-Chip Transient Thermal Predictor Considering Nonlinear Effects,ResNet-18-based deep autoencoder; unrolled training and noise injection for stability; GA-based training data generation,4,3,2
 2024,ISEDA,PKU,ATSim3D: Towards Accurate Thermal Simulator for Heterogeneous 3D-IC Systems Considering Nonlinear Leakage and Conductivity,global-local approach for simulation with ultrahigh resolution; Kirchhoff transformation for nonlinear conductivity,3,3,2
 
