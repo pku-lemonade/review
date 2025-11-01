@@ -35,6 +35,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # 1. Pipeline parallelism: divide the model as pipeline stages, each gpu processes one or more stages.
 # 2. Tensor parallelism: divide the tensor into different GPUs.
 # Usually, pipeline parallelism and tensor parallelism are used together.
+2019,SOSP,Stanford,PipeDream: Fast and Efficient Pipeline Parallel DNN Training,raise the idea of pipeline parallelism; divide model into different GPUs,3,3,4
 2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
 2021,SC,NVIDIA,Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM,Megatron2; dive deep into tensor parallelism; how to train a LLM on 1000 GPUs,4,4,3
 2022,arXiv,NVIDIA,Reducing Activation Recomputation in Large Transformer Models,Megatron3; sequence parallel; selective activation recomputation; reduce the amount of recomputed activation,3,4,3
