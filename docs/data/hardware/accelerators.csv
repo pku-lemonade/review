@@ -52,7 +52,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
 2024,MICRO,UCR,Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse,producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture,,,
 2025,arXiv,UCSB,FETTA: Flexible and Efficient Hardware Accelerator for Tensorized Neural Network Training,contraction sequence search engine; tensor contraction unit; distribution/reduction network,3,4,3
-2025,ISCA,PKU,H2-LLM: Hardware-Dataflow Co-Exploration for Heterogeneous Hybrid-Bonding-based Low-Batch LLM Inference,operator-channel binding; computation-andwidth trade-off; dataflow-based DSE,4,3,3
 # #### Data Mapping
 # Solution: Assign data to specific locations in memory or storage to optimize performance; reduce latency; and improve resource utilization.
 # ##### Survey
