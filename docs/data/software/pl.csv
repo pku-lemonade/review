@@ -69,7 +69,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### MLIR-based HLS Frameworks
 # Solution: Leveraging modern compiler infrastructures like MLIR to build modular, extensible, and reusable HLS frameworks.
-2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic componenent; time graph transformation,4,4,3
+2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic component; time graph transformation,4,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,3
 2023,ASPLOS,IISc,HIR: An MLIR-based Intermediate Representation for Hardware Accelerator Description,MLIR-based hardware IR; datapath + schedule model; explicit scheduling via time variables; automatic FSM synthesis,4,4,4
 2024,HPCA,SJTU,An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation,polyhedral model for HLS; MLIR-based HLS framework; automatic design space exploration,4,4,4
