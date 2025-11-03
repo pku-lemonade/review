@@ -74,6 +74,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,NeurIPS,CUHK,Pareto Multi-Task Learning,method to decompose a MTL problem into multiple subproblems; scalable optimization algorithm to solve all constrained subproblems,3,4,4
 2021,NeurIPS,UTexas,Conflict-Averse Gradient Descent for Multi-task learning, Conflict-Averse Gradient descent (CAGrad); reduces the conflict among gradients while provably converges to minimum average loss,3,3,3
 
+# #### Graph Neural Network
+# Solution: Graph Neural Network (GNN) is a model that leverages the relationships between nodes and edges in graph-structured data to perform feature propagation and representation learning, enabling the capture of complex topological dependencies and structural patterns.
+2020,TITS,CSU,T-GCN: A Temporal Graph Convolutional Network for Traffic Prediction,GCN for spatial dependence; GRU for temporal dependence; noise based perturbation analysis,4,4,2
+2020,ICLR,Walmart,Inductive Representation Learning on Temporal Graphs,functional time encoding; temporal graph attention layer,3,4,2
+2020,AAAI,MIT,EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs,EvolveGCN-H / EvolveGCN-O architectures; evolving graph convolution unit; model adaptation via parameter evolution,4,3,2
+2023,ICSE,CUHK,Eadro: An End-to-End Troubleshooting Framework for Microservices on Multi-source Data,Hawkes process; dilated causal convolution; joint detection and localization via multi-task learning,3,3,2
+
 # ### Quantization
 # Solution: Quantization are focusing on tradeoffs of accuracy and computation/memory. The challenges are how to run models in high performance and low memory/computation cost.
 # #### Adaptive Datatype
