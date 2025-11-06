@@ -128,6 +128,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 
 # ### Memory Subsystem Simulators
+# Challenge: Current simulator approaches fail to fully exploit parallelism and are difficult to extend.
+2024,MICRO,Barcelona Supercomputing Center,"A Mess of Memory System Benchmarking, Simulation and Application Profiling", inaccuracy of simulators like Ramulator and DRAMsim3; analytical memory simulator "Mess" based on bandwidth-latency curves,4,2,2
+2025,arXiv,ETHZ,Cleaning up the Mess, refuting Mess paper's claims via identifying simulator configuration errors; correcting Mess paper's evaluation via identifying erroneous statistics usage; Mess Request Generator for a corrected Ramulator 2 evaluation,3,2,3
+2025,arXiv,Cornell,gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration,LLM-powered agent for computer architecture DSE; state machine-driven exploration loop (ANA-GEN-QA-EXIT); prompt engineering for results retrospection and baseline preservation,3,2,3
+
+
+# ### Memory Subsystem Simulators
 # Challenge: Memory subsystem simulators face accuracy issues with realistic workloads and lack efficient parallelization strategies.
 2024,MICRO,Barcelona Supercomputing Center,"A Mess of Memory System Benchmarking, Simulation and Application Profiling", inaccuracy of simulators like Ramulator and DRAMsim3; analytical memory simulator "Mess" based on bandwidth-latency curves,4,2,2
 2025,arXiv,ETHZ,Cleaning up the Mess, refuting Mess paper's claims via identifying simulator configuration errors; correcting Mess paper's evaluation via identifying erroneous statistics usage; Mess Request Generator for a corrected Ramulator 2 evaluation,3,2,3
