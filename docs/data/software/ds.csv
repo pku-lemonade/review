@@ -44,6 +44,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
 2022,ACL,NUS,Sequence Parallelism: Long Sequence Training from System Perspective,splits input sequences into chunks; Ring Self-Attention; sparse attention,3,4,3
 
+# #### Hardware componment co-design
+# Challenge: rencent accelerator like GPU has many components, such as tensor cores, SRAM, etc. How to co-design the software and hardware to improve the performance.
+2023,ATC,UC,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,use cuda core to transform sparse graph martix into dense for tensor core; codesign of tensor core and cuda core for GNN application,3,4,4
+2022,HPCA,SJTU,Tacker: Tensor-CUDA Core Kernel Fusion for Improving the GPU Utilization while Ensuring QoS,cuda core and tensor core operator fuse; a static kernel fusion and scheduling approach to improve GPU utilization; best-effort schedule,3,3,3
+2023,ISCA,SJTU,OliVe: Accelerating Large Language Models via Hardware-friendly Outlier-Victim Pair Quantization,use different quantization methods for different value in model weight; hardware support for tensor core,4,3,4
+2025,arXiv,BJPT,Libra: Synergizing CUDA and Tensor Cores for High-Performance Sparse Matrix Multiplication,mapping computation to cuda core and tensor core; different mapping stragety for different sparse matrix,3,3,3
 
 # ## Cloud computing platforms and architectures
 # Challenge: when providing services to users, facing scalability, resource management, fault tolerance, and cost-effectiveness for building and deploying large-scale distributed applications and services.

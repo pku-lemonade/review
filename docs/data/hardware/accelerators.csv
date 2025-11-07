@@ -46,6 +46,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Application-Specific Accelerators
 # Solution: Application-specific accelerators are designed to efficiently execute specific types of neural networks or machine learning workloads, providing optimized performance and energy efficiency for targeted applications.
 2022,PLDI,University of Edinburgh,Bind the Gap: Compiling Real Software to Hardware FFT Accelerators,IO-based synthesis; adapter generation; multi-level mismatch resolution; neural code classification; generate-and-test verification,4,4,3
+2025,DATE,PKU,PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments,RL environment accelerator; PCIe communication optimization; IP-based design,3,3,2
 
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
