@@ -103,7 +103,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,SK Hyrix,Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders,CXL.mem protocol instead of CXL.io (DMA) for low-latency; lightweight threads to reduce address calculation overhead,,,
 2025,ISCA,Seoul National,COSMOS: A CXL-Based Full In-Memory System for Approximate Nearest Neighbor Search,CXL core-based ANNS task offload; rank-level parallel distance computation; adjacency-aware data placement algorithm,2,2,2
 2025,ASPLOS,UMich,PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference,hierarchical CXL PIM-PNM compute architecture; use die-shot to estimate area cost; multiple LLM parallelism policies,2,3,3
-
 # ### 3D-Stacked PIM
 # Challenge: There is no direct physical interconnection paths in DIMM-based, bank-level uniform NDP like UPMEM.
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
