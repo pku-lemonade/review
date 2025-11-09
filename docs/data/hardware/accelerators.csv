@@ -35,6 +35,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Bit-Sliced DNN Accelerators
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
 2023,HPCA,KAIST,Sibia: Signed Bit-slice Architecture for Dense DNN Acceleration with Slice-level Sparsity Exploitation,signed bit-slice representation;flexible zero skipping processing element,3,3,4
+2024,HPCA,KU Leuven,BitWave: Exploiting Column-Based Bit-Level Sparsity for Deep Learning Acceleration,Bit-column sparsity for both computation reduction and data compression; Single-shot Bit-Flip post-training,3,3,3
 2025,HPCA,POSTECH,Panacea: Novel DNN Accelerator using Accuracy-Preserving Asymmetric Quantization and Energy-Saving Bit-Slice Sparsity,Asymmetrically-Quantized bit-Slice GEMM; Zero-Point Manipulation and Distribution-based Bit-Slicing to increase sparsity,3,3,4
 2025,HPCA,Yonsei,Bit-slice Architecture for DNN Acceleration with Slice-level Sparsity Enhancement and Exploitation,both input AND weight sparsity at bit-slice level; 8-bit data processing with 4-bit multipliers; Scale regularization during training to enhance sparsity,3,2,2
 # #### Reconfigurable Accelerators
@@ -43,10 +44,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,JETCAS,MIT,Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices,hierarchical mesh NoC for multiple transmission modes; sparse PE architecture,5,4,2
 2020,HPCA,Georgia Tech & Intel,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,3,2
 2023,ASPLOS,UM & Georgia Tech,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern,4,3,2
-# #### Application-Specific Accelerators
-# Solution: Application-specific accelerators are designed to efficiently execute specific types of neural networks or machine learning workloads, providing optimized performance and energy efficiency for targeted applications.
-2022,PLDI,University of Edinburgh,Bind the Gap: Compiling Real Software to Hardware FFT Accelerators,IO-based synthesis; adapter generation; multi-level mismatch resolution; neural code classification; generate-and-test verification,4,4,3
-
+2023,MICRO,MIT,HighLight: Efficient and Flexible DNN Acceleration with Hierarchical Structured Sparsity,hierarchical structured sparsity (HSS) enables systematic flexibility on sparsity patterns; modularized hierarchical sparsity acceleration architecture,3,3,3
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture
