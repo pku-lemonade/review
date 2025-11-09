@@ -35,6 +35,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # 1. Pipeline parallelism: divide the model as pipeline stages, each gpu processes one or more stages.
 # 2. Tensor parallelism: divide the tensor into different GPUs.
 # Usually, pipeline parallelism and tensor parallelism are used together.
+2019,SOSP,Stanford,PipeDream: Fast and Efficient Pipeline Parallel DNN Training,raise the idea of pipeline parallelism; divide model into different GPUs,3,3,4
 2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
 2021,SC,NVIDIA,Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM,Megatron2; dive deep into tensor parallelism; how to train a LLM on 1000 GPUs,4,4,3
 2022,arXiv,NVIDIA,Reducing Activation Recomputation in Large Transformer Models,Megatron3; sequence parallel; selective activation recomputation; reduce the amount of recomputed activation,3,4,3
@@ -178,7 +179,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2010,PRDC,UBC,Modeling the Propagation of Intermittent Hardware Faults in Programs,instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling,,,
 2015,SC,IBM,Understanding the Propagation of Transient Errors in HPC Applications,"fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors",,,
 2023,ISCA,UChicago,Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems,"NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy",,,
-2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
 
 # ### Fault Injection Technique
 # Challenge: It is difficult to target specific components, reproduce realistic fault scenarios, and observe system behavior without disturbing normal operation, especially as system scale and complexity increase.
@@ -335,6 +335,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Task Offloading
 2024,arXiv,USTC,Collaborative Inference for Large Models with Task Offloading and Early Exiting,early exit mechanism; jointly optimize its offloading strategy and the confidence threshold; distributed task offloading algorithm,,,
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,integer linear programming for offload optimization; PIM-friendly mapping representation; accurate cost modeling for data layout,4,2,3
+2025,MICRO,Crane: Inter-Layer Scheduling Framework for DNN Inference and Training Co-Support on Tiled Architecture,hierarchical table-format representation; MILP based scheduling optimization; joint modeling of execution, fusion, and recomputation,4,3,2
 
 # ### Thermal-Aware Scheduling
 # Challenge: balancing real-time performance with thermal safety under tight power budgets
@@ -346,9 +347,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Dark Silicon Optimization
 # Challenge: maximizing performance and reliability within dark silicon constraints
+2011,ISCA,Washington&WISC,Dark Silicon and the End of Multicore Scaling,power-limited transistor under-utilization; device/core/multicore scaling model; corollary for symmetric, asymmetric, dynamic, and composed multicore topologies,4,3,3
+2015,DATE,NYU,Variability-Aware Dark Silicon Management in On-Chip Many-Core Systems,variability-aware dark core patterning; joint thread-to-core mapping and power-state control; temperature-dependent leakage feedback modeling,3,3,2
 2018,DATE,NTU,HiMap: A Hierarchical Mapping Approach for Enhancing Lifetime Reliability of Dark Silicon Manycore Systems,two-level hierarchical mapping for lifetime reliability; block-based selection; cluster-based adjustment,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance- and aging-aware objective formulation; reaction–diffusion (R–D)-based NBTI aging model,3,3,2
-2020,IEEE Access,SCUT,Dynamic Allocation/Reallocation of Dark Cores in Many-Core Systems for Improved System Performance,dynamic programming network (DPN) framework; region-based geometric shaping; heartbeat-based workload modeling,4,2,2
 
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
@@ -371,6 +373,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Experiments
 2025,arXiv,JSC,Memory and Bandwidth are All You Need for Fully Sharded Data Parallel,an extensive analysis of the FSDP training distribution strategy; a grid search methodology; both simulation and empirical results,2,4,1
+2025,MICRO,Gatech,Characterizing the Efficiency of Distributed Training: A Power, Performance, and Thermal Perspective,scale-up vs. scale-out performance trade-offs; communication inefficiencies in TP+PP; microbatch scaling limitation,3,4,1
 
 # #### Multi-Modal Optimizations
 # Challenge: multimodal data is more complex and requires more resources to train.
@@ -386,6 +389,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### SFT and Fine-tuning Optimizations
 # Challenge: SFT plays an important role to enhance model's ability on specific tasks. Thus SFT has a strong taks's pattern, like the distribution of input-output length.
 2025,arXiv,PKU,LobRA: Multi-tenant Fine-tuning over Heterogeneous Data,Deploys different model replicas to handle varied workloads; balancing different LoRAs' workload caused by dataset,3,3,2
+
+# #### Fault tolerance Optimizations
+2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
+2025,arXiv,UCR,FT-Transformer: Resilient and Reliable Transformer with End-to-End Fault Tolerant Attention,Flashattn+ABFT; GPU based runtime optimization,3,3,2
+2025,HPDC,GMU,FT2: First-Token-Inspired Online Fault Tolerance on Critical Layers for Generative Large Language Models,inference-oriented error detection; clip based fault recovery; first token get range,3,2,2
+2025,arXiv,Gensyn,All is Not Lost: LLM Recovery without Checkpoints,replace two layer's value to recover from fault; out-of-order pipeline execution to tolerate crash,2,1,2
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
@@ -446,6 +455,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,mobiCom,HKUST,D$^{2}$MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving,dually sparselygated Mixture-of-Experts; token-adaptive bit-width selection; matryoshka weight quantization; bit-width-aware I/O-compute pipeline,3,4,4
 2025,ODSI,SJTU,Fast and Live Model Auto Scaling with O(1) Host Caching,auto-scaling with minimal caching; optimize parameter loading; enabling fine-grained layer-level scale,3,3,2
 2023,ASPLOS,Google,TelaMalloc: Efficient On-Chip Memory Allocation for Production Machine Learning Accelerators,hybrid heuristic-solver memory allocator for ML accelerators; contention-aware phased allocation strategy,4,4,3
+2025,MICRO,Duke,LLM.265: Video Codecs are Secretly Tensor Codecs,use video compress hardware on GPU to compress LLM tensor; existing idle hardware video encoders and decoders (NVENC/NVDEC) found on modern GPUs,4,4,4
 
 # ##### Architectural Innovations
 2025,arXiv,Shanghai AI,Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts,linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers,,,
@@ -516,6 +526,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### RL System
 # Challenge: RL contains both backward and frontward. This need to handle the interaction between multi step and task, posing challenge to parallelism and synchronization.
 2018,OSDI,UCB,Ray: A Distributed Framework for Emerging AI Applications,unified actor and task model; stateless architecture via global control store; bottom-up distributed scheduling,4,4,3
+2025,arXiv,NTU,ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems,spec in RL LLM acceleration; dynamic batch size adjustment in runtime; lets the drafter chase high-reward modes only,4,3,3
 
 # #### RLHF System
 # Challenge: RL system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.

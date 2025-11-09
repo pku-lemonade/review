@@ -3,6 +3,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Massive memory requirement, Non-ordered memory access
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
 2019,FPL,NUS,On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs,on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture,3,4,2
+2020,MICRO,UCR,GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing,asynchronous event-driven model; in-place event coalescing; delta-based accumulative processing,3,3,4
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 # #### Hypergraph Accelerators
 # Solution: Realize the shared parts in hyperedges
@@ -10,7 +11,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,HUST,MeHyper: Accelerating Hypergraph Neural Networks by Exploring Implicit Dataflows, Microedge; Microedge-Centric Dataflow; RePAG Execution Model,4,3,4
 # #### Dynamic Graph Accelerators
 # Challenge: Edge update, Graph store data structure design
+2021,MICRO,UCR,JetStream: Graph Analytics on Streaming Data with Event-Driven Hardware Accelerator,first streaming graph accelerator; asynchronous incremental algorithms; asynchronous edge deletion handling (VAP; DAP),3,3,4
 2022,ISCA,HUST,TDGraph: A Topology-Driven Accelerator for High-Performance Streaming Graph Processing,topology-driven incremental execution; streaming graph processing; regularized state propagation; vertex states coalescing,4,4,3
+2023,MICRO,UCR,MEGA Evolving Graph Accelerator,first evolving graph accelerator; Batch-Oriented Execution (BOE); deletion-free based on CommonGraph; Batch Pipelining,3,3,4
 2024,TRETS,UoV,Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs,a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning,4,4,3
 # #### Graph Mining Accelerators
 # Challenge: Complex graph algorithms, Irregular access patterns
@@ -52,7 +55,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
 2024,MICRO,UCR,Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse,producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture,,,
 2025,arXiv,UCSB,FETTA: Flexible and Efficient Hardware Accelerator for Tensorized Neural Network Training,contraction sequence search engine; tensor contraction unit; distribution/reduction network,3,4,3
-2025,ISCA,PKU,H2-LLM: Hardware-Dataflow Co-Exploration for Heterogeneous Hybrid-Bonding-based Low-Batch LLM Inference,operator-channel binding; computation-andwidth trade-off; dataflow-based DSE,4,3,3
 # #### Data Mapping
 # Solution: Assign data to specific locations in memory or storage to optimize performance; reduce latency; and improve resource utilization.
 # ##### Survey
@@ -85,7 +87,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,MICRO,SNU,RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors,graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method,,,
 2023,MICRO,Yonsei,McCore: A Holistic Management of High-Performance Heterogeneous Multicores,cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling,,,
 # #### Hardware Design
-# Solution: Hardware implementation for many-core architecture to achieve massive parallelism. 
+# Solution: Hardware implementation for many-core architecture to achieve massive parallelism.
 2016,SCIS,THU&BNU&CAS,The Sunway TaihuLight supercomputer: system and applications,Sunway TaihuLight's composition; scientific computing applications on TaihuLight,3,4,2
 2017,IPDPSW,SJTU&Tokyo Tech,Benchmarking SW26010 Many-core Processor,hand-coded assembly benchmark for SW26010; CPE pipeline&memory hierarchy&RLC mechanism benchmarking,3,4,2
 2023,MICRO,THU,MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
@@ -93,12 +95,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing & packeting,,,
 2023,SC,NUDT,Optimizing MPI Collectives on Shared Memory Multi-Cores,intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives,,,
 2024,PPoPP,NUDT,Towards Scalable Unstructured Mesh Computations on Shared Memory Many-Cores,task dependency tree(TDT); tree traversal based parallel algorithm for CPU/GPU,,,
-# ### Heterogeneous Many-core System
-2018,ICCAD,WSU,Hybrid On-Chip Communication Architectures for Heterogeneous Manycore Systems,many-to-few communication patterns; long range shortcut based wireless NoC ; 3D-TSV based heterogeneous NoC,,,
-2018,IEEE TC,WSU,On-Chip Communication Network for Efficient Training of Deep Convolutional Networks on Heterogeneous Manycore Systems,wireless-enabled heterogeneous NoC; archived multi-objective simulated annealing for network connectivity,,,
+
 # ### Architecture DSE
 # Challenge: It's crucial to find the optimal hardware configurations that meet performance; power; and area constraints for specific applications.
-
+# #### NOC DSE
+2018,ICCAD,WSU,Hybrid On-Chip Communication Architectures for Heterogeneous Manycore Systems,many-to-few communication patterns; long range shortcut based wireless NoC ; 3D-TSV based heterogeneous NoC,,,
+2018,IEEE TC,WSU,On-Chip Communication Network for Efficient Training of Deep Convolutional Networks on Heterogeneous Manycore Systems,wireless-enabled heterogeneous NoC; archived multi-objective simulated annealing for network connectivity,,,
 # #### Mapping & Co-Exploration DSE
 # Challenge: Efficiently co-optimize DNN mapping and hardware architecture under complex constraints.
 2020,ICCAD,UIUC,DNNExplorer: A Framework for Modeling and Exploring a Novel Paradigm of FPGA-based DNN Accelerator,two-level (global and local) automatic DSE engine; dynamic design space exploration framework; high-dimensional design space support,4,4,4

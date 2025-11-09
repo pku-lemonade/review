@@ -50,6 +50,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Streaming Computation Models
 # Solution: high-throughput data processing, real-time analytics, efficient resource utilization for continuous data
 2020,ASPLOS,Stanford,Fleet: A Framework for Massively Parallel Streaming on FPGAs,user write serial code for parallel; multi-stream parallelism; ready-valid signaling,3,4,3
+2020,PLDI,Stanford,Type-Directed Scheduling of Streaming Accelerators,SSeq/TSeq space-time types; static throughput matching via types; invalid-bubble encoding in type system; type-directed scheduling,4,4,3
 
 # #### HLS Code Generation and Automation
 # Solution: bridging high-level languages to hardware, design space exploration, QoR improvement automation
@@ -62,12 +63,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,HUST,A Scalable Efficient and Robust Dynamic Memory Management Library for HLS-based FPGAs,DMM as graph analytics; request-guided graph traversal; data-centric concurrent traversal; shortcut-assisted fast traversal,4,4,3
 2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
 
+# ##### High-Level Language to HLS Compiler
+# Solution: compiling high-level languages (Python, Julia, etc.) to HLS code, enabling domain experts to design hardware accelerators without deep hardware knowledge
+2021,TC,UIUC,PyLog: An Algorithm-Centric Python-Based FPGA Programming and Synthesis Flow,Python-based HLS flow; algorithm-centric operators (map/dot); automatic hardware type inference; automatic HLS pragma insertion,4,4,3
+
 # ##### MLIR-based HLS Frameworks
 # Solution: Leveraging modern compiler infrastructures like MLIR to build modular, extensible, and reusable HLS frameworks.
-2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic componenent; time graph transformation,4,4,3
+2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic component; time graph transformation,4,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,3
 2023,ASPLOS,IISc,HIR: An MLIR-based Intermediate Representation for Hardware Accelerator Description,MLIR-based hardware IR; datapath + schedule model; explicit scheduling via time variables; automatic FSM synthesis,4,4,4
 2024,HPCA,SJTU,An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation,polyhedral model for HLS; MLIR-based HLS framework; automatic design space exploration,4,4,4
+2024,PLDI,Cornell,Allo: A Programming Model for Composable Accelerator Design,composable programming model; decoupled hardware customizations; bottom-up type-safe composition; hierarchical dataflow graph; memory layout composition via type inference,4,4,3
 
 # ##### HLS Verification and Testing
 # Solution: automated bug detection, verification dataset generation, LLM-aided debugging for HLS designs

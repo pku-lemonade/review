@@ -3,6 +3,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Algorithm design and analysis
 # Solution: an algorithm is a well-defined, finite sequence of steps that solves a specific problem or accomplishes a particular task. We focus on algorithms that can solving problems.
 
+# ### Dynamic Graph Algorithms
+# Solution: Dynamic graph algorithms efficiently update solutions to graph problems as the graph evolves, addressing the challenge of frequent changes in structure and data.
+2023,ASPLOS,UCR,CommonGraph: Graph Analytics on Evolving Data,convert deletions to additions; common graph concept; Triangular Grid (TG) for work sharing; mutation-free representation,3,4,4
+
 # ### ML Algorithms
 # Solution: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
 
@@ -30,6 +34,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,THU,Survey on Diffusion Language Models,"survey on training strategies, inference optimization, multimodal and applications of diffusion language models",4,2,2
 2025,arXiv,ByteDance,Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference,two-stage training with mask-based and edit-based noise; constrained-order training by filtering optimal generation paths; direct training to reduce generation steps,3,3,5
 2025,arXiv,RUC,LLaDA-V: Large Language Diffusion Models with Visual Instruction Tuning, visual instruction tuning for diffusion models; multi-stage training for multimodal reasoning; visual instruction tuning for diffusion models,2,3,4
+2025,arXiv,RUC,UltraLLaDA: Scaling the Context Length to 128K for Diffusion Large Language Models,Diffusion-aware NTK extrapolation for RoPE; long-context post-training with adaptive attention masking,3,3,4
 
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
@@ -49,6 +54,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,THU,Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents,RAG-based LLM agent; use OpenAI api to run LLM; agent num is about 50,3,3,2
 2025,arXiv,Stanford,Generative Agent Simulations of 1000 People,LLM with memory system; OpenAI api to run LLM; agent num is about 1000,2,2,2
 2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
+2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
 
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
@@ -68,6 +74,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,NeurIPS,Intel,Multi-Task Learning as Multi-Objective Optimization,Frank-Wolfe-based optimizer that scales to high-dimensional problems; provide an upper bound for the MGDA(multiple-gradient descent algorithm) optimization objective,3,4,4
 2019,NeurIPS,CUHK,Pareto Multi-Task Learning,method to decompose a MTL problem into multiple subproblems; scalable optimization algorithm to solve all constrained subproblems,3,4,4
 2021,NeurIPS,UTexas,Conflict-Averse Gradient Descent for Multi-task learning, Conflict-Averse Gradient descent (CAGrad); reduces the conflict among gradients while provably converges to minimum average loss,3,3,3
+
+# #### Graph Neural Network
+# Solution: Graph Neural Network (GNN) is a model that leverages the relationships between nodes and edges in graph-structured data to perform feature propagation and representation learning, enabling the capture of complex topological dependencies and structural patterns.
+2020,TITS,CSU,T-GCN: A Temporal Graph Convolutional Network for Traffic Prediction,GCN for spatial dependence; GRU for temporal dependence; noise based perturbation analysis,4,4,2
+2020,ICLR,Walmart,Inductive Representation Learning on Temporal Graphs,functional time encoding; temporal graph attention layer,3,4,2
+2020,AAAI,MIT,EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs,EvolveGCN-H / EvolveGCN-O architectures; evolving graph convolution unit; model adaptation via parameter evolution,4,3,2
+2023,ICSE,CUHK,Eadro: An End-to-End Troubleshooting Framework for Microservices on Multi-source Data,Hawkes process; dilated causal convolution; joint detection and localization via multi-task learning,3,3,2
 
 # ### Quantization
 # Solution: Quantization are focusing on tradeoffs of accuracy and computation/memory. The challenges are how to run models in high performance and low memory/computation cost.
