@@ -529,6 +529,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UIUC,Hierarchical Autoscaling for Large Language Model Serving with Chiron,hierarchical backpressure; interactive requests and batch requests; mixed instances,,,
 2025,arXiv,Berkeley,Locality-aware Fair Scheduling in LLM Serving,deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis,,,
 
+# #### Agent Colocating Serving
+# Challenge: The agent here refers to a module can response to specific tasks. In this scene, systems are required to provide service for both models and the system
+2019,HPDC,NKU,GAugur: Quantifying Performance Interference of Colocated Games for Improving Resource Utilization in Cloud Gaming,colocating games on cloud server; game resource allocation,2,3,2
+2025,arXiv,ByteDance,Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds,gaming LLM with VLA model and graphic agent; inference optimizaion with spec and streaming response; reply for mouse click,4,4,3
+
 # ### RL System
 # Challenge: RL contains both backward and frontward. This need to handle the interaction between multi step and task, posing challenge to parallelism and synchronization.
 2018,OSDI,UCB,Ray: A Distributed Framework for Emerging AI Applications,unified actor and task model; stateless architecture via global control store; bottom-up distributed scheduling,4,4,3
