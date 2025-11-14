@@ -17,7 +17,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Memory Partitioning & Mapping
 # Solution: efficiently and securely divide physical memory among multiple processes or systems
 # Challenge: ensuring processes get enough memory without waste, while preventing interference and maintaining system performance and security.
-2012,HPCA,Georgia Institute of Technology,TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture,thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization,,,
+2012,HPCA,Georgia Institute of Technology,TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture,thread-level parallelism; core sampling for cache effort identification; cache block lifetime normalization,,,
+2022,ASPLOS,Uppsala University,Every Walk's a Hit: Making Page Walks Single-Access Cache Hits,flattened page table; opportunistic 2MB page table nodes; graceful fallback for fragmentation; page table cache prioritization,3,3,3
 2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
 2025,HPCA,Seoul National,FACIL: Flexible DRAM Address Mapping for SoC-PIM Cooperative On-device LLM Inference,flexible PIM address mapping and remapping; OS paging mechanism extension for MapID; user-level mapping selector,3,2,3
 

@@ -156,6 +156,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
 2025,SC,THU,TraceFlow: Efficient Trace Analysis for Large-Scale Parallel Applications via Interaction Pattern-Aware Trace Distribution,communication skeleton tree; interaction-aware trace distribution; communication-minimized trace shuffling,4,4,2
 
+# ### Fail-Slow Detection
+# Solution: investigating how modern distributed systems detect and mitigate fail-slow behaviors, focusing on the design of detection mechanisms, threshold policies, and recovery strategies to improve system resilience under partial performance degradation
+2019,ATC,UChicago,IASO: A Fail-Slow Detection and Mitigation Framework for Distributed Storage Services,slowdown detection based on peer score; sub-root causes for five kinds of root causes,,,
+2023,FAST,SJTU & Alibaba,PERSEUS: A Fail-Slow Detection Framework for Cloud Storage Systems,outlier data detection; regression model for detection threshold; risk evaluating algorithm,4,4,3
+2025,ASPDAC,Xiamen University,A Fail-Slow Detection Framework for HBM Devices,outlier data detection; regression model for detection threshold; risk evaluating algorithm,2,4,2
+2025,NSDI,SJTU & UMich,One-Size-Fits-None: Understanding and Enhancing Slow-Fault Tolerance in Modern Distributed Systems,adaptive detection at runtime(ADR); slow-fault injection pipeline; danger zone analysis,4,4,2
+
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
