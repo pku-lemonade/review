@@ -17,7 +17,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Other Methods
 # Solution: Use other methods like modeling or instrumentation to find bottleneck for performance optimization.
 2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
-2025,NSDI,UCSD,KPerfIR: Towards an Open and Compiler-centric Ecosystem for GPU Kernel Performance Tooling on Modern AI Workloads, compiler-centric infrastructure; multi-level compiler IR instrumentation; region-based timing tool,4,3,2
 
 # #### Variance Attribution
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound,,,
