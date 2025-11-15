@@ -43,6 +43,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,IFIP NPC,PKU,2FA Sketch: Two-Factor Armor Sketch for Accurate and Efficient Heavy Hitter Detection in Data Streams,improved arbitration strategy for in-bucket competition; cross-bucket conflict avoidance hashing scheme,2,3,1
 2024,IEEE ICDE,PKU,Scalable Overspeed Item Detection in Streams,bucket sharing based basic speedsketch algorithm; global-clock for reducing timestamp overhead; counter-flip technique for compression,3,4,2
 
+# ##### Other Bursts
+2022,NSDI,CMU,SketchLib: Enabling Efficient Sketch-based Monitoring on Programmable Switches,bottleneck analysis of sketches on reconfigurable match-action tables; hardware friendly optimization for RMT,3,3,2
+2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
+2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
+2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
 
 # #### Straggler Analysis
 # Challenge: stragglers can arise from various complex factors, identifying their root causes and quantifying their impact on performance is difficult.
@@ -50,12 +55,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,TJSC,QMUL&NUDT,Tails in the cloud: a survey and taxonomy of straggler management within large‑scale cloud data centres,taxonomy of straggler causes; straggler management technique,3,1,1
 2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
 2025,Arxiv,NYU&ByteDance,Understanding Stragglers in Large Model Training Using What-if Analysis,what-if analysis; dependency model based simulation; SMon monitoring system,3,4,2
-
-# ##### Other Bursts
-2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
-2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
-2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
-
 
 # #### Network Tomography
 
