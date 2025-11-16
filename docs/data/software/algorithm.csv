@@ -166,6 +166,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ASPDAC,Xiamen University,A Fail-Slow Detection Framework for HBM Devices,outlier data detection; regression model for detection threshold; risk evaluating algorithm,2,4,2
 2025,NSDI,SJTU & UMich,One-Size-Fits-None: Understanding and Enhancing Slow-Fault Tolerance in Modern Distributed Systems,adaptive detection at runtime(ADR); slow-fault injection pipeline; danger zone analysis,4,4,2
 
+# ### Process Variation Management
+# Solution: Use architectural and system-level techniques to manage or exploit the on-chip heterogeneity caused by process variation; use adaptive resource allocation and workload management to improve overall performance, power efficiency, and reliability.
+2013,DATE,Waterloo,Cherry-Picking: Exploiting Process Variations in Dark-Silicon Homogeneous Chip Multi-Processors,performance model for barrier synchronization based multi-thread application; optimal core selection, thread mapping and frequency assignment,3,3,2
+2014,DATE,UW-Madison,Process Variation-Aware Workload Partitioning Algorithms for GPUs Supporting Spatial-Multitasking,per-SM clocking (PSMC); process variation-aware SM-to-application assignment,3,3,2
+2016,CSUR,ORNL,A Survey of Architectural Techniques for Managing Process Variation,PV-aware processor management; specific component targeted management,3,1,1
+
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 

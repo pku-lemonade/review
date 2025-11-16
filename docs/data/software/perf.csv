@@ -6,11 +6,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Bottleneck Analysis
 # Challenge: Bottleneck Analysis faces challenges of high system complexity, unexpected real-world factors and the resource constraints when detecting.
+
+# ##### Fixed Workload Analysis
+# Solution: Use snippets with fixed workload in the program to detect bottlenecks and locate root cause.
 2018,PPoPP,THU,vSensor: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection,fixed-workload snippets; dependency propagation algorithm; lightweight on-line analysis algorithm,,,
 2020,SC,THU,ScalAna: automating scaling loss detection with graph analysis,program structure graph; program performance graph; backtracking root cause detection algorithm,,,
 2022,PPoPP,THU,Vapro: Performance Variance Detection and Diagnosis for Production-Run Parallel Applications,state transition graph; fixed workload snippets identification clustering algorithm; variance breakdown model; time of factors quantification method,,,
-2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
 2024,SC,BUAA,GVARP: Detecting Performance Variance on Large-Scale Heterogeneous Systems,asynchronous state transition graph; parameter-based workload estimation method; asynchronous event tracing technology,,,
+
+# ##### Other Methods
+# Solution: Use other methods like modeling or instrumentation to find bottleneck for performance optimization.
+2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
 
 # #### Variance Attribution
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound,,,
