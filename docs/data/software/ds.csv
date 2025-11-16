@@ -77,6 +77,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Memory Optimization for Graph Processing
 # Challenge: efficiently optimize huge memory requirement from graph processing.
 2024,PPoPP,KAIST,INFINEL: An efficient GPU-based processing method for unpredictable large output graph queries,unpredictable large output queries; one-phase GPU graph processing; kernel stop/restart,4,4,3
+2025,MICRO,University of Maryland,Bootes: Boosting the Efficiency of Sparse Accelerators Using Spectral Clustering,spectral clustering for sparse matrix row reordering; optimized preprocessing via sparse similarity matrix; decision tree for reordering cost-benefit analysis; ML-based optimal cluster (k) selection,3,3,3
 
 # ### LLM Memory Management
 # Solution: efficient memory management can reduce memory usage, thus enable larger batch size and higher throughput.
