@@ -160,6 +160,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Purdue,Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory,SRAM based softmax-friendly CIM architecture for transformer; finer-granularity pipelining strategy,4,3,2
 2025,arXiv,PKU,Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs,Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU; Area-efficient CIM macro design; Mapping engine for generative model inference,,,
 2024,JSSC,THU,MulTCIM: Digital Computing-in-Memory-Based Multimodal Transformer Accelerator With Attention-Token-Bit Hybrid Sparsity,long reuse elimination scheduler (LRES) to dynamically reshape the attention matrix; runtime token pruner (RTP) to remove insignificant tokens; modal-adaptive CIM network (MACN) to dynamically divide CIM cores into Pipeline; effective-bits-balanced CIM (EBBCIM) macro architecture,5,4,3
+# #### SRAM CIM: Error correction
+2025,HPCA,THU,ER-DCIM: Error-Resilient Digital CIM Architecture with Run-Time MAC-Cell Error Correction,error-resilience framework for digital CIM addressing both cell and MAC errors; Adaptive mode switcher between high and low voltage mode,4,3,2
 # ### CIM: RRAM
 # Challenge: RRAM devices are non-volatile and have high density; suitable for CIM applications. However; RRAM devices have non-ideal effects that can cause significant performance degradation.
 # #### RRAM CiM: Simulator
@@ -173,10 +175,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,VLSI-SoC,RWTH Aachen University,Architecture-Compiler Co-design for ReRAM-Based Multi-core CIM Architectures,inference latency predictions and analysis of the crossbar utilization for CNN,,,
 2024,arXiv,CAS,A Fully Hardware Implemented Accelerator Design in ReRAM Analog Computing without ADCs,Based on Stochastic Binary Neural Networks; Winner-Take-All (WTA) strategy; Hardware implemented sigmoid and softmax,4,3,4
 # #### RRAM CiM: Architecture optimization
-2024,MICRO,HUST,DRCTL: A Disorder-Resistant Computation  Translation Layer Enhancing the Lifetime and  Performance of Memristive CIM Architecture,address conversion method for dynamic scheduling; hierarchical wear-leveling (HWL) strategy for reliability improvement; data layout-aware selective remapping (LASR) to improve communication locality and reduce latency,,,
-2024,DATE,RWTH Aachen University,CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures,algorithm to decide which parts of NN are duplicated to reduce inference latency; cross layer scheduling on tiled CIM architectures,,,
-2024,TC,SJTU,ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity,bit-level sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme,,,
+2023,ISCA,MIT,"RAELLA: Reforming the Arithmetic for Efficient, Low-Resolution, and Low-Loss Analog PIM: No Retraining Required!",per-layer optimized weight slicing; center+offset weight encoding,3,3,3
 2023,TETCI,TU Delft,Accurate and Energy-Efficient Bit-Slicing for RRAM-Based Neural Networks,unbalanced bit-slicing scheme for higher accuracy; holistic solution using 2's compliment,,,
+2024,MICRO,HUST,DRCTL: A Disorder-Resistant Computation  Translation Layer Enhancing the Lifetime and  Performance of Memristive CIM Architecture,address conversion method for dynamic scheduling; hierarchical wear-leveling (HWL) strategy for reliability improvement; data layout-aware selective remapping (LASR) to improve communication locality and reduce latency,,,
+2024,TC,SJTU,ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity,bit-level sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme,,,
 2024,Science,USC,Programming memristor arrays with arbitrarily high precision for analog computing,represent high-precision numbers using multiple relatively low-precision analog devices;using RRAM CIM to solve PDEs,5,4,3
 # #### RRAM CiM: Design Space Exploration
 2025,arXiv,RWTH Aachen,Optimizing Binary and Ternary Neural Network Inference on RRAM Crossbars using CIM-Explorer,Tensor Virtual Machine (TVM)-based compiler; implementation of different mapping techniques; DSE flow to analyze the impact of parameters,3,3,3
@@ -194,6 +196,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,TACO,HUST,A Compilation Tool for Computation Offloading in ReRAM-based CIM Architectures,compilation tool to migrate legacy programs to CPU/CIM heterogeneous architectures; a model to quantify the performance gain,,,
 2023,DAC,CAS,PIMCOMP: A Universal Compilation Framework for Crossbar-based PIM DNN Accelerators,compiler based on Crossbar/IMA/Tile/Chip hierarchy; low latency and high throughput mode; genetic algorithm to optimize weight replication and core mapping; scheduling algorithms for complex DNN,,,
 2024,ASPLOS,CAS,CIM-MLC: A Multi-level Compilation Stack for Computing-In-Memory Accelerators,compilation stack for various CIM accelerators; multi-level DNN scheduling approach,,,
+2024,DATE,RWTH Aachen University,CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures,algorithm to decide which parts of NN are duplicated to reduce inference latency; cross layer scheduling on tiled CIM architectures,,,
 # #### RRAM CiM: Float-Point processing
 # Challenge: Raw RRAM devices are not suitable for floating-point operations; while floating point data is common in DNNs (e.g. FP32).
 2023,SC,UCLA,ReFloat: Low-Cost Floating-Point Processing in ReRAM for Accelerating Iterative Linear Solvers,data format and accelerator architecture,,,
