@@ -55,3 +55,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Use architectural techniques to manage or exploit the on-chip heterogeneity caused by process variation.
 2007,ISCA,UIUC,ReCycle: Pipeline Adaptation to Tolerate Process Variation,cycle time stealing by skewing clock arrival times; donor pipeline stage; tunable delay buffer; duplicate register,4,3,3
 2008,MICRO,Intel&Purdue,Shapeshifter: Dynamically Changing Pipeline Width and Speed to Address Process Variations,pipeline width and speed dynamically changing; narrower pipeline for low-ILP program; clock speed reduction for high-ILP program,3,3,2
+2009,MICRO,PSU,A Case for Dynamic Frequency Tuning in On-Chip Networks,dynamic frequency tuning; distributed throttling and boosting; time-stealing in router pipeline; per-router DVFS,4,3,2
+2010,DAC,NU,Quantifying and Coping with Parametric Variations in 3D-Stacked Microarchitec,wordline cross layer path splitting (CLAPS); decoder CLAPS; bitline/wordline CLAPS,3,3,2
+2012,ISCA,CMU,RAIDR: Retention-Aware Intelligent DRAM Refresh,retention time profiling and binning; bloom filter based binning; intelligent DRAM refresh,4,3,2
