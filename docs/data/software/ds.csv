@@ -194,7 +194,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Communication
 # Challenge: efficiently managing data exchange between a large number of cores, due to limited bandwidth, high latency, and contention in shared resources like interconnects and memory.
 2025,arXiv,UCLM,Understanding intra-node communication in HPC systems and Datacenters,intra- and inter-node simulation model; intra-node network interface bottleneck; impacts of communication pattern,,,
-
+2025,MICRO,HKUST(GZ),Optimizing All-to-All Collective Communication with Fault Tolerance on Torus Networks,HalfRing algorithm for bidirectional bandwidth;DimRotation multi-dimensional scheduling;FoldedRing fault-tolerant algorithm;MATE multi-dimensional acceleration scheduling,4,3,3
 
 # ## Heterogeneous Systems
 # Heterogeneous systems are systems that have different types of processors, such as CPUs and GPUs.
