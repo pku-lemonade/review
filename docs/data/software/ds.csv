@@ -532,6 +532,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Agent Colocating Serving
 # Challenge: The agent here refers to a module can response to specific tasks. In this scene, systems are required to provide service for both models and the system
 2019,HPDC,NKU,GAugur: Quantifying Performance Interference of Colocated Games for Improving Resource Utilization in Cloud Gaming,colocating games on cloud server; game resource allocation,2,3,2
+2024,arXiv,Google,Scaling Instructable Agents Across Many Simulated Worlds,use one GPU for each cloud game; action prediction for gaming agent; TPU acceleration,3,3,3
 2025,arXiv,ByteDance,Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds,gaming LLM with VLA model and graphic agent; inference optimizaion with spec and streaming response; reply for mouse click,4,4,3
 
 # ### RL System
