@@ -12,6 +12,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,Seoul National,AiF: Accelerating On-Device LLM Inference Using In-Flash Processing,in-flash GEMV computation; charge-recycling read to skip precharge/discharge steps in flash memory,3,3,4
 2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
+2025,arXiv,Korea Univ.,Dissecting and Re-architecting 3D NAND Flash PIM Arrays for Efficient Single-Batch Token Generation in LLMs, re-architected 3D-NAND PIM array with H-tree network; QLC-SLC hybrid architecture for KV caching; static/dynamic MVM tiling and mapping,4,2,3
 # ### DIMM-PIMs
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -48,11 +49,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,ETHZ,PUMA: Efficient and Low-Cost Memory Allocation and Alignment Support for Processing-Using-Memory Architectures,aligned memory allocator for PUM; DRAM-aware memory allocation,2,3,2
 2024,MICRO,KAIST,PIM-MMU: A Memory Management Unit for Accelerating Data Transfers in Commercial PIM Systems,data copy engine for host-PIM transfers; PIM-aware memory scheduler for MLP maximization; memory remapping unit for dual address mapping,2,4,3
 2025,arXiv,Amazon,DL-PIM: Improving Data Locality in Processing-in-Memory Systems,subscription-based architecture to proactively move data; distributed address-indirection hardware lookup table,3,2,3
-# #### PIM Compiler & ISA Extension
+# #### PIM Compiler & Data Layout
 # Challenge: Existing compilers are not optimized for locality-aware PIM architectures and require specialized programming models to fully utilize PIM capabilities.
 2015,ISCA,Seoul National,PIM-Enabled Instructions: A Low-Overhead; Locality-Aware Processing-in-Memory Architecture,PIM-Enabled Instructions for ISA extension; PIM directory for atomicity and coherence; single-cache-block restriction,3,4,4
 2020,ISCA,UCSB,iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture, Single-Instruction-Multiple-Bank ISA; register allocation; instruction reordering,4,4,2
 2025,ISCA,POSTECH,ATIM: Autotuning Tensor Programs for Processing-in-DRAM,autotuning framework for DRAM PIM; search-based optimizing tensor compiler; balanced evolutionary search algorithm,3,3,4
+2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,layout-aware nested loop representation; Integer Linear Programming formulation for PIM mapping; analytical cost modeling for data layout enforcement,3,3,4
 # #### Evaluation & Simulators
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 2025,arXiv,ETHZ,EasyDRAM: An FPGA-based Infrastructure for Fast and Accurate End-to-End Evaluation of Emerging DRAM Techniques,FPGA-based DRAM evaluation framework; C++ high-level language for description; time scaling for accurate modeling,3,4,3
@@ -106,6 +108,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,SK Hyrix,Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders,CXL.mem protocol instead of CXL.io (DMA) for low-latency; lightweight threads to reduce address calculation overhead,,,
 2025,ISCA,Seoul National,COSMOS: A CXL-Based Full In-Memory System for Approximate Nearest Neighbor Search,CXL core-based ANNS task offload; rank-level parallel distance computation; adjacency-aware data placement algorithm,2,2,2
 2025,ASPLOS,UMich,PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference,hierarchical CXL PIM-PNM compute architecture; use die-shot to estimate area cost; multiple LLM parallelism policies,2,3,3
+# ### Chiplet-Based PIM
+# Challenge: The logic units of near-bank DRAM PIM are fabricated using the same process node as DRAM, which restricts their performance and efficiency.
+2025,arXiv,Univ. of Virginia,Sangam: A Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing, decoupling logic and memory dies by chiplet; bank-level systolic arrays for flat-GEMM acceleration,4,3,4
 # ### 3D-Stacked PIM
 # Challenge: There is no direct physical interconnection paths in DIMM-based, bank-level uniform NDP like UPMEM.
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
