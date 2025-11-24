@@ -84,6 +84,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: exploiting task-level parallelism, optimizing inter-kernel communication, maximizing pipeline throughput
 2024,ASPLOS,UIUC,HIDA: A Hierarchical Dataflow Compiler for High-Level Synthesis,hierarchical dataflow IR (HIDA-IR); multi-level dataflow optimizer (HIDA-OPT); pattern-driven task fusion,3,5,4
 2025,FPGA,UCLA,Stream-HLS: Towards Automatic Dataflow Acceleration,automatic dataflow HLS; global scheduling for streaming; MINLP for HLS optimization,4,4,4
+2025,MICRO,UIUC,StreamTensor: Make Tensors Stream in Dataflow Accelerators for LLMs,itensor iterative tensor type system;automatic stream-based kernel fusion;LP-based FIFO sizing;unified dataflow component generation,4,4,3
 
 # ##### HLS for specialized hardware
 # Solution: target-specific code generation, custom memory interface synthesis, co-optimization with physical constraints
