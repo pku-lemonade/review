@@ -11,6 +11,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Higher-Level RTL Code Generation
 # Challenge: raise the level of abstraction to specifically target the construction of applications
 2022,PLDI,Cornell University,PDL: A High-Level Hardware Design Language for Pipelined Processors,one-instruction-at-a-time semantics; hardware description language; hazard locks; speculation API; guaranteed-correct pipelining,3,3,3
+2025,ISCA,KAUST,Assassyn: A Unified Abstraction for Architectural Simulation and Implementation,unified simulation and RTL generation; asynchronous event-driven pipeline abstraction; function-as-stage programming model; transposed trace-waveform alignment,3,3,3
 
 # #### RTL Code Generation Benchmarks
 # Challenge: The lack of standardized benchmarks for evaluating RTL code generation tools.
