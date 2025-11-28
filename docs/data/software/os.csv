@@ -45,6 +45,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Out-of-Core Processing
 # Challenge: performance penalty of slow disk I/O
+2015,SOSP,EPFL,Chaos: Scale-out Graph Processing from Secondary Storage,storage-centric scale-out architecture; randomized uniform data distribution; streaming partitions with work stealing; batch-oriented storage access,4,4,4
 2018,OSDI,UCLA,RStream: Marrying Relational Algebra with Streaming for Efficient Graph Mining on A Single Machine,single-machine out-of-core graph mining; tuple streaming; relational algebra on graphs; GRAS programming model,4,4,4
 
 # #### SSD Management
