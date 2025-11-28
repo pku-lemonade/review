@@ -28,7 +28,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
 
 # ##### Diffusion LLMs
-# Challenge: diffusion models generate result from noise, this is different from traditional AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the deneration of diffusion's random output index.
+# Challenge: diffusion models generate result from noise, this is different from traditional AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the generation of diffusion's random output index.
 2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning; inter-block AR while in-block diffusion,3,4,3
 2025,arXiv,HKU,Dream 7B: Diffusion Large Language Models,based on AR model's pre-train; inter-block diffusion,3,3,3
 2025,arXiv,THU,Survey on Diffusion Language Models,"survey on training strategies, inference optimization, multimodal and applications of diffusion language models",4,2,2
