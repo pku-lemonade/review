@@ -110,7 +110,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ASPLOS,UMich,PIM Is All You Need: A CXL-Enabled GPU-Free System for Large Language Model Inference,hierarchical CXL PIM-PNM compute architecture; use die-shot to estimate area cost; multiple LLM parallelism policies,2,3,3
 # ### Chiplet-Based PIM
 # Challenge: The logic units of near-bank DRAM PIM are fabricated using the same process node as DRAM, which restricts their performance and efficiency.
+2022,IEEE TCAD,WSU,SWAP: A Server-Scale Communication-Aware Chiplet-Based Manycore PIM Accelerator, coarse-to-fine multi-objective optimization algorithm for Network-On-Package design; communication-aware irregular NoP topology,3,2,2
 2025,arXiv,Univ. of Virginia,Sangam: A Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing, decoupling logic and memory dies by chiplet; bank-level systolic arrays for flat-GEMM acceleration,4,3,4
+
 # ### 3D-Stacked PIM
 # Challenge: There is no direct physical interconnection paths in DIMM-based, bank-level uniform NDP like UPMEM.
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
