@@ -402,6 +402,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UCR,FT-Transformer: Resilient and Reliable Transformer with End-to-End Fault Tolerant Attention,Flashattn+ABFT; GPU based runtime optimization,3,3,2
 2025,HPDC,GMU,FT2: First-Token-Inspired Online Fault Tolerance on Critical Layers for Generative Large Language Models,inference-oriented error detection; clip based fault recovery; first token get range,3,2,2
 2025,arXiv,Gensyn,All is Not Lost: LLM Recovery without Checkpoints,replace two layer's value to recover from fault; out-of-order pipeline execution to tolerate crash,2,1,2
+2025,arXiv,UCAS,ApproxABFT: Approximate Algorithm-Based Fault Tolerance for Neural Network Processing,adaptive error tolerance thresholds; reduction in error detection overhead,3,3,3
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
