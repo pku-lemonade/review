@@ -55,6 +55,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### LLM-Powered AI Agent
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
 2025,arXiv,THU,Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents,RAG-based LLM agent; use OpenAI api to run LLM; agent num is about 50,3,3,2
+2018,CVPR,MIT,VirtualHome: Simulating Household Activities via Programs,simulation framework for home agent; interaction within the home; action planning and execution,3,3,3
 
 # ###### LLM Agent for social simulation
 2023,UIST,Stanford,Generative Agents: Interactive Simulacra of Human Behavior,agent socail simulation baseline; 25 agents in town,3,4,3
