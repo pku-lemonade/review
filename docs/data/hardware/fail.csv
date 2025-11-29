@@ -51,6 +51,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2011,CASES,UCSD,FFT-Cache: A Flexible Fault-Tolerant Cache Architecture for Ultra Low Voltage Operation,flexible defect map for faulty block; FDM configuration algorithm; non-functional lines minimization,,,
 # ### Algorithm-Based Fault Tolerance
 # Solution: Use algorithm-based fault tolerance (ABFT) techniques to detect and correct errors in hardware systems.
+2016,DSN,UStuttgart,Efficient Algorithm-Based Fault Tolerance for Sparse Matrix Operations,implicit error localization technique; sparse-aware checksum encoding,3,4,2
 2023,ISC,UCR,Anatomy of High-Performance GEMM with Online Fault Tolerance on GPUs,hierarchical fault tolerance design at thread/warp/threadblock levels,3,4,3
 2025,HPCA,THU,ER-DCIM: Error-Resilient Digital CIM Architecture with Run-Time MAC-Cell Error Correction,error-resilience framework for digital CIM addressing both cell and MAC errors; Adaptive mode switcher between high and low voltage mode,4,3,2
 2025,DAC,PKU,ReaLM: Reliable and Efficient Large Language Model Inference with Statistical Algorithm-Based Fault Tolerance,comprehensive LLM resilience characterization,statistical ABFT methodology that adaptively protects LLM components based on error statistics,3,3,3
