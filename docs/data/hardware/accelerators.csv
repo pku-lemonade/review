@@ -19,6 +19,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Complex graph algorithms, Irregular access patterns
 2021,ISCA,MIT,FlexMiner: A Pattern-Aware Accelerator for Graph Pattern Mining,pattern-aware GPM accelerator; software/hardware co-design; pattern-specific execution plan; connectivity map (c-map),4,4,3
 # ### DNN Accelerators
+# #### GEMM
+2020,HPCA,Georgia Tech,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,2,3
 # #### Layer Fusion Accelerators
 # Solution: Use layer fusion to combine multiple layers of a neural network into a single layer. This can help reduce the number of computations and memory accesses required during inference; leading to faster execution times and lower power consumption.
 2016,MICRO,SBU,Fused-Layer CNN Accelerators,fuse the processing of multiple CNN layers by modifying the order in which the input data are brought on chip,,,
@@ -36,7 +38,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
 2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
 2023,HPCA,UPC,Mix-GEMM: An efficient HW-SW Architecture for Mixed-Precision Quantized Deep Neural Networks Inference on Edge Devices,Complete mixed-precision flexibility; hardware accelerator & BLIS-based library with custom RISC-V ISA extensions,3,2,3
-# ##### Bit-Sliced DNN Accelerators
+# #### Bit-Sliced DNN Accelerators
+# Solution: Bit-sliced DNN accelerators break down data into smaller bit-slices, allowing for more efficient processing and reduced memory and calculation resources requirements.
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
 2023,HPCA,KAIST,Sibia: Signed Bit-slice Architecture for Dense DNN Acceleration with Slice-level Sparsity Exploitation,signed bit-slice representation;flexible zero skipping processing element,3,3,4
 2024,HPCA,KU Leuven,BitWave: Exploiting Column-Based Bit-Level Sparsity for Deep Learning Acceleration,Bit-column sparsity for both computation reduction and data compression; Single-shot Bit-Flip post-training,3,3,3
@@ -78,6 +81,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,DATE,Turku,Thermal-Cycling-aware Dynamic Reliability Management in -Core System-on-Chip,Coffin-Mason equation based reliability model; reliability-aware mapping/scheduling; dynamic power management,,,
 2024,arXiv,WUSTL,A Two-Level Thermal Cycling-Aware Task Mapping Technique for Reliability Management in Manycore Systems,temperature based bin packing; task-to-bin assignment; thermal cycling-aware based task-to-core mapping,,,
 2024,arXiv,WUSTL,A Reinforcement Learning-Based Task Mapping Method to Improve the Reliability of Clustered Manycores,mean time to failure; density-based spatial clustering of applications with noise algorithm,,,
+# ##### CGRA
+# Solution: Optimally map an application's data flow graph onto the hardware fabric by simultaneously solving the tightly-coupled problems of scheduling, placement, and routing under strict spatial and temporal resource constraints.
+2017,ASAP,Torontom,CGRA-ME: A Unified Framework for CGRA Modelling and Exploration,XML-based CGRA description; LLVM-based simulated annealing mapper; modulo routing resource graph,3,2,2
+2019,TCAD,Tsinghua,Data-Flow Graph Mapping Optimization for CGRA With Deep Reinforcement Learning,neighbor PE interchange defined action space; local pattern based reward function,3,3,2
+2022,HPCA,NUS,LISA: Graph Neural Network based Portable Mapping on Spatial Accelerators,label abstraction for quality mapping; GNN based label-aware mapping; label-aware simulated annealing,4,3,3
+2024,MICRO,NUS,ICED: An Integrated CGRA Framework Enabling DVFS-Aware Acceleration,tile based CGRA configuration; DVFS labeling; DVFS-Aware DFG Mapping,4,3,2
 # #### Task Scheduling
 2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,,,
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
@@ -120,7 +129,3 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Data Access Accelerators
 # Challenge: Indirect and sparse memory access patterns; low memory bandwidth utilization; core structural limitations
 2025,ISCA,UMich,DX100: Programmable Data Access Accelerator for Indirection,indirect memory access accelerator; bulk memory access reordering; DRAM row-buffer hit rate optimization; programmable data access ISA,4,3,2
-
-# ### GEMM Accelerators
-# Challenge: High computational intensity; memory bandwidth bottlenecks; energy efficiency
-2020,HPCA,Georgia Tech,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,2,3
