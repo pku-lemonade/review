@@ -6,11 +6,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Bottleneck Analysis
 # Challenge: Bottleneck Analysis faces challenges of high system complexity, unexpected real-world factors and the resource constraints when detecting.
+
+# ##### Fixed Workload Analysis
+# Solution: Use snippets with fixed workload in the program to detect bottlenecks and locate root cause.
 2018,PPoPP,THU,vSensor: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection,fixed-workload snippets; dependency propagation algorithm; lightweight on-line analysis algorithm,,,
 2020,SC,THU,ScalAna: automating scaling loss detection with graph analysis,program structure graph; program performance graph; backtracking root cause detection algorithm,,,
 2022,PPoPP,THU,Vapro: Performance Variance Detection and Diagnosis for Production-Run Parallel Applications,state transition graph; fixed workload snippets identification clustering algorithm; variance breakdown model; time of factors quantification method,,,
-2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
 2024,SC,BUAA,GVARP: Detecting Performance Variance on Large-Scale Heterogeneous Systems,asynchronous state transition graph; parameter-based workload estimation method; asynchronous event tracing technology,,,
+
+# ##### Other Methods
+# Solution: Use other methods like modeling or instrumentation to find bottleneck for performance optimization.
+2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
 
 # #### Variance Attribution
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound,,,
@@ -43,6 +49,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,IFIP NPC,PKU,2FA Sketch: Two-Factor Armor Sketch for Accurate and Efficient Heavy Hitter Detection in Data Streams,improved arbitration strategy for in-bucket competition; cross-bucket conflict avoidance hashing scheme,2,3,1
 2024,IEEE ICDE,PKU,Scalable Overspeed Item Detection in Streams,bucket sharing based basic speedsketch algorithm; global-clock for reducing timestamp overhead; counter-flip technique for compression,3,4,2
 
+# ##### Other Bursts
+2022,NSDI,CMU,SketchLib: Enabling Efficient Sketch-based Monitoring on Programmable Switches,bottleneck analysis of sketches on reconfigurable match-action tables; hardware friendly optimization for RMT,3,3,2
+2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
+2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
+2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
 
 # #### Straggler Analysis
 # Challenge: stragglers can arise from various complex factors, identifying their root causes and quantifying their impact on performance is difficult.
@@ -50,12 +61,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,TJSC,QMUL&NUDT,Tails in the cloud: a survey and taxonomy of straggler management within large‑scale cloud data centres,taxonomy of straggler causes; straggler management technique,3,1,1
 2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
 2025,Arxiv,NYU&ByteDance,Understanding Stragglers in Large Model Training Using What-if Analysis,what-if analysis; dependency model based simulation; SMon monitoring system,3,4,2
-
-# ##### Other Bursts
-2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
-2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
-2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
-
 
 # #### Network Tomography
 
@@ -126,6 +131,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
 2025,ASPLOS,Georgia Tech,Forecasting GPU Performance for Deep Learning Training and Inference,tile-level kernal decomposition; fundamental performance laws bounded prediction; ML based utilization prediction,3,4,2
 
+
+# ### Memory Subsystem Simulators
+# Challenge: Current simulator approaches fail to fully exploit parallelism and are difficult to extend.
+2024,MICRO,Barcelona Supercomputing Center,"A Mess of Memory System Benchmarking, Simulation and Application Profiling", inaccuracy of simulators like Ramulator and DRAMsim3; analytical memory simulator "Mess" based on bandwidth-latency curves,4,2,2
+2025,arXiv,ETHZ,Cleaning up the Mess, refuting Mess paper's claims via identifying simulator configuration errors; correcting Mess paper's evaluation via identifying erroneous statistics usage; Mess Request Generator for a corrected Ramulator 2 evaluation,3,2,3
+2025,arXiv,Cornell,gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration,LLM-powered agent for computer architecture DSE; state machine-driven exploration loop (ANA-GEN-QA-EXIT); prompt engineering for results retrospection and baseline preservation,3,2,3
+
+
+# ### Memory Subsystem Simulators
+# Challenge: Memory subsystem simulators face accuracy issues with realistic workloads and lack efficient parallelization strategies.
+2024,MICRO,Barcelona Supercomputing Center,"A Mess of Memory System Benchmarking, Simulation and Application Profiling", inaccuracy of simulators like Ramulator and DRAMsim3; analytical memory simulator "Mess" based on bandwidth-latency curves,4,2,2
+2025,arXiv,ETHZ,Cleaning up the Mess, refuting Mess paper's claims via identifying simulator configuration errors; correcting Mess paper's evaluation via identifying erroneous statistics usage; Mess Request Generator for a corrected Ramulator 2 evaluation,3,2,3
+2025,arXiv,Cornell,gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration,LLM-powered agent for computer architecture DSE; state machine-driven exploration loop (ANA-GEN-QA-EXIT); prompt engineering for results retrospection and baseline preservation,3,2,3
+
 # ### LLM Performance Modeling <a name="LLM-Performance-Modeling"></a>
 # Solution: LLM inference is expensive, performance modeling can help decide on the best configuration for the given system without actually running the LLM.
 
@@ -140,6 +159,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Thermal Modeling
 # Challenge: precisely capturing the nonlinear, multi-scale and heterogeneous thermal behaviors on different architecture
 2003,ISCA,Virginia,Temperature-Aware Microarchitecture,architecture level thermal modeling; temperature-tracking frequency scaling; local feedback-controlled fetch toggling,3,3,2
+2009,MICRO,ND&UCSD,McPAT: An Integrated Power, Area, and Timing Modeling Framework for Multicore and Manycore Architectures,multicore architecture level modeling; circuit level modeling; technology level modeling,3,3,2
 2024,ICCAD,PKU,FaStTherm: Fast and Stable Full-Chip Transient Thermal Predictor Considering Nonlinear Effects,ResNet-18-based deep autoencoder; unrolled training and noise injection for stability; GA-based training data generation,4,3,2
 2024,ISEDA,PKU,ATSim3D: Towards Accurate Thermal Simulator for Heterogeneous 3D-IC Systems Considering Nonlinear Leakage and Conductivity,global-local approach for simulation with ultrahigh resolution; Kirchhoff transformation for nonlinear conductivity,3,3,2
 

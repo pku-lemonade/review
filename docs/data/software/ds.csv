@@ -11,6 +11,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Domain Specific Computing Framework
 # Challenge: specific bounds of different situations
+2012,OSDI,CMU,PowerGraph: Distributed Graph-Parallel Computation on Natural Graphs,GAS (Gather-Apply-Scatter) decomposition; vertex-cut partitioning; delta caching; parallel locking for high-degree vertices,4,4,4
 2018,PLDI,UT Austin & UIUC,Gluon: A Communication-Optimizing Substrate for Distributed Heterogeneous Graph Analytics,communication-optimizing substrate; heterogeneous processor support; structural/temporal invariant-based communication optimization; memoization of address translation,4,4,4
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
 
@@ -35,6 +36,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # 1. Pipeline parallelism: divide the model as pipeline stages, each gpu processes one or more stages.
 # 2. Tensor parallelism: divide the tensor into different GPUs.
 # Usually, pipeline parallelism and tensor parallelism are used together.
+2019,SOSP,Stanford,PipeDream: Fast and Efficient Pipeline Parallel DNN Training,raise the idea of pipeline parallelism; divide model into different GPUs,3,3,4
 2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
 2021,SC,NVIDIA,Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM,Megatron2; dive deep into tensor parallelism; how to train a LLM on 1000 GPUs,4,4,3
 2022,arXiv,NVIDIA,Reducing Activation Recomputation in Large Transformer Models,Megatron3; sequence parallel; selective activation recomputation; reduce the amount of recomputed activation,3,4,3
@@ -43,6 +45,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
 2022,ACL,NUS,Sequence Parallelism: Long Sequence Training from System Perspective,splits input sequences into chunks; Ring Self-Attention; sparse attention,3,4,3
 
+# #### Hardware componment co-design
+# Challenge: rencent accelerator like GPU has many components, such as tensor cores, SRAM, etc. How to co-design the software and hardware to improve the performance.
+2023,ATC,UC,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,use cuda core to transform sparse graph martix into dense for tensor core; codesign of tensor core and cuda core for GNN application,3,4,4
+2022,HPCA,SJTU,Tacker: Tensor-CUDA Core Kernel Fusion for Improving the GPU Utilization while Ensuring QoS,cuda core and tensor core operator fuse; a static kernel fusion and scheduling approach to improve GPU utilization; best-effort schedule,3,3,3
+2025,arXiv,BJPT,Libra: Synergizing CUDA and Tensor Cores for High-Performance Sparse Matrix Multiplication,mapping computation to cuda core and tensor core; different mapping stragety for different sparse matrix,3,3,3
 
 # ## Cloud computing platforms and architectures
 # Challenge: when providing services to users, facing scalability, resource management, fault tolerance, and cost-effectiveness for building and deploying large-scale distributed applications and services.
@@ -76,6 +83,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Memory Optimization for Graph Processing
 # Challenge: efficiently optimize huge memory requirement from graph processing.
 2024,PPoPP,KAIST,INFINEL: An efficient GPU-based processing method for unpredictable large output graph queries,unpredictable large output queries; one-phase GPU graph processing; kernel stop/restart,4,4,3
+2025,MICRO,University of Maryland,Bootes: Boosting the Efficiency of Sparse Accelerators Using Spectral Clustering,spectral clustering for sparse matrix row reordering; optimized preprocessing via sparse similarity matrix; decision tree for reordering cost-benefit analysis; ML-based optimal cluster (k) selection,3,3,3
 
 # ### LLM Memory Management
 # Solution: efficient memory management can reduce memory usage, thus enable larger batch size and higher throughput.
@@ -178,7 +186,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2010,PRDC,UBC,Modeling the Propagation of Intermittent Hardware Faults in Programs,instruction based intermittent fault; dynamic dependency graph(DDG) based propagation modeling,,,
 2015,SC,IBM,Understanding the Propagation of Transient Errors in HPC Applications,"fault propagation in MPI application; fault classification:V,ONA,WO,PEX,C; fault propagation speed factors",,,
 2023,ISCA,UChicago,Understanding and Mitigating Hardware Failures in Deep Learning Training Accelerator Systems,"NVDLA based fault injection framework; re-execution based light-weight recovery technique; failure effects:SlowDegrade,SharpSlowDegrade,SharpDegrade,LowTestAccuracy",,,
-2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
 
 # ### Fault Injection Technique
 # Challenge: It is difficult to target specific components, reproduce realistic fault scenarios, and observe system behavior without disturbing normal operation, especially as system scale and complexity increase.
@@ -188,7 +195,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Communication
 # Challenge: efficiently managing data exchange between a large number of cores, due to limited bandwidth, high latency, and contention in shared resources like interconnects and memory.
 2025,arXiv,UCLM,Understanding intra-node communication in HPC systems and Datacenters,intra- and inter-node simulation model; intra-node network interface bottleneck; impacts of communication pattern,,,
-
+2025,MICRO,HKUST(GZ),Optimizing All-to-All Collective Communication with Fault Tolerance on Torus Networks,HalfRing algorithm for bidirectional bandwidth;DimRotation multi-dimensional scheduling;FoldedRing fault-tolerant algorithm;MATE multi-dimensional acceleration scheduling,4,3,3
 
 # ## Heterogeneous Systems
 # Heterogeneous systems are systems that have different types of processors, such as CPUs and GPUs.
@@ -335,6 +342,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Task Offloading
 2024,arXiv,USTC,Collaborative Inference for Large Models with Task Offloading and Early Exiting,early exit mechanism; jointly optimize its offloading strategy and the confidence threshold; distributed task offloading algorithm,,,
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,integer linear programming for offload optimization; PIM-friendly mapping representation; accurate cost modeling for data layout,4,2,3
+2025,MICRO,Crane: Inter-Layer Scheduling Framework for DNN Inference and Training Co-Support on Tiled Architecture,hierarchical table-format representation; MILP based scheduling optimization; joint modeling of execution, fusion, and recomputation,4,3,2
 
 # ### Thermal-Aware Scheduling
 # Challenge: balancing real-time performance with thermal safety under tight power budgets
@@ -346,9 +354,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Dark Silicon Optimization
 # Challenge: maximizing performance and reliability within dark silicon constraints
+2011,ISCA,Washington&WISC,Dark Silicon and the End of Multicore Scaling,power-limited transistor under-utilization; device/core/multicore scaling model; corollary for symmetric, asymmetric, dynamic, and composed multicore topologies,4,3,3
+2015,DATE,NYU,Variability-Aware Dark Silicon Management in On-Chip Many-Core Systems,variability-aware dark core patterning; joint thread-to-core mapping and power-state control; temperature-dependent leakage feedback modeling,3,3,2
 2018,DATE,NTU,HiMap: A Hierarchical Mapping Approach for Enhancing Lifetime Reliability of Dark Silicon Manycore Systems,two-level hierarchical mapping for lifetime reliability; block-based selection; cluster-based adjustment,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance- and aging-aware objective formulation; reaction–diffusion (R–D)-based NBTI aging model,3,3,2
-2020,IEEE Access,SCUT,Dynamic Allocation/Reallocation of Dark Cores in Many-Core Systems for Improved System Performance,dynamic programming network (DPN) framework; region-based geometric shaping; heartbeat-based workload modeling,4,2,2
 
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
@@ -371,6 +380,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Experiments
 2025,arXiv,JSC,Memory and Bandwidth are All You Need for Fully Sharded Data Parallel,an extensive analysis of the FSDP training distribution strategy; a grid search methodology; both simulation and empirical results,2,4,1
+2025,MICRO,Gatech,Characterizing the Efficiency of Distributed Training: A Power, Performance, and Thermal Perspective,scale-up vs. scale-out performance trade-offs; communication inefficiencies in TP+PP; microbatch scaling limitation,3,4,1
 
 # #### Multi-Modal Optimizations
 # Challenge: multimodal data is more complex and requires more resources to train.
@@ -386,6 +396,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### SFT and Fine-tuning Optimizations
 # Challenge: SFT plays an important role to enhance model's ability on specific tasks. Thus SFT has a strong taks's pattern, like the distribution of input-output length.
 2025,arXiv,PKU,LobRA: Multi-tenant Fine-tuning over Heterogeneous Data,Deploys different model replicas to handle varied workloads; balancing different LoRAs' workload caused by dataset,3,3,2
+
+# #### Fault tolerance Optimizations
+2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
+2025,arXiv,UCR,FT-Transformer: Resilient and Reliable Transformer with End-to-End Fault Tolerant Attention,Flashattn+ABFT; GPU based runtime optimization,3,3,2
+2025,HPDC,GMU,FT2: First-Token-Inspired Online Fault Tolerance on Critical Layers for Generative Large Language Models,inference-oriented error detection; clip based fault recovery; first token get range,3,2,2
+2025,arXiv,Gensyn,All is Not Lost: LLM Recovery without Checkpoints,replace two layer's value to recover from fault; out-of-order pipeline execution to tolerate crash,2,1,2
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
@@ -446,6 +462,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,mobiCom,HKUST,D$^{2}$MoE: Dual Routing and Dynamic Scheduling for Efficient On-Device MoE-based LLM Serving,dually sparselygated Mixture-of-Experts; token-adaptive bit-width selection; matryoshka weight quantization; bit-width-aware I/O-compute pipeline,3,4,4
 2025,ODSI,SJTU,Fast and Live Model Auto Scaling with O(1) Host Caching,auto-scaling with minimal caching; optimize parameter loading; enabling fine-grained layer-level scale,3,3,2
 2023,ASPLOS,Google,TelaMalloc: Efficient On-Chip Memory Allocation for Production Machine Learning Accelerators,hybrid heuristic-solver memory allocator for ML accelerators; contention-aware phased allocation strategy,4,4,3
+2025,MICRO,Duke,LLM.265: Video Codecs are Secretly Tensor Codecs,use video compress hardware on GPU to compress LLM tensor; existing idle hardware video encoders and decoders (NVENC/NVDEC) found on modern GPUs,4,4,4
 
 # ##### Architectural Innovations
 2025,arXiv,Shanghai AI,Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts,linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers,,,
@@ -495,13 +512,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
 2025,EuroSys,SJTU,TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling,brust scene target; tradeoff between TTFT and throughout; slowdown some TOT to human's read speed,4,3,2
 
-# #### Diffusion LLM Systems
+# ### Diffusion LLM Systems
 # Challenge: traditional LLM use an auto-regressive model to generate the text, which is slow. Diffusion LLM have a parallel generation ability, which is fast.
+# #### KV Cache in dLLM Systems
+# Challenge: The initial implementation of LLaDA lacks KV cache support, which is the primary reason for its slower inference compared to AR models.
 2025,arXiv,SJTU,dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching,training-free adaptive caching mechanism; V-verify mechanism for caching,4,3,3
-2025,arXiv,SJTU,Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing,First dLLM faster than AR LLM; fuse KV-cached autoregression with parallel diffusion decoding; inter-block parallelism without full denoise,4,3,4
 2025,arXiv,NVIDIA,Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding,block-wise approximate KV Cache for diffusion LLMs; confidence-aware parallel decoding strategy,3,3,4
+2025,arXiv,Fudan,Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction,dynamic bidirectional cache eviction; delayed bidirectional sparse caching; attention-guided token pruning,3,3,3
+# #### Parallel Decoding in dLLM Systems
+# Challenge: Denoising involves multiple stages, often requiring hundreds of iterations to achieve acceptable text quality, which significantly slows down inference.
+2025,NeurIPS,Univ. of Virginia,Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion,speculative diffusion Decoding; discrete diffusion models as non-autoregressive drafters; parallelized draft sequence generation,3,3,3
 2025,arXiv,Cornell,Remasking Discrete Diffusion Models with Inference-Time Scaling,ReMDM sampler for iterative refinement; inference-time compute scaling via token remasking; custom remasking backward process for pre-trained models,3,4,3
-2025,arXiv,Univ. of Virginia,Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion,speculative diffusion Decoding; discrete diffusion models as non-autoregressive drafters; parallelized draft sequence generation,3,3,3
+2025,arXiv,SJTU,Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing,First dLLM faster than AR LLM; fuse KV-cached autoregression with parallel diffusion decoding; inter-block parallelism without full denoise,4,3,4
 
 # #### Visual Auto-Regressive Models Serving System
 # Challenge: as the VAR model moves to large scales (e.g. 1024x1024), the number of tokens to be processed explodes, making final steps expensive compared to the initial coarse steps.
@@ -513,9 +535,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UIUC,Hierarchical Autoscaling for Large Language Model Serving with Chiron,hierarchical backpressure; interactive requests and batch requests; mixed instances,,,
 2025,arXiv,Berkeley,Locality-aware Fair Scheduling in LLM Serving,deficit-based longest prefix matching; distributed deficit-round coordination; prefix-aware fairness bound analysis,,,
 
+# #### Agent Colocating Serving
+# Challenge: The agent here refers to a module can response to specific tasks. In this scene, systems are required to provide service for both models and the system
+2019,HPDC,NKU,GAugur: Quantifying Performance Interference of Colocated Games for Improving Resource Utilization in Cloud Gaming,colocating games on cloud server; game resource allocation,2,3,2
+2024,arXiv,Google,Scaling Instructable Agents Across Many Simulated Worlds,use one GPU for each cloud game; action prediction for gaming agent; TPU acceleration,3,3,3
+2025,arXiv,ByteDance,Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds,gaming LLM with VLA model and graphic agent; inference optimizaion with spec and streaming response; reply for mouse click,4,4,3
+
 # ### RL System
 # Challenge: RL contains both backward and frontward. This need to handle the interaction between multi step and task, posing challenge to parallelism and synchronization.
 2018,OSDI,UCB,Ray: A Distributed Framework for Emerging AI Applications,unified actor and task model; stateless architecture via global control store; bottom-up distributed scheduling,4,4,3
+2025,arXiv,NTU,ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems,spec in RL LLM acceleration; dynamic batch size adjustment in runtime; lets the drafter chase high-reward modes only,4,3,3
 
 # #### RLHF System
 # Challenge: RL system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.

@@ -3,6 +3,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Algorithm design and analysis
 # Solution: an algorithm is a well-defined, finite sequence of steps that solves a specific problem or accomplishes a particular task. We focus on algorithms that can solving problems.
 
+# ### Dynamic Graph Algorithms
+# Solution: Dynamic graph algorithms efficiently update solutions to graph problems as the graph evolves, addressing the challenge of frequent changes in structure and data.
+2023,ASPLOS,UCR,CommonGraph: Graph Analytics on Evolving Data,convert deletions to additions; common graph concept; Triangular Grid (TG) for work sharing; mutation-free representation,3,4,4
+
 # ### ML Algorithms
 # Solution: ML algorithms are fundamental tools that enable computers to learn from data and make predictions or decisions without being explicitly programmed.
 
@@ -24,12 +28,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
 
 # ##### Diffusion LLMs
-# Challenge: diffusion generate result from noise, this is different from tradition's AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the deneration of diffusion's random output index.
+# Challenge: diffusion models generate result from noise, this is different from traditional AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the generation of diffusion's random output index.
 2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning; inter-block AR while in-block diffusion,3,4,3
 2025,arXiv,HKU,Dream 7B: Diffusion Large Language Models,based on AR model's pre-train; inter-block diffusion,3,3,3
 2025,arXiv,THU,Survey on Diffusion Language Models,"survey on training strategies, inference optimization, multimodal and applications of diffusion language models",4,2,2
 2025,arXiv,ByteDance,Seed Diffusion: A Large-Scale Diffusion Language Model with High-Speed Inference,two-stage training with mask-based and edit-based noise; constrained-order training by filtering optimal generation paths; direct training to reduce generation steps,3,3,5
+2025,arXiv,RUC,UltraLLaDA: Scaling the Context Length to 128K for Diffusion Large Language Models,Diffusion-aware NTK extrapolation for RoPE; long-context post-training with adaptive attention masking,3,3,4
+
+# ###### dLLM with other technique
 2025,arXiv,RUC,LLaDA-V: Large Language Diffusion Models with Visual Instruction Tuning, visual instruction tuning for diffusion models; multi-stage training for multimodal reasoning; visual instruction tuning for diffusion models,2,3,4
+2025,arXiv,Nvidia,"TiDAR: Think in Diffusion, Talk in Autoregression",dLLM with spec technique; use dllm-self as the draft model to accelerate the generation process,3,3,2
+2025,arXiv,RUC,LLaDA-MoE: A Sparse MoE Diffusion Language Model,Sparse MoE masked diffusion architecture; variable-length training intervention; multi-stage annealing pipeline,4,3,3
 
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
@@ -44,11 +53,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ###### Coding LLM Finetune
 2024,arXiv,UMD,HPC-Coder-V2: Studying Code LLMs Across Low-Resource Parallel Languages,large synthetic parallel programming dataset; parallel code generation; HPC AI developer tools,,,
 
-# ###### LLM-Powered AI Agent
+# ##### LLM-Powered AI Agent
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
 2025,arXiv,THU,Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents,RAG-based LLM agent; use OpenAI api to run LLM; agent num is about 50,3,3,2
-2025,arXiv,Stanford,Generative Agent Simulations of 1000 People,LLM with memory system; OpenAI api to run LLM; agent num is about 1000,2,2,2
+
+# ###### LLM Agent for social simulation
+2023,UIST,Stanford,Generative Agents: Interactive Simulacra of Human Behavior,agent socail simulation baseline; 25 agents in town,3,4,3
 2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
+2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
+2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
+2024,arXiv,MIT,On the limits of agency in agent-based models,GPU optimization for agent simulation; use tensor for agent status expression; optimization for on-GPU operation,3,3,3
+2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
+2025,arXiv,THU,OpenCity: A Scalable Platform to Simulate Urban Activities with Massive LLM Agents,IO optimization for agent; prompt compression for LLM,3,2,1
 
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
@@ -68,6 +84,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,NeurIPS,Intel,Multi-Task Learning as Multi-Objective Optimization,Frank-Wolfe-based optimizer that scales to high-dimensional problems; provide an upper bound for the MGDA(multiple-gradient descent algorithm) optimization objective,3,4,4
 2019,NeurIPS,CUHK,Pareto Multi-Task Learning,method to decompose a MTL problem into multiple subproblems; scalable optimization algorithm to solve all constrained subproblems,3,4,4
 2021,NeurIPS,UTexas,Conflict-Averse Gradient Descent for Multi-task learning, Conflict-Averse Gradient descent (CAGrad); reduces the conflict among gradients while provably converges to minimum average loss,3,3,3
+
+# #### Graph Neural Network
+# Solution: Graph Neural Network (GNN) is a model that leverages the relationships between nodes and edges in graph-structured data to perform feature propagation and representation learning, enabling the capture of complex topological dependencies and structural patterns.
+2020,TITS,CSU,T-GCN: A Temporal Graph Convolutional Network for Traffic Prediction,GCN for spatial dependence; GRU for temporal dependence; noise based perturbation analysis,4,4,2
+2020,ICLR,Walmart,Inductive Representation Learning on Temporal Graphs,functional time encoding; temporal graph attention layer,3,4,2
+2020,AAAI,MIT,EvolveGCN: Evolving Graph Convolutional Networks for Dynamic Graphs,EvolveGCN-H / EvolveGCN-O architectures; evolving graph convolution unit; model adaptation via parameter evolution,4,3,2
+2023,ICSE,CUHK,Eadro: An End-to-End Troubleshooting Framework for Microservices on Multi-source Data,Hawkes process; dilated causal convolution; joint detection and localization via multi-task learning,3,3,2
 
 # ### Quantization
 # Solution: Quantization are focusing on tradeoffs of accuracy and computation/memory. The challenges are how to run models in high performance and low memory/computation cost.
@@ -142,6 +165,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,SIGCOMM,UPenn&Microsoft,Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem,traffic engineering based collective communication optimization; mixed-integer linear program; A* technique for scaling,4,3,2
 2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
 2025,SC,THU,TraceFlow: Efficient Trace Analysis for Large-Scale Parallel Applications via Interaction Pattern-Aware Trace Distribution,communication skeleton tree; interaction-aware trace distribution; communication-minimized trace shuffling,4,4,2
+
+# ### Fail-Slow Detection
+# Solution: investigating how modern distributed systems detect and mitigate fail-slow behaviors, focusing on the design of detection mechanisms, threshold policies, and recovery strategies to improve system resilience under partial performance degradation
+2019,ATC,UChicago,IASO: A Fail-Slow Detection and Mitigation Framework for Distributed Storage Services,slowdown detection based on peer score; sub-root causes for five kinds of root causes,,,
+2023,FAST,SJTU & Alibaba,PERSEUS: A Fail-Slow Detection Framework for Cloud Storage Systems,outlier data detection; regression model for detection threshold; risk evaluating algorithm,4,4,3
+2025,ASPDAC,Xiamen University,A Fail-Slow Detection Framework for HBM Devices,outlier data detection; regression model for detection threshold; risk evaluating algorithm,2,4,2
+2025,NSDI,SJTU & UMich,One-Size-Fits-None: Understanding and Enhancing Slow-Fault Tolerance in Modern Distributed Systems,adaptive detection at runtime(ADR); slow-fault injection pipeline; danger zone analysis,4,4,2
+
+# ### Process Variation Management
+# Solution: Use software-level techniques to manage or exploit the on-chip heterogeneity caused by process variation; use adaptive resource allocation and workload management to improve overall performance, power efficiency, and reliability.
+2013,DATE,Waterloo,Cherry-Picking: Exploiting Process Variations in Dark-Silicon Homogeneous Chip Multi-Processors,performance model for barrier synchronization based multi-thread application; optimal core selection, thread mapping and frequency assignment,3,3,2
+2014,DATE,UW-Madison,Process Variation-Aware Workload Partitioning Algorithms for GPUs Supporting Spatial-Multitasking,per-SM clocking (PSMC); process variation-aware SM-to-application assignment,3,3,2
+2016,CSUR,ORNL,A Survey of Architectural Techniques for Managing Process Variation,PV-aware processor management; specific component targeted management,3,1,1
 
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing

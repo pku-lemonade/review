@@ -39,6 +39,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### NIC
 # Challenge: The peak bandwidth of NICs continues to increase, while the operating system and kernel layers are gradually lacking the capability to keep up with it.
 2025,HOTOS,ETHZ,The NIC should be part of the OS,cache-coherent interconnect NIC control/data path; zero-overhead RPC dispatch; OS-NIC scheduling state sharing,3,3,3
+2025,MICRO,UIUC,NetZIP: Algorithm/Hardware Co-design of In-network Lossless Compression for Distributed Large Model Training,bump-in-the-wire FPGA-NIC accelerator;bit/byte grouping algorithm for BF16;delta value compression for gradients and activations;algorithm-hardware co-design for lossless compression,3,4,3
 # ### Router
 2016,HPCA,KTH,DVFS for NoCs in CMPs: A Thread Voting Approach,thread voting based DVFS machenism; pre-defined region-based V/F adjustment algorithm,,,
 2022,HPCA,Chalmers,FastTrackNoC: A NoC with FastTrack Router Datapaths,non-turning hops; direct FastTrack flit path; zero-load latency analysis,,,
