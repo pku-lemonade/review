@@ -180,6 +180,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2014,DATE,UW-Madison,Process Variation-Aware Workload Partitioning Algorithms for GPUs Supporting Spatial-Multitasking,per-SM clocking (PSMC); process variation-aware SM-to-application assignment,3,3,2
 2016,CSUR,ORNL,A Survey of Architectural Techniques for Managing Process Variation,PV-aware processor management; specific component targeted management,3,1,1
 
+# ### Dynamic Voltage and Frequency Scaling
+# Solution: Develop DVFS control policies to optimize the trade-offs among performance, power consumption, and thermal constraints.
+2021,TCAD,YNU,CARTAD: Compiler-Assisted Reinforcement Learning for Thermal-Aware Task Scheduling and DVFS on Multicores,XGBoost based intrinsic feature identification; RL-Based scheduler,3,3,2
+2023,JETCAS,Uppsala,Game-of-Life Temperature-Aware DVFS Strategy for Tile-Based Chip Many-Core Processors,GoL temperature-aware DVFS; core/un-core performance characterizer; GoL DVFS controller,4,3,2
+2024,ISCA,IBM&CU,BlitzCoin: Fully Decentralized Hardware Power Management for Accelerator-Rich SoCs,coin exchange algorithm; unified voltage and frequency regulation,3,4,2
+2024,DATE,KIT,Multi-Agent Reinforcement Learning for Thermally-Restricted Performance Optimization on Manycores,RL-based thermally-restricted performance optimization; multi-agent based per-core DVFS,4,3,2
+
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
 
