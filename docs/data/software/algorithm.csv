@@ -28,7 +28,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
 
 # ##### Diffusion LLMs
-# Challenge: diffusion generate result from noise, this is different from tradition's AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the deneration of diffusion's random output index.
+# Challenge: diffusion models generate result from noise, this is different from traditional AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the generation of diffusion's random output index.
 2025,arXiv,RUC,Large Language Diffusion Models,First using diffusion LLM model to generate; Diffusion model excels at reversal reasoning; inter-block AR while in-block diffusion,3,4,3
 2025,arXiv,HKU,Dream 7B: Diffusion Large Language Models,based on AR model's pre-train; inter-block diffusion,3,3,3
 2025,arXiv,THU,Survey on Diffusion Language Models,"survey on training strategies, inference optimization, multimodal and applications of diffusion language models",4,2,2
@@ -38,6 +38,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ###### dLLM with other technique
 2025,arXiv,RUC,LLaDA-V: Large Language Diffusion Models with Visual Instruction Tuning, visual instruction tuning for diffusion models; multi-stage training for multimodal reasoning; visual instruction tuning for diffusion models,2,3,4
 2025,arXiv,Nvidia,"TiDAR: Think in Diffusion, Talk in Autoregression",dLLM with spec technique; use dllm-self as the draft model to accelerate the generation process,3,3,2
+2025,arXiv,RUC,LLaDA-MoE: A Sparse MoE Diffusion Language Model,Sparse MoE masked diffusion architecture; variable-length training intervention; multi-stage annealing pipeline,4,3,3
 
 # ##### LLM Alignment
 # Solution: LLM alignment aims to make LLM outputs more consistent with user intent. Its challenges are ensuring safety, addressing multi-modal complexities, and balancing inference ability with alignment.
@@ -55,6 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### LLM-Powered AI Agent
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
 2025,arXiv,THU,Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents,RAG-based LLM agent; use OpenAI api to run LLM; agent num is about 50,3,3,2
+2018,CVPR,MIT,VirtualHome: Simulating Household Activities via Programs,simulation framework for home agent; interaction within the home; action planning and execution,3,3,3
 
 # ###### LLM Agent for social simulation
 2023,UIST,Stanford,Generative Agents: Interactive Simulacra of Human Behavior,agent socail simulation baseline; 25 agents in town,3,4,3
