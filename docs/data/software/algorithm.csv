@@ -63,6 +63,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
 2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
+2024,arXiv,Fudan,From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents,dividing simulations into Individual/Scenario/Society levels; modular agent architecture analysis involving Profile-Memory-Planning-Action,3,3,3
 2024,arXiv,MIT,On the limits of agency in agent-based models,GPU optimization for agent simulation; use tensor for agent status expression; optimization for on-GPU operation,3,3,3
 2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
 2025,arXiv,THU,OpenCity: A Scalable Platform to Simulate Urban Activities with Massive LLM Agents,IO optimization for agent; prompt compression for LLM,3,2,1

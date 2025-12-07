@@ -109,7 +109,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SOSP,SJTU,KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider,real-world KVCache trace anatomy; workload-aware eviction; analysis of KVCache hit in the real-world,4,4,2
 
 # ##### Application specific memory management
-# Solution: Memory management is actually the core for request scheduleing. Application specific memory management use the application information to manage the memory.
+# Solution: Memory management is actually the core for request scheduling. Application specific memory management use the application information to manage the memory.
 2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
 
 # #### KV Cache Reuse Systems
@@ -254,6 +254,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Task Scheduling for specific tasks
 # Solution: In specific scene, the schedule goal is different. Assigning tasks to differnet devices can fix the gap between the characteristics of devices' and tasks'.
 2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
+2024,AAMAS,MIT,flame: A Framework for Learning in Agent-based ModEls, differentiable agent-based modeling framework via autograd primitives; hybrid DNN-ABM (Agent-Based Models) optimization pipeline,3,2,3
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
 2025,arXiv,PKU,Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC,agent application-specific scheduling on heterogeneous SoC; heterogeneous execution graph with eastic kernels; bandwidth-aware dispatch for NPU-iGPU contention mitigation,3,2,3
 2025,arXiv,Stanford,Efficient and Scalable Agentic AI with Heterogeneous Systems,mapping agent worloads to heterogeneous accelerators; MLIR based excution graph; cost model based device choose,2,1,1
@@ -534,6 +535,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,NeurIPS,Univ. of Virginia,Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion,speculative diffusion Decoding; discrete diffusion models as non-autoregressive drafters; parallelized draft sequence generation,3,3,3
 2025,arXiv,Cornell,Remasking Discrete Diffusion Models with Inference-Time Scaling,ReMDM sampler for iterative refinement; inference-time compute scaling via token remasking; custom remasking backward process for pre-trained models,3,4,3
 2025,arXiv,SJTU,Diffusion LLMs Can Do Faster-Than-AR Inference via Discrete Diffusion Forcing,First dLLM faster than AR LLM; fuse KV-cached autoregression with parallel diffusion decoding; inter-block parallelism without full denoise,4,3,4
+2025,arXiv,PKU,Orchestrating Dual-Boundaries: An Arithmetic Intensity Inspired Acceleration Framework for Diffusion Language Models, adaptive length prediction for prefill optimization; jump-share speculative decoding strategy,4,2,3
 
 # #### Visual Auto-Regressive Models Serving System
 # Challenge: as the VAR model moves to large scales (e.g. 1024x1024), the number of tokens to be processed explodes, making final steps expensive compared to the initial coarse steps.
