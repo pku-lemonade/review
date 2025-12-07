@@ -298,6 +298,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Batching for Better Throughput
 # Challenge: the batching is a trade-off between the throughput and the latency. The requests in the same batch also call for different resources. Split different compute pattern request for different batches is a good idea.
 2025,OSDI,UA,NanoFlow: Towards Optimal Large Language Model Serving Throughput,LLM inference is indeed compute-bound; model-based batch size analysis; micro batch split for overlapping between all resources,4,4,3
+2025,arXiv,BUAA,OOCO: Latency-disaggregated Architecture for Online-Offline Co-locate LLM Serving,colocating online request and offline LLM request; SLO based schedule method,3,3,2
 
 # ##### Info Predict Scheduling
 # Challenge: The general schedule if for better batching and meeting the SLO requirements. By predicting the information of the requests, we can make the schedule more efficient.
