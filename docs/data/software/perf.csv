@@ -130,6 +130,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,Intelligent Computing,Berkeley,Hierarchical Roofline Performance Analysis for Deep Learning Applications,Nsight Compute based hierarchical roofline model; FP16、FP32 extension for ERT,,,
 2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
 2025,ASPLOS,Georgia Tech,Forecasting GPU Performance for Deep Learning Training and Inference,tile-level kernal decomposition; fundamental performance laws bounded prediction; ML based utilization prediction,3,4,2
+1999,Trans,Princeton,Cache miss equations: a compiler framework for analyzing and tuning memory behavior,analytical mathematical model for cache miss; precise conflict miss prediction,3,3,3
 
 
 # ### Memory Subsystem Simulators

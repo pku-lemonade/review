@@ -284,8 +284,11 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 2024,ESSERC,UCSD,An Analog and Digital Hybrid Attention Accelerator for Transformers with Charge-based In-memory Computing,"analog CIM for low-score tokens, digital processor for high",3,4,2
 # ### CIM: Quantization
 # Challenge: Limited by the precision & area & power trade-off of the ADC; certain CIM devices like RRAM are not suitable for high-precision computation (e.g. FP32). Quantization is needed to reduce the precision of the data.
-# #### CIM Quantization: For Analog CIM
+# #### CIM: Quantization: Partial Sum Quantization
 2023,ISLPED,Purdue,Partial-Sum Quantization for Near ADC-Less Compute-In-Memory Accelerators,ADC-Less and near ADC-Less CiM accelerators; CiM hardware aware DNN quantization methodology,,,
+2025,DATE,SKKU,Column-wise Quantization of Weights and Partial Sums for Accurate and Efficient Compute-In-Memory Accelerators,granularity alignment logic; learned step-size quantization(LSQ),3,2,3
+# #### CIM Quantization: For Analog CIM
+2022,TCAS-I,Georgia Tech,BitS-Net: Bit-Sparse Deep Neural Network for Energy-Efficient RRAM-Based Compute-In-Memory,bit-sparsity quantization; bias-shifted MVM; hardware-aware loss function,3,2,3
 2023,AICAS,TU Delft,Mapping-aware Biased Training for Accurate Memristor-based Neural Networks,favorability constraint analysis to find important weight values; mapping-aware biased training to restrict weight values to low variance RRAM states,3,4,2
 2024,TCAD,BUAA,CIMQ: A Hardware-Efficient Quantization Framework for Computing-In-Memory-Based Neural Network Accelerators,bit-level sparsity induced activation quantization; quantizing partial sums to decrease required resolution of ADCs; arraywise quantization granularity,,,
 2024,TCAD,BUAA,CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory,mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM,,,
@@ -300,6 +303,7 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 2020,GLSVLSI,UND,Benchmarking Computing-in-Memory for Design Space Exploration,uniform benchmarking of CiM designs based on different memory technologies,3,3,2
 2024,ISCAS,UMCP,On-Chip Adaptation for Reducing Mismatch in Analog Non-Volatile Device Based Neural Networks,float-gate transistors based; hot-electron injection to address the issue of mismatch and variation,,,
 2023,DATE,UniBo,End-to-End DNN Inference on a Massively Parallel Analog In Memory Computing Architecture,many-core heterogeneous architecture; general-purpose system based on RISC-V cores and nvAIMC cores; based on Phase-Change Memory(PCM);,,,
+2025,DAC,ZJU,VQT-CiM: Accelerating Vector Quantization Enhanced Transformer with Ferroelectric Compute-in-Memory,static-dynamic VMM Conversion; look-up table accelerated RVQ(Residual Vector Quantization); product vector quantization (PVQ),3,3,3
 
 # ### Prefetching
 # Challenge: Speculative prefetch requests can cause undesirable effects on the system (e.g., increased memory bandwidth consumption, cache pollution, memory access interference).

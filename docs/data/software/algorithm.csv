@@ -63,9 +63,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
 2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
+2024,arXiv,Fudan,From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents,dividing simulations into Individual/Scenario/Society levels; modular agent architecture analysis involving Profile-Memory-Planning-Action,3,3,3
 2024,arXiv,MIT,On the limits of agency in agent-based models,GPU optimization for agent simulation; use tensor for agent status expression; optimization for on-GPU operation,3,3,3
 2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
 2025,arXiv,THU,OpenCity: A Scalable Platform to Simulate Urban Activities with Massive LLM Agents,IO optimization for agent; prompt compression for LLM,3,2,1
+
+# ###### LLM Agent for tool use
+2025,arXiv,Berkeley,The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models,tool call ability benchmark,3,3,3
+2025,arXiv,Startup,MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Calling in LLM Agent Multi-Turn Conversations,remove unused tool in multi-turn conversation; use tool selector to select the most appropriate tool,3,3,2
 
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
@@ -179,6 +184,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2013,DATE,Waterloo,Cherry-Picking: Exploiting Process Variations in Dark-Silicon Homogeneous Chip Multi-Processors,performance model for barrier synchronization based multi-thread application; optimal core selection, thread mapping and frequency assignment,3,3,2
 2014,DATE,UW-Madison,Process Variation-Aware Workload Partitioning Algorithms for GPUs Supporting Spatial-Multitasking,per-SM clocking (PSMC); process variation-aware SM-to-application assignment,3,3,2
 2016,CSUR,ORNL,A Survey of Architectural Techniques for Managing Process Variation,PV-aware processor management; specific component targeted management,3,1,1
+
+# ### Dynamic Voltage and Frequency Scaling
+# Solution: Develop DVFS control policies to optimize the trade-offs among performance, power consumption, and thermal constraints.
+2021,TCAD,YNU,CARTAD: Compiler-Assisted Reinforcement Learning for Thermal-Aware Task Scheduling and DVFS on Multicores,XGBoost based intrinsic feature identification; RL-Based scheduler,3,3,2
+2023,JETCAS,Uppsala,Game-of-Life Temperature-Aware DVFS Strategy for Tile-Based Chip Many-Core Processors,GoL temperature-aware DVFS; core/un-core performance characterizer; GoL DVFS controller,4,3,2
+2024,ISCA,IBM&CU,BlitzCoin: Fully Decentralized Hardware Power Management for Accelerator-Rich SoCs,coin exchange algorithm; unified voltage and frequency regulation,3,4,2
+2024,DATE,KIT,Multi-Agent Reinforcement Learning for Thermally-Restricted Performance Optimization on Manycores,RL-based thermally-restricted performance optimization; multi-agent based per-core DVFS,4,3,2
 
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing
