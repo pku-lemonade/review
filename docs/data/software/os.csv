@@ -69,3 +69,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Synchronization
 # Solution: coordinating access to shared resources among multiple processes or threads to prevent conflicts, ensure data consistency, and avoid issues like race conditions, deadlocks, and resource starvation.
 2019,ASPLOS,THU&USC,pLock: A Fast Lock for Architectures with Explicit Inter-core Message Passing,chaining lock for direct lock transfering; hierarchical lock for non-uniform network,4,4,2
+
+# ## Cooling Systems
+# Solution: utilize system-level techniques like task scheduling to manage thermal output, aiming to improve energy efficiency and prevent performance degradation.
+
+# ### Task Reassignment
+# Solution: proactively migrate computational tasks from impending thermal hotspots to cooler resources to achieve a balanced thermal load across the system.
+2024,SoCC,HUST,InferCool: Enhancing AI Inference Cooling through Transparent, Non-Intrusive Task Reassignment,multi-Instance GPU schedule/cooling unit decomposition; thermal-aware cooling middleware; power and temperature dynamics modeling,4,4,3
