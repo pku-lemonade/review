@@ -6,11 +6,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Bottleneck Analysis
 # Challenge: Bottleneck Analysis faces challenges of high system complexity, unexpected real-world factors and the resource constraints when detecting.
+
+# ##### Fixed Workload Analysis
+# Solution: Use snippets with fixed workload in the program to detect bottlenecks and locate root cause.
 2018,PPoPP,THU,vSensor: Leveraging Fixed-Workload Snippets of Programs for Performance Variance Detection,fixed-workload snippets; dependency propagation algorithm; lightweight on-line analysis algorithm,,,
 2020,SC,THU,ScalAna: automating scaling loss detection with graph analysis,program structure graph; program performance graph; backtracking root cause detection algorithm,,,
 2022,PPoPP,THU,Vapro: Performance Variance Detection and Diagnosis for Production-Run Parallel Applications,state transition graph; fixed workload snippets identification clustering algorithm; variance breakdown model; time of factors quantification method,,,
-2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
 2024,SC,BUAA,GVARP: Detecting Performance Variance on Large-Scale Heterogeneous Systems,asynchronous state transition graph; parameter-based workload estimation method; asynchronous event tracing technology,,,
+
+# ##### Other Methods
+# Solution: Use other methods like modeling or instrumentation to find bottleneck for performance optimization.
+2024,arXiv,UGA,Performance Debugging through Microarchitectural Sensitivity and Causality Analysis,constraints propagation engine for causality analysis; differential analysis engine for sensitivity analysis,,,
 
 # #### Variance Attribution
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound,,,
@@ -19,11 +25,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Root Cause Analysis
 # Challenge: difficulties in dependency graph modeling, scalability of detection algorithm for large-scale applications.
+
+# ##### Heuristic Approaches
+# Solution: trace system failures rely on dependency graphs, expert rules, or statistical correlations.
 2003,TISSEC,IBM,Clustering Intrusion Detection Alarms to Support Root Cause Analysis,attribute-oriented induction based clustering algorithm; generalized alarm analysis,2,3,2
 2017,Arxiv,Intel; CA technologies,Survey on Models and Techniques for Root-Cause Analysis,deterministic/probabilistic model; RCA learning algorithms; RCA inference algorithms,4,1,1
 2021,ASE,eBay,Groot: An Event-graph-based Approach for Root Cause Analysis in Industrial Settings,event-graph based RCA; service dependency graph; event causality graph; pagerank based root cause ranking,4,5,2
+
+# ##### Machine Learning
+# Solution: employ machine learning models, like graph neural networks, to automatically learn complex causal patterns.
 2021,ASPLOS,Cornell,Sage: Practical & Scalable ML-Driven Performance Debugging in Microservices,RPC latency decomposition model; Markov based RPC latency propagation; causal bayesian network based dependency model,3,3,2
 2023,ASPLOS,Alibaba,Sleuth: A Trace-Based Root Cause Analysis System for Large-Scale Microservices with Graph Neural Networks,HDBSCAN trace clustering algorithm; GNN based dependency modeling,3,3,2
+2023,SIGKDD,UCF,Interdependent Causal Networks for Root Cause Localization,GNN based topological causal discovery; extreme value theory based individual causal discovery; causal integration,4,3,2
+2023,SIGKDD,UCF,Incremental Causal Graph Learning for Online Root Cause Analysis,trigger point detection; incremental desentangled causal graph learning; random walk with restart based root cause localization,3,3,2
 
 # #### Burst Detection
 # Challenge: maintaining accuracy at high speed data streams, tradeoff between memory usage and detection accuracy.
@@ -35,6 +49,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,IFIP NPC,PKU,2FA Sketch: Two-Factor Armor Sketch for Accurate and Efficient Heavy Hitter Detection in Data Streams,improved arbitration strategy for in-bucket competition; cross-bucket conflict avoidance hashing scheme,2,3,1
 2024,IEEE ICDE,PKU,Scalable Overspeed Item Detection in Streams,bucket sharing based basic speedsketch algorithm; global-clock for reducing timestamp overhead; counter-flip technique for compression,3,4,2
 
+# ##### Other Bursts
+2022,NSDI,CMU,SketchLib: Enabling Efficient Sketch-based Monitoring on Programmable Switches,bottleneck analysis of sketches on reconfigurable match-action tables; hardware friendly optimization for RMT,3,3,2
+2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
+2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
+2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
 
 # #### Straggler Analysis
 # Challenge: stragglers can arise from various complex factors, identifying their root causes and quantifying their impact on performance is difficult.
@@ -42,12 +61,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,TJSC,QMUL&NUDT,Tails in the cloud: a survey and taxonomy of straggler management within large‑scale cloud data centres,taxonomy of straggler causes; straggler management technique,3,1,1
 2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
 2025,Arxiv,NYU&ByteDance,Understanding Stragglers in Large Model Training Using What-if Analysis,what-if analysis; dependency model based simulation; SMon monitoring system,3,4,2
-
-# ##### Other Bursts
-2023,CIKM,Edinburgh,Tight-Sketch: A High-Performance Sketch for Heavy Item-Oriented Data Stream Mining with Limited Memory Size,probabilistic decay strategy; differentiated eviction for cold and hot items,4,4,2
-2024,INFOCOM,SCU,BurstDetector: Real-Time and Accurate Across-Period Burst Detection in High-Speed Networks,two-stage across-period burst detection; hierarchical cell for memory optimization,3,4,1
-2024,WWW,Edinburgh,Stable-Sketch: A Versatile Sketch for Accurate, Fast, Web-Scale Data Stream Processing,heavy hitter; heavy changer; persistent item; bucket stability,3,4,2
-
 
 # #### Network Tomography
 
@@ -89,22 +102,23 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
 
 # ##### Tracing Optimization
+# Challenge: Tradeoff between tracing storage overhead and the effectiveness of preserved data. 
 2015,SOSP,Brown,Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems,happened-beforejoin for arbitrary event correlation; dynamic instrumentation; metadata propagation technique baggage,4,3,2
 2021,ICWS,SYSU,Sieve: Attention-based Sampling of End-to-End Trace Data in Distributed Microservice Systems,path vector encoding; attention score based biased sampler,3,3,2
 2023,NSDI,Emory‌&Princeton,The Benefit of Hindsight: Tracing Edge-Cases in Distributed Systems,retroactive trace sampling; trace coherence mechanism (breadcrumb); lateral tracing across requests,4,4,2
 2025,ASPLOS,SYSU&Alibaba,Mint: Cost-Efficient Tracing with All Requests Collection via Commonality and Variability Analysis,commonality and variability based tracing strategy; pattern exraction at the span level and trace level,4,4,2
 
-
-# ### Profiling with LLM
-# Solution: using LLMs to generate profile results.
-2025,SOSP,UChicago,METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation,LLM-based query profiler; rule-based configuration pruning; resource-aware joint scheduling; per-query configuration adaptation,3,4,2
-
 # ##### Diagnosis and Analysis
+# Challenge: How to use the trace data to accurately locate failures or bottlenecks, especially in large‑scale systems.
 2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
 2022,SIGCOMM,THU&UPENN,PrintQueue: Performance Diagnosis via Queue Measurement in the Data Plane,congestion regime taxonomy; hierarchical, probabilistic flow-tracking data structure; queue monitor for original culprits,3,4,2
 2023,NSDI,BUPT&ByteDance,Hostping: Diagnosing Intra-host Network Bottlenecks in RDMA Servers,loopback tests between RNICs and endpoints; bus utilization monitoring; binary network tomography inspired path analysis,3,4,2
 2024,NSDI,ByteDance&PKU,MegaScale: Scaling Large Language Model Training to More Than 10,000 GPUs,CUDA event monitor; 3D parallel training visualization; tail-latency-aware load balancing,3,4,2
+2025,Arxiv,Alibaba,PerfTracker: Online Performance Troubleshooting for Large-scale Model Training in Production,runtime behavior pattern representation; critical path identification; distance from expectation&differential distance based localization,4,4,2
 
+# ### Profiling with LLM
+# Solution: using LLMs to generate profile results.
+2025,SOSP,UChicago,METIS: Fast Quality-Aware RAG Systems with Configuration Adaptation,LLM-based query profiler; rule-based configuration pruning; resource-aware joint scheduling; per-query configuration adaptation,3,4,2
 
 # ## Simulators and emulators (for software/system analysis)
 # Challenge: how to balance the accuracy, time cost and complexity of a simulator.
@@ -116,6 +130,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,Intelligent Computing,Berkeley,Hierarchical Roofline Performance Analysis for Deep Learning Applications,Nsight Compute based hierarchical roofline model; FP16、FP32 extension for ERT,,,
 2025,arXiv,Google,Concorde: Fast and Accurate CPU Performance Modeling with Compositional Analytical-ML Fusion,per-resource throughput analysis; fine-grained performance attribution,3,2,2
 2025,ASPLOS,Georgia Tech,Forecasting GPU Performance for Deep Learning Training and Inference,tile-level kernal decomposition; fundamental performance laws bounded prediction; ML based utilization prediction,3,4,2
+1999,Trans,Princeton,Cache miss equations: a compiler framework for analyzing and tuning memory behavior,analytical mathematical model for cache miss; precise conflict miss prediction,3,3,3
+
+
+# ### Memory Subsystem Simulators
+# Challenge: Current simulator approaches fail to fully exploit parallelism and are difficult to extend.
+2024,MICRO,Barcelona Supercomputing Center,"A Mess of Memory System Benchmarking, Simulation and Application Profiling", inaccuracy of simulators like Ramulator and DRAMsim3; analytical memory simulator "Mess" based on bandwidth-latency curves,4,2,2
+2025,arXiv,ETHZ,Cleaning up the Mess, refuting Mess paper's claims via identifying simulator configuration errors; correcting Mess paper's evaluation via identifying erroneous statistics usage; Mess Request Generator for a corrected Ramulator 2 evaluation,3,2,3
+2025,arXiv,Cornell,gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration,LLM-powered agent for computer architecture DSE; state machine-driven exploration loop (ANA-GEN-QA-EXIT); prompt engineering for results retrospection and baseline preservation,3,2,3
+
+
+# ### Memory Subsystem Simulators
+# Challenge: Memory subsystem simulators face accuracy issues with realistic workloads and lack efficient parallelization strategies.
+2024,MICRO,Barcelona Supercomputing Center,"A Mess of Memory System Benchmarking, Simulation and Application Profiling", inaccuracy of simulators like Ramulator and DRAMsim3; analytical memory simulator "Mess" based on bandwidth-latency curves,4,2,2
+2025,arXiv,ETHZ,Cleaning up the Mess, refuting Mess paper's claims via identifying simulator configuration errors; correcting Mess paper's evaluation via identifying erroneous statistics usage; Mess Request Generator for a corrected Ramulator 2 evaluation,3,2,3
+2025,arXiv,Cornell,gem5 Co-Pilot: AI Assistant Agent for Architectural Design Space Exploration,LLM-powered agent for computer architecture DSE; state machine-driven exploration loop (ANA-GEN-QA-EXIT); prompt engineering for results retrospection and baseline preservation,3,2,3
 
 # ### LLM Performance Modeling <a name="LLM-Performance-Modeling"></a>
 # Solution: LLM inference is expensive, performance modeling can help decide on the best configuration for the given system without actually running the LLM.
@@ -125,8 +154,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,Mlsys,GIT,Vidur: A Large-Scale Simulation Framework For LLM Inference,Operation-level simulation; Using the simulator to search the best configuration for the given system,3,3,3
 
 # #### LLM Training Performance Modeling
+2024,MICRO,KAIST,vTrain: A Simulation Framework for Evaluating Cost-effective and Compute-optimal Large Language Model Training,profiling-driven LLM training simulation; operator-to-task lookup table; cost-effective training plan exploration; compute-optimal chinchilla point estimation,3,4,2
 2025,MLSys,Cornell,Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training,trace-driven performance modeling and estimation toolkit; the first system to provide accurate performance models that effectively capture the execution behaviors of LLMs; modify and generate new execution graphs from existing traces,3,4,2
 
+# ### Thermal Modeling
+# Challenge: precisely capturing the nonlinear, multi-scale and heterogeneous thermal behaviors on different architecture
+2003,ISCA,Virginia,Temperature-Aware Microarchitecture,architecture level thermal modeling; temperature-tracking frequency scaling; local feedback-controlled fetch toggling,3,3,2
+2009,MICRO,ND&UCSD,McPAT: An Integrated Power, Area, and Timing Modeling Framework for Multicore and Manycore Architectures,multicore architecture level modeling; circuit level modeling; technology level modeling,3,3,2
+2024,ICCAD,PKU,FaStTherm: Fast and Stable Full-Chip Transient Thermal Predictor Considering Nonlinear Effects,ResNet-18-based deep autoencoder; unrolled training and noise injection for stability; GA-based training data generation,4,3,2
+2024,ISEDA,PKU,ATSim3D: Towards Accurate Thermal Simulator for Heterogeneous 3D-IC Systems Considering Nonlinear Leakage and Conductivity,global-local approach for simulation with ultrahigh resolution; Kirchhoff transformation for nonlinear conductivity,3,3,2
 
 # ## Benchmarking methodologies and suites
 

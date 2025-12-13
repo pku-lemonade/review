@@ -61,5 +61,3 @@ Explores architectures based on novel technologies or paradigms. Includes:
 * Quantum computing architectures
 * Photonic computing architectures
 * Note: CIM should be grouped under Memory Architecture.
-
-{{ render_custom_format(page=page) }}

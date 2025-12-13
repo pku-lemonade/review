@@ -17,7 +17,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Memory Partitioning & Mapping
 # Solution: efficiently and securely divide physical memory among multiple processes or systems
 # Challenge: ensuring processes get enough memory without waste, while preventing interference and maintaining system performance and security.
-2012,HPCA,Georgia Institute of Technology,TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture,thread-level parallelism; core sampling for cache effort indentification; cache block lifetime normalization,,,
+2012,HPCA,Georgia Institute of Technology,TAP: A TLP-Aware Cache Management Policy for a CPU-GPU Heterogeneous Architecture,thread-level parallelism; core sampling for cache effort identification; cache block lifetime normalization,,,
+2022,ASPLOS,Uppsala University,Every Walk's a Hit: Making Page Walks Single-Access Cache Hits,flattened page table; opportunistic 2MB page table nodes; graceful fallback for fragmentation; page table cache prioritization,3,3,3
 2024,arXiv,UMich,Mercury: QoS-Aware Tiered Memory System,contend for local memory; priority inversion; intra- and inter-tier interference; per-tier page reclaimation,,,
 2025,HPCA,Seoul National,FACIL: Flexible DRAM Address Mapping for SoC-PIM Cooperative On-device LLM Inference,flexible PIM address mapping and remapping; OS paging mechanism extension for MapID; user-level mapping selector,3,2,3
 
@@ -44,6 +45,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Out-of-Core Processing
 # Challenge: performance penalty of slow disk I/O
+2015,SOSP,EPFL,Chaos: Scale-out Graph Processing from Secondary Storage,storage-centric scale-out architecture; randomized uniform data distribution; streaming partitions with work stealing; batch-oriented storage access,4,4,4
 2018,OSDI,UCLA,RStream: Marrying Relational Algebra with Streaming for Efficient Graph Mining on A Single Machine,single-machine out-of-core graph mining; tuple streaming; relational algebra on graphs; GRAS programming model,4,4,4
 
 # #### SSD Management
@@ -55,7 +57,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ## Virtualization
 # Solution: efficiently managing and isolating multiple virtual machines (VMs) or containers on a single physical machine, allowing them to share hardware resources securely and independently while maintaining performance and flexibility.
+# ### Hardware Virtualization
+# Challenge: existing interfaces directly bind the accelerator’s physical resources to user threads, without an efficient mechanism to adaptively re-partition available resources.
+2023,MICRO,Berkeley,AuRORA: Virtualized Accelerator Orchestration for Multi-Tenant Workloads, Client-Manager shims with shadow CSR; remote RoCC protocol for decoupled execution; slack-based NUMA-aware runtime allocation,4,3,4
+2023,HPCA,Berkeley,"MoCA: Memory-Centric, Adaptive Execution for Multi-Tenant Deep Neural Networks", hardware memory access monitoring and throttling; priority- and memory-aware scheduler,3,3,4
 
+# ### Container Management
+# Challenge: container is a abstract of specific OS functions, managing containers need to solve the problem of blocking useless information and only keep the necessary information.
+2024,SOSP,THU,TrEnv: Transparently Share Serverless Execution Environments Across Different Functions and Nodes,share function excution between containers; byte-addressable CXL memory attach with CoW; Browser-multiplexing for LLM agents inside VMs,3,4,4
 
 # ## Synchronization
 # Solution: coordinating access to shared resources among multiple processes or threads to prevent conflicts, ensure data consistency, and avoid issues like race conditions, deadlocks, and resource starvation.

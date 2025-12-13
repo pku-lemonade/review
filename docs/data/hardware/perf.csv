@@ -13,13 +13,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,CONECCT,IIIT,"Power, Performance And Thermal Management Using Hardware Performance Counters",fine-grained dynamic voltage and frequency scaling; PMC-based power and temperature correlation model; thermal zone and partition-based management,2,4,2
 # #### Architecture Design
 # Challenge: Existing hardware performance counters provide limited information; expansion is needed to support more hardware behavior data.
-2006,ASPLOS,UW–Madison,A Performance Counter Architecture for Computing Accurate CPI Components,interval analysis based performance model; frontend miss table(FMT); shared FMT,3,3,2
+2006,ASPLOS,UW-Madison,A Performance Counter Architecture for Computing Accurate CPI Components,interval analysis based performance model; frontend miss table(FMT); shared FMT,3,3,2
 2014,ISPASS,Intel,A Top-Down Method for Performance Analysis and Counters Architecture,top-down bottleneck analysis method; frontend bound; bad speculation; retiring; backend bound; top-down performance events,3,5,3
 2015,ISCA,ANU,Computer Performance Microscopy with SHIM, double-time error correction; sample periods randomizing; CMP core sampling for low overhead,4,4,3
 # ### Dataflow Architecture
+# #### Modeling
+# Challenge: Accurately capturing the fine-grained data dependencies while keeping the model abstract enough for further analysis.
+2024,ISCA,Stanford,The Dataflow Abstract Machine Simulator Framework,communicating sequential processes; event-queue free execution; context-channel based description; asynchronous distributed time,,,
+2024,ISCA,SYSU,Soter: Analytical Tensor-Architecture Modeling and Automatic Tensor Program Tuning for Spatial Accelerators,analytical tensor-architecture model; transformer based optimizer; coordination between analytical modeling and automatic tuning,4,4,2
+# #### Mapping
+# Challenge: Tiling the dataflow graph onto PEs and interconnects while minimizing buffering, balancing load, and meeting throughput/latency targets.
 2022,OSDI,UCB,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,,,
 2023,MICRO,PKU,TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis,3D design space of fusion dataflow; tree-based description; tile-centric notation,,,
-2024,ISCA,Stanford,The Dataflow Abstract Machine Simulator Framework,communicating sequential processes; event-queue free execution; context-channel based description; asynchronous distributed time,,,
+2024,ICCD,SYSU,TileMap: Mapping Multi-Head Attention on Spatial Accelerators with Tile-based Analysis,tile-based parallelism analysis; tensor life; RL-based searching algorithm for mapping DSE,3,3,2
+2025,DATE,SYSU,Poros: One-Level Architecture-Mapping Co-Exploration for Tensor Algorithms,gradient-based search in non-smooth space; policy sampling to address non-convexity; batch sampling for faster convergence,4,3,2
 # ### Connection Architecture
 2014,JPDC,Inria,"Versatile, scalable, and accurate simulation of distributed applications and platforms",API based communication&computation description; informed model of TCP for moderate size grids; file based modular network representation technique,,,
 2020,MICRO,Georgia Tech; NVIDIA,"MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings",data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model,,,
@@ -33,6 +40,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,SC,NC State,GVPROF: A Value Profiler for GPU-Based Clusters,temporal/spatial load/store redundancy; hierarchical sampling for reducing monitoring overhead; bidirectional search algorithm on dependency graph,,,
 2022,ASPLOS,NC State,ValueExpert: Exploring Value Patterns in GPU-accelerated Applications value-related inefficiencies,data value pattern recoginition; value flow graph; parallel intervals merging algorithm,,,
 2022,SC,NC State,Graph Neural Networks Based Memory Inefficiency Detection Using Selective Sampling,dead store; silent store; silent load; assembly-level procedural control-flow embedding; dynamic value semantic embedding; relative positional encoding for different compilation options,,,
+# ### Task Scheduling for Accelerators
+# Challenge: Efficiently scheduling tasks on heterogeneous accelerators while considering their unique characteristics and constraints.
+2023,ISCA,Tsinghua University,Shogun: A Task Scheduling Framework for Graph Mining Accelerators,locality-aware out-of-order task scheduling; task tree for decoupling; task tree splitting; search tree merging,4,4,3
 # ### Variation Impact
 # Solution: Characterize sources of variation (hardware; software; environment); develop models to predict variation impact; implement techniques to reduce variation (e.g., dynamic voltage and frequency scaling, adaptive scheduling).
 2009,HPCMP,UCSD,Measuring and Understanding Variation in Benchmark Performance,MPI communication variation; distribution of performance variation,,,
@@ -41,3 +51,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Stall can be caused by hardware or software; identifying the root cause of stalls and their impact on performance is crucial for performance optimization.
 2023,ICPE,NC State University,DrGPU: A Top-Down Profiler for GPU,device memory stall; synchronization stall; instruction related stall; shared memory related stall,,,
 2024,MICRO,NUDT,HyFiSS: A Hybrid Fidelity Stall-Aware Simulator for GPGPUs,memory/compute structual/data stall; synchronization stall; control stall; idle stall; cooperative thread array-sets based SM sampling algorithm,,,
+# ### Process Variation
+# Solution: Use architectural techniques to manage or exploit the on-chip heterogeneity caused by process variation.
+2007,ISCA,UIUC,ReCycle: Pipeline Adaptation to Tolerate Process Variation,cycle time stealing by skewing clock arrival times; donor pipeline stage; tunable delay buffer; duplicate register,4,3,3
+2008,MICRO,Intel&Purdue,Shapeshifter: Dynamically Changing Pipeline Width and Speed to Address Process Variations,pipeline width and speed dynamically changing; narrower pipeline for low-ILP program; clock speed reduction for high-ILP program,3,3,2
+2009,MICRO,PSU,A Case for Dynamic Frequency Tuning in On-Chip Networks,dynamic frequency tuning; distributed throttling and boosting; time-stealing in router pipeline; per-router DVFS,4,3,2
+2010,DAC,NU,Quantifying and Coping with Parametric Variations in 3D-Stacked Microarchitec,wordline cross layer path splitting (CLAPS); decoder CLAPS; bitline/wordline CLAPS,3,3,2
+2012,ISCA,CMU,RAIDR: Retention-Aware Intelligent DRAM Refresh,retention time profiling and binning; bloom filter based binning; intelligent DRAM refresh,4,3,2
