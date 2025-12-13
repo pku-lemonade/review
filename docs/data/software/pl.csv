@@ -92,6 +92,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### HLS for specialized hardware
 # Solution: target-specific code generation, custom memory interface synthesis, co-optimization with physical constraints
+2017,DAC,PKU & Falcon & UCLA,Automated Systolic Array Architecture Synthesis for High Throughput CNN Inference on FPGAs,2D systolic array architecture; analytical model for performance and resource; two-phase design space exploration; end-to-end C-to-FPGA automation flow,3,4,3
+2019,ISCAS,PKU & UCLA,Frequency Improvement of Systolic Array-Based CNNs on FPGAs,front-end accumulation chain segmentation; back-end topology-aware floorplanning constraints; frequency optimization for systolic arrays,3,4,3
 2023,FPGA,UoP,DONGLE: Direct FPGA-Orchestrated NVMe Storage for HLS,HLS direct NVMe access; FPGA-orchestrated storage; Unified HLS storage interface; Single-source HLS for storage; DONGLE architecture,4,4,4
 2023,FPGA,HKUST,FADO: Floorplan-Aware Directive Optimization for High-Level Synthesis Designs on Multi-Die FPGAs,Floorplan-aware HLS; Multi-die FPGA optimization; Directive-floorplan co-optimization; Incremental floorplanning for HLS; MMBP for HLS DSE,3,4,4
 2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
