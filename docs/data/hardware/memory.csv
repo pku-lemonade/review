@@ -151,6 +151,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,ICCAD,Purdue,Design Space and Memory Technology Co-Exploration for In-Memory Computing Based Machine Learning Accelerators,simulation framework to evaluate the systemlevel performance of IMC architecture; area-aware weight mapping strategy,4,3,2
 2024,ISPASS,MIT,"CiMLoop: A Flexible, Accurate, and Fast Compute-In-Memory Modeling Tool",flexible specification to describe CiM systems; accurate model/fast statistical model of data-value-dependent component energy,,,
 2025,ASPDAC,HKUST,MICSim: A Modular Simulator for Mixed-signal Compute-in-Memory based AI Accelerator,modulared Neurosim; data statistic-based average-mode instead of trace-based mode,4,3,2
+# #### Compiler
+# Challenge: Compiler for CIM is not well studied. Existing compilers are either for specific architecture or not efficient.
+2023,TACO,HUST,A Compilation Tool for Computation Offloading in ReRAM-based CIM Architectures,compilation tool to migrate legacy programs to CPU/CIM heterogeneous architectures; a model to quantify the performance gain,,,
+2023,DAC,CAS,PIMCOMP: A Universal Compilation Framework for Crossbar-based PIM DNN Accelerators,compiler based on Crossbar/IMA/Tile/Chip hierarchy; low latency and high throughput mode; genetic algorithm to optimize weight replication and core mapping; scheduling algorithms for complex DNN,,,
+2024,ASPLOS,CAS,CIM-MLC: A Multi-level Compilation Stack for Computing-In-Memory Accelerators,compilation stack for various CIM accelerators; multi-level DNN scheduling approach,,,
+2024,DATE,RWTH Aachen University,CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures,algorithm to decide which parts of NN are duplicated to reduce inference latency; cross layer scheduling on tiled CIM architectures,,,
+2024,TCAD,NJU,A Compilation Framework for SRAM Computing-in-Memory Systems With Optimized Weight Mapping and Error,input/output side parallelism (IOSP); partition-based MAQE(duplicating MSB storage),4,2,3
 # ### CIM: DRAM
 # Solution: Rather than placing logic units into DRAM; modify the physical structure of DRAM/eDRAM to enable in-memory computing.
 2021,ICCD,ASU,CIDAN: Computing in DRAM with Artificial Neurons,Threshold Logic Processing Element (TLPE) for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture,,,
@@ -220,12 +227,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,Adv. Mater.,UMich,Bulk‐Switching Memristor‐Based Compute‐In‐Memory Module for Deep Neural Network Training,"Bulk-ReRAM based digital-CIM hybrid architecture for training; CIM for forward, digital for backward",4,4,1
 2024,APIN,SWU,Multi-optimization scheme for in-situ training of memristor neural network based on contrastive learning,"optimizations to the deployment method, loss function and gradient calculation; compensation measures for non-ideal effects",,,
 2025,TNNLS,SNU,Efficient Hybrid Training Method for Neuromorphic Hardware Using Analog Nonvolatile Memory,Hybrid offline-online training method,,,
-# #### RRAM CiM: Compiler
-# Challenge: Compiler for RRAM CIM is not well studied. Existing compilers are either for specific architecture or not efficient.
-2023,TACO,HUST,A Compilation Tool for Computation Offloading in ReRAM-based CIM Architectures,compilation tool to migrate legacy programs to CPU/CIM heterogeneous architectures; a model to quantify the performance gain,,,
-2023,DAC,CAS,PIMCOMP: A Universal Compilation Framework for Crossbar-based PIM DNN Accelerators,compiler based on Crossbar/IMA/Tile/Chip hierarchy; low latency and high throughput mode; genetic algorithm to optimize weight replication and core mapping; scheduling algorithms for complex DNN,,,
-2024,ASPLOS,CAS,CIM-MLC: A Multi-level Compilation Stack for Computing-In-Memory Accelerators,compilation stack for various CIM accelerators; multi-level DNN scheduling approach,,,
-2024,DATE,RWTH Aachen University,CLSA-CIM: A Cross-Layer Scheduling Approach for Computing-in-Memory Architectures,algorithm to decide which parts of NN are duplicated to reduce inference latency; cross layer scheduling on tiled CIM architectures,,,
 # #### RRAM CiM: Float-Point processing
 # Challenge: Raw RRAM devices are not suitable for floating-point operations; while floating point data is common in DNNs (e.g. FP32).
 2023,SC,UCLA,ReFloat: Low-Cost Floating-Point Processing in ReRAM for Accelerating Iterative Linear Solvers,data format and accelerator architecture,,,
