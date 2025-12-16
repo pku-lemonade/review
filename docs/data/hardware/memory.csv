@@ -28,12 +28,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
 2025,arXiv,National Tech Univ. of Athens,PIMfused: Near-Bank DRAM-PIM with Fused-layer Dataflow for CNN Data Transfer Optimization, hybrid dataflow combining fused-layer and layer-by-layer strategies,3,2,2
 2025,arXiv,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
-# #### LLM-Specific Optimization
+# #### LLM Optimization
 # Challenge: LLM inference is fundamentally bottlenecked by memory bandwidth; HBM is expensive and not scalable.
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
-2024,DAC,Seoul National,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models, activation movement strategy to replace costly parameter movement; dynamic GPU-MoNDE load balancing for hot/cold experts,4,4,2
+2024,ASPLOS,Seoul National,AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference,bank-level GEMV & buffer-die Softmax units; head-level pipelining; feedforward co-processing optimizations,4,4,4
 2024,DAC,Hunan Univ.,A Real-time Execution System of Multimodal Transformer through PIM-GPU Collaboration,dynamic strategy for PIM-GPU task offloading; variable-length-aware PIM allocation optimizer; extended TVM backend for PIM-GPU command generation,3,3,3
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
+# #### MoE-LLM Optimization
+# Challenge: MoE models often have higher Op/Byte ratios, making bank-level PIM easily compute-bound and limiting speedup.
+2024,DAC,Seoul National,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models, activation movement strategy to replace costly parameter movement; dynamic GPU-MoNDE load balancing for hot/cold experts,4,4,2
 2025,MICRO,Samsung,"Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching", replace the GPU HBM memory die with HBM-PIM die; expert and attention co-processing for dynamic workload splitting within MoE/attn layers,4,4,4
 # #### RAG-Specific Optimization
 # Challenge: Retrieving the top-k results from a vectorized database is also a memory-bound operation.
@@ -131,6 +134,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Replace GPU's traditional DRAM-only HBM dies with PIM-enabled HBM dies to achieve higher memory bandwidth.
 2021,ISCA,Samsung,Hardware Architecture and Software Stack for PIM Based on Commercial DRAM Technology Industrial Product, drop-in replacement for standard HBM2; bank-level parallelism using standard DRAM commands; address aligned mode to tolerate host-side command reordering,3,5,3
 2022,Hot Chips,Samsung,"Aquabolt-XL HBM2-PIM, LPDDR5-PIM With In-Memory Processing, and AXDIMM With Acceleration Buffer",HBM2-PIM with bank-level SIMD programmable computing units; Acceleration DIMM with acceleration buffers for rank-level parallelism,2,5,3
+2023,MICRO,Yonsei,AESPA: Asynchronous Execution Scheme to Exploit Bank-Level Parallelism of Processing-in-Memory, Single-Instruction Long-Data execution model; asynchronous bank operation via long-data commands; column-major GEMV dataflow with shared accumulators,3,3,3
+2025,ICS,Korea Univ.,SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications,DRAM row-aligned format; bounded cap K-means clustering for load balancing; bank group accumulators,3,3,2
+
 # #### Benchmarks
 2019,DAC,ETHZ,NAPEL: Near-Memory Computing Application Performance Prediction via Ensemble Learning,simulator Ramulator-PIM; tracefile from Ramulator & run on zsim,,,
 2021,CAL,UVA,MultiPIM: A Detailed and Configurable Multi-Stack Processing-In-Memory Simulator,simulator MultiPIM; multi-stack & virtual memory support; parallel offloading,,,
