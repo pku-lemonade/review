@@ -50,5 +50,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Use algorithm-based fault tolerance (ABFT) techniques to detect and correct errors in hardware systems.
 2016,DSN,UStuttgart,Efficient Algorithm-Based Fault Tolerance for Sparse Matrix Operations,implicit error localization technique; sparse-aware checksum encoding,3,4,2
 2023,ISC,UCR,Anatomy of High-Performance GEMM with Online Fault Tolerance on GPUs,hierarchical fault tolerance design at thread/warp/threadblock levels,3,4,3
-2025,HPCA,THU,ER-DCIM: Error-Resilient Digital CIM Architecture with Run-Time MAC-Cell Error Correction,error-resilience framework for digital CIM addressing both cell and MAC errors; Adaptive mode switcher between high and low voltage mode,4,3,2
 2025,DAC,PKU,ReaLM: Reliable and Efficient Large Language Model Inference with Statistical Algorithm-Based Fault Tolerance,comprehensive LLM resilience characterization,statistical ABFT methodology that adaptively protects LLM components based on error statistics,3,3,3
+# ### Algorithm-Based Fault Tolerance for CIM systems
+# Challenge: Compute-in-memory (CIM) systems are prone to various types of faults due to their analog nature and dense integration.
+# Solution: Develop fault-tolerance techniques specifically designed for CIM
+2022,JETCAS,Georgia Tech,MAC-ECC: In-Situ Error Correction and Its Design Methodology for Reliable NVM-Based Compute-in-Memory Inference Engine,arithmetic error correcting code using in-situ parity RRAM; extrapolation-based design methodology,3,4,3
+2023,VTS,KIT,A Low Overhead Checksum Technique for Error Correction in Memristive Crossbar for Deep Learning Applications,ILP solver to compress checksum; hardware-aware Retraining method; scaling factor for checksum,3,3,3
+2024,ISPACS,CYCU,An Approximate Method for The Fault Tolerance of SRAM-Based Near-Memory Multiply-Accumulate Units,bit-significance-driven resiliency; reconfigurable partial product generator; built-in self-test (BIST),2,2,2
+2025,HPCA,THU,ER-DCIM: Error-Resilient Digital CIM Architecture with Run-Time MAC-Cell Error Correction,error-resilience framework for digital CIM addressing both cell and MAC errors; Adaptive mode switcher between high and low voltage mode,4,3,2
