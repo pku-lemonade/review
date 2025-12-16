@@ -53,3 +53,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SJTU,Cool-3D: An End-to-End Thermal-Aware Framework for Early-Phase Design Space Exploration of Microfluidic-Cooled 3DICs,end-to-end thermal-aware framework; microfluidic cooling integration; Pre-RTL design space exploration; floorplan designer; microfluidic cooling strategy generator,,,
 # ### Benchmarks
 2025,arXiv,NJU,Open3DBench: Open-Source Benchmark for 3D-IC Backend Implementation and PPA Evaluation,open-source 3D-IC benchmark; modular 3D partitioning and placement; Open3D-DMP algorithm for cross-die co-placement; comprehensive PPA evaluation with thermal simulation,,,
+# ### SpMM, SpGEMM, SDDMM hardware accelerator
+# #### Tiling hardware
+2023,ASPLOS,UC && UIUC && NVIDIA,Accelerating Sparse Data Orchestration via Dynamic Reflexive Tiling (DRT),Dynamic Reflexive Tiling (DRT) algorithm; dynamically adjust tile shapes at runtime based on sparsity of tensors; ssembling uniform micro tiles into non-uniform macro tiles,3,3,2
+2023,MICRO,MIT && NVIDIA,Tailors: Accelerating Sparse Tensor Algebra by Overbooking Buffer Capacity,overbooking tiling strategy;Swiftiles statistical sampling method;low-overhead hardware mechanism Tailors,3,3,3
+2025,HPCA,THU,HYTE: Flexible Tiling for Sparse Accelerators via Hybrid Static-Dynamic Approaches,hybrid static-dynamic framework;selecting a near-optimal initial tiling scheme;dynamic fine-tuning of tile shapes;coordinates efficient management of both data and metadata in on-chip/off-chip buffers,3,3,3
+# ### Dataflow hardware
+2023,ASPLOS,THU && DAMO && Northwestern University,SPADA: Accelerating Sparse Matrix Multiplication with Adaptive Dataflow,highly diverse sparsity patterns;Window-based Adaptive Dataflow;dynamically select the optimal window shape configuration based on the similarity of sparse patterns,3,2,3
+2023,ASPLOS,Universidad de Murcia && Georgia Tech && NVIDIA,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,dynamically adaptable multi-dataflow SpMSpM accelerator;Merger-Reduction Network;configurable tree-based topology;a customized L1 memory hierarchy comprising a read-only FIFO;a low-power cache;and a PSRAM for partial sums,3,3,3
+2025,MICRO,University of Maryland,Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication,FPGA;a machine learning-based framework for dynamic dataflow selection;intelligent hardware reconfiguration;decision tree;intelligent reconfiguration engine,3,2,4
