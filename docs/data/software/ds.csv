@@ -111,6 +111,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Application specific memory management
 # Solution: Memory management is actually the core for request scheduling. Application specific memory management use the application information to manage the memory.
 2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
+2024,ICML,PKU,MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving,multi-LLM serving; colocating multi LLM in one GPU-instance; CUDA MPS based optimization; PD based scheduler,3,3,3
+2025,ATC,THU,Weaver: Efficient Multi-LLM Serving with Attention Offloading,GPU memory harvest across GPU; harvest GPU memory and SM for hot LLM attention computation; GPU control flow optimization,3,3,3
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -124,11 +126,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,UChicago,DroidSpeak: Enhancing Cross-LLM Communication,selectively layer reuse; communication protocol for inter-agent exchanges; LLMs that share a common foundational model,,,
 2025,arXiv,PKU,TokenLake: A Unified Segment-level Prefix Cache Pool for Fine-grained Elastic Long-Context LLM Serving,bipartite matching dispatching; segment level cache pooling,3,3,2
 
-# ##### KV cache store
-# Solution: store the KV cache in the memory or other storage device, supporting multi-level storage.
+# ##### KV cache offloading
+# Solution: offload the KV cache to the memory or other storage device, supporting multi-level storage.
 2024,ATC,Huawei,Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention,store KV cache in the memory; multi level KV cache management; position mask modified,3,3,3
 2024,SIGCOMM,UChicago,CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving,efficient KV Cache streaming; KV Cache compression; knowledge delivery network; The transfer part of LMCache,3,4,3
 2024,EuroSys,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices; The system intro of LMCache,3,4,3
+2025,EuroSys,THU,Fast State Restoration in LLM Serving with HCache,offload activation instead of KVC to reduce IO; use little recomputation to tradeoff offloading latency,4,4,4
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
@@ -523,6 +526,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ICML,PKU,EAGLE: Speculative Sampling Requires Rethinking Feature Uncertainty,use hidden state instead of token to spec; static draft tree based spec chain,3,3,4
 2024,EMNLP,PKU,EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees,use dynamic draft tree to reduce search place,4,3,3
 2025,ACL,PKU,EAGLE-3: Scaling up Inference Acceleration of Large Language Models via Training-Time Test,solve the problem of scaling draft model to better predict; more training data to get high accuracy,3,3,2
+2025,arXiv,UCB,Accelerating Large-Scale Reasoning Model Inference with Sparse Self-Speculative Decoding,use sparse attention as draft model; top-k based sparse attention; reasoning model inference,3,3,3
 
 # #### Diffusion LLM Systems
 # Challenge: traditional LLM use an auto-regressive model to generate the text, which is slow. Diffusion LLM have a parallel generation ability, which is fast.
