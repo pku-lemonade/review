@@ -132,7 +132,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2013,PACT,KAIST,Memory-centric System Interconnect Design with Hybrid Memory Cubes,memory-centric network; distributor-based topology for reduced latency; non-minimal routing for higher throughput,,,
 2024,DAC,SNU,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models,NDP for MoE; activation movement; GPU-MoNDE load-balancing scheme,,,
 2024,ASPLOS,PKU,SpecPIM: Accelerating Speculative Inference on PIM-Enabled System via Architecture-Dataflow Co-Exploration,algorithmic and architectural heterogeneity; PIM resource allocation; multi-model collaboration workflow,,,
-2025,MICRO,UCSD,Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving, monolithic 3D-Stackable DRAM without TSV; in-memory tiering for vertical latency variation; topic-based expert usage prediction for MoE serving,4,3,3
+2025,MICRO,UCSD,Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving,monolithic 3D-Stackable DRAM without TSV; in-memory tiering for vertical latency variation; topic-based expert usage prediction for MoE serving,4,3,3
 # #### HBM-PIM
 # Solution: Replace GPU's traditional DRAM-only HBM dies with PIM-enabled HBM dies to achieve higher memory bandwidth.
 2021,ISCA,Samsung,Hardware Architecture and Software Stack for PIM Based on Commercial DRAM Technology Industrial Product, drop-in replacement for standard HBM2; bank-level parallelism using standard DRAM commands; address aligned mode to tolerate host-side command reordering,3,5,3
