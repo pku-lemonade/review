@@ -19,6 +19,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General Application-Specific Optimization
 # Challenge: Existing NDP architecture are designed for general-purpose computing; not efficient for specific tasks like graph processing.
 2022,ISCA,Micron,To PIM or Not for Emerging General Purpose Processing in DDR Memory Systems, vector engine inside NDP bank; intelligent code offload decision,2,3,2
+2023,EuroSys,Univ. of Virginia,NearPM: A Near-Data Processing System for Storage-Class Applications,partitioned persist ordering for asynchronous CPU-NDP execution; delayed synchronization for multi-device consistency,4,3,3
 2024,ISCA,Samsung,pSyncPIM: Partially Synchronous Execution of Sparse Matrix Operations for All-Bank PIM Architectures,partially synchronous PIM control; predicated execution; sparse matrix distribution & compaction,3,3,3
 2025,ATC,RUC,Turbocharge ANNS on Real Processing-in-Memory by Enabling Fine-Grained Per-PIM-Core Scheduling,per-PU scheduling; persistent PIM kernel; per-PU dispatching with selective replication,3,4,4
 2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
@@ -34,6 +35,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ASPLOS,Seoul National,AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference,bank-level GEMV & buffer-die Softmax units; head-level pipelining; feedforward co-processing optimizations,4,4,4
 2024,DAC,Hunan Univ.,A Real-time Execution System of Multimodal Transformer through PIM-GPU Collaboration,dynamic strategy for PIM-GPU task offloading; variable-length-aware PIM allocation optimizer; extended TVM backend for PIM-GPU command generation,3,3,3
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
+2025,MICRO,Cornell,LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention,hybrid dense-sparse attention algorithm; KV cache offloading to CXL-PIM; sign-concordance filtering by iterative quantization,3,2,2
 # #### MoE-LLM Optimization
 # Challenge: MoE models often have higher Op/Byte ratios, making bank-level PIM easily compute-bound and limiting speedup.
 2024,DAC,Seoul National,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models, activation movement strategy to replace costly parameter movement; dynamic GPU-MoNDE load balancing for hot/cold experts,4,4,2
@@ -124,12 +126,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,PKU,H2-LLM: Hardware-Dataflow Co-Exploration for Heterogeneous Hybrid-Bonding-based Low-Batch LLM Inference,operator-channel binding; computation-bandwidth trade-off; dataflow-based DSE,4,3,3
 2025,MICRO,THU,3D-PATH: A Hierarchy LUT Processing-in-memory Accelerator with Thermal-aware Hybrid Bonding Integration,sparse-aware hierarchical slow-fast LUT design; multiplier-free floating-point operation by LUT; hotspot-aware hardware with self-throttling sense amplifier,4,2,2
 2025,MICRO,Univ. of British Columbia,RayN: Ray Tracing Acceleration with Near-memory Computing,ray tracing units in 3D stacked DRAM logic layer; BLAS Breaking algorithm to partition BVH tree for load balancing; hybrid memory controller for concurrent GPU and near-memory access,4,3,2
-# #### HMC
+# #### HMC or HMC-like PIM
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. 
 # Solution: Use TSVs to provide TB/s level bandwidth in inter-bank communication & band-to-logic layer communication.
 2013,PACT,KAIST,Memory-centric System Interconnect Design with Hybrid Memory Cubes,memory-centric network; distributor-based topology for reduced latency; non-minimal routing for higher throughput,,,
 2024,DAC,SNU,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models,NDP for MoE; activation movement; GPU-MoNDE load-balancing scheme,,,
 2024,ASPLOS,PKU,SpecPIM: Accelerating Speculative Inference on PIM-Enabled System via Architecture-Dataflow Co-Exploration,algorithmic and architectural heterogeneity; PIM resource allocation; multi-model collaboration workflow,,,
+2025,MICRO,UCSD,Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving, monolithic 3D-Stackable DRAM without TSV; in-memory tiering for vertical latency variation; topic-based expert usage prediction for MoE serving,4,3,3
 # #### HBM-PIM
 # Solution: Replace GPU's traditional DRAM-only HBM dies with PIM-enabled HBM dies to achieve higher memory bandwidth.
 2021,ISCA,Samsung,Hardware Architecture and Software Stack for PIM Based on Commercial DRAM Technology Industrial Product, drop-in replacement for standard HBM2; bank-level parallelism using standard DRAM commands; address aligned mode to tolerate host-side command reordering,3,5,3
