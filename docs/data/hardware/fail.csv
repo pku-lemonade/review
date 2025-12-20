@@ -56,7 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Develop fault-tolerance techniques specifically designed for CIM
 # #### ABFT for Digital CIM systems
 2024,ISPACS,CYCU,An Approximate Method for The Fault Tolerance of SRAM-Based Near-Memory Multiply-Accumulate Units,bit-significance-driven resiliency; reconfigurable partial product generator; built-in self-test (BIST),2,2,2
-2024,VLSITC,THU,ETCIM: An Error-Tolerant Digital-CIM Processor with Redundancy-Free Repair and Run-Time MAC and Cell Error Correction,fault-adaptive CIM initializer; block-wise ECC; progressive cell error corrector,3,3,2
+2024,JSSC,THU,ETCIM: Error-Tolerant Digital CIM Processor With Redundancy-Free Hard Error Repair and Run-Time Soft Error Correction,computing-aware fault remapping; input-check-recover; progressive cell error corrector,4,4,3
 2025,HPCA,THU,ER-DCIM: Error-Resilient Digital CIM Architecture with Run-Time MAC-Cell Error Correction,error-resilience framework for digital CIM addressing both cell and MAC errors; Adaptive mode switcher between high and low voltage mode,4,3,2
 # #### ABFT for Analog CIM systems
 2022,JETCAS,Georgia Tech,MAC-ECC: In-Situ Error Correction and Its Design Methodology for Reliable NVM-Based Compute-in-Memory Inference Engine,arithmetic error correcting code using in-situ parity RRAM; extrapolation-based design methodology,3,4,3
