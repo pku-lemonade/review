@@ -481,6 +481,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Compute-Kernel-Level Optimizations
 2025,arXiv,SJTU,Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores,dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression,,,
+2025,Mips,Cornell,FlashMoE: Fast Distributed MoE in a Single Kernel,mega kernel for MoE model; persistent kernel to reduce CPU overhead,3,4,3
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
