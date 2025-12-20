@@ -62,3 +62,4 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,JETCAS,Georgia Tech,MAC-ECC: In-Situ Error Correction and Its Design Methodology for Reliable NVM-Based Compute-in-Memory Inference Engine,arithmetic error correcting code using in-situ parity RRAM; extrapolation-based design methodology,3,4,3
 2022,DAC,Georgia Tech,Improving compute in-memory ECC reliability with successive correction,successive correction by detection; modified ECC decoder,3,2,2
 2023,VTS,KIT,A Low Overhead Checksum Technique for Error Correction in Memristive Crossbar for Deep Learning Applications,ILP solver to compress checksum; hardware-aware Retraining method; scaling factor for checksum,3,3,3
+2025,Phil. Trans. R. Soc. A,Bosch,Neural in-memory checksums: an error detection and correction technique for safe in-memory inference,dual-orthogonal checksum blocks; sensitivity-aware protection,3,3,3
