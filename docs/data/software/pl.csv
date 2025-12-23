@@ -19,6 +19,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: High-level programming model, automatic code generation, performance optimization for specialized hardware
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
 
+# #### Embedded DSL Compiler Frameworks
+# Challenge: Developing high-performance parallel DSLs for heterogeneous hardware requires significant repetitive effort in building IRs, optimizers, and code generators from scratch.
+2011,IEEE Micro,Stanford & EPFL,Implementing Domain-Specific Languages for Heterogeneous Parallel Computing,Delite compiler framework; language virtualization; multi-view IR (Generic/Parallel/Domain-Specific); lightweight modular staging (LMS); heterogeneous code generation,4,4,3
+2011,PPoPP,Stanford,A Domain-Specific Approach To Heterogeneous Parallelism,Delite runtime; deferred execution model; dynamic task graph; Delite op archetypes; GPU memory manager; run-ahead model,4,4,4
+
 # #### Sparse Tensor Compilers
 # Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
 2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations,4,3,3
@@ -29,6 +34,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Domain-Specific Languages
 # Solution: formal semantics definition, tool generation automation, cross-domain generalization
+
+# #### Machine Learning DSLs
+# Challenge: Using general-purpose languages for ML requires explicit, complex parallelization for heterogeneous hardware, limiting productivity and performance portability.
+2011,ICML,Stanford,OptiML: An Implicitly Parallel Domain-Specific Language for Machine Learning,OptiML; implicitly parallel DSL; best-effort computing; relaxed dependencies; domain-specific intermediate representation,4,4,4
 
 # #### Graph DSLs
 # Challenge: balancing expressiveness, usability, and performance in graph DSL design

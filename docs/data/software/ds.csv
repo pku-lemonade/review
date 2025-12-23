@@ -58,6 +58,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: meet the SLO when providing LLM service on cloud platform.
 2025,arXiv,Azure,TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms,thermal/power property characterization; dynamically adjust in response to power or cooling failures; thermal- and poweraware manner,,,
 
+# ### Resource Management in Cloud Platform
+# Challenge: reclaim resources that have been allocated to users but are temporarily idle without affecting user experience
+2021,EuroSys,Stanford,SmartHarvest: harvesting idle CPUs safely and efficiently in the cloud,ElasticVM for dynamically harvesting; cost-sensitive multi-class classification; two-level safeguard mechanism,3,4,2
+2022,ASPLOS,Stanford,SOL: Safe On-Node Learning in Cloud Platforms,model and actuator decoupled interface; watchdog-style safeguards to avoiding bad models,3,3,2
 
 # ## Microservices
 # Focusing on the microservices.
@@ -363,6 +367,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2015,DATE,NYU,Variability-Aware Dark Silicon Management in On-Chip Many-Core Systems,variability-aware dark core patterning; joint thread-to-core mapping and power-state control; temperature-dependent leakage feedback modeling,3,3,2
 2018,DATE,NTU,HiMap: A Hierarchical Mapping Approach for Enhancing Lifetime Reliability of Dark Silicon Manycore Systems,two-level hierarchical mapping for lifetime reliability; block-based selection; cluster-based adjustment,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance- and aging-aware objective formulation; reaction–diffusion (R–D)-based NBTI aging model,3,3,2
+
+# ### RL-based Scheduling
+# Solution: learn high-quality scheduling policies via ‘trial and error’ without relying on minimal manual interventions or expert knowledge
+2020,SC,UNCC,RLScheduler: An Automated HPC Batch Job Scheduler Using Reinforcement Learning,kernel-based neural network; Actor-Critic structure for efficient training; trajectory filtering mechanism,4,3,2
+2022,TPDS,IIT,DRAS: Deep Reinforcement Learning for Cluster Scheduling in High Performance Computing,hierarchical neural network to incorporate HPC key features;three-phase training process for rapid convergence,3,4,2
+2024,HPCA,CQU&THU,E2EMap: End-to-End Reinforcement Learning for CGRA Compilation via Reverse Mapping,reverse mapping for exploration space reduction; GCN-based state encoding; masking function to avoid invalid action,4,3,2
 
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
