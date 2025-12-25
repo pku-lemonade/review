@@ -415,9 +415,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Fault tolerance Optimizations
 2025,PPoPP,University of Oregon,ATTNChecker: Highly-Optimized Fault Tolerant Attention for Large Language Model Training,Algorithm-Based Fault Tolerance (ABFT); soft error correction; training reliability; INF/NaN error handling,4,4,3
 2025,arXiv,UCR,FT-Transformer: Resilient and Reliable Transformer with End-to-End Fault Tolerant Attention,Flashattn+ABFT; GPU based runtime optimization,3,3,2
+2021,SC,CMU,Arithmetic-intensity-guided fault tolerance for neural network inference on GPUs,do ABFT on every thread computation to reduce memory sync; arithmetic-intensity-guided fault detection,3,3,2
+
+# ##### ML Sparse related optimizaions
+# Challenge: ML models show that some errors are not critical to the model's performance. Can use this to reduce the fault tolerance overhead.
 2025,HPDC,GMU,FT2: First-Token-Inspired Online Fault Tolerance on Critical Layers for Generative Large Language Models,inference-oriented error detection; clip based fault recovery; first token get range,3,2,2
 2025,arXiv,Gensyn,All is Not Lost: LLM Recovery without Checkpoints,replace two layer's value to recover from fault; out-of-order pipeline execution to tolerate crash,2,1,2
 2025,arXiv,UCAS,ApproxABFT: Approximate Algorithm-Based Fault Tolerance for Neural Network Processing,adaptive error tolerance thresholds; reduction in error detection overhead,3,3,3
+2023,VLSI,ICT,Soft Error Reliability Analysis of Vision Transformers,error injection experiment on ViT; block-wise ABFT optimizations,4,3,3
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
@@ -486,6 +491,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Compute-Kernel-Level Optimizations
 2025,arXiv,SJTU,Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores,dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression,,,
+2025,Mips,Cornell,FlashMoE: Fast Distributed MoE in a Single Kernel,mega kernel for MoE model; persistent kernel to reduce CPU overhead,3,4,3
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
