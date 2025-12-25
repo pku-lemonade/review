@@ -590,8 +590,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Configuration Optimization
 # Challenge: the configuration space is too large to be searched manually.
-2025,OSDI,PKU,Mirage: A Multi-Level Superoptimizer for Tensor Programs,auto algebraically transfer tensor; using DAG to search configuration space; auto generate kernel function,4,4,3
+2019,SIGGRAPH,Facebook,"Learning to Optimize Halide with Tree Search and Random Programs","learning-based auto-scheduling; cost model training on random programs; beam search over schedule space",4,4,4
 2020,ASPLOS,PKU,FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System,tvm auto schedule; RL based stragety find; auto optimizing in large configuration space,4,4,3
+2025,OSDI,PKU,Mirage: A Multi-Level Superoptimizer for Tensor Programs,auto algebraically transfer tensor; using DAG to search configuration space; auto generate kernel function,4,4,3
 
 # ### Diffusion Model Serving Systems
 # Challenge: serving diffusion models need sequential iterative process, which creates prohibitive latency for generating high-resolution images in real-time and is inherently difficult to parallelize.
