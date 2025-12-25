@@ -1,0 +1,50 @@
+/* ---- Concise CSS Overrides for Table Column Widths ---- */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    padding: 6px 8px; /* <<< SET YOUR DESIRED DEFAULT PADDING HERE */
+}
+
+/* Override FIRST column (e.g., Year) width, padding, and text alignment */
+.md-typeset table:not([class]) th:nth-child(1),
+.md-typeset table:not([class]) td:nth-child(1) {
+    width: 50px;        /* REQUIRED: Set your desired narrow width (adjust value) */
+    min-width: 0; /* Likely inherited or not needed if width is respected */
+}
+
+.md-typeset table:not([class]) th:nth-child(2),
+.md-typeset table:not([class]) td:nth-child(2) {
+    width: 50px;
+    min-width: 0;
+}
+
+.md-typeset table:not([class]) th:nth-child(3),
+.md-typeset table:not([class]) td:nth-child(3) {
+    width: 50px;
+    min-width: 0;
+}
+
+.md-typeset table:not([class]) th:nth-child(4),
+.md-typeset table:not([class]) td:nth-child(4) {
+    min-width: 200px;
+}
+
+.md-typeset table:not([class]) th:nth-child(5),
+.md-typeset table:not([class]) td:nth-child(5) {
+    min-width: 200px;
+}
+
+.md-typeset table:not([class]) th:nth-child(n+6),
+.md-typeset table:not([class]) td:nth-child(n+6) {
+    width: 50px;
+    min-width: 0;
+}
+
+/* .md-grid {
+    max-width: 1440px;
+} */
+
+:root  > * {
+    /* --md-primary-fg-color: #397B9F; */
+    --md-primary-fg-color: #5F4A89;
+    /* --md-primary-fg-color: #824375; */
+}
