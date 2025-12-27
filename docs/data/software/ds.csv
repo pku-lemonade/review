@@ -371,8 +371,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### RL-based Scheduling
 # Solution: learn high-quality scheduling policies via ‘trial and error’ without relying on minimal manual interventions or expert knowledge
 2020,SC,UNCC,RLScheduler: An Automated HPC Batch Job Scheduler Using Reinforcement Learning,kernel-based neural network; Actor-Critic structure for efficient training; trajectory filtering mechanism,4,3,2
+2021,ICPADS,UCAS,Deep Reinforcement Agent for Failure-aware Job scheduling in High-Performance Computing,usage status encoding; make-span based reward function; iterative inference for multi-gpu scene,3,2,2
 2022,TPDS,IIT,DRAS: Deep Reinforcement Learning for Cluster Scheduling in High Performance Computing,hierarchical neural network to incorporate HPC key features;three-phase training process for rapid convergence,3,4,2
+2022,HPDC,UNCC,SchedInspector: A Batch Job Scheduling Inspector Using Reinforcement Learning,queue delays for overall loss evaluation; cluster availability; percentage reward function,3,3,2
+
+# ### RL-based Mapping
+# Solution: learn high-quality mapping policies via ‘trial and error’ without relying on minimal manual interventions or expert knowledge
 2024,HPCA,CQU&THU,E2EMap: End-to-End Reinforcement Learning for CGRA Compilation via Reverse Mapping,reverse mapping for exploration space reduction; GCN-based state encoding; masking function to avoid invalid action,4,3,2
+2025,ASPLOS,NUS,Enhancing CGRA Efficiency Through Aligned Compute and Communication Provisioning,hierarchical execution with motifs; plaid collective unit; motif generation algorithm,4,4,2
+2025,TPDS,THU,Raccoon: Lightweight Support for Comprehensive Control Flows in Reconfigurable Spatial Architectures,loop unit; predicate control unit; loop- and branch-level ISA; workqueue/subgraph partition algorithm,4,4,2
 
 # ## General optimizations for Deep Learning Systems
 # Solution: general optimizations for deep learning systems.
