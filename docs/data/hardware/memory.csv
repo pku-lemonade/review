@@ -184,6 +184,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ESSCIRC,THU,A 65nm 8b-Activation 8b-Weight SRAM-Based Charge-Domain Computing-in-Memory Macro Using A Fully-Parallel Analog Adder Network and A Single-ADC Interface,SRAM-based CD-CiM architecture; charge-domain analog adder tree; ReLU-optimized ADC,4,4,4
 2021,ISSCC,TSMC,An 89TOPS/W and 16.3TOPS/mm2 All-Digital SRAM-Based Full-Precision Compute-In Memory Macro in 22nm for Machine-Learning Edge Applications,programmable bit-widths for both input and weights; SRAM and CIM mode,2,5,1
 2021,JSSC,KAIST,Z-PIM: A Sparsity-Aware Processing-in-Memory Architecture With Fully Variable Weight Bit-Precision for Energy-Efficient Deep Neural Networks,bit-serial operation to support variable weight bit-precision; data mapping and computation flow for sparsity handling,3,4,4
+# #### SRAM CIM: Reconfigurable Macro
+2021,JSSC,UCSB,Colonnade: A Reconfigurable SRAM-Based Digital Bit-Serial Compute-In-Memory Macro for Processing Neural Networks,reconfigurable column MAC; sparse pipelining,4,4,4
+2023,TCSI,UCSB,A 1-16b Reconfigurable 80Kb 7T SRAM-Based Digital Near-Memory Computing Macro for Processing Neural Networks,radix-4 booth encoding; bit-serial reconfigurable logic,4,4,3
+2024,TCSI,CAS,A 1–8b Reconfigurable Digital SRAM Compute-in-Memory Macro for Processing Neural Networks,Decompose-Accumulate-and-Shift(DAS); Reconfigurable Digital Arithmetic Unit (RDAU); input-sparsity driven clock gating,4,4,3
 # #### SRAM CIM: Specific Use or Application
 2023,TCAS-I,UIC,MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence,SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations,,,
 2024,DAC,GWU,Addition is Most You Need: Efficient Floating-Point SRAM Compute-in-Memory by Harnessing Mantissa Addition,decomposing FP mantissa multiplication into sub-ADD and sub-MUL; hybrid-domain SRAM CIM architecture,3,3,2
