@@ -129,3 +129,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Data Access Accelerators
 # Challenge: Indirect and sparse memory access patterns; low memory bandwidth utilization; core structural limitations
 2025,ISCA,UMich,DX100: Programmable Data Access Accelerator for Indirection,indirect memory access accelerator; bulk memory access reordering; DRAM row-buffer hit rate optimization; programmable data access ISA,4,3,2
+
+# #### HBM Interconnects
+# Challenge: The built-in crossbar of HBM FPGAs suffers from contention and low bandwidth during many-to-many unicast access, and standard HLS lacks support for efficient burst buffering.
+2021,FPGA,UCLA,HBM Connect: High-Performance HLS Interconnect for FPGA HBM,HBM Connect; HLS Virtual Buffer (HVB); Mux-Demux Switch; butterfly custom crossbar; many-to-many unicast; pseudo-channel optimization,4,4,2
