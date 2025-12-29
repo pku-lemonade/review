@@ -187,7 +187,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### SRAM CIM: Reconfigurable Macro
 2021,JSSC,UCSB,Colonnade: A Reconfigurable SRAM-Based Digital Bit-Serial Compute-In-Memory Macro for Processing Neural Networks,reconfigurable column MAC; sparse pipelining,4,4,4
 2023,TCSI,UCSB,A 1-16b Reconfigurable 80Kb 7T SRAM-Based Digital Near-Memory Computing Macro for Processing Neural Networks,radix-4 booth encoding; bit-serial reconfigurable logic,4,4,3
-2024,TCSI,CAS,A 1–8b Reconfigurable Digital SRAM Compute-in-Memory Macro for Processing Neural Networks,Decompose-Accumulate-and-Shift(DAS); Reconfigurable Digital Arithmetic Unit (RDAU); input-sparsity driven clock gating,4,4,3
+2024,TCSI,CAS,A 1-8b Reconfigurable Digital SRAM Compute-in-Memory Macro for Processing Neural Networks,Decompose-Accumulate-and-Shift(DAS); Reconfigurable Digital Arithmetic Unit (RDAU); input-sparsity driven clock gating,4,4,3
 # #### SRAM CIM: Specific Use or Application
 2023,TCAS-I,UIC,MC-CIM: Compute-in-Memory With Monte-Carlo Dropouts for Bayesian Edge Intelligence,SRAM-based CIM macros to accelerate Monte-Carlo dropout; compute reuse between consecutive iterations,,,
 2024,DAC,GWU,Addition is Most You Need: Efficient Floating-Point SRAM Compute-in-Memory by Harnessing Mantissa Addition,decomposing FP mantissa multiplication into sub-ADD and sub-MUL; hybrid-domain SRAM CIM architecture,3,3,2
