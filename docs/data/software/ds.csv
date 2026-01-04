@@ -618,3 +618,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Tencent,PipeFusion: Patch-level Pipeline Parallelism for Diffusion Transformers Inference,patch-level pipeline parallelism; reusing one-step stale feature maps to exploit temporal redundancy; simultaneous image patch and model layer partitioning,4,4,2
 2025,arXiv,UMASS,HADIS: Hybrid Adaptive Diffusion Model Serving for Efficient Text-to-Image Generation,offline analysis based router choose; LIP based resource allocation,2,3,2
 2024,arXiv,Tencent,xDiT: an Inference Engine for Diffusion Transformers (DiTs) with Massive Parallelism,hybrid of sequence parallelism & PipeFusion & classifier-free guidance parallelism; patch parallelism for the VAE decoder to prevent out-of-memory errors,3,3,2
+
+# ### Multi Agent Systems
+# Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
+
+# #### CPU based Optimizations for Large Scale Multi-Agent Systems
+# Challenge: Large number will lead to high communication overhead on CPU based systems. The database, scheduler and communication need to be optimized.
+2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
+2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
+2025,arXiv,ZJU,Agent-Kernel: A MicroKernel Multi-Agent System Framework for Adaptive Social Simulation Powered by LLMs,micro-kernel MAS; decouple system function to enable more flexible and adaptive computation,3,3,2
+
+# #### GPU based Optimizations for Multi-Agent Systems
+# Challenge: Using GPU to run multi-agent systems can reduce the communication overhead. However, the GPU memory is limited, which requires optimization for memory management and communication.
+2024,arXiv,MIT,On the limits of agency in agent-based models,GPU optimization for agent simulation; use tensor for agent status expression; optimization for on-GPU operation,3,3,3
+2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
+
+# #### Reuse Optimizations for Multi-Agent Systems
+# Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
+2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
