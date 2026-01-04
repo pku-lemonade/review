@@ -28,11 +28,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,PACT,PKU,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing,splitting reduce operations to NDP units; narrow-shard strategy for data reuse; hybrid graph partition strategy for load balancing,4,3,3
 2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
 2025,arXiv,National Tech Univ. of Athens,PIMfused: Near-Bank DRAM-PIM with Fused-layer Dataflow for CNN Data Transfer Optimization, hybrid dataflow combining fused-layer and layer-by-layer strategies,3,2,2
-2025,arXiv,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
+2026,HPCA,Seoul National,RoMe: Row Granularity Access Memory System for Large Language Models,row-granularity access interface for LLM streaming; virtual bank to eliminate bank groups and pseudo channels; logic-die command generator for C/A pin reduction and simpler MC,4,3,3
 # #### LLM Optimization
 # Challenge: LLM inference is fundamentally bottlenecked by memory bandwidth; HBM is expensive and not scalable.
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
-2024,ASPLOS,Seoul National,AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference,bank-level GEMV & buffer-die Softmax units; head-level pipelining; feedforward co-processing optimizations,4,4,4
 2024,DAC,Hunan Univ.,A Real-time Execution System of Multimodal Transformer through PIM-GPU Collaboration,dynamic strategy for PIM-GPU task offloading; variable-length-aware PIM allocation optimizer; extended TVM backend for PIM-GPU command generation,3,3,3
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
 2025,MICRO,Cornell,LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention,hybrid dense-sparse attention algorithm; KV cache offloading to CXL-PIM; sign-concordance filtering by iterative quantization,3,2,2
@@ -89,6 +88,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MICRO,SJTU,HEAT: NPU-NDP HEterogeneous Architecture for Transformer-Empowered Graph Neural Networks,topology-aware mixed-precision encoding for transformer; subgraph bundling and reordering for GNN memory efficiency; decoupled dataflow for NPU-NDP concurrent execution,2,3,3
 2025,arXiv,Hanyang Univ.,Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits, hybrid TP-DP parallelism for GPU-PNM systems; token page selection; steady-token selection,2,3,4
 2025,ICCAD,PKU,LP-Spec: Leveraging LPDDR PIM for Efficient LLM Mobile Speculative Inference with Architecture-Dataflow Co-Optimization,GEMM-enhanced hybrid LPDDR5 PIM; near-data memory controller for concurrent NPU-PIM execution & data reallocation; hardware-aware draft token pruning,3,4,2
+2025,arXiv,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
 # #### Optimizations on UPMEM-PIM
 # Challenge: The original UMPEM API library is not well-suited for all workloads especially for those with cross-bank communication.
 2023,arXiv,ETHZ,A Framework for High-throughput Sequence Alignment using Real Processing-in-Memory Systems,Alignment-in-Memory framework; hybrid WRAM-MRAM sketch data management for PIM,2,3,4
@@ -123,6 +123,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
 # #### Hybrid Bounding-Based PIM
 # Solution: Hybrid Bounding provides massively increased interconnect density and bandwidth by direct copper-to-copper connection.
+2024,ISCA,THU,Exploiting Similarity Opportunities of Emerging Vision AI Models on Hybrid Bonding Architecture,clustering similarity effect architecture for hybrid bonding DRAM; hotspot content SRAM for parallel similarity detection; progressive sparsity detection and balance for computation skipping and workload redistribution,4,4,2
 2025,ISCA,PKU,H2-LLM: Hardware-Dataflow Co-Exploration for Heterogeneous Hybrid-Bonding-based Low-Batch LLM Inference,operator-channel binding; computation-bandwidth trade-off; dataflow-based DSE,4,3,3
 2025,MICRO,THU,3D-PATH: A Hierarchy LUT Processing-in-memory Accelerator with Thermal-aware Hybrid Bonding Integration,sparse-aware hierarchical slow-fast LUT design; multiplier-free floating-point operation by LUT; hotspot-aware hardware with self-throttling sense amplifier,4,2,2
 2025,MICRO,Univ. of British Columbia,RayN: Ray Tracing Acceleration with Near-memory Computing,ray tracing units in 3D stacked DRAM logic layer; BLAS Breaking algorithm to partition BVH tree for load balancing; hybrid memory controller for concurrent GPU and near-memory access,4,3,2
@@ -130,14 +131,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. 
 # Solution: Use TSVs to provide TB/s level bandwidth in inter-bank communication & band-to-logic layer communication.
 2013,PACT,KAIST,Memory-centric System Interconnect Design with Hybrid Memory Cubes,memory-centric network; distributor-based topology for reduced latency; non-minimal routing for higher throughput,,,
+2021,DAC,UCSD,MAT: Processing In-Memory Acceleration for Long-Sequence Attention,iterative tiled processing to reduce memory footprint of O(N^2) score matrices; late softmax update to enable pipelined attention; dynamic programming-based sample scheduling for optimal PIM resource utilization,3,2,2
 2024,DAC,SNU,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models,NDP for MoE; activation movement; GPU-MoNDE load-balancing scheme,,,
 2024,ASPLOS,PKU,SpecPIM: Accelerating Speculative Inference on PIM-Enabled System via Architecture-Dataflow Co-Exploration,algorithmic and architectural heterogeneity; PIM resource allocation; multi-model collaboration workflow,,,
 2025,MICRO,UCSD,Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving,monolithic 3D-Stackable DRAM without TSV; in-memory tiering for vertical latency variation; topic-based expert usage prediction for MoE serving,4,3,3
-# #### HBM-PIM
-# Solution: Replace GPU's traditional DRAM-only HBM dies with PIM-enabled HBM dies to achieve higher memory bandwidth.
+# #### HBM2-PIM
+# Solution: HBM2-PIM is the first commercial HBM-PIM product, and 4 out of 8 DRAM layers are PIM-enabled layers, while the other 4 layers are standard DRAM layers.
 2021,ISCA,Samsung,Hardware Architecture and Software Stack for PIM Based on Commercial DRAM Technology Industrial Product, drop-in replacement for standard HBM2; bank-level parallelism using standard DRAM commands; address aligned mode to tolerate host-side command reordering,3,5,3
 2022,Hot Chips,Samsung,"Aquabolt-XL HBM2-PIM, LPDDR5-PIM With In-Memory Processing, and AXDIMM With Acceleration Buffer",HBM2-PIM with bank-level SIMD programmable computing units; Acceleration DIMM with acceleration buffers for rank-level parallelism,2,5,3
 2023,MICRO,Yonsei,AESPA: Asynchronous Execution Scheme to Exploit Bank-Level Parallelism of Processing-in-Memory, Single-Instruction Long-Data execution model; asynchronous bank operation via long-data commands; column-major GEMV dataflow with shared accumulators,3,3,3
+# #### HBM3-PIM
+# Solution: HBM3-PIM further increases the capacity and the parallelism by stacking more DRAM layers and all the layers are the PIM-enabled layer.
+2024,ASPLOS,Seoul National,AttAcc! Unleashing the Power of PIM for Batched Transformer-based Generative Model Inference,bank-level GEMV & buffer-die Softmax units; head-level pipelining; feedforward co-processing optimizations,4,4,4
 2025,ICS,Korea Univ.,SparsePIM: An Efficient HBM-Based PIM Architecture for Sparse Matrix-Vector Multiplications,DRAM row-aligned format; bounded cap K-means clustering for load balancing; bank group accumulators,3,3,2
 
 # #### Benchmarks
