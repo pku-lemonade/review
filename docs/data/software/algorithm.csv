@@ -136,6 +136,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Outlier-aware quantization focuses on identifying and handling outlier values in neural network
 2023,ICML,MIT,SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models,offline migrates the quantization difficulty from activations to weights,4,5,3
 2025,ICML,"Huawei,THU",FlatQuant: Flatness Matters for LLM Quantization,post-training quantization method to enhance the flatness of both weights and activations in LLMs,4,4,3
+2025,arXiv,Houmo AI,ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models,activation-aware scaling; sensitivity-based truncation rank searching; low-rank KV Cache storage,4,3,3
 2025,arXiv,Houmo AI,OstQuant: Refining Large Language Model Quantization with Orthogonal and Scaling Transformations for Better Distribution Fitting,frobenius norm of quantization noise; iterative alternating optimization,3,3,3
 # ##### For General LLM
 2024,ISCA,SNU,Tender: Accelerating Large Language Models via Tensor Decomposition and Runtime Requantization,“power of 2” channel decomposition rule; Tender accelerator design,4,3,2
