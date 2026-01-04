@@ -9,8 +9,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Deep Learning Compilers
 # Solution: Graph transformations, Kernel fusion, Tensor optimization for compute and memory
-2013,PLDI,MIT,Halide: A Language and Compiler for Optimizing Parallelism Locality and Recomputation in Image Processing Pipelines,image process DSL; Compute and Schedule Separation IR Design Idea; Pipeline optimization,4,4,3
+
+# #### Foundational DSLs & Compilers
+# Challenge: Bridging high-level algorithmic expression with low-level hardware performance for array/tensor computations.
+# Solution: Decouple algorithm specification from its execution schedule to enable performance portability and automated optimization.
+2013,PLDI,MIT,"Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",algorithm-schedule decoupling; image processing DSL; explicit scheduling language,4,4,4
 2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
+
+# #### Tensor & Pipeline Optimization
+# Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
+# Solution: Use MLIR-based abstractions, novel programming models, and automatic tuning to generate efficient code for tensor programs and pipelines.
 2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
 2025,arXiv,PKU,TileLang: A Composable Tiled Programming Model for AI Systems,tile-based programming; tvm-based compiler; compared to trition is more flexible,4,4,3
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
