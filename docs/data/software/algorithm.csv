@@ -132,12 +132,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### General method
 # Solution: General quantization methods aim to optimize the trade-off between model accuracy and computational efficiency. Challenges include addressing layer-specific quantization errors, enhancing fault tolerance, and finding optimal bit-width configurations.
-# ##### For General LLM
+# ##### Outlier-aware Quantization
+# Solution: Outlier-aware quantization focuses on identifying and handling outlier values in neural network
 2023,ICML,MIT,SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models,offline migrates the quantization difficulty from activations to weights,4,5,3
+2025,ICML,"Huawei,THU",FlatQuant: Flatness Matters for LLM Quantization,post-training quantization method to enhance the flatness of both weights and activations in LLMs,4,4,3
+2025,arXiv,Houmo AI,OstQuant: Refining Large Language Model Quantization with Orthogonal and Scaling Transformations for Better Distribution Fitting,frobenius norm of quantization noise; iterative alternating optimization,3,3,3
+# ##### For General LLM
 2024,ISCA,SNU,Tender: Accelerating Large Language Models via Tensor Decomposition and Runtime Requantization,“power of 2” channel decomposition rule; Tender accelerator design,4,3,2
 2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
 2025,AAAI,ByteDance,ABQ-LLM: Arbitrary-Bit Quantized Inference Acceleration for Large Language Models,block-wise distribution correction and compensation scheme; bit balance strategy,4,3,2
-2025,ICML,"Huawei,THU",FlatQuant: Flatness Matters for LLM Quantization,post-training quantization method to enhance the flatness of both weights and activations in LLMs,4,4,3
 
 # ###### KV Cache specialized
 2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,2,2,3
@@ -165,6 +168,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: DNN compression aims to reduce the size and computational requirements of deep neural networks
 2016,ICLR,Stanford,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding","three stage pipeline: pruning, trained quantization and Huffman coding",4,4,4
 2020,JSTSP,Fraunhofer HHI,DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks,identify set of priors in DNN; redefine CABAC's core scheme to capture priors,3,5,3
+2022,ICLR,Samsung,Language model compression with weighted low-rank factorization,fisher-weighted frobenius norm; alternating least squares (ALS) for matrix factorization,4,4,4
 
 # ### Statistical Parameter Estimation
 # Solution: infer the distribution of variables using statistical methods from observed data
