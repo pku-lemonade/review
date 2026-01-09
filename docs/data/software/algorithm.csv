@@ -70,15 +70,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
+2013,Arxiv,DeepMind,Playing Atari with Deep Reinforcement Learning,Deep Q-Network (DQN) architecture; frame stacking; experience replay based random sampling,3,3,3
 2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
+2016,ICLR,Google,Continuous control with Deep Reinforcement Learning,Deep Deterministic Policy Gradient (DDPG); soft target updates; Ornstein-Uhlenbeck (OU) action noise,3,4,3
 2017,arXiv,OpenAI,Proximal Policy Optimization Algorithms,clipped surrogate objective; importance sampling; Actor-Critic with shared parameters; generalized advantage estimation,4,3,3
 2025,arXiv,DeepReinforce,CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning,contrastive RL-driven CUDA optimization without human priors; LLM-based CUDA kernel optimization; reward design for CUDA kernel,4,4,2
 
 # #### RL Parameter Adjustment
 # Solution: Investigate and optimize critical implementation details and hyperparameters, such as network initialization and observation normalization, to ensure training stability and maximize the agent’s final performance.
+2015,Arxiv,Google,Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,internal covariate shift; mini-batch statistics normalization; parameter scale invariance,4,4,2
 2018,ICLR,Google,Don't Decay the Learning Rate, Increase the Batch Size,BS-scheduling stragety replacement; accumulation scaling rule; effective lr rate,3,4,2
 2020,ICML,MitsubishiElectric,Can Increasing Input Dimensionality Improve Deep Reinforcement Learning,high-dimensional feature expansion; online MLP-denseNet module; batch normalization for covariate shift,4,4,2
 2020,arXiv,Google,What Matters In On-Policy Reinforcement Learning? A Large-Scale Empirical Study,near-zero action initialization; input observation normalization; data multi-pass training,3,5,2
+2020,ICLR,MIT,Implementation Matters in Deep Policy Gradients: A Case Study on PPO and TRPO,value function clipping; orthogonal initialization; trust region enforcement,3,3,2
 
 # #### DNN Training Algorithms
 # Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
