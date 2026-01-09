@@ -56,6 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### LLM-Powered AI Agent
 # Challenge: How to scale agent number and how to reach human level behavior.
 2018,CVPR,MIT,VirtualHome: Simulating Household Activities via Programs,simulation framework for home agent; interaction within the home; action planning and execution,3,3,3
+2023,ICLR,Google,ReAct: Synergizing Reasoning and Acting in Language Models,interleaved reasoning and acting; Thought-Act-Observation loop for LLM agents; few-shot prompting for agentic behavior,4,4,4
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
 2025,arXiv,THU,Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents,RAG-based LLM agent; use OpenAI api to run LLM; agent num is about 50,3,3,2
 2025,arXiv,THU,OpenCity: A Scalable Platform to Simulate Urban Activities with Massive LLM Agents,IO optimization for agent; prompt compression for LLM,3,2,1
@@ -65,6 +66,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Fudan,From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents,dividing simulations into Individual/Scenario/Society levels; modular agent architecture analysis involving Profile-Memory-Planning-Action,3,3,3
 
 # ###### LLM Agent for tool use
+2023,NeurIPS,Meta,Toolformer: Language Models Can Teach Themselves to Use Tools,perplexity reduction as self-supervised signal for tool learning; automatic annotation of API calls for fine-tuning; in-context learning to generate tool-use training data,4,4,3
 2025,arXiv,Berkeley,The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models,tool call ability benchmark,3,3,3
 2025,arXiv,Startup,MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Calling in LLM Agent Multi-Turn Conversations,remove unused tool in multi-turn conversation; use tool selector to select the most appropriate tool,3,3,2
 
