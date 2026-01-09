@@ -37,7 +37,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
 2025,MICRO,Cornell,LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention,hybrid dense-sparse attention algorithm; KV cache offloading to CXL-PIM; sign-concordance filtering by iterative quantization,3,2,2
-2025,IEEE LCA,POSTECH,Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization,scale cascading for simplifing dequantization; zero-offset removal for reduced circuit complexity,3,2,2
+2025,IEEE LCA,POSTECH,Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization,scale cascading for simplifying dequantization; zero-offset removal for reduced circuit complexity,3,2,2
 2025,IEEE LCA,Yonsei,RoPIM: A Processing-in-Memory Architecture for Accelerating Rotary Positional Embedding in Transformer Models,bank-level PIM accelerator for RoPE; row-level data mapping for single-token Q/K/V/S alignment; parallel data rearrangement via inverters,4,3,4
 # #### MoE-LLM Optimization
 # Challenge: MoE models often have higher Op/Byte ratios, making bank-level PIM easily compute-bound and limiting speedup.
