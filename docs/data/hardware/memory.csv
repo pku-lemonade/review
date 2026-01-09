@@ -90,12 +90,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Data transfer between NPU and PIM needs to go through the Host, causing high latency.
 2025,MICRO,SJTU,HEAT: NPU-NDP HEterogeneous Architecture for Transformer-Empowered Graph Neural Networks,topology-aware mixed-precision encoding for transformer; subgraph bundling and reordering for GNN memory efficiency; decoupled dataflow for NPU-NDP concurrent execution,2,3,3
 2025,ICCAD,PKU,LP-Spec: Leveraging LPDDR PIM for Efficient LLM Mobile Speculative Inference with Architecture-Dataflow Co-Optimization,GEMM-enhanced hybrid LPDDR5 PIM; near-data memory controller for concurrent NPU-PIM execution & data reallocation; hardware-aware draft token pruning,3,4,2
+2025,arXiv,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
 # #### GPU-PIM Heterogeneous Systems
 # Challenge: Weight, activation and KV Cache data mapping in conventional GPU-PIM systems is naive, causing space & bandwidth waste and load imbalance.
 2024,DAC,Hunan Univ.,A Real-time Execution System of Multimodal Transformer through PIM-GPU Collaboration,dynamic strategy for PIM-GPU task offloading; variable-length-aware PIM allocation optimizer; extended TVM backend for PIM-GPU command generation,3,3,3
 2025,HPCA,ICT,Make LLM Inference Affordable to Everyone: Augmenting GPU Memory with NDP-DIMM,activation sparsity-based hot(GPU)/cold(NDP) neuron partitioning; offline ILP + online predictor for neuron partition; window-based online remapping for GPU-NDP & NDP-NDP load balance,2,3,4
 2025,arXiv,Hanyang Univ.,Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits, hybrid TP-DP parallelism for GPU-PNM systems; token page selection; steady-token selection,2,3,4
-2025,arXiv,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
 # #### Optimizations on UPMEM-PIM
 # Challenge: The original UMPEM API library is not well-suited for all workloads especially for those with cross-bank communication.
 2023,arXiv,ETHZ,A Framework for High-throughput Sequence Alignment using Real Processing-in-Memory Systems,Alignment-in-Memory framework; hybrid WRAM-MRAM sketch data management for PIM,2,3,4
