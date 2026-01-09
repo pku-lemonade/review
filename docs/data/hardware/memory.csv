@@ -25,16 +25,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
 # #### DNN-Specific Optimization
 2021,HPCA,Seoul National,GradPIM: A Practical Processing-in-DRAM Architecture for Gradient Descent,fixed-function PIM architecture for DNN gradient descent; non-invasive PIM operations using reserved DDR commands,3,3,2
-2022,PACT,PKU,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing,splitting reduce operations to NDP units; narrow-shard strategy for data reuse; hybrid graph partition strategy for load balancing,4,3,3
 2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
 2025,arXiv,National Tech Univ. of Athens,PIMfused: Near-Bank DRAM-PIM with Fused-layer Dataflow for CNN Data Transfer Optimization, hybrid dataflow combining fused-layer and layer-by-layer strategies,3,2,2
 2026,HPCA,Seoul National,RoMe: Row Granularity Access Memory System for Large Language Models,row-granularity access interface for LLM streaming; virtual bank to eliminate bank groups and pseudo channels; logic-die command generator for C/A pin reduction and simpler MC,4,3,3
+# #### Graph-Specific Optimization
+# Challenge: Graph processing is fundamentally limited by memory bandwidth and requires frequent random accesses, which are not efficiently supported by non-interleaved, bank-level PIM architectures.
+2022,PACT,PKU,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing,splitting reduce operations to NDP units; narrow-shard strategy for data reuse; hybrid graph partition strategy for load balancing,4,3,3
+2025,HPCA,ZJU,GOPIM: GCN-Oriented Pipeline Optimization for PIM Accelerators,ML-based replica resource allocation for pipeline streamlining; interleaved mapping with adaptive selective vertex updating,2,3,3
 # #### LLM Optimization
 # Challenge: LLM inference is fundamentally bottlenecked by memory bandwidth; HBM is expensive and not scalable.
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
-2024,DAC,Hunan Univ.,A Real-time Execution System of Multimodal Transformer through PIM-GPU Collaboration,dynamic strategy for PIM-GPU task offloading; variable-length-aware PIM allocation optimizer; extended TVM backend for PIM-GPU command generation,3,3,3
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
 2025,MICRO,Cornell,LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention,hybrid dense-sparse attention algorithm; KV cache offloading to CXL-PIM; sign-concordance filtering by iterative quantization,3,2,2
+2025,IEEE LCA,POSTECH,Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization,scale cascading for simplifing dequantization; zero-offset removal for reduced circuit complexity,3,2,2
+2025,IEEE LCA,Yonsei,RoPIM: A Processing-in-Memory Architecture for Accelerating Rotary Positional Embedding in Transformer Models,bank-level PIM accelerator for RoPE; row-level data mapping for single-token Q/K/V/S alignment; parallel data rearrangement via inverters,4,3,4
 # #### MoE-LLM Optimization
 # Challenge: MoE models often have higher Op/Byte ratios, making bank-level PIM easily compute-bound and limiting speedup.
 2024,DAC,Seoul National,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models, activation movement strategy to replace costly parameter movement; dynamic GPU-MoNDE load balancing for hot/cold experts,4,4,2
@@ -76,18 +80,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,HPCA,PKU,DIMM-Link: Enabling Efficient Inter-DIMM Communication for Near-Memory Processing,high-speed hardware link bridges between DIMMs; direct intra-group P2P communication & broadcast; hybrid routing mechanism for inter-group communication,,,
 2025,HPCA,SJTU,AsyncDIMM: Achieving Asynchronous Execution in DIMM-Based Near-Memory Processing,Offload-Schedule-Return mechanism; switch-recovery scheduling; explicit/implicit synchronization,2,4,3
 2018,MICRO,UIUC,Application-Transparent Near-Memory Processing Architecture with Memory Channel Network, integrates a processor on a buffered DIMM; application-transparent near-memory processing; leverages memory channels for high-bandwidth/low-latency inter-processor communication,3,4,4 
-# #### CPU-PIM Systems
+# #### CPU-PIM Heterogeneous Systems
 # Challenge: High latency of concurrent host CPU and PIM operations via host CPU forwarding.
 2024,IEEE CA,KAIST,Analysis of Data Transfer Bottlenecks in Commercial PIM Systems: A Study With UPMEM-PIM, runtime data transposition causing high CPU overhead; PIM-integrated system memory mapping impact,2,2,2
 2024,ASPLOS,KAIST,NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing,dual row buffer architecture; sub-batch interleaving; greedy min-load bin packing algorithm,3,4,3
 2025,ISCA,Univ. of Virginia,Membrane: Accelerating Database Analytics with Bank-Level DRAM-PIM Filtering,bank-level DRAM-PIM filtering; CPU-PIM cooperative query execution; denormalization for PIM-amenable filtering,3,3,2
 2025,MICRO,Inha University,ComPASS: A Compatible PIM Protocol Architecture and Scheduling Solution for Processor-PIM Collaboration, PIM-ACT new memory command for multi-bank PIM operations; PIM request generator to offload host processor; static and adaptive throughput balancers for PIM and non-PIM request scheduling,4,2,2
-# #### GPU/NPU-PIM Systems
-# Challenge: Data transfer between GPU/NPU and PIM needs to go through the Host memory, causing high latency.
-2025,HPCA,ICT,Make LLM Inference Affordable to Everyone: Augmenting GPU Memory with NDP-DIMM,activation sparsity-based hot(GPU)/cold(NDP) neuron partitioning; offline ILP + online predictor for neuron partition; window-based online remapping for GPU-NDP & NDP-NDP load balance,2,3,4
+# #### NPU-PIM Heterogeneous Systems
+# Challenge: Data transfer between NPU and PIM needs to go through the Host, causing high latency.
 2025,MICRO,SJTU,HEAT: NPU-NDP HEterogeneous Architecture for Transformer-Empowered Graph Neural Networks,topology-aware mixed-precision encoding for transformer; subgraph bundling and reordering for GNN memory efficiency; decoupled dataflow for NPU-NDP concurrent execution,2,3,3
-2025,arXiv,Hanyang Univ.,Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits, hybrid TP-DP parallelism for GPU-PNM systems; token page selection; steady-token selection,2,3,4
 2025,ICCAD,PKU,LP-Spec: Leveraging LPDDR PIM for Efficient LLM Mobile Speculative Inference with Architecture-Dataflow Co-Optimization,GEMM-enhanced hybrid LPDDR5 PIM; near-data memory controller for concurrent NPU-PIM execution & data reallocation; hardware-aware draft token pruning,3,4,2
+# #### GPU-PIM Heterogeneous Systems
+# Challenge: Weight, activation and KV Cache data mapping in conventional GPU-PIM systems is naive, causing space & bandwidth waste and load imbalance.
+2024,DAC,Hunan Univ.,A Real-time Execution System of Multimodal Transformer through PIM-GPU Collaboration,dynamic strategy for PIM-GPU task offloading; variable-length-aware PIM allocation optimizer; extended TVM backend for PIM-GPU command generation,3,3,3
+2025,HPCA,ICT,Make LLM Inference Affordable to Everyone: Augmenting GPU Memory with NDP-DIMM,activation sparsity-based hot(GPU)/cold(NDP) neuron partitioning; offline ILP + online predictor for neuron partition; window-based online remapping for GPU-NDP & NDP-NDP load balance,2,3,4
+2025,arXiv,Hanyang Univ.,Scalable Processing-Near-Memory for 1M-Token LLM Inference: CXL-Enabled KV-Cache Management Beyond GPU Limits, hybrid TP-DP parallelism for GPU-PNM systems; token page selection; steady-token selection,2,3,4
 2025,arXiv,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
 # #### Optimizations on UPMEM-PIM
 # Challenge: The original UMPEM API library is not well-suited for all workloads especially for those with cross-bank communication.
