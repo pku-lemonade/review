@@ -30,10 +30,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ICSAI,MIT,LoopTree: Exploring the Fused-Layer Dataflow  Accelerator Design Space,"design space that supports set of tiling, recomputation, retention choices, and their combinations; model that validates design space",,,
 # #### LLM Accelerators
 # Challenge: LLM accelerators face challenges in terms of memory bandwidth; power consumption; and the need for efficient data movement.
+2020,HPCA,Seoul National,A3: Accelerating Attention Mechanisms in Neural Networks with Approximation,greedy candidate search for reducing search targets; post-scoring selection with dynamic thresholding for softmax; lookup-table-based exponent modules,4,3,2
 2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
 2025,arXiv,SJTU,ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM,hybrid ROM-SRAM architecture for on-device LLM; B-ROM design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models,,,
 2025,ISCA,Duke,Ecco: Improving Memory Bandwidth and Capacity for LLMs via Entropy-Aware Cache Compression,entropy-aware cache compression for LLMs; group-wise non-uniform quantization; shared k-means patterns; parallel Huffman hardware decoder,4,3,3
 2025,MICRO,KAIST,HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models,PipeFlash fine-grained pipelining for Attention;PipeSSD fused pipelined execution for Mamba-2;Unified Reconfigurable Streamlined Core (URSC);inter-operation dependency mitigation,4,3,3
+2024,ISCA,Furiosa AI,TCP: A Tensor Contraction Processor for AI Workloads,tensor contraction as a hardware primitive; circuit-switched fetch network for hierarchical data reuse; Einstein summation for tactic exploration,4,3,3
 # #### Quantized DNN Accelerators
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
