@@ -55,25 +55,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### LLM-Powered AI Agent
 # Challenge: How to scale agent number and how to reach human level behavior.
-
-# ###### Agent simulation in LLM manner <a name="Agent-LLM"></a>
-# Compared to [Agent-Less-LLM](#Agent-Less-LLM), LLM manner can simulate more complex and realistic behaviors.
 2018,CVPR,MIT,VirtualHome: Simulating Household Activities via Programs,simulation framework for home agent; interaction within the home; action planning and execution,3,3,3
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
 2025,arXiv,THU,Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents,RAG-based LLM agent; use OpenAI api to run LLM; agent num is about 50,3,3,2
 2025,arXiv,THU,OpenCity: A Scalable Platform to Simulate Urban Activities with Massive LLM Agents,IO optimization for agent; prompt compression for LLM,3,2,1
 
-# ###### Agent simulation in less-LLM manner <a name="Agent-Less-LLM"></a>
-# Challenge: Using LLM in million size simulation is too expensive. In these papers, LLM are only used in countable manner, the majority of agents are not powered by LLM.
-# Compared to [Agent-LLM](#Agent-LLM), less-LLM manner uses more agent counts and less LLM power.
-2024,arXiv,MIT,On the limits of agency in agent-based models,GPU optimization for agent simulation; use tensor for agent status expression; optimization for on-GPU operation,3,3,3
-2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
-
 # ###### LLM Agent for social simulation
 2023,UIST,Stanford,Generative Agents: Interactive Simulacra of Human Behavior,agent socail simulation baseline; 25 agents in town,3,4,3
-2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
-2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
-2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
 2024,arXiv,Fudan,From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents,dividing simulations into Individual/Scenario/Society levels; modular agent architecture analysis involving Profile-Memory-Planning-Action,3,3,3
 
 # ###### LLM Agent for tool use
@@ -83,7 +71,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
 2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
+2017,arXiv,OpenAI,Proximal Policy Optimization Algorithms,clipped surrogate objective; importance sampling; Actor-Critic with shared parameters; generalized advantage estimation,4,3,3
 2025,arXiv,DeepReinforce,CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning,contrastive RL-driven CUDA optimization without human priors; LLM-based CUDA kernel optimization; reward design for CUDA kernel,4,4,2
+
+# #### RL Parameter Adjustment
+# Solution: Investigate and optimize critical implementation details and hyperparameters, such as network initialization and observation normalization, to ensure training stability and maximize the agent’s final performance.
+2018,ICLR,Google,Don't Decay the Learning Rate, Increase the Batch Size,BS-scheduling stragety replacement; accumulation scaling rule; effective lr rate,3,4,2
+2020,ICML,MitsubishiElectric,Can Increasing Input Dimensionality Improve Deep Reinforcement Learning,high-dimensional feature expansion; online MLP-denseNet module; batch normalization for covariate shift,4,4,2
+2020,arXiv,Google,What Matters In On-Policy Reinforcement Learning? A Large-Scale Empirical Study,near-zero action initialization; input observation normalization; data multi-pass training,3,5,2
 
 # #### DNN Training Algorithms
 # Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
@@ -132,12 +127,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### General method
 # Solution: General quantization methods aim to optimize the trade-off between model accuracy and computational efficiency. Challenges include addressing layer-specific quantization errors, enhancing fault tolerance, and finding optimal bit-width configurations.
-# ##### For General LLM
+# ##### Outlier-aware Quantization
+# Solution: Outlier-aware quantization focuses on identifying and handling outlier values in neural network
 2023,ICML,MIT,SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models,offline migrates the quantization difficulty from activations to weights,4,5,3
+2025,ICML,"Huawei,THU",FlatQuant: Flatness Matters for LLM Quantization,post-training quantization method to enhance the flatness of both weights and activations in LLMs,4,4,3
+2025,arXiv,Houmo AI,ASVD: Activation-aware Singular Value Decomposition for Compressing Large Language Models,activation-aware scaling; sensitivity-based truncation rank searching; low-rank KV Cache storage,4,3,3
+2025,arXiv,Houmo AI,OstQuant: Refining Large Language Model Quantization with Orthogonal and Scaling Transformations for Better Distribution Fitting,frobenius norm of quantization noise; iterative alternating optimization,3,3,3
+# ##### For General LLM
 2024,ISCA,SNU,Tender: Accelerating Large Language Models via Tensor Decomposition and Runtime Requantization,“power of 2” channel decomposition rule; Tender accelerator design,4,3,2
 2025,arXiv,PKU,Bitnet.cpp: Efficient Edge Inference for Ternary LLMs,ternary mpGEMM library; avoid intricate bit-level manipulations; achieving lossless inference for BitNet b1.58,,,
 2025,AAAI,ByteDance,ABQ-LLM: Arbitrary-Bit Quantized Inference Acceleration for Large Language Models,block-wise distribution correction and compensation scheme; bit balance strategy,4,3,2
-2025,ICML,"Huawei,THU",FlatQuant: Flatness Matters for LLM Quantization,post-training quantization method to enhance the flatness of both weights and activations in LLMs,4,4,3
 
 # ###### KV Cache specialized
 2025,arXiv,UVa,HACK: Homomorphic Acceleration via Compression of the Key-Value Cache for Disaggregated LLM Inference,method without dequantization; homomorphic quantization method for matrix multiplication; requantization elimination,2,2,3
@@ -165,6 +164,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: DNN compression aims to reduce the size and computational requirements of deep neural networks
 2016,ICLR,Stanford,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding","three stage pipeline: pruning, trained quantization and Huffman coding",4,4,4
 2020,JSTSP,Fraunhofer HHI,DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks,identify set of priors in DNN; redefine CABAC's core scheme to capture priors,3,5,3
+2022,ICLR,Samsung,Language model compression with weighted low-rank factorization,fisher-weighted frobenius norm; alternating least squares (ALS) for matrix factorization,4,4,4
 
 # ### Statistical Parameter Estimation
 # Solution: infer the distribution of variables using statistical methods from observed data

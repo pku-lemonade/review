@@ -50,6 +50,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ATC,UC,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,use cuda core to transform sparse graph martix into dense for tensor core; codesign of tensor core and cuda core for GNN application,3,4,4
 2022,HPCA,SJTU,Tacker: Tensor-CUDA Core Kernel Fusion for Improving the GPU Utilization while Ensuring QoS,cuda core and tensor core operator fuse; a static kernel fusion and scheduling approach to improve GPU utilization; best-effort schedule,3,3,3
 2025,arXiv,BJPT,Libra: Synergizing CUDA and Tensor Cores for High-Performance Sparse Matrix Multiplication,mapping computation to cuda core and tensor core; different mapping stragety for different sparse matrix,3,3,3
+2025,arXiv,Sabanci,BLEST: Blazingly Efficient BFS using Tensor Cores,BVSS workload normalization; MMA layout transformation; warp-level cooperative scheduling,3,4,3
 
 # ## Cloud computing platforms and architectures
 # Challenge: when providing services to users, facing scalability, resource management, fault tolerance, and cost-effectiveness for building and deploying large-scale distributed applications and services.
@@ -580,6 +581,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,HPDC,NKU,GAugur: Quantifying Performance Interference of Colocated Games for Improving Resource Utilization in Cloud Gaming,colocating games on cloud server; game resource allocation,2,3,2
 2024,arXiv,Google,Scaling Instructable Agents Across Many Simulated Worlds,use one GPU for each cloud game; action prediction for gaming agent; TPU acceleration,3,3,3
 2025,arXiv,ByteDance,Lumine: An Open Recipe for Building Generalist Agents in 3D Open Worlds,gaming LLM with VLA model and graphic agent; inference optimizaion with spec and streaming response; reply for mouse click,4,4,3
+2025,arXiv,GWU,Adaptive GPU Resource Allocation for Multi-Agent Collaborative Reasoning in Serverless Environments,colocating multi agent LLM; dynamic adjusting GPU resource,2,2,2
 
 # ### RL System
 # Challenge: RL contains both backward and frontward. This need to handle the interaction between multi step and task, posing challenge to parallelism and synchronization.
@@ -592,6 +594,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Alibaba,Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library,bind many LLMs in one device cluster; fix the batch problem of long tail requests; reuse many utils in HybridFlow,4,4,2
 2025,arXiv,FDU,DistFlow: A Fully Distributed RL Framework for Scalable and Efficient LLM Post-Training,distributed controller for better scalability; fully decoupled DAG-defined RL pipeline; linear scalability,3,3,2
 
+# #### Agentic RL System
+# Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
+2025,arXiv,HKUST,RollArt: Scaling Agentic RL Training via Disaggregated Infrastructure,disaggregated infrastructure for agentic RL; workload-aware GPU mapping; satefulness aware computation,4,3,3
 
 # ### Communication-Computation Overlap
 # Challenge: effectively hiding communication latency by overlapping it with computation, which requires careful scheduling and resource management to avoid bottlenecks and ensure that both communication and computation proceed efficiently without stalling each other.
@@ -613,3 +618,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Tencent,PipeFusion: Patch-level Pipeline Parallelism for Diffusion Transformers Inference,patch-level pipeline parallelism; reusing one-step stale feature maps to exploit temporal redundancy; simultaneous image patch and model layer partitioning,4,4,2
 2025,arXiv,UMASS,HADIS: Hybrid Adaptive Diffusion Model Serving for Efficient Text-to-Image Generation,offline analysis based router choose; LIP based resource allocation,2,3,2
 2024,arXiv,Tencent,xDiT: an Inference Engine for Diffusion Transformers (DiTs) with Massive Parallelism,hybrid of sequence parallelism & PipeFusion & classifier-free guidance parallelism; patch parallelism for the VAE decoder to prevent out-of-memory errors,3,3,2
+
+# ### Multi Agent Systems
+# Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
+
+# #### CPU based Optimizations for Large Scale Multi-Agent Systems
+# Challenge: Large number will lead to high communication overhead on CPU based systems. The database, scheduler and communication need to be optimized.
+2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
+2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
+2025,arXiv,ZJU,Agent-Kernel: A MicroKernel Multi-Agent System Framework for Adaptive Social Simulation Powered by LLMs,micro-kernel MAS; decouple system function to enable more flexible and adaptive computation,3,3,2
+
+# #### GPU based Optimizations for Multi-Agent Systems
+# Challenge: Using GPU to run multi-agent systems can reduce the communication overhead. However, the GPU memory is limited, which requires optimization for memory management and communication.
+2024,arXiv,MIT,On the limits of agency in agent-based models,GPU optimization for agent simulation; use tensor for agent status expression; optimization for on-GPU operation,3,3,3
+2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
+
+# #### Reuse Optimizations for Multi-Agent Systems
+# Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
+2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
