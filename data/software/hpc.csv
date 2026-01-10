@@ -1,0 +1,40 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+
+# ## Parallel programming models
+# Challenge: the complexity of great number of cores and the heterogeneity of the hardware
+
+# ## Scientific computing applications and libraries
+# Solution: enable researchers to model physical phenomena, process large datasets, and accelerate discoveries across fields on HPC systems
+
+# ## Parallel algorithms
+# Solution: develop parallel algorithms for HPC systems, enabling scalable performance
+# Challenge: balancing computation and memory-access overhead
+# ### SpMM, SpGEMM, SDDMM algorithms
+# #### Tiling Algorithms
+2019,PPoPP,The Ohio State University,Adaptive Sparse Tiling for Sparse Matrix Multiplication (ASpT),Adaptive Sparse Tiling; SpMM && SDDMM; 2D tiling; row panels and classifies column segments as either "dense" or "sparse"; reordering to group dense columns contiguously,3,3,2
+2022,PPoPP,China University of Petroleum-Beijing,TileSpGEMM: A Tiled Algorithm for Parallel Sparse General Matrix-Matrix Multiplication on GPUs,divide sparse matrices into fixed-size sparse tiles; SpGEMM; determining the tile structure of the result matrix via symbolic SpGEMM; generating the nonzero structure and row pointers for each tile using bitmask operations and binary search; performing numeric computation with an adaptive sparse or dense accumulator based on tile density,4,3,3
+2024,SC,Indiana University && UIUC,Distributed-Memory Parallel Algorithms for Sparse Matrix and Sparse Tall-and-Skinny Matrix Multiplication, Tall-and-Skinny Matrix Multiplication; SpGEMM; distributed-memory algorithm; 1D row partitioning combined with virtual 2D tiling strategy; based on the sparsity pattern of each tile to adaptively choose between local or remote computation modes,3,2,3
+2024,PPoPP,THU,A Row Decomposition-based Approach for Sparse Matrix Multiplication on GPUs (Rode),Row Decomposition; SpMM && SDDMM;  decompose row into a regular part (containing a multiple of 32 nonzeros) and a residual part; block splitting technique to achieve load balancing; sub-block pipelining technique to overlap computation and memory access,3,3,2
+2025,TACO,HUST,ApSpGEMM: Accelerating Large-scale SpGEMM with Heterogeneous Collaboration and Adaptive Panel,heterogeneous collaboration methods; SpGEMM && SpMM && SDDMM;lightweight analysis to extract matrix features;varying sparsity levels to either CPU or GPU using core affinity analysis;synchronous computation and transfer overlapping,2,4,3
+# #### Rearrange Algorithms (Cluster Algorithms)
+2025,SC,Georgia Institute of Technology && University of Delaware,Improving SpGEMM Performance Through Matrix-Reordering and Cluster-wise Computation,hierarchical clustering; SpGEMM; new format called CSR_Cluster; identifies similar rows via a single SpGEMM operation A×AT; process cluster collectively to improve data reuse of B,3,3,2
+# #### Using shared memory
+2020,PPoPP,Graz University of Technology,spECK: accelerating gpu sparse matrix-matrix multiplication through lightweight analysis,A lightweight and multi-level analysis framework that dynamically selects and tunes the best algorithm;Choose between hashing and dense accumulation;Direct referencing for each row based on real-time matrix characteristics,3,3,2
+2025,SC,China University of Petroleum-Beijing,KAMI: Communication-Avoiding General Matrix Multiplication within a Single GPU,tensor cores as compute units;registers for local storage;shared memory for communication;1D & 2D & 3D partitioning strategies to optimize data locality and reduce communication overhead,2,2,2
+2025,HPCA, Hunan University && Arizona State University,HSMU-SpGEMM: Achieving High Shared Memory Utilization for Parallel Sparse General Matrix-Matrix Multiplication on Modern GPUs,a binary search-based accumulator design; pre-generating a sorted column index array during the symbolic stage;incorporates tailored symbolic processing for matrices of different scales,3,3,1
+# #### Using Tensor Core: Hardware adaptation and computation granularity optimization
+Challenge:  The inherent mismatch between the fixed computational patterns of GPU Tensor Cores and the irregular and fine-grained distribution of non-zero elements in sparse computations. Direct adaptation leads to significant computation redundancy (processing zeros) or underutilization of hardware
+Solution: Design innovative sparse encoding formats or computation mapping strategies or algorithmic transformations to maximize the processing efficiency of actual non-zero data while maintaining computational regularity
+2021,SC,University of California,Efficient Tensor Core-Based GPU Kernels for Structured Sparsity under Reduced Precision,fine-grained sparsity;column-vector sparse encoding;Tensor-Core-based 1D Octet Tiling;reduced precision,2,3,3
+2023,SC,Universidade da Coruña && ETH Zürich,VENOM: A Vectorized N:M Format for Unleashing the Power of Sparse Tensor Cores,vectorized grouping and two-level pruning;electing important columns through vector-wise pruning within blocks;applying N:M sparsity per row,2,3,3
+2025,PPoPP,BUPT,FlashSparse: Minimizing Computation Redundancy for Fast Sparse Matrix Multiplications on Tensor Cores,SpMM and SDDMM;swap-and-transpose matrix multiplication strategy;memory-efficient thread mapping strategy,3,3,4
+# #### Using Tensor Core: Memory Access and Data Locality Optimization
+Challenge: The critical performance bottleneck caused by irregular and unpredictable memory access patterns inherent to sparse computations. These patterns lead to low cache hit rates and poor memory bandwidth utilization and thread workload imbalance and extensive pipeline stalls.
+Solution: Transform these irregular accesses into more regular and predictable patterns
+2024,ASPLOS,HKUST,DTC-SpMM: Bridging the Gap in Accelerating General Sparse Matrix Multiplication with Tensor Cores,memory-efficient storage format called ME-TCF;two-level TCU-Cache-Aware reordering method;runtime kernel optimizations;simulation-based adaptive selector,3,4,4
+2025,PPoPP,Chinese Academy of Sciences && Renmin University of China && Hangzhou Dianzi University,Acc-SpMM: Accelerating General-purpose Sparse Matrix-Matrix Multiplication with GPU Tensor Cores,data-affinity-based reordering algorithm;memory-efficient compressed format (BitTCF);high-throughput pipeline;adaptive sparsity-aware load balancing method,3,3,4
+# #### Using Tensor Core: Collaborative scheduling of heterogeneous computing cores
+Challenge: The nature of modern GPUs as heterogeneous computing platforms. Tensor Cores and CUDA cores have distinct architectural strengths: Tensor Cores excel at regular dense computation but lack flexibility. While CUDA cores are flexible and general-purpose but have lower peak throughput. 
+Solution: Perform intelligent task decomposition and scheduling at the system level.
+2023,ATC,University of California,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,highly sparse and irregular graph operations;Sparse Graph Translation technique;collaborative execution strategy between CUDA cores and TCUs,3,3,3
+2025,IPDPS,HUST,BRP-SpMM: Block-Row Partition Based Sparse Matrix Multiplication with Tensor and CUDA Cores,Block-Row Partition;“Fixed Non-zero” strategy;customized storage forma;two lightweight GPU kernels for the TC Block and for the Residual Row part,3,3,3
