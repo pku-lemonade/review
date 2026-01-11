@@ -100,12 +100,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SJTU,eLLM: Elastic Memory Management Framework for Efficient LLM Serving,activation weight paged; all scene virtual memory; cpu memory swap,3,2,2
 2025,arXiv,SJTU,Reducing GPU Memory Fragmentation via Spatio-Temporal Planning for Efficient Large-Scale Model Training,offline planning and online patch; MoE-aware reuse pockets; time-aware reuse,3,3,2
 
-# ##### Tradeoff between compute and memory
-# Solution: Transformer is a compute-bound model. To improve the performance, sometimes can use recomputation to reduce the memory usage.
-2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
-2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation,4,4,3
-2024,Nips,Stanford,FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision,Hopper architecture based optimization; fp8 quantization; backward support,3,3,3
-
 # #### General LLM Memory Management
 # Challenge: LLM memory management faces challenges like limited HBM memory, efficient KV Cache management, memory sharing between multiple GPUs, multi-level memory management.
 2022,SC,Miscrosoft,DeepSpeed-Inference: Enabling Efficient Inference of Transformer Models at Unprecedented Scale,kernel fusion; GPU-CPU-NVMe heterogeneous memory; PCIe-based memory prefetch,4,4,3
@@ -141,6 +135,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
+2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
 
 # #### KV Cache Storage Systems
 # Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
@@ -622,6 +617,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Multi Agent Systems
 # Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
 
+# #### DSL for agent representation
+# Challenge: designing a domain-specific language (DSL) for representing agents can help to simplify the development and deployment of multi-agent systems.
+2025,arXiv,UTA,Software-Defined Agentic Serving,use LLM to generate the cpp code of agent network; dynamic agent graph support,2,2,1
+
 # #### CPU based Optimizations for Large Scale Multi-Agent Systems
 # Challenge: Large number will lead to high communication overhead on CPU based systems. The database, scheduler and communication need to be optimized.
 2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
@@ -636,3 +635,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Reuse Optimizations for Multi-Agent Systems
 # Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
+2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
+
+# ### GPU Kernel Optimizations for Systems
+# Challenge: GPU kernel optimizations can significantly improve the performance of systems by reducing computation time and memory usage.
+
+# #### Tiling Optimizations
+# Solution: Tiling is a common optimization technique that can improve data locality and reduce memory access overhead.
+2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
+2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation,4,4,3
+2024,Nips,Stanford,FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision,Hopper architecture based optimization; fp8 quantization; backward support,3,3,3
+
+# #### GPU level kernel svcheduling optimizations
+# Solution: GPU kernel scheduling optimizations can improve the performance of systems by reducing kernel launch overhead
+2025,arXiv,PKU,Hummingbird: SLO-Oriented GPU Preemption at Microsecond-scale,SLO based kernel preemption; kernel split for scheduling,3,3,2
