@@ -103,7 +103,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### HLS Verification and Debugging
 # Solution: Develop automated tools for bug detection, formal verification, and cross-level debugging to ensure the correctness of HLS designs.
 2024,FPGA,Cornell,Formal Verification of Source-to-Source Transformations for HLS,hybrid verification via concrete interpretation of control-flow and symbolic analysis of dataflow; Computation Directed Acyclic Graph (CDAG) as a syntax-agnostic semantic representation; formal equivalence proof for Statically Interpretable Control-Flow (SICF) programs,4,4,4
-2024,MICRO,PKU,Hestia: An Efficient Cross-level Debugger for High-level Synthesis, allowing inspection at multiple granularities; establishes the correspondence at different levels; a multi-level interpreter for three levels,4,4,4
+2024,MICRO,PKU,Hestia: An Efficient Cross-level Debugger for High-level Synthesis,allowing inspection at multiple granularities; establishes the correspondence at different levels; a multi-level interpreter for three levels,4,4,4
 2024,LAD,UIUC,An Iteratively-refined Dataset for High-Level Synthesis Functional Verification through LLM-Aided Bug Injection,Chrysalis dataset with bug injection; ICL+RAG+CoT bug injection methodology; iteratively-refined HLS verification dataset,4,4,4
 
 # ##### Dataflow-centric HLS Acceleration
