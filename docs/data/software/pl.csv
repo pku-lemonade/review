@@ -36,6 +36,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Sparse Tensor Compilers
 # Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
 2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations,4,3,3
+2024,OOPSLA,Cornell,UniSparse: An Intermediate Language for General Sparse Format Customization,language-based holistic format abstraction; decoupled logical (data structure) vs. physical (memory layout) representation; index map & orthogonal primitives (mutation/layout/query) for customization,4,4,4
 
 # ### Graph Mining Compilers
 # Challenge: generic runtime algorithms, automatically compile high-level specifications into efficient code.
@@ -77,46 +78,52 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### HLS Code Generation and Automation
 # Solution: bridging high-level languages to hardware, design space exploration, QoR improvement automation
 
-# ##### General HLS Compiler
-# C/C++/SystemC to RTL, microarchitecture optimization, resource sharing and scheduling
+# ##### General HLS Optimizations and Techniques
+# Solution: Develop general techniques to enhance HLS QoR by optimizing key aspects like timing, resource management, and code structure.
+2020,DAC,University of California,Analysis and Optimization of the Implicit Broadcasts in FPGA HLS to Improve Maximum Frequency,systematic classification of HLS implicit broadcasts (data/control/pipeline); broadcast-aware scheduling with calibrated delay models; skid-buffer-based pipeline flow control to eliminate stall signal broadcasting,4,4,4
 2022,ASPLOS,UCLA,HeteroGen: transpiling C to heterogeneous HLS code with automated test generation and program repair,automated test generation; dependence-guided search space pruning; early candidate rejection using coding styles,3,4,3
 2022,FPGA,Cornell,HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs,Decoupled data placement; Unified data placement primitive; Multi-level memory hierarchy optimization,4,4,4
 2024,DATE,UIUC,Subgraph Extraction-Based Feedback-Guided Iterative Scheduling for HLS,ISDC iterative SDC scheduling; subgraph extraction-based low-level feedback; fanout and window-based subgraph extraction mechanism,4,4,4
-2024,MICRO,HUST,A Scalable Efficient and Robust Dynamic Memory Management Library for HLS-based FPGAs,DMM as graph analytics; request-guided graph traversal; data-centric concurrent traversal; shortcut-assisted fast traversal,4,4,3
 2025,FPGA,University of Glasgow,Dynamic Loop Fusion in High-Level Synthesis,Dynamic loop fusion; HLS; Irregular memory access; Address monotonicity; Decoupled Access/Execute (DAE); Program-order schedule; Data Unit (DU),4,4,4
 
-# ##### High-Level Language to HLS Compiler
-# Solution: compiling high-level languages (Python, Julia, etc.) to HLS code, enabling domain experts to design hardware accelerators without deep hardware knowledge
+# ##### High-Level Language to HLS Abstractions
+# Solution: Raise the abstraction level by enabling HLS code generation from high-level languages like Python, simplifying hardware design for non-experts.
 2019,FPGA,UCLA,HeteroCL: A Multi-Paradigm Programming Infrastructure for Software-Defined Reconfigurable Computing,algorithm-schedule decoupling; Python DSL; tensor-based computation; quantitative data types; design space exploration,4,4,4
 2021,TC,UIUC,PyLog: An Algorithm-Centric Python-Based FPGA Programming and Synthesis Flow,Python-based HLS flow; algorithm-centric operators (map/dot); automatic hardware type inference; automatic HLS pragma insertion,4,4,3
+2024,MICRO,HUST,A Scalable Efficient and Robust Dynamic Memory Management Library for HLS-based FPGAs,DMM as graph analytics; request-guided graph traversal; data-centric concurrent traversal; shortcut-assisted fast traversal,4,4,3
 
-# ##### MLIR-based HLS Frameworks
-# Solution: Leveraging modern compiler infrastructures like MLIR to build modular, extensible, and reusable HLS frameworks.
+# ##### MLIR-based HLS Compiler Frameworks
+# Solution: Leverage the MLIR infrastructure to build modular, extensible, and reusable HLS frameworks for better analysis, transformation, and code generation.
 2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic component; time graph transformation,4,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,3
 2023,ASPLOS,IISc,HIR: An MLIR-based Intermediate Representation for Hardware Accelerator Description,MLIR-based hardware IR; datapath + schedule model; explicit scheduling via time variables; automatic FSM synthesis,4,4,4
 2024,HPCA,SJTU,An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation,polyhedral model for HLS; MLIR-based HLS framework; automatic design space exploration,4,4,4
 2024,PLDI,Cornell,Allo: A Programming Model for Composable Accelerator Design,composable programming model; decoupled hardware customizations; bottom-up type-safe composition; hierarchical dataflow graph; memory layout composition via type inference,4,4,3
 
-# ##### HLS Verification and Testing
-# Solution: automated bug detection, verification dataset generation, LLM-aided debugging for HLS designs
-2024,MICRO,PKU,Hestia: An Efficient Cross-level Debugger for High-level Synthesis, allowing inspection at multiple granularities; establishes the correspondence at different levels; a multi-level interpreter for three levels,4,4,4
+# ##### HLS Verification and Debugging
+# Solution: Develop automated tools for bug detection, formal verification, and cross-level debugging to ensure the correctness of HLS designs.
+2024,FPGA,Cornell,Formal Verification of Source-to-Source Transformations for HLS,hybrid verification via concrete interpretation of control-flow and symbolic analysis of dataflow; Computation Directed Acyclic Graph (CDAG) as a syntax-agnostic semantic representation; formal equivalence proof for Statically Interpretable Control-Flow (SICF) programs,4,4,4
+2024,MICRO,PKU,Hestia: An Efficient Cross-level Debugger for High-level Synthesis,allowing inspection at multiple granularities; establishes the correspondence at different levels; a multi-level interpreter for three levels,4,4,4
 2024,LAD,UIUC,An Iteratively-refined Dataset for High-Level Synthesis Functional Verification through LLM-Aided Bug Injection,Chrysalis dataset with bug injection; ICL+RAG+CoT bug injection methodology; iteratively-refined HLS verification dataset,4,4,4
 
-# ##### Dataflow HLS acceleration
-# Solution: exploiting task-level parallelism, optimizing inter-kernel communication, maximizing pipeline throughput
+# ##### Dataflow-centric HLS Acceleration
+# Solution: Exploit task-level parallelism by automatically transforming and scheduling designs as dataflow graphs to maximize pipeline throughput and resource utilization.
 2024,ASPLOS,UIUC,HIDA: A Hierarchical Dataflow Compiler for High-Level Synthesis,hierarchical dataflow IR (HIDA-IR); multi-level dataflow optimizer (HIDA-OPT); pattern-driven task fusion,3,5,4
 2025,FPGA,UCLA,Stream-HLS: Towards Automatic Dataflow Acceleration,automatic dataflow HLS; global scheduling for streaming; MINLP for HLS optimization,4,4,4
 2025,MICRO,UIUC,StreamTensor: Make Tensors Stream in Dataflow Accelerators for LLMs,itensor iterative tensor type system;automatic stream-based kernel fusion;LP-based FIFO sizing;unified dataflow component generation,4,4,3
 
-# ##### HLS for specialized hardware
-# Solution: target-specific code generation, custom memory interface synthesis, co-optimization with physical constraints
+# ##### HLS for Systolic Arrays and AI Engines
+# Solution: Provide automated compilation flows and programming models to efficiently map algorithms, especially for AI workloads, onto specialized compute fabrics like systolic arrays and AI Engines.
 2017,DAC,PKU & Falcon & UCLA,Automated Systolic Array Architecture Synthesis for High Throughput CNN Inference on FPGAs,2D systolic array architecture; analytical model for performance and resource; two-phase design space exploration; end-to-end C-to-FPGA automation flow,3,4,3
 2019,ISCAS,PKU & UCLA,Frequency Improvement of Systolic Array-Based CNNs on FPGAs,front-end accumulation chain segmentation; back-end topology-aware floorplanning constraints; frequency optimization for systolic arrays,3,4,3
+2020,ICCAD,Cornell,SuSy: A Programming Model for Productive Construction of High-Performance Systolic Arrays on FPGAs,decoupled algorithm (Uniform Recurrence Equations, UREs) and spatial mapping (schedule) for systolic arrays; high-level space-time transformation primitive for architectural exploration; Uniform Recurrence Equation (URE)-based temporal definition for broad systolic algorithm coverage,4,4,3
+2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
+
+# ##### HLS for Advanced Memory/Packaging
+# Solution: Develop HLS methodologies and co-design techniques to effectively utilize advanced hardware features like High-Bandwidth Memory (HBM), multi-die packaging, and direct storage access.
 2022,FPGA,Cornell,High-Performance Sparse Linear Algebra on HBM-Equipped FPGAs Using HLS: A Case Study on SpMV,HLS methodology; HBM FPGA; SpMV accelerator; split-kernel design; microarchitecture in HLS; load-store forwarding; pipelined arbiter,4,4,4
 2023,FPGA,UoP,DONGLE: Direct FPGA-Orchestrated NVMe Storage for HLS,HLS direct NVMe access; FPGA-orchestrated storage; Unified HLS storage interface; Single-source HLS for storage; DONGLE architecture,4,4,4
 2023,FPGA,HKUST,FADO: Floorplan-Aware Directive Optimization for High-Level Synthesis Designs on Multi-Die FPGAs,Floorplan-aware HLS; Multi-die FPGA optimization; Directive-floorplan co-optimization; Incremental floorplanning for HLS; MMBP for HLS DSE,3,4,4
-2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
 
 # ## Program analysis
 # Solution: statically or dynamically analyzing programs to understand their behavior, detect errors, and optimize performance
