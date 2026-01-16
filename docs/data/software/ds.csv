@@ -135,8 +135,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: offload the KV cache to the memory or other storage device, supporting multi-level storage.
 2024,ATC,Huawei,Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention,store KV cache in the memory; multi level KV cache management; position mask modified,3,3,3
 2024,SIGCOMM,UChicago,CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving,efficient KV Cache streaming; KV Cache compression; knowledge delivery network; The transfer part of LMCache,3,4,3
-2024,EuroSys,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices; The system intro of LMCache,3,4,3
 2025,EuroSys,THU,Fast State Restoration in LLM Serving with HCache,offload activation instead of KVC to reduce IO; use little recomputation to tradeoff offloading latency,4,4,4
+
+# ##### Position Independent Methid
+# Solution: Use recover method to reduce the KV cache size.
+2024,EuroSys,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices; The system intro of LMCache,3,4,3
+2024,ICML,PKU,EPIC: Efficient Position-Independent Caching for Serving Large Language Models,only conpute the first tokens to avoid dynamic selecstion; top-k selection based on attn-sink,3,3,3
+2026,arXiv,Huawei,MEPIC: Memory Efficient Position Independent Caching for LLM Serving,delay position embedding to attn kernel; chunk-based KVC design,2,2,2
+2026,arXiv,Huawei,Joint Encoding of KV-Cache Blocks for Scalable LLM Serving,encoding KVC blocks beyond prefix cache; like the blend in CacheBlend,2,2,1
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
