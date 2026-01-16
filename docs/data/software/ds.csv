@@ -642,3 +642,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Reuse Optimizations for Multi-Agent Systems
 # Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
+
+# #### Environment Optimizations for Multi-Agent Systems
+# Challenge: The training and inference of multi-agent systems often require complex environments, which can lead to high computational and memory overhead.
+2026,arXiv,Alibaba,MegaFlow: Large-Scale Distributed Orchestration System for the Agentic Era,abstracts agent training infrastructure into three independent services; CPU based optimization; container management,3,3,2
+
+# #### DSL Expression for Agents
+2026,arXiv,UT-Austin,Nalar: An agent serving framework,frontend agent expression for dynamic graph; agent based scheduling,3,2,1
