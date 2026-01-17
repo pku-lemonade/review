@@ -22,6 +22,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Fail-slow faults can cause performance degradation without complete failure; making them difficult to detect and diagnose than the fail-stop failure.
 2022,ATC,SJTU & Alibaba,NVMe SSD Failures in the Field: the Fail-Stop and the Fail-Slow,hardware infant mortality; write amplification factor; intra-node/rock failure,3,4,2
 2024,MICRO,MIT,DelayAVF: Calculating Architectural Vulnerability Factors for Delay Faults,architectural vulnerability factors; tractable two-step derivation for AVF computation,3,3,2
+# #### Silent Data Corruption
+# Challenge: SDCs can evade standard hardware error detection mechanisms (like ECC) and manifest as sporadic application-level failures triggered by specific data patterns, making them extremely difficult to reproduce, distinguish from software bugs, and root-cause in a large-scale production fleet.
+2021,Arxiv,Facebook,Silent Data Corruptions at Scale,reproducible silent data corruption (SDC); JIT-to-Assembly reverse engineering; opportunistic&periodic error detection,3,1,2
+2022,TCAD,ICT,HyCA: A Hybrid Computing Architecture for Fault-Tolerant Deep Learning,dot-production processing unit; delayed recomputing dataflow; runtime partial result scanning,4,4,2
+2023,ICCAD,PKU,READ: Reliability-Enhanced Accelerator Dataflow Optimization using Critical Input Pattern Reduction,critical input pattern reduction; sign-monotonicity dataflow optimization; cluster-then-reorder strategy,4,3,2
 # ### Physical Effects
 # #### RRAM
 # Challenge: Non-ideal effects of RRAM devices (e.g. device-to-device variation; cycle-to-cycle variation; etc.) can cause significant performance degradation.
@@ -51,6 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2016,DSN,UStuttgart,Efficient Algorithm-Based Fault Tolerance for Sparse Matrix Operations,implicit error localization technique; sparse-aware checksum encoding,3,4,2
 2023,ISC,UCR,Anatomy of High-Performance GEMM with Online Fault Tolerance on GPUs,hierarchical fault tolerance design at thread/warp/threadblock levels,3,4,3
 2025,DAC,PKU,ReaLM: Reliable and Efficient Large Language Model Inference with Statistical Algorithm-Based Fault Tolerance,comprehensive LLM resilience characterization,statistical ABFT methodology that adaptively protects LLM components based on error statistics,3,3,3
+2025,Arxiv,ICT,ApproxABFT: Approximate Algorithm-Based Fault Tolerance for Neural Network Processing,threshold based error filtering; approximate error correction; dynamic block granularity,3,4,2
 # ### Algorithm-Based Fault Tolerance for CIM systems
 # Challenge: Compute-in-memory (CIM) systems are prone to various types of faults due to their analog nature and dense integration.
 # Solution: Develop fault-tolerance techniques specifically designed for CIM
