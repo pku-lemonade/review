@@ -26,6 +26,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ICML,Google,Fast Inference from Transformers via Speculative Decoding,speculative sampling; draft/approximation model; theoretical bound of acceptance rate,4,5,5
 2024,arXiv,Princeton & UIUC,Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads,medusa heads appended to the last layer; medusa-2 joint training,4,4,4
 
+# ##### Early Exit LLM
+# Solution: Early exit LLMs aim to reduce inference time and computational cost by allowing the model to produce outputs at intermediate layers when sufficient confidence is achieved.
+2020,ACL,UWaterloo,DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference,intermediate off-ramps; Frozen backbone fine-tuning; entropy-based inference threshold,3,3,4
+2020,ACL,PKU & Tencent,FastBERT: a Self-distilling BERT with Adaptive Inference Time,branch-wise self-distillation; adaptive conditional computation,4,4,4
+
 # ##### LLM Transformer
 # Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
 2019,arXiv,Google,Fast Transformer Decoding: One Write-Head is All You Need,MQA; share same KV cache for all heads; multi-query attention,1,4,3
