@@ -43,6 +43,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: MoE models often have higher Op/Byte ratios, making bank-level PIM easily compute-bound and limiting speedup.
 2024,DAC,Seoul National,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models, activation movement strategy to replace costly parameter movement; dynamic GPU-MoNDE load balancing for hot/cold experts,4,4,2
 2025,MICRO,Samsung,"Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching", replace the GPU HBM memory die with HBM-PIM die; expert and attention co-processing for dynamic workload splitting within MoE/attn layers,4,4,4
+2025,ICCAD,PKU,HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing,LP-based hybrid TP and EP mapping; bayesian optimization for topology-aware link balancing; online dynamic expert placement with predictive pre-broadcast,3,3,2
 # #### RAG-Specific Optimization
 # Challenge: Retrieving the top-k results from a vectorized database is also a memory-bound operation.
 2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
@@ -134,6 +135,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,PKU,H2-LLM: Hardware-Dataflow Co-Exploration for Heterogeneous Hybrid-Bonding-based Low-Batch LLM Inference,operator-channel binding; computation-bandwidth trade-off; dataflow-based DSE,4,3,3
 2025,MICRO,THU,3D-PATH: A Hierarchy LUT Processing-in-memory Accelerator with Thermal-aware Hybrid Bonding Integration,sparse-aware hierarchical slow-fast LUT design; multiplier-free floating-point operation by LUT; hotspot-aware hardware with self-throttling sense amplifier,4,2,2
 2025,MICRO,Univ. of British Columbia,RayN: Ray Tracing Acceleration with Near-memory Computing,ray tracing units in 3D stacked DRAM logic layer; BLAS Breaking algorithm to partition BVH tree for load balancing; hybrid memory controller for concurrent GPU and near-memory access,4,3,2
+2025,ICCAD,PKU,FENIX: Flexible and Efficient Hybrid HE/MPC Acceleration with Near-Memory Processing,fine-grained oblivious transfer partitioning to overlap HE and OT operations; batch-aware flexible encoding to reduce rotation overhead; near-bank NMP to offload memory-bound HE/OT primitives,3,2,2
 # #### HMC or HMC-like PIM
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. 
 # Solution: Use TSVs to provide TB/s level bandwidth in inter-bank communication & band-to-logic layer communication.
