@@ -1,4 +1,8 @@
 Year,Venue,Authors,Title,Tags,P,E,N
+# Homomorphic Encryption Accelerators
+# Challenge: Current HE accelerators are slow as they rely on complex NTT operations that ignore data sparsity and error tolerance.
+2025,DATE,PKU,FLASH: An Efficient Hardware Accelerator Leveraging Approximate and Sparse FFT for Homomorphic Encryption,approximate FFT for modular reduction elimination; sparsity-aware FFT dataflow using skipping and merging methods; DSE for Pareto-optimal computation precision,4,2,2
+2023,ISCA,Seoul National,SHARP: A Short-Word Hierarchical Accelerator for Robust and Practical Fully Homomorphic Encryption,36-bit word length optimization for FHE precision-efficiency trade-off; double-prime scaling unit for instruction fusion and short-word scaling,3,2,3
 # ### Graph Accelerators
 # Challenge: Massive memory requirement, Non-ordered memory access
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
