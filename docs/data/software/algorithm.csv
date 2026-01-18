@@ -20,6 +20,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
 2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
+2024,ICLR,NUS,Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs,pair-rank aggregation; verbalized confidence mimicry,4,4,4
 
 # ##### Speculative Decoding
 # Solution: Speculative decoding aims to accelerate the inference of large language models (LLMs) by utilizing a smaller, faster draft model to generate multiple tokens in parallel, which are then verified and corrected by the larger, more accurate target model.
