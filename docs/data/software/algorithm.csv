@@ -20,6 +20,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
 2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
+2024,ICLR,NUS,Can LLMs Express Their Uncertainty? An Empirical Evaluation of Confidence Elicitation in LLMs,pair-rank aggregation; verbalized confidence mimicry,4,4,4
+
+# ##### Speculative Decoding
+# Solution: Speculative decoding aims to accelerate the inference of large language models (LLMs) by utilizing a smaller, faster draft model to generate multiple tokens in parallel, which are then verified and corrected by the larger, more accurate target model.
+2023,ICML,Google,Fast Inference from Transformers via Speculative Decoding,speculative sampling; draft/approximation model; theoretical bound of acceptance rate,4,5,5
+2024,arXiv,Princeton & UIUC,Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads,medusa heads appended to the last layer; medusa-2 joint training,4,4,4
+
+# ##### Early Exit LLM
+# Solution: Early exit LLMs aim to reduce inference time and computational cost by allowing the model to produce outputs at intermediate layers when sufficient confidence is achieved.
+2020,ACL,UWaterloo,DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference,intermediate off-ramps; Frozen backbone fine-tuning; entropy-based inference threshold,3,3,4
+2020,ACL,PKU & Tencent,FastBERT: a Self-distilling BERT with Adaptive Inference Time,branch-wise self-distillation; adaptive conditional computation,4,4,4
 
 # ##### LLM Transformer
 # Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
@@ -56,6 +67,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### LLM-Powered AI Agent
 # Challenge: How to scale agent number and how to reach human level behavior.
 2018,CVPR,MIT,VirtualHome: Simulating Household Activities via Programs,simulation framework for home agent; interaction within the home; action planning and execution,3,3,3
+2023,ICLR,Google,ReAct: Synergizing Reasoning and Acting in Language Models,interleaved reasoning and acting; Thought-Act-Observation loop for LLM agents; few-shot prompting for agentic behavior,4,4,4
 2024,arXiv,THU,LLM-Powered Hierarchical Language Agent for Real-time Human-AI Coordination,hierarchical language agent; real-time human-AI coordination; slow mind & fast mind,,,
 2025,arXiv,THU,Agent Hospital: A Simulacrum of Hospital with Evolvable Medical Agents,RAG-based LLM agent; use OpenAI api to run LLM; agent num is about 50,3,3,2
 2025,arXiv,THU,OpenCity: A Scalable Platform to Simulate Urban Activities with Massive LLM Agents,IO optimization for agent; prompt compression for LLM,3,2,1
@@ -65,20 +77,25 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Fudan,From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents,dividing simulations into Individual/Scenario/Society levels; modular agent architecture analysis involving Profile-Memory-Planning-Action,3,3,3
 
 # ###### LLM Agent for tool use
+2023,NeurIPS,Meta,Toolformer: Language Models Can Teach Themselves to Use Tools,perplexity reduction as self-supervised signal for tool learning; automatic annotation of API calls for fine-tuning; in-context learning to generate tool-use training data,4,4,3
 2025,arXiv,Berkeley,The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models,tool call ability benchmark,3,3,3
 2025,arXiv,Startup,MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Calling in LLM Agent Multi-Turn Conversations,remove unused tool in multi-turn conversation; use tool selector to select the most appropriate tool,3,3,2
 
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
+2013,Arxiv,DeepMind,Playing Atari with Deep Reinforcement Learning,Deep Q-Network (DQN) architecture; frame stacking; experience replay based random sampling,3,3,3
 2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
+2016,ICLR,Google,Continuous control with Deep Reinforcement Learning,Deep Deterministic Policy Gradient (DDPG); soft target updates; Ornstein-Uhlenbeck (OU) action noise,3,4,3
 2017,arXiv,OpenAI,Proximal Policy Optimization Algorithms,clipped surrogate objective; importance sampling; Actor-Critic with shared parameters; generalized advantage estimation,4,3,3
 2025,arXiv,DeepReinforce,CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning,contrastive RL-driven CUDA optimization without human priors; LLM-based CUDA kernel optimization; reward design for CUDA kernel,4,4,2
 
 # #### RL Parameter Adjustment
 # Solution: Investigate and optimize critical implementation details and hyperparameters, such as network initialization and observation normalization, to ensure training stability and maximize the agent’s final performance.
+2015,Arxiv,Google,Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift,internal covariate shift; mini-batch statistics normalization; parameter scale invariance,4,4,2
 2018,ICLR,Google,Don't Decay the Learning Rate, Increase the Batch Size,BS-scheduling stragety replacement; accumulation scaling rule; effective lr rate,3,4,2
 2020,ICML,MitsubishiElectric,Can Increasing Input Dimensionality Improve Deep Reinforcement Learning,high-dimensional feature expansion; online MLP-denseNet module; batch normalization for covariate shift,4,4,2
 2020,arXiv,Google,What Matters In On-Policy Reinforcement Learning? A Large-Scale Empirical Study,near-zero action initialization; input observation normalization; data multi-pass training,3,5,2
+2020,ICLR,MIT,Implementation Matters in Deep Policy Gradients: A Case Study on PPO and TRPO,value function clipping; orthogonal initialization; trust region enforcement,3,3,2
 
 # #### DNN Training Algorithms
 # Solution: DNN training algorithms are essential for optimizing deep neural networks, enabling them to learn from data and improve their performance on various tasks. They address challenges like convergence speed, generalization, and robustness.
