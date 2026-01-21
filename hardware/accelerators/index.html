@@ -1,0 +1,3229 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Youwei Zhuo">
+      
+      
+        <link rel="canonical" href="https://review.youwei.xyz/hardware/accelerators/">
+      
+      
+        <link rel="prev" href="../memory/">
+      
+      
+        <link rel="next" href="../network/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Domain-Specific Accelerators - New Lemonade Review</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JXHKVQ8LKS"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JXHKVQ8LKS",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JXHKVQ8LKS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#domain-specific-accelerators" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="New Lemonade Review" class="md-header__button md-logo" aria-label="New Lemonade Review" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M368 80c-3.2 0-6.2.4-8.9 1.3C340 86.8 313 92 284.8 84.6c-57.4-14.9-124.6 7.4-174.7 57.5S37.7 259.4 52.6 316.8c7.3 28.2 2.2 55.2-3.3 74.3-.8 2.8-1.3 5.8-1.3 8.9 0 17.7 14.3 32 32 32 3.2 0 6.2-.4 8.9-1.3 19.1-5.5 46.1-10.7 74.3-3.3 57.4 14.9 124.6-7.4 174.7-57.5s72.4-117.3 57.5-174.7c-7.3-28.2-2.2-55.2 3.3-74.3.8-2.8 1.3-5.8 1.3-8.9 0-17.7-14.3-32-32-32m0-48c44.2 0 80 35.8 80 80 0 7.7-1.1 15.2-3.1 22.3-4.6 15.8-7.1 32.9-3 48.9 20.1 77.6-10.9 161.5-70 220.7s-143.1 90.2-220.7 70c-16-4.1-33-1.6-48.9 3-7.1 2-14.6 3.1-22.3 3.1-44.2 0-80-35.8-80-80 0-7.7 1.1-15.2 3.1-22.3 4.6-15.8 7.1-32.9 3-48.9-20.1-77.6 10.9-161.5 70-220.7s143.2-90.1 220.7-70c16 4.1 33 1.6 48.9-3 7.1-2 14.6-3.1 22.3-3.1M246.7 167c-52 15.2-96.5 59.7-111.7 111.7-3.7 12.7-17.1 20-29.8 16.3s-20-17-16.2-29.7c19.8-67.7 76.6-124.5 144.3-144.3 12.7-3.7 26.1 3.6 29.8 16.3s-3.6 26.1-16.3 29.8z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            New Lemonade Review
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Domain-Specific Accelerators
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pku-lemonade/review" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pku-lemonade/review
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="New Lemonade Review" class="md-nav__button md-logo" aria-label="New Lemonade Review" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M368 80c-3.2 0-6.2.4-8.9 1.3C340 86.8 313 92 284.8 84.6c-57.4-14.9-124.6 7.4-174.7 57.5S37.7 259.4 52.6 316.8c7.3 28.2 2.2 55.2-3.3 74.3-.8 2.8-1.3 5.8-1.3 8.9 0 17.7 14.3 32 32 32 3.2 0 6.2-.4 8.9-1.3 19.1-5.5 46.1-10.7 74.3-3.3 57.4 14.9 124.6-7.4 174.7-57.5s72.4-117.3 57.5-174.7c-7.3-28.2-2.2-55.2 3.3-74.3.8-2.8 1.3-5.8 1.3-8.9 0-17.7-14.3-32-32-32m0-48c44.2 0 80 35.8 80 80 0 7.7-1.1 15.2-3.1 22.3-4.6 15.8-7.1 32.9-3 48.9 20.1 77.6-10.9 161.5-70 220.7s-143.1 90.2-220.7 70c-16-4.1-33-1.6-48.9 3-7.1 2-14.6 3.1-22.3 3.1-44.2 0-80-35.8-80-80 0-7.7 1.1-15.2 3.1-22.3 4.6-15.8 7.1-32.9 3-48.9-20.1-77.6 10.9-161.5 70-220.7s143.2-90.1 220.7-70c16 4.1 33 1.6 48.9-3 7.1-2 14.6-3.1 22.3-3.1M246.7 167c-52 15.2-96.5 59.7-111.7 111.7-3.7 12.7-17.1 20-29.8 16.3s-20-17-16.2-29.7c19.8-67.7 76.6-124.5 144.3-144.3 12.7-3.7 26.1 3.6 29.8 16.3s-3.6 26.1-16.3 29.8z"/></svg>
+
+    </a>
+    New Lemonade Review
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pku-lemonade/review" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pku-lemonade/review
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    README
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processor Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parallel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel and Multi-Processor Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain-Specific Accelerators
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain-Specific Accelerators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#graph-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hypergraph-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hypergraph Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hypergraph Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-graph-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Graph Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-mining-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Mining Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnn-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNN Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DNN Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gemm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GEMM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-fusion-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Fusion Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accelerators-facing-memory-wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accelerators facing Memory Wall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithmic Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantized-dnn-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantized DNN Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bit-sliced-dnn-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit-Sliced DNN Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reconfigurable-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reconfigurable Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benchmarks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataflow-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataflow Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataflow Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Survey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heuristic-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heuristic Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Modeling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-tolerant-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fault Tolerant Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reliability-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cgra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CGRA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Scheduling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-core-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Many-core Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Many-core Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture DSE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture DSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noc-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NOC DSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-co-exploration-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapping &amp; Co-Exploration DSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microarchitecture-cross-architecture-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microarchitecture &amp; Cross-Architecture DSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-access-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Access Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Access Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hbm-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HBM Interconnects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interconnection Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electronic Design Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security and Reliability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emerging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emerging Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis (to be deleted)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../software/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/pl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programming Languages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/ds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/hpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    High-Performance Computing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/perf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#graph-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hypergraph-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hypergraph Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hypergraph Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-graph-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dynamic Graph Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-mining-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Mining Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dnn-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DNN Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DNN Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gemm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GEMM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layer-fusion-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Layer Fusion Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="LLM Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accelerators-facing-memory-wall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accelerators facing Memory Wall
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithmic-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorithmic Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantized-dnn-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quantized DNN Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bit-sliced-dnn-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bit-Sliced DNN Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reconfigurable-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reconfigurable Accelerators
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Benchmarks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataflow-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataflow Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataflow Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#survey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Survey
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heuristic-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Heuristic Algorithm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Optimization Modeling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-tolerant-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fault Tolerant Mapping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reliability-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reliability Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cgra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CGRA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Scheduling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#many-core-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Many-core Architecture
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Many-core Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resource-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resource Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hardware-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Application Optimization
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture DSE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture DSE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#noc-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NOC DSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapping-co-exploration-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapping &amp; Co-Exploration DSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#microarchitecture-cross-architecture-dse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Microarchitecture &amp; Cross-Architecture DSE
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-access-accelerators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Access Accelerators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Access Accelerators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hbm-interconnects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HBM Interconnects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/pku-lemonade/review/edit/main/docs/hardware/accelerators.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/pku-lemonade/review/raw/main/docs/hardware/accelerators.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="domain-specific-accelerators">Domain-Specific Accelerators<a class="headerlink" href="#domain-specific-accelerators" title="Permanent link">&para;</a></h1>
+<h2 id="graph-accelerators">Graph Accelerators<a class="headerlink" href="#graph-accelerators" title="Permanent link">&para;</a></h2>
+<p>Challenge: Massive memory requirement, Non-ordered memory access</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016</td>
+<td>MICRO</td>
+<td>Princeton</td>
+<td>Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics</td>
+<td>vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>FPL</td>
+<td>NUS</td>
+<td>On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs</td>
+<td>on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2020</td>
+<td>MICRO</td>
+<td>UCR</td>
+<td>GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing</td>
+<td>asynchronous event-driven model; in-place event coalescing; delta-based accumulative processing</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2021</td>
+<td>ICCAD</td>
+<td>Cornell</td>
+<td>GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs</td>
+<td>GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>TRETS</td>
+<td>HUST</td>
+<td>ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip</td>
+<td>HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hypergraph-accelerators">Hypergraph Accelerators<a class="headerlink" href="#hypergraph-accelerators" title="Permanent link">&para;</a></h3>
+<p>Solution: Realize the shared parts in hyperedges</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2022</td>
+<td>MICRO</td>
+<td>HUST</td>
+<td>A Data-Centric Accelerator for High-Performance Hypergraph Processing</td>
+<td>Data-Centric; Load-Trigger-Reduce (LTR); Adaptive Data Loading</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>HPCA</td>
+<td>HUST</td>
+<td>MeHyper: Accelerating Hypergraph Neural Networks by Exploring Implicit Dataflows</td>
+<td>Microedge; Microedge-Centric Dataflow; RePAG Execution Model</td>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="dynamic-graph-accelerators">Dynamic Graph Accelerators<a class="headerlink" href="#dynamic-graph-accelerators" title="Permanent link">&para;</a></h4>
+<p>Challenge: Edge update, Graph store data structure design</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td>MICRO</td>
+<td>UCR</td>
+<td>JetStream: Graph Analytics on Streaming Data with Event-Driven Hardware Accelerator</td>
+<td>first streaming graph accelerator; asynchronous incremental algorithms; asynchronous edge deletion handling (VAP; DAP)</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>ISCA</td>
+<td>HUST</td>
+<td>TDGraph: A Topology-Driven Accelerator for High-Performance Streaming Graph Processing</td>
+<td>topology-driven incremental execution; streaming graph processing; regularized state propagation; vertex states coalescing</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>MICRO</td>
+<td>UCR</td>
+<td>MEGA Evolving Graph Accelerator</td>
+<td>first evolving graph accelerator; Batch-Oriented Execution (BOE); deletion-free based on CommonGraph; Batch Pipelining</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>TRETS</td>
+<td>UoV</td>
+<td>Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs</td>
+<td>a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="graph-mining-accelerators">Graph Mining Accelerators<a class="headerlink" href="#graph-mining-accelerators" title="Permanent link">&para;</a></h4>
+<p>Challenge: Complex graph algorithms, Irregular access patterns</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td>ISCA</td>
+<td>MIT</td>
+<td>FlexMiner: A Pattern-Aware Accelerator for Graph Pattern Mining</td>
+<td>pattern-aware GPM accelerator; software/hardware co-design; pattern-specific execution plan; connectivity map (c-map)</td>
+<td>4</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dnn-accelerators">DNN Accelerators<a class="headerlink" href="#dnn-accelerators" title="Permanent link">&para;</a></h3>
+<h4 id="gemm">GEMM<a class="headerlink" href="#gemm" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020</td>
+<td>HPCA</td>
+<td>Georgia Tech</td>
+<td>SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training</td>
+<td>flexible dot product engine; forwarding adder network</td>
+<td>4</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="layer-fusion-accelerators">Layer Fusion Accelerators<a class="headerlink" href="#layer-fusion-accelerators" title="Permanent link">&para;</a></h4>
+<p>Solution: Use layer fusion to combine multiple layers of a neural network into a single layer. This can help reduce the number of computations and memory accesses required during inference; leading to faster execution times and lower power consumption.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016</td>
+<td>MICRO</td>
+<td>SBU</td>
+<td>Fused-Layer CNN Accelerators</td>
+<td>fuse the processing of multiple CNN layers by modifying the order in which the input data are brought on chip</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>TC</td>
+<td>KU Leuven</td>
+<td>Stream: Design Space Exploration of Layer-Fused DNNs on Heterogeneous Dataflow Accelerators</td>
+<td>fine-grain mapping paradigm; mapping of layer-fused DNNs on heterogeneous dataflow accelerator architectures; memory- and communication-aware latency analysis; constraint optimization</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>SOCC</td>
+<td>IIT Hyderabad</td>
+<td>Hardware-Aware Network Adaptation using Width and Depth Shrinking including Convolutional and Fully Connected Layer Merging</td>
+<td>Width Shrinking: reduces the number of feature maps in CNN layers; Depth Shrinking: Merge of conv layer and fc layer</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>ICSAI</td>
+<td>MIT</td>
+<td>LoopTree: Exploring the Fused-Layer Dataflow  Accelerator Design Space</td>
+<td>design space that supports set of tiling, recomputation, retention choices, and their combinations; model that validates design space</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="llm-accelerators">LLM Accelerators<a class="headerlink" href="#llm-accelerators" title="Permanent link">&para;</a></h4>
+<p>Challenge: LLM accelerators face challenges in terms of memory bandwidth; power consumption; and the need for efficient data movement.</p>
+<h5 id="accelerators-facing-memory-wall">Accelerators facing Memory Wall<a class="headerlink" href="#accelerators-facing-memory-wall" title="Permanent link">&para;</a></h5>
+<p>Challenge: LLMs require large amounts of memory bandwidth to store and access the model parameters and intermediate results which can lead to memory bottlenecks and reduced performance.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>ISCA</td>
+<td>Furiosa AI</td>
+<td>TCP: A Tensor Contraction Processor for AI Workloads</td>
+<td>tensor contraction as a hardware primitive; circuit-switched fetch network for hierarchical data reuse; Einstein summation for tactic exploration</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>DATE</td>
+<td>NTU</td>
+<td>ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers</td>
+<td>highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>arXiv</td>
+<td>SJTU</td>
+<td>ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM</td>
+<td>hybrid ROM-SRAM architecture for on-device LLM; B-ROM design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>ISCA</td>
+<td>Duke</td>
+<td>Ecco: Improving Memory Bandwidth and Capacity for LLMs via Entropy-Aware Cache Compression</td>
+<td>entropy-aware cache compression for LLMs; group-wise non-uniform quantization; shared k-means patterns; parallel Huffman hardware decoder</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h5 id="algorithmic-accelerators">Algorithmic Accelerators<a class="headerlink" href="#algorithmic-accelerators" title="Permanent link">&para;</a></h5>
+<p>Solution: Algorithmic accelerators use specialized algorithms to optimize the performance of LLMs.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020</td>
+<td>HPCA</td>
+<td>Seoul National</td>
+<td>A3: Accelerating Attention Mechanisms in Neural Networks with Approximation</td>
+<td>greedy candidate search for reducing search targets; post-scoring selection with dynamic thresholding for softmax; lookup-table-based exponent modules</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>ASPLOS</td>
+<td>CMU</td>
+<td>SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification</td>
+<td>tree-based speculative inference; topology-aware causal mask; multi-step speculative sampling</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>MICRO</td>
+<td>KAIST</td>
+<td>HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models</td>
+<td>PipeFlash fine-grained pipelining for Attention; PipeSSD fused pipelined execution for Mamba-2; Unified Reconfigurable Streamlined Core (URSC);inter-operation dependency mitigation</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="quantized-dnn-accelerators">Quantized DNN Accelerators<a class="headerlink" href="#quantized-dnn-accelerators" title="Permanent link">&para;</a></h4>
+<p>Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018</td>
+<td>ISCA</td>
+<td>SNU</td>
+<td>Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation</td>
+<td>accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>DAC</td>
+<td>ASU</td>
+<td>Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference</td>
+<td>composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA)</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>HPCA</td>
+<td>UPC</td>
+<td>Mix-GEMM: An efficient HW-SW Architecture for Mixed-Precision Quantized Deep Neural Networks Inference on Edge Devices</td>
+<td>Complete mixed-precision flexibility; hardware accelerator &amp; BLIS-based library with custom RISC-V ISA extensions</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="bit-sliced-dnn-accelerators">Bit-Sliced DNN Accelerators<a class="headerlink" href="#bit-sliced-dnn-accelerators" title="Permanent link">&para;</a></h4>
+<p>Solution: Bit-sliced DNN accelerators break down data into smaller bit-slices, allowing for more efficient processing and reduced memory and calculation resources requirements.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018</td>
+<td>ISCA</td>
+<td>Georgia Tech</td>
+<td>Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network</td>
+<td>accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>HPCA</td>
+<td>KAIST</td>
+<td>Sibia: Signed Bit-slice Architecture for Dense DNN Acceleration with Slice-level Sparsity Exploitation</td>
+<td>signed bit-slice representation;flexible zero skipping processing element</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>HPCA</td>
+<td>KU Leuven</td>
+<td>BitWave: Exploiting Column-Based Bit-Level Sparsity for Deep Learning Acceleration</td>
+<td>Bit-column sparsity for both computation reduction and data compression; Single-shot Bit-Flip post-training</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>HPCA</td>
+<td>POSTECH</td>
+<td>Panacea: Novel DNN Accelerator using Accuracy-Preserving Asymmetric Quantization and Energy-Saving Bit-Slice Sparsity</td>
+<td>Asymmetrically-Quantized bit-Slice GEMM; Zero-Point Manipulation and Distribution-based Bit-Slicing to increase sparsity</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>HPCA</td>
+<td>Yonsei</td>
+<td>Bit-slice Architecture for DNN Acceleration with Slice-level Sparsity Enhancement and Exploitation</td>
+<td>both input AND weight sparsity at bit-slice level; 8-bit data processing with 4-bit multipliers; Scale regularization during training to enhance sparsity</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="reconfigurable-accelerators">Reconfigurable Accelerators<a class="headerlink" href="#reconfigurable-accelerators" title="Permanent link">&para;</a></h4>
+<p>Solution: Reconfigurable accelerators not only break the trade-off of flexibility and performance, but also enable hardware to adapt to algorithm changes as quickly as software while maintaining high energy efficiency.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018</td>
+<td>ASPLOS</td>
+<td>Georgia Tech</td>
+<td>MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects</td>
+<td>augmented reduction tree(ART) for link conflict; chubby distribution tree for bandiwdth optimization; ART based virtual neuron construction</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>JETCAS</td>
+<td>MIT</td>
+<td>Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices</td>
+<td>hierarchical mesh NoC for multiple transmission modes; sparse PE architecture</td>
+<td>5</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>ASPLOS</td>
+<td>UM &amp; Georgia Tech</td>
+<td>Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing</td>
+<td>merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>MICRO</td>
+<td>MIT</td>
+<td>HighLight: Efficient and Flexible DNN Acceleration with Hierarchical Structured Sparsity</td>
+<td>hierarchical structured sparsity (HSS) enables systematic flexibility on sparsity patterns; modularized hierarchical sparsity acceleration architecture</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>DATE</td>
+<td>PKU</td>
+<td>PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments</td>
+<td>RL environment accelerator; PCIe communication optimization; IP-based design</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>MICRO</td>
+<td>Maryland</td>
+<td>Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication</td>
+<td>ML-assisted runtime dataflow selection; lightweight decision tree predictor; intelligent reconfiguration engine for FPGAs; cost-benefit analysis for hardware switching</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="benchmarks">Benchmarks<a class="headerlink" href="#benchmarks" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td>arXiv</td>
+<td>Cambridge</td>
+<td>Benchmarking Ultra-Low-Power µNPUs</td>
+<td>Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dataflow-architecture">Dataflow Architecture<a class="headerlink" href="#dataflow-architecture" title="Permanent link">&para;</a></h3>
+<p>Solution: Dataflow architecture allows the execution of instructions based on the availability of data rather than a predetermined sequence; leading to more efficient use of resources and better performance in parallel processing and real-time systems.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2019</td>
+<td>ASPLOS</td>
+<td>THU</td>
+<td>Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators</td>
+<td>buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>MICRO</td>
+<td>CMU</td>
+<td>The TYR Dataflow Architecture: Improving Locality by Taming Parallelism</td>
+<td>local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>MICRO</td>
+<td>UCR</td>
+<td>Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse</td>
+<td>producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>arXiv</td>
+<td>UCSB</td>
+<td>FETTA: Flexible and Efficient Hardware Accelerator for Tensorized Neural Network Training</td>
+<td>contraction sequence search engine; tensor contraction unit; distribution/reduction network</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h4 id="data-mapping">Data Mapping<a class="headerlink" href="#data-mapping" title="Permanent link">&para;</a></h4>
+<p>Solution: Assign data to specific locations in memory or storage to optimize performance; reduce latency; and improve resource utilization.</p>
+<h5 id="survey">Survey<a class="headerlink" href="#survey" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2013</td>
+<td>DAC</td>
+<td>NUS</td>
+<td>Mapping on Multi/Many-core Systems: Survey of Current and Emerging Trends</td>
+<td>dense/run-time mapping; centralized/distributred management; hybrid mapping</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="heuristic-algorithm">Heuristic Algorithm<a class="headerlink" href="#heuristic-algorithm" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td>HPCA</td>
+<td>Georgia Tech</td>
+<td>MAGMA: An Optimization Framework for Mapping Multiple DNNs on Multiple Accelerator Cores</td>
+<td>sub-accelerator selection; fine-grained job prioritization; MANGA crossover genetic operators</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>ISCA</td>
+<td>THU</td>
+<td>MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search</td>
+<td>GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>VLSI</td>
+<td>IIT Kharagpur</td>
+<td>Application Mapping Onto Manycore Processor Architectures Using Active Search Framework</td>
+<td>RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="optimization-modeling">Optimization Modeling<a class="headerlink" href="#optimization-modeling" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020</td>
+<td>FPGA</td>
+<td>ETH Zurich</td>
+<td>Flexible Communication Avoiding Matrix Multiplication on FPGA with High-Level Synthesis</td>
+<td>computation and I/O decomposition model for matrix multiplication; 1D array collapse mapping method; internal double buffering</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2021</td>
+<td>HPCA</td>
+<td>Georgia Tech</td>
+<td>Heterogeneous Dataflow Accelerators for Multi-DNN Workloads</td>
+<td>heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>MICRO</td>
+<td>Alibaba; CUHK</td>
+<td>ArchExplorer: Microarchitecture Exploration Via Bottleneck Analysis</td>
+<td>dynamic event-dependence graph(EDG); induced DEG based critical path construction; bottleneck-removal-driven DSE</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>ISCA</td>
+<td>THU</td>
+<td>Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators</td>
+<td>inter-layer encoding method; temperal cut; spatial cut; RA tree analysis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="fault-tolerant-mapping">Fault Tolerant Mapping<a class="headerlink" href="#fault-tolerant-mapping" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>SC</td>
+<td>NIT</td>
+<td>High-performance and energy-efficient fault-tolerance core mapping in NoC</td>
+<td>weighted communication energy; placing unmapped vertices region; application core graph; spare core placement algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2019</td>
+<td>IVLSI</td>
+<td>UESTC</td>
+<td>Optimized mapping algorithm to extend lifetime of both NoC and cores in many-core system</td>
+<td>lifetime budget metric; LBC-LBL mapping algorithm; electro-migration fault model</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="reliability-management">Reliability Management<a class="headerlink" href="#reliability-management" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020</td>
+<td>DATE</td>
+<td>Turku</td>
+<td>Thermal-Cycling-aware Dynamic Reliability Management in -Core System-on-Chip</td>
+<td>Coffin-Mason equation based reliability model; reliability-aware mapping/scheduling; dynamic power management</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>arXiv</td>
+<td>WUSTL</td>
+<td>A Two-Level Thermal Cycling-Aware Task Mapping Technique for Reliability Management in Manycore Systems</td>
+<td>temperature based bin packing; task-to-bin assignment; thermal cycling-aware based task-to-core mapping</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>arXiv</td>
+<td>WUSTL</td>
+<td>A Reinforcement Learning-Based Task Mapping Method to Improve the Reliability of Clustered Manycores</td>
+<td>mean time to failure; density-based spatial clustering of applications with noise algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="cgra">CGRA<a class="headerlink" href="#cgra" title="Permanent link">&para;</a></h5>
+<p>Solution: Optimally map an application's data flow graph onto the hardware fabric by simultaneously solving the tightly-coupled problems of scheduling, placement, and routing under strict spatial and temporal resource constraints.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>ASAP</td>
+<td>Torontom</td>
+<td>CGRA-ME: A Unified Framework for CGRA Modelling and Exploration</td>
+<td>XML-based CGRA description; LLVM-based simulated annealing mapper; modulo routing resource graph</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2019</td>
+<td>TCAD</td>
+<td>Tsinghua</td>
+<td>Data-Flow Graph Mapping Optimization for CGRA With Deep Reinforcement Learning</td>
+<td>neighbor PE interchange defined action space; local pattern based reward function</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2022</td>
+<td>HPCA</td>
+<td>NUS</td>
+<td>LISA: Graph Neural Network based Portable Mapping on Spatial Accelerators</td>
+<td>label abstraction for quality mapping; GNN based label-aware mapping; label-aware simulated annealing</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>MICRO</td>
+<td>NUS</td>
+<td>ICED: An Integrated CGRA Framework Enabling DVFS-Aware Acceleration</td>
+<td>tile based CGRA configuration; DVFS labeling; DVFS-Aware DFG Mapping</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="task-scheduling">Task Scheduling<a class="headerlink" href="#task-scheduling" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023</td>
+<td>ICCAD</td>
+<td>PKU</td>
+<td>Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization</td>
+<td>topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>MICRO</td>
+<td>Duke</td>
+<td>Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI</td>
+<td>graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="many-core-architecture">Many-core Architecture<a class="headerlink" href="#many-core-architecture" title="Permanent link">&para;</a></h3>
+<p>Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.</p>
+<h4 id="resource-management">Resource Management<a class="headerlink" href="#resource-management" title="Permanent link">&para;</a></h4>
+<p>Challenge: Cores share resources with each other, how to achieve high performance by coordinating access among cores to prevent conflicts and ensure data consistency is a problem.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2015</td>
+<td>HPCA</td>
+<td>Cornel</td>
+<td>Increasing Multicore System Efficiency through Intelligent Bandwidth Shifting</td>
+<td>online bandwidth shifting mechanism; prefetch usefulness (PU) level</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2015</td>
+<td>HPCA</td>
+<td>IBM</td>
+<td>XChange: A Market-based Approach to Scalable Dynamic Multi-resource Allocation in Multicore Architectures</td>
+<td>CMP multiresource allocation mechanism XChange; market framework based modeling</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2018</td>
+<td>MICRO</td>
+<td>SNU</td>
+<td>RpStacks-MT: A High-throughput Design Evaluation Methodology for Multi-core Processors</td>
+<td>graph-based multi-core performance model; distance-based memory system model; dynamic scheduling reconstruction method</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>MICRO</td>
+<td>Yonsei</td>
+<td>McCore: A Holistic Management of High-Performance Heterogeneous Multicores</td>
+<td>cluster partitioning via index hash function; partitions balancing method; hardware support for RL based scheduling</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="hardware-design">Hardware Design<a class="headerlink" href="#hardware-design" title="Permanent link">&para;</a></h4>
+<p>Solution: Hardware implementation for many-core architecture to achieve massive parallelism.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016</td>
+<td>SCIS</td>
+<td>THU&amp;BNU&amp;CAS</td>
+<td>The Sunway TaihuLight supercomputer: system and applications</td>
+<td>Sunway TaihuLight's composition; scientific computing applications on TaihuLight</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>IPDPSW</td>
+<td>SJTU&amp;Tokyo Tech</td>
+<td>Benchmarking SW26010 Many-core Processor</td>
+<td>hand-coded assembly benchmark for SW26010; CPE pipeline&amp;memory hierarchy&amp;RLC mechanism benchmarking</td>
+<td>3</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>MICRO</td>
+<td>THU</td>
+<td>MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference</td>
+<td>slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="application-optimization">Application Optimization<a class="headerlink" href="#application-optimization" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023</td>
+<td>SC</td>
+<td>NUDT</td>
+<td>Optimizing Direct Convolutions on ARM Multi-Cores</td>
+<td>direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing &amp; packeting</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>SC</td>
+<td>NUDT</td>
+<td>Optimizing MPI Collectives on Shared Memory Multi-Cores</td>
+<td>intra-node reduction algorithm for redundant data movements; fine grained non-temporal store based adaptive collectives</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>PPoPP</td>
+<td>NUDT</td>
+<td>Towards Scalable Unstructured Mesh Computations on Shared Memory Many-Cores</td>
+<td>task dependency tree(TDT); tree traversal based parallel algorithm for CPU/GPU</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="architecture-dse">Architecture DSE<a class="headerlink" href="#architecture-dse" title="Permanent link">&para;</a></h3>
+<p>Challenge: It's crucial to find the optimal hardware configurations that meet performance; power; and area constraints for specific applications.</p>
+<h4 id="noc-dse">NOC DSE<a class="headerlink" href="#noc-dse" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2018</td>
+<td>ICCAD</td>
+<td>WSU</td>
+<td>Hybrid On-Chip Communication Architectures for Heterogeneous Manycore Systems</td>
+<td>many-to-few communication patterns; long range shortcut based wireless NoC ; 3D-TSV based heterogeneous NoC</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2018</td>
+<td>IEEE TC</td>
+<td>WSU</td>
+<td>On-Chip Communication Network for Efficient Training of Deep Convolutional Networks on Heterogeneous Manycore Systems</td>
+<td>wireless-enabled heterogeneous NoC; archived multi-objective simulated annealing for network connectivity</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mapping-co-exploration-dse">Mapping &amp; Co-Exploration DSE<a class="headerlink" href="#mapping-co-exploration-dse" title="Permanent link">&para;</a></h4>
+<p>Challenge: Efficiently co-optimize DNN mapping and hardware architecture under complex constraints.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020</td>
+<td>ICCAD</td>
+<td>UIUC</td>
+<td>DNNExplorer: A Framework for Modeling and Exploring a Novel Paradigm of FPGA-based DNN Accelerator</td>
+<td>two-level (global and local) automatic DSE engine; dynamic design space exploration framework; high-dimensional design space support</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>HPCA</td>
+<td>THU</td>
+<td>Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators</td>
+<td>layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>ASPLOS</td>
+<td>THU</td>
+<td>Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization</td>
+<td>consumption-centric flow based subgraph execution scheme; main/side region based memory management</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>ASPDAC</td>
+<td>CUHK</td>
+<td>SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design</td>
+<td>intercluster distance algorithm; importance-based pruning and initialization</td>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2024</td>
+<td>Arxiv</td>
+<td>Georgia Tech</td>
+<td>PIPEORGAN: Efficient Inter-operation Pipelining with Flexible Spatial Org</td>
+<td>spatial organization strategy pipeorgan for inter-operator pipelining; augmented mesh for pipelining(AMP) topology</td>
+<td>4</td>
+<td>2</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="microarchitecture-cross-architecture-dse">Microarchitecture &amp; Cross-Architecture DSE<a class="headerlink" href="#microarchitecture-cross-architecture-dse" title="Permanent link">&para;</a></h4>
+<p>Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td>arXiv</td>
+<td>THU &amp; Macau</td>
+<td>MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware</td>
+<td>IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>arXiv</td>
+<td>PKU</td>
+<td>DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization</td>
+<td>diffusion-based design generation; conditional sampling</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-access-accelerators">Data Access Accelerators<a class="headerlink" href="#data-access-accelerators" title="Permanent link">&para;</a></h3>
+<p>Challenge: Indirect and sparse memory access patterns; low memory bandwidth utilization; core structural limitations</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td>ISCA</td>
+<td>UMich</td>
+<td>DX100: Programmable Data Access Accelerator for Indirection</td>
+<td>indirect memory access accelerator; bulk memory access reordering; DRAM row-buffer hit rate optimization; programmable data access ISA</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="hbm-interconnects">HBM Interconnects<a class="headerlink" href="#hbm-interconnects" title="Permanent link">&para;</a></h4>
+<p>Challenge: The built-in crossbar of HBM FPGAs suffers from contention and low bandwidth during many-to-many unicast access, and standard HLS lacks support for efficient burst buffering.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td>FPGA</td>
+<td>UCLA</td>
+<td>HBM Connect: High-Performance HLS Interconnect for FPGA HBM</td>
+<td>HBM Connect; HLS Virtual Buffer (HVB); Mux-Demux Switch; butterfly custom crossbar; many-to-many unicast; pseudo-channel optimization</td>
+<td>4</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2026 12:55:22 UTC">January 21, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "content.action.view", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

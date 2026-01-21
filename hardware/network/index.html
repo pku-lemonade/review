@@ -1,0 +1,1855 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Youwei Zhuo">
+      
+      
+        <link rel="canonical" href="https://review.youwei.xyz/hardware/network/">
+      
+      
+        <link rel="prev" href="../accelerators/">
+      
+      
+        <link rel="next" href="../eda/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Interconnection Networks - New Lemonade Review</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JXHKVQ8LKS"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JXHKVQ8LKS",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JXHKVQ8LKS",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interconnection-networks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="New Lemonade Review" class="md-header__button md-logo" aria-label="New Lemonade Review" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M368 80c-3.2 0-6.2.4-8.9 1.3C340 86.8 313 92 284.8 84.6c-57.4-14.9-124.6 7.4-174.7 57.5S37.7 259.4 52.6 316.8c7.3 28.2 2.2 55.2-3.3 74.3-.8 2.8-1.3 5.8-1.3 8.9 0 17.7 14.3 32 32 32 3.2 0 6.2-.4 8.9-1.3 19.1-5.5 46.1-10.7 74.3-3.3 57.4 14.9 124.6-7.4 174.7-57.5s72.4-117.3 57.5-174.7c-7.3-28.2-2.2-55.2 3.3-74.3.8-2.8 1.3-5.8 1.3-8.9 0-17.7-14.3-32-32-32m0-48c44.2 0 80 35.8 80 80 0 7.7-1.1 15.2-3.1 22.3-4.6 15.8-7.1 32.9-3 48.9 20.1 77.6-10.9 161.5-70 220.7s-143.1 90.2-220.7 70c-16-4.1-33-1.6-48.9 3-7.1 2-14.6 3.1-22.3 3.1-44.2 0-80-35.8-80-80 0-7.7 1.1-15.2 3.1-22.3 4.6-15.8 7.1-32.9 3-48.9-20.1-77.6 10.9-161.5 70-220.7s143.2-90.1 220.7-70c16 4.1 33 1.6 48.9-3 7.1-2 14.6-3.1 22.3-3.1M246.7 167c-52 15.2-96.5 59.7-111.7 111.7-3.7 12.7-17.1 20-29.8 16.3s-20-17-16.2-29.7c19.8-67.7 76.6-124.5 144.3-144.3 12.7-3.7 26.1 3.6 29.8 16.3s-3.6 26.1-16.3 29.8z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            New Lemonade Review
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Interconnection Networks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pku-lemonade/review" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pku-lemonade/review
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="New Lemonade Review" class="md-nav__button md-logo" aria-label="New Lemonade Review" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M368 80c-3.2 0-6.2.4-8.9 1.3C340 86.8 313 92 284.8 84.6c-57.4-14.9-124.6 7.4-174.7 57.5S37.7 259.4 52.6 316.8c7.3 28.2 2.2 55.2-3.3 74.3-.8 2.8-1.3 5.8-1.3 8.9 0 17.7 14.3 32 32 32 3.2 0 6.2-.4 8.9-1.3 19.1-5.5 46.1-10.7 74.3-3.3 57.4 14.9 124.6-7.4 174.7-57.5s72.4-117.3 57.5-174.7c-7.3-28.2-2.2-55.2 3.3-74.3.8-2.8 1.3-5.8 1.3-8.9 0-17.7-14.3-32-32-32m0-48c44.2 0 80 35.8 80 80 0 7.7-1.1 15.2-3.1 22.3-4.6 15.8-7.1 32.9-3 48.9 20.1 77.6-10.9 161.5-70 220.7s-143.1 90.2-220.7 70c-16-4.1-33-1.6-48.9 3-7.1 2-14.6 3.1-22.3 3.1-44.2 0-80-35.8-80-80 0-7.7 1.1-15.2 3.1-22.3 4.6-15.8 7.1-32.9 3-48.9-20.1-77.6 10.9-161.5 70-220.7s143.2-90.1 220.7-70c16 4.1 33 1.6 48.9-3 7.1-2 14.6-3.1 22.3-3.1M246.7 167c-52 15.2-96.5 59.7-111.7 111.7-3.7 12.7-17.1 20-29.8 16.3s-20-17-16.2-29.7c19.8-67.7 76.6-124.5 144.3-144.3 12.7-3.7 26.1 3.6 29.8 16.3s-3.6 26.1-16.3 29.8z"/></svg>
+
+    </a>
+    New Lemonade Review
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pku-lemonade/review" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pku-lemonade/review
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    README
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hardware
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Hardware
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../processor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Processor Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parallel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Parallel and Multi-Processor Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Memory Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../accelerators/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Domain-Specific Accelerators
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interconnection Networks
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interconnection Networks
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#network-on-chip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network-on-Chip
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network-on-Chip">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wafer-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wafer-Scale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wafer-Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interconnect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-on-noc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing on NoC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traffic Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-tolerant-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fault-Tolerant Communication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-procedure-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote Procedure Call
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDMA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../eda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electronic Design Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security and Reliability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emerging/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emerging Technologies
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../perf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis (to be deleted)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../software/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algorithms
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/pl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programming Languages
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operating Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/ds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Distributed Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/hpc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    High-Performance Computing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/perf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Performance Analysis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#network-on-chip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network-on-Chip
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network-on-Chip">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wafer-scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wafer-Scale
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wafer-Scale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topology" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Topology
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interconnect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Interconnect
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-on-noc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Processing on NoC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traffic-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traffic Control
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-tolerant-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fault-Tolerant Communication
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NIC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remote-procedure-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Remote Procedure Call
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RDMA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/pku-lemonade/review/edit/main/docs/hardware/network.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/pku-lemonade/review/raw/main/docs/hardware/network.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="interconnection-networks">Interconnection Networks<a class="headerlink" href="#interconnection-networks" title="Permanent link">&para;</a></h1>
+<h2 id="network-on-chip">Network-on-Chip<a class="headerlink" href="#network-on-chip" title="Permanent link">&para;</a></h2>
+<p>Challenge: The bandwidth limitations and low communication efficiency faced by traditional bus architectures in on-chip multi-core &amp; many-core systems.</p>
+<p>Solution: NoC provides a flexible and high-bandwidth communication infrastructure for heterogeneous chiplets; enables efficient data movement and processing in heterogeneous many-core architectures.</p>
+<h3 id="wafer-scale">Wafer-Scale<a class="headerlink" href="#wafer-scale" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>SC</td>
+<td>THU</td>
+<td>Switch-Less Dragonfly on Wafers: A Scalable Interconnection Architecture based on Wafer-Scale Integration</td>
+<td>four-level topology structure; minimal routing algorithm on dragonfly for VC vumber reduction</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>TCAS</td>
+<td>SYSU</td>
+<td>CINOC: Computing in Network-On-Chip With Tiled Many-Core Architectures for Large-Scale General Matrix Multiplications</td>
+<td>computable input buffers;  thread execution free from fine-grained instruction control; data-aware thread execution</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>ISCA</td>
+<td>THU</td>
+<td>PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer</td>
+<td>mesh-switch physical topology; dual-granularity logical topology</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>ISCA</td>
+<td>THU</td>
+<td>WSC-LLM: Efficient LLM Service and Architecture Co-exploration for Wafer-scale Chips</td>
+<td>optimal resource partition algorithm; optimal KV cache placement algorithm</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>ISCA</td>
+<td>Georgia Tech‌</td>
+<td>FRED: A Wafer-scale Fabric for 3D Parallel DNN Training</td>
+<td>microswitch based distributed on-wafer topology; conflict-free collective routing algorithm; congestion-aware device placement policy</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="topology">Topology<a class="headerlink" href="#topology" title="Permanent link">&para;</a></h4>
+<p>Challenge: Current NoC topologies are often rigid and not adaptable to the specific needs of heterogeneous chiplets.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021</td>
+<td>HPCA</td>
+<td>GWU</td>
+<td>Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures</td>
+<td>mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2022</td>
+<td>HPCA</td>
+<td>Huawei</td>
+<td>Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective</td>
+<td>bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>MICRO</td>
+<td>THU</td>
+<td>Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture</td>
+<td>Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>arXiv</td>
+<td>WSU</td>
+<td>Atleus: Accelerating Transformers on the Edge Enabled by 3D Heterogeneous Manycore Architectures</td>
+<td>heterogeneous 3D NoC; pipeline design across heterogeneous resources; crossbar-wise quantization</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>ISLPED</td>
+<td>WSU</td>
+<td>HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration</td>
+<td>3D integration;  distinct planar tiers where each tier is tailor-made for either MHA or the FF network; alleviate memory bottlenecks while preventing frequent rewrites on ReRAM crossbars</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="interconnect">Interconnect<a class="headerlink" href="#interconnect" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2012</td>
+<td>SIGCOMM</td>
+<td>CMU</td>
+<td>On-Chip Networks from a Networking Perspective: Congestion and Scalability in Many-Core Interconnects</td>
+<td>congestion control mechanism for bufferless NoC; interval-based congestion control algorithm; simple injection throttling algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2021</td>
+<td>IPDPSW</td>
+<td>FAU</td>
+<td>Fast HBM Access with FPGAs: Analysis, Architectures, and Applications</td>
+<td>HBM lateral routing contention analysis; Memory Access Optimizer (MAO) IP; hierarchical HBM interconnect; HBM address interleaving on FPGA</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2023</td>
+<td>ICCAD</td>
+<td>UCF</td>
+<td>ARIES: Accelerating Distributed Training in Chiplet-based Systems via Flexible Interconnects</td>
+<td>directional bypassing link; ARIES link with transistor; ARIES all-reduce optimization algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>MICRO</td>
+<td>THU</td>
+<td>Heterogeneous Die-to-Die Interfaces: Enabling More Flexible Chiplet Interconnection Systems</td>
+<td>heterogeneous interface hetero-PHY and hetero-channel; hetero-channel routing algorithm; application-aware scheduling</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="processing-on-noc">Processing on NoC<a class="headerlink" href="#processing-on-noc" title="Permanent link">&para;</a></h4>
+<p>Challenge: The need for efficient data processing and computation on-chip to reduce data movement and improve performance.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>ISVLSI</td>
+<td>Ruhr-Universität Bochum</td>
+<td>Data Stream Processing in Network-on-Chip</td>
+<td>data stream processing unit(DSPU); operation mode based DSPU programming framework</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2019</td>
+<td>HPCA</td>
+<td>TAMU</td>
+<td>Active-Routing: Compute on the Way for Near-Data Processing</td>
+<td>active-routing tree; vector processing in cache block for regular access pattern; data prefetch for irregular access pattern</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2020</td>
+<td>HPCA</td>
+<td>Drexel University</td>
+<td>SnackNoC: Processing in the Communication Layer</td>
+<td>communication fabric quantification; central packet manager for instruction flit; router compute unit as dataflow pe</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="traffic-control">Traffic Control<a class="headerlink" href="#traffic-control" title="Permanent link">&para;</a></h4>
+<p>Challenge: The need for efficient traffic control to manage network traffic and reduce congestion and power consumption.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2017</td>
+<td>ISCA</td>
+<td>TAMU</td>
+<td>APPROX-NoC: A Data Approximation Framework for Network-On-Chip Architectures</td>
+<td>value approximate technique VAXX; encoder/decoder module pair for data compression; approximate value compute logic</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2017</td>
+<td>ICCD</td>
+<td>HIT</td>
+<td>ABDTR: Approximation–Based Dynamic Traffic Regulation for Networks–on–Chip Systems</td>
+<td>approximate computing based dynamic traffic regulation technique; lightweight design including controller, throttler and approximater</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2019</td>
+<td>DATE</td>
+<td>SCUT</td>
+<td>ACDC: An Accuracy- and Congestion-aware Dynamic Traffic Control Method for Networks-on-Chip</td>
+<td>quality loss and network congestion modeling; autoregressive model based flow prediction method</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>arXiv</td>
+<td>NTU</td>
+<td>Learning Cache Coherence Traffic for NoC Routing Design</td>
+<td>cache coherence traffic analyzer; DRL based topology selection and routing design</td>
+<td>2</td>
+<td>3</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fault-tolerant-communication">Fault-Tolerant Communication<a class="headerlink" href="#fault-tolerant-communication" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2014</td>
+<td>VLSI</td>
+<td>ICT</td>
+<td>ZoneDefense: A Fault-Tolerant Routing for 2-D Meshes Without Virtual Channels</td>
+<td>fault chains based faulty blocks construction; floor/ceiling rule based defense zone forming; L/F chain routing</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2017</td>
+<td>TPDS</td>
+<td>NTU</td>
+<td>Path-Diversity-Aware Fault-Tolerant Routing Algorithm for Network-on-Chip Systems</td>
+<td>path diversity analysis; fault-location-based path diversity; PDA-FTR algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2019</td>
+<td>DATE</td>
+<td>UMich</td>
+<td>SiPterposer: A Fault-Tolerant Substrate for Flexible System-in-Package Design</td>
+<td>blowing based customized topology; lightweight ECC module based defect tolerance</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2022</td>
+<td>DATE</td>
+<td>Colorado State University</td>
+<td>DeFT: A Deadlock-Free and Fault-Tolerant Routing Algorithm for 2.5D Chiplet Networks</td>
+<td>virtual network based deadlock freedom; congestion-aware vertical link selection</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="nic">NIC<a class="headerlink" href="#nic" title="Permanent link">&para;</a></h3>
+<p>Challenge: The peak bandwidth of NICs continues to increase, while the operating system and kernel layers are gradually lacking the capability to keep up with it.</p>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025</td>
+<td>HOTOS</td>
+<td>ETHZ</td>
+<td>The NIC should be part of the OS</td>
+<td>cache-coherent interconnect NIC control/data path; zero-overhead RPC dispatch; OS-NIC scheduling state sharing</td>
+<td>3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>2025</td>
+<td>MICRO</td>
+<td>UIUC</td>
+<td>NetZIP: Algorithm/Hardware Co-design of In-network Lossless Compression for Distributed Large Model Training</td>
+<td>bump-in-the-wire FPGA-NIC accelerator;bit/byte grouping algorithm for BF16;delta value compression for gradients and activations;algorithm-hardware co-design for lossless compression</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="router">Router<a class="headerlink" href="#router" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016</td>
+<td>HPCA</td>
+<td>KTH</td>
+<td>DVFS for NoCs in CMPs: A Thread Voting Approach</td>
+<td>thread voting based DVFS machenism; pre-defined region-based V/F adjustment algorithm</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2022</td>
+<td>HPCA</td>
+<td>Chalmers</td>
+<td>FastTrackNoC: A NoC with FastTrack Router Datapaths</td>
+<td>non-turning hops; direct FastTrack flit path; zero-load latency analysis</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2022</td>
+<td>HPCA</td>
+<td>UToronto</td>
+<td>Stay in your Lane: A NoC with Low-overhead Multi-packet Bypassing</td>
+<td>FastFlow flow controll method; time-division-multiplexed (TDM) based non-overlapping FastPass-lanes; FastPass for throughput enhancement</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2023</td>
+<td>HPCA</td>
+<td>THU</td>
+<td>A Scalable Methodology for Designing Efficient Interconnection Network of Chiplets</td>
+<td>interface grouping; hypercube construction algorithm; deadlock-free adaptive routing algorithm; safe/unsafe flow control; network interleaving method</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2025</td>
+<td>arXiv</td>
+<td>SJTU</td>
+<td>StreamGrid: Streaming Point Cloud Analytics via Compulsory Splitting and Deterministic Termination</td>
+<td>compulsory splitting for reducing on-chip buffer size; deterministic termination for regularizing non-deterministic operations; line buffer optimization for point cloud pipelines; ILP-based buffer size minimization</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="remote-procedure-call">Remote Procedure Call<a class="headerlink" href="#remote-procedure-call" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2023</td>
+<td>arXiv</td>
+<td>ICT</td>
+<td>CXL over Ethernet: A Novel FPGA-based Memory Disaggregation Design in Data Centers</td>
+<td>combining CXL and Ethernet for low-latency remote memory access; FPGA-based prototype with cache optimization; switch-independent congestion control algorithm; native memory semantics for transparent access</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2024</td>
+<td>arXiv</td>
+<td>UCSD</td>
+<td>Telepathic Datacenters: Fast RPCs using Shared CXL Memory</td>
+<td>pointer-passing RPC over CXL; MPK-based sandboxing for RPC safety; Seal/Release mechanism for RPC safety; RDMA fallback for RPC scalability; Lease/Quota shared memory management</td>
+<td>4</td>
+<td>3</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rdma">RDMA<a class="headerlink" href="#rdma" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Venue</th>
+<th>Authors</th>
+<th>Title</th>
+<th>Tags</th>
+<th>P</th>
+<th>E</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2024</td>
+<td>arXiv</td>
+<td>UCR</td>
+<td>GPUVM: GPU-driven Unified Virtual Memory</td>
+<td>GPUVM architecture for on-demand paging; RDMA-capable NIC for GPU memory management; GPU thread-based memory management and page migration; reuse-oriented paged memory for efficient eviction; high-level programming abstraction for GPU memory extension</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 21, 2026 12:55:22 UTC">January 21, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "toc.follow", "navigation.top", "content.action.edit", "content.action.view", "search.highlight", "search.share", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

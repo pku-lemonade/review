@@ -1,0 +1,129 @@
+/* ---- Concise CSS Overrides for Table Column Widths ---- */
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+    padding: 6px 8px; /* <<< SET YOUR DESIRED DEFAULT PADDING HERE */
+}
+
+/* Override FIRST column (e.g., Year) width, padding, and text alignment */
+.md-typeset table:not([class]) th:nth-child(1),
+.md-typeset table:not([class]) td:nth-child(1) {
+    width: 50px;        /* REQUIRED: Set your desired narrow width (adjust value) */
+    min-width: 0; /* Likely inherited or not needed if width is respected */
+}
+
+.md-typeset table:not([class]) th:nth-child(2),
+.md-typeset table:not([class]) td:nth-child(2) {
+    width: 50px;
+    min-width: 0;
+}
+
+.md-typeset table:not([class]) th:nth-child(3),
+.md-typeset table:not([class]) td:nth-child(3) {
+    width: 50px;
+    min-width: 0;
+}
+
+.md-typeset table:not([class]) th:nth-child(4),
+.md-typeset table:not([class]) td:nth-child(4) {
+    min-width: 200px;
+}
+
+.md-typeset table:not([class]) th:nth-child(5),
+.md-typeset table:not([class]) td:nth-child(5) {
+    min-width: 200px;
+}
+
+.md-typeset table:not([class]) th:nth-child(n+6),
+.md-typeset table:not([class]) td:nth-child(n+6) {
+    width: 50px;
+    min-width: 0;
+}
+
+/* .md-grid {
+    max-width: 1440px;
+} */
+
+:root > * {
+    /* --md-primary-fg-color: #397B9F; */
+    --md-primary-fg-color: #5F4A89;
+    /* --md-primary-fg-color: #824375; */
+
+    /* GitHub-style alert palette (light) */
+    --gh-alert-note: #0969da;
+    --gh-alert-tip: #1a7f37;
+    --gh-alert-important: #8250df;
+    --gh-alert-warning: #9a6700;
+    --gh-alert-caution: #cf222e;
+    --gh-alert-text: #1f2328;
+
+    --gh-alert-border: 3.5px;
+    --gh-alert-radius: 0px;
+    --gh-alert-padding-y: 8px;
+    --gh-alert-padding-x: 16px;
+}
+
+[data-md-color-scheme="slate"] {
+    /* GitHub dark palette */
+    --gh-alert-note: #2f81f7;
+    --gh-alert-tip: #3fb950;
+    --gh-alert-important: #a371f7;
+    --gh-alert-warning: #d29922;
+    --gh-alert-caution: #f85149;
+    --gh-alert-text: #e6edf3;
+}
+
+/* GitHub-like admonitions */
+.md-typeset .admonition,
+.md-typeset details {
+    margin: 0 0 16px;
+    padding: var(--gh-alert-padding-y) var(--gh-alert-padding-x);
+    border: 0;
+    border-left: var(--gh-alert-border) solid var(--gh-alert-accent, currentColor) !important;
+    border-radius: var(--gh-alert-radius);
+    color: var(--gh-alert-text);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    box-shadow: none;
+}
+
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0 0 16px;
+    padding: 0;
+    color: var(--gh-alert-accent, currentColor);
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    background: transparent;
+}
+
+.md-typeset .admonition > .admonition-title::before,
+.md-typeset details > summary::before {
+    display: none;
+}
+
+/* Type-specific colors */
+.md-typeset .note,
+.md-typeset .admonition.note {
+    --gh-alert-accent: var(--gh-alert-note);
+}
+.md-typeset .tip,
+.md-typeset details.tip {
+    --gh-alert-accent: var(--gh-alert-tip);
+}
+.md-typeset .important,
+.md-typeset details.important {
+    --gh-alert-accent: var(--gh-alert-important);
+}
+.md-typeset .warning,
+.md-typeset details.warning {
+    --gh-alert-accent: var(--gh-alert-warning);
+}
+.md-typeset .danger,
+.md-typeset details.danger {
+    --gh-alert-accent: var(--gh-alert-caution);
+}
+

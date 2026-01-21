@@ -1,0 +1,28 @@
+Year,Venue,Authors,Title,Tags,P,E,N
+# ### RTL Code Generation
+# Challenge: The need for automated RTL code generation tools to reduce the time and effort required for hardware design.
+# Solution: Use advanced techniques such as LLM; graph-based approaches; and domain-specific languages to automate and optimize the RTL code generation process and integrate into existing design tools.
+2013,DAC,Columbia,A Method to Abstract RTL IP Blocks into C++ Code and Enable High-Level Synthesis,process communication graph; I/O port loop unrolling; HLS design space expansion,,,
+2021,ASPLOS,Cornell,A compiler infrastructure for accelerator generators,a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing,4,3,3
+2024,ISEDA,UESTC,GraphRTL: an Agile Design Framework of RTL Code from Data Flow Graphs,graph error detection kernel; DFS based graph equivalent reconstruction; template/scala based DFG and CFG merging,,,
+2024,arXiv,UCSD,MAGE: A Multi-Agent Engine for Automated RTL Code Generation,multi-agent; high-temperature sampling and ranking; verilog-state checkpoint debugging,,,
+2024,ICCAD,PKU,OriGen: Enhancing RTL Code Generation with Code-to-Code Augmentation and Self-Reflection,self-reflection mechanism; dataset augmentation methodology; VerilogFixEval benchmark,2,4,2
+
+# #### Higher-Level RTL Code Generation
+# Challenge: raise the level of abstraction to specifically target the construction of applications
+2022,PLDI,Cornell University,PDL: A High-Level Hardware Design Language for Pipelined Processors,one-instruction-at-a-time semantics; hardware description language; hazard locks; speculation API; guaranteed-correct pipelining,3,3,3
+2025,ISCA,KAUST,Assassyn: A Unified Abstraction for Architectural Simulation and Implementation,unified simulation and RTL generation; asynchronous event-driven pipeline abstraction; function-as-stage programming model; transposed trace-waveform alignment,3,3,3
+
+# #### RTL Code Generation Benchmarks
+# Challenge: The lack of standardized benchmarks for evaluating RTL code generation tools.
+2023,DATE,NYU,Benchmarking Large Language Models for Automated Verilog RTL Code Generation,verilog code training corpus; multi-level verilog coding problems for analysis,,,
+
+# ### Physical Design
+# Challenge: Optimizing the physical layout (placement and routing) of circuits on chips to meet timing, power, and area constraints, especially for large-scale heterogeneous architectures.
+2019,ICCAD,UT Austin,elfPlace: Electrostatics-based Placement for Large-Scale Heterogeneous FPGAs,electrostatics-based placement for heterogeneous FPGAs; augmented Lagrangian formulation; preconditioning technique; normalized subgradient multiplier updating; unified instance area adjustment,4,4,4
+2023,ICCAD,TAMU,Systolic Array Placement on FPGAs,Region-wise Sweep in Alternating Direction (R-SAD); partition enumeration and pruning; regularity-driven placement; DSP column placement optimization,3,4,3
+
+# #### HLS-aware Physical Design
+# Challenge: Long compilation time for HLS designs due to the inherently sequential and complex physical implementation (place & route) flow.
+# Solution: Leverage HLS dataflow properties to enable a parallel physical implementation flow.
+2022,FPGA,UCLA,RapidStream: Parallel Physical Implementation of FPGA HLS Designs,split compilation; HLS-physical co-design; anchor registers; timing isolation; parallel placement and routing; stitching,4,4,4
