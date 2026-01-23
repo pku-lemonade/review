@@ -24,9 +24,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
 2025,arXiv,CMU,Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs,mega-kernelization; SM level parallel optimization; SM level representation,3,3,3
 
+# #### TinyML & Edge Compilers
+# Solution: address extreme memory and compute constraints on microcontrollers through specialized compilation strategies like fine-grained memory planning and redundancy-free tensor splitting.
+2024,HPCA,NYCU,TinyTS: Memory-Efficient TinyML Model Compiler Framework on Microcontrollers,dependency-free tensor splitting model; virtual feature map (VFP) for zero-copy concatenation; fine-grained life-cycle aware memory planner,4,4,3
+
 # ### Compiler for Accelerators
 # Solution: High-level programming model, automatic code generation, performance optimization for specialized hardware
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
+2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 
 # #### Embedded DSL Compiler Frameworks
 # Challenge: Developing high-performance parallel DSLs for heterogeneous hardware requires significant repetitive effort in building IRs, optimizers, and code generators from scratch.
@@ -97,7 +102,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,ICCAD,PKU,HECTOR: A Multi-level Intermediate Representation for Hardware Synthesis Methodologies,high-level topological representation; low-level hierarchical elastic component; time graph transformation,4,4,3
 2022,HPCA,UIUC,ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation,multi-level IR for HLS; HLS-dedicated analysis/transform library; MLIR-based HLS framework,4,4,3
 2023,ASPLOS,IISc,HIR: An MLIR-based Intermediate Representation for Hardware Accelerator Description,MLIR-based hardware IR; datapath + schedule model; explicit scheduling via time variables; automatic FSM synthesis,4,4,4
-2024,HPCA,SJTU,An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation,polyhedral model for HLS; MLIR-based HLS framework; automatic design space exploration,4,4,4
+2024,HPCA,SJTU,An Optimizing Framework on MLIR for Efficient FPGA-based Accelerator Generation,polyhedral-based dependence analysis for loop transformations; bottleneck-oriented design space exploration; Dependence/Polyhedral/Affine IR hierarchy for FPGA HLS,4,4,4
 2024,PLDI,Cornell,Allo: A Programming Model for Composable Accelerator Design,composable programming model; decoupled hardware customizations; bottom-up type-safe composition; hierarchical dataflow graph; memory layout composition via type inference,4,4,3
 
 # ##### HLS Verification and Debugging
