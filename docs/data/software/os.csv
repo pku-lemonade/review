@@ -30,6 +30,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Memory Pooling
 # Solution: Memory Pooling reduces the overhead of frequent memory allocation and deallocation by maintaining a pool of pre-allocated memory blocks for reuse.
 2023,ASPLOS,Virginia Tech,Pond: CXL-Based Memory Pooling Systems for Cloud Platforms,CXL-based memory pooling; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory,,,
+2024,OSDI,MSR,Managing Memory Tiers with CXL in Virtualized Environments,Intel Flat Memory Mode (Xeon 6) for cache-line granularity tiering and exclusive placement; page coloring for VM isolation,4,3,2 
 
 # ### Cache Evict
 # Challenge: to balance the cache hit ratio and the cache miss penalty.
