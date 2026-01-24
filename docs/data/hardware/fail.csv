@@ -28,7 +28,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ISSRE,UBC,Resilience Assessment of Large Language Models under Transient Hardware Faults,instruction-level fault injection; fault propagation tracing; critical bits identification,3,4,2
 2023,SOSP,Tsinghua&Alibaba,Understanding Silent Data Corruptions in a Large Production CPU Population,temperature-dependent failure patterns; bitflip locality,4,4,2
 # #### Silent Data Corruption Recovery
-# Challenge: 
+# Challenge: Accurately and efficiently rectifying stealthy, non-crashing errors that may have already propagated through the system, without incurring the prohibitive latency and resource overheads typically associated with state restoration.
 2022,TCAD,ICT,HyCA: A Hybrid Computing Architecture for Fault-Tolerant Deep Learning,dot-production processing unit; delayed recomputing dataflow; runtime partial result scanning,4,4,2
 2023,ICCAD,PKU,READ: Reliability-Enhanced Accelerator Dataflow Optimization using Critical Input Pattern Reduction,critical input pattern reduction; sign-monotonicity dataflow optimization; cluster-then-reorder strategy,4,3,2
 2024,ISCA,UoA,Harpocrates: Breaking the Silence of CPU Faults through Hardware-in-the-Loop Program Generation,microarchitectural feedback loop; constraint based mutation engine; architecturally correct execution,4,3,2
