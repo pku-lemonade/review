@@ -19,7 +19,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ATC,THU,DSA-2LM: A CPU-Free Tiered Memory Architecture with Intel DSA,CPU-free page migration in tiered memory via data streaming accelerator; adaptable migration algorithm for mixed 4KB/2MB pages; direct in-kernel DSA integration bypassing DMA,3,3,4
 2025,ASPLOS,Purdue,EDM: An Ultra-Low Latency Ethernet Fabric for Memory Disaggregation,Ethernet PHY network stack; PHY in-network scheduler; PHY intra-frame preemption,4,4,4
 2025,HOTOS,MSR,"Storage Class Memory is Dead, All Hail Managed-Retention Memory: Rethinking Memory for the AI Era",Managed-Retention Memory class; relaxed retention non-volatile memory; dynamically Configurable Memory,3,3,2
-2025,arXiv,Edinburgh,"RMAI: Rethinking Memory for AI (Inference), In-Kernel Remote Shared Memory as a Software Alternative to CXL", CXL-like transparent remote data placement and direct addressing on RDMA; remote shared PGAS-like memory arch for expert loading,3,2,3
+2025,arXiv,Edinburgh,"RMAI: Rethinking Memory for AI (Inference), In-Kernel Remote Shared Memory as a Software Alternative to CXL",CXL-like transparent remote data placement and direct addressing on RDMA; remote shared PGAS-like memory arch for expert loading,3,2,3
 # #### CXL-based Disaggregated Memory
 2024,MICRO,PKU,NeoMem: Hardware-Software Co-Design for CXL-Native Memory Tiering,device-side memory profiling unit; sketch-based hot page detector with error-bound estimation; dynamic hotness threshold adjustment based on statistics,2,2,3
 2025,ASPLOS,Yale,PULSE: Accelerating Distributed Pointer-Traversals on Disaggregated Memory,iterator-based programming model; disaggregated accelerator architecture; in-network routing for distributed traversal,3,4,3
