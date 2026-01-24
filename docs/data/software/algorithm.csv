@@ -30,6 +30,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### LLM Inference Based on Activation Sparsity 
 # Solution: Activation sparsity-based LLM inference aims to optimize the computational efficiency of large language models by leveraging the inherent sparsity in their activations, allowing for reduced resource consumption during inference.
 2023,ICML,Rice,Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time,asynchronous lookahead predictor; hardware-aware contextual sparsity; layer-wise activation similarity,3,4,4
+2023,NeurIPS,UTexas,H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models,greedy accumulation eviction; dynamic submodular maximization; sparsity-preserving generation,4,4,4
 
 # ##### Early Exit LLM
 # Solution: Early exit LLMs aim to reduce inference time and computational cost by allowing the model to produce outputs at intermediate layers when sufficient confidence is achieved.
