@@ -25,8 +25,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Silent Data Corruption
 # Challenge: SDCs can evade standard hardware error detection mechanisms (like ECC) and manifest as sporadic application-level failures triggered by specific data patterns, making them extremely difficult to reproduce, distinguish from software bugs, and root-cause in a large-scale production fleet.
 2021,Arxiv,Facebook,Silent Data Corruptions at Scale,reproducible silent data corruption (SDC); JIT-to-Assembly reverse engineering; opportunistic&periodic error detection,3,1,2
+2023,ISSRE,UBC,Resilience Assessment of Large Language Models under Transient Hardware Faults,instruction-level fault injection; fault propagation tracing; critical bits identification,3,4,2
+2023,SOSP,Tsinghua&Alibaba,Understanding Silent Data Corruptions in a Large Production CPU Population,temperature-dependent failure patterns; bitflip locality,4,4,2
+# #### Silent Data Corruption Recovery
+# Challenge: 
 2022,TCAD,ICT,HyCA: A Hybrid Computing Architecture for Fault-Tolerant Deep Learning,dot-production processing unit; delayed recomputing dataflow; runtime partial result scanning,4,4,2
 2023,ICCAD,PKU,READ: Reliability-Enhanced Accelerator Dataflow Optimization using Critical Input Pattern Reduction,critical input pattern reduction; sign-monotonicity dataflow optimization; cluster-then-reorder strategy,4,3,2
+2024,ISCA,UoA,Harpocrates: Breaking the Silence of CPU Faults through Hardware-in-the-Loop Program Generation,microarchitectural feedback loop; constraint based mutation engine; architecturally correct execution,4,3,2
+2024,ASPLOS,VU&Meta,Dr. DNA: Combating Silent Data Corruptions in Deep Learning using Distribution of Neuron Activations,Distribution of Neuron Activations (DNA) profiling; multi-metric abnormality scoring; DNA guided activation redistribution,4,4,3
 # ### Physical Effects
 # #### RRAM
 # Challenge: Non-ideal effects of RRAM devices (e.g. device-to-device variation; cycle-to-cycle variation; etc.) can cause significant performance degradation.
