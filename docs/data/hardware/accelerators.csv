@@ -43,6 +43,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Algorithmic Accelerators
 # Solution: Algorithmic accelerators use specialized algorithms to optimize the performance of LLMs.
 2020,HPCA,Seoul National,A3: Accelerating Attention Mechanisms in Neural Networks with Approximation,greedy candidate search for reducing search targets; post-scoring selection with dynamic thresholding for softmax; lookup-table-based exponent modules,4,3,2
+2021,HPCA,MIT,SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning,cascade pruning; high-parallelism top-K engine; progressive quantization,3,4,4
 2024,ASPLOS,CMU,SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification,tree-based speculative inference; topology-aware causal mask; multi-step speculative sampling,4,4,4
 2025,MICRO,KAIST,HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models,PipeFlash fine-grained pipelining for Attention; PipeSSD fused pipelined execution for Mamba-2; Unified Reconfigurable Streamlined Core (URSC);inter-operation dependency mitigation,4,3,3
 # #### Quantized DNN Accelerators

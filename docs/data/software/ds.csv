@@ -130,6 +130,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ATC,Huawei,Cost-Efficient Large Language Model Serving for Multi-turn Conversations with CachedAttention,store KV cache in the memory; multi level KV cache management; position mask modified,3,3,3
 2024,SIGCOMM,UChicago,CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving,efficient KV Cache streaming; KV Cache compression; knowledge delivery network; The transfer part of LMCache,3,4,3
 2025,EuroSys,THU,Fast State Restoration in LLM Serving with HCache,offload activation instead of KVC to reduce IO; use little recomputation to tradeoff offloading latency,4,4,4
+2025,arXiv,Chicago,LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference,KVC hierarchical offloading; batched movement; decoupled connector API,3,4,3
 
 # ##### Position Independent Methid
 # Solution: Use recover method to reduce the KV cache size.
@@ -143,6 +144,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
 2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
 2025,SOSP,Huawei,DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction,multiple quant strategy based on K/V differentiation; 8bitK+4bitV for important tokens & K4V2 for rest ones; dynamic malloc based on per-head sparsity,4,3,3
+2025,arXiv,ZJU,AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving,runtime information version of Infercept; handle the tool use KVC management,3,3,1
 
 # #### KV Cache Storage Systems
 # Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
