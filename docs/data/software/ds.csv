@@ -143,6 +143,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
 2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
+2025,SOSP,Huawei,DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction,multiple quant strategy based on K/V differentiation; 8bitK+4bitV for important tokens & K4V2 for rest ones; dynamic malloc based on per-head sparsity,4,3,3
 2025,arXiv,ZJU,AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving,runtime information version of Infercept; handle the tool use KVC management,3,3,1
 
 # #### KV Cache Storage Systems
