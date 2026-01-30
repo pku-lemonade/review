@@ -114,6 +114,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Manually deriving and implementing efficient gradients for novel operators is complex, error-prone, and hinders rapid innovation.
 2018,SIGGRAPH,MIT,"Differentiable Programming for Image Processing and Deep Learning in Halide","reverse-mode automatic differentiation; scatter-to-gather conversion for gradients; compiling differentiable programs",4,5,4
 2025,HPCA,NYCU,EDA: Energy-Efficient Inter-Layer Model Compilation for Edge DNN Inference Acceleration,Inter-Layer Operator Scheduling;SRAM-Constrained Tiling,4,3,3
+
 # #### Multi-task Learning
 # Solution: Multi-task learning (MTL) is a machine learning paradigm where multiple related tasks are learned simultaneously, leveraging shared representations to improve performance across tasks.
 2018,NeurIPS,Intel,Multi-Task Learning as Multi-Objective Optimization,Frank-Wolfe-based optimizer that scales to high-dimensional problems; provide an upper bound for the MGDA(multiple-gradient descent algorithm) optimization objective,3,4,4
