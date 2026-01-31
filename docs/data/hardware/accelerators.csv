@@ -26,7 +26,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### DNN Accelerators
 # #### GEMM
 2020,HPCA,Georgia Tech,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,2,3
-2025,TCAS-I,Edin.,DiP: A Scalable, Energy-Efficient Systolic Array for Matrix Multiplication Acceleration,Permutated Weight;FIFO-less Architecture,4,4,3
+2025,TCAS-I,Edin.,"DiP: A Scalable, Energy-Efficient Systolic Array for Matrix Multiplication Acceleration",Permutated Weight;FIFO-less Architecture,4,4,3
 # #### Layer Fusion Accelerators
 # Solution: Use layer fusion to combine multiple layers of a neural network into a single layer. This can help reduce the number of computations and memory accesses required during inference; leading to faster execution times and lower power consumption.
 2016,MICRO,SBU,Fused-Layer CNN Accelerators,fuse the processing of multiple CNN layers by modifying the order in which the input data are brought on chip,,,
