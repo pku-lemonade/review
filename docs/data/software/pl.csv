@@ -27,6 +27,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### TinyML & Edge Compilers
 # Solution: address extreme memory and compute constraints on microcontrollers through specialized compilation strategies like fine-grained memory planning and redundancy-free tensor splitting.
 2024,HPCA,NYCU,TinyTS: Memory-Efficient TinyML Model Compiler Framework on Microcontrollers,dependency-free tensor splitting model; virtual feature map (VFP) for zero-copy concatenation; fine-grained life-cycle aware memory planner,4,4,3
+2025,HPCA,NYCU,EDA: Energy-Efficient Inter-Layer Model Compilation for Edge DNN Inference Acceleration,Inter-Layer Operator Scheduling;SRAM-Constrained Tiling,4,3,3
 
 # ### Compiler for Accelerators
 # Solution: High-level programming model, automatic code generation, performance optimization for specialized hardware
