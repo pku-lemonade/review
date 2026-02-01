@@ -6,9 +6,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,ETHZ,REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing,In-Storage processing,2,4,3
 2025,ISCA,UCSD,In-Storage Acceleration of Retrieval Augmented Generation as a Service,metamorphic in-storage accelerator; Metadata Navigation Unit for dynamic data access,4,3,2
 2025,arxiv,ETHZ,MARS: Processing-In-Memory Acceleration of Raw Signal Genome Analysis Inside the Storage Subsystem,PIM module inside the SSD controller; early signal quantization; read filtering,3,3,2
-2024,arXiv,ICT,Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM, chiplet-based NPU & NAND flash hybrid architecture; Hardware-aware tiling for NPU-flash workload distribution,4,3,2
-# #### LLM-Specific Optimization
+2026,HPCA,ETHZ,Conduit: Programmer-Transparent Near-Data Processing Using Multiple Compute-Capable Resources in Solid State Drives,loop auto-vectorization to align with SSD page layout; instruction-granularity offloading via holistic cost function,2,3,2
+# #### LLM-Specific Optimizations
 # Solution: Store weights in flash memory as read-only to prevent failures caused by write operations.
+2024,arXiv,ICT,Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM, chiplet-based NPU & NAND flash hybrid architecture; Hardware-aware tiling for NPU-flash workload distribution,4,3,2
 2025,ISCA,Seoul National,AiF: Accelerating On-Device LLM Inference Using In-Flash Processing,in-flash GEMV computation; charge-recycling read to skip precharge/discharge steps in flash memory,3,3,4
 2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
@@ -64,6 +65,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,ISCA,UCSB,iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture, Single-Instruction-Multiple-Bank ISA; register allocation; instruction reordering,4,4,2
 2025,ISCA,POSTECH,ATIM: Autotuning Tensor Programs for Processing-in-DRAM,autotuning framework for DRAM PIM; search-based optimizing tensor compiler; balanced evolutionary search algorithm,3,3,4
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,layout-aware nested loop representation; Integer Linear Programming formulation for PIM mapping; analytical cost modeling for data layout enforcement,3,3,4
+2026,HPCA,Hanyang,PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-based Long-Context LLM Inference System,token-centric PIM partitioning for high channel utilization; dynamic PIM command scheduling for out-of-order I/O-compute overlap; dynamic PIM access for dynamic virtual-to-physical translation,3,4,4
 # #### Evaluation & Simulators
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 2025,arXiv,ETHZ,EasyDRAM: An FPGA-based Infrastructure for Fast and Accurate End-to-End Evaluation of Emerging DRAM Techniques,FPGA-based DRAM evaluation framework; C++ high-level language for description; time scaling for accurate modeling,3,4,3
@@ -71,10 +73,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: High latency of intra-DIMM (cross-bank) communication via host CPU forwarding.
 2024,ISCA,THU,NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures,"gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing",,,
 2025,HPCA,Samsung,Piccolo: Large-Scale Graph Processing with Fine-Grained In-Memory Scatter-Gather,In-DRAM fine-grained scatter-gather via data bus offsets; fine-grained cache architecture using fg-tags; Standard DDR command interpretation for FIM control; Combined graph tiling with fine-grained memory access,3,3,4
-2025,arXiv,ETHZ,PIMDAL: Mitigating the Memory Bottleneck in Data Analytics using a Real Processing-in-Memory System,PIMDAL library for DB operators; quicksort/mergesort/hashing on UPMEM PIM; scatter/gather/async transfers for PIM communication,4,4,2
 2024,arXiv,Seoul National,PID-Comm: A Fast and Flexible Collective Communication Framework for Commodity Processing-in-DIMM Devices,Virtual hypercube PIM model; PE-assisted data reordering; in-register and cross-domain data modulation,3,4,3
 2025,ISCA,KAIST,PIMnet: A Domain-Specific Network for Efficient Collective Communication in Scalable PIM, domain-specific PIM interconnect; hierarchical network for PIM packaging; PIM-controlled deterministic scheduling,2,4,3
-# #### Inter-DIMM Communication
+2026,HPCA,ICT,COCOTree: A Computation-Capable Architecture for Collective Communication in Scalable PIM, hierarchical binary tree topology for inter-PE communication; in-network computation via computation-capable nodes; two-phase packet-based protocol with configuration-computation decoupling,4,3,2
+#### Inter-DIMM Communication
 # Challenge: High latency of inter-DIMM (cross-DIMM) communication via host CPU forwarding.
 2017,MEMSYS,UCLA,AIM: Accelerating Computational Genomics through Scalable and Noninvasive Accelerator-Interposed Memory,placing FPGA chip between DIMM and the conventional memory network; multi-drop bus for inter-accelerator communication, 1,2,2
 2023,ASPLOS,THU,ABNDP: Co-optimizing Data Access and Load Balance in Near-Data Processing,Traveller Cache; hybrid task scheduling; hybrid scheduling leveraging distributed cache,4,3,4
