@@ -650,7 +650,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
-2025,arXiv,UCSB,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent aware prefix cache evict stragety,3,2,1
 2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
 
 # #### Environment Optimizations for Multi-Agent Systems
