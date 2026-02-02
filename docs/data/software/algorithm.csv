@@ -233,7 +233,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: data structures for processing dynamic graphs, which are graphs that change over time.
 
 # #### Survey
-2024,Front. Comput. Sci.,HUST,"A survey on dynamic graph processing on GPUs: concepts, terminologies and systems",taxonomy of GPU graph updating (Array/CSR/Chain-based) and computing; standardization of Stream/Snapshot/Temporal graph models,,,
+2024,FCS,HUST,"A survey on dynamic graph processing on GPUs: concepts, terminologies and systems",taxonomy of GPU graph updating (Array/CSR/Chain-based) and computing; standardization of Stream/Snapshot/Temporal graph models,,,
 
 # #### Architecture-specific Data Structures
 # Solution: Data structures targeting specific hardware architectures
