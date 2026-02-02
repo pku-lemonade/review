@@ -244,7 +244,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,TC,SJTU,ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity,bit-level sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme,,,
 2024,Science,USC,Programming memristor arrays with arbitrarily high precision for analog computing,represent high-precision numbers using multiple relatively low-precision analog devices;using RRAM CIM to solve PDEs,5,4,3
 # #### RRAM CIM: Weight Mapping
-2021,ICCAD,SJTU,Bit-Transformer: Transforming Bit-level Sparsity into Higher Preformance in ReRAM-based Accelerator,bit-wise weight clustering; weight bit-sparsity utilization,3,3,2
+2021,ICCAD,SJTU,Bit-Transformer: Transforming Bit-level Sparsity into Higher Performance in ReRAM-based Accelerator,bit-wise weight clustering; weight bit-sparsity utilization,3,3,2
 # #### RRAM CiM: Design Space Exploration
 2025,arXiv,RWTH Aachen,Optimizing Binary and Ternary Neural Network Inference on RRAM Crossbars using CIM-Explorer,Tensor Virtual Machine (TVM)-based compiler; implementation of different mapping techniques; DSE flow to analyze the impact of parameters,3,3,3
 # #### RRAM CiM: Modeling
