@@ -202,6 +202,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: It is difficult to target specific components, reproduce realistic fault scenarios, and observe system behavior without disturbing normal operation, especially as system scale and complexity increase.
 2008,VLSI,DISCA,Enhancement of Fault Injection Techniques Based on the Modification of VHDL Code,saboteurs and mutants technique based fault injection; VHDL level fault-tolerance mechanism,,,
 2014,DSN,UBC,Quantifying the Accuracy of High-Level Fault Injection Techniques for Hardware Faults,fault injection quantification; assembly level fault injection; LLVM compiler based fault injector,,,
+2025,ATC,THU,CAFault: Enhance Fault Injection Technique in Practical Distributed Systems via Abundant Fault-Dependent Configurations,implicit dependency construction; fault-handling guided fuzzing; fault-dependent model,4,3,2
 
 # ### Communication
 # Challenge: efficiently managing data exchange between a large number of cores, due to limited bandwidth, high latency, and contention in shared resources like interconnects and memory.

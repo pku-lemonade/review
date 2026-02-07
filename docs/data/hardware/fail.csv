@@ -22,6 +22,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Fail-slow faults can cause performance degradation without complete failure; making them difficult to detect and diagnose than the fail-stop failure.
 2022,ATC,SJTU & Alibaba,NVMe SSD Failures in the Field: the Fail-Stop and the Fail-Slow,hardware infant mortality; write amplification factor; intra-node/rock failure,3,4,2
 2024,MICRO,MIT,DelayAVF: Calculating Architectural Vulnerability Factors for Delay Faults,architectural vulnerability factors; tractable two-step derivation for AVF computation,3,3,2
+2024,ATC,Samsung,MSFRD: Mutation Similarity based SSD Failure Rating and Diagnosis for Complex and Volatile Production Environments,dynamic mutation feature extraction; mutation similarity; trend prediction with rarity weights,3,3,2
 2025,ATC,HUST,Understanding and Detecting Fail-Slow Hardware Failure Bugs in Cloud Systems,context-sensitive injection strategy; static fault point analysis; gray failure checker,3,4,2
 # #### Silent Data Corruption
 # Challenge: SDCs can evade standard hardware error detection mechanisms (like ECC) and manifest as sporadic application-level failures triggered by specific data patterns, making them extremely difficult to reproduce, distinguish from software bugs, and root-cause in a large-scale production fleet.
