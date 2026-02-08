@@ -232,6 +232,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Dynamic Graph Processing
 # Solution: data structures for processing dynamic graphs, which are graphs that change over time.
 
+# #### Survey
+2024,FCS,HUST,"A survey on dynamic graph processing on GPUs: concepts, terminologies and systems",taxonomy of GPU graph updating (Array/CSR/Chain-based) and computing; standardization of Stream/Snapshot/Temporal graph models,,,
+
 # #### Architecture-specific Data Structures
 # Solution: Data structures targeting specific hardware architectures
 2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3

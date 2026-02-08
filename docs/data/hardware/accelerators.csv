@@ -5,21 +5,27 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ISCA,Seoul National,SHARP: A Short-Word Hierarchical Accelerator for Robust and Practical Fully Homomorphic Encryption,36-bit word length optimization for FHE precision-efficiency trade-off; double-prime scaling unit for instruction fusion and short-word scaling,3,2,3
 # ### Graph Accelerators
 # Challenge: Massive memory requirement, Non-ordered memory access
+# #### Pipelined & Event-Driven Graph Accelerators
+# Solution: Optimize data flow and execution models using pipelining, event-driven mechanisms, or data shuffling to handle irregular graph workloads.
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
 2019,FPL,NUS,On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs,on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture,3,4,2
 2020,MICRO,UCR,GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing,asynchronous event-driven model; in-place event coalescing; delta-based accumulative processing,3,3,4
+# #### Memory-Optimized Graph Accelerators
+# Solution: Address the memory bottleneck (bandwidth and latency) through specialized memory hierarchies, HBM optimizations, or caching mechanisms.
+2019,FPGA,HUST,Improving Performance of Graph Processing on FPGA-DRAM Platform by Two-level Vertex Caching,two-level vertex caching (L1 BRAM/L2 UltraRAM); Hilbert-order window sliding for locality; dual-pipeline computation-communication overlapping,4,4,3
 2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
-# #### Hypergraph Accelerators
-# Solution: Realize the shared parts in hyperedges
-2022,MICRO,HUST,A Data-Centric Accelerator for High-Performance Hypergraph Processing,Data-Centric; Load-Trigger-Reduce (LTR); Adaptive Data Loading,4,4,3
-2025,HPCA,HUST,MeHyper: Accelerating Hypergraph Neural Networks by Exploring Implicit Dataflows, Microedge; Microedge-Centric Dataflow; RePAG Execution Model,4,3,4
 # #### Dynamic Graph Accelerators
 # Challenge: Edge update, Graph store data structure design
+2021,FPGA,HUST,GraSU: A Fast Graph Update Library for FPGA-based Dynamic Graph Processing,differential data management based on spatial similarity; Incremental Value Measurer (IVM); Value-Aware Memory Manager (VMM),4,4,3
 2021,MICRO,UCR,JetStream: Graph Analytics on Streaming Data with Event-Driven Hardware Accelerator,first streaming graph accelerator; asynchronous incremental algorithms; asynchronous edge deletion handling (VAP; DAP),3,3,4
 2022,ISCA,HUST,TDGraph: A Topology-Driven Accelerator for High-Performance Streaming Graph Processing,topology-driven incremental execution; streaming graph processing; regularized state propagation; vertex states coalescing,4,4,3
 2023,MICRO,UCR,MEGA Evolving Graph Accelerator,first evolving graph accelerator; Batch-Oriented Execution (BOE); deletion-free based on CommonGraph; Batch Pipelining,3,3,4
 2024,TRETS,UoV,Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs,a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning,4,4,3
+# #### Hypergraph Accelerators
+# Solution: Realize the shared parts in hyperedges
+2022,MICRO,HUST,A Data-Centric Accelerator for High-Performance Hypergraph Processing,Data-Centric; Load-Trigger-Reduce (LTR); Adaptive Data Loading,4,4,3
+2025,HPCA,HUST,MeHyper: Accelerating Hypergraph Neural Networks by Exploring Implicit Dataflows, Microedge; Microedge-Centric Dataflow; RePAG Execution Model,4,3,4
 # #### Graph Mining Accelerators
 # Challenge: Complex graph algorithms, Irregular access patterns
 2021,ISCA,MIT,FlexMiner: A Pattern-Aware Accelerator for Graph Pattern Mining,pattern-aware GPM accelerator; software/hardware co-design; pattern-specific execution plan; connectivity map (c-map),4,4,3
