@@ -1,5 +1,9 @@
 Year,Venue,Authors,Title,Tags,P,E,N
 # ### In-Stroage (NAND Flash) Processing
+# #### Near-NAND Array Processing
+# Solution: bypass the NAND Flash controller chip and DRAM/SLC buffer, execute the tasks by near-array units.
+2025,arXiv,Korea Univ.,Dissecting and Re-architecting 3D NAND Flash PIM Arrays for Efficient Single-Batch Token Generation in LLMs, re-architected 3D-NAND PIM array with H-tree network; QLC-SLC hybrid architecture for KV caching; static/dynamic MVM tiling and mapping,4,2,3
+2025,ISCA,Seoul National,AiF: Accelerating On-Device LLM Inference Using In-Flash Processing,in-flash GEMV computation; charge-recycling read to skip precharge/discharge steps in flash memory,3,3,4
 # #### General Application Targeted Optimization
 # Solution: Intergrate the compute unit into the SSD controller to process the capacity-sensitive applications.
 2024,HPCA,UCLA,BeaconGNN: Large-Scale GNN Acceleration with Out-of-Order Streaming In-Storage Computing,DirectGraph format for out-of-order sampling; die-level processing units; channel-level command router,4,2,3
@@ -10,10 +14,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM-Specific Optimizations
 # Solution: Store weights in flash memory as read-only to prevent failures caused by write operations.
 2024,arXiv,ICT,Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM, chiplet-based NPU & NAND flash hybrid architecture; Hardware-aware tiling for NPU-flash workload distribution,4,3,2
-2025,ISCA,Seoul National,AiF: Accelerating On-Device LLM Inference Using In-Flash Processing,in-flash GEMV computation; charge-recycling read to skip precharge/discharge steps in flash memory,3,3,4
 2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
-2025,arXiv,Korea Univ.,Dissecting and Re-architecting 3D NAND Flash PIM Arrays for Efficient Single-Batch Token Generation in LLMs, re-architected 3D-NAND PIM array with H-tree network; QLC-SLC hybrid architecture for KV caching; static/dynamic MVM tiling and mapping,4,2,3
+2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
+
 # ### DIMM-PIMs
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -33,7 +37,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Graph processing is fundamentally limited by memory bandwidth and requires frequent random accesses, which are not efficiently supported by non-interleaved, bank-level PIM architectures.
 2022,PACT,PKU,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing,splitting reduce operations to NDP units; narrow-shard strategy for data reuse; hybrid graph partition strategy for load balancing,4,3,3
 2025,HPCA,ZJU,GOPIM: GCN-Oriented Pipeline Optimization for PIM Accelerators,ML-based replica resource allocation for pipeline streamlining; interleaved mapping with adaptive selective vertex updating,2,3,3
-# #### LLM Optimization
+2025,MICRO,Seoul National,FALA: Locality-Aware PIM-Host Cooperation for Graph Processing with Fine-Grained Column Access, 8-byte-level granularity for fine-grained vertex access with HBM2-PIM; multiple non-contiguous column accesses within single activated DRAM row,2,2,2
 # Challenge: LLM inference is fundamentally bottlenecked by memory bandwidth; HBM is expensive and not scalable.
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
@@ -89,6 +93,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ASPLOS,KAIST,NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing,dual row buffer architecture; sub-batch interleaving; greedy min-load bin packing algorithm,3,4,3
 2025,ISCA,Univ. of Virginia,Membrane: Accelerating Database Analytics with Bank-Level DRAM-PIM Filtering,bank-level DRAM-PIM filtering; CPU-PIM cooperative query execution; denormalization for PIM-amenable filtering,3,3,2
 2025,MICRO,Inha University,ComPASS: A Compatible PIM Protocol Architecture and Scheduling Solution for Processor-PIM Collaboration, PIM-ACT new memory command for multi-bank PIM operations; PIM request generator to offload host processor; static and adaptive throughput balancers for PIM and non-PIM request scheduling,4,2,2
+2025,ASPLOS,SJTU,PUSHtap: PIM-based In-Memory HTAP with Unified Data Storage Format, PIM-specific HTAP storage data format; semi-interleaved data layout for CPU and PIM concurrent data access,2,3,3
 # #### NPU-PIM Heterogeneous Systems
 # Challenge: Data transfer between NPU and PIM needs to go through the Host, causing high latency.
 2025,MICRO,SJTU,HEAT: NPU-NDP HEterogeneous Architecture for Transformer-Empowered Graph Neural Networks,topology-aware mixed-precision encoding for transformer; subgraph bundling and reordering for GNN memory efficiency; decoupled dataflow for NPU-NDP concurrent execution,2,3,3
