@@ -42,6 +42,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,arXiv,Google,Fast Transformer Decoding: One Write-Head is All You Need,MQA; share same KV cache for all heads; multi-query attention,1,4,3
 2024,NeuroComputing,ZhuiYi,RoFormer: Enhanced Transformer with Rotary Position Embedding,use rotary position embedding to fix the problem of long context; nter-word dependencies decay gradually with the increase of relative distance,3,4,3
 2025,arXiv,Qwen,Parallel Scaling Law for Language Models,enhance model's parallel ability to enhance the performance instead of increasing the model size; parallel multi output and conclude one output,4,4,4
+2026,arXiv,Google,Prompt Repetition Improves Non-Reasoning LLMsPrompt Repetition Improves Non-Reasoning LLMs,repeat prompt can improve the performance of LLMs,3,4,4
 
 # ##### Diffusion LLMs
 # Challenge: diffusion models generate result from noise, this is different from traditional AR paradigm. Diffusion LLMs need to solve the problem of the order of text logic and the generation of diffusion's random output index.
@@ -86,13 +87,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Berkeley,The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models,tool call ability benchmark,3,3,3
 2025,arXiv,Startup,MemTool: Optimizing Short-Term Memory Management for Dynamic Tool Calling in LLM Agent Multi-Turn Conversations,remove unused tool in multi-turn conversation; use tool selector to select the most appropriate tool,3,3,2
 
+# ##### LLM for Kernel Generation
+2025,arXiv,DeepReinforce,CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning,contrastive RL-driven CUDA optimization without human priors; LLM-based CUDA kernel optimization; reward design for CUDA kernel,4,4,2
+2026,arXiv,Huawei,AscendCraft: Automatic Ascend NPU Kernel Generation via DSL-Guided Transcompilation,DSL guided transcompilation; category specific expert priming; constraint rriven code synthesis,3,3,3
+
 # #### RL Algorithms
 # Solution: RL learns from rewards or penalties received without labeled data. It takes actions that interact with the environment. It can learn optimal policies in super large config space.
 2013,Arxiv,DeepMind,Playing Atari with Deep Reinforcement Learning,Deep Q-Network (DQN) architecture; frame stacking; experience replay based random sampling,3,3,3
 2015,Nature,DeepMind,Human-level control through deep reinforcement learning,deep reinforcement learning; human-level control; playing Atari games,5,5,3
 2016,ICLR,Google,Continuous control with Deep Reinforcement Learning,Deep Deterministic Policy Gradient (DDPG); soft target updates; Ornstein-Uhlenbeck (OU) action noise,3,4,3
 2017,arXiv,OpenAI,Proximal Policy Optimization Algorithms,clipped surrogate objective; importance sampling; Actor-Critic with shared parameters; generalized advantage estimation,4,3,3
-2025,arXiv,DeepReinforce,CUDA-L1: Improving CUDA Optimization via Contrastive Reinforcement Learning,contrastive RL-driven CUDA optimization without human priors; LLM-based CUDA kernel optimization; reward design for CUDA kernel,4,4,2
 
 # #### RL Parameter Adjustment
 # Solution: Investigate and optimize critical implementation details and hyperparameters, such as network initialization and observation normalization, to ensure training stability and maximize the agent’s final performance.
