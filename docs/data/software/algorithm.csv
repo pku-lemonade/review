@@ -212,6 +212,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,FAST,SJTU & Alibaba,PERSEUS: A Fail-Slow Detection Framework for Cloud Storage Systems,outlier data detection; regression model for detection threshold; risk evaluating algorithm,4,4,3
 2025,ASPDAC,Xiamen University,A Fail-Slow Detection Framework for HBM Devices,outlier data detection; regression model for detection threshold; risk evaluating algorithm,2,4,2
 2025,NSDI,SJTU & UMich,One-Size-Fits-None: Understanding and Enhancing Slow-Fault Tolerance in Modern Distributed Systems,adaptive detection at runtime(ADR); slow-fault injection pipeline; danger zone analysis,4,4,2
+2025,ATC,HUKST & Alibaba,Greyhound: Hunting Fail-Slows in Hybrid-Parallel Training at Scale,Bayesian online change-point detection; ski-rental problem based mitigation; topology-aware parallelism adjustment,4,4,2
 
 # ### Process Variation Management
 # Solution: Use software-level techniques to manage or exploit the on-chip heterogeneity caused by process variation; use adaptive resource allocation and workload management to improve overall performance, power efficiency, and reliability.

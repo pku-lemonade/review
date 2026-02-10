@@ -52,6 +52,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,HPCA,MIT,SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning,cascade pruning; high-parallelism top-K engine; progressive quantization,3,4,4
 2024,ASPLOS,CMU,SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification,tree-based speculative inference; topology-aware causal mask; multi-step speculative sampling,4,4,4
 2025,MICRO,KAIST,HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models,PipeFlash fine-grained pipelining for Attention; PipeSSD fused pipelined execution for Mamba-2; Unified Reconfigurable Streamlined Core (URSC);inter-operation dependency mitigation,4,3,3
+# ##### Wafer-Scale Accelerators
+# Solution: Adopt holistic hardware-software co-design to integrate high-bandwidth Network-on-Wafer (NoW) architectures with fault-tolerant mapping strategies, thereby mitigating yield limitations and communication bottlenecks to maximize system throughput.
+2025,ISCA,THU,PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer,mesh-switch physical topology; dual-granularity logical topology,4,3,2
+2025,ISCA,THU,WSC-LLM: Efficient LLM Service and Architecture Co-exploration for Wafer-scale Chips,optimal resource partition algorithm; optimal KV cache placement algorithm,4,3,2
+2026,HPCA,THU,WATOS: Efficient LLM Training Strategies and Architecture Co-exploration for Wafer-scale Chip,globally coordinated memory-efficient recomputation; location-aware resource placement; 3-stage system-level robustness design,4,4,2
 # #### Quantized DNN Accelerators
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
