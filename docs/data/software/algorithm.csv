@@ -216,6 +216,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,FAST,SJTU & Alibaba,PERSEUS: A Fail-Slow Detection Framework for Cloud Storage Systems,outlier data detection; regression model for detection threshold; risk evaluating algorithm,4,4,3
 2025,ASPDAC,Xiamen University,A Fail-Slow Detection Framework for HBM Devices,outlier data detection; regression model for detection threshold; risk evaluating algorithm,2,4,2
 2025,NSDI,SJTU & UMich,One-Size-Fits-None: Understanding and Enhancing Slow-Fault Tolerance in Modern Distributed Systems,adaptive detection at runtime(ADR); slow-fault injection pipeline; danger zone analysis,4,4,2
+2025,ATC,HUKST & Alibaba,Greyhound: Hunting Fail-Slows in Hybrid-Parallel Training at Scale,Bayesian online change-point detection; ski-rental problem based mitigation; topology-aware parallelism adjustment,4,4,2
 
 # ### Process Variation Management
 # Solution: Use software-level techniques to manage or exploit the on-chip heterogeneity caused by process variation; use adaptive resource allocation and workload management to improve overall performance, power efficiency, and reliability.
@@ -236,13 +237,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Dynamic Graph Processing
 # Solution: data structures for processing dynamic graphs, which are graphs that change over time.
 
-# #### Survey
+# #### Survey & Benchmarking
 2024,FCS,HUST,"A survey on dynamic graph processing on GPUs: concepts, terminologies and systems",taxonomy of GPU graph updating (Array/CSR/Chain-based) and computing; standardization of Stream/Snapshot/Temporal graph models,,,
-
-# #### Architecture-specific Data Structures
-# Solution: Data structures targeting specific hardware architectures
-2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
 2024,VLDB,PKU,Towards Sufficient GPU-Accelerated Dynamic Graph Management: Survey and Experiment,topology structure; attribute storage; auxiliary structures,4,4,2
+
+# #### In-Memory Data Structures
+# Solution: Data organizations optimizing in-memory topology updates and local access on GPUs.
+2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
+2023,SC,IIT Ropar,GraphVine: A Data Structure to Optimize Dynamic Graph Processing on GPUs,Complete Binary Tree (CBT) organization for adjacency edge blocks; edge pre-allocated queue with prefix-sum popping to eliminate runtime allocation,3,4,3
+
+# #### Out-of-Core & Heterogeneous Systems
+# Solution: Techniques handling graphs exceeding GPU memory or leveraging CPU-GPU co-execution.
+2025,TACO,ICT,CGCGraph: Efficient CPU-GPU Co-execution for Concurrent Dynamic Graph Processing,shared/unshared graph partitioning for CPU-GPU co-execution; kernel fusion for shared concurrent snapshots; Assemble Existence Bitmap for compressed atomic updates,3,4,2
+2025,VLDB,NUS & ByteDance,Efficient Graph Data Access for Out-of-Memory GPU Streaming Graph Processing,GPU-native dependency-memoization using decoupled CAS; vertex-centric hot subgraph cache management; chunked CSR for partial updates,3,4,3
 
 # ## Computational complexity
 # Solution: analyzing and classifying how the time and space requirements of an algorithm grow as the input size increases.
