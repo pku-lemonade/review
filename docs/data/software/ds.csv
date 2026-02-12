@@ -138,13 +138,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ICML,PKU,EPIC: Efficient Position-Independent Caching for Serving Large Language Models,only conpute the first tokens to avoid dynamic selecstion; top-k selection based on attn-sink,3,3,3
 2026,arXiv,Huawei,MEPIC: Memory Efficient Position Independent Caching for LLM Serving,delay position embedding to attn kernel; chunk-based KVC design,2,2,2
 2026,arXiv,Huawei,Joint Encoding of KV-Cache Blocks for Scalable LLM Serving,encoding KVC blocks beyond prefix cache; like the blend in CacheBlend,2,2,1
+2025,arXiv,UCSB,KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse,append link tokens to recover KVC; adjusting positional embeddings of KVC at runtime; using trainable special tokens to restore self-attention,3,3,2
+
+# ##### KVC swap for temporal event
+# Challenge: events like function call will lead to KVC idling in GPU memory, swap out and then swap in is a tradeoff between recomputation and memory utilization
+2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
+2025,arXiv,ZJU,AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving,runtime information version of Infercept; handle the tool use KVC management,3,3,1
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
-2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
-2025,SOSP,Huawei,DiffKV: Differentiated Memory Management for Large Language Models with Parallel KV Compaction,multiple quant strategy based on K/V differentiation; 8bitK+4bitV for important tokens & K4V2 for rest ones; dynamic malloc based on per-head sparsity,4,3,3
-2025,arXiv,ZJU,AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving,runtime information version of Infercept; handle the tool use KVC management,3,3,1
+2025,Nips,Duke,KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems,estimates and adjusts KV-caches for shared conten; KVC pool fot observed cache deviations,3,3,2
+2025,Mlsys,UCSB,FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference,kernel optimization for prefix cache; optimization for redundant KVC loading when shared; finding optimal context-queries groups,3,3,3
 
 # #### KV Cache Storage Systems
 # Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
@@ -340,6 +345,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Huawei,Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling,speculative MoE; speculative token shuffling; speculative expert pre-grouping,,,
 2025,INFOCOM,UoA,SPIN: Accelerating Large Language Model Inference with Heterogeneous Speculative Models,internal neurons sparsification; model-agnostic acceleration framework; dynamic early-exit thresholds; multi-layered feature fusion,,,
 2025,arXic,SUST,FlowSpec: Continuous Pipelined Speculative Decoding for Efficient Distributed LLM Inference,SPEC on memory limited dedvices; Efficient draft management with tree pruning and early stop reduces redundancy and maintains causal relationships,3,3,3
+2026,arXiv,Miscrosoft,LLM-42: Enabling Determinism in LLM Inference with Verified Speculation,shape consistency kernel design; selective determinism,4,3,3
 
 # #### LLM Serving Outages and Incidents
 2025,arXiv,Vrije Universiteit Amsterdam,An Empirical Characterization of Outages and Incidents in Public Services for Large Language Models,empirical characterization of outages; failure recovery optimization; public LLM service reliability,,,
@@ -646,6 +652,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
+2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
 
 # #### Environment Optimizations for Multi-Agent Systems
 # Challenge: The training and inference of multi-agent systems often require complex environments, which can lead to high computational and memory overhead.
