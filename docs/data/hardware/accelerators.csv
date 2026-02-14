@@ -88,7 +88,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Reconfigurable Dataflow Architectures
 # Challenge: Bridging the gap between the high efficiency of dataflow execution and the need for handling irregular control flows (e.g., MIMD threads) and diverse parallel patterns in general-purpose computing.
 2017,ISCA,Stanford,Plasticine: A Reconfigurable Architecture for Parallel Patterns,Pattern Compute Unit (PCU); Pattern Memory Unit (PMU); parallel pattern-based ISA; hierarchical reconfigurable interconnect,5,3,5
-2022,ISCA,Stanford,Aurochs: An Architecture for Dataflow Threads,dataflow threads for MIMD execution; resource elasticity and dynamic context switching; hardware extensions for irregular workloads; thread state management in PCU/PMU,4,3,4
+2022,ISCA,Stanford,Aurochs: An Architecture for Dataflow Threads,dataflow threads for MIMD execution; resource elasticity and dynamic context switching; hardware extensions for irregular workloads,4,3,4
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
 # #### Neural Network Dataflow Architectures
 # Challenge: Overcoming the memory wall and utilization bottlenecks in Deep Learning workloads by optimizing inter-operator dataflow, exploiting sparsity, and managing tensor contraction sequences.
