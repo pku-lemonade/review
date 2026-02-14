@@ -257,6 +257,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,RWTH Aachen,Optimizing Binary and Ternary Neural Network Inference on RRAM Crossbars using CIM-Explorer,Tensor Virtual Machine (TVM)-based compiler; implementation of different mapping techniques; DSE flow to analyze the impact of parameters,3,3,3
 # #### RRAM CiM: Modeling
 2022,ICCD,UNIST,Accurate Prediction of ReRAM Crossbar Performance Under I-V Nonlinearity and IR Drop,IRP-Net (IR Drop Prediction Network); iterative refinement,2,3,3
+2023,Nature,TetraMem,Thousands of conductance levels in memristors integrated on CMOS,2048 conductance levels (11-bit); linear weight update protocol; bayesian hyperparameter optimization for inference,4,5,3
 2024,AICAS,RWTH Aachen University,A Calibratable Model for Fast Energy Estimation of MVM Operations on RRAM Crossbars,system energy model for MVM on ReRAM crossbars; methodology to study the effect of the selection transistor and wire parasitics in 1T1R crossbar arrays,,,
 2024,arXiv,MIT,Modeling Analog-Digital-Converter Energy and Area for Compute-In-Memory Accelerator Design,architecture-level model that estimates ADC energy and area,4,3,3
 2024,Nat. Commun.,KAUST,Hardware implementation of memristor-based artificial neural networks,automated SPICE netlist generation; Dual-Side Connection (DSC) scheme; partial in-situ training loop,3,3,2
@@ -297,6 +298,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 2019,Adv. Funct. Mater.,HUST,Functional Demonstration of a Memristive Arithmetic Logic Unit (MemALU) for In‐Memory Computing,non-volatile Boolean logic using RRAM crossbar;reconfigurable boolean logic gates,3,4,3
+2026,Nat. Elec.,UM,Memristive cellular neural networks for fast in-pixel computing,in-pixel memristive CeNN,4,4,3
 # #### RRAM CiM: Matrix Equation Solver
 2024,DATE,PKU,BlockAMC: Scalable In-Memory Analog Matrix Computing for Solving Linear Systems,Novel scalable algorithm for matrix equation solving; reconfigurable BlockAMC macros design,3,3,3
 2025,Sci.Adv.,HUST,Fully analog iteration for solving matrix equations with in-memory computing, Analog Iteration with Digital Refinement solver,4,4,3 
