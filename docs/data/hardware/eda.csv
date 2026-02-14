@@ -5,7 +5,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,ISCA,UCLA,DSAGEN: Synthesizing Programmable Spatial Accelerators,architecture description graph (ADG);solution-repairing spatial scheduler to avoid redundant re-compilation;composable decoupled spatial primitives for approximating diverse accelerators,4,3,4
 2021,ASPLOS,Cornell,A compiler infrastructure for accelerator generators,a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing,4,3,3
 2021,DAC,UCB,Gemmini: Enabling Systematic Deep-Learning Architecture Evaluation via Full-Stack Integration,exploring diverse systolic array dimensions and dataflows;RoCC(Rocket Custom Coprocessor) integration with unified virtual memory support; FPGA-accelerated full-system simulation,4,5,4
-2024,ISEDA,UESTC,GraphRTL: an Agile Design Framework of RTL Code from Data Flow Graphs,graph error detection kernel; DFS based graph equivalent reconstruction; template/scala based DFG and CFG merging,,,
+2024,ISEDA,UESTC,GraphRTL: an Agile Design Framework of RTL Code from Data Flow Graphs,graph error detection kernel; DFS based graph equivalent reconstruction; template/Scala based DFG and CFG merging,,,
 
 # ### LLM-Driven RTL Generation
 # Challenge: Overcoming the lack of domain knowledge and strict syntax adherence in generic Large Language Models (LLMs) to generate functionally correct and synthesizable Verilog code.
