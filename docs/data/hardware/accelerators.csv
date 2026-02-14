@@ -86,6 +86,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture
 # Solution: Dataflow architecture allows the execution of instructions based on the availability of data rather than a predetermined sequence; leading to more efficient use of resources and better performance in parallel processing and real-time systems.
+2017,ISCA,Stanford,Plasticine: A Reconfigurable Architecture for Parallel Patterns,Pattern Compute Unit (PCU); Pattern Memory Unit (PMU); parallel pattern-based ISA; hierarchical reconfigurable interconnect,5,3,5
 2019,ASPLOS,THU,Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators,buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm,,,
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
 2024,MICRO,UCR,Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse,producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture,,,
