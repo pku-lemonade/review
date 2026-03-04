@@ -298,7 +298,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 2019,Adv. Funct. Mater.,HUST,Functional Demonstration of a Memristive Arithmetic Logic Unit (MemALU) for In‐Memory Computing,non-volatile Boolean logic using RRAM crossbar;reconfigurable boolean logic gates,3,4,3
-2026,Nat. Elec.,UM,Memristive cellular neural networks for fast in-pixel computing,in-pixel memristive CeNN,4,4,3
+2026,Nat. Elec.,UM,Memristive cellular neural networks for fast in-pixel computing,in-pixel memristive cellular neural networks(CeNN),4,4,3
 # #### RRAM CiM: Matrix Equation Solver
 2024,DATE,PKU,BlockAMC: Scalable In-Memory Analog Matrix Computing for Solving Linear Systems,Novel scalable algorithm for matrix equation solving; reconfigurable BlockAMC macros design,3,3,3
 2025,Sci.Adv.,HUST,Fully analog iteration for solving matrix equations with in-memory computing, Analog Iteration with Digital Refinement solver,4,4,3 
