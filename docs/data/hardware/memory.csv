@@ -232,6 +232,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Purdue,Hardware-Software Co-Design for Accelerating Transformer Inference Leveraging Compute-in-Memory,SRAM based softmax-friendly CIM architecture for transformer; finer-granularity pipelining strategy,4,3,2
 2025,arXiv,PKU,Leveraging Compute-in-Memory for Efficient Generative Model Inference in TPUs,Energy-efficient CIM core integration in TPUs (replace the original MXU); CIM-MXU with systolic data path; Array dimension scaling for CIM-MXU; Area-efficient CIM macro design; Mapping engine for generative model inference,,,
 2024,JSSC,THU,MulTCIM: Digital Computing-in-Memory-Based Multimodal Transformer Accelerator With Attention-Token-Bit Hybrid Sparsity,long reuse elimination scheduler (LRES) to dynamically reshape the attention matrix; runtime token pruner (RTP) to remove insignificant tokens; modal-adaptive CIM network (MACN) to dynamically divide CIM cores into Pipeline; effective-bits-balanced CIM (EBBCIM) macro architecture,5,4,3
+# #### SRAM CIM: Design Space Exploration
+2026,arXiv,SoutheastU,CIM-Tuner: Balancing the Compute and Storage Capacity of SRAM-CIM Accelerator via Hardware-mapping Co-exploration,RL-driven CIM HW/SW co-exploration; SRAM-CIM compute-storage balancing,3,3,2
 # ### CIM: RRAM
 # Challenge: RRAM devices are non-volatile and have high density; suitable for CIM applications. However; RRAM devices have non-ideal effects that can cause significant performance degradation.
 # #### RRAM CiM: Simulator
@@ -294,11 +296,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,ICCD,LSU,ATT: A Fault-Tolerant ReRAM Accelerator for Attention-based Neural Networks,ReRAM-based accelerator with pipeline for AttNNs; heuristic redundancy algorithm,3,2,2
 2025,ISCA,UCSD,Hybrid SLC-MLC RRAM Mixed-Signal Processing-in-Memory Architecture for Transformer Acceleration via Gradient Redistribution, architectural and circuit-level hardware designs supporting importance-based data flow with hybrid SLC-MLC ReRAM; gradient redistribution technique,3,2,4
 # #### RRAM CiM: Special Usage
-2023,GLSVLSI,Yale,Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing,non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters,,,
-2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
-2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 2019,Adv. Funct. Mater.,HUST,Functional Demonstration of a Memristive Arithmetic Logic Unit (MemALU) for In‐Memory Computing,non-volatile Boolean logic using RRAM crossbar;reconfigurable boolean logic gates,3,4,3
+2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
 2026,Nat. Elec.,UM,Memristive cellular neural networks for fast in-pixel computing,in-pixel memristive cellular neural networks(CeNN),4,4,3
+2026,DAC,VillanovaU,CQ-CiM: Hardware-Aware Embedding Shaping for Robust CiM-Based Retrieval,codebook isolation architecture; hardware noise injection; asymmetric distance computation pipeline,3,3,3
+# #### RRAM CIM: Batchnorm
+2019,ASPDAC,POSTECH,In-memory batch-normalization for resistive memory based binary neural network hardware,in-memory batchnormalization schemes; integrate BN layers on crossbar,,,
+2023,GLSVLSI,Yale,Examining the Role and Limits of Batchnorm Optimization to Mitigate Diverse Hardware-noise in In-memory Computing,non-idealities; circuit-level parasitic resistances and device-level non-idealities; crossbar-aware fine-tuning of batchnorm parameters,,,
 # #### RRAM CiM: Matrix Equation Solver
 2024,DATE,PKU,BlockAMC: Scalable In-Memory Analog Matrix Computing for Solving Linear Systems,Novel scalable algorithm for matrix equation solving; reconfigurable BlockAMC macros design,3,3,3
 2025,Sci.Adv.,HUST,Fully analog iteration for solving matrix equations with in-memory computing, Analog Iteration with Digital Refinement solver,4,4,3 
