@@ -57,7 +57,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Graph DSLs
 # Challenge: balancing expressiveness, usability, and performance in graph DSL design
-2012,ASPLOS,Stanford,Green-Marl: A DSL for Easy and Efficient Graph Analysis,domain-specific breadth-first/depth-first order traversals primitives; deferred data-parallel assignment for bulk synchronous consistency; architecture-independent loop fusion and reduction bounds relaxation,4,4,4
+2012,ASPLOS,Stanford,Green-Marl: A DSL for Easy and Efficient Graph Analysis,domain-specific breadth-first/depth-first ordered traversal primitives; deferred data-parallel assignment for bulk synchronous consistency; architecture-independent loop fusion and reduction bounds relaxation,4,4,4
 2018,OOPSLA,MIT,GraphIt: A High-Performance Graph DSL,algorithm-schedule decoupling for graph; Graph Iteration Space (GIS); scheduling language for traversal strategies; compiler-guided autotuning,4,4,4
 
 # #### Sparse Tensor Algebra Compilers
