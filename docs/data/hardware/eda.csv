@@ -26,3 +26,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Long compilation time for HLS designs due to the inherently sequential and complex physical implementation (place & route) flow.
 # Solution: Leverage HLS dataflow properties to enable a parallel physical implementation flow.
 2022,FPGA,UCLA,RapidStream: Parallel Physical Implementation of FPGA HLS Designs,split compilation; HLS-physical co-design; anchor registers; timing isolation; parallel placement and routing; stitching,4,4,4
+
+# ### Logic Synthesis & Technology Mapping
+# Challenge: Mapping behavioral or structural RTL descriptions to complex, architecture-specific FPGA or ASIC primitives (like DSPs) efficiently and correctly, avoiding heuristic fallbacks.
+# Solution: Employ automated reasoning, such as sketch-guided program synthesis, to systematically explore the logic configuration space.
+# #### FPGA Technology Mapping
+2024,ASPLOS,UW,FPGA Technology Mapping Using Sketch-Guided Program Synthesis,Lakeroad program synthesis-based technology mapper; architecture-independent sketch templates; automated semantics extraction from vendor HDL models; Rosette-based SMT solver translation,3,4,3
