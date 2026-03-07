@@ -5,6 +5,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ISCA,Seoul National,SHARP: A Short-Word Hierarchical Accelerator for Robust and Practical Fully Homomorphic Encryption,36-bit word length optimization for FHE precision-efficiency trade-off; double-prime scaling unit for instruction fusion and short-word scaling,3,2,3
 # ### Graph Accelerators
 # Challenge: Massive memory requirement, Non-ordered memory access
+# #### Survey
+# Challenge: Lack of systematic categorization and review of diverse graph accelerator implementations spanning different architectures and programming paradigms.
+2019,JCST,HUST,A Survey on Graph Processing Accelerators: Challenges and Opportunities,vertex-centric vs edge-centric iterative paradigms; graph layout reorganization and ordering; source/destination/grid graph partitioning; runtime scheduling execution models,,,
+2022,IEEE Micro,UCLA,Systematically Understanding Graph Accelerator Dimensions and the Value of Hardware Flexibility,Taskflow execution model unifying task and dataflow parallelism; graph algorithm variant taxonomy; multi-level spatial partitioning; asynchronous hardware task scheduling priority queue,,,
 # #### Pipelined & Event-Driven Graph Accelerators
 # Solution: Optimize data flow and execution models using pipelining, event-driven mechanisms, or data shuffling to handle irregular graph workloads.
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
@@ -74,14 +78,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,HPCA,KU Leuven,BitWave: Exploiting Column-Based Bit-Level Sparsity for Deep Learning Acceleration,Bit-column sparsity for both computation reduction and data compression; Single-shot Bit-Flip post-training,3,3,3
 2025,HPCA,POSTECH,Panacea: Novel DNN Accelerator using Accuracy-Preserving Asymmetric Quantization and Energy-Saving Bit-Slice Sparsity,Asymmetrically-Quantized bit-Slice GEMM; Zero-Point Manipulation and Distribution-based Bit-Slicing to increase sparsity,3,3,4
 2025,HPCA,Yonsei,Bit-slice Architecture for DNN Acceleration with Slice-level Sparsity Enhancement and Exploitation,both input AND weight sparsity at bit-slice level; 8-bit data processing with 4-bit multipliers; Scale regularization during training to enhance sparsity,3,2,2
-# #### Reconfigurable Accelerators
-# Solution: Reconfigurable accelerators not only break the trade-off of flexibility and performance, but also enable hardware to adapt to algorithm changes as quickly as software while maintaining high energy efficiency.
+# #### Reconfigurable Dataflow & Interconnect Accelerators
+# Solution: Dynamically adaptive interconnections and multi-dataflow engines allowing adaptable mapping to match spatial architectures with DNN variants.
 2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandiwdth optimization; ART based virtual neuron construction,4,3,2
 2019,JETCAS,MIT,Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices,hierarchical mesh NoC for multiple transmission modes; sparse PE architecture,5,4,2
 2023,ASPLOS,UM & Georgia Tech,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern,4,3,2
+2025,MICRO,Maryland,Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication,ML-assisted runtime dataflow selection; lightweight decision tree predictor; intelligent reconfiguration engine for FPGAs; cost-benefit analysis for hardware switching,3,4,3
+# #### Application & Sparsity-Specific Reconfigurable Accelerators
+# Solution: Accelerators employing structured sparsity and environment-specific pipelining, enabling them to reconfigure flexibly for structured sparsity masks or specific AI domains (like RL).
 2023,MICRO,MIT,HighLight: Efficient and Flexible DNN Acceleration with Hierarchical Structured Sparsity,hierarchical structured sparsity (HSS) enables systematic flexibility on sparsity patterns; modularized hierarchical sparsity acceleration architecture,3,3,3
 2025,DATE,PKU,PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments,RL environment accelerator; PCIe communication optimization; IP-based design,3,3,2
-2025,MICRO,Maryland,Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication,ML-assisted runtime dataflow selection; lightweight decision tree predictor; intelligent reconfiguration engine for FPGAs; cost-benefit analysis for hardware switching,3,4,3
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture

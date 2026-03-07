@@ -57,6 +57,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Graph DSLs
 # Challenge: balancing expressiveness, usability, and performance in graph DSL design
+2012,ASPLOS,Stanford,Green-Marl: A DSL for Easy and Efficient Graph Analysis,domain-specific breadth-first/depth-first order traversals primitives; deferred data-parallel assignment for bulk synchronous consistency; architecture-independent loop fusion and reduction bounds relaxation,4,4,4
 2018,OOPSLA,MIT,GraphIt: A High-Performance Graph DSL,algorithm-schedule decoupling for graph; Graph Iteration Space (GIS); scheduling language for traversal strategies; compiler-guided autotuning,4,4,4
 
 # #### Sparse Tensor Algebra Compilers
@@ -83,6 +84,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### HLS Code Generation and Automation
 # Solution: bridging high-level languages to hardware, design space exploration, QoR improvement automation
+
+# ##### Predictable HLS Programming Models
+# Challenge: Legacy software languages repurposed for HLS rely on complex, unsystematic heuristics, leading to unpredictable area-performance trade-offs.
+# Solution: Use formal type systems and language constraints (like time-sensitive affine types) to guarantee predictable and optimal hardware generation.
+2020,PLDI,Cornell,Predictable Accelerator Design with Time-Sensitive Affine Types,Dahlia language; time-sensitive affine type system representing consumable hardware resources; logical time steps encoded in types; memory views for decoupling iteration from memory banking,3,3,3
 
 # ##### General HLS Optimizations and Techniques
 # Solution: Develop general techniques to enhance HLS QoR by optimizing key aspects like timing, resource management, and code structure.
