@@ -136,8 +136,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,SIGCOMM,UChicago,CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving,efficient KV Cache streaming; KV Cache compression; knowledge delivery network; The transfer part of LMCache,3,4,3
 2025,EuroSys,THU,Fast State Restoration in LLM Serving with HCache,offload activation instead of KVC to reduce IO; use little recomputation to tradeoff offloading latency,4,4,4
 2025,arXiv,Chicago,LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference,KVC hierarchical offloading; batched movement; decoupled connector API,3,4,3
+2025,FAST,ZJU,IMPRESS: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language Model Inference,similarity-guided important token identification via probe heads; importance-informed KV reordering and repacking for disk I/O; importance-aware score-based cache management,3,3,3
 
-# ##### Position Independent Methid
+# ##### Position Independent Method
 # Solution: Use recover method to reduce the KV cache size.
 2024,EuroSys,UChicago,CacheBlend: Fast Large Language Model Serving for RAG with  Cached Knowledge Fusion, multiple precomputed text chunks; selective KV recompute; sparsity of attention matrices; The system intro of LMCache,3,4,3
 2024,ICML,PKU,EPIC: Efficient Position-Independent Caching for Serving Large Language Models,only conpute the first tokens to avoid dynamic selecstion; top-k selection based on attn-sink,3,3,3
