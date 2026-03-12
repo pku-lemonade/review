@@ -3,6 +3,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Manycore Architecture
 2009,MICRO,UIUC,mSWAT: Low-Cost Hardware Fault Detection and Diagnosis for Multicore Systems,selective Triple Modular Redundant(TMR) replay method; symptom based fault detection; permanent/transient fault,,,
 2015,IEEE TSM,NTU,Wafer Map Failure Pattern Recognition and Similarity Ranking for Large-Scale Data Sets,wafer map failure pattern; wafer map similarity ranking; radon/geometry-based feature extraction; WM-811K wafer map dataset,,,
+2018,IEEE TSM,KAIST,Classification of Mixed-Type Defect Patterns in Wafer Bin Maps Using Convolutional Neural Networks,individual classification model; translation equivariance for defects detection; parametric WBM simulation,3,4,2
+2020,IEEE TSM,DHU,Deformable Convolutional Networks for Efficient Mixed-Type Wafer Defect Pattern Recognition,deformable convolutional unit; one-hot based multi-label decomposition; MixedWM38 dataset,3,4,2
 # #### System Level
 2017,SC,Argonne National Lab,Run-to-run Variability on Xeon Phi based Cray XC Systems,OS noise based core-level variability; tile-level varibility; memory mode varibility,,,
 2018,FAST,UChicago,Fail-Slow at Scale: Evidence of Hardware Performance Faults in Large Production Systems,conversion among fail-stop/slow/trasient; permanent/transient/partial slowdown; internal/external root causes,,,

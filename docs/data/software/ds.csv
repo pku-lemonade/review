@@ -64,6 +64,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,EuroSys,Stanford,SmartHarvest: harvesting idle CPUs safely and efficiently in the cloud,ElasticVM for dynamically harvesting; cost-sensitive multi-class classification; two-level safeguard mechanism,3,4,2
 2022,ASPLOS,Stanford,SOL: Safe On-Node Learning in Cloud Platforms,model and actuator decoupled interface; watchdog-style safeguards to avoiding bad models,3,3,2
 
+# ### LLM for Cloud Networks
+# Challenge: leverage LLMs to process massive, noisy, and multi-modal telemetry data for accurate diagnosis and management in complex, dynamic cloud environments
+2024,EuroSys,Microsoft,Automatic Root Cause Analysis via Large Language Models for Cloud Incidents,time-weighted similarity search; few-shot chain-of-thought prompting; hierarchical diagnosis via summarization,4,4,2
+2025,SIGCOMM,NJU&Alibaba,Towards LLM-Based Failure Localization in Production-Scale Networks,hierarchical reasoning; multi-pipeline data integration; continuous prompt optimization; entropy-based early stop,4,4,2
+
 # ## Microservices
 # Focusing on the microservices.
 
