@@ -31,19 +31,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Chiplets
 # Challenge: Current chip designs are often monolithic and inflexible; leading to high costs and limited performance optimization opportunities.
 # Solution: Use chiplets to enable more flexible and cost-effective system designs by allowing the integration of specialized dies manufactured using optimal processes; leading to improved performance and yield.
-# ### Survey
+# #### Survey
 2020,Electronics,NUDT,Chiplet Heterogeneous Integration Technology—Status and Challenges,heterogeneous integration technology; interconnect interfaces and protocols; packaging technology,,,
 2022,CCF THPC,ICT,"Survey on chiplets: interface, interconnect and integration methodology",development history; interfaces and protocols; packaging technology; EDA tool; standardization of chiplet technology,,,
 2024,IEEE CASS,THU,Chiplet Heterogeneous Integration Technology—Status and Challenges,wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance,,,
 2024,IEEE CASS,THU,Wafer-scale Computing: Advancements, Challenges, and Future Perspectives,wafer-scale chip architecture; compiler tool chain; integration technology; wafer-scale system; fault tolerance,,,
 2024,JETCAS,Chip and Package-Scale Interconnects for General-Purpose, Domain-Specific, and Quantum Computing Systems—Overview, Challenges, and Opportunities,interconnection technology; communication-centric challenges,3,1,1
-# ### Multimodal AI chiplets
-2019,MICRO,NVIDIA,Simba: Scaling Deep-Learning Inference with Multi-Chip-Module-Based Architecture,"MCM (Multi-Chip-Module) accelerator; hierarchical mesh interconnection;",5,5,5
-# ### MCM Architecture & Scheduling
+# #### Multimodal AI chiplets
+2024,MICRO,CA,SCAR: Scheduling Multi-Model AI Workloads on Heterogeneous Multi-Chiplet Module Accelerators,Hierarchical Scheduling Framework;Time Windowing;Chiplet-level Scheduling,3,3,3
+# #### MCM Architecture & Scheduling
 # Challenge: Scaling single monolithic AI accelerators is limited by yield and reticle size. Multi-Chip-Module (MCM) architectures solve this but introduce NUMA effects and severe inter-chiplet communication bottlenecks, requiring merged pipelining and hardware-software co-design.
 2019,MICRO,NVIDIA,Simba: Scaling Deep-Learning Inference with Multi-Chip-Module-Based Architecture,"MCM (Multi-Chip-Module) accelerator;hierarchical mesh interconnection; GRS (Ground-Reference Signaling)",4,5,4
 2026,ASP-DAC,THU,"Scope: A Scalable Merged Pipeline Framework for Multi-Chip-Module NN Accelerators","cluster-dimension DSE (Design Space Exploration); DP-based (Dynamic Programming) cluster allocation algorithm; WSP-to-ISP (Weight/Input-Shared Partitioning) transition search",4,3,3
-# ### Cost Analysis
+# #### Cost Analysis
 2021,ISCA,THU,"NN-Baton: DNN Workload Orchestration and Chiplet Granularity Exploration for Multichip Accelerators","NN-Baton automatic tool; critical capcity critical position framework for communication overhead; chiplet granularity exploration",4,3,4
 2025,arXiv,ASU,CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems,"heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection",,,
 # ### 3D IC
