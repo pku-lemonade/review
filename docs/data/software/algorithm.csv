@@ -25,6 +25,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Speculative Decoding
 # Solution: Speculative decoding aims to accelerate the inference of large language models (LLMs) by utilizing a smaller, faster draft model to generate multiple tokens in parallel, which are then verified and corrected by the larger, more accurate target model.
 2023,ICML,Google,Fast Inference from Transformers via Speculative Decoding,speculative sampling; draft/approximation model; theoretical bound of acceptance rate,4,5,5
+2024,ICLR,Google,DistillSpec: Improving Speculative Decoding via Knowledge Distillation,on-policy distillation for speculative decoding; divergence tuning for draft-target alignment; lenience-controlled lossy SD,4,4,4
 2024,arXiv,Princeton & UIUC,Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads,medusa heads appended to the last layer; medusa-2 joint training,4,4,4
 
 # ##### LLM Inference Based on Activation Sparsity 
@@ -112,6 +113,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Improve generalization or data efficiency by changing the training objective, perturbation strategy, or schedule rather than redesigning the model architecture.
 2017,ICLR,Stanford,DSD: Dense-Sparse-Dense Training for Deep Neural Networks,3 step dense-sparse-dense training,3,5,4
 2020,NeurIPS,MIT,Differentiable Augmentation for Data-Efficient GAN Training,Differentiable Augmentation to improve data efficiency in generative adversarial networks training,3,4,4
+2020,CVPR,Google,Self-Training With Noisy Student Improves ImageNet Classification,iterative self-training; student-only noise injection; confidence-filtered pseudo-labeling; class-balanced unlabeled sampling,4,5,4
 2021,ICLR,Google,Sharpness-aware Minimization for Efficiently Improving Generalization,sharpness-aware minimization (SAM); min-max neighborhood loss; adversarial weight perturbation,4,5,4
 2021,ICML,Samsung,ASAM: Adaptive Sharpness-Aware Minimization for Scale-Invariant Learning of Deep Neural Networks,adaptive sharpness-aware minimization (ASAM); scale-invariant sharpness; adaptive weight perturbation,4,5,4
 
