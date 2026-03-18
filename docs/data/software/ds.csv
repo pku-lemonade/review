@@ -137,6 +137,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,THU,Fast State Restoration in LLM Serving with HCache,offload activation instead of KVC to reduce IO; use little recomputation to tradeoff offloading latency,4,4,4
 2025,arXiv,Chicago,LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference,KVC hierarchical offloading; batched movement; decoupled connector API,3,4,3
 2025,FAST,ZJU,IMPRESS: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language Model Inference,similarity-guided important token identification via probe heads; importance-informed KV reordering and repacking for disk I/O; importance-aware score-based cache management,3,3,3
+2026,FAST,Huawei,Accelerating Model Loading in LLM Inference by Programmable Page Cache,Programmable Page Cache with stacking routing file system; Model-Accelerated I/O policy using pre-built I/O templates; Burn-after-Reading eviction and XPU-affinity-aware prefetching,3,4,4
 
 # ##### Position Independent Method
 # Solution: Use recover method to reduce the KV cache size.
@@ -145,6 +146,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,Huawei,MEPIC: Memory Efficient Position Independent Caching for LLM Serving,delay position embedding to attn kernel; chunk-based KVC design,2,2,2
 2026,arXiv,Huawei,Joint Encoding of KV-Cache Blocks for Scalable LLM Serving,encoding KVC blocks beyond prefix cache; like the blend in CacheBlend,2,2,1
 2025,arXiv,UCSB,KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse,append link tokens to recover KVC; adjusting positional embeddings of KVC at runtime; using trainable special tokens to restore self-attention,3,3,2
+2026,FAST,SJTU,CacheSlide: Unlocking Cross Position-Aware KV Cache Reuse for Accelerating LLM Serving,CCPE (Chunked Contextual Position Encoding) for task-specific positional alignment; weighted correction attention for partial KV recompute and similarity-gated fusion,4,2,2
 
 # ##### KVC swap for temporal event
 # Challenge: events like function call will lead to KVC idling in GPU memory, swap out and then swap in is a tradeoff between recomputation and memory utilization
@@ -162,6 +164,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: the prefetch and eviction of the KV cache, the balance between saving GPU memory and refetching time from the storage device.
 2025,arXiv,NVIDIA,FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving,block-sparse format; customizable attention template; dynamic load-balanced scheduling framework,,,
 2025,arXiv,PKU,FairKV: Balancing Per-Head KV Cache for Fast Multi-GPU Inference,imbalanced KV cache compression mitigation; fair-copying for load balancing; best-effort assignment,,,
+2026,FAST,SJTU,SolidAttention: Low-Latency SSD-based Serving on Memory-Constrained PCs,token-level interleaving of KV cache for SSD bandwidth; speculative prefetcher for predictive cache loading; fine-grained microtask orchestration and synchronization reuse,4,3,2
 
 # #### KV Cache Evict Systems
 # Challenge: selectively discard the least important key-value pairs to free up memory for longer contexts or larger batch sizes without significantly degrading the model's generation quality or increasing computational overhead for the eviction process itself.
