@@ -45,6 +45,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
 2022,ACL,NUS,Sequence Parallelism: Long Sequence Training from System Perspective,splits input sequences into chunks; Ring Self-Attention; sparse attention,3,4,3
 
+# #### Parallel Strategies for LLM Training
+# Challenge: how to decide the parallel strategy for LLM training, the upper decision of parallelism strategies and kernel fusion of each worker.
+2024,EuroSys,Miscrosoft,Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation,iterative bottleneck alleviation paradigm; resource trading perspective; discovery of asymmetrical configurations,3,3,2
+2025,EuroSys,CentML,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,comprehensive memory parallelism co-optimization; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,3,2
+
 # #### Hardware componment co-design
 # Challenge: rencent accelerator like GPU has many components, such as tensor cores, SRAM, etc. How to co-design the software and hardware to improve the performance.
 2023,ATC,UC,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,use cuda core to transform sparse graph martix into dense for tensor core; codesign of tensor core and cuda core for GNN application,3,4,4
