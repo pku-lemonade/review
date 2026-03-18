@@ -136,6 +136,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,FPGA,Cornell,High-Performance Sparse Linear Algebra on HBM-Equipped FPGAs Using HLS: A Case Study on SpMV,HLS methodology; HBM FPGA; SpMV accelerator; split-kernel design; microarchitecture in HLS; load-store forwarding; pipelined arbiter,4,4,4
 2023,FPGA,UoP,DONGLE: Direct FPGA-Orchestrated NVMe Storage for HLS,HLS direct NVMe access; FPGA-orchestrated storage; Unified HLS storage interface; Single-source HLS for storage; DONGLE architecture,4,4,4
 2023,FPGA,HKUST,FADO: Floorplan-Aware Directive Optimization for High-Level Synthesis Designs on Multi-Die FPGAs,Floorplan-aware HLS; Multi-die FPGA optimization; Directive-floorplan co-optimization; Incremental floorplanning for HLS; MMBP for HLS DSE,3,4,4
+2024,ASPLOS,UCLA,TAPA-CS: Enabling Scalable Accelerator Design on Distributed HBM-FPGAs,two-layer ILP-based inter/intra-FPGA floorplanning coupled with interconnect pipelining during HLS; topology-aware communication cost model; latency-insensitive cross-FPGA partitioning; automatic multi-FPGA design partitioning with cut-set pipeline balancing,3,4,3
 
 # ## Program analysis
 # Solution: statically or dynamically analyzing programs to understand their behavior, detect errors, and optimize performance
