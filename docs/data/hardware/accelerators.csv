@@ -12,10 +12,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Pipelined & Event-Driven Graph Accelerators
 # Solution: Optimize data flow and execution models using pipelining, event-driven mechanisms, or data shuffling to handle irregular graph workloads.
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
+2016,ISCA,Bilkent,Energy Efficient Architecture for Graph Analytics Accelerators,configurable SystemC-based GAS architecture template with application-pluggable data structures; monotonic-rank RAW/WAR hazard detection; bit-vector/queue dual structure; lock-free active vertex scheduling,3,3,3
 2019,FPL,NUS,On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs,on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture,3,4,2
 2020,MICRO,UCR,GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing,asynchronous event-driven model; in-place event coalescing; delta-based accumulative processing,3,3,4
+2024,FPGA,HKUST,GraFlex: Flexible Graph Processing on FPGAs through Customized Scalable Interconnection Network,scatter-gather BSP paradigm; customizable multi-stage butterfly interconnection network with virtual-channel flow control; HLS-level coalesced memory; throughput-matching design methodology,3,4,3
 # #### Memory-Optimized Graph Accelerators
 # Solution: Address the memory bottleneck (bandwidth and latency) through specialized memory hierarchies, HBM optimizations, or caching mechanisms.
+2014,IPDPSW,ISU,CyGraph: A Reconfigurable Architecture for Parallel Breadth-First Search,custom 64-bit CSR combining visited-flag/row-offset/neighbor-count in single memory word; token-ring kernel-to-kernel interface for distributed next-queue coordination across multi-FPGA,3,4,2
 2019,FPGA,HUST,Improving Performance of Graph Processing on FPGA-DRAM Platform by Two-level Vertex Caching,two-level vertex caching (L1 BRAM/L2 UltraRAM); Hilbert-order window sliding for locality; dual-pipeline computation-communication overlapping,4,4,3
 2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
@@ -170,6 +173,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Microarchitecture & Cross-Architecture DSE
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
+2019,MICRO,Georgia Tech,"Understanding Reuse, Performance, and Hardware Cost of DNN Dataflows: A Data-Centric Approach","MAESTRO analytical model; data-centric directives; spatial and temporal reuse analysis; hardware cost estimation; NoC (Network-on-Chip) modeling",4,4,4
 2025,arXiv,THU & Macau,MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware,IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE,3,3,2
 2025,arXiv,PKU,DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization,diffusion-based design generation; conditional sampling,3,4,3
 2026,arXiv,Berkeley,ArchAgent: Agentic AI-driven Computer Architecture Discovery,automated runtime-configurable parameter tuning for workload-specific optimization by LLM; automated detection of simulator escapes (ai-exploited logic loopholes simulators),3,3,3
