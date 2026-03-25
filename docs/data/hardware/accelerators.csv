@@ -121,6 +121,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,SC,NIT,High-performance and energy-efficient fault-tolerance core mapping in NoC,weighted communication energy; placing unmapped vertices region; application core graph; spare core placement algorithm,,,
 2019,IVLSI,UESTC,Optimized mapping algorithm to extend lifetime of both NoC and cores in many-core system,lifetime budget metric; LBC-LBL mapping algorithm; electro-migration fault model,,,
 # ##### Reliability Management
+2018,DATE,NUST,Variation-Aware Task Allocation and Scheduling for Improving Reliability of Real-Time MPSoCs,variation-aware task allocation; soft-error reliability maximization; cross entropy based task scheduling,4,3,2
+2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance-centric aging management; frequency-based core binning; DRL based task mapping,3,3,2
 2020,DATE,Turku,Thermal-Cycling-aware Dynamic Reliability Management in -Core System-on-Chip,Coffin-Mason equation based reliability model; reliability-aware mapping/scheduling; dynamic power management,,,
 2024,arXiv,WUSTL,A Two-Level Thermal Cycling-Aware Task Mapping Technique for Reliability Management in Manycore Systems,temperature based bin packing; task-to-bin assignment; thermal cycling-aware based task-to-core mapping,,,
 2024,arXiv,WUSTL,A Reinforcement Learning-Based Task Mapping Method to Improve the Reliability of Clustered Manycores,mean time to failure; density-based spatial clustering of applications with noise algorithm,,,
