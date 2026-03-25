@@ -120,6 +120,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Fault Tolerant Mapping
 2017,SC,NIT,High-performance and energy-efficient fault-tolerance core mapping in NoC,weighted communication energy; placing unmapped vertices region; application core graph; spare core placement algorithm,,,
 2019,IVLSI,UESTC,Optimized mapping algorithm to extend lifetime of both NoC and cores in many-core system,lifetime budget metric; LBC-LBL mapping algorithm; electro-migration fault model,,,
+# ##### Communication Optimized Mapping
+# Challenge: Efficiently exploring the vast design space to balance limited on-chip buffer resources with scarce DRAM bandwidth, aiming to minimize off-chip communication latency through optimized layer fusion and scheduling strategies.
+2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
+2025,HPCA,THU,SoMa: Identifying, Exploring, and Understanding the DRAM Communication Scheduling Space for DNN Accelerators,tensor-centric notation; two-stage(LFA,DLSA) simulated annealing; Prefetching and Delayed Storing,4,3,2
+2025,DAC,THU,Buffer Prospector: Discovering and Exploiting Untapped Buffer Resources in Many-Core DNN Accelerators,data-compute ratio; buffer requirement calculator; layer-pipeline (LP) mapping optimization; greedy based buffer allocator,4,3,2
 # ##### Reliability Management
 2018,DATE,NUST,Variation-Aware Task Allocation and Scheduling for Improving Reliability of Real-Time MPSoCs,variation-aware task allocation; soft-error reliability maximization; cross entropy based task scheduling,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance-centric aging management; frequency-based core binning; DRL based task mapping,3,3,2
@@ -166,12 +171,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ASPDAC,CUHK,SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design,intercluster distance algorithm; importance-based pruning and initialization,3,2,2
 2024,Arxiv,Georgia Tech,PIPEORGAN: Efficient Inter-operation Pipelining with Flexible Spatial Org,spatial organization strategy pipeorgan for inter-operator pipelining; augmented mesh for pipelining(AMP) topology,4,2,2
 2025,ASPDAC,THU,KAPLA: Scalable NN Accelerator Dataflow Design Space Structuring and Fast Exploring,tensor-centric dataflow directives; bottom-up cost descending; inter-layer pruning and decoupling,3,3,2
-
-# #### Communication DSE
-# Challenge: Efficiently exploring the vast design space to balance limited on-chip buffer resources with scarce DRAM bandwidth, aiming to minimize off-chip communication latency through optimized layer fusion and scheduling strategies.
-2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
-2025,HPCA,THU,SoMa: Identifying, Exploring, and Understanding the DRAM Communication Scheduling Space for DNN Accelerators,tensor-centric notation; two-stage(LFA,DLSA) simulated annealing; Prefetching and Delayed Storing,4,3,2
-2025,DAC,THU,Buffer Prospector: Discovering and Exploiting Untapped Buffer Resources in Many-Core DNN Accelerators,data-compute ratio; buffer requirement calculator; layer-pipeline (LP) mapping optimization; greedy based buffer allocator,4,3,2
 
 # #### Microarchitecture & Cross-Architecture DSE
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
