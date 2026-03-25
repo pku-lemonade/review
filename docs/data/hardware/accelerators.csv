@@ -89,8 +89,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MICRO,Maryland,Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication,ML-assisted runtime dataflow selection; lightweight decision tree predictor; intelligent reconfiguration engine for FPGAs; cost-benefit analysis for hardware switching,3,4,3
 # #### Application & Sparsity-Specific Reconfigurable Accelerators
 # Solution: Accelerators employing structured sparsity and environment-specific pipelining, enabling them to reconfigure flexibly for structured sparsity masks or specific AI domains (like RL).
-2023,MICRO,MIT,HighLight: Efficient and Flexible DNN Acceleration with Hierarchical Structured Sparsity,hierarchical structured sparsity (HSS) enables systematic flexibility on sparsity patterns; modularized hierarchical sparsity acceleration architecture,3,3,3
-2025,DATE,PKU,PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments,RL environment accelerator; PCIe communication optimization; IP-based design,3,3,2
+# #### Structured Sparsity DNN Accelerators
+# Solution: Accelerators employing hierarchical structured sparsity masks for flexible DNN acceleration.
+2023,MICRO,MIT,HighLight: Efficient and Flexible DNN Acceleration with Hierarchical Structured Sparsity,hierarchical structured sparsity (HSS); modularized sparsity acceleration architecture; systematic flexibility on sparsity patterns,3,3,3
+# #### RL Environment Accelerators
+# Solution: FPGA-based accelerators targeting the parallel environment execution bottleneck in reinforcement learning training pipelines.
+2025,DATE,PKU,PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments,pipelined parallel RL environment execution on FPGA; PCIe data compression and local-store optimization; modular parametric environment template for user customization,3,3,2
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture
