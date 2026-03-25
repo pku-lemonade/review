@@ -175,13 +175,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ISVLSI,USC,Multi-Objective Neural Architecture Search for In-Memory Computing,"neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM",,,
 2024,arXiv,Intel,CiMNet: Towards Joint Optimization for DNN Architecture and Configuration for Compute-In-Memory Hardware,framework that jointly searches for optimal sub-networks and hardware configurations for CiM architectures; multi-objective evolutionary search method,4,2,4
 2025,AICAS,UVA,Optimizing and Exploring System Performance in Compact Processing-in-Memory-based Chips,Pipeline Method for Compact PIM Designs; Dynamic Duplication Method (DDM); Maximum NN Size Estimation & Deployment in Compact PIM Design,,,
+2025,NeurIPS,IBM,Analog Foundation Models,synthetic-data distillation for analog LLM adaptation; iterative weight clipping for high-SNR conductance mapping; static DAC/ADC range learning; per-channel hardware-noise injection,4,3,4
 # #### Modeling & Simulation
+# Challenge: Need fast and accurate estimators for area, latency, energy, and system-level behavior across varied CiM hardware designs.
 2018,TCAD,ASU,NeuroSim: A Circuit-Level Macro Model for Benchmarking Neuro-Inspired Architectures in Online Learning,"estimate the circuit-level performance of neuro-inspired architectures; estimates the area, latency, dynamic energy, and leakage power; Support both SRAM and eNVM; tested on 2-layer MLP NN, MNIST",,,
-2019,IEDM,Georgia Tech,DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies,a python wrapper to interface NeuroSim; for inference only,,,
 2020,TCAD,ZJU,Eva-CiM: A System-Level Performance and Energy Evaluation Framework for Computing-in-Memory Architectures,models for capturing memory access and dependency-aware ISA traces; models for quantifying interactions between the host CPU and the CiM module,,,
 2022,ICCAD,Purdue,Design Space and Memory Technology Co-Exploration for In-Memory Computing Based Machine Learning Accelerators,simulation framework to evaluate the systemlevel performance of IMC architecture; area-aware weight mapping strategy,4,3,2
 2024,ISPASS,MIT,"CiMLoop: A Flexible, Accurate, and Fast Compute-In-Memory Modeling Tool",flexible specification to describe CiM systems; accurate model/fast statistical model of data-value-dependent component energy,,,
 2025,ASPDAC,HKUST,MICSim: A Modular Simulator for Mixed-signal Compute-in-Memory based AI Accelerator,modulared Neurosim; data statistic-based average-mode instead of trace-based mode,4,3,2
+# ##### Robustness-Aware Modeling & Training
+# Challenge: Device and peripheral nonidealities make it hard to predict and recover deployment accuracy on analog CiM hardware.
+2019,IEDM,Georgia Tech,DNN+NeuroSim: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators with Versatile Device Technologies,a python wrapper to interface NeuroSim; for inference only,,,
+2023,Nat. Commun.,IBM,Hardware-aware training for large-scale and diverse deep learning inference workloads using in-memory computing-based accelerators,hardware-aware retraining with PCM-noise injection; learned input/output dynamic-range scaling; standardized AIMC crossbar model; topology robustness sensitivity analysis,4,3,4
 # #### Compiler
 # Challenge: Compiler for CIM is not well studied. Existing compilers are either for specific architecture or not efficient.
 2023,TACO,HUST,A Compilation Tool for Computation Offloading in ReRAM-based CIM Architectures,compilation tool to migrate legacy programs to CPU/CIM heterogeneous architectures; a model to quantify the performance gain,,,
