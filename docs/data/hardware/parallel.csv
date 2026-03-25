@@ -42,7 +42,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### MCM Architecture & Scheduling
 # Challenge: Scaling single monolithic AI accelerators is limited by yield and reticle size. Multi-Chip-Module (MCM) architectures solve this but introduce NUMA effects and severe inter-chiplet communication bottlenecks, requiring merged pipelining and hardware-software co-design.
 2019,MICRO,NVIDIA,Simba: Scaling Deep-Learning Inference with Multi-Chip-Module-Based Architecture,"MCM (Multi-Chip-Module) accelerator;hierarchical mesh interconnection; GRS (Ground-Reference Signaling)",4,5,4
+2024,TVLSI,SJTU,M2M: A Fine-Grained Mapping Framework to Accelerate Multiple DNNs on a Multi-Chiplet Architecture,PCA and hierarchical clustering for network partitioning; simulated annealing algorithm for communication-aware block mapping; fine-tuned QoS(Quality of Servic)policy for NoP(Network-on-Package) links,4,3,3
 2026,ASP-DAC,THU,"Scope: A Scalable Merged Pipeline Framework for Multi-Chip-Module NN Accelerators","cluster-dimension DSE (Design Space Exploration); DP-based (Dynamic Programming) cluster allocation algorithm; WSP-to-ISP (Weight/Input-Shared Partitioning) transition search",4,3,3
+2026,HPCA,PKU,COMET: Communication and Memory Co-Design for Fine-Grained AI Inference in MCM Accelerators,DMA Coalescing;Hardware-Aware Genetic Algorithm;adaptive on-chip memory address mapping,4,3,3
 # #### Cost Analysis
 2021,ISCA,THU,"NN-Baton: DNN Workload Orchestration and Chiplet Granularity Exploration for Multichip Accelerators","NN-Baton automatic tool; critical capcity critical position framework for communication overhead; chiplet granularity exploration",4,3,4
 2025,arXiv,ASU,CATCH: a Cost Analysis Tool for Co-optimization of chiplet-based Heterogeneous systems,"heterogeneous chiplet system modeling; DSE on chiplets size,IO,connection",,,
