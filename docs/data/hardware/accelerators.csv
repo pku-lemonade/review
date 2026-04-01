@@ -5,13 +5,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ISCA,Seoul National,SHARP: A Short-Word Hierarchical Accelerator for Robust and Practical Fully Homomorphic Encryption,36-bit word length optimization for FHE precision-efficiency trade-off; double-prime scaling unit for instruction fusion and short-word scaling,3,2,3
 # ### Graph Accelerators
 # Challenge: Massive memory requirement, Non-ordered memory access
+# #### Survey
+# Challenge: Lack of systematic categorization and review of diverse graph accelerator implementations spanning different architectures and programming paradigms.
+2019,JCST,HUST,A Survey on Graph Processing Accelerators: Challenges and Opportunities,vertex-centric vs edge-centric iterative paradigms; graph layout reorganization and ordering; source/destination/grid graph partitioning; runtime scheduling execution models,,,
+2022,IEEE Micro,UCLA,Systematically Understanding Graph Accelerator Dimensions and the Value of Hardware Flexibility,Taskflow execution model unifying task and dataflow parallelism; graph algorithm variant taxonomy; multi-level spatial partitioning; asynchronous hardware task scheduling priority queue,,,
 # #### Pipelined & Event-Driven Graph Accelerators
 # Solution: Optimize data flow and execution models using pipelining, event-driven mechanisms, or data shuffling to handle irregular graph workloads.
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
+2016,ISCA,Bilkent,Energy Efficient Architecture for Graph Analytics Accelerators,configurable SystemC-based GAS architecture template with application-pluggable data structures; monotonic-rank RAW/WAR hazard detection; bit-vector/queue dual structure; lock-free active vertex scheduling,3,3,3
 2019,FPL,NUS,On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs,on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture,3,4,2
 2020,MICRO,UCR,GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing,asynchronous event-driven model; in-place event coalescing; delta-based accumulative processing,3,3,4
+2024,FPGA,HKUST,GraFlex: Flexible Graph Processing on FPGAs through Customized Scalable Interconnection Network,scatter-gather BSP paradigm; customizable multi-stage butterfly interconnection network with virtual-channel flow control; HLS-level coalesced memory; throughput-matching design methodology,3,4,3
 # #### Memory-Optimized Graph Accelerators
 # Solution: Address the memory bottleneck (bandwidth and latency) through specialized memory hierarchies, HBM optimizations, or caching mechanisms.
+2014,IPDPSW,ISU,CyGraph: A Reconfigurable Architecture for Parallel Breadth-First Search,custom 64-bit CSR combining visited-flag/row-offset/neighbor-count in single memory word; token-ring kernel-to-kernel interface for distributed next-queue coordination across multi-FPGA,3,4,2
 2019,FPGA,HUST,Improving Performance of Graph Processing on FPGA-DRAM Platform by Two-level Vertex Caching,two-level vertex caching (L1 BRAM/L2 UltraRAM); Hilbert-order window sliding for locality; dual-pipeline computation-communication overlapping,4,4,3
 2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
@@ -74,20 +81,27 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,HPCA,KU Leuven,BitWave: Exploiting Column-Based Bit-Level Sparsity for Deep Learning Acceleration,Bit-column sparsity for both computation reduction and data compression; Single-shot Bit-Flip post-training,3,3,3
 2025,HPCA,POSTECH,Panacea: Novel DNN Accelerator using Accuracy-Preserving Asymmetric Quantization and Energy-Saving Bit-Slice Sparsity,Asymmetrically-Quantized bit-Slice GEMM; Zero-Point Manipulation and Distribution-based Bit-Slicing to increase sparsity,3,3,4
 2025,HPCA,Yonsei,Bit-slice Architecture for DNN Acceleration with Slice-level Sparsity Enhancement and Exploitation,both input AND weight sparsity at bit-slice level; 8-bit data processing with 4-bit multipliers; Scale regularization during training to enhance sparsity,3,2,2
-# #### Reconfigurable Accelerators
-# Solution: Reconfigurable accelerators not only break the trade-off of flexibility and performance, but also enable hardware to adapt to algorithm changes as quickly as software while maintaining high energy efficiency.
-2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandiwdth optimization; ART based virtual neuron construction,4,3,2
+# #### Reconfigurable Dataflow & Interconnect Accelerators
+# Solution: Dynamically adaptive interconnections and multi-dataflow engines allowing adaptable mapping to match spatial architectures with DNN variants.
+2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandwidth optimization; ART based virtual neuron construction,4,3,2
 2019,JETCAS,MIT,Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices,hierarchical mesh NoC for multiple transmission modes; sparse PE architecture,5,4,2
 2023,ASPLOS,UM & Georgia Tech,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern,4,3,2
+2025,MICRO,Maryland,Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication,ML-assisted runtime dataflow selection; lightweight decision tree predictor; intelligent reconfiguration engine for FPGAs; cost-benefit analysis for hardware switching,3,4,3
+# #### Application & Sparsity-Specific Reconfigurable Accelerators
+# Solution: Accelerators employing structured sparsity and environment-specific pipelining, enabling them to reconfigure flexibly for structured sparsity masks or specific AI domains (like RL).
 2023,MICRO,MIT,HighLight: Efficient and Flexible DNN Acceleration with Hierarchical Structured Sparsity,hierarchical structured sparsity (HSS) enables systematic flexibility on sparsity patterns; modularized hierarchical sparsity acceleration architecture,3,3,3
 2025,DATE,PKU,PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments,RL environment accelerator; PCIe communication optimization; IP-based design,3,3,2
-2025,MICRO,Maryland,Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication,ML-assisted runtime dataflow selection; lightweight decision tree predictor; intelligent reconfiguration engine for FPGAs; cost-benefit analysis for hardware switching,3,4,3
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture
-# Solution: Dataflow architecture allows the execution of instructions based on the availability of data rather than a predetermined sequence; leading to more efficient use of resources and better performance in parallel processing and real-time systems.
-2019,ASPLOS,THU,Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators,buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm,,,
+# #### Reconfigurable Dataflow Architectures
+# Challenge: Bridging the gap between the high efficiency of dataflow execution and the need for handling irregular control flows (e.g., MIMD threads) and diverse parallel patterns in general-purpose computing.
+2017,ISCA,Stanford,Plasticine: A Reconfigurable Architecture for Parallel Patterns,Pattern Compute Unit (PCU); Pattern Memory Unit (PMU); parallel pattern-based ISA; hierarchical reconfigurable interconnect,5,3,5
+2022,ISCA,Stanford,Aurochs: An Architecture for Dataflow Threads,dataflow threads for MIMD execution; resource elasticity and dynamic context switching; hardware extensions for irregular workloads,4,3,4
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
+# #### Tensor-Centric Dataflow Architectures
+# Challenge: Overcoming the memory wall and utilization bottlenecks in Deep Learning workloads by optimizing inter-operator dataflow, exploiting sparsity, and managing tensor contraction sequences.
+2019,ASPLOS,THU,Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators,buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm,,,
 2024,MICRO,UCR,Sparsepipe: Sparse Inter-operator Dataflow Architecture with Cross-Iteration Reuse,producer-consumer reuse; cross-iteration reuse; sub-tensor dependency; OEI dataflow; sparsepipe architecture,,,
 2025,arXiv,UCSB,FETTA: Flexible and Efficient Hardware Accelerator for Tensorized Neural Network Training,contraction sequence search engine; tensor contraction unit; distribution/reduction network,3,4,3
 # #### Data Mapping
@@ -131,6 +145,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Hardware implementation for many-core architecture to achieve massive parallelism.
 2016,SCIS,THU&BNU&CAS,The Sunway TaihuLight supercomputer: system and applications,Sunway TaihuLight's composition; scientific computing applications on TaihuLight,3,4,2
 2017,IPDPSW,SJTU&Tokyo Tech,Benchmarking SW26010 Many-core Processor,hand-coded assembly benchmark for SW26010; CPE pipeline&memory hierarchy&RLC mechanism benchmarking,3,4,2
+2020,MICRO,UCSD,Planaria: Dynamic Architecture Fission for Spatial Multi-Tenant Acceleration of Deep Neural Networks,dynamic architecture fission; spatial multi-tenant acceleration; omni-directional systolic arrays,4,3,2
 2023,MICRO,THU,MAICC: A Lightweight Many-core Architecture with In-Cache Computing for Multi-DNN Parallel Inference,slice improved and hardware-implemented reduction CIM; ISA extension for CIM; CNN layer segmentation and mapping algorithm,,,
 # #### Application Optimization
 2023,SC,NUDT,Optimizing Direct Convolutions on ARM Multi-Cores,direct convolution algorithm NDirect; loop ordering algorithm; micro convolution kernal for computing & packeting,,,
@@ -146,14 +161,22 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Efficiently co-optimize DNN mapping and hardware architecture under complex constraints.
 2020,ICCAD,UIUC,DNNExplorer: A Framework for Modeling and Exploring a Novel Paradigm of FPGA-based DNN Accelerator,two-level (global and local) automatic DSE engine; dynamic design space exploration framework; high-dimensional design space support,4,4,4
 2024,HPCA,THU,Gemini: Mapping and Architecture Co-exploration for Large-scale DNN Chiplet Accelerators,layer-centric encoding method; DP-based graph partition algorithm; SA based D2D link communication optimization,,,
-2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
 2024,ASPDAC,CUHK,SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design,intercluster distance algorithm; importance-based pruning and initialization,3,2,2
 2024,Arxiv,Georgia Tech,PIPEORGAN: Efficient Inter-operation Pipelining with Flexible Spatial Org,spatial organization strategy pipeorgan for inter-operator pipelining; augmented mesh for pipelining(AMP) topology,4,2,2
+2025,ASPDAC,THU,KAPLA: Scalable NN Accelerator Dataflow Design Space Structuring and Fast Exploring,tensor-centric dataflow directives; bottom-up cost descending; inter-layer pruning and decoupling,3,3,2
+
+# #### Communication DSE
+# Challenge: Efficiently exploring the vast design space to balance limited on-chip buffer resources with scarce DRAM bandwidth, aiming to minimize off-chip communication latency through optimized layer fusion and scheduling strategies.
+2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
+2025,HPCA,THU,SoMa: Identifying, Exploring, and Understanding the DRAM Communication Scheduling Space for DNN Accelerators,tensor-centric notation; two-stage(LFA,DLSA) simulated annealing; Prefetching and Delayed Storing,4,3,2
+2025,DAC,THU,Buffer Prospector: Discovering and Exploiting Untapped Buffer Resources in Many-Core DNN Accelerators,data-compute ratio; buffer requirement calculator; layer-pipeline (LP) mapping optimization; greedy based buffer allocator,4,3,2
 
 # #### Microarchitecture & Cross-Architecture DSE
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
+2019,MICRO,Georgia Tech,"Understanding Reuse, Performance, and Hardware Cost of DNN Dataflows: A Data-Centric Approach","MAESTRO analytical model; data-centric directives; spatial and temporal reuse analysis; hardware cost estimation; NoC (Network-on-Chip) modeling",4,4,4
 2025,arXiv,THU & Macau,MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware,IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE,3,3,2
 2025,arXiv,PKU,DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization,diffusion-based design generation; conditional sampling,3,4,3
+2026,arXiv,Berkeley,ArchAgent: Agentic AI-driven Computer Architecture Discovery,automated runtime-configurable parameter tuning for workload-specific optimization by LLM; automated detection of simulator escapes (ai-exploited logic loopholes simulators),3,3,3
 
 # ### Data Access Accelerators
 # Challenge: Indirect and sparse memory access patterns; low memory bandwidth utilization; core structural limitations
@@ -162,3 +185,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### HBM Interconnects
 # Challenge: The built-in crossbar of HBM FPGAs suffers from contention and low bandwidth during many-to-many unicast access, and standard HLS lacks support for efficient burst buffering.
 2021,FPGA,UCLA,HBM Connect: High-Performance HLS Interconnect for FPGA HBM,HBM Connect; HLS Virtual Buffer (HVB); Mux-Demux Switch; butterfly custom crossbar; many-to-many unicast; pseudo-channel optimization,4,4,2
+
+# ### Reinforcement Learning Accelerators
+# Challenge: Resolving the memory bottlenecks caused by the irregular, low-arithmetic-intensity operations of experience replay while efficiently synchronizing high-throughput neural network training with sequential data collection.
+2022,IEEE Access,Osnabrueck,A Survey of Domain-Specific Architectures for Reinforcement Learning,experience replay bottleneck; on-chip training lackness; normalized efficiency metrics(IPS/LUT),3,2,2
+2022,CF,USC,FPGA Acceleration of Deep Reinforcement Learning using On-Chip Replay Management,on-chip replay management module; k-ary sum tree data structure; hardware pipelining with conflict-free memory access,3,4,2
