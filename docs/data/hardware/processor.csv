@@ -16,3 +16,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Vector memory access is not well supported & optimized in the current microarchitecture like RISC-V.
 2025,CF Companion,ETHZ,AraOS: Analyzing the Impact of Virtual Memory Management on Vector Unit Performance,virtual memory management for RVV; performance analysis of virtual memory overhead,2,2,1
 2025,arXiv,THU,Efficient Architecture for RISC-V Vector Memory Access,data reorganization module; load/store data organization; row/column-accessible vector register file,2,4,3
+# ## Resource Management
+# Challenge: Dynamically coordinating the allocation of highly interdependent hardware resources to globally optimize system performance, energy efficiency, and fairness under continuously changing workload demands.
+2017,TACO,IIT,Cooperative Multi-Agent Reinforcement Learning Based Co-optimization of Cores, Caches, and On-chip Network,time per instruction (TPI) & branch misprediction (BMP) based state modeling; dynamic cache partitioning; cooperative event/action broadcasting,3,3,2
