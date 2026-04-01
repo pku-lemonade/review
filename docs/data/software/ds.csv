@@ -19,7 +19,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Maintaining the outputs of recursive/iterative dataflow computations (e.g., Datalog programs, graph analytics) incrementally as base inputs change, while controlling memory overhead and producing concise provenance explanations.
 2016,VLDB,ETH Zurich,Explaining outputs in modern data analytics,first-occurrence-based backward tracing for concise iterative explanations; iterative backward tracing for output-reproducing explanations in non-monotonic dataflows; explanation rules as differential dataflow operators,4,4,4
 2022,VLDB,UWaterloo,Optimizing differentially-maintained recursive queries on dynamic graphs,Join-On-Demand (JOD) complete difference dropping; probabilistic Bloom-filter-based partial difference dropping; degree-based difference selection heuristic,3,4,3
-2025,VLDB,UW-Madison & Microsoft,FlowLog: Efficient and Extensible Datalog via Incrementality,per-rule relational IR decoupling logic from DD execution; structural worst-case-aware join planning via JST; Boolean/algebraic specialization for recursive aggregation,4,4,4
+2025,VLDB,UW-Madison & Microsoft,FlowLog: Efficient and Extensible Datalog via Incrementality,per-rule relational intermediate representation (IR) decoupling logic from differential dataflow (DD) execution; structural worst-case-aware join planning via join support tree (JST); Boolean/algebraic specialization for recursive aggregation,4,4,4
 
 # #### Graph Mining Frameworks
 # Challenge: inefficient algorithms and communication patterns
