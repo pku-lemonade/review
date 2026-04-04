@@ -24,6 +24,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
 2025,arXiv,CMU,Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs,mega-kernelization; SM level parallel optimization; SM level representation,3,3,3
 
+# #### Graph-Level Transformation and Optimization
+# Challenge: Large DNN topologies and massive tensor sizes easily exceed hardware memory capacities and execution efficiency limits, making isolated operator-level optimizations insufficient.
+# Solution: Apply coordinated graph-level transformations (such as operator fission and fusion) and holistic topological scheduling to systematically optimize the entire computation graph for peak memory and execution latency.
+2024,ASPLOS,PKU,"MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN",Fission Transformation (F-Trans) for graph splitting; Dimension Graph (D-Graph) representation; incremental scheduling algorithm for fast evaluation,4,4,4
+
 # #### TinyML & Edge Compilers
 # Solution: address extreme memory and compute constraints on microcontrollers through specialized compilation strategies like fine-grained memory planning and redundancy-free tensor splitting.
 2024,HPCA,NYCU,TinyTS: Memory-Efficient TinyML Model Compiler Framework on Microcontrollers,dependency-free tensor splitting model; virtual feature map (VFP) for zero-copy concatenation; fine-grained life-cycle aware memory planner,4,4,3
