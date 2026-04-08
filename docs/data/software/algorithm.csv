@@ -26,6 +26,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Speculative decoding aims to accelerate the inference of large language models (LLMs) by utilizing a smaller, faster draft model to generate multiple tokens in parallel, which are then verified and corrected by the larger, more accurate target model.
 2023,ICML,Google,Fast Inference from Transformers via Speculative Decoding,speculative sampling; draft/approximation model; theoretical bound of acceptance rate,4,5,5
 2024,ICLR,Google,DistillSpec: Improving Speculative Decoding via Knowledge Distillation,on-policy distillation for speculative decoding; divergence tuning for draft-target alignment; lenience-controlled lossy SD,4,4,4
+2024,ACL,ZJU,Draft & Verify: Lossless Large Language Model Acceleration via Self-Speculative Decoding,self-speculative decoding; skipped-layer draft path; adaptive draft-exit threshold,4,4,4
+2024,ACL,Meta,LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding,layer dropout with shared-head early exit; self-speculative decoding; KVQ cache reuse,4,4,4
 2024,arXiv,Princeton & UIUC,Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads,medusa heads appended to the last layer; medusa-2 joint training,4,4,4
 
 # ##### LLM Inference Based on Activation Sparsity 
