@@ -18,6 +18,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
 2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
 2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
+2026,ASPLOS,Seoul National,A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs, delayed KV Cache writeback avoiding write amplification; cooperative X-cache for cooperative utilization,2,2,2
 # ### DIMM-PIMs
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -38,6 +39,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,PACT,PKU,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing,splitting reduce operations to NDP units; narrow-shard strategy for data reuse; hybrid graph partition strategy for load balancing,4,3,3
 2025,HPCA,ZJU,GOPIM: GCN-Oriented Pipeline Optimization for PIM Accelerators,ML-based replica resource allocation for pipeline streamlining; interleaved mapping with adaptive selective vertex updating,2,3,3
 2025,MICRO,Seoul National,FALA: Locality-Aware PIM-Host Cooperation for Graph Processing with Fine-Grained Column Access, 8-byte-level granularity for fine-grained vertex access with HBM2-PIM; multiple non-contiguous column accesses within single activated DRAM row,2,2,2
+2026,ASPLOS,Uppsala,CoGraf: Fully Accelerating Graph Applications with Fine-Grained PIM,tuple-based LLC for coalescing at flexible granularity; multi-column Fine-Grained PIM instructions to utilize row-level parallelism; predicated bank-parallel instructions for conditional apply-phase operations,3,3,3
+# #### LLM-Specific Optimization
 # Challenge: LLM inference is fundamentally bottlenecked by memory bandwidth; HBM is expensive and not scalable.
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
@@ -53,6 +56,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Retrieving the top-k results from a vectorized database is also a memory-bound operation.
 2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
 2025,MICRO,Yonsei,Accelerating Retrieval Augmented Language Model via PIM and PNM Integration, heterogeneous architecture integrating PIM for LLMs and PNM for retrievers; RALM scheduling strategy with selective batching and early generation,4,2,3
+# ### PIM KVCache Mapping
+# Challenge: Bank-level PIM processes one row at a time, needs data locality, making the data interleaving in HBM and host memory inefficient. 
+2026,ASPLOS,SJTU,REPA: Reconfigurable PIM for the Joint Acceleration of KV Cache Offloading and Processing,reconfigurable ReRAM-PIM for KV cache offload and in-situ processing; bulk-wise memory setting instructions for wordline parallelism; locality-aware data mapping and transfer overlapping,2,2,2
+2026,ASPLOS,RPI,STARC: Selective Token Access with Remapping and Clustering for Efficient LLM Decoding on PIM Systems,semantic KV clustering for PIM row-level alignment; hardware-friendly cosine K-means via PIM primitives; incremental append-only remapping for KV cache sparsity,3,3,2
 # #### Memory Address Space
 # Challenge: Host pages need to enable interleaving to improve concurrent throughput, while PIM pages need to disable it to maintain better locality, creating a conflict.
 2023,DAC,Georgia Tech,vPIM: Efficient Virtual Address Translation for Scalable Processing-in-Memory Architectures,network-contention-aware hashing to minimize cross-stack page table walks; pre-translation using repurposed PIM cores to move page table walks off the critical path,4,4,3
