@@ -15,6 +15,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,PLDI,UT Austin & UIUC,Gluon: A Communication-Optimizing Substrate for Distributed Heterogeneous Graph Analytics,communication-optimizing substrate; heterogeneous processor support; structural/temporal invariant-based communication optimization; memoization of address translation,4,4,4
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
 
+# #### Incremental Dataflow for Recursive Computations
+# Challenge: Maintaining the outputs of recursive/iterative dataflow computations (e.g., Datalog programs, graph analytics) incrementally as base inputs change, while controlling memory overhead and producing concise provenance explanations.
+2016,VLDB,ETH Zurich,Explaining outputs in modern data analytics,first-occurrence-based backward tracing for concise iterative explanations; iterative backward tracing for output-reproducing explanations in non-monotonic dataflows; explanation rules as differential dataflow operators,4,4,4
+2022,VLDB,UWaterloo,Optimizing differentially-maintained recursive queries on dynamic graphs,Join-On-Demand (JOD) complete difference dropping; probabilistic Bloom-filter-based partial difference dropping; degree-based difference selection heuristic,3,4,3
+2025,VLDB,UW-Madison & Microsoft,FlowLog: Efficient and Extensible Datalog via Incrementality,per-rule relational intermediate representation (IR) decoupling logic from differential dataflow (DD) execution; structural worst-case-aware join planning via join support tree (JST); Boolean/algebraic specialization for recursive aggregation,4,4,4
+
 # #### Graph Mining Frameworks
 # Challenge: inefficient algorithms and communication patterns
 2015,SOSP,QCRI,Arabesque: A System for Distributed Graph Mining,distributed graph mining; think like an embedding paradigm; filter-process model; ODAG embedding storage,4,4,4
@@ -286,7 +292,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Task Scheduling for specific tasks
 # Solution: In specific scene, the schedule goal is different. Assigning tasks to differnet devices can fix the gap between the characteristics of devices' and tasks'.
 2023,HPCA,Princeton,Dalorex: A Data-Local Program Execution and Architecture for Memory-bound Applications,distributed data-local tiled architecture; task-based programming for pointer indirection; traffic-aware task scheduling with headerless NoC,3,3,3
-2024,AAMAS,MIT,flame: A Framework for Learning in Agent-based ModEls, differentiable agent-based modeling framework via autograd primitives; hybrid DNN-ABM (Agent-Based Models) optimization pipeline,3,2,3
+
+# ##### Multi-Agent Systems and Agent-based Modeling Frameworks
+# Solution: Agent-based modeling (ABM) frameworks and DSLs enabling differentiable or learning-based multi-agent systems.
+2024,AAMAS,MIT & Adobe,flame: A Framework for Learning in Agent-based ModEls,differentiable agent-based modeling (ABM) via straight-through autograd operators; substep-based composable simulation DSL; hybrid DNN-ABM gradient optimization pipeline,3,2,3
 2025,arXiv,Georgia Tech,HARP: A Taxonomy for Heterogeneous and Hierarchical Processors for Mixed-reuse Workloads,a taxonomy to classify the heterogeneous and hierarchical accelerators; characterize hardware organization of different accelerators; classify based on relative location of sub-accelerators,,,
 2025,arXiv,PKU,Agent.xpu: Efficient Scheduling of Agentic LLM Workloads on Heterogeneous SoC,agent application-specific scheduling on heterogeneous SoC; heterogeneous execution graph with eastic kernels; bandwidth-aware dispatch for NPU-iGPU contention mitigation,3,2,3
 2025,arXiv,Stanford,Efficient and Scalable Agentic AI with Heterogeneous Systems,mapping agent worloads to heterogeneous accelerators; MLIR based excution graph; cost model based device choose,2,1,1
@@ -661,7 +670,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### GPU based Optimizations for Multi-Agent Systems
 # Challenge: Using GPU to run multi-agent systems can reduce the communication overhead. However, the GPU memory is limited, which requires optimization for memory management and communication.
-2024,arXiv,MIT,On the limits of agency in agent-based models,GPU optimization for agent simulation; use tensor for agent status expression; optimization for on-GPU operation,3,3,3
+2025,AAMAS,MIT,On the limits of agency in agent-based models,LLM archetypes for million-scale ABM; computational efficiency via representative agent grouping; counterfactual behavioral analysis with LLM-driven agents,3,3,3
 2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
 
 # #### Reuse Optimizations for Multi-Agent Systems
