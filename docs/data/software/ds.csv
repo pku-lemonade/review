@@ -688,6 +688,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,arXiv,USB,MemGPT: Towards LLMs as Operating Systems,agent memory basic idea; LLM use tool to manage memory,3,3,3
 2026,arXiv,UCB,Pancake: Hierarchical Memory System for Multi-Agent LLM Serving,DB optimization for agent memory; optimization GPU database access colocating with LLM; index management,3,3,3
 
+# #### LLM Agent Routing Optimizations for Multi-Agent Systems
+# Challenge: In multi-agent systems, efficient routing of tasks and information between agents is crucial for performance. Optimizing LLM agent routing can help to reduce latency and improve overall system efficiency.
+2026,arXiv,SJTU,MonoScale: Scaling Multi-Agent System with Monotonic Improvement,proactive agent warmup; agent conditionally Ttask synthesis; failure induced memory updates,3,4,4
+2026,arXiv,vLLM,The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project,semantic aware scheduling; three dimensional co-optimization: workload-router-GPU Pool; agent centric session affinity,3,3,3
+
 # ### GPU Kernel Optimizations for Systems
 # Challenge: GPU kernel optimizations can significantly improve the performance of systems by reducing computation time and memory usage.
 
