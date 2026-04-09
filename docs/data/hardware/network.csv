@@ -8,9 +8,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,Georgia Tech‌,FRED: A Wafer-scale Fabric for 3D Parallel DNN Training,microswitch based distributed on-wafer topology; conflict-free collective routing algorithm; congestion-aware device placement policy,3,3,2
 # #### Topology
 # Challenge: Current NoC topologies are often rigid and not adaptable to the specific needs of heterogeneous chiplets.
+# ##### 2D Topology
+# Solution: NoC topology design on 2D architectures.
 2021,HPCA,GWU,Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures,mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm,,,
 2022,HPCA,Huawei,Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective,bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism,,,
+2023,MICRO,TAMU,SuperMesh: Energy-Efficient Collective Communications for Accelerators,periphery-augmented mesh topology; disjoint-tree pipelined collectives; short-link-only interconnect,4,3,2
 2024,MICRO,THU,Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture,Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm,,,
+# ##### 3D Topology
+# Solution: NoC topology design on 3D architectures.
 2024,arXiv,WSU,Atleus: Accelerating Transformers on the Edge Enabled by 3D Heterogeneous Manycore Architectures,heterogeneous 3D NoC; pipeline design across heterogeneous resources; crossbar-wise quantization,,,
 2024,ISLPED,WSU,HeTraX: Energy Efficient 3D Heterogeneous Manycore Architecture for Transformer Acceleration,3D integration;  distinct planar tiers where each tier is tailor-made for either MHA or the FF network; alleviate memory bottlenecks while preventing frequent rewrites on ReRAM crossbars,,,
 # #### Interconnect

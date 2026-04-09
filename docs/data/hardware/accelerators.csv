@@ -99,6 +99,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### RL Environment Accelerators
 # Solution: FPGA-based accelerators targeting the parallel environment execution bottleneck in reinforcement learning training pipelines.
 2025,DATE,PKU,PEARL: FPGA-Based Reinforcement Learning Acceleration with Pipelined Parallel Environments,pipelined parallel RL environment execution on FPGA; PCIe data compression and local-store optimization; modular parametric environment template for user customization,3,3,2
+# #### Secure DNN Accelerators
+# Solution: Integrating on-chip cryptographic engines and co-optimizing the hardware architecture, memory authentication schemes, and data scheduling to efficiently enable Trusted Execution Environments (TEEs) for secure DNN computation with minimal overhead.
+2023,MICRO,MIT,SecureLoop: Design Space Exploration of Secure DNN Accelerators,cryptographic-engine-aware loopnest scheduling; analytical authentication block formulation; simulated annealing-based cross-layer tuning,3,3,2
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture
