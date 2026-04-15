@@ -34,6 +34,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Activation sparsity-based LLM inference aims to optimize the computational efficiency of large language models by leveraging the inherent sparsity in their activations, allowing for reduced resource consumption during inference.
 2023,ICML,Rice,Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time,asynchronous lookahead predictor; hardware-aware contextual sparsity; layer-wise activation similarity,3,4,4
 2023,NeurIPS,UTexas,H2O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models,greedy accumulation eviction; dynamic submodular maximization; sparsity-preserving generation,4,4,4
+2026,ASPLOS,SJTU,SpeContext: Enabling Efficient Long-context Reasoning with Speculative Context Sparsity in LLMs,lightweight retrieval head based on distilled language model; asynchronous prefetch dataflow via elastic loading strategy,3,2,3
 
 # ##### Early Exit LLM
 # Solution: Early exit LLMs aim to reduce inference time and computational cost by allowing the model to produce outputs at intermediate layers when sufficient confidence is achieved.
@@ -220,6 +221,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,SIGCOMM,UPenn&Microsoft,Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem,traffic engineering based collective communication optimization; mixed-integer linear program; A* technique for scaling,4,3,2
 2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
 2025,SC,THU,TraceFlow: Efficient Trace Analysis for Large-Scale Parallel Applications via Interaction Pattern-Aware Trace Distribution,communication skeleton tree; interaction-aware trace distribution; communication-minimized trace shuffling,4,4,2
+2026,ASPLOS,ICT,I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention,red-blue pebble game-based I/O analysis for tall-and-skinny GEMM; AttenIO accelerator with I/O-optimal dataflow; three-level communication-computation overlapping & parallel execution patterns for softmax,4,4,3
 
 # ### Fail-Slow Detection
 # Solution: investigating how modern distributed systems detect and mitigate fail-slow behaviors, focusing on the design of detection mechanisms, threshold policies, and recovery strategies to improve system resilience under partial performance degradation
