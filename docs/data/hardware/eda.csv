@@ -4,6 +4,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2013,DAC,Columbia,"A Method to Abstract RTL IP Blocks into C++ Code and Enable High-Level Synthesis",process communication graph; I/O port loop unrolling; HLS design space expansion,,,
 2024,ISEDA,UESTC,"GraphRTL: an Agile Design Framework of RTL Code from Data Flow Graphs",graph error detection kernel; DFS based graph equivalent reconstruction; template/Scala based DFG and CFG merging,,,
 
+# ### Dynamically Scheduled HLS and Dataflow Circuits
+# Challenge: HLS-generated dataflow circuits force successive instances of the same operation to execute strictly in program order due to the absence of token tags, preventing exploitation of parallelism analogous to out-of-order superscalar processors—particularly harmful when long-latency operations or high-II inner loops create pipeline bubbles.
+# Solution: Introduce selective token tagging and alignment components (TAGGER, ALIGNER, UNTAGGER) into untagged dataflow circuits at formally derived minimal positions, enabling out-of-order execution of targeted operations while preserving correctness for loop-carried dependencies and memory hazards.
+2024,FPGA,EPFL,Survival of the Fastest: Enabling More Out-of-Order Execution in Dataflow Circuits,TAGGER/ALIGNER/UNTAGGER components for selective token tagging in untagged dataflow circuits; dirty-node and unaligned-edge sets for minimal ALIGNER positioning; noncyclic/cyclic control-flow clustering to prevent alignment count mismatch,5,4,4
+
 # ### Spatial Accelerator Generation
 # Challenge: Building parameterized compilation frameworks to rapidly synthesize, evaluate, and deploy diverse spatial architectures (e.g., systolic arrays) while decoupling algorithm mapping from hardware generation.
 2020,ISCA,UCLA,"DSAGEN: Synthesizing Programmable Spatial Accelerators",architecture description graph (ADG); solution-repairing spatial scheduler to avoid redundant re-compilation; composable decoupled spatial primitives for approximating diverse accelerators,4,3,4

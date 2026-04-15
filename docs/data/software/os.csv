@@ -36,7 +36,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: to balance the cache hit ratio and the cache miss penalty.
 # The cache here not only includes the cache in the processors, but also the software concept in systems.
 2024,NSDI,CMU,Sieve is Simpler than LRU: an Efficient Turn-Key Eviction Algorithm for Web Caches,web cache management; fifo-like schedule; recognizing the importance of objects,3,3,3
-
+2026,ASPLOS,NCSU,CacheMind: From Miss Rates to Why - Natural-Language Trace-Grounded Reasoning for Cache Replacement,RAG-based trace retrieval for cache analysis; dual-retriever (symbolic filter Sieve + LLM code-gen Ranger); verified LLM reasoning benchmark for microarch,4,2,3
 
 # ## File systems and storage
 # Solution: organizing, storing, and retrieving data efficiently and reliably on storage devices, manage disk space, and ensure data integrity and security.
