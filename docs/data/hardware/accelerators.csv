@@ -90,6 +90,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ASPLOS,Georgia Tech,MAERI: Enabling Flexible Dataflow Mapping over DNN Accelerators via Reconfigurable Interconnects,augmented reduction tree(ART) for link conflict; chubby distribution tree for bandwidth optimization; ART based virtual neuron construction,4,3,2
 2019,JETCAS,MIT,Eyeriss v2: A Flexible Accelerator for Emerging Deep Neural Networks on Mobile Devices,hierarchical mesh NoC for multiple transmission modes; sparse PE architecture,5,4,2
 2023,ASPLOS,UM & Georgia Tech,Flexagon: A Multi-dataflow Sparse-Sparse Matrix Multiplication Accelerator for Efficient DNN Processing,merger-reduction network for area efficiency; compression format conversion without hardware module; dedicated L1 memory architecture for different access pattern,4,3,2
+2024,ISCA,Gatech,FEATHER: A Reconfigurable Accelerator with Data Reordering Support for Low-Cost On-Chip Dataflow Switching,reorder in reduction; dataflow-layout co-switching; butterfly interconnect for reduction and reordering (BIRRD),4,4,2
 2025,MICRO,Maryland,Misam: Machine Learning Assisted Dataflow Selection in Accelerators for Sparse Matrix Multiplication,ML-assisted runtime dataflow selection; lightweight decision tree predictor; intelligent reconfiguration engine for FPGAs; cost-benefit analysis for hardware switching,3,4,3
 # #### Application & Sparsity-Specific Reconfigurable Accelerators
 # Solution: Accelerators employing structured sparsity and environment-specific pipelining, enabling them to reconfigure flexibly for structured sparsity masks or specific AI domains (like RL).
@@ -188,6 +189,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Microarchitecture & Cross-Architecture DSE
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
 2019,MICRO,Georgia Tech,"Understanding Reuse, Performance, and Hardware Cost of DNN Dataflows: A Data-Centric Approach","MAESTRO analytical model; data-centric directives; spatial and temporal reuse analysis; hardware cost estimation; NoC (Network-on-Chip) modeling",4,4,4
+2023,DATE,Gatech,AIRCHITECT: Learning Custom Architecture Design and Mapping Space,recommendation neural network; constant time prediction; systolic-array-based accelerators,3,4,2
 2025,arXiv,THU & Macau,MLDSE: Scaling Design Space Exploration Infrastructure for Multi-Level Hardware,IR and builder based hardware modeling; cross-architecture DSE; spatial-level DSE,3,3,2
 2025,arXiv,PKU,DiffuSE: Cross-Layer Design Space Exploration of DNN Accelerator via Diffusion-Driven Optimization,diffusion-based design generation; conditional sampling,3,4,3
 2026,arXiv,Berkeley,ArchAgent: Agentic AI-driven Computer Architecture Discovery,automated runtime-configurable parameter tuning for workload-specific optimization by LLM; automated detection of simulator escapes (ai-exploited logic loopholes simulators),3,3,3
