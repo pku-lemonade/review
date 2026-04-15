@@ -10,8 +10,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Program Optimization and Rewriting Frameworks
 # Challenge: Traditional sequential compiler optimizations suffer from the phase-ordering problem, while existing equational reasoning tools are often too slow or rigid for domain-specific, non-syntactic analyses.
 # Solution: Utilize equality saturation with efficient data structures (e.g., e-graphs) and extensible analysis mechanisms to explore the space of equivalent programs without strict ordering.
-2021,POPL,UW,"egg: Fast and Extensible Equality Saturation",equality saturation algorithm, e-graphs (Equality Graphs), deferred rebuilding technique,3,4,4
-2026,ASPLOS,PKU,"Finding Reusable Instructions via E-Graph Anti-Unification",e-graph anti-unification algorithm for custom instruction identification,pattern vectorization,hardware-aware cost model,4,4,4
+2021,POPL,UW,"egg: Fast and Extensible Equality Saturation",equality saturation algorithm;e-graphs (Equality Graphs);deferred rebuilding technique,3,4,4
+2026,ASPLOS,PKU,"Finding Reusable Instructions via E-Graph Anti-Unification",e-graph anti-unification algorithm for custom instruction identification;pattern vectorization;hardware-aware cost model,4,4,4
 
 # ### Deep Learning Compilers
 # Solution: Graph transformations, Kernel fusion, Tensor optimization for compute and memory
