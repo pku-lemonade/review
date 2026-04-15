@@ -16,9 +16,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,ICT,Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM, chiplet-based NPU & NAND flash hybrid architecture; Hardware-aware tiling for NPU-flash workload distribution,4,3,2
 2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
-2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
 2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
 2026,ASPLOS,Seoul National,A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs, delayed KV Cache writeback avoiding write amplification; cooperative X-cache for cooperative utilization,2,2,2
+# #### Specialized Application Targeted Optimization
+# Solution: Use near-/in-storage compute to accelerate domain-specific workloads beyond mainstream LLM inference.
+2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
 # ### DIMM-PIMs
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
@@ -45,8 +47,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,npj Unconv. Comput.,UMich,PIM-GPT: a hybrid process in memory accelerator for autoregressive transformers,hybrid system to accelerate GPT inference; mapping scheme for data locality and workload distribution,3,2,2
 2025,MICRO,KAIST,PIMBA: A Processing-in-Memory Acceleration for Post-Transformer Large Language Model Serving,Unified PIM acceleration for both transformer and post-transformer LLMs; access interleaving technique for shared State-update Processing Unit,4,2,3
 2025,MICRO,Cornell,LongSight: Compute-Enabled Memory to Accelerate Large-Context LLMs via Sparse Attention,hybrid dense-sparse attention algorithm; KV cache offloading to CXL-PIM; sign-concordance filtering by iterative quantization,3,2,2
-2025,IEEE LCA,POSTECH,Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization,scale cascading for simplifying dequantization; zero-offset removal for reduced circuit complexity,3,2,2
 2025,IEEE LCA,Yonsei,RoPIM: A Processing-in-Memory Architecture for Accelerating Rotary Positional Embedding in Transformer Models,bank-level PIM accelerator for RoPE; row-level data mapping for single-token Q/K/V/S alignment; parallel data rearrangement via inverters,4,3,4
+# #### LLM Quantization & Capacity Optimization
+# Challenge: Bank-level PIM systems face tight capacity budgets and quantization overhead in long-context LLM serving.
+2025,IEEE LCA,POSTECH,Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization,scale cascading for simplifying dequantization; zero-offset removal for reduced circuit complexity,3,2,2
+2026,HPCA,ISCT,AQPIM: Breaking the PIM Capacity Wall for LLMs with in-Memory Activation Quantization,lookup-based attention; importance-weighted K-means clustering; channel pre-sorting for subvector affinity,3,3,4
 # #### MoE-LLM Optimization
 # Challenge: MoE models often have higher Op/Byte ratios, making bank-level PIM easily compute-bound and limiting speedup.
 2024,DAC,Seoul National,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models, activation movement strategy to replace costly parameter movement; dynamic GPU-MoNDE load balancing for hot/cold experts,4,4,2
@@ -58,8 +63,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MICRO,Yonsei,Accelerating Retrieval Augmented Language Model via PIM and PNM Integration, heterogeneous architecture integrating PIM for LLMs and PNM for retrievers; RALM scheduling strategy with selective batching and early generation,4,2,3
 # ### PIM KVCache Mapping
 # Challenge: Bank-level PIM processes one row at a time, needs data locality, making the data interleaving in HBM and host memory inefficient. 
+# #### KV-Cache Mapping & Offloading
 2026,ASPLOS,SJTU,REPA: Reconfigurable PIM for the Joint Acceleration of KV Cache Offloading and Processing,reconfigurable ReRAM-PIM for KV cache offload and in-situ processing; bulk-wise memory setting instructions for wordline parallelism; locality-aware data mapping and transfer overlapping,2,2,2
-2026,ASPLOS,RPI,STARC: Selective Token Access with Remapping and Clustering for Efficient LLM Decoding on PIM Systems,semantic KV clustering for PIM row-level alignment; hardware-friendly cosine K-means via PIM primitives; incremental append-only remapping for KV cache sparsity,3,3,2
+2026,ASPLOS,RPI,STARC: Selective Token Access with Remapping and Clustering for Efficient LLM Decoding on PIM Systems,token remapping engine; minhash-based token clustering; autonomous background intra-bank DMA migration,3,3,3
 # #### Memory Address Space
 # Challenge: Host pages need to enable interleaving to improve concurrent throughput, while PIM pages need to disable it to maintain better locality, creating a conflict.
 2023,DAC,Georgia Tech,vPIM: Efficient Virtual Address Translation for Scalable Processing-in-Memory Architectures,network-contention-aware hashing to minimize cross-stack page table walks; pre-translation using repurposed PIM cores to move page table walks off the critical path,4,4,3
@@ -70,10 +76,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,ETHZ,PUMA: Efficient and Low-Cost Memory Allocation and Alignment Support for Processing-Using-Memory Architectures,aligned memory allocator for PUM; DRAM-aware memory allocation,2,3,2
 2024,MICRO,KAIST,PIM-MMU: A Memory Management Unit for Accelerating Data Transfers in Commercial PIM Systems,data copy engine for host-PIM transfers; PIM-aware memory scheduler for MLP maximization; memory remapping unit for dual address mapping,2,4,3
 2025,arXiv,Amazon,DL-PIM: Improving Data Locality in Processing-in-Memory Systems,subscription-based architecture to proactively move data; distributed address-indirection hardware lookup table,3,2,3
-# #### PIM Compiler & Data Layout
-# Challenge: Existing compilers are not optimized for locality-aware PIM architectures and require specialized programming models to fully utilize PIM capabilities.
+# #### PIM ISA & Programming Model
+# Challenge: Existing PIM interfaces expose limited control and make it hard to express end-to-end execution inside memory.
 2015,ISCA,Seoul National,PIM-Enabled Instructions: A Low-Overhead; Locality-Aware Processing-in-Memory Architecture,PIM-Enabled Instructions for ISA extension; PIM directory for atomicity and coherence; single-cache-block restriction,3,4,4
 2020,ISCA,UCSB,iPIM: Programmable In-Memory Image Processing Accelerator Using Near-Bank Architecture, Single-Instruction-Multiple-Bank ISA; register allocation; instruction reordering,4,4,2
+2026,HPCA,UIUC,The Memory Processing Unit: A Generalized Interface for End-to-End In-Memory Execution,ensemble execution model; thermal-aware round-robin VRF scheduler; comparison-based in-memory predication with arbitrary nesting,4,3,4
+# #### PIM Compiler & Data Layout
+# Challenge: Existing compilers are not optimized for locality-aware PIM architectures and require specialized programming models to fully utilize PIM capabilities.
 2025,ISCA,POSTECH,ATIM: Autotuning Tensor Programs for Processing-in-DRAM,autotuning framework for DRAM PIM; search-based optimizing tensor compiler; balanced evolutionary search algorithm,3,3,4
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,layout-aware nested loop representation; Integer Linear Programming formulation for PIM mapping; analytical cost modeling for data layout enforcement,3,3,4
 2026,HPCA,Hanyang,PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-based Long-Context LLM Inference System,token-centric PIM partitioning for high channel utilization; dynamic PIM command scheduling for out-of-order I/O-compute overlap; dynamic PIM access for dynamic virtual-to-physical translation,3,4,4
@@ -87,7 +96,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Seoul National,PID-Comm: A Fast and Flexible Collective Communication Framework for Commodity Processing-in-DIMM Devices,Virtual hypercube PIM model; PE-assisted data reordering; in-register and cross-domain data modulation,3,4,3
 2025,ISCA,KAIST,PIMnet: A Domain-Specific Network for Efficient Collective Communication in Scalable PIM, domain-specific PIM interconnect; hierarchical network for PIM packaging; PIM-controlled deterministic scheduling,2,4,3
 2026,HPCA,ICT,COCOTree: A Computation-Capable Architecture for Collective Communication in Scalable PIM, hierarchical binary tree topology for inter-PE communication; in-network computation via computation-capable nodes; two-phase packet-based protocol with configuration-computation decoupling,4,3,2
-#### Inter-DIMM Communication
+# #### Inter-DIMM Communication
 # Challenge: High latency of inter-DIMM (cross-DIMM) communication via host CPU forwarding.
 2017,MEMSYS,UCLA,AIM: Accelerating Computational Genomics through Scalable and Noninvasive Accelerator-Interposed Memory,placing FPGA chip between DIMM and the conventional memory network; multi-drop bus for inter-accelerator communication, 1,2,2
 2023,ASPLOS,THU,ABNDP: Co-optimizing Data Access and Load Balance in Near-Data Processing,Traveller Cache; hybrid task scheduling; hybrid scheduling leveraging distributed cache,4,3,4
@@ -203,12 +212,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,TCAD,NJU,A Compilation Framework for SRAM Computing-in-Memory Systems With Optimized Weight Mapping and Error,input/output side parallelism (IOSP); partition-based MAQE(duplicating MSB storage),4,2,3
 # ### CIM: DRAM
 # Solution: Rather than placing logic units into DRAM; modify the physical structure of DRAM/eDRAM to enable in-memory computing.
+# #### DRAM CIM: General Architecture
 2021,ICCD,ASU,CIDAN: Computing in DRAM with Artificial Neurons,Threshold Logic Processing Element (TLPE) for in-memory computation; Four-bank activation window; Configurable threshold functions; Energy-efficient bitwise operations; Integration with DRAM architecture,,,
 2022,HPCA,UCSD,TransPIM: A Memory-based Acceleration via Software-Hardware Co-Design for Transformer,token-based dataflow for general Transformer-based models; ring-based data broadcast in modified HBM,4,2,4
-2024,A-SSCC,UNIST,A 273.48 TOPS/W and 1.58 Mb/mm2 Analog-Digital Hybrid CIM Processor with Transpose Ternary-eDRAM Bitcell,analog DRAM CIM for partial sum and digital adder,1,4,2
-2025,arXiv,KAIST,RED: Energy Optimization Framework for eDRAM-based PIM with Reconfigurable Voltage Swing and Retention-aware Scheduling,"RED framework for energy optimization; reconfigurable eDRAM design; retention-aware scheduling; trade-off analysis between RBL voltage swing, sense amplifier power, and retention time; refresh skipping and sense amplifier power gating",,,
 2025,arXiv,UTokyo,MVDRAM: Enabling GeMV Execution in Unmodified DRAM for Low-Bit LLM Acceleration,GeMV operations for end-to-end low-bit LLM inference using unmodified DRAM; processor-DRAM co-design; on-the-fly vector encoding; horizontal matrix layout,4,4,3
 2025,arXiv,Purdue,HALO: Memory-Centric Heterogeneous Accelerator with 2.5D Integration for Low-Batch LLM Inference,heterogeneous CiD/CiM accelerator; phase-aware mapping strategy,3,2,2
+# #### DRAM CIM: eDRAM-Based Design & Optimization
+2024,A-SSCC,UNIST,A 273.48 TOPS/W and 1.58 Mb/mm2 Analog-Digital Hybrid CIM Processor with Transpose Ternary-eDRAM Bitcell,analog DRAM CIM for partial sum and digital adder,1,4,2
+2025,arXiv,KAIST,RED: Energy Optimization Framework for eDRAM-based PIM with Reconfigurable Voltage Swing and Retention-aware Scheduling,"RED framework for energy optimization; reconfigurable eDRAM design; retention-aware scheduling; trade-off analysis between RBL voltage swing, sense amplifier power, and retention time; refresh skipping and sense amplifier power gating",,,
 # ### CIM: SRAM
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory; DIMM-based NDP causing high energy consumption; area overhead and low performance efficiency.
 # Solution: Generally modify the physical structure of SRAM to enable in-memory computing; rather than placing logic units into SRAM.
@@ -306,6 +317,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,VLSI,HUST,An RRAM-Based Computing-in-Memory Architecture and Its Application in Accelerating Transformer Inference,RRAM-based in-memory floating-point computation architecture (RIME); pipelined implementations of MatMul and softmax,3,3,4
 2020,ICCAD,Duke,ReTransformer: ReRAM-based processing-in-memory architecture for transformer acceleration,MatMul does matrix decomposition in scaled dot-product attention; in-memory logic techniques for softmax; sub-matrix pipeline,4,3,3
 2022,TCAD,KAIST,A Framework for Accelerating Transformer-Based Language Model on ReRAM-Based Architecture,window self-attention and window-size search algorithm; ReRAM hardware design optimized for this algorithm,4,2,3
+# #### RRAM CIM: Transformer Robustness & Hybrid Optimization
+# Challenge: Attention-specific robustness and hybrid-memory design add extra architectural constraints beyond baseline Transformer acceleration.
 2020,ICCD,LSU,ATT: A Fault-Tolerant ReRAM Accelerator for Attention-based Neural Networks,ReRAM-based accelerator with pipeline for AttNNs; heuristic redundancy algorithm,3,2,2
 2025,ISCA,UCSD,Hybrid SLC-MLC RRAM Mixed-Signal Processing-in-Memory Architecture for Transformer Acceleration via Gradient Redistribution, architectural and circuit-level hardware designs supporting importance-based data flow with hybrid SLC-MLC ReRAM; gradient redistribution technique,3,2,4
 # #### RRAM CiM: Special Usage
