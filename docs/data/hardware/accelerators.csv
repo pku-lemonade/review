@@ -27,7 +27,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,FPGA,HUST,Improving Performance of Graph Processing on FPGA-DRAM Platform by Two-level Vertex Caching,two-level vertex caching (L1 BRAM/L2 UltraRAM); Hilbert-order window sliding for locality; dual-pipeline computation-communication overlapping,4,4,3
 2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
-2019,ASPDAI,THU & UCB,GraphSAR: A Sparsity-Aware Processing-in-Memory Architecture for Large-Scale Graph Processing on ReRAMs,sparsity-aware recursive block partitioning with density threshold 0.5; hybrid-centric block-list and edge-list processing model; lightweight graph clustering via vertex index remapping; single-bit ReRAM cell implementation for unweighted algorithms,3,3,3
+2019,ASPDAC,THU & UCB,GraphSAR: A Sparsity-Aware Processing-in-Memory Architecture for Large-Scale Graph Processing on ReRAMs,sparsity-aware recursive block partitioning with density threshold 0.5; hybrid-centric block-list and edge-list processing model; lightweight graph clustering via vertex index remapping; single-bit ReRAM cell implementation for unweighted algorithms,3,3,3
 # #### Dynamic Graph Accelerators
 # Challenge: Edge update, Graph store data structure design
 2021,FPGA,HUST,GraSU: A Fast Graph Update Library for FPGA-based Dynamic Graph Processing,differential data management based on spatial similarity; Incremental Value Measurer (IVM); Value-Aware Memory Manager (VMM),4,4,3
