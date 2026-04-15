@@ -10,7 +10,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,JCST,HUST,A Survey on Graph Processing Accelerators: Challenges and Opportunities,vertex-centric vs edge-centric iterative paradigms; graph layout reorganization and ordering; source/destination/grid graph partitioning; runtime scheduling execution models,,,
 2022,IEEE Micro,UCLA,Systematically Understanding Graph Accelerator Dimensions and the Value of Hardware Flexibility,Taskflow execution model unifying task and dataflow parallelism; graph algorithm variant taxonomy; multi-level spatial partitioning; asynchronous hardware task scheduling priority queue,,,
 # #### Pipelined & Event-Driven Graph Accelerators
-# Solution: Optimize data flow and execution models using pipelining, event-driven mechanisms to handle irregular graph workloads on ASIC.
+# Solution: Optimize data flow and execution models using pipelining and event-driven mechanisms to handle irregular graph workloads across hardware architectures.
 2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
 2016,ISCA,Bilkent,Energy Efficient Architecture for Graph Analytics Accelerators,configurable SystemC-based GAS architecture template with application-pluggable data structures; monotonic-rank RAW/WAR hazard detection; bit-vector/queue dual structure; lock-free active vertex scheduling,3,3,3
 2020,MICRO,UCR,GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing,asynchronous event-driven model; in-place event coalescing; delta-based accumulative processing,3,3,4
