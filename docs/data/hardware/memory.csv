@@ -80,6 +80,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Evaluation & Simulators
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 2025,arXiv,ETHZ,EasyDRAM: An FPGA-based Infrastructure for Fast and Accurate End-to-End Evaluation of Emerging DRAM Techniques,FPGA-based DRAM evaluation framework; C++ high-level language for description; time scaling for accurate modeling,3,4,3
+2026,arXiv,PKU,A Full-Stack Performance Evaluation Infrastructure for 3D-DRAM-based LLM Accelerators,ATLAS framework for hybrid bounding 3D DRAM NMP; hierarchical SPMD/MPMD programming model; grid-based transient thermal analyzer for temperature-constrained architecture exploration,4,4,5
 # #### Intra-DIMM Communication
 # Challenge: High latency of intra-DIMM (cross-bank) communication via host CPU forwarding.
 2024,ISCA,THU,NDPBridge: Enabling Cross-Bank Coordination in Near-DRAM-Bank Processing Architectures,"gather & scatter messages via buffer chip; task-based message-passing model; hierarchical, data-transfer-aware load balancing",,,
