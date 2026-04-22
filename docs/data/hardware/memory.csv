@@ -1,4 +1,9 @@
 Year,Venue,Authors,Title,Tags,P,E,N
+# ### Multi-Level PIM/NDP Architectures
+# Challenge: PIM core can be placed at bank level, off-chip buffer level and even inside the SSD controller, and the communication between different levels of PIM/NDP is challenging.
+2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
+2026,HPCA,ETHZ,Conduit: Programmer-Transparent Near-Data Processing Using Multiple Compute-Capable Resources in Solid State Drives,loop auto-vectorization to align with SSD page layout; instruction-granularity offloading via holistic cost function,2,3,2
+
 # ### In-Stroage (NAND Flash) Processing
 # #### Near-NAND Array Processing
 # Solution: bypass the NAND Flash controller chip and DRAM/SLC buffer, execute the tasks by near-array units.
@@ -10,14 +15,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,ETHZ,REIS: A High-Performance and Energy-Efficient Retrieval System with In-Storage Processing,In-Storage processing,2,4,3
 2025,ISCA,UCSD,In-Storage Acceleration of Retrieval Augmented Generation as a Service,metamorphic in-storage accelerator; Metadata Navigation Unit for dynamic data access,4,3,2
 2025,arxiv,ETHZ,MARS: Processing-In-Memory Acceleration of Raw Signal Genome Analysis Inside the Storage Subsystem,PIM module inside the SSD controller; early signal quantization; read filtering,3,3,2
-2026,HPCA,ETHZ,Conduit: Programmer-Transparent Near-Data Processing Using Multiple Compute-Capable Resources in Solid State Drives,loop auto-vectorization to align with SSD page layout; instruction-granularity offloading via holistic cost function,2,3,2
+2025,ICCAD,SNU,LLM-on-the-Palm: Mobile LLM Inference with PIM-Enhanced NAND Flash Memory,a single MAC unit per plane; selective layer-wise mapping strategy offloading FC layers to PIM and attention to NPU; pipelined MAC and input broadcast via extended commands,2,2,2
 # #### LLM-Specific Optimizations
 # Solution: Store weights in flash memory as read-only to prevent failures caused by write operations.
 2024,arXiv,ICT,Cambricon-LLM: A Chiplet-Based Hybrid Architecture for On-Device Inference of 70B LLM, chiplet-based NPU & NAND flash hybrid architecture; Hardware-aware tiling for NPU-flash workload distribution,4,3,2
 2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
 2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
-2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
+
 2026,ASPLOS,Seoul National,A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs, delayed KV Cache writeback avoiding write amplification; cooperative X-cache for cooperative utilization,2,2,2
 # ### DIMM-PIMs
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
@@ -133,6 +138,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. Limited number of DDR channels causing poor scalability.
 # Solution: Introduce CXL-based interconnects to enable direct communication between memory banks; Use CXL memory pools and CXL switches to enable scalable NDP architecture.
 2022,MICRO,UCSB,BEACON: Scalable Near-Data-Processing Accelerators for Genome Analysis near Memory Pool with the CXL Support,scalable hardware accelerator inside CXL switch or bank; lossless memory expansion for CXL memory pools,,,
+2024,HPCA,Samsung,An LPDDR-based CXL-PNM Platform for TCO-efficient Inference of Transformer-based Large Language Models,LPDDR5X-based CXL memory module; Processing-Near-Memory controller; software stack via direct access driver for transparent host-accelerator memory sharing,2,2,4
 2024,ICS,Samsung,CLAY: CXL-based Scalable NDP Architecture Accelerating Embedding Layers,direct interconnect between DRAM clusters; dedicated memory address mapping scheme; Multi-CLAY system support through customized CXL switch,,,
 2024,MICRO,SK Hyrix,Low-overhead General-purpose Near-Data Processing in CXL Memory Expanders,CXL.mem protocol instead of CXL.io (DMA) for low-latency; lightweight threads to reduce address calculation overhead,,,
 2025,ISCA,Seoul National,COSMOS: A CXL-Based Full In-Memory System for Approximate Nearest Neighbor Search,CXL core-based ANNS task offload; rank-level parallel distance computation; adjacency-aware data placement algorithm,2,2,2
@@ -141,7 +147,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: The logic units of near-bank DRAM PIM are fabricated using the same process node as DRAM, which restricts their performance and efficiency.
 2022,IEEE TCAD,WSU,SWAP: A Server-Scale Communication-Aware Chiplet-Based Manycore PIM Accelerator, coarse-to-fine multi-objective optimization algorithm for Network-On-Package design; communication-aware irregular NoP topology,3,2,2
 2025,arXiv,Univ. of Virginia,Sangam: A Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing, decoupling logic and memory dies by chiplet; bank-level systolic arrays for flat-GEMM acceleration,4,3,4
-
+2025,ICCAD,SEU,H3D-LLM: Heterogeneous 3D Chiplet Design for LLM Inference with Dynamic Task Scheduling and Memory-Aware Orchestration,Sparse-aware dynamic execution with precision-adaptive quantization; runtime-aware encoding and dynamic cluster allocation,3,3,2
 # ### 3D-Stacked PIM
 # Challenge: There is no direct physical interconnection paths in DIMM-based, bank-level uniform NDP like UPMEM.
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
