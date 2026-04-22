@@ -218,10 +218,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Communication Optimization
 # Solution: modeling and searching the parameter space of collective communication libraries, dynamically selecting optimal configurations under real training/analyzing workloads
-2024,SIGCOMM,UPenn&Microsoft,Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem,traffic engineering based collective communication optimization; mixed-integer linear program; A* technique for scaling,4,3,2
-2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
 2025,SC,THU,TraceFlow: Efficient Trace Analysis for Large-Scale Parallel Applications via Interaction Pattern-Aware Trace Distribution,communication skeleton tree; interaction-aware trace distribution; communication-minimized trace shuffling,4,4,2
 2026,ASPLOS,ICT,I/O Analysis is All You Need: An I/O Analysis for Long-Sequence Attention,red-blue pebble game-based I/O analysis for tall-and-skinny GEMM; AttenIO accelerator with I/O-optimal dataflow; three-level communication-computation overlapping & parallel execution patterns for softmax,4,4,3
+
+# #### Collective Communication
+# Solution: Designing topology-aware data routing and scheduling algorithms to maximize network bandwidth utilization and minimize communication bottlenecks in distributed clusters.
+2022,ISCA,Gatech,Themis: A Network Bandwidth-Aware Collective Scheduling Policy for Distributed Training of DL Models,dynamic chunk scheduling; load balancing across network dimensions; Smallest-Chunk-First (SCF) intra-dimension scheduling,3,3,2
+2024,MICRO,Gatech&MIT,TACOS: Topology-Aware Collective Algorithm Synthesizer for Distributed Machine Learning,topology-aware collective algorithm synthesis; time-expanded network; link-chunk matching; greedy network utilization maximization,4,3,2
+2024,SIGCOMM,UPenn&Microsoft,Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem,traffic engineering based collective communication optimization; mixed-integer linear program; A* technique for scaling,4,3,2
+2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
 
 # ### Fail-Slow Detection
 # Solution: investigating how modern distributed systems detect and mitigate fail-slow behaviors, focusing on the design of detection mechanisms, threshold policies, and recovery strategies to improve system resilience under partial performance degradation
