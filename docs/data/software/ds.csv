@@ -163,6 +163,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: events like function call will lead to KVC idling in GPU memory, swap out and then swap in is a tradeoff between recomputation and memory utilization
 2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
 2025,arXiv,ZJU,AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving,runtime information version of Infercept; handle the tool use KVC management,3,3,1
+2026,arXiv,THU,Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live,keep KVC after tool call,3,2,1
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
@@ -534,6 +535,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Compute-Kernel-Level Optimizations
 2025,arXiv,SJTU,Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores,dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression,,,
 2025,Mips,Cornell,FlashMoE: Fast Distributed MoE in a Single Kernel,mega kernel for MoE model; persistent kernel to reduce CPU overhead,3,4,3
+2026,Mlsys,CMU,Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel,dynamic shape mega kernel design; atomic increment/decrement for ready queue; symbolic-shaped synchronization primitives,3,4,4
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
@@ -565,6 +567,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SYSU,Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation,attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling,4,4,3
 2025,arXiv,Alibaba,FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling,analyze the communication patterns; KV cache structure adjustment method; load-aware scheduling,4,4,2
 2025,arXiv,NUS & USTC,DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving,a novel Tandem Serving execution model; two virtual subrequests; explicitly permit the two subrequests to execute on either GPU instance,3,4,2
+2026,arXiv,THU,Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter,hybrid prefix cache; prompt-lem aware router; global scheduler; mooncake based memory management,4,3,3
 
 # ##### A-F Disaggregated Systems
 # Challenge: In the decode stage, **the attention need memory access while the FFN only need compute**. The increasingly sparse FFN in MoE models make the GPU computation ultilization low. Disaggregate the attention and FFN module to different can make better batching and heterogeneous devices implement.
@@ -692,6 +695,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: In multi-agent systems, efficient routing of tasks and information between agents is crucial for performance. Optimizing LLM agent routing can help to reduce latency and improve overall system efficiency.
 2026,arXiv,SJTU,MonoScale: Scaling Multi-Agent System with Monotonic Improvement,proactive agent warmup; agent conditionally Ttask synthesis; failure induced memory updates,3,4,4
 2026,arXiv,vLLM,The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project,semantic aware scheduling; three dimensional co-optimization: workload-router-GPU Pool; agent centric session affinity,3,3,3
+2026,arXiv,IC,Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines,agentic workflow GPU allocation; pipeline abstraction,3,3,3
 
 # ### GPU Kernel Optimizations for Systems
 # Challenge: GPU kernel optimizations can significantly improve the performance of systems by reducing computation time and memory usage.
