@@ -163,6 +163,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: events like function call will lead to KVC idling in GPU memory, swap out and then swap in is a tradeoff between recomputation and memory utilization
 2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
 2025,arXiv,ZJU,AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving,runtime information version of Infercept; handle the tool use KVC management,3,3,1
+2026,arXiv,THU,Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live,keep KVC after tool call,3,2,1
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
@@ -694,6 +695,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: In multi-agent systems, efficient routing of tasks and information between agents is crucial for performance. Optimizing LLM agent routing can help to reduce latency and improve overall system efficiency.
 2026,arXiv,SJTU,MonoScale: Scaling Multi-Agent System with Monotonic Improvement,proactive agent warmup; agent conditionally Ttask synthesis; failure induced memory updates,3,4,4
 2026,arXiv,vLLM,The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project,semantic aware scheduling; three dimensional co-optimization: workload-router-GPU Pool; agent centric session affinity,3,3,3
+2026,arXiv,IC,Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines,agentic workflow GPU allocation; pipeline abstraction,3,3,3
 
 # ### GPU Kernel Optimizations for Systems
 # Challenge: GPU kernel optimizations can significantly improve the performance of systems by reducing computation time and memory usage.
