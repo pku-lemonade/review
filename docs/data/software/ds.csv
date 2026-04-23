@@ -534,6 +534,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Compute-Kernel-Level Optimizations
 2025,arXiv,SJTU,Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores,dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression,,,
 2025,Mips,Cornell,FlashMoE: Fast Distributed MoE in a Single Kernel,mega kernel for MoE model; persistent kernel to reduce CPU overhead,3,4,3
+2026,Mlsys,CMU,Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel,dynamic shape mega kernel design; atomic increment/decrement for ready queue; symbolic-shaped synchronization primitives,3,4,4
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
@@ -565,6 +566,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SYSU,Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation,attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling,4,4,3
 2025,arXiv,Alibaba,FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling,analyze the communication patterns; KV cache structure adjustment method; load-aware scheduling,4,4,2
 2025,arXiv,NUS & USTC,DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving,a novel Tandem Serving execution model; two virtual subrequests; explicitly permit the two subrequests to execute on either GPU instance,3,4,2
+2026,arXiv,THU,Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter,hybrid prefix cache; prompt-lem aware router; global scheduler; mooncake based memory management,4,3,3
 
 # ##### A-F Disaggregated Systems
 # Challenge: In the decode stage, **the attention need memory access while the FFN only need compute**. The increasingly sparse FFN in MoE models make the GPU computation ultilization low. Disaggregate the attention and FFN module to different can make better batching and heterogeneous devices implement.
