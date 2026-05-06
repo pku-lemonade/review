@@ -185,6 +185,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 2025,arXiv,NUS,LEAP: LLM Inference on Scalable PIM-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism,data dynamicity-aware task assignment to PIM or NoC; fine-grained model partitioning and heuristically optimized spatial mapping strategy,3,4,3
 2025,arXiv,THU,CompAir: Synergizing Complementary PIMs and In-Transit NoC Computation for Efficient LLM Acceleration,heterogeneous DRAM-PIM and SRAM-PIM architecture with hybrid bonding; in-transit NoC computation with Curry ALU; hierarchical ISA for hybrid PIM systems,3,4,2
+2025,arXiv,BUAA,HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference,SRAM-PIM/HBM-PIM heterogeneous LLM accelerator; compiler-based workload partitioning; intra-token SRAM-HBM pipeline,4,3,3
 # ### General CiM
 # #### Specific Application & Algorithm
 2024,ISVLSI,USC,Multi-Objective Neural Architecture Search for In-Memory Computing,"neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM",,,
@@ -348,6 +349,7 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 2024,IPDPS,Georgia Tech,Harmonica: Hybrid Accelerator to Overcome Imperfections of Mixed-signal DNN Accelerators,select and transfer imperfectionsensitive weights to digital accelerator; hybrid quantization(weights on analog part is more quantized),,,
 2024,ASP-DAC,Keio,OSA-HCIM: On-The-Fly Saliency-Aware Hybrid SRAM CIM with Dynamic Precision Configuration,On-the-fly Saliency-Aware precision configuration scheme; Hybrid CIM Array for DCIM and ACIM using split-port SRAM,,,
 2025,arXiv,AaltoU,Acore-CIM: build accurate and reliable mixed-signal CIM cores with RISC-V controlled self-calibration,reliability-focused MAC cell; proof-of-concept SoC composed of a CIM core and a RISC-V control processor; automated Built-In Self-Calibration (BISC) routine,3,3,4
+2026,DATE,ESI & IBM,HILAL: Hessian-Informed Layer Allocation for Heterogeneous Analog–Digital Inference,Hessian-informed analog/digital layer allocation; k-means robust/sensitive layer clustering; layer-wise analog fine-tuning with noise injection,3,3,3
 # #### Hybrid CIM: Macro and Dataflow Co-Design
 # Challenge: Combining multiple memory/computing media in one accelerator introduces restore, density, and dataflow mismatches; these papers redesign the macro or mapping/dataflow stack so the hybrid substrate is actually usable.
 2023,ICCAD,SJTU,TL-nvSRAM-CIM: Ultra-High-Density Three-Level ReRAM-Assisted Computing-in-nvSRAM with DC-Power Free Restore and Ternary MAC Operations,DCpower-free weight-restore from ReRAM; ternary SRAM-CIM mechanism with differential computing scheme,,,
