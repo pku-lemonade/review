@@ -128,6 +128,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
 2024,ICML,PKU,MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving,multi-LLM serving; colocating multi LLM in one GPU-instance; CUDA MPS based optimization; PD based scheduler,3,3,3
 2025,ATC,THU,Weaver: Efficient Multi-LLM Serving with Attention Offloading,GPU memory harvest across GPU; harvest GPU memory and SM for hot LLM attention computation; GPU control flow optimization,3,3,3
+2026,Eurosys,SJTU,KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving,parameter-centric memory management for coping with memory overloading; online parameter dropping,2,2,3
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -379,7 +380,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Multi-LLM Scheduling
 2025,arXiv,UCLA,Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving,Long-tail model popularity; Frequent idle periods; Rapid workload fluctuations,3,4,2
-
+2026,Eurosys,HKUST,MFS: An Efficient Model Family Serving System for LLMs, multi-tier LLM serving system across model families; fine-tuned largest model to encapsulate all smaller models;tier-level batching algorithm and implement KV-cache sharing across requests targeting different model sizes,3,3,4
 # ### DNN Scheduling
 # Solution: optimizing data parallelism and model parallelism while minimizing communication overhead between nodes, effectively managing limited GPU memory and other resources to achieve scalability and high throughput.
 # Refer to [LLM-Related Scheduling](#LLM-Related-Scheduling) for the LLM-related scheduling algorithms.
