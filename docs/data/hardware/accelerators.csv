@@ -1,4 +1,8 @@
 Year,Venue,Authors,Title,Tags,P,E,N
+# ### Sorting & Merging Accelerators
+# Challenge: High-throughput 2-way mergers on FPGAs suffer from long feedback critical paths, high resource utilization from redundant comparators, and tie-record issues in feedback-less designs.
+# Solution: Relax the sorted-input requirement of the bitonic partial merger by replacing its first stage with distributed MAX units, eliminating barrel shifters and redundant merger blocks while achieving lowest comparator count.
+2022,TC,Imperial & dunnhumby,FLiMS: a Fast Lightweight 2-way Merger for Sorting,distributed MAX selector stage eliminating barrel shifter rotation; single 2w-to-w bitonic partial merger with minimum comparator count; skewness optimisation via dir register oscillation for balanced dequeue; FLiMSj whole-row dequeue variant via cR register buffer; SIMD AVX2 implementation for CPU merge sort,4,4,4
 # Homomorphic Encryption Accelerators
 # Challenge: Current HE accelerators are slow as they rely on complex NTT operations that ignore data sparsity and error tolerance.
 2025,DATE,PKU,FLASH: An Efficient Hardware Accelerator Leveraging Approximate and Sparse FFT for Homomorphic Encryption,approximate FFT for modular reduction elimination; sparsity-aware FFT dataflow using skipping and merging methods; DSE for Pareto-optimal computation precision,4,2,2
@@ -58,6 +62,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Deploying Transformer inference on FPGAs/ACAPs suffers from severe shape mismatch between diverse layer sizes and fixed hardware resources, creating an inherent latency-throughput tradeoff that neither purely sequential nor fully spatial accelerator strategies can resolve simultaneously.
 # Solution: Explore sequential-spatial hybrid accelerator architectures with automated layer-to-accelerator scheduling and inter-accelerator communication co-design to achieve a superior latency-throughput Pareto front.
 2024,FPGA,Pitt & UMD,SSR: Spatial Sequential Hybrid Architecture for Latency Throughput Tradeoff in Transformer Acceleration,latency-throughput Pareto front via sequential-spatial hybrid design; force-partition strategy for inter-accelerator memory bank conflict elimination; fine-grained line-buffer pipeline for nonlinear kernels (LayerNorm/Softmax),4,4,3
+2024,FPGA,THU & SJTU,FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs,configurable sparse DSP chain for N:M and block sparsity; always-on-chip decode with mixed-precision dequantization unit; length adaptive compilation reducing instruction storage by 500 times,4,4,3
+# ##### SSM/Mamba Accelerators
+# Challenge: Mamba's element-wise operations are incompatible with Tensor Core reduction trees; nonlinear functions (exp, SiLU) require large dedicated hardware units; and element-wise ops have limited data sharing making standard tiling inapplicable.
+# Solution: Reconfigurable PE array that can disable reduction trees for element-wise ops, decompose nonlinear functions into element-wise primitives, and apply intra/inter-operation buffer management.
+2024,ICCAD,SJTU,MARCA: Mamba Accelerator with ReConfigurable Architecture,reduction alternative PE array architecture toggling reduction tree for linear vs element-wise ops; fast biased exponential algorithm decomposing exp into shift and element-wise ops; piecewise SiLU approximation reusing reconfigurable PEs; intra-operation and inter-operation buffer management strategy,4,3,4
 # ##### Accelerators facing Memory Wall
 # Challenge: LLMs require large amounts of memory bandwidth to store and access the model parameters and intermediate results which can lead to memory bottlenecks and reduced performance.
 2024,ISCA,Furiosa AI,TCP: A Tensor Contraction Processor for AI Workloads,tensor contraction as a hardware primitive; circuit-switched fetch network for hierarchical data reuse; Einstein summation for tactic exploration,4,3,3

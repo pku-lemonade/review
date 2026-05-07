@@ -25,8 +25,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Tensor & Pipeline Optimization
 # Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
 # Solution: Use MLIR-based abstractions, novel programming models, and automatic tuning to generate efficient code for tensor programs and pipelines.
+2023,OSDI,Microsoft Research,WELDER: Scheduling Deep Learning Memory Access via Tile-graph,Tile-graph abstraction for fine-grained memory management; inter-layer independence for optimization space decoupling; tile traffic-based cost model,3,4,4
 2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
-2025,arXiv,PKU,TileLang: A Composable Tiled Programming Model for AI Systems,tile-based programming; tvm-based compiler; compared to trition is more flexible,4,4,3
+2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,tvm-based compiler; compared to triton is more flexible,4,4,3
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
 2025,arXiv,CMU,Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs,mega-kernelization; SM level parallel optimization; SM level representation,3,3,3
 
