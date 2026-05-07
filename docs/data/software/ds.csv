@@ -682,6 +682,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
 2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
 
+# ##### Predictive based Reuse Optimization for Multi-Agent Systems
+# Challenge: Predictive-based reuse optimization can help to further improve the efficiency of multi-agent systems by anticipating the needs of agents and proactively reusing resources.
+2026,arXiv,UCLA,Pythia: Toward Predictability-Driven Agent-Native LLM Serving,graph-driven priority scheduling; predictive KVC warmup; phase-adaptive autoscaling,3,3,2
+2026,arXiv,HKU,SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters,predictive scheduling for agent workflows,3,3,2
+
 # #### Environment Optimizations for Multi-Agent Systems
 # Challenge: The training and inference of multi-agent systems often require complex environments, which can lead to high computational and memory overhead.
 2026,arXiv,Alibaba,MegaFlow: Large-Scale Distributed Orchestration System for the Agentic Era,abstracts agent training infrastructure into three independent services; CPU based optimization; container management,3,3,2
@@ -696,6 +701,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,SJTU,MonoScale: Scaling Multi-Agent System with Monotonic Improvement,proactive agent warmup; agent conditionally Ttask synthesis; failure induced memory updates,3,4,4
 2026,arXiv,vLLM,The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project,semantic aware scheduling; three dimensional co-optimization: workload-router-GPU Pool; agent centric session affinity,3,3,3
 2026,arXiv,IC,Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines,agentic workflow GPU allocation; pipeline abstraction,3,3,3
+
+# #### LoRA based Optimizations for Multi-Agent Systems
+# Challenge: LoRA import the unreusable parameters, which can not be shared among agents.
+2026,arXiv,SJTU,ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache,Disaggregated KV cache for LoRA parameters; copy-on-write mechanism for efficient memory usage; dynamic LoRA parameter management,3,4,4
 
 # ### GPU Kernel Optimizations for Systems
 # Challenge: GPU kernel optimizations can significantly improve the performance of systems by reducing computation time and memory usage.
