@@ -38,3 +38,9 @@ Challenge: The nature of modern GPUs as heterogeneous computing platforms. Tenso
 Solution: Perform intelligent task decomposition and scheduling at the system level.
 2023,ATC,University of California,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,highly sparse and irregular graph operations;Sparse Graph Translation technique;collaborative execution strategy between CUDA cores and TCUs,3,3,3
 2025,IPDPS,HUST,BRP-SpMM: Block-Row Partition Based Sparse Matrix Multiplication with Tensor and CUDA Cores,Block-Row Partition;“Fixed Non-zero” strategy;customized storage forma;two lightweight GPU kernels for the TC Block and for the Residual Row part,3,3,3
+# ### Dynamic Graph Analytics
+# Challenge: maintaining exact results on evolving graphs under high update rates without recomputing the whole graph or flooding the machine/cluster with unnecessary work.
+# #### Incremental GNN Inference
+# Solution: reuse prior embeddings and propagate only affected changes for message-passing GNNs on dynamic graphs, extending the parent parallel-algorithm idea to graph learning workloads.
+2025,IPDPS,NUS,InkStream: Instantaneous GNN Inference on Dynamic Graphs via Incremental Update,real affected area; resilient nodes; event-based computing model; incremental neighborhood update,4,4,3
+2025,ICDCS,IISc,Ripple: Scalable Incremental GNN Inferencing on Large Streaming Graphs,generalized incremental programming model; delta undo-redo aggregation; distributed incremental inferencing; request batching and routing,4,4,3
