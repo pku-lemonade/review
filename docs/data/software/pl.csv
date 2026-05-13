@@ -57,7 +57,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Sparse Tensor Compilers
 # Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
-2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations,TensorIR-based sparse compiler,4,3,3
+2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations;TensorIR-based sparse compiler,4,3,3
 2024,OOPSLA,Cornell,UniSparse: An Intermediate Language for General Sparse Format Customization,language-based holistic format abstraction; decoupled logical (data structure) vs. physical (memory layout) representation; index map & orthogonal primitives (mutation/layout/query) for customization,4,4,4
 
 # ### Graph Mining Compilers
