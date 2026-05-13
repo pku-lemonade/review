@@ -169,7 +169,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,HPCA,NUS,LISA: Graph Neural Network based Portable Mapping on Spatial Accelerators,label abstraction for quality mapping; GNN based label-aware mapping; label-aware simulated annealing,4,3,3
 2024,MICRO,NUS,ICED: An Integrated CGRA Framework Enabling DVFS-Aware Acceleration,tile based CGRA configuration; DVFS labeling; DVFS-Aware DFG Mapping,4,3,2
 # #### Task Scheduling
-2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,,,
+2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,4,3,2
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
 # ### Many-core Architecture
 # Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.
