@@ -129,6 +129,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ICML,PKU,MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving,multi-LLM serving; colocating multi LLM in one GPU-instance; CUDA MPS based optimization; PD based scheduler,3,3,3
 2025,ATC,THU,Weaver: Efficient Multi-LLM Serving with Attention Offloading,GPU memory harvest across GPU; harvest GPU memory and SM for hot LLM attention computation; GPU control flow optimization,3,3,3
 2026,Eurosys,SJTU,KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving,parameter-centric memory management for coping with memory overloading; online parameter dropping,2,2,3
+2025,OSDI,Stanford,Strata: Hierarchical Context Caching for Long Context Language Model Serving,GPU-assisted I/O for mitigating key-value cache fragmentation; decoupled CPU and GPU memory layouts via on-the-fly transformation,3,3,3
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -338,6 +339,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,MIT,Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints,fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments,3,4,2
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
 2025,SOSP,UChicago,PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications,prefill-only workload; hybrid prefilling; continuous JCT calibration; JCT-aware scheduling,4,4,4
+2026,OSDI,SJTU,LMETRIC: Simple is Better – Multiplication May Be All You Need for LLM  Request Scheduling,multiplication-based scheduling score combining new prefill tokens and batch size for load balance; two-phase KVCache hotspot detector for skew mitigation,3,2,3
 
 # #### Batching for Better Throughput
 # Challenge: the batching is a trade-off between the throughput and the latency. The requests in the same batch also call for different resources. Split different compute pattern request for different batches is a good idea.
