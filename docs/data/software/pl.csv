@@ -21,6 +21,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Decouple algorithm specification from its execution schedule to enable performance portability and automated optimization.
 2013,PLDI,MIT,"Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",algorithm-schedule decoupling; image processing DSL; explicit scheduling language,4,4,4
 2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
+2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
 
 # #### Tensor & Pipeline Optimization
 # Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
@@ -56,7 +57,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Sparse Tensor Compilers
 # Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
-2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations,4,3,3
+2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations;TensorIR-based sparse compiler,4,3,3
 2024,OOPSLA,Cornell,UniSparse: An Intermediate Language for General Sparse Format Customization,language-based holistic format abstraction; decoupled logical (data structure) vs. physical (memory layout) representation; index map & orthogonal primitives (mutation/layout/query) for customization,4,4,4
 
 # ### Graph Mining Compilers
