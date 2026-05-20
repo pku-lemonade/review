@@ -49,7 +49,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation,ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
-2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;ynamic hardware configuration time-multiplexing for MoE,4,3,4
+2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;dynamic hardware configuration time-multiplexing for MoE,4,3,4
 
 # #### Embedded DSL Compiler Frameworks
 # Challenge: Developing high-performance parallel DSLs for heterogeneous hardware requires significant repetitive effort in building IRs, optimizers, and code generators from scratch.
