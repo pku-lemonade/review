@@ -21,7 +21,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Edinburgh,"RMAI: Rethinking Memory for AI (Inference), In-Kernel Remote Shared Memory as a Software Alternative to CXL",CXL-like transparent remote data placement and direct addressing on RDMA; remote shared PGAS-like memory arch for expert loading,3,2,3
 2026,Eurosys,RUC,LightDSA: Enabling Efficient DSA Through Hardware-Aware Transparent Optimization, 5 insights of data center-aware DSA optimizations; lightweight DSA API library for contiguous allocation and 64-byte alignment; optimized recycling algorithm for out-of-order completion behavior,4,4,4
 # #### Memory Tiering 
-# Challenge: Previous cache-based memory systems are not aligned with NVM and CXL's latency, bandwidth and access patterns.
+# Challenge: Previous cache-based memory systems are not aligned with RDMA, NVM and CXL's latency, bandwidth and access pattern.
+2020,OSDI,MIT,"AIFM: High-Performance, Application-Integrated Far Memory",object-level swapping with remoteable pointers and dereference scopes; pauseless memory evacuator using green thread co-scheduling,2,3,4
+2023,SOSP,UCSD,Mira: A Program-Behavior-Guided Far Memory System, profiling-guided customizable cache section partitioning; remote pointer optimization with adaptive prefetching and eviction hints; automated computation-and-network-aware function offloading,3,3,3
+2024,ASPLOS,Northwestern,Getting a Handle on Unmanaged Memory,compiler-automated translation and hosting of memory handles; thread-private stack-allocated pin sets for atomic-free tracking; extensible object-mobility runtime service interface,3,2,4
 2025,ATC,THU,DSA-2LM: A CPU-Free Tiered Memory Architecture with Intel DSA,CPU-free page migration in tiered memory via data streaming accelerator; adaptable migration algorithm for mixed 4KB/2MB pages; direct in-kernel DSA integration bypassing DMA,3,3,4
 2026,OSDI,UW-Madison,OBASE: Object-Based Address-Space Engineering to Improve Memory Tiering,dynamic address-space reorganization for mitigating hotness fragmentation; lightweight access tracking via guide pointer metadata; pauseless lock-free object migration,4,4,3
 # #### CXL-based Disaggregated Memory
