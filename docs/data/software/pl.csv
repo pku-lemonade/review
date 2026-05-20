@@ -85,14 +85,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,OOPSLA,MIT,Format Abstraction for Sparse Tensor Algebra Compilers,coordinate hierarchies; level formats abstraction; property-based merge lattice optimizations; level iterator conversion,4,4,3
 2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
 
-# ##### Scheduling and Interoperability
+# ### Sparse Tensor Scheduling and Assembly
+
+# #### Scheduling and Interoperability
 # Challenge: Sparse tensor programs require schedule choices and library interoperation that depend on sparse formats, nonzero structure, and external optimized kernels.
 # Solution: Expose sparse iteration transformations, asymptotic schedule selection, and verified external-function binding as compiler-level mechanisms.
 2020,OOPSLA,Reservoir Labs && Stanford,A Sparse Iteration Space Transformation Framework for Sparse Tensor Algebra,sparse iteration space transformations; derived iteration spaces; nonzero-space tiling; sparse scheduling API,4,4,4
 2022,PLDI,MIT,Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model,automatic asymptotic scheduler; asymptotic cost model; Pareto frontier schedule pruning; TACO schedule search,4,4,4
 2023,PLDI,Stanford,Mosaic: An Interoperable Compiler for Tensor Algebra,verified external-function binding; Mosaic function interface; automatic binding search; heterogeneous tensor algebra codegen,4,4,4
 
-# ##### Dynamic Assembly and Workspaces
+# #### Dynamic Assembly and Workspaces
 # Challenge: Sparse tensor computations often need dynamic updates or scattered writes into sparse results whose formats do not support efficient random insertion.
 # Solution: Generate update-friendly dynamic formats and intermediate sparse workspaces that adapt scatter-heavy computation to sparse result assembly.
 2022,OOPSLA,MIT,Compilation of Dynamic Sparse Tensor Algebra,node schema language; assembly abstract interface; map function generation; iterator optimization; dynamic tensor format composition,4,4,3
