@@ -35,6 +35,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Graph-Level Transformation and Optimization
 # Challenge: Large DNN topologies and massive tensor sizes easily exceed hardware memory capacities and execution efficiency limits, making isolated operator-level optimizations insufficient.
 # Solution: Apply coordinated graph-level transformations (such as operator fission and fusion) and holistic topological scheduling to systematically optimize the entire computation graph for peak memory and execution latency.
+2021,MLSys,MIT,IOS: Inter-Operator Scheduler for CNN Acceleration,inter-operator parallelism; dynamic programming based scheduler; concurrent execution; operator fusion,4,4,2
+2023,DAC,PKU,Memory and Computation Coordinated Mapping of DNNs onto Complex Heterogeneous SoC,dataflow grouping; location-aware accelerator mapping; hybrid scheduling algorithm,4,3,2
+2024,DAC,THU,GSPO: A Graph Substitution and Parallelization Joint Optimization Framework for DNN Inference,flow-based graph partition; joint optimization computational graph(JOCG); joint cost model; backtracking search algorithm,4,4,2
 2024,ASPLOS,PKU,"MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN",Fission Transformation (F-Trans) for graph splitting; Dimension Graph (D-Graph) representation; incremental scheduling algorithm for fast evaluation,4,4,4
 
 # #### TinyML & Edge Compilers
