@@ -150,6 +150,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,THU,Fast State Restoration in LLM Serving with HCache,offload activation instead of KVC to reduce IO; use little recomputation to tradeoff offloading latency,4,4,4
 2025,arXiv,Chicago,LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference,KVC hierarchical offloading; batched movement; decoupled connector API,3,4,3
 2025,FAST,ZJU,IMPRESS: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language Model Inference,similarity-guided important token identification via probe heads; importance-informed KV reordering and repacking for disk I/O; importance-aware score-based cache management,3,3,3
+2026,SIGCOMM,ICT,KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving,service-aware KV communication compression; Bayesian Profiling Engine; 3D Pareto profile selection; analytical latency model with bandit controller,3,3,3
 2026,FAST,Huawei,Accelerating Model Loading in LLM Inference by Programmable Page Cache,Programmable Page Cache with stacking routing file system; Model-Accelerated I/O policy using pre-built I/O templates; Burn-after-Reading eviction and XPU-affinity-aware prefetching,3,4,4
 
 # ##### Position Independent Method
