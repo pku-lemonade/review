@@ -27,6 +27,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,SC,THU,Hydrogen: Contention-Aware Hybrid Memory for Heterogeneous CPU-GPU Architectures,fast memory decoupled partitioning; token-based slow memory migration; epoch-based sampling method; consistent hashing based reconfiguration,,,
 2024,OSDI,UT Arlington, Nomad: Non-Exclusive Memory Tiering via Transactional Page Migration, Memory allocator for hardware tiering to mitigate outliers,,,
 2025,ISCA,XMU,ArtMem: Adaptive Migration in Reinforcement Learning-Enabled Tiered Memory,reinforcement learning for tiered memory management; dynamic adjustment of migration scope,2,4,3
+2025,ASPLOS,Toronto & UCSD & Waterloo,HybridTier: an Adaptive and Lightweight CXL-Memory Tiering System,frequency-momentum tracking for adaptive CXL page migration; counting Bloom filter and blocked-CBF metadata; second-chance demotion for low-overhead tiering,4,4,3
+2026,ASPLOS,Virginia Tech,PACT: A Criticality-First Design for Tiered Memory,per-page access criticality via LLC-miss and per-tier MLP modeling; PAC-guided adaptive promotion; eager demotion for fast-tier headroom,4,4,4
 # ### Memory Pooling
 # Solution: Memory Pooling reduces the overhead of frequent memory allocation and deallocation by maintaining a pool of pre-allocated memory blocks for reuse.
 2023,ASPLOS,Virginia Tech,Pond: CXL-Based Memory Pooling Systems for Cloud Platforms,CXL-based memory pooling; small-pool design for low latency; machine learning model for memory allocation prediction; zero-core virtual NUMA (zNUMA) node for untouched memory,,,

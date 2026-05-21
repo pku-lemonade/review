@@ -280,12 +280,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ICRC,Purdue & HP,Hardware-Software Co-Design for an Analog-Digital Accelerator for Machine Learning,compiler to translate model to ISA; ONNX interpreter to support models in common DL frame work; simulator to evaluate performance,,,
 2024,VLSI-SoC,RWTH Aachen University,Architecture-Compiler Co-design for ReRAM-Based Multi-core CIM Architectures,inference latency predictions and analysis of the crossbar utilization for CNN,,,
 2024,arXiv,CAS,A Fully Hardware Implemented Accelerator Design in ReRAM Analog Computing without ADCs,Based on Stochastic Binary Neural Networks; Winner-Take-All (WTA) strategy; Hardware implemented sigmoid and softmax,4,3,4
+# #### RRAM CiM: Signed and High-Precision Arithmetic
+# Challenge: RRAM crossbars struggle with signed weights and high-precision analog representation, so numeric formats must be reshaped to preserve accuracy without excessive peripheral cost.
+2021,ISCA,Northeastern et al.,FORMS: Fine-grained Polarized ReRAM-based In-situ Computation for Mixed-signal DNN Accelerator,ADMM-based fragment polarization for same-sign ReRAM columns; fine-grained sub-array computation; input zero-skipping for small fragments,4,2,4
+2024,Science,USC,Programming memristor arrays with arbitrarily high precision for analog computing,represent high-precision numbers using multiple relatively low-precision analog devices;using RRAM CIM to solve PDEs,5,4,3
 # #### RRAM CiM: Architecture optimization
 2023,ISCA,MIT,"RAELLA: Reforming the Arithmetic for Efficient, Low-Resolution, and Low-Loss Analog PIM: No Retraining Required!",per-layer optimized weight slicing; center+offset weight encoding,3,3,3
 2023,TETCI,TU Delft,Accurate and Energy-Efficient Bit-Slicing for RRAM-Based Neural Networks,unbalanced bit-slicing scheme for higher accuracy; holistic solution using 2's compliment,,,
 2024,MICRO,HUST,DRCTL: A Disorder-Resistant Computation  Translation Layer Enhancing the Lifetime and  Performance of Memristive CIM Architecture,address conversion method for dynamic scheduling; hierarchical wear-leveling (HWL) strategy for reliability improvement; data layout-aware selective remapping (LASR) to improve communication locality and reduce latency,,,
 2024,TC,SJTU,ERA-BS: Boosting the Efficiency of ReRAM-Based  PIM Accelerator With Fine-Grained  Bit-Level Sparsity,bit-level sparsity in both weights and activations; bit-flip scheme; dynamic activation sparsity exploitation scheme,,,
-2024,Science,USC,Programming memristor arrays with arbitrarily high precision for analog computing,represent high-precision numbers using multiple relatively low-precision analog devices;using RRAM CIM to solve PDEs,5,4,3
 # #### RRAM CIM: Weight Mapping
 2021,ICCAD,SJTU,Bit-Transformer: Transforming Bit-level Sparsity into Higher Performance in ReRAM-based Accelerator,bit-wise weight clustering; weight bit-sparsity utilization,3,3,2
 2021,ICCD,SJTU,SME: ReRAM-based Sparse-Multiplication-Engine to Squeeze-Out Bit Sparsity of Neural Network,bit-plane slicing and squeezing; significance-compensated input streaming,4,3,2
@@ -372,7 +375,10 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 2024,VLSI,FDU,HARDSEA: Hybrid Analog-ReRAM Clustering and Digital-SRAM In-Memory Computing Accelerator for Dynamic Sparse Self-Attention in Transformer,"product-quantization-based sparse self-attention algorithm; ADC-free ReRAM-CIM macro; ReRAM-CIM for front-end attention sparsification, SRAM-CIM for back-end sparse attention",4,3,3
 2024,DAC,SJTU,HEIRS: Hybrid Three-Dimension RRAM- and SRAM-CIM Architecture for Multi-task Transformer Acceleration,Hybrid Distributive Accumulation; Local Recovery Unit (LRU) in 3D,3,3,3
 2024,ESSERC,UCSD,An Analog and Digital Hybrid Attention Accelerator for Transformers with Charge-based In-memory Computing,"analog CIM for low-score tokens, digital processor for high",3,4,2
+# #### Hybrid CIM: LLM Adaptation and Deployment
+# Challenge: LLM deployment on hybrid CIM needs software-hardware partitioning that keeps large static weights dense and energy-efficient while protecting task-specific or precision-sensitive paths.
 2025,arXiv,South Carolina,PIM-LLM: A High-Throughput Hybrid PIM Architecture for 1-bit LLMs,hybrid PIM-Digital architecture; analog PIM for low-precision MatMul; digital systolic array for high-precision matMul,4,3,1
+2026,TODAES,HKU,HaLoRA: Hardware-aware Low-Rank Adaptation for Large Language Models Based on Hybrid Compute-in-Memory Architecture,pretrained weights on RRAM-CIM and LoRA branches on SRAM-CIM; noise-aware LoRA regularization for RRAM non-ideality; hybrid CIM energy reduction for LLM inference,4,3,3
 # ### CIM: Quantization
 # Challenge: Limited by the precision & area & power trade-off of the ADC; certain CIM devices like RRAM are not suitable for high-precision computation (e.g. FP32). Quantization is needed to reduce the precision of the data.
 # #### CIM: Quantization: Partial Sum Quantization
