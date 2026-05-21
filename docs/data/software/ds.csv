@@ -712,8 +712,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Tiling Optimizations
 # Solution: Tiling is a common optimization technique that can improve data locality and reduce memory access overhead.
-2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
-2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation,4,4,3
+2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden; matrix tiling with online softmax,4,5,4
+2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation; sequence parallelism; warp-level split-Q optimization,4,4,3
 2024,Nips,Stanford,FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision,Hopper architecture based optimization; fp8 quantization; backward support,3,3,3
 
 # #### GPU level kernel svcheduling optimizations
