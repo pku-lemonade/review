@@ -11,8 +11,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Spatial Accelerator Generation
 # Challenge: Building parameterized compilation frameworks to rapidly synthesize, evaluate, and deploy diverse spatial architectures (e.g., systolic arrays) while decoupling algorithm mapping from hardware generation.
-2020,ISCA,UCLA,"DSAGEN: Synthesizing Programmable Spatial Accelerators",architecture description graph (ADG); solution-repairing spatial scheduler to avoid redundant re-compilation; composable decoupled spatial primitives for approximating diverse accelerators,4,3,4
+2020,ISCA,UCLA,DSAGEN: Synthesizing Programmable Spatial Accelerators,Architecture Description Graph (ADG); solution-repairing spatial scheduler; decoupled spatial primitives; ADG-guided DSE,4,3,4
 2021,ASPLOS,Cornell,"A compiler infrastructure for accelerator generators",a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing,4,3,3
+2021,ISCA,CMU,"SNAFU: An Ultra-Low-Power, Energy-Minimal CGRA-Generation Framework and Architecture",Simple Network of Arbitrary Functional Units (SNAFU); SNAFU-ARCH; bring-your-own functional unit (BYOFU); statically routed bufferless multi-hop network; asynchronous dataflow firing,4,3,4
 2021,DAC,UCB,"Gemmini: Enabling Systematic Deep-Learning Architecture Evaluation via Full-Stack Integration",exploring diverse systolic array dimensions and dataflows; RoCC(Rocket Custom Coprocessor) integration with unified virtual memory support; FPGA-accelerated full-system simulation,4,5,4
 2024,MICRO,UCB,"Stellar: An Automated Design Framework for Dense and Sparse Spatial Accelerators",space-time transform for dataflow specification; fibertree-based sparse data structure abstraction;decoupled specification of dataflow, sparsity, and load-balancing,4,4,4
 
