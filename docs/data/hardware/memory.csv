@@ -387,11 +387,15 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 # #### CIM: Quantization: Partial Sum Quantization
 2023,ISLPED,Purdue,Partial-Sum Quantization for Near ADC-Less Compute-In-Memory Accelerators,ADC-Less and near ADC-Less CiM accelerators; CiM hardware aware DNN quantization methodology,,,
 2025,DATE,SKKU,Column-wise Quantization of Weights and Partial Sums for Accurate and Efficient Compute-In-Memory Accelerators,granularity alignment logic; learned step-size quantization(LSQ),3,2,3
-# #### CIM Quantization: For Analog CIM
+# #### CIM Quantization: Hardware-Aware Analog CIM
+# Challenge: Analog CIM quantization must reduce ADC and compute cost while respecting crossbar granularity and mixed-signal dataflow constraints.
 2022,TCAS-I,Georgia Tech,BitS-Net: Bit-Sparse Deep Neural Network for Energy-Efficient RRAM-Based Compute-In-Memory,bit-sparsity quantization; bias-shifted MVM; hardware-aware loss function,3,2,3
-2023,AICAS,TU Delft,Mapping-aware Biased Training for Accurate Memristor-based Neural Networks,favorability constraint analysis to find important weight values; mapping-aware biased training to restrict weight values to low variance RRAM states,3,4,2
 2024,TCAD,BUAA,CIMQ: A Hardware-Efficient Quantization Framework for Computing-In-Memory-Based Neural Network Accelerators,bit-level sparsity induced activation quantization; quantizing partial sums to decrease required resolution of ADCs; arraywise quantization granularity,,,
 2024,TCAD,BUAA,CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory,mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM,,,
+2025,arXiv,NTU,Sensitivity-Aware Mixed-Precision Quantization for ReRAM-based Computing-in-Memory,Hessian-based strip-weight sensitivity clustering; dynamic mixed-precision crossbar mapping; precision-aware 8-bit/4-bit ReRAM accumulation,3,2,3
+# #### CIM Quantization: Memristor Variation-Aware Mapping
+# Challenge: Memristor conductance variation and state-dependent mapping errors make nominal low-bit quantization inaccurate unless training or quantization accounts for device behavior.
+2023,AICAS,TU Delft,Mapping-aware Biased Training for Accurate Memristor-based Neural Networks,favorability constraint analysis to find important weight values; mapping-aware biased training to restrict weight values to low variance RRAM states,3,4,2
 2024,ICCAD,TU Delft,Hardware-Aware Quantization for Accurate Memristor-Based Neural Networks,analysis of fixed-point quantization impact on conductance variation; weight quantization tuning technique; approach to reduce the residual error,3,2,3
 # #### CIM Quantization: For all CIM
 2018,CVPR,Google,Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference,"integer-only inference arithmetic; quantizes both weights and activations as 8-bit integers, bias 32-bit; provides both quantized inference framework and training frame work",,,
