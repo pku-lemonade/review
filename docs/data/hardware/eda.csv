@@ -18,8 +18,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### LLM-Driven RTL Generation
 # Challenge: Overcoming the lack of domain knowledge and strict syntax adherence in generic Large Language Models (LLMs) to generate functionally correct and synthesizable Verilog code.
+# #### Agentic RTL Code Generation
+# Challenge: Single-shot LLM prompting loses circuit details and lacks domain-specific feedback loops for correcting syntax and functional RTL errors.
+# Solution: Equip RTL coding agents with task decomposition, simulator feedback, graph-based circuit context retrieval, and waveform-aware debugging tools.
 2024,arXiv,UCSD,MAGE: A Multi-Agent Engine for Automated RTL Code Generation,multi-agent; high-temperature sampling and ranking; verilog-state checkpoint debugging,,,
+2025,AAAI,NVIDIA,VerilogCoder: Autonomous Verilog Coding Agents with Graph-based Planning and Abstract Syntax Tree (AST)-based Waveform Tracing Tool,Task and Circuit Relation Graph; AST-based waveform tracing tool; task-driven circuit relation graph retrieval agent; code agent and debug agent split; VerilogEval-Human v2 single-run flow,4,3,4
+
+# #### RTL Model Training and Repair Data
+# Challenge: Verilog code models are bottlenecked by low-quality synthetic training data, non-textual RTL specifications, and small but recurring functional mistakes.
+# Solution: Curate Verilog-specific training data with code augmentation, self-reflection, correct-by-construction non-textual examples, and targeted code repair cases.
 2024,ICCAD,PKU,OriGen: Enhancing RTL Code Generation with Code-to-Code Augmentation and Self-Reflection,self-reflection mechanism; dataset augmentation methodology; VerilogFixEval benchmark,2,4,2
+2025,ICLR,NVIDIA,CraftRTL: High-quality Synthetic Data Generation for Verilog Code Models with Correct-by-Construction Non-Textual Representations and Targeted Code Repair,correct-by-construction KMap/FSM/waveform data; VerilogEval-NonText subset; checkpoint error report construction; targeted code repair injection; SDG-CC-Repair training mixture,4,3,3
 
 # #### Higher-Level RTL Code Generation
 # Challenge: raise the level of abstraction to specifically target the construction of applications
@@ -29,6 +38,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### RTL Code Generation Benchmarks
 # Challenge: The lack of standardized benchmarks for evaluating RTL code generation tools.
 2023,DATE,NYU,Benchmarking Large Language Models for Automated Verilog RTL Code Generation,verilog code training corpus; multi-level verilog coding problems for analysis,,,
+2025,arXiv,NVIDIA,Comprehensive Verilog Design Problems: A Next-Generation Benchmark Dataset for Evaluating Large Language Models and Agents on RTL Design and Verification,CVDP benchmark; 783 human-authored Verilog problems; Agentic and Non-Agentic JSONL formats; Dockerized EDA tool harness; category-level failure clustering,4,3,3
+
+# ### LLM-Driven Hardware Design Agents
+# Challenge: General-purpose LLM agents do not directly handle hardware design workflows that require domain knowledge, EDA tools, timing reports, layout checks, and task-specific collaboration patterns.
+# Solution: Use configurable graph-based task solving with single-AI, multi-AI, and multi-modality agents connected to hardware-specific tools, memory, and knowledge databases.
+2025,VLSI,NVIDIA,Marco: Configurable Graph-Based Task Solving and Multi-AI Agents Framework for Hardware Design,dynamic and static configurable task graph; sub-task node agent configuration; MCMM timing analysis agent; DRC Coder multi-modality agent; timing path debug static task graph,3,3,2
 
 # ### Physical Design
 # Challenge: Optimizing the physical layout (placement and routing) of circuits on chips to meet timing, power, and area constraints, especially for large-scale heterogeneous architectures.

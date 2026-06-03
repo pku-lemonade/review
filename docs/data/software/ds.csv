@@ -128,6 +128,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
 2024,ICML,PKU,MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving,multi-LLM serving; colocating multi LLM in one GPU-instance; CUDA MPS based optimization; PD based scheduler,3,3,3
 2025,ATC,THU,Weaver: Efficient Multi-LLM Serving with Attention Offloading,GPU memory harvest across GPU; harvest GPU memory and SM for hot LLM attention computation; GPU control flow optimization,3,3,3
+2026,Eurosys,SJTU,KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving,parameter-centric memory management for coping with memory overloading; online parameter dropping,2,2,3
+2025,OSDI,Stanford,Strata: Hierarchical Context Caching for Long Context Language Model Serving,GPU-assisted I/O for mitigating key-value cache fragmentation; decoupled CPU and GPU memory layouts via on-the-fly transformation,3,3,3
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -148,6 +150,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,THU,Fast State Restoration in LLM Serving with HCache,offload activation instead of KVC to reduce IO; use little recomputation to tradeoff offloading latency,4,4,4
 2025,arXiv,Chicago,LMCache: An Efficient KV Cache Layer for Enterprise-Scale LLM Inference,KVC hierarchical offloading; batched movement; decoupled connector API,3,4,3
 2025,FAST,ZJU,IMPRESS: An Importance-Informed Multi-Tier Prefix KV Storage System for Large Language Model Inference,similarity-guided important token identification via probe heads; importance-informed KV reordering and repacking for disk I/O; importance-aware score-based cache management,3,3,3
+2026,SIGCOMM,ICT,KVServe: Service-Aware KV Cache Compression for Communication-Efficient Disaggregated LLM Serving,service-aware KV communication compression; Bayesian Profiling Engine; 3D Pareto profile selection; analytical latency model with bandit controller,3,3,3
 2026,FAST,Huawei,Accelerating Model Loading in LLM Inference by Programmable Page Cache,Programmable Page Cache with stacking routing file system; Model-Accelerated I/O policy using pre-built I/O templates; Burn-after-Reading eviction and XPU-affinity-aware prefetching,3,4,4
 
 # ##### Position Independent Method
@@ -163,6 +166,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: events like function call will lead to KVC idling in GPU memory, swap out and then swap in is a tradeoff between recomputation and memory utilization
 2024,ICML,UCSD,InferCept: Efficient Intercept Support for Augmented Large Language Model Inference,offload KVC when receive function call; reactive upload,3,3,3
 2025,arXiv,ZJU,AugServe: Adaptive Request Scheduling for Augmented Large Language Model Inference Serving,runtime information version of Infercept; handle the tool use KVC management,3,3,1
+2026,arXiv,THU,Continuum: Efficient and Robust Multi-Turn LLM Agent Scheduling with KV Cache Time-to-Live,keep KVC after tool call,3,2,1
 
 # ##### Other Techniques
 # Solution: KV cache reuse techniques beyond prefix sharing. Prefix is a high requirement and is not always possible.
@@ -336,6 +340,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,MIT,Optimizing LLM Inference: Fluid-Guided Online Scheduling with Memory Constraints,fluid dynamics approximation; Waiting for Accumulated Inference Threshold; a hierarchical framework comprising multiple segments,3,4,2
 2025,arXiv,PKU,SeaLLM: Service-Aware and Latency-Optimized Resource Sharing for Large Language Model Inference,service-aware and latency-optimized scheduling algorithm; doubling budget (DB) scheduling algorithm; search-based placement algorithm,3,4,2
 2025,SOSP,UChicago,PrefillOnly: An Inference Engine for Prefill-only Workloads in Large Language Model Applications,prefill-only workload; hybrid prefilling; continuous JCT calibration; JCT-aware scheduling,4,4,4
+2026,OSDI,SJTU,LMETRIC: Simple is Better – Multiplication May Be All You Need for LLM  Request Scheduling,multiplication-based scheduling score combining new prefill tokens and batch size for load balance; two-phase KVCache hotspot detector for skew mitigation,3,2,3
 
 # #### Batching for Better Throughput
 # Challenge: the batching is a trade-off between the throughput and the latency. The requests in the same batch also call for different resources. Split different compute pattern request for different batches is a good idea.
@@ -378,7 +383,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Multi-LLM Scheduling
 2025,arXiv,UCLA,Prism: Unleashing GPU Sharing for Cost-Efficient Multi-LLM Serving,Long-tail model popularity; Frequent idle periods; Rapid workload fluctuations,3,4,2
-
+2026,Eurosys,HKUST,MFS: An Efficient Model Family Serving System for LLMs, multi-tier LLM serving system across model families; fine-tuned largest model to encapsulate all smaller models;tier-level batching algorithm and implement KV-cache sharing across requests targeting different model sizes,3,3,4
 # ### DNN Scheduling
 # Solution: optimizing data parallelism and model parallelism while minimizing communication overhead between nodes, effectively managing limited GPU memory and other resources to achieve scalability and high throughput.
 # Refer to [LLM-Related Scheduling](#LLM-Related-Scheduling) for the LLM-related scheduling algorithms.
@@ -534,6 +539,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Compute-Kernel-Level Optimizations
 2025,arXiv,SJTU,Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores,dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression,,,
 2025,Mips,Cornell,FlashMoE: Fast Distributed MoE in a Single Kernel,mega kernel for MoE model; persistent kernel to reduce CPU overhead,3,4,3
+2026,Mlsys,CMU,Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel,dynamic shape mega kernel design; atomic increment/decrement for ready queue; symbolic-shaped synchronization primitives,3,4,4
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
@@ -565,6 +571,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SYSU,Injecting Adrenaline into LLM Serving: Boosting Resource Utilization and Throughput via Attention Disaggregation,attention disaggregation and offloading mechanism; low-latency decoding synchronization; resource-efficient prefill colocation; load-aware offloading scheduling,4,4,3
 2025,arXiv,Alibaba,FlowKV: A Disaggregated Inference Framework with Low-Latency KV Cache Transfer and Load-Aware Scheduling,analyze the communication patterns; KV cache structure adjustment method; load-aware scheduling,4,4,2
 2025,arXiv,NUS & USTC,DynaServe: Unified and Elastic Tandem-Style Execution for Dynamic Disaggregated LLM Serving,a novel Tandem Serving execution model; two virtual subrequests; explicitly permit the two subrequests to execute on either GPU instance,3,4,2
+2026,arXiv,THU,Prefill-as-a-Service: KVCache of Next-Generation Models Could Go Cross-Datacenter,hybrid prefix cache; prompt-lem aware router; global scheduler; mooncake based memory management,4,3,3
 
 # ##### A-F Disaggregated Systems
 # Challenge: In the decode stage, **the attention need memory access while the FFN only need compute**. The increasingly sparse FFN in MoE models make the GPU computation ultilization low. Disaggregate the attention and FFN module to different can make better batching and heterogeneous devices implement.
@@ -679,6 +686,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
 2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
 
+# ##### Predictive based Reuse Optimization for Multi-Agent Systems
+# Challenge: Predictive-based reuse optimization can help to further improve the efficiency of multi-agent systems by anticipating the needs of agents and proactively reusing resources.
+2026,arXiv,UCLA,Pythia: Toward Predictability-Driven Agent-Native LLM Serving,graph-driven priority scheduling; predictive KVC warmup; phase-adaptive autoscaling,3,3,2
+2026,arXiv,HKU,SAGA: Workflow-Atomic Scheduling for AI Agent Inference on GPU Clusters,predictive scheduling for agent workflows,3,3,2
+
 # #### Environment Optimizations for Multi-Agent Systems
 # Challenge: The training and inference of multi-agent systems often require complex environments, which can lead to high computational and memory overhead.
 2026,arXiv,Alibaba,MegaFlow: Large-Scale Distributed Orchestration System for the Agentic Era,abstracts agent training infrastructure into three independent services; CPU based optimization; container management,3,3,2
@@ -692,14 +704,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: In multi-agent systems, efficient routing of tasks and information between agents is crucial for performance. Optimizing LLM agent routing can help to reduce latency and improve overall system efficiency.
 2026,arXiv,SJTU,MonoScale: Scaling Multi-Agent System with Monotonic Improvement,proactive agent warmup; agent conditionally Ttask synthesis; failure induced memory updates,3,4,4
 2026,arXiv,vLLM,The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project,semantic aware scheduling; three dimensional co-optimization: workload-router-GPU Pool; agent centric session affinity,3,3,3
+2026,arXiv,IC,Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines,agentic workflow GPU allocation; pipeline abstraction,3,3,3
+
+# #### LoRA based Optimizations for Multi-Agent Systems
+# Challenge: LoRA import the unreusable parameters, which can not be shared among agents.
+2026,arXiv,SJTU,ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache,Disaggregated KV cache for LoRA parameters; copy-on-write mechanism for efficient memory usage; dynamic LoRA parameter management,3,4,4
 
 # ### GPU Kernel Optimizations for Systems
 # Challenge: GPU kernel optimizations can significantly improve the performance of systems by reducing computation time and memory usage.
 
 # #### Tiling Optimizations
 # Solution: Tiling is a common optimization technique that can improve data locality and reduce memory access overhead.
-2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden,4,5,4
-2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation,4,4,3
+2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden; matrix tiling with online softmax,4,5,4
+2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation; sequence parallelism; warp-level split-Q optimization,4,4,3
 2024,Nips,Stanford,FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision,Hopper architecture based optimization; fp8 quantization; backward support,3,3,3
 
 # #### GPU level kernel svcheduling optimizations

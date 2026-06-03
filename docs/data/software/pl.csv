@@ -21,18 +21,23 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Decouple algorithm specification from its execution schedule to enable performance portability and automated optimization.
 2013,PLDI,MIT,"Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",algorithm-schedule decoupling; image processing DSL; explicit scheduling language,4,4,4
 2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
+2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
 
 # #### Tensor & Pipeline Optimization
 # Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
 # Solution: Use MLIR-based abstractions, novel programming models, and automatic tuning to generate efficient code for tensor programs and pipelines.
+2023,OSDI,Microsoft Research,WELDER: Scheduling Deep Learning Memory Access via Tile-graph,Tile-graph abstraction for fine-grained memory management; inter-layer independence for optimization space decoupling; tile traffic-based cost model,3,4,4
 2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
-2025,arXiv,PKU,TileLang: A Composable Tiled Programming Model for AI Systems,tile-based programming; tvm-based compiler; compared to trition is more flexible,4,4,3
+2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,tvm-based compiler; compared to triton is more flexible,4,4,3
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
 2025,arXiv,CMU,Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs,mega-kernelization; SM level parallel optimization; SM level representation,3,3,3
 
 # #### Graph-Level Transformation and Optimization
 # Challenge: Large DNN topologies and massive tensor sizes easily exceed hardware memory capacities and execution efficiency limits, making isolated operator-level optimizations insufficient.
 # Solution: Apply coordinated graph-level transformations (such as operator fission and fusion) and holistic topological scheduling to systematically optimize the entire computation graph for peak memory and execution latency.
+2021,MLSys,MIT,IOS: Inter-Operator Scheduler for CNN Acceleration,inter-operator parallelism; dynamic programming based scheduler; concurrent execution; operator fusion,4,4,2
+2023,DAC,PKU,Memory and Computation Coordinated Mapping of DNNs onto Complex Heterogeneous SoC,dataflow grouping; location-aware accelerator mapping; hybrid scheduling algorithm,4,3,2
+2024,DAC,THU,GSPO: A Graph Substitution and Parallelization Joint Optimization Framework for DNN Inference,flow-based graph partition; joint optimization computational graph(JOCG); joint cost model; backtracking search algorithm,4,4,2
 2024,ASPLOS,PKU,"MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN",Fission Transformation (F-Trans) for graph splitting; Dimension Graph (D-Graph) representation; incremental scheduling algorithm for fast evaluation,4,4,4
 
 # #### TinyML & Edge Compilers
@@ -47,6 +52,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation,ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
+2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;dynamic hardware configuration time-multiplexing for MoE,4,3,4
 
 # #### Embedded DSL Compiler Frameworks
 # Challenge: Developing high-performance parallel DSLs for heterogeneous hardware requires significant repetitive effort in building IRs, optimizers, and code generators from scratch.
@@ -55,7 +61,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Sparse Tensor Compilers
 # Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
-2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations,4,3,3
+2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations;TensorIR-based sparse compiler,4,3,3
 2024,OOPSLA,Cornell,UniSparse: An Intermediate Language for General Sparse Format Customization,language-based holistic format abstraction; decoupled logical (data structure) vs. physical (memory layout) representation; index map & orthogonal primitives (mutation/layout/query) for customization,4,4,4
 
 # ### Graph Mining Compilers
@@ -76,9 +82,27 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Sparse Tensor Algebra Compilers
 # Solution: multi-format iteration efficiency, format combination optimization, architecture-agnostic code generation
+# ##### Format Abstraction and Conversion
+# Challenge: Sparse tensor algebra compilers need a compact way to describe many tensor formats and generate format-specific iteration code without hand-writing every format combination.
+# Solution: Use tensor index notation, merge-based sparse iteration, and format-level abstractions to generate code for many sparse and dense layouts.
+2017,OOPSLA,MIT,The Tensor Algebra Compiler,TACO compiler; iteration graph; merge lattice; compound tensor algebra codegen,4,4,5
 2018,OOPSLA,MIT,Format Abstraction for Sparse Tensor Algebra Compilers,coordinate hierarchies; level formats abstraction; property-based merge lattice optimizations; level iterator conversion,4,4,3
 2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
+
+# ### Sparse Tensor Scheduling and Assembly
+
+# #### Scheduling and Interoperability
+# Challenge: Sparse tensor programs require schedule choices and library interoperation that depend on sparse formats, nonzero structure, and external optimized kernels.
+# Solution: Expose sparse iteration transformations, asymptotic schedule selection, and verified external-function binding as compiler-level mechanisms.
+2020,OOPSLA,Reservoir Labs && Stanford,A Sparse Iteration Space Transformation Framework for Sparse Tensor Algebra,sparse iteration space transformations; derived iteration spaces; nonzero-space tiling; sparse scheduling API,4,4,4
+2022,PLDI,MIT,Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model,automatic asymptotic scheduler; asymptotic cost model; Pareto frontier schedule pruning; TACO schedule search,4,4,4
+2023,PLDI,Stanford,Mosaic: An Interoperable Compiler for Tensor Algebra,verified external-function binding; Mosaic function interface; automatic binding search; heterogeneous tensor algebra codegen,4,4,4
+
+# #### Dynamic Assembly and Workspaces
+# Challenge: Sparse tensor computations often need dynamic updates or scattered writes into sparse results whose formats do not support efficient random insertion.
+# Solution: Generate update-friendly dynamic formats and intermediate sparse workspaces that adapt scatter-heavy computation to sparse result assembly.
 2022,OOPSLA,MIT,Compilation of Dynamic Sparse Tensor Algebra,node schema language; assembly abstract interface; map function generation; iterator optimization; dynamic tensor format composition,4,4,3
+2024,PLDI,Stanford,Compilation of Modular and General Sparse Workspaces,sparse workspace insertion; workspace insertion algorithm template; sparse scattering detection; modular workspace implementations,4,4,4
 
 # ### Transpilers
 # Solution: automatic, correct, and performant source-to-source code translation across different hardware ecosystems

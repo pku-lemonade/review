@@ -1,4 +1,8 @@
 Year,Venue,Authors,Title,Tags,P,E,N
+# ### Sorting & Merging Accelerators
+# Challenge: High-throughput 2-way mergers on FPGAs suffer from long feedback critical paths, high resource utilization from redundant comparators, and tie-record issues in feedback-less designs.
+# Solution: Relax the sorted-input requirement of the bitonic partial merger by replacing its first stage with distributed MAX units, eliminating barrel shifters and redundant merger blocks while achieving lowest comparator count.
+2022,TC,Imperial & dunnhumby,FLiMS: a Fast Lightweight 2-way Merger for Sorting,distributed MAX selector stage eliminating barrel shifter rotation; single 2w-to-w bitonic partial merger with minimum comparator count; skewness optimisation via dir register oscillation for balanced dequeue; FLiMSj whole-row dequeue variant via cR register buffer; SIMD AVX2 implementation for CPU merge sort,4,4,4
 # Homomorphic Encryption Accelerators
 # Challenge: Current HE accelerators are slow as they rely on complex NTT operations that ignore data sparsity and error tolerance.
 2025,DATE,PKU,FLASH: An Efficient Hardware Accelerator Leveraging Approximate and Sparse FFT for Homomorphic Encryption,approximate FFT for modular reduction elimination; sparsity-aware FFT dataflow using skipping and merging methods; DSE for Pareto-optimal computation precision,4,2,2
@@ -45,6 +49,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### DNN Accelerators
 # #### GEMM
 2020,HPCA,Georgia Tech,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,2,3
+2022,DAC,Gatech,Self Adaptive Reconfigurable Arrays (SARA): Learning Flexible GEMM Accelerator Configuration and Mapping-space using ML,dedicated hardware recommender core; pipelined bypass links; real-time hardware reconfiguration,3,3,2
 2025,TCAS-I,Edin.,"DiP: A Scalable, Energy-Efficient Systolic Array for Matrix Multiplication Acceleration",Permutated Weight;FIFO-less Architecture,4,4,3
 # #### Layer Fusion Accelerators
 # Solution: Use layer fusion to combine multiple layers of a neural network into a single layer. This can help reduce the number of computations and memory accesses required during inference; leading to faster execution times and lower power consumption.
@@ -58,8 +63,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Deploying Transformer inference on FPGAs/ACAPs suffers from severe shape mismatch between diverse layer sizes and fixed hardware resources, creating an inherent latency-throughput tradeoff that neither purely sequential nor fully spatial accelerator strategies can resolve simultaneously.
 # Solution: Explore sequential-spatial hybrid accelerator architectures with automated layer-to-accelerator scheduling and inter-accelerator communication co-design to achieve a superior latency-throughput Pareto front.
 2024,FPGA,Pitt & UMD,SSR: Spatial Sequential Hybrid Architecture for Latency Throughput Tradeoff in Transformer Acceleration,latency-throughput Pareto front via sequential-spatial hybrid design; force-partition strategy for inter-accelerator memory bank conflict elimination; fine-grained line-buffer pipeline for nonlinear kernels (LayerNorm/Softmax),4,4,3
+2024,FPGA,THU & SJTU,FlightLLM: Efficient Large Language Model Inference with a Complete Mapping Flow on FPGAs,configurable sparse DSP chain for N:M and block sparsity; always-on-chip decode with mixed-precision dequantization unit; length adaptive compilation reducing instruction storage by 500 times,4,4,3
+# ##### SSM/Mamba Accelerators
+# Challenge: Mamba's element-wise operations are incompatible with Tensor Core reduction trees; nonlinear functions (exp, SiLU) require large dedicated hardware units; and element-wise ops have limited data sharing making standard tiling inapplicable.
+# Solution: Reconfigurable PE array that can disable reduction trees for element-wise ops, decompose nonlinear functions into element-wise primitives, and apply intra/inter-operation buffer management.
+2024,ICCAD,SJTU,MARCA: Mamba Accelerator with ReConfigurable Architecture,reduction alternative PE array architecture toggling reduction tree for linear vs element-wise ops; fast biased exponential algorithm decomposing exp into shift and element-wise ops; piecewise SiLU approximation reusing reconfigurable PEs; intra-operation and inter-operation buffer management strategy,4,3,4
 # ##### Accelerators facing Memory Wall
 # Challenge: LLMs require large amounts of memory bandwidth to store and access the model parameters and intermediate results which can lead to memory bottlenecks and reduced performance.
+2023,ASPLOS,Gatech,FLAT: An Optimized Dataflow for Mitigating Attention Bottlenecks,inter-operator tensor-tensor fusion; fine-grained execution tiling; map-space exploration,3,3,2
 2024,ISCA,Furiosa AI,TCP: A Tensor Contraction Processor for AI Workloads,tensor contraction as a hardware primitive; circuit-switched fetch network for hierarchical data reuse; Einstein summation for tactic exploration,4,3,3
 2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
 2025,arXiv,SJTU,ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM,hybrid ROM-SRAM architecture for on-device LLM; B-ROM design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models,,,
@@ -81,9 +92,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,HPCA,THU,WATOS: Efficient LLM Training Strategies and Architecture Co-exploration for Wafer-scale Chip,globally coordinated memory-efficient recomputation; location-aware resource placement; 3-stage system-level robustness design,4,4,2
 # #### Quantized DNN Accelerators
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
+# ##### General-Purpose and Edge Quantized DNN Accelerators
+# Challenge: General quantized-DNN accelerators must support mixed precision or nonuniform datatypes without losing the throughput and energy benefits of low-bit execution.
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
-2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
 2023,HPCA,UPC,Mix-GEMM: An efficient HW-SW Architecture for Mixed-Precision Quantized Deep Neural Networks Inference on Edge Devices,Complete mixed-precision flexibility; hardware accelerator & BLIS-based library with custom RISC-V ISA extensions,3,2,3
+2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
+# ##### Quantized Transformer and Foundation-Model Accelerators
+# Challenge: Transformer-scale quantized accelerators need to compress weights and activations while preserving model accuracy and reducing expensive memory traffic.
+2020,MICRO,UToronto,GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference,Gaussian-outlier weight splitting; per-layer centroid dictionary quantization; 3-bit index storage for BERT weights; GOBO low-bit accelerator,4,3,4
+2022,ISCA,UToronto,Mokey: Enabling Narrow Fixed-Point Inference for Out-of-the-Box Floating-Point Transformer Models,Golden Dictionary post-training quantization; 4-bit index weights and activations with fixed-point centroids; exponential-fit centroid arithmetic replacing MACs with narrow additions; Mokey accelerator and memory compression assist,4,4,4
+2025,ISCA,Georgia Tech & Intel,MicroScopiQ: Accelerating Foundational Models through Outlier-Aware Microscaling Quantization,outlier-aware MX quantization with pruning-based bit redistribution; ReCoN NoC for high-precision outlier merging; multi-precision INT PE systolic accelerator for LLM/VLM inference,4,3,3
 # #### Bit-Sliced DNN Accelerators
 # Solution: Bit-sliced DNN accelerators break down data into smaller bit-slices, allowing for more efficient processing and reduced memory and calculation resources requirements.
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
@@ -102,6 +120,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Accelerators employing structured sparsity and environment-specific pipelining, enabling them to reconfigure flexibly for structured sparsity masks or specific AI domains (like RL).
 # ##### Structured Sparsity DNN Accelerators
 # Solution: Accelerators employing hierarchical structured sparsity masks for flexible DNN acceleration.
+2023,MLSys,Gatech,SUSHI: SUbgraph Stationary Hardware-software Inference Co-design,subgraph-stationary dataflow; dedicated persistent buffer; cache-state-aware scheduling; moving-average subgraph prediction,4,4,2
 2023,MICRO,MIT,HighLight: Efficient and Flexible DNN Acceleration with Hierarchical Structured Sparsity,hierarchical structured sparsity (HSS); modularized sparsity acceleration architecture; systematic flexibility on sparsity patterns,3,3,3
 # ##### RL Environment Accelerators
 # Solution: FPGA-based accelerators targeting the parallel environment execution bottleneck in reinforcement learning training pipelines.
@@ -156,7 +175,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,HPCA,NUS,LISA: Graph Neural Network based Portable Mapping on Spatial Accelerators,label abstraction for quality mapping; GNN based label-aware mapping; label-aware simulated annealing,4,3,3
 2024,MICRO,NUS,ICED: An Integrated CGRA Framework Enabling DVFS-Aware Acceleration,tile based CGRA configuration; DVFS labeling; DVFS-Aware DFG Mapping,4,3,2
 # #### Task Scheduling
-2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,,,
+2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,4,3,2
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
 # ### Many-core Architecture
 # Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.
