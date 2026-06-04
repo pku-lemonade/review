@@ -152,6 +152,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM Serving Performance Modeling
 2024,arXiv,KAIST,LLMServingSim: A HW/SW Co-Simulation Infrastructure for LLM Inference Serving at Scale,iteration-level simulation; computation reuse optimization; heterogeneous accelerator mapping,,,
 2024,Mlsys,GIT,Vidur: A Large-Scale Simulation Framework For LLM Inference,Operation-level simulation; Using the simulator to search the best configuration for the given system,3,3,3
+2026,arXiv,CUHK,Frontier: Towards Comprehensive and Accurate LLM Inference Simulation,disaggregated abstraction (PDD/AFD/co-location); role-specific cluster workers; stateful request modeling; hardware-aware fidelity plane,4,5,4
 
 # #### LLM Training Performance Modeling
 2024,MICRO,KAIST,vTrain: A Simulation Framework for Evaluating Cost-effective and Compute-optimal Large Language Model Training,profiling-driven LLM training simulation; operator-to-task lookup table; cost-effective training plan exploration; compute-optimal chinchilla point estimation,3,4,2
