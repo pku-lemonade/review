@@ -46,6 +46,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Graph Mining Accelerators
 # Challenge: Complex graph algorithms, Irregular access patterns
 2021,ISCA,MIT,FlexMiner: A Pattern-Aware Accelerator for Graph Pattern Mining,pattern-aware GPM accelerator; software/hardware co-design; pattern-specific execution plan; connectivity map (c-map),4,4,3
+2026,SIGMOD,Heidelberg & SAP,GraphMatch: Subgraph Query Processing on FPGAs,AllCompare FPGA-native parallel set intersection replacing sequential LeapFrog; worst-case optimal join (WCOJ)-based matching source-filter-extender-sink pipeline; cached fetcher architecture for repeated input set reuse,3,4,3
+# #### Graph Random Walk Accelerators
+# Challenge: Graph random walks require step-by-step probabilistic traversal with strong inter-step data dependencies and highly irregular random memory access; existing FPGA accelerators suffer from pipeline bubbles caused by workload imbalance and static scheduling that cannot adapt to stochastic query termination.
+2023,SIGMOD,NUS,LightRW: FPGA Accelerated Graph Dynamic Random Walks,parallelized Weighted Reservoir Sampling (WRS) for FPGA pipelined graph dynamic random walks (GDRW); degree-aware cache replacing low-degree with high-degree vertex neighbor addresses; dynamic burst engine scheduling hybrid long/short burst lengths at runtime,3,4,3
+2026,HPCA,NUS,RidgeWalker: Perfectly Pipelined Graph Random Walks on FPGAs,Markov-based stateless task decomposition for out-of-order GRW execution; zero-bubble query scheduler via M/M/1[N] queuing model with formal bubble-free guarantee; butterfly-interconnect Task Router for per-hop data-aware pipeline routing,4,4,3
 # ### DNN Accelerators
 # #### GEMM
 2020,HPCA,Georgia Tech,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,2,3
