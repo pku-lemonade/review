@@ -517,6 +517,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroMLSys,EPFL,Accelerating MoE Model Inference with Expert Sharding,expert sharding for load balancing; tensor sharding for moe experts; fused expert computations for reduced kernel launches,,,
 2025,DAC,PKU,HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference,dynamically balances workloads across GPUs and CPUs; impact-driven prefetching; MoE-specialized cache management,3,4,2
 
+# ##### Predictive Expert Caching and Offloading
+# Challenge: expert offloading depends on predictable routing locality, but different MoE models expose very different cacheability and runtime correction needs.
+2026,ICLR,Fudan,Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models,local routing consistency; Segment Routing best Performance (SRP); Segment Cache best Hit rate (SCH); expert cache suitability analysis,4,3,3
+2026,DAC,A*STAR,ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling,transformer-based routing path predictor; token scheduler grouping predicted routes; predictive expert cache with runtime correction,3,4,3
+
 # ##### Batching and Scheduling
 2025,arXiv,Alibaba,Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference,statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload,,,
 2025,arXiv,Edinburgh,MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching,module-based batching; high-throughput MoE inference; full KV-cache offloading,,,
@@ -545,6 +550,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
 2025,arXiv,PKU,"ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs",hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism,,,
 2025,ICML,ByteDance,ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference,offload value cache to CPU and keep outliers on GPU; landmark-guided sparse KV selection per chunk,3,3,3
+2026,arXiv,PJLab,NanoCP: Request-Level Dynamic Context Parallelism for Data-Expert Parallel Decoding,dynamic context parallelism; decoupled MoE communication and KV placement; request-level CP degree for KV-footprint balancing,3,3,3
 
 
 # ##### Sparse Attention
@@ -662,6 +668,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Multi Agent Systems
 # Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
+2025,ACL,UIUC,MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents,multi-agent collaboration and competition benchmark; milestone-based KPIs; coordination protocol evaluation,4,3,3
+2026,arXiv,Univ. of Utah,AgentCollabBench: Diagnosing When Good Agents Make Bad Collaborators,diagnostic benchmark for multi-hop collaboration failures; instruction decay and false-belief contagion; communication topology risk analysis,3,3,3
 2026,arXiv,KAIST,The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective,system breakdown for agent system; large-scale analysis on LLM agents system design; test-time scaling,4,4,3
 
 # #### DSL for agent representation
@@ -708,6 +716,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### LoRA based Optimizations for Multi-Agent Systems
 # Challenge: LoRA import the unreusable parameters, which can not be shared among agents.
+2026,arXiv,SNU,LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents,KV cache decomposition into shared base and LoRA adapter components; low-rank adapter cache sharing; Flash-LoRA-Attention,3,3,3
 2026,arXiv,SJTU,ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache,Disaggregated KV cache for LoRA parameters; copy-on-write mechanism for efficient memory usage; dynamic LoRA parameter management,3,4,4
 
 # ### GPU Kernel Optimizations for Systems
