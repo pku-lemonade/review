@@ -193,6 +193,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,NUS,LEAP: LLM Inference on Scalable PIM-NoC Architecture with Balanced Dataflow and Fine-Grained Parallelism,data dynamicity-aware task assignment to PIM or NoC; fine-grained model partitioning and heuristically optimized spatial mapping strategy,3,4,3
 2025,arXiv,THU,CompAir: Synergizing Complementary PIMs and In-Transit NoC Computation for Efficient LLM Acceleration,heterogeneous DRAM-PIM and SRAM-PIM architecture with hybrid bonding; in-transit NoC computation with Curry ALU; hierarchical ISA for hybrid PIM systems,3,4,2
 2025,arXiv,BUAA,HPIM: Heterogeneous Processing-In-Memory-based Accelerator for Large Language Models Inference,SRAM-PIM/HBM-PIM heterogeneous LLM accelerator; compiler-based workload partitioning; intra-token SRAM-HBM pipeline,4,3,3
+2026,ISSCC,HKUST,A 14.08-to-135.69Token/s ReRAM-on-Logic Stacked Outlier-Free Large-Language-Model Accelerator with Block-Clustered Weight-Compression and Adaptive Parallel-Speculative-Decoding,ReRAM-on-logic stacked RS-PNM for draft-model codebooks; blockwise vector quantization for high-bandwidth weight reconstruction; adaptive parallel speculative decoding with workload-decoupled out-of-order scheduler,4,5,4
 # ### General CiM
 # #### Specific Application & Algorithm
 2024,ISVLSI,USC,Multi-Objective Neural Architecture Search for In-Memory Computing,"neural architecture search methodology; integration of Hyperopt, PyTorch and MNSIM",,,
@@ -337,6 +338,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### RRAM CiM: Special Usage
 2019,Adv. Funct. Mater.,HUST,Functional Demonstration of a Memristive Arithmetic Logic Unit (MemALU) for In‐Memory Computing,non-volatile Boolean logic using RRAM crossbar;reconfigurable boolean logic gates,3,4,3
 2024,TRETS,UFRGS,Reprogrammable Non-Linear Circuits Using ReRAM for NN Accelerators,perform typical non-linear operations using ReRAM,4,3,4
+2025,ISLPED,HKUST,DIRC-RAG: Accelerating Edge RAG with Robust High-Density and High-Loading-Bandwidth Digital In-ReRAM Computation,ReRAM-SRAM coupled DIRC cell; query-stationary RAG retrieval dataflow; error-aware bitwise remapping and detection for robust digital in-ReRAM MAC,3,3,3
 2026,Nat. Elec.,UM,Memristive cellular neural networks for fast in-pixel computing,in-pixel memristive cellular neural networks(CeNN),4,4,3
 2026,DAC,VillanovaU,CQ-CiM: Hardware-Aware Embedding Shaping for Robust CiM-Based Retrieval,codebook isolation architecture; hardware noise injection; asymmetric distance computation pipeline,3,3,3
 # #### RRAM CIM: Batchnorm
@@ -367,6 +369,7 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 # #### Hybrid CIM: Macro and Dataflow Co-Design
 # Challenge: Combining multiple memory/computing media in one accelerator introduces restore, density, and dataflow mismatches; these papers redesign the macro or mapping/dataflow stack so the hybrid substrate is actually usable.
 2023,ICCAD,SJTU,TL-nvSRAM-CIM: Ultra-High-Density Three-Level ReRAM-Assisted Computing-in-nvSRAM with DC-Power Free Restore and Ternary MAC Operations,DCpower-free weight-restore from ReRAM; ternary SRAM-CIM mechanism with differential computing scheme,,,
+2024,ICCAD,HKUST,ReSCIM: Variation-Resilient High Weight-Loading Bandwidth In-Memory Computation Based on Fine-Grained Hybrid Integration of Multi-Level ReRAM and SRAM Cells,MLC ReRAM crossbar integrated into each SRAM-CIM cell; differential sensing for parallel weight loading; folded weight mapping for variation-resilient all-weights-on-chip CIM,3,3,3
 2025,TCAD,HKUST,Configurable Dataflow and Adaptive Mapping Optimization for Hybrid ReRAM and SRAM Compute-in-Memory Accelerator,Hybrid Macro Unit (HMU); adaptive mapping optimization; configurable dataflow control,4,3,3
 2025,Nature,TSMC,A mixed-precision memristor and SRAM compute-in-memory AI processor,layer based INT-FP hybrid architure; kernel-based mix-CIM (SRAM/ReRAM/digital hybrid architecture),5,5,2
 # #### Hybrid CIM: Transformer and Attention Acceleration
@@ -384,11 +387,15 @@ Please see [RRAM Physical Effects](# Physical Effects - # RRAM) in the [Fail] se
 # #### CIM: Quantization: Partial Sum Quantization
 2023,ISLPED,Purdue,Partial-Sum Quantization for Near ADC-Less Compute-In-Memory Accelerators,ADC-Less and near ADC-Less CiM accelerators; CiM hardware aware DNN quantization methodology,,,
 2025,DATE,SKKU,Column-wise Quantization of Weights and Partial Sums for Accurate and Efficient Compute-In-Memory Accelerators,granularity alignment logic; learned step-size quantization(LSQ),3,2,3
-# #### CIM Quantization: For Analog CIM
+# #### CIM Quantization: Hardware-Aware Analog CIM
+# Challenge: Analog CIM quantization must reduce ADC and compute cost while respecting crossbar granularity and mixed-signal dataflow constraints.
 2022,TCAS-I,Georgia Tech,BitS-Net: Bit-Sparse Deep Neural Network for Energy-Efficient RRAM-Based Compute-In-Memory,bit-sparsity quantization; bias-shifted MVM; hardware-aware loss function,3,2,3
-2023,AICAS,TU Delft,Mapping-aware Biased Training for Accurate Memristor-based Neural Networks,favorability constraint analysis to find important weight values; mapping-aware biased training to restrict weight values to low variance RRAM states,3,4,2
 2024,TCAD,BUAA,CIMQ: A Hardware-Efficient Quantization Framework for Computing-In-Memory-Based Neural Network Accelerators,bit-level sparsity induced activation quantization; quantizing partial sums to decrease required resolution of ADCs; arraywise quantization granularity,,,
 2024,TCAD,BUAA,CIM²PQ: An Arraywise and Hardware-Friendly Mixed Precision Quantization Method for Analog Computing-In-Memory,mixed precision quantization method based on evolutionary algorithm; arraywise quantization granularity; evaluation method to obtain the performance of strategy on the CIM,,,
+2025,arXiv,NTU,Sensitivity-Aware Mixed-Precision Quantization for ReRAM-based Computing-in-Memory,Hessian-based strip-weight sensitivity clustering; dynamic mixed-precision crossbar mapping; precision-aware 8-bit/4-bit ReRAM accumulation,3,2,3
+# #### CIM Quantization: Memristor Variation-Aware Mapping
+# Challenge: Memristor conductance variation and state-dependent mapping errors make nominal low-bit quantization inaccurate unless training or quantization accounts for device behavior.
+2023,AICAS,TU Delft,Mapping-aware Biased Training for Accurate Memristor-based Neural Networks,favorability constraint analysis to find important weight values; mapping-aware biased training to restrict weight values to low variance RRAM states,3,4,2
 2024,ICCAD,TU Delft,Hardware-Aware Quantization for Accurate Memristor-Based Neural Networks,analysis of fixed-point quantization impact on conductance variation; weight quantization tuning technique; approach to reduce the residual error,3,2,3
 # #### CIM Quantization: For all CIM
 2018,CVPR,Google,Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference,"integer-only inference arithmetic; quantizes both weights and activations as 8-bit integers, bias 32-bit; provides both quantized inference framework and training frame work",,,
