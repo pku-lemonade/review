@@ -23,7 +23,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Decouple algorithm specification from its execution schedule to enable performance portability and automated optimization.
 2013,PLDI,MIT,"Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",algorithm-schedule decoupling; image processing DSL; explicit scheduling language,4,4,4
 2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
+2020,OSDI,UCB,Ansor: Generating High-Performance Tensor Programs for Deep Learning,hierarchical search space program sampler; evolutionary fine-tuning&learned cost model; gradient descent based task scheduler,4,4,3
 2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
+2023,ASPLOS,UToronto,Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs,task-mapping based programming; hardware-centric schedule space; post-scheduling operator fusion,4,4,3
 
 # #### Tensor & Pipeline Optimization
 # Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
@@ -51,6 +53,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: The semantic gap and astronomically large scheduling space of spatial accelerators make traditional compilers and manual tuning ineffective.
 # Solution: High-level programming model, automatic code generation, performance optimization for specialized hardware
 2021,ISCA,UCB,"CoSA: Scheduling by Constrained Optimization for Spatial Accelerators",mixed-integer programming (MIP) for scheduling; prime-factor allocation; constant binary matrices for algorithm-hardware constraints,5,3,4
+2022,ISCA,PKU,AMOS: Enabling Automatic Mapping for Tensor Computations On Spatial Accelerators with Hardware Abstraction,hardware abstraction; constraints based mapping generation; binary matrix based validation; hierarchical level performance model,3,4,2
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation,ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
