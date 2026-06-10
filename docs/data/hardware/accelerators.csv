@@ -32,6 +32,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 2019,ASPDAC,THU & UCB,GraphSAR: A Sparsity-Aware Processing-in-Memory Architecture for Large-Scale Graph Processing on ReRAMs,sparsity-aware recursive block partitioning with density threshold 0.5; hybrid-centric block-list and edge-list processing model; lightweight graph clustering via vertex index remapping; single-bit ReRAM cell implementation for unweighted algorithms,3,3,3
+# #### Multi-FPGA Graph Accelerators
+# Challenge: Scaling FPGA graph processing across boards creates irregular communication, cross-board workload imbalance, and low overlap between graph computation and remote vertex/update exchange.
+# Solution: Partition graph work across FPGAs with scheduling, work stealing, and communication-computation overlap to keep multiple boards busy while reducing remote-transfer overhead.
+2024,arXiv,UVA,Swift: A Multi-FPGA Framework for Scaling Up Accelerated Graph Analytics,decoupled asynchronous GAS pipeline; import-frontier and export-frontier stages; recursive BRAM tree update partitioning; vertex-interval workload placement,3,4,2
+2025,SIGMOD,NUS,Clementi: Efficient Load Balancing and Communication Overlap for Multi-FPGA Graph Processing,remote-apply GAS pattern; architecture-oriented performance model; greedy workload scheduling with conflict rescheduling; ring-topology global apply pipeline,4,4,3
+# #### Graph Accelerator Generation
+# Challenge: FPGA graph accelerators require low-level hardware expertise, and template-based frameworks couple algorithms, programming models, and architectures too tightly for flexible graph workload support.
+# Solution: Use graph-specific languages and compiler backends to generate FPGA graph accelerators while automatically composing reusable memory, pipeline, and data-routing optimizations.
+2025,LCTES,ICT & UCAS,Graphitron: A Domain Specific Language for FPGA-Based Graph Processing Accelerator Generation,Graphitron DSL; vertex and edge primitive data types; FIR-MIR-HLS compiler pipeline; autonomous pipelining-caching-shuffling backend,3,4,3
 # #### Dynamic Graph Accelerators
 # Challenge: Edge update, Graph store data structure design
 2021,FPGA,HUST,GraSU: A Fast Graph Update Library for FPGA-based Dynamic Graph Processing,differential data management based on spatial similarity; Incremental Value Measurer (IVM); Value-Aware Memory Manager (VMM),4,4,3
