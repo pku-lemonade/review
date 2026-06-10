@@ -1,4 +1,17 @@
 Year,Venue,Authors,Title,Tags,P,E,N
+# ### 3D-Stacked Memory
+# Challenge: current DDR and PCIe can only provide limited channels, causing bandwidth and capacity bottlenecks for data-intensive applications.
+# Solution: 3D-stacked 6-16 memory dies and use hundreds to thousands of TSVs to provide independent channels, enabling high bandwidth and capacity.
+# #### HBM
+# Solution: stack multiple DRAM dies and use TSVs to provide TB/s level bandwidth.
+2023,JSSC,SK Hyrix,A 192-Gb 12-High 896-GB/s HBM3 DRAM With a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization, detailed HBM3e structure and specifications,3,4,5
+2024,ISSCC,SK Hyrix,A 48GB 16-High 1280GB/s HBM3E DRAM with All-Around Power TSV and a 6-Phase RDQS Scheme for TSV Area Optimization, supports both power TSV and data TSV; first 16-Hi Stacking HBM with 1/4 more capacity and BW,4,4,5
+# #### HBF
+# Challenge: SSD can only provide GB/s level bandwidth, also has low IOPS, high latency and weak random access performance caused by the SSD controller.
+# Solution: Like HBM, stack multiple NAND Flash dies and use TSVs to provide TB/s level bandwidth, TB-level system capacity and place the stack package near the GPU.
+2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
+2026,arXiv,UCSD,HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration, add a near-storage reranking in HBF base die as NMP engine; detailed HBF energy-latency and BW modeling based on thermal simulation,5,4,2
+
 # ### Multi-Level PIM/NDP Architectures
 # Challenge: PIM core can be placed at bank level, off-chip buffer level and even inside the SSD controller, and the communication between different levels of PIM/NDP is challenging.
 2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
@@ -90,6 +103,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,POSTECH,ATIM: Autotuning Tensor Programs for Processing-in-DRAM,autotuning framework for DRAM PIM; search-based optimizing tensor compiler; balanced evolutionary search algorithm,3,3,4
 2025,ISCA,ETHZ,OptiPIM: Optimizing Processing-in-Memory Acceleration Using Integer Linear Programming,layout-aware nested loop representation; Integer Linear Programming formulation for PIM mapping; analytical cost modeling for data layout enforcement,3,3,4
 2026,HPCA,Hanyang,PIMphony: Overcoming Bandwidth and Capacity Inefficiency in PIM-based Long-Context LLM Inference System,token-centric PIM partitioning for high channel utilization; dynamic PIM command scheduling for out-of-order I/O-compute overlap; dynamic PIM access for dynamic virtual-to-physical translation,3,4,4
+2026,ISCA,UToronto,DCC: Data-Centric Compilation of Machine Learning Kernels for Processing-In-Memory Architectures,multi-layer PIM abstraction; data-first scheduling strategy mapping data tiles to compute tiles; coupled learning-based performance predictor,2,3,3
 # #### Evaluation & Simulators
 2025,HPCA,THU,UniNDP: A Unified Compilation and Simulation Tool for Near DRAM Processing Architectures,unified NDP hardware abstraction; NDP compiler optimization; instruction-driven NDP simulator,3,5,2
 2025,arXiv,ETHZ,EasyDRAM: An FPGA-based Infrastructure for Fast and Accurate End-to-End Evaluation of Emerging DRAM Techniques,FPGA-based DRAM evaluation framework; C++ high-level language for description; time scaling for accurate modeling,3,4,3
@@ -120,7 +134,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ASPLOS,KAIST,NeuPIMs: NPU-PIM Heterogeneous Acceleration for Batched LLM Inferencing,dual row buffer architecture; sub-batch interleaving; greedy min-load bin packing algorithm,3,4,3
 2025,MICRO,SJTU,HEAT: NPU-NDP HEterogeneous Architecture for Transformer-Empowered Graph Neural Networks,topology-aware mixed-precision encoding for transformer; subgraph bundling and reordering for GNN memory efficiency; decoupled dataflow for NPU-NDP concurrent execution,2,3,3
 2025,ICCAD,PKU,LP-Spec: Leveraging LPDDR PIM for Efficient LLM Mobile Speculative Inference with Architecture-Dataflow Co-Optimization,GEMM-enhanced hybrid LPDDR5 PIM; near-data memory controller for concurrent NPU-PIM execution & data reallocation; hardware-aware draft token pruning,3,4,2
-2025,arXiv,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
+2026,ISCA,Cornell,P3-LLM: An Integrated NPU-PIM Accelerator for LLM Inference Using Hybrid Numerical Formats, low-precision PIM compute unit with temporal data reuse; operator fusion for quantized dataflow to minimize dequantization overhead,4,3,2
 # #### GPU-PIM Heterogeneous Systems
 # Challenge: Weight, activation and KV Cache data mapping in conventional GPU-PIM systems is naive, causing space & bandwidth waste and load imbalance.
 2024,DAC,Hunan Univ.,A Real-time Execution System of Multimodal Transformer through PIM-GPU Collaboration,dynamic strategy for PIM-GPU task offloading; variable-length-aware PIM allocation optimizer; extended TVM backend for PIM-GPU command generation,3,3,3
@@ -156,6 +170,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,IEEE TCAD,WSU,SWAP: A Server-Scale Communication-Aware Chiplet-Based Manycore PIM Accelerator, coarse-to-fine multi-objective optimization algorithm for Network-On-Package design; communication-aware irregular NoP topology,3,2,2
 2025,arXiv,Univ. of Virginia,Sangam: A Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing, decoupling logic and memory dies by chiplet; bank-level systolic arrays for flat-GEMM acceleration,4,3,4
 2025,ICCAD,SEU,H3D-LLM: Heterogeneous 3D Chiplet Design for LLM Inference with Dynamic Task Scheduling and Memory-Aware Orchestration,Sparse-aware dynamic execution with precision-adaptive quantization; runtime-aware encoding and dynamic cluster allocation,3,3,2
+2026,ISCA,UCSD,CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference,monolithic 3D DRAM and RRAM chiplet integration; endurance-aware KV cache tiering policy; two-cut-point dataflow mapping framework with hardware-aware kernel fusion,4,3,2
 # ### 3D-Stacked PIM
 # Challenge: There is no direct physical interconnection paths in DIMM-based, bank-level uniform NDP like UPMEM.
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
