@@ -538,6 +538,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ASPLOS,Google,TelaMalloc: Efficient On-Chip Memory Allocation for Production Machine Learning Accelerators,hybrid heuristic-solver memory allocator for ML accelerators; contention-aware phased allocation strategy,4,4,3
 2025,MICRO,Duke,LLM.265: Video Codecs are Secretly Tensor Codecs,use video compress hardware on GPU to compress LLM tensor; existing idle hardware video encoders and decoders (NVENC/NVDEC) found on modern GPUs,4,4,4
 2026,ICML,Buaa,ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference,gate-only fine-tuning; temporal locality regularization; cache-friendly routing trace,3,3,2
+2026,arXiv,PKU,UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing,exact-load real-time load balancing; quota-driven planning; rack-scale node native communication,3,3,2
 
 # ##### Architectural Innovations
 2025,arXiv,Shanghai AI,Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts,linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers,,,
@@ -547,6 +548,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SJTU,Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores,dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression,,,
 2025,Mips,Cornell,FlashMoE: Fast Distributed MoE in a Single Kernel,mega kernel for MoE model; persistent kernel to reduce CPU overhead,3,4,3
 2026,Mlsys,CMU,Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel,dynamic shape mega kernel design; atomic increment/decrement for ready queue; symbolic-shaped synchronization primitives,3,4,4
+2026,arXiv,RightNow AI,AutoMegaKernel: A Statically-Checked Agent Harness for Self-Retargeting Megakernel Synthesis,agent-driven megakernel synthesis; static deadlock and race-freedom verification,2,1,1
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
