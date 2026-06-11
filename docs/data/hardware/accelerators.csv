@@ -40,7 +40,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Graph Accelerator Generation
 # Challenge: FPGA graph accelerators require low-level hardware expertise, and template-based frameworks couple algorithms, programming models, and architectures too tightly for flexible graph workload support.
 # Solution: Use graph-specific languages and compiler backends to generate FPGA graph accelerators while automatically composing reusable memory, pipeline, and data-routing optimizations.
-2025,LCTES,ICT & UCAS,Graphitron: A Domain Specific Language for FPGA-Based Graph Processing Accelerator Generation,Graphitron DSL; vertex and edge primitive data types; FIR-MIR-HLS compiler pipeline; autonomous pipelining-caching-shuffling backend,3,4,3
+2025,LCTES,ICT & UCAS,Graphitron: A Domain Specific Language for FPGA-Based Graph Processing Accelerator Generation,Graphitron DSL; vertex and edge primitive data types; IR-to-high-level synthesis (HLS) compiler pipeline; autonomous pipelining-caching-shuffling backend,3,4,3
 # #### Dynamic Graph Accelerators
 # Challenge: Edge update, Graph store data structure design
 2021,FPGA,HUST,GraSU: A Fast Graph Update Library for FPGA-based Dynamic Graph Processing,differential data management based on spatial similarity; Incremental Value Measurer (IVM); Value-Aware Memory Manager (VMM),4,4,3
