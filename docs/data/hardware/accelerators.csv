@@ -35,7 +35,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Multi-FPGA Graph Accelerators
 # Challenge: Scaling FPGA graph processing across boards creates irregular communication, cross-board workload imbalance, and low overlap between graph computation and remote vertex/update exchange.
 # Solution: Partition graph work across FPGAs with scheduling, work stealing, and communication-computation overlap to keep multiple boards busy while reducing remote-transfer overhead.
-2024,arXiv,UVA,Swift: A Multi-FPGA Framework for Scaling Up Accelerated Graph Analytics,decoupled asynchronous GAS pipeline; import-frontier and export-frontier stages; recursive BRAM tree update partitioning; vertex-interval workload placement,3,4,2
+2024,ICFPT,UVA,Swift: A Multi-FPGA Framework for Scaling Up Accelerated Graph Analytics,decoupled asynchronous GAS pipeline; import-frontier and export-frontier stages; recursive BRAM tree update partitioning; vertex-interval workload placement,3,4,2
 2025,SIGMOD,NUS,Clementi: Efficient Load Balancing and Communication Overlap for Multi-FPGA Graph Processing,remote-apply GAS pattern; architecture-oriented performance model; greedy workload scheduling with conflict rescheduling; ring-topology global apply pipeline,4,4,3
 # #### Graph Accelerator Generation
 # Challenge: FPGA graph accelerators require low-level hardware expertise, and template-based frameworks couple algorithms, programming models, and architectures too tightly for flexible graph workload support.
