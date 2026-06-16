@@ -57,10 +57,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,NYCU,EDA: Energy-Efficient Inter-Layer Model Compilation for Edge DNN Inference Acceleration,Inter-Layer Operator Scheduling;SRAM-Constrained Tiling,4,3,3
 
 # ### Compiler for Accelerators
-# Challenge: The semantic gap and astronomically large scheduling space of spatial accelerators make traditional compilers and manual tuning ineffective.
-# Solution: High-level programming model, automatic code generation, performance optimization for specialized hardware
+
+# #### Constraint-based Spatial Scheduling and Mapping
+# Challenge: Spatial architectures expose computation resources, communication networks, timing behavior, and resource contention to the compiler, making separately designed placement, routing, and scheduling heuristics difficult to generalize and frequently suboptimal.
+# Solution: Formulate spatial mapping and scheduling as unified constraint-optimization problems that jointly model computation placement, data routing, event timing, resource utilization, and architecture-specific performance objectives.
+
+2013,PLDI,Qualcomm Research,A General Constraint-centric Scheduling Framework for Spatial Architectures,five-responsibility spatial scheduling abstraction; 20-constraint ILP formulation for joint placement/routing/timing;retargetable scheduling for TRIPS/DySER/PLUG,4,3,3
 2021,ISCA,UCB,"CoSA: Scheduling by Constrained Optimization for Spatial Accelerators",mixed-integer programming (MIP) for scheduling; prime-factor allocation; constant binary matrices for algorithm-hardware constraints,5,3,4
 2022,ISCA,PKU,AMOS: Enabling Automatic Mapping for Tensor Computations On Spatial Accelerators with Hardware Abstraction,hardware abstraction; constraints based mapping generation; binary matrix based validation; hierarchical level performance model,3,4,2
+
+# #### Programming Models and Compiler Frameworks for Spatial/Dataflow Accelerators
+# Challenge: Spatial accelerators require compiler abstractions that expose machine-specific execution structures without forcing programmers to manually manage low-level placement, synchronization, and data movement.
+# Solution: Provide programmable hardware abstractions, intermediate representations, and compilation frameworks that lower high-level programs into efficient spatial or streaming executions.
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation,ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
