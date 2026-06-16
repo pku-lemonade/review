@@ -7,6 +7,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: improving performance, reducing resource usage, and ensuring correctness
 2024,MICRO,Georgia Tech,Unleashing CPU Potential for Executing GPU Programs through Compiler/Runtime Optimizations,anti-coalescing transformation; block size invariant analysis; tail block adaptive synchronization; GPU-block dynamic tiling,2,4,3
 
+# ### VLIW Compilation
+# Challenge: VLIW processors expose instruction-level parallelism to the compiler, requiring the backend to statically coordinate instruction scheduling, functional-unit assignment, register placement, inter-cluster communication, and pipeline delays under machine-specific resource constraints.
+# Solution: Develop machine-aware compilation techniques that jointly or iteratively optimize instruction scheduling, cluster assignment, register allocation, copy insertion, and software pipelining for wide-issue statically scheduled processors.
+
+2000,PACT,TU Dortmund,Instruction Scheduling for Clustered VLIW DSPs,schedule-cost-guided simulated annealing for cluster partitioning; feedback-coupled cluster assignment and list scheduling,4,3,3
+
 # ### Program Optimization and Rewriting Frameworks
 # Challenge: Traditional sequential compiler optimizations suffer from the phase-ordering problem, while existing equational reasoning tools are often too slow or rigid for domain-specific, non-syntactic analyses.
 # Solution: Utilize equality saturation with efficient data structures (e.g., e-graphs) and extensible analysis mechanisms to explore the space of equivalent programs without strict ordering.
