@@ -47,7 +47,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Reorganize graph data and execution around graph-aware partitions, structured batched communication, and overlapped local computation to exploit 3D-stacked PIM bandwidth efficiently.
 2018,HPCA,THU & USC,GraphP: Reducing Communication for PIM-based Graph Processing with Efficient Data Partition,source-cut partitioning; Two-Phase Vertex Program; GenUpdate and ApplyUpdate APIs; hierarchical communication and overlapping,4,3,4
 2019,MICRO,USC,GraphQ: Scalable PIM-Based Graph Processing,batched inter-cube communication; rounded execution; heterogeneous Process Unit and Apply Unit cores; hybrid execution model for inter-node latency,4,3,4
-# ##### Bank-Level PIM Graph Processing
+# #### Bank-Level PIM Graph Processing
 # Challenge: Graph processing is fundamentally limited by memory bandwidth and requires frequent random accesses, which are not efficiently supported by non-interleaved, bank-level PIM architectures.
 # Solution: Adapt PIM mapping, host cooperation, and fine-grained memory-side operations to graph-specific access patterns and graph neural network pipelines.
 2022,PACT,PKU,GNNear: Accelerating Full-Batch Training of Graph Neural Networks with Near-Memory Processing,splitting reduce operations to NDP units; narrow-shard strategy for data reuse; hybrid graph partition strategy for load balancing,4,3,3
