@@ -40,9 +40,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,National Tech Univ. of Athens,PIMfused: Near-Bank DRAM-PIM with Fused-layer Dataflow for CNN Data Transfer Optimization, hybrid dataflow combining fused-layer and layer-by-layer strategies,3,2,2
 2026,HPCA,Seoul National,LoCaLUT: Harnessing Capacity-Computation Tradeoffs for LUT-Based Inference in DRAM-PIM,operation-packed LUT canonicalization via multiset indexing; reordering LUT for weight permutation remapping; LUT slice streaming for DRAM-buffer hierarchy,4,4,3
 2026,HPCA,Seoul National,RoMe: Row Granularity Access Memory System for Large Language Models,row-granularity access interface for LLM streaming; virtual bank to eliminate bank groups and pseudo channels; logic-die command generator for C/A pin reduction and simpler MC,4,3,3
-# #### Graph-Specific Optimization
+# ### Graph-Specific Optimization
 # Challenge: Graph processing is fundamentally limited by memory bandwidth and frequent irregular accesses, while PIM/NDP designs must still manage cross-memory communication, replica synchronization, and graph-specific load imbalance.
-# ##### 3D-Stacked PIM Graph Processing
+# #### 3D-Stacked PIM Graph Processing
 # Challenge: HMC-style PIM graph processors reduce host-memory movement but still suffer from irregular cross-cube messages, replica synchronization, and bandwidth imbalance across local, inter-cube, and inter-node links.
 # Solution: Reorganize graph data and execution around graph-aware partitions, structured batched communication, and overlapped local computation to exploit 3D-stacked PIM bandwidth efficiently.
 2018,HPCA,THU & USC,GraphP: Reducing Communication for PIM-based Graph Processing with Efficient Data Partition,source-cut partitioning; Two-Phase Vertex Program; GenUpdate and ApplyUpdate APIs; hierarchical communication and overlapping,4,3,4
