@@ -90,6 +90,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,HPCA,MIT,SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning,cascade pruning; high-parallelism top-K engine; progressive quantization,3,4,4
 2024,ASPLOS,CMU,SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification,tree-based speculative inference; topology-aware causal mask; multi-step speculative sampling,4,4,4
 2025,MICRO,KAIST,HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models,PipeFlash fine-grained pipelining for Attention; PipeSSD fused pipelined execution for Mamba-2; Unified Reconfigurable Streamlined Core (URSC);inter-operation dependency mitigation,4,3,3
+2026,ASPLOS,SJTU & SEU & EIT,DFVG: A Heterogeneous Architecture for Speculative Decoding with Draft-on-FPGA and Verify-on-GPU,FPGA draft generation with GPU verification for speculative decoding; hardware-aware dynamic draft tree using confidence and resource limits; stage-decoupled heterogeneous pipeline with cross-device token alignment and rollback prediction,4,4,3
 # ##### Wafer-Scale Accelerators
 # Solution: Adopt holistic hardware-software co-design to integrate high-bandwidth Network-on-Wafer (NoW) architectures with fault-tolerant mapping strategies, thereby mitigating yield limitations and communication bottlenecks to maximize system throughput.
 2025,ISCA,THU,PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer,mesh-switch physical topology; dual-granularity logical topology,4,3,2
