@@ -17,6 +17,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,DAC,UCB,"Gemmini: Enabling Systematic Deep-Learning Architecture Evaluation via Full-Stack Integration",exploring diverse systolic array dimensions and dataflows; RoCC (Rocket Custom Coprocessor) integration with unified virtual memory support; FPGA-accelerated full-system simulation,4,5,4
 2024,MICRO,UCB,"Stellar: An Automated Design Framework for Dense and Sparse Spatial Accelerators",space-time transform for dataflow specification; fibertree-based sparse data structure abstraction;decoupled specification of dataflow, sparsity, and load-balancing,4,4,4
 
+# ### CGRA Mapping algorithm
+# Challenge: The scalability bottleneck in space-time mapping for large-scale CGRAs due to the exponential growth of the combined search space.
+2023,DATE,USI,SAT-MapIt: A SAT-based Modulo Scheduling Mapper for Coarse Grain Reconfigurable Architectures,Kernel Mobility Schedule (KMS) for SAT pruning; SAT-based exact modulo scheduling formulation,3,3,3
+2025,DATE,USI,Monomorphism-based CGRA Mapping via Space and Time Decoupling,space-time decoupling mapping;SMT-based scheduling;subgraph monomorphism for physical routing,4,3,4
+
 # ### LLM-Driven RTL Generation
 # Challenge: Overcoming the lack of domain knowledge and strict syntax adherence in generic Large Language Models (LLMs) to generate functionally correct and synthesizable Verilog code.
 # #### Agentic RTL Code Generation
