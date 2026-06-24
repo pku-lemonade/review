@@ -12,6 +12,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Develop machine-aware compilation techniques that jointly or iteratively optimize instruction scheduling, cluster assignment, register allocation, copy insertion, and software pipelining for wide-issue statically scheduled processors.
 
 2000,PACT,TU Dortmund,Instruction Scheduling for Clustered VLIW DSPs,schedule-cost-guided simulated annealing for cluster partitioning; feedback-coupled cluster assignment and list scheduling,4,3,3
+2004,CF,Integrated Temporal and Spatial Scheduling for Extended Operand Clustered VLIW Processors,node priority based temporal schedule; cluster communication based spatial schedule,4,3,2
+2014,TVLSI,WCET-Aware Re-Scheduling Register Allocation for Real-Time Embedded Systems With Clustered VLIW Architecture,re-schedulability based block choosing; live range splitting; weighted global/local variable allocation,4,3,2
+2017,TECS,UNSW,An Efficient WCET-Aware Instruction Scheduling and Register Allocation Approach for Clustered VLIW Processors,WCET-aware graph spanning&live interval splitting; WCET reduction based basic block priority; instruction delaying,3,3,2
 
 # ### Program Optimization and Rewriting Frameworks
 # Challenge: Traditional sequential compiler optimizations suffer from the phase-ordering problem, while existing equational reasoning tools are often too slow or rigid for domain-specific, non-syntactic analyses.
