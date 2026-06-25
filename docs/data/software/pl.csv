@@ -10,7 +10,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### VLIW Compilation
 # Challenge: VLIW processors expose instruction-level parallelism to the compiler, requiring the backend to statically coordinate instruction scheduling, functional-unit assignment, register placement, inter-cluster communication, and pipeline delays under machine-specific resource constraints.
 # Solution: Develop machine-aware compilation techniques that jointly or iteratively optimize instruction scheduling, cluster assignment, register allocation, copy insertion, and software pipelining for wide-issue statically scheduled processors.
-
+1981,IEEE TC,Yale,Trace Scheduling: A Technique for Global Microcode Compaction,profile-guided trace scheduling; trace data-precedence DAG; bookkeeping repair for off-trace compensation,4,2,4
 2000,PACT,TU Dortmund,Instruction Scheduling for Clustered VLIW DSPs,schedule-cost-guided simulated annealing for cluster partitioning; feedback-coupled cluster assignment and list scheduling,4,3,3
 2004,CF,IISc,Integrated Temporal and Spatial Scheduling for Extended Operand Clustered VLIW Processors,node priority based temporal schedule; cluster communication based spatial schedule,4,3,2
 2014,TVLSI,CityUHK,WCET-Aware Re-Scheduling Register Allocation for Real-Time Embedded Systems With Clustered VLIW Architecture,re-schedulability based block choosing; live range splitting; weighted global/local variable allocation,4,3,2
