@@ -7,11 +7,22 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: improving performance, reducing resource usage, and ensuring correctness
 2024,MICRO,Georgia Tech,Unleashing CPU Potential for Executing GPU Programs through Compiler/Runtime Optimizations,anti-coalescing transformation; block size invariant analysis; tail block adaptive synchronization; GPU-block dynamic tiling,2,4,3
 
+# ### VLIW Compilation
+# Challenge: VLIW processors expose instruction-level parallelism to the compiler, requiring the backend to statically coordinate instruction scheduling, functional-unit assignment, register placement, inter-cluster communication, and pipeline delays under machine-specific resource constraints.
+# Solution: Develop machine-aware compilation techniques that jointly or iteratively optimize instruction scheduling, cluster assignment, register allocation, copy insertion, and software pipelining for wide-issue statically scheduled processors.
+1981,IEEE TC,Yale,Trace Scheduling: A Technique for Global Microcode Compaction,profile-guided trace scheduling; trace data-precedence DAG; bookkeeping repair for off-trace compensation,4,2,4
+2000,PACT,TU Dortmund,Instruction Scheduling for Clustered VLIW DSPs,schedule-cost-guided simulated annealing for cluster partitioning; feedback-coupled cluster assignment and list scheduling,4,3,3
+2004,CF,IISc,Integrated Temporal and Spatial Scheduling for Extended Operand Clustered VLIW Processors,node priority based temporal schedule; cluster communication based spatial schedule,4,3,2
+2014,TVLSI,CityUHK,WCET-Aware Re-Scheduling Register Allocation for Real-Time Embedded Systems With Clustered VLIW Architecture,re-schedulability based block choosing; live range splitting; weighted global/local variable allocation,4,3,2
+2017,TECS,UNSW,An Efficient WCET-Aware Instruction Scheduling and Register Allocation Approach for Clustered VLIW Processors,WCET-aware graph spanning&live interval splitting; WCET reduction based basic block priority; instruction delaying,3,3,2
+
 # ### Program Optimization and Rewriting Frameworks
 # Challenge: Traditional sequential compiler optimizations suffer from the phase-ordering problem, while existing equational reasoning tools are often too slow or rigid for domain-specific, non-syntactic analyses.
 # Solution: Utilize equality saturation with efficient data structures (e.g., e-graphs) and extensible analysis mechanisms to explore the space of equivalent programs without strict ordering.
 2021,POPL,UW,"egg: Fast and Extensible Equality Saturation",equality saturation algorithm;e-graphs (Equality Graphs);deferred rebuilding technique,3,4,4
+2025,ASPLOS,Cornell,SmoothE: Differentiable E-Graph Extraction,differentiable e-graph extraction;probabilistic continuous relaxation;learning-based (MLP) cost model,4,5,5
 2026,ASPLOS,PKU,"Finding Reusable Instructions via E-Graph Anti-Unification",e-graph anti-unification algorithm for custom instruction identification;pattern vectorization;hardware-aware cost model,4,4,4
+2026,ASPLOS,KAIST,Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation,stateful equality saturation via expression propagation; context-aware two-pass extraction algorithm,3,5,4
 
 # ### Deep Learning Compilers
 # Solution: Graph transformations, Kernel fusion, Tensor optimization for compute and memory
@@ -21,7 +32,9 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Decouple algorithm specification from its execution schedule to enable performance portability and automated optimization.
 2013,PLDI,MIT,"Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",algorithm-schedule decoupling; image processing DSL; explicit scheduling language,4,4,4
 2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
+2020,OSDI,UCB,Ansor: Generating High-Performance Tensor Programs for Deep Learning,hierarchical search space program sampler; evolutionary fine-tuning&learned cost model; gradient descent based task scheduler,4,4,3
 2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
+2023,ASPLOS,UToronto,Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs,task-mapping based programming; hardware-centric schedule space; post-scheduling operator fusion,4,4,3
 
 # #### Tensor & Pipeline Optimization
 # Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
@@ -36,6 +49,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Large DNN topologies and massive tensor sizes easily exceed hardware memory capacities and execution efficiency limits, making isolated operator-level optimizations insufficient.
 # Solution: Apply coordinated graph-level transformations (such as operator fission and fusion) and holistic topological scheduling to systematically optimize the entire computation graph for peak memory and execution latency.
 2021,MLSys,MIT,IOS: Inter-Operator Scheduler for CNN Acceleration,inter-operator parallelism; dynamic programming based scheduler; concurrent execution; operator fusion,4,4,2
+2022,OSDI,Stanford,Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations and Parallelization,parallel computation graph; graph substitution; three level joint optimization algorithm,4,4,2 
 2023,DAC,PKU,Memory and Computation Coordinated Mapping of DNNs onto Complex Heterogeneous SoC,dataflow grouping; location-aware accelerator mapping; hybrid scheduling algorithm,4,3,2
 2024,DAC,THU,GSPO: A Graph Substitution and Parallelization Joint Optimization Framework for DNN Inference,flow-based graph partition; joint optimization computational graph(JOCG); joint cost model; backtracking search algorithm,4,4,2
 2024,ASPLOS,PKU,"MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN",Fission Transformation (F-Trans) for graph splitting; Dimension Graph (D-Graph) representation; incremental scheduling algorithm for fast evaluation,4,4,4
@@ -46,12 +60,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,NYCU,EDA: Energy-Efficient Inter-Layer Model Compilation for Edge DNN Inference Acceleration,Inter-Layer Operator Scheduling;SRAM-Constrained Tiling,4,3,3
 
 # ### Compiler for Accelerators
-# Challenge: The semantic gap and astronomically large scheduling space of spatial accelerators make traditional compilers and manual tuning ineffective.
-# Solution: High-level programming model, automatic code generation, performance optimization for specialized hardware
+
+# #### Constraint-based Spatial Scheduling and Mapping
+# Challenge: Spatial architectures expose computation resources, communication networks, timing behavior, and resource contention to the compiler, making separately designed placement, routing, and scheduling heuristics difficult to generalize and frequently suboptimal.
+# Solution: Formulate spatial mapping and scheduling as unified constraint-optimization problems that jointly model computation placement, data routing, event timing, resource utilization, and architecture-specific performance objectives.
+2013,PLDI,Qualcomm Research,A General Constraint-centric Scheduling Framework for Spatial Architectures,five-responsibility spatial scheduling abstraction; 20-constraint ILP formulation for joint placement/routing/timing;retargetable scheduling for TRIPS/DySER/PLUG,4,3,3
 2021,ISCA,UCB,"CoSA: Scheduling by Constrained Optimization for Spatial Accelerators",mixed-integer programming (MIP) for scheduling; prime-factor allocation; constant binary matrices for algorithm-hardware constraints,5,3,4
+2022,ISCA,PKU,AMOS: Enabling Automatic Mapping for Tensor Computations On Spatial Accelerators with Hardware Abstraction,hardware abstraction; constraints based mapping generation; binary matrix based validation; hierarchical level performance model,3,4,2
+
+# #### Programming Models and Compiler Frameworks for Spatial/Dataflow Accelerators
+# Challenge: Spatial accelerators require compiler abstractions that expose machine-specific execution structures without forcing programmers to manually manage low-level placement, synchronization, and data movement.
+# Solution: Provide programmable hardware abstractions, intermediate representations, and compilation frameworks that lower high-level programs into efficient spatial or streaming executions.
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
-2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation,ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
+2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation; ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
 2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;dynamic hardware configuration time-multiplexing for MoE,4,3,4
 
 # #### Embedded DSL Compiler Frameworks
