@@ -23,7 +23,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ISCA,SYSU,Soter: Analytical Tensor-Architecture Modeling and Automatic Tensor Program Tuning for Spatial Accelerators,analytical tensor-architecture model; transformer based optimizer; coordination between analytical modeling and automatic tuning,4,4,2
 # #### Mapping
 # Challenge: Tiling the dataflow graph onto PEs and interconnects while minimizing buffering, balancing load, and meeting throughput/latency targets.
-2022,OSDI,UCB,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,,,
+2022,OSDI,UCB,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,4,4,2
 2023,MICRO,PKU,TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis,3D design space of fusion dataflow; tree-based description; tile-centric notation,,,
 2024,ICCD,SYSU,TileMap: Mapping Multi-Head Attention on Spatial Accelerators with Tile-based Analysis,tile-based parallelism analysis; tensor life; RL-based searching algorithm for mapping DSE,3,3,2
 2025,DATE,SYSU,Poros: One-Level Architecture-Mapping Co-Exploration for Tensor Algorithms,gradient-based search in non-smooth space; policy sampling to address non-convexity; batch sampling for faster convergence,4,3,2

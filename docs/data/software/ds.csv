@@ -13,7 +13,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: specific bounds of different situations
 2012,OSDI,CMU,PowerGraph: Distributed Graph-Parallel Computation on Natural Graphs,GAS (Gather-Apply-Scatter) decomposition; vertex-cut partitioning; delta caching; parallel locking for high-degree vertices,4,4,4
 2018,PLDI,UT Austin & UIUC,Gluon: A Communication-Optimizing Substrate for Distributed Heterogeneous Graph Analytics,communication-optimizing substrate; heterogeneous processor support; structural/temporal invariant-based communication optimization; memoization of address translation,4,4,4
+2020,PLDI,USC,SympleGraph: Distributed Graph Processing with Precise Loop-Carried Dependency Guarantee,loop-carried dependency guarantee; dependency communication primitives; circulant scheduling; differentiated dependency propagation; dependency double buffering,4,4,4
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
+
+# #### Graph Partitioning for Distributed Processing
+# Challenge: Distributed graph processing performance is often limited by communication overhead and load imbalance; partitioners must handle graph skew, hierarchy-aware communication costs, and balanced vertex/edge placement without loading the full graph into memory.
+2024,SIGMOD,USTC,Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning,Skewness-aware Vertex-cut Partitioner (S5P); head/tail edge set split; Stackelberg graph game,4,4,4
+2024,TPDS,USTC & CUHK,Two-Dimensional Balanced Partitioning and Efficient Caching for Distributed Graph Analysis,BPart two-dimensional balanced partitioning; BPart-C and BPart-S algorithms; neighbor-aware caching scheme,3,4,3
+2025,SC,NUDT,TianheEngine: Hierarchy-aware Adaptive Partitioning System for Trillion-scale Graph Processing,hierarchy-aware adaptive partitioning; communication hierarchy modeling; sparsity-aware partition strategy,4,5,4
 
 # #### Incremental Dataflow for Recursive Computations
 # Challenge: Maintaining the outputs of recursive/iterative dataflow computations (e.g., Datalog programs, graph analytics) incrementally as base inputs change, while controlling memory overhead and producing concise provenance explanations.
@@ -45,6 +52,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,SOSP,Stanford,PipeDream: Fast and Efficient Pipeline Parallel DNN Training,raise the idea of pipeline parallelism; divide model into different GPUs,3,3,4
 2019,arXiv,NVIDIA,Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism,transformer based model parallel; pipeline parallel; divide model into different GPUs,3,4,3
 2021,SC,NVIDIA,Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM,Megatron2; dive deep into tensor parallelism; how to train a LLM on 1000 GPUs,4,4,3
+2021,SC,ETHZ,Chimera: Efficiently Training Large-Scale Neural Networks with Bidirectional Pipelines,bidirectional pipeline; eager gradient synchronization; batch size concatenation,4,4,3
 2022,arXiv,NVIDIA,Reducing Activation Recomputation in Large Transformer Models,Megatron3; sequence parallel; selective activation recomputation; reduce the amount of recomputed activation,3,4,3
 
 # #### LLM-specific Parallel Strategies
@@ -520,6 +528,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroMLSys,EPFL,Accelerating MoE Model Inference with Expert Sharding,expert sharding for load balancing; tensor sharding for moe experts; fused expert computations for reduced kernel launches,,,
 2025,DAC,PKU,HybriMoE: Hybrid CPU-GPU Scheduling and Cache Management for Efficient MoE Inference,dynamically balances workloads across GPUs and CPUs; impact-driven prefetching; MoE-specialized cache management,3,4,2
 
+# ##### Predictive Expert Caching and Offloading
+# Challenge: expert offloading depends on predictable routing locality, but different MoE models expose very different cacheability and runtime correction needs.
+2026,ICLR,Fudan,Not All Models Suit Expert Offloading: On Local Routing Consistency of Mixture-of-Expert Models,local routing consistency; Segment Routing best Performance (SRP); Segment Cache best Hit rate (SCH); expert cache suitability analysis,4,3,3
+2026,DAC,A*STAR,ExpertFlow: Efficient Mixture-of-Experts Inference via Predictive Expert Caching and Token Scheduling,transformer-based routing path predictor; token scheduler grouping predicted routes; predictive expert cache with runtime correction,3,4,3
+
 # ##### Batching and Scheduling
 2025,arXiv,Alibaba,Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference,statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload,,,
 2025,arXiv,Edinburgh,MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching,module-based batching; high-throughput MoE inference; full KV-cache offloading,,,
@@ -534,6 +547,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ODSI,SJTU,Fast and Live Model Auto Scaling with O(1) Host Caching,auto-scaling with minimal caching; optimize parameter loading; enabling fine-grained layer-level scale,3,3,2
 2023,ASPLOS,Google,TelaMalloc: Efficient On-Chip Memory Allocation for Production Machine Learning Accelerators,hybrid heuristic-solver memory allocator for ML accelerators; contention-aware phased allocation strategy,4,4,3
 2025,MICRO,Duke,LLM.265: Video Codecs are Secretly Tensor Codecs,use video compress hardware on GPU to compress LLM tensor; existing idle hardware video encoders and decoders (NVENC/NVDEC) found on modern GPUs,4,4,4
+2026,ICML,Buaa,ReMoE: Boosting Expert Reuse through Router Fine-Tuning in Memory-Constrained MoE LLM Inference,gate-only fine-tuning; temporal locality regularization; cache-friendly routing trace,3,3,2
+2026,arXiv,PKU,UltraEP: Unleash MoE Training and Inference on Rack-Scale Nodes with Near-Optimal Load Balancing,exact-load real-time load balancing; quota-driven planning; rack-scale node native communication,3,3,2
 
 # ##### Architectural Innovations
 2025,arXiv,Shanghai AI,Linear-MoE: Linear Sequence Modeling Meets Mixture-of-Experts,linear sequence modeling with MoE; sparse activation via moe layers; hybrid models combining linear-moe and transformer-moe layers,,,
@@ -543,11 +558,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SJTU,Samoyeds: Accelerating MoE Models with Structured Sparsity Leveraging Sparse Tensor Cores,dual-side structured sparsity; sparse-sparse matrix multiplication kernel; vector-wise + 2:4 hybrid sparsity; token-aware activation compression,,,
 2025,Mips,Cornell,FlashMoE: Fast Distributed MoE in a Single Kernel,mega kernel for MoE model; persistent kernel to reduce CPU overhead,3,4,3
 2026,Mlsys,CMU,Event Tensor: A Unified Abstraction for Compiling Dynamic Megakernel,dynamic shape mega kernel design; atomic increment/decrement for ready queue; symbolic-shaped synchronization primitives,3,4,4
+2026,arXiv,RightNow AI,AutoMegaKernel: A Statically-Checked Agent Harness for Self-Retargeting Megakernel Synthesis,agent-driven megakernel synthesis; static deadlock and race-freedom verification,2,1,1
 
 # #### Long Sequence LLM Systems
 2024,OSDI,SJTU & Alibaba,Infinite-LLM: Efficient LLM Service for Long Context with DistAttention and Distributed KVCache,inefficient model parallelism intra-instance; inefficient resource management inter-instance; KV cache scheduling,,,
 2025,arXiv,PKU,"ByteScale: Efficient Scaling of LLM Training with a 2048K Context Length on More Than 12,000 GPUs",hybrid data parallelism; data-aware sharding; a heuristic algorithm that reorganizes data assignment based on the characteristics of data and pipeline parallelism,,,
 2025,ICML,ByteDance,ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference,offload value cache to CPU and keep outliers on GPU; landmark-guided sparse KV selection per chunk,3,3,3
+2026,arXiv,PJLab,NanoCP: Request-Level Dynamic Context Parallelism for Data-Expert Parallel Decoding,dynamic context parallelism; decoupled MoE communication and KV placement; request-level CP degree for KV-footprint balancing,3,3,3
 
 
 # ##### Sparse Attention
@@ -665,6 +682,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Multi Agent Systems
 # Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
+2025,ACL,UIUC,MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents,multi-agent collaboration and competition benchmark; milestone-based KPIs; coordination protocol evaluation,4,3,3
+2026,arXiv,Univ. of Utah,AgentCollabBench: Diagnosing When Good Agents Make Bad Collaborators,diagnostic benchmark for multi-hop collaboration failures; instruction decay and false-belief contagion; communication topology risk analysis,3,3,3
 2026,arXiv,KAIST,The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective,system breakdown for agent system; large-scale analysis on LLM agents system design; test-time scaling,4,4,3
 
 # #### DSL for agent representation
@@ -711,6 +730,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### LoRA based Optimizations for Multi-Agent Systems
 # Challenge: LoRA import the unreusable parameters, which can not be shared among agents.
+2026,arXiv,SNU,LRAgent: Efficient KV Cache Sharing for Multi-LoRA LLM Agents,KV cache decomposition into shared base and LoRA adapter components; low-rank adapter cache sharing; Flash-LoRA-Attention,3,3,3
 2026,arXiv,SJTU,ForkKV: Scaling Multi-LoRA Agent Serving via Copy-on-Write Disaggregated KV Cache,Disaggregated KV cache for LoRA parameters; copy-on-write mechanism for efficient memory usage; dynamic LoRA parameter management,3,4,4
 
 # ### GPU Kernel Optimizations for Systems
