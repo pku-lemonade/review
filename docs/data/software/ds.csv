@@ -13,7 +13,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: specific bounds of different situations
 2012,OSDI,CMU,PowerGraph: Distributed Graph-Parallel Computation on Natural Graphs,GAS (Gather-Apply-Scatter) decomposition; vertex-cut partitioning; delta caching; parallel locking for high-degree vertices,4,4,4
 2018,PLDI,UT Austin & UIUC,Gluon: A Communication-Optimizing Substrate for Distributed Heterogeneous Graph Analytics,communication-optimizing substrate; heterogeneous processor support; structural/temporal invariant-based communication optimization; memoization of address translation,4,4,4
+2020,PLDI,USC,SympleGraph: Distributed Graph Processing with Precise Loop-Carried Dependency Guarantee,loop-carried dependency guarantee; dependency communication primitives; circulant scheduling; differentiated dependency propagation; dependency double buffering,4,4,4
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
+
+# #### Graph Partitioning for Distributed Processing
+# Challenge: Distributed graph processing performance is often limited by communication overhead and load imbalance; partitioners must handle graph skew, hierarchy-aware communication costs, and balanced vertex/edge placement without loading the full graph into memory.
+2024,SIGMOD,USTC,Play like a Vertex: A Stackelberg Game Approach for Streaming Graph Partitioning,Skewness-aware Vertex-cut Partitioner (S5P); head/tail edge set split; Stackelberg graph game,4,4,4
+2024,TPDS,USTC & CUHK,Two-Dimensional Balanced Partitioning and Efficient Caching for Distributed Graph Analysis,BPart two-dimensional balanced partitioning; BPart-C and BPart-S algorithms; neighbor-aware caching scheme,3,4,3
+2025,SC,NUDT,TianheEngine: Hierarchy-aware Adaptive Partitioning System for Trillion-scale Graph Processing,hierarchy-aware adaptive partitioning; communication hierarchy modeling; sparsity-aware partition strategy,4,5,4
 
 # #### Incremental Dataflow for Recursive Computations
 # Challenge: Maintaining the outputs of recursive/iterative dataflow computations (e.g., Datalog programs, graph analytics) incrementally as base inputs change, while controlling memory overhead and producing concise provenance explanations.
