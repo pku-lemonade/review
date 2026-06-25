@@ -3,7 +3,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: PIM core can be placed at bank level, off-chip buffer level and even inside the SSD controller, and the communication between different levels of PIM/NDP is challenging.
 2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
 2026,HPCA,ETHZ,Conduit: Programmer-Transparent Near-Data Processing Using Multiple Compute-Capable Resources in Solid State Drives,loop auto-vectorization to align with SSD page layout; instruction-granularity offloading via holistic cost function,2,3,2
-
+2026,ISCA,PKU,DIAMoND: Dynamic Inference for Adaptive Edge MoE with Heterogeneous In-NAND and Near-DRAM Compute Architecture, mask-based 3D-NAND matrix mapping strategy; adaptive expert selection with hardware priority queue,3,4,3
+2026,ISCA,Cornell,BAAP: Coupling Compute-in-SRAM with DRAM Banks for Near-Memory Processing,repurposing in-DRAM SRAM scratchpads as Associative Processor arrays; unified ISA with scratchpad; SIMD and Direct Associative Processing modes; vector prefetching unit,4,4,4
 # ### In-Stroage (NAND Flash) Processing
 # #### Near-NAND Array Processing
 # Solution: bypass the NAND Flash controller chip and DRAM/SLC buffer, execute the tasks by near-array units.
@@ -22,7 +23,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,THU,"Lincoln: Real-Time 50~100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory",flash-on-LPDDR-interface for prefill phase; hybrid-bonding-based near-Flash computing for generation phase,3,4,3
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
 2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
-
 2026,ASPLOS,Seoul National,A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs, delayed KV Cache writeback avoiding write amplification; cooperative X-cache for cooperative utilization,2,2,2
 # ### DIMM-PIMs
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
@@ -170,11 +170,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
 # #### Hybrid Bounding-Based PIM
 # Solution: Hybrid Bounding provides massively increased interconnect density and bandwidth by direct copper-to-copper connection.
-2024,ISCA,THU,Exploiting Similarity Opportunities of Emerging Vision AI Models on Hybrid Bonding Architecture,clustering similarity effect architecture for hybrid bonding DRAM; hotspot content SRAM for parallel similarity detection; progressive sparsity detection and balance for computation skipping and workload redistribution,4,4,2
 2025,ISCA,PKU,H2-LLM: Hardware-Dataflow Co-Exploration for Heterogeneous Hybrid-Bonding-based Low-Batch LLM Inference,operator-channel binding; computation-bandwidth trade-off; dataflow-based DSE,4,3,3
 2025,MICRO,THU,3D-PATH: A Hierarchy LUT Processing-in-memory Accelerator with Thermal-aware Hybrid Bonding Integration,sparse-aware hierarchical slow-fast LUT design; multiplier-free floating-point operation by LUT; hotspot-aware hardware with self-throttling sense amplifier,4,2,2
 2025,MICRO,Univ. of British Columbia,RayN: Ray Tracing Acceleration with Near-memory Computing,ray tracing units in 3D stacked DRAM logic layer; BLAS Breaking algorithm to partition BVH tree for load balancing; hybrid memory controller for concurrent GPU and near-memory access,4,3,2
 2025,ICCAD,PKU,FENIX: Flexible and Efficient Hybrid HE/MPC Acceleration with Near-Memory Processing,fine-grained oblivious transfer partitioning to overlap HE and OT operations; batch-aware flexible encoding to reduce rotation overhead; near-bank NMP to offload memory-bound HE/OT primitives,3,2,2
+2025,ICCAD,PKU,H2EAL: Hybrid-Bonding Architecture with Hybrid Sparse Attention for Efficient Long-Context LLM Inference,hybrid static-dynamic sparse attention algorithm; interleaved memory-compute co-placement; network-maxflow-based mapping with communication-minimal tiling,2,2,2
 # #### HMC or HMC-like PIM
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. 
 # Solution: Use TSVs to provide TB/s level bandwidth in inter-bank communication & band-to-logic layer communication.
