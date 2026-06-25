@@ -188,6 +188,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,NVIDIA,FlashInfer: Efficient and Customizable Attention Engine for LLM Inference Serving,block-sparse format; customizable attention template; dynamic load-balanced scheduling framework,,,
 2025,arXiv,PKU,FairKV: Balancing Per-Head KV Cache for Fast Multi-GPU Inference,imbalanced KV cache compression mitigation; fair-copying for load balancing; best-effort assignment,,,
 2026,FAST,SJTU,SolidAttention: Low-Latency SSD-based Serving on Memory-Constrained PCs,token-level interleaving of KV cache for SSD bandwidth; speculative prefetcher for predictive cache loading; fine-grained microtask orchestration and synchronization reuse,4,3,2
+2026,arXiv,XMU,Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving,GPU-native SSD KV block object abstraction; gio_uring for asynchronous GPU direct object I/O,3,3,4
+2026,FAST,THU,Bidaw: Enhancing Key-Value Caching for Interactive LLM Serving via Bidirectional Computation–Storage Awareness,I/O-aware request scheduling by dual queues and disk-Highest Response Ratio Next policy; previous-answer-based KVC eviction; selective caching of storage-efficient activation tensors,4,3,2
 
 # #### KV Cache Evict Systems
 # Challenge: selectively discard the least important key-value pairs to free up memory for longer contexts or larger batch sizes without significantly degrading the model's generation quality or increasing computational overhead for the eviction process itself.
@@ -485,6 +487,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,Mlsys,SJTU,FlashDecoding++: Faster Large Language Model Inference on GPUs,asynchronized softmax with unified max value; flat GEMM optimization with double buffering; heuristic dataflow with hardware resource adaptation,4,4,3
 2024,MICRO,UC Irvine,SCAR: Scheduling Multi-Model AI Workloads on Heterogeneous Multi-Chiplet Module Accelerators,two-level scheduling framework; greedy layer packing algorithm for time window assignment; inter-chiplet pipelining and dynamic chiplet regrouping,3,4,2
 2025,PPoPP,ISTA,MARLIN: Mixed-Precision Auto-Regressive Parallel Inference on Large Language Models,mixed-precision inference kernel, batched inference optimization; GPU kernel optimization; 2:4 structured sparsity,4,4,4
+2026,arXiv,DeepSeek,DeepSeek-V4: Towards Highly Efficient Million-Token Context Intelligence,hybrid sparse attention(compressed + heavily compressed attention); heterogeneous KVCache and State Cache; direct on-disk KV cache storage,4,5,5
 
 # #### SLO-Aware Systems
 # Challenge: providing service for users to meet specific latency requirements with limited resources.
