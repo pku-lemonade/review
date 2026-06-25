@@ -31,7 +31,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### CXL-based Disaggregated Memory
 # ##### CXL Memory Tiering & Profiling
 2024,MICRO,PKU,NeoMem: Hardware-Software Co-Design for CXL-Native Memory Tiering,device-side memory profiling unit; sketch-based hot page detector with error-bound estimation; dynamic hotness threshold adjustment based on statistics,2,2,3
-2025,ASPLOS,Yale,PULSE: Accelerating Distributed Pointer-Traversals on Disaggregated Memory,iterator-based programming model; disaggregated accelerator architecture; in-network routing for distributed traversal,3,4,3
+2025,HPCA,UIUC,SkyByte: Architecting an Efficient Memory-Semantic CXL-based SSD with OS and Hardware Co-design,coordinated context switch via long-delay CXL.mem hint; cacheline-granular write log plus page-level data cache; adaptive hot-page migration from CXL-SSD to host DRAM,4,3,4
 2025,arXiv,Micron,Architectural and System Implications of CXL-enabled Tiered Memory,CXL parallelism bottleneck analysis; MIKU dynamic request control; ToR-based service time estimation,4,4,3
 # ##### CXL Shared Memory Coherence & Transactions
 2025,arXiv,PKU,Enabling Efficient Transaction Processing on CXL-Based Memory Sharing,hybrid coherence primitive for transactional data; hardware-assisted loose coherence,3,2,2
