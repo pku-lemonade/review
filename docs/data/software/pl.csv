@@ -120,7 +120,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,OOPSLA,Reservoir Labs && Stanford,A Sparse Iteration Space Transformation Framework for Sparse Tensor Algebra,sparse iteration space transformations; derived iteration spaces; nonzero-space tiling; sparse scheduling API,4,4,4
 2022,PLDI,MIT,Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model,automatic asymptotic scheduler; asymptotic cost model; Pareto frontier schedule pruning; TACO schedule search,4,4,4
 2023,PLDI,Stanford,Mosaic: An Interoperable Compiler for Tensor Algebra,verified external-function binding; Mosaic function interface; automatic binding search; heterogeneous tensor algebra codegen,4,4,4
-2025,SIGMOD,UW,Galley: Modern Query Optimization for Sparse Tensor Programs,cost-based lowering of sparse tensor algebra; FAQ-based aggregation decomposition; logical-physical optimization split; sparse tensor statistics for cardinality estimation,4,3,3
+2025,SIGMOD,UW,Galley: Modern Query Optimization for Sparse Tensor Programs,cost-based lowering of sparse tensor algebra; FAQ (Functional Aggregate Queries)-based aggregation decomposition; logical-physical optimization split; sparse tensor statistics for cardinality estimation,4,3,3
 
 # #### Dynamic Assembly and Workspaces
 # Challenge: Sparse tensor computations often need dynamic updates or scattered writes into sparse results whose formats do not support efficient random insertion.
