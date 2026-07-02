@@ -110,6 +110,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,OOPSLA,MIT,The Tensor Algebra Compiler,TACO compiler; iteration graph; merge lattice; compound tensor algebra codegen,4,4,5
 2018,OOPSLA,MIT,Format Abstraction for Sparse Tensor Algebra Compilers,coordinate hierarchies; level formats abstraction; property-based merge lattice optimizations; level iterator conversion,4,4,3
 2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
+2025,OOPSLA,MIT,Finch: Sparse and Structured Tensor Programming with Control Flow,looplet-based structured coiteration; control flow over structured tensors (if/break/multiple assignment); level-format structure abstraction; automatic concordization pass,4,4,4
 
 # ### Sparse Tensor Scheduling and Assembly
 
@@ -119,6 +120,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,OOPSLA,Reservoir Labs && Stanford,A Sparse Iteration Space Transformation Framework for Sparse Tensor Algebra,sparse iteration space transformations; derived iteration spaces; nonzero-space tiling; sparse scheduling API,4,4,4
 2022,PLDI,MIT,Autoscheduling for Sparse Tensor Algebra with an Asymptotic Cost Model,automatic asymptotic scheduler; asymptotic cost model; Pareto frontier schedule pruning; TACO schedule search,4,4,4
 2023,PLDI,Stanford,Mosaic: An Interoperable Compiler for Tensor Algebra,verified external-function binding; Mosaic function interface; automatic binding search; heterogeneous tensor algebra codegen,4,4,4
+2025,SIGMOD,UW,Galley: Modern Query Optimization for Sparse Tensor Programs,cost-based lowering of sparse tensor algebra; FAQ (Functional Aggregate Queries)-based aggregation decomposition; logical-physical optimization split; sparse tensor statistics for cardinality estimation,4,3,3
 
 # #### Dynamic Assembly and Workspaces
 # Challenge: Sparse tensor computations often need dynamic updates or scattered writes into sparse results whose formats do not support efficient random insertion.
@@ -189,6 +191,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,DAC,PKU & Falcon & UCLA,Automated Systolic Array Architecture Synthesis for High Throughput CNN Inference on FPGAs,2D systolic array architecture; analytical model for performance and resource; two-phase design space exploration; end-to-end C-to-FPGA automation flow,3,4,3
 2019,ISCAS,PKU & UCLA,Frequency Improvement of Systolic Array-Based CNNs on FPGAs,front-end accumulation chain segmentation; back-end topology-aware floorplanning constraints; frequency optimization for systolic arrays,3,4,3
 2020,ICCAD,Cornell,SuSy: A Programming Model for Productive Construction of High-Performance Systolic Arrays on FPGAs,decoupled algorithm (Uniform Recurrence Equations, UREs) and spatial mapping (schedule) for systolic arrays; high-level space-time transformation primitive for architectural exploration; Uniform Recurrence Equation (URE)-based temporal definition for broad systolic algorithm coverage,4,4,3
+2021,FPGA,UCLA,AutoSA: A Polyhedral Compiler for High-Performance Systolic Arrays on FPGA,polyhedral space-time transformation; array partitioning for systolic arrays; latency hiding via double buffering; SIMD vectorization; two-level analytical+learned design space exploration,4,4,4
 2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
 
 # ##### HLS for Advanced Memory/Packaging
