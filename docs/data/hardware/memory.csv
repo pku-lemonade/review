@@ -185,13 +185,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### 3D-Stacked PIM
 # Challenge: There is no direct physical interconnection paths in DIMM-based, bank-level uniform NDP like UPMEM.
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
-# #### Hybrid Bounding-Based PIM
+# ### Hybrid Bounding-Based PIM
 # Solution: Hybrid Bounding provides massively increased interconnect density and bandwidth by direct copper-to-copper connection.
 2025,ISCA,PKU,H2-LLM: Hardware-Dataflow Co-Exploration for Heterogeneous Hybrid-Bonding-based Low-Batch LLM Inference,operator-channel binding; computation-bandwidth trade-off; dataflow-based DSE,4,3,3
 2025,MICRO,THU,3D-PATH: A Hierarchy LUT Processing-in-memory Accelerator with Thermal-aware Hybrid Bonding Integration,sparse-aware hierarchical slow-fast LUT design; multiplier-free floating-point operation by LUT; hotspot-aware hardware with self-throttling sense amplifier,4,2,2
 2025,MICRO,Univ. of British Columbia,RayN: Ray Tracing Acceleration with Near-memory Computing,ray tracing units in 3D stacked DRAM logic layer; BLAS Breaking algorithm to partition BVH tree for load balancing; hybrid memory controller for concurrent GPU and near-memory access,4,3,2
 2025,ICCAD,PKU,FENIX: Flexible and Efficient Hybrid HE/MPC Acceleration with Near-Memory Processing,fine-grained oblivious transfer partitioning to overlap HE and OT operations; batch-aware flexible encoding to reduce rotation overhead; near-bank NMP to offload memory-bound HE/OT primitives,3,2,2
+2026,ISCA,d-Matrix,Early Silicon of Raptor: The First 3D-DRAM Accelerator for Generative Inference,stream-blocking for KV-cache mapping; stream flipping for pinless data bus inversion; bank-chaining topology-preserving redundancy,5,3,5
+# #### On-chip Network for Hybrid Bounding-based NMP
+# Challenge: Like HMC, Hybrid Bounding-based NMP also need effective on-chip network topology for cross-bank communication.
 2025,ICCAD,PKU,H2EAL: Hybrid-Bonding Architecture with Hybrid Sparse Attention for Efficient Long-Context LLM Inference,hybrid static-dynamic sparse attention algorithm; interleaved memory-compute co-placement; network-maxflow-based mapping with communication-minimal tiling,2,2,2
+2026,ISCA,THU,Bridging Efficiency and Scalability in LLM System via 3D Hybrid PIM with 2D In-Transit Computation,"3D hybrid bonding of PIM DRAM and SRAM; computable NoC with single-operand driven ALU; hierarchical SIMD-to-MIMD instruction set architecture,4,4,2
 # #### HMC or HMC-like PIM
 # Challenge: No direct physical connectivity between the banks in the DIMM-based NDP architecture. 
 # Solution: Use TSVs to provide TB/s level bandwidth in inter-bank communication & band-to-logic layer communication.
