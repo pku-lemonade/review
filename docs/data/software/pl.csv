@@ -53,6 +53,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,DAC,PKU,Memory and Computation Coordinated Mapping of DNNs onto Complex Heterogeneous SoC,dataflow grouping; location-aware accelerator mapping; hybrid scheduling algorithm,4,3,2
 2024,DAC,THU,GSPO: A Graph Substitution and Parallelization Joint Optimization Framework for DNN Inference,flow-based graph partition; joint optimization computational graph(JOCG); joint cost model; backtracking search algorithm,4,4,2
 2024,ASPLOS,PKU,"MAGIS: Memory Optimization via Coordinated Graph Transformation and Scheduling for DNN",Fission Transformation (F-Trans) for graph splitting; Dimension Graph (D-Graph) representation; incremental scheduling algorithm for fast evaluation,4,4,4
+2024,SC,WHU,MCFuser: High-Performance and Rapid Fusion of Memory-Bound Compute-Intensive Operators,deep/flat tiling based fusion space; DAG analysis based load/store optimization; analytical performance model,4,4,3
 
 # #### TinyML & Edge Compilers
 # Solution: address extreme memory and compute constraints on microcontrollers through specialized compilation strategies like fine-grained memory planning and redundancy-free tensor splitting.
