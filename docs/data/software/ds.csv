@@ -190,8 +190,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,FAST,SJTU,SolidAttention: Low-Latency SSD-based Serving on Memory-Constrained PCs,token-level interleaving of KV cache for SSD bandwidth; speculative prefetcher for predictive cache loading; fine-grained microtask orchestration and synchronization reuse,4,3,2
 2026,arXiv,XMU,Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving,GPU-native SSD KV block object abstraction; gio_uring for asynchronous GPU direct object I/O,3,3,4
 2026,FAST,THU,Bidaw: Enhancing Key-Value Caching for Interactive LLM Serving via Bidirectional Computation–Storage Awareness,I/O-aware request scheduling by dual queues and disk-Highest Response Ratio Next policy; previous-answer-based KVC eviction; selective caching of storage-efficient activation tensors,4,3,2
-2026,arXiv,XMU,Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving,GPU-native SSD KV block object abstraction; gio_uring for asynchronous GPU direct object I/O,3,3,4
-2026,FAST,THU,Bidaw: Enhancing Key-Value Caching for Interactive LLM Serving via Bidirectional Computation–Storage Awareness,I/O-aware request scheduling by dual queues and disk-Highest Response Ratio Next policy; previous-answer-based KVC eviction; selective caching of storage-efficient activation tensors,4,3,2
 
 # #### KV Cache Evict Systems
 # Challenge: selectively discard the least important key-value pairs to free up memory for longer contexts or larger batch sizes without significantly degrading the model's generation quality or increasing computational overhead for the eviction process itself.
