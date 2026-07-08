@@ -265,6 +265,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,FCS,HUST,"A survey on dynamic graph processing on GPUs: concepts, terminologies and systems",taxonomy of GPU graph updating (Array/CSR/Chain-based) and computing; standardization of Stream/Snapshot/Temporal graph models,,,
 2024,VLDB,PKU,Towards Sufficient GPU-Accelerated Dynamic Graph Management: Survey and Experiment,topology structure; attribute storage; auxiliary structures,4,4,2
 
+# #### Dynamic Graph Storage Systems
+# Challenge: Maintaining the latest mutable graph state under high-rate edge updates while preserving efficient neighbor scans and concurrent analytics.
+# Solution: Combine update-friendly logs or mutable indexes with read-friendly adjacency/CSR layouts, plus version control for consistent latest-state graph analytics.
+2019,FAST,GWU,GraphOne: A Data Store for Real-time Analytics on Evolving Graphs,hybrid edge-log adjacency store; dual versioning; GraphView abstraction; edge-sharding archiving,4,4,4
+2024,SIGMOD,USTC,Spruce: A Fast yet Space-saving Structure for Dynamic Graph Storage,vEB-tree-like vertex index; bufferblock and sortedblock edge storage; improved ROWEX protocol; per-vertex logblock MVCC,4,4,4
+2024,SIGMOD,NEU & Alibaba,LSMGraph: A High-Performance Dynamic Graph Storage System with Multi-Level CSR,MemGraph memory cache; multi-level CSR; multi-level index; vertex-grained version control,4,4,4
+
 # #### In-Memory Data Structures
 # Solution: Data organizations optimizing in-memory topology updates and local access on GPUs.
 2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
