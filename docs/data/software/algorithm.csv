@@ -269,7 +269,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Maintaining the latest mutable graph state under high-rate edge updates while preserving efficient neighbor scans and concurrent analytics.
 # Solution: Combine update-friendly logs or mutable indexes with read-friendly adjacency/CSR layouts, plus version control for consistent latest-state graph analytics.
 2019,FAST,GWU,GraphOne: A Data Store for Real-time Analytics on Evolving Graphs,hybrid edge-log adjacency store; dual versioning; GraphView abstraction; edge-sharding archiving,4,4,4
-2024,SIGMOD,USTC,Spruce: A Fast yet Space-saving Structure for Dynamic Graph Storage,vEB-tree-like vertex index; bufferblock and sortedblock edge storage; improved ROWEX protocol; per-vertex logblock MVCC,4,4,4
+2024,SIGMOD,USTC,Spruce: A Fast yet Space-saving Structure for Dynamic Graph Storage,van Emde Boas (vEB) tree-like vertex index; bufferblock and sortedblock edge storage; improved Read-Optimized Write EXclusion (ROWEX) protocol; per-vertex logblock multi-version concurrency control (MVCC),4,4,4
 2025,SIGMOD,NEU & Alibaba,LSMGraph: A High-Performance Dynamic Graph Storage System with Multi-Level CSR,MemGraph memory cache; multi-level CSR; multi-level index; vertex-grained version control,4,4,4
 
 # #### In-Memory Data Structures
