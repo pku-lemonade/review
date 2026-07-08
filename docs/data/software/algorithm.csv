@@ -40,6 +40,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Early exit LLMs aim to reduce inference time and computational cost by allowing the model to produce outputs at intermediate layers when sufficient confidence is achieved.
 2020,ACL,UWaterloo,DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference,intermediate off-ramps; Frozen backbone fine-tuning; entropy-based inference threshold,3,3,4
 2020,ACL,PKU & Tencent,FastBERT: a Self-distilling BERT with Adaptive Inference Time,branch-wise self-distillation; adaptive conditional computation,4,4,4
+2025,ISCA,SJTU,SpecEE: Accelerating Large Language Model Inference with Speculative Early Exiting,speculation-based lightweight predictor; two-level heuristic predictor scheduling; context-aware merged mapping for speculative early exiting,4,4,3
 
 # ##### LLM Transformer
 # Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
