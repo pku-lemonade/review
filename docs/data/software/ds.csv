@@ -195,6 +195,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: selectively discard the least important key-value pairs to free up memory for longer contexts or larger batch sizes without significantly degrading the model's generation quality or increasing computational overhead for the eviction process itself.
 2023,NIPS,UT-Austin,H$_2$O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models,sparsity for small cache size; heavy-hitters; greedy algorithm for low-cost policy,,,
 2024,arXiv,Fujitsu,CO2: Precise Attention Score Observation for improving KV Cache Replacement in Large Language Models,long measurement step; decay of the accumulated attention score; adjusting FIFO cache size,,,
+2026,arXiv,Peking University,Multi-Segment Attention: Enabling Efficient KV-Cache Management for Faster Large Language Model Serving,multi-segment attention; asymcache expected-latency-aware kv eviction; non-contiguous kv cache reuse; adaptive chunking scheduler; position-aware recomputation cost,3,3,2
 
 # #### Systems with Other Caches
 # Solution: use other caches (not just KV cache) to improve the performance of LLM inference.
@@ -378,6 +379,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Rutgers,Interactive Speculative Planning: Enhance Agent Efficiency through Co-design of System and User Interface,active user intervention; speculative planning algorithm; UI-level rescheduling algorithm,,,
 2024,arXiv,USTC,Parallel Speculative Decoding with Adaptive Draft Length,adaptive draft length; pre-verify and post-verify; draft-then-verify framework; mutual waiting problem,,,
 2024,arXiv,SEU,SEED: Accelerating Reasoning Tree Construction via Scheduled Speculative Decoding,reasoning tree construction; parallel drafting with speculative decoding; FCFS queue verification,,,
+2025,arXiv,Columbia University,Speculative Actions: A Lossless Framework for Faster Agentic Systems,speculative actions; actor-speculator api loop; lossless speculative tool calls; breadth-focused branch selection; cost-latency analysis,3,2,3
 
 # ##### Spec + Others
 2025,arXiv,Huawei,Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling,speculative MoE; speculative token shuffling; speculative expert pre-grouping,,,
@@ -585,6 +587,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ISCA,UW,Splitwise: Efficient Generative LLM Inference Using Phase Splitting,optimized cache context transfer; performance per dollar; performance per watt; exploration of homogeneous and heterogeneous cluster deployments,,,
 2024,arXiv,CMU,A System for Microserving of LLMs,fine-grained sub-request level actions; dynamic reconfiguration according to workloads; unified KV cache abstraction,,,
 2025,arXiv,PKU,ThunderServe: High-performance and Cost-efficient LLM Serving in Cloud Environments,two-level hierarchical optimization; tabu search algorithm for GPU partition; a lightweight re-scheduling mechanism,,,
+2026,arXiv,SJTU,Demystifying the Design Space and Best Practices for Heterogeneous LLM Inference and Serving,heterogeneous prefill-decode design space; runtime kv state portability; compute placement; kv representation contract; kv ownership lifecycle,3,3,3
 
 # ##### P-D Disaggregated System Optimizations
 2025,arXiv,ByteDance,KVDirect: Distributed Disaggregated LLM Inference,tensor-centric communication mechanism; pull-based KV cache transfer; dynamic GPU resource scheduling via RDMA,,,
@@ -598,6 +601,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,ByteDance,MegaScale-Infer: Serving Mixture-of-Experts at Scale with Disaggregated Expert Parallelism,the first the disaggregated attention and FFN disaggregate; ping-pong pipeline parallel; high performance M2N communication,4,3,3
 2025,arXiv,StepFun,Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding,detailed AFD math analysis; co-design of model and system; low decode latenty implementation,3,4,2
 2025,arXiv,SJTU,Expert-as-a-Service: Towards Efficient Scalable and Robust Large-scale MoE Serving,treat expert on independent servers; expert as a service enable scalable MoE serving,3,3,2
+2026,arXiv,HKUST(GZ),KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding,weightless attention nodes; elastic token-range routing; query-first core-attention dispatch; inter-layer kernel pipelining; decode-time kv capacity scaling,3,3,2
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
@@ -684,6 +688,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
 2025,ACL,UIUC,MultiAgentBench: Evaluating the Collaboration and Competition of LLM agents,multi-agent collaboration and competition benchmark; milestone-based KPIs; coordination protocol evaluation,4,3,3
 2026,arXiv,Univ. of Utah,AgentCollabBench: Diagnosing When Good Agents Make Bad Collaborators,diagnostic benchmark for multi-hop collaboration failures; instruction decay and false-belief contagion; communication topology risk analysis,3,3,3
+2026,arXiv,Penn State,Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation,gaiatrace token-level traces; vidur-agent trace-driven simulation; multi-model agentic workload characterization; task-level latency metrics; prefix caching impact,3,2,2
 2026,arXiv,KAIST,The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective,system breakdown for agent system; large-scale analysis on LLM agents system design; test-time scaling,4,4,3
 
 # #### DSL for agent representation
