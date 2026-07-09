@@ -138,6 +138,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ATC,THU,Weaver: Efficient Multi-LLM Serving with Attention Offloading,GPU memory harvest across GPU; harvest GPU memory and SM for hot LLM attention computation; GPU control flow optimization,3,3,3
 2026,Eurosys,SJTU,KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving,parameter-centric memory management for coping with memory overloading; online parameter dropping,2,2,3
 2025,OSDI,Stanford,Strata: Hierarchical Context Caching for Long Context Language Model Serving,GPU-assisted I/O for mitigating key-value cache fragmentation; decoupled CPU and GPU memory layouts via on-the-fly transformation,3,3,3
+2026,arXiv,UCSD,SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering,lookahead context engineering; segment-decomposable transformations; asynchronous transformed kv precompute; slo-aware lookahead scheduling; agent framework integration,4,3,3
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -169,6 +170,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,Huawei,Joint Encoding of KV-Cache Blocks for Scalable LLM Serving,encoding KVC blocks beyond prefix cache; like the blend in CacheBlend,2,2,1
 2025,arXiv,UCSB,KVLink: Accelerating Large Language Models via Efficient KV Cache Reuse,append link tokens to recover KVC; adjusting positional embeddings of KVC at runtime; using trainable special tokens to restore self-attention,3,3,2
 2026,FAST,SJTU,CacheSlide: Unlocking Cross Position-Aware KV Cache Reuse for Accelerating LLM Serving,CCPE (Chunked Contextual Position Encoding) for task-specific positional alignment; weighted correction attention for partial KV recompute and similarity-gated fusion,4,2,2
+2026,arXiv,PKU,Hypic: Accelerating Hybrid-Attention LLM Serving with Position-Independent Caching,position-independent caching for hybrid attention; cached linear-attention transitions; boundary seam recomputation; segment-parallel cold prefill; sglang implementation,3,3,3
 
 # ##### KVC swap for temporal event
 # Challenge: events like function call will lead to KVC idling in GPU memory, swap out and then swap in is a tradeoff between recomputation and memory utilization
@@ -380,6 +382,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,USTC,Parallel Speculative Decoding with Adaptive Draft Length,adaptive draft length; pre-verify and post-verify; draft-then-verify framework; mutual waiting problem,,,
 2024,arXiv,SEU,SEED: Accelerating Reasoning Tree Construction via Scheduled Speculative Decoding,reasoning tree construction; parallel drafting with speculative decoding; FCFS queue verification,,,
 2025,arXiv,Columbia University,Speculative Actions: A Lossless Framework for Faster Agentic Systems,speculative actions; actor-speculator api loop; lossless speculative tool calls; breadth-focused branch selection; cost-latency analysis,3,2,3
+2026,arXiv,THU,SPORK: Self-Speculative Forking to Accelerate Agentic LLM Inference,self-speculative tool execution; kv-cache forked probe; confidence-gated early tool dispatch; rejected-probe token reuse; training-free agent latency reduction,3,3,2
 
 # ##### Spec + Others
 2025,arXiv,Huawei,Speculative MoE: Communication Efficient Parallel MoE Inference with Speculative Token and Expert Pre-scheduling,speculative MoE; speculative token shuffling; speculative expert pre-grouping,,,
