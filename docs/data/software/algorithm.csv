@@ -40,6 +40,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Early exit LLMs aim to reduce inference time and computational cost by allowing the model to produce outputs at intermediate layers when sufficient confidence is achieved.
 2020,ACL,UWaterloo,DeeBERT: Dynamic Early Exiting for Accelerating BERT Inference,intermediate off-ramps; Frozen backbone fine-tuning; entropy-based inference threshold,3,3,4
 2020,ACL,PKU & Tencent,FastBERT: a Self-distilling BERT with Adaptive Inference Time,branch-wise self-distillation; adaptive conditional computation,4,4,4
+2025,ISCA,SJTU,SpecEE: Accelerating Large Language Model Inference with Speculative Early Exiting,speculation-based lightweight predictor; two-level heuristic predictor scheduling; context-aware merged mapping for speculative early exiting,4,4,3
 
 # ##### LLM Transformer
 # Solution: Transformer is an old algorithm, which have many problems like square complexity. These problems raise new algorithms to fix the old architecture.
@@ -248,6 +249,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,JETCAS,Uppsala,Game-of-Life Temperature-Aware DVFS Strategy for Tile-Based Chip Many-Core Processors,GoL temperature-aware DVFS; core/un-core performance characterizer; GoL DVFS controller,4,3,2
 2024,ISCA,IBM&CU,BlitzCoin: Fully Decentralized Hardware Power Management for Accelerator-Rich SoCs,coin exchange algorithm; unified voltage and frequency regulation,3,4,2
 2024,DATE,KIT,Multi-Agent Reinforcement Learning for Thermally-Restricted Performance Optimization on Manycores,RL-based thermally-restricted performance optimization; multi-agent based per-core DVFS,4,3,2
+
+# ### Interger Linear Programming
+# Solution: Accelerate the solving process for ILP problems through superior mathematical modeling or by preprocessing complex initial constraints.
+1994,TVLSI,RPI,Analyzing and Exploiting the Structure of the Constraints in the ILP Approach to the Scheduling Problem,polyhedral theory based well-structured formualtion; clique constraints on constraint graph; modified ASAP/ALAP based preprocessing,4,3,3
+2023,CF,UNICT,Memory-Aware DNN Algorithm-Hardware Mapping via Integer Linear Programming,divisor and one-hot based dimension model formulation; memory-aware constraints; piecewise-linear approximation,3,3,2
+2025,HPCA,NTNU,HILP: Accounting for Workload-Level Parallelism in System-on-Chip Design Space Exploration,JSSP based heterogeneous SoC scheduling; MiniZinc based constraints description; SoC design space exploration,4,4,2
 
 # ## Data structures
 # Solution: organizing and storing data efficiently to enable fast access, modification, and processing

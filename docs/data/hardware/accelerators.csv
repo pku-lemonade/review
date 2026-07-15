@@ -32,6 +32,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
 2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 2019,ASPDAC,THU & UCB,GraphSAR: A Sparsity-Aware Processing-in-Memory Architecture for Large-Scale Graph Processing on ReRAMs,sparsity-aware recursive block partitioning with density threshold 0.5; hybrid-centric block-list and edge-list processing model; lightweight graph clustering via vertex index remapping; single-bit ReRAM cell implementation for unweighted algorithms,3,3,3
+# #### Multi-FPGA Graph Accelerators
+# Challenge: Scaling FPGA graph processing across boards creates irregular communication, cross-board workload imbalance, and low overlap between graph computation and remote vertex/update exchange.
+# Solution: Partition graph work across FPGAs with scheduling, work stealing, and communication-computation overlap to keep multiple boards busy while reducing remote-transfer overhead.
+2024,ICFPT,UVA,Swift: A Multi-FPGA Framework for Scaling Up Accelerated Graph Analytics,decoupled asynchronous GAS pipeline; import-frontier and export-frontier stages; recursive BRAM tree update partitioning; vertex-interval workload placement,3,4,2
+2025,SIGMOD,NUS,Clementi: Efficient Load Balancing and Communication Overlap for Multi-FPGA Graph Processing,remote-apply GAS pattern; architecture-oriented performance model; greedy workload scheduling with conflict rescheduling; ring-topology global apply pipeline,4,4,3
+# #### Graph Accelerator Generation
+# Challenge: FPGA graph accelerators require low-level hardware expertise, and template-based frameworks couple algorithms, programming models, and architectures too tightly for flexible graph workload support.
+# Solution: Use graph-specific languages and compiler backends to generate FPGA graph accelerators while automatically composing reusable memory, pipeline, and data-routing optimizations.
+2025,LCTES,ICT & UCAS,Graphitron: A Domain Specific Language for FPGA-Based Graph Processing Accelerator Generation,Graphitron DSL; vertex and edge primitive data types; IR-to-high-level synthesis (HLS) compiler pipeline; autonomous pipelining-caching-shuffling backend,3,4,3
 # #### Dynamic Graph Accelerators
 # Challenge: Edge update, Graph store data structure design
 2021,FPGA,HUST,GraSU: A Fast Graph Update Library for FPGA-based Dynamic Graph Processing,differential data management based on spatial similarity; Incremental Value Measurer (IVM); Value-Aware Memory Manager (VMM),4,4,3
@@ -46,6 +55,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Graph Mining Accelerators
 # Challenge: Complex graph algorithms, Irregular access patterns
 2021,ISCA,MIT,FlexMiner: A Pattern-Aware Accelerator for Graph Pattern Mining,pattern-aware GPM accelerator; software/hardware co-design; pattern-specific execution plan; connectivity map (c-map),4,4,3
+2026,SIGMOD,Heidelberg & SAP,GraphMatch: Subgraph Query Processing on FPGAs,AllCompare FPGA-native parallel set intersection replacing sequential LeapFrog; worst-case optimal join (WCOJ)-based matching source-filter-extender-sink pipeline; cached fetcher architecture for repeated input set reuse,3,4,3
+# #### Graph Random Walk Accelerators
+# Challenge: Graph random walks require step-by-step probabilistic traversal with strong inter-step data dependencies and highly irregular random memory access; existing FPGA accelerators suffer from pipeline bubbles caused by workload imbalance and static scheduling that cannot adapt to stochastic query termination.
+2023,SIGMOD,NUS,LightRW: FPGA Accelerated Graph Dynamic Random Walks,parallelized Weighted Reservoir Sampling (WRS) for FPGA pipelined graph dynamic random walks (GDRW); degree-aware cache replacing low-degree with high-degree vertex neighbor addresses; dynamic burst engine scheduling hybrid long/short burst lengths at runtime,3,4,3
+2026,HPCA,NUS,RidgeWalker: Perfectly Pipelined Graph Random Walks on FPGAs,Markov-based stateless task decomposition for out-of-order GRW execution; zero-bubble query scheduler via M/M/1[N] queuing model with formal bubble-free guarantee; butterfly-interconnect Task Router for per-hop data-aware pipeline routing,4,4,3
 # ### DNN Accelerators
 # #### GEMM
 2020,HPCA,Georgia Tech,SIGMA: A Sparse and Irregular GEMM Accelerator with Flexible Interconnects for DNN Training,flexible dot product engine; forwarding adder network,4,2,3
@@ -68,13 +82,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Mamba's element-wise operations are incompatible with Tensor Core reduction trees; nonlinear functions (exp, SiLU) require large dedicated hardware units; and element-wise ops have limited data sharing making standard tiling inapplicable.
 # Solution: Reconfigurable PE array that can disable reduction trees for element-wise ops, decompose nonlinear functions into element-wise primitives, and apply intra/inter-operation buffer management.
 2024,ICCAD,SJTU,MARCA: Mamba Accelerator with ReConfigurable Architecture,reduction alternative PE array architecture toggling reduction tree for linear vs element-wise ops; fast biased exponential algorithm decomposing exp into shift and element-wise ops; piecewise SiLU approximation reusing reconfigurable PEs; intra-operation and inter-operation buffer management strategy,4,3,4
-# ##### Accelerators facing Memory Wall
-# Challenge: LLMs require large amounts of memory bandwidth to store and access the model parameters and intermediate results which can lead to memory bottlenecks and reduced performance.
+# ##### LLM Memory-Wall Dataflow and Compute
+# Challenge: LLM accelerators must reduce movement of weights, activations, and attention intermediates without relying only on larger memory capacity.
 2023,ASPLOS,Gatech,FLAT: An Optimized Dataflow for Mitigating Attention Bottlenecks,inter-operator tensor-tensor fusion; fine-grained execution tiling; map-space exploration,3,3,2
 2024,ISCA,Furiosa AI,TCP: A Tensor Contraction Processor for AI Workloads,tensor contraction as a hardware primitive; circuit-switched fetch network for hierarchical data reuse; Einstein summation for tactic exploration,4,3,3
 2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
+# ##### LLM Memory Capacity and Cache Compression
+# Challenge: Edge and single-node LLM inference are bottlenecked by model/KV-cache capacity and repeated cache traffic, so accelerators need compression or denser on-chip storage with careful refresh and scheduling.
 2025,arXiv,SJTU,ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM,hybrid ROM-SRAM architecture for on-device LLM; B-ROM design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models,,,
+2025,MICRO,NYU,Kelle: Co-design KV Caching and eDRAM for Efficient LLM Serving in Edge Computing,eDRAM-based on-chip KV-cache storage; attention-based eviction and recomputation policy (AERP); two-dimensional adaptive refresh policy (2DRP) with Kelle scheduler,4,3,3
 2025,ISCA,Duke,Ecco: Improving Memory Bandwidth and Capacity for LLMs via Entropy-Aware Cache Compression,entropy-aware cache compression for LLMs; group-wise non-uniform quantization; shared k-means patterns; parallel Huffman hardware decoder,4,3,3
+2025,ISCA,KAIST,Oaken: Fast and Efficient LLM Serving with Online-Offline Hybrid KV Cache Quantization,online-offline hybrid KV cache quantization; group-shift quantization; fused dense-and-sparse encoding; accelerator DMA quantization and dequantization engines plus MMU,4,4,3
 # ##### Compiler-Scheduled Cacheless Architecture
 # Challenge: Reactive hardware architectures (like GPUs) devote significant area and power to dynamic scheduling and caching, which leads to unpredictable tail latencies and limits the compute utilization in large-scale distributed systems.
 2020,ISCA,Groq,Think Fast: A Tensor Streaming Processor (TSP) for Accelerating Deep Learning Workloads,Space-time determined;Functionally Sliced and Data stream Microarchitecture,4,5,4
@@ -85,6 +103,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,HPCA,MIT,SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning,cascade pruning; high-parallelism top-K engine; progressive quantization,3,4,4
 2024,ASPLOS,CMU,SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification,tree-based speculative inference; topology-aware causal mask; multi-step speculative sampling,4,4,4
 2025,MICRO,KAIST,HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models,PipeFlash fine-grained pipelining for Attention; PipeSSD fused pipelined execution for Mamba-2; Unified Reconfigurable Streamlined Core (URSC);inter-operation dependency mitigation,4,3,3
+2026,ASPLOS,SJTU & SEU & EIT,DFVG: A Heterogeneous Architecture for Speculative Decoding with Draft-on-FPGA and Verify-on-GPU,FPGA draft generation with GPU verification for speculative decoding; hardware-aware dynamic draft tree using confidence and resource limits; stage-decoupled heterogeneous pipeline with cross-device token alignment and rollback prediction,4,4,3
 # ##### Wafer-Scale Accelerators
 # Solution: Adopt holistic hardware-software co-design to integrate high-bandwidth Network-on-Wafer (NoW) architectures with fault-tolerant mapping strategies, thereby mitigating yield limitations and communication bottlenecks to maximize system throughput.
 2025,ISCA,THU,PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer,mesh-switch physical topology; dual-granularity logical topology,4,3,2
@@ -102,6 +121,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,MICRO,UToronto,GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference,Gaussian-outlier weight splitting; per-layer centroid dictionary quantization; 3-bit index storage for BERT weights; GOBO low-bit accelerator,4,3,4
 2022,ISCA,UToronto,Mokey: Enabling Narrow Fixed-Point Inference for Out-of-the-Box Floating-Point Transformer Models,Golden Dictionary post-training quantization; 4-bit index weights and activations with fixed-point centroids; exponential-fit centroid arithmetic replacing MACs with narrow additions; Mokey accelerator and memory compression assist,4,4,4
 2025,ISCA,Georgia Tech & Intel,MicroScopiQ: Accelerating Foundational Models through Outlier-Aware Microscaling Quantization,outlier-aware MX quantization with pruning-based bit redistribution; ReCoN NoC for high-precision outlier merging; multi-precision INT PE systolic accelerator for LLM/VLM inference,4,3,3
+2025,ISCA,Microsoft,LUT Tensor Core: A Software-Hardware Co-Design for LUT-Based Low-Bit LLM Inference,LUT-based mpGEMM for low-bit LLMs; elongated tiling and bit-serial precision support; LMMA instruction set and compiler support,4,4,3
 # #### Bit-Sliced DNN Accelerators
 # Solution: Bit-sliced DNN accelerators break down data into smaller bit-slices, allowing for more efficient processing and reduced memory and calculation resources requirements.
 2018,ISCA,Georgia Tech,Bit Fusion: Bit-Level Dynamically Composable Architecture for Accelerating Deep Neural Network,accelerator for layer-aware quantized DNN; bit-flexible computation unit; block-structured instruction set architecture,4,3,3
@@ -131,11 +151,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Benchmarks
 2025,arXiv,Cambridge,Benchmarking Ultra-Low-Power µNPUs,Comparative µNPU Benchmarking (µNPU: microcontroller-scale Neural Processing Unit); open-source model compilation framework; µNPU memory I/O bottleneck identification,4,4,2
 # ### Dataflow Architecture
-# #### Reconfigurable Dataflow Architectures
-# Challenge: Bridging the gap between the high efficiency of dataflow execution and the need for handling irregular control flows (e.g., MIMD threads) and diverse parallel patterns in general-purpose computing.
+# #### Programmable Stream Dataflow Accelerator Interfaces
+# Challenge: Programmable accelerators need to expose coarse-grain data movement, data reuse, and spatial/dataflow computation without falling back to inefficient instruction-level execution or fixed-function ASIC specialization.
+2017,ISCA,UCLA,Stream-Dataflow Acceleration,stream-dataflow ISA for decoupled access and execute; affine and indirect stream commands; programmable scratchpad address space for explicit data reuse,4,3,4
 2017,ISCA,Stanford,Plasticine: A Reconfigurable Architecture for Parallel Patterns,Pattern Compute Unit (PCU); Pattern Memory Unit (PMU); parallel pattern-based ISA; hierarchical reconfigurable interconnect,5,3,5
+2020,HPCA,UCLA,A Hybrid Systolic-Dataflow Architecture for Inductive Matrix Algorithms,inductive dataflow model for dependence streams and memory streams; hybrid systolic-dataflow architecture for inductive parallelism;programmable port FSM for reuse/discard dependence handling,4,3,4
+
+# #### General-Purpose and Runtime Dataflow Architectures
+# Challenge: Dataflow architectures must support irregular control, runtime spatial mapping, locality management, and diverse parallel execution patterns beyond regular streaming kernels.
 2022,ISCA,Stanford,Aurochs: An Architecture for Dataflow Threads,dataflow threads for MIMD execution; resource elasticity and dynamic context switching; hardware extensions for irregular workloads,4,3,4
+2023,ISCA,UIUC,MESA: Microarchitecture Extensions for Spatial Architecture Generation,MESA hardware block; runtime spatial dataflow graph; performance-counter feedback loop; data-driven instruction mapping algorithm,3,3,4
 2024,MICRO,CMU,The TYR Dataflow Architecture: Improving Locality by Taming Parallelism,local tag spaces technique; space tag managing instruction set; CT based concurrent-block communication,,,
+
 # #### Tensor-Centric Dataflow Architectures
 # Challenge: Overcoming the memory wall and utilization bottlenecks in Deep Learning workloads by optimizing inter-operator dataflow, exploiting sparsity, and managing tensor contraction sequences.
 2019,ASPLOS,THU,Tangram: Optimized Coarse-Grained Dataflow for Scalable NN Accelerators,buffer sharing dataflow(BSD); alternate layer loop ordering (ALLO) dataflow; heuristics spatial layer mapping algorithm,,,
@@ -175,6 +202,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,HPCA,NUS,LISA: Graph Neural Network based Portable Mapping on Spatial Accelerators,label abstraction for quality mapping; GNN based label-aware mapping; label-aware simulated annealing,4,3,3
 2024,MICRO,NUS,ICED: An Integrated CGRA Framework Enabling DVFS-Aware Acceleration,tile based CGRA configuration; DVFS labeling; DVFS-Aware DFG Mapping,4,3,2
 # #### Task Scheduling
+2022,HPCA,THU,Atomic Dataflow based Graph-Level Workload Orchestration for Scalable DNN Accelerators,SA based atomic generation; DP&priority based atomic graph scheduling; NoC topology-aware mapping,4,4,2
 2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,4,3,2
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
 # ### Many-core Architecture
