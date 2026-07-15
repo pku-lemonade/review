@@ -11,6 +11,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### 2D Topology
 # Solution: NoC topology design on 2D architectures.
 2021,HPCA,GWU,Adapt-NoC: A Flexible Network-on-Chip Design for Heterogeneous Manycore Architectures,mux based adaptable router architecture; adaptable link design; reinforcement learning based subNoC optimization algorithm,,,
+2021,NOCS,Gatech,A Novel Network Fabric for Efficient Spatio-Temporal Reduction in Flexible DNN Accelerators,idle-node reutilization strategy; accumulator-free network topology; dual-mode extended adder switches,4,3,2
 2022,HPCA,Huawei,Application Defined On-chip Networks for Heterogeneous Chiplets: An Implementation Perspective,bufferless multi-ring NoC design; application-architecture-physical co-design method; architecture expressiveness; deadlock resolution SWAP mechanism,,,
 2023,MICRO,TAMU,SuperMesh: Energy-Efficient Collective Communications for Accelerators,periphery-augmented mesh topology; disjoint-tree pipelined collectives; short-link-only interconnect,4,3,2
 2024,MICRO,THU,Ring Road: A Scalable Polar-Coordinate-based 2D Network-on-Chip Architecture,Ring Road topology based on isolated cycles and trees; polar coordinate DOR(dimension-order-routing); inter/intra-chip decouple routing algorithm,,,
@@ -34,6 +35,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2017,ISCA,TAMU,APPROX-NoC: A Data Approximation Framework for Network-On-Chip Architectures,value approximate technique VAXX; encoder/decoder module pair for data compression; approximate value compute logic,,,
 2017,ICCD,HIT,ABDTR: Approximation–Based Dynamic Traffic Regulation for Networks–on–Chip Systems,"approximate computing based dynamic traffic regulation technique; lightweight design including controller, throttler and approximater",,,
 2019,DATE,SCUT,ACDC: An Accuracy- and Congestion-aware Dynamic Traffic Control Method for Networks-on-Chip,quality loss and network congestion modeling; autoregressive model based flow prediction method,,,
+2021,HPCA,UToronto,Pitstop: Enabling a Virtual Network Free Network-on-Chip,ejection queue repurposing; NI-to-NI bypass traversal; token-like root router rotation,4,4,2
 2025,arXiv,NTU,Learning Cache Coherence Traffic for NoC Routing Design,cache coherence traffic analyzer; DRL based topology selection and routing design,2,3,2
 # #### Fault-Tolerant Communication
 2014,VLSI,ICT,ZoneDefense: A Fault-Tolerant Routing for 2-D Meshes Without Virtual Channels,fault chains based faulty blocks construction; floor/ceiling rule based defense zone forming; L/F chain routing,,,
