@@ -625,6 +625,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,SJTU,dLLM-Cache: Accelerating Diffusion Large Language Models with Adaptive Caching,training-free adaptive caching mechanism; V-verify mechanism for caching,4,3,3
 2025,arXiv,NVIDIA,Fast-dLLM: Training-free Acceleration of Diffusion LLM by Enabling KV Cache and Parallel Decoding,block-wise approximate KV Cache for diffusion LLMs; confidence-aware parallel decoding strategy,3,3,4
 2025,arXiv,Fudan,Sparse-dLLM: Accelerating Diffusion LLMs with Dynamic Cache Eviction,dynamic bidirectional cache eviction; delayed bidirectional sparse caching; attention-guided token pruning,3,3,3
+2025,arXiv,Cornell,FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion,reducing-window approximate kv cache; finalized-block kv projection freezing; lightweight autoregressive guided unmasking; cross-model prefix agreement; training-free diffusion language model acceleration,3,3,3
+
 # #### Parallel Decoding in dLLM Systems
 # Challenge: Denoising involves multiple stages, often requiring hundreds of iterations to achieve acceptable text quality, which significantly slows down inference.
 2025,NeurIPS,Univ. of Virginia,Speculative Diffusion Decoding: Accelerating Language Generation through Diffusion,speculative diffusion Decoding; discrete diffusion models as non-autoregressive drafters; parallelized draft sequence generation,3,3,3
@@ -713,6 +715,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
 2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
+2026,arXiv,UVA,[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows,stateful operator abstraction for kv cache; distributed kv materialization and transfer; copy-on-write kv fork; compatibility-constrained kv composition; transfer-versus-recompute cost model; zero-copy state transport,3,3,2
 
 # ##### Predictive based Reuse Optimization for Multi-Agent Systems
 # Challenge: Predictive-based reuse optimization can help to further improve the efficiency of multi-agent systems by anticipating the needs of agents and proactively reusing resources.
@@ -733,6 +736,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,SJTU,MonoScale: Scaling Multi-Agent System with Monotonic Improvement,proactive agent warmup; agent conditionally Ttask synthesis; failure induced memory updates,3,4,4
 2026,arXiv,vLLM,The Workload-Router-Pool Architecture for LLM Inference Optimization: A Vision Paper from the vLLM Semantic Router Project,semantic aware scheduling; three dimensional co-optimization: workload-router-GPU Pool; agent centric session affinity,3,3,3
 2026,arXiv,IC,Scepsy: Serving Agentic Workflows Using Aggregate LLM Pipelines,agentic workflow GPU allocation; pipeline abstraction,3,3,3
+2026,arXiv,SJTU,SMetric: Rethink LLM Scheduling for Serving Agents with Balanced Session-centric Scheduling,agent-session-aware request routing; first-turn load balancing; follow-up cache-aware stickiness; overload and cache-eviction prefilters; local-global kv cache hierarchy,4,3,2
 
 # #### LoRA based Optimizations for Multi-Agent Systems
 # Challenge: LoRA import the unreusable parameters, which can not be shared among agents.
