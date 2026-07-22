@@ -275,7 +275,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Buffer updates in edge logs, transactional logs, LSM levels, memory caches, or delta pages, then expose compact adjacency/CSR views with version control for consistent latest-state reads.
 2019,FAST,GWU,GraphOne: A Data Store for Real-time Analytics on Evolving Graphs,hybrid edge-log adjacency store; dual versioning; GraphView abstraction; edge-sharding archiving,4,4,4
 2020,VLDB,THU,LiveGraph: A Transactional Graph Storage System with Purely Sequential Adjacency List Scans,Transactional Edge Log (TEL); double-timestamp edge visibility; transaction-private negative timestamps; dirty-vertex compaction,4,4,4
-2025,VLDB,HIT,BACH: Bridging Adjacency List and CSR Format using LSM-Trees for HGTAP Workloads,GR-LSM-Tree; elastic merge; adjacency-list-to-CSR compaction; lightweight GR-LSM MVCC,4,4,4
+2025,VLDB,HIT,BACH: Bridging Adjacency List and CSR Format using LSM-Trees for HGTAP Workloads,GR-LSM-Tree; elastic merge; adjacency-list-to-CSR compaction; lightweight GR-LSM multi-version concurrency control (MVCC),4,4,4
 2025,SIGMOD,NEU & Alibaba,LSMGraph: A High-Performance Dynamic Graph Storage System with Multi-Level CSR,MemGraph memory cache; multi-level CSR; multi-level index; vertex-grained version control,4,4,4
 2026,SIGMOD,THU,Bw-Graph: An Efficient Graph Storage System Harmonizing Topology-Aware Tree with Paged CSR,Topology-Aware Tree; Paged CSR; append-only Delta Pages; multi-version vertex index,4,4,4
 
