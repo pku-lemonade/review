@@ -3,6 +3,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Language design and semantics
 # Solution: user-friendly, resource-efficient, and secure programming languages
 
+# ### Real-Time and Time-Triggered Programming Languages
+# Challenge: Hard real-time embedded applications must precisely specify when sensor values are sampled, tasks are logically invoked, results become visible, actuators are updated, and operating modes change, while avoiding dependence on a particular processor mapping or scheduling policy.
+# Solution: Use logical-time and time-triggered semantics to define platform-independent reactive behavior, then separately realize that behavior through platform-aware WCET analysis, task mapping, scheduling, communication, and jitter constraints.
+2003,Proc. IEEE,UCB,Giotto: A Time-Triggered Language for Embedded Programming,logical-time task invocation and result publication; time-triggered mode switching; ports and atomic drivers for synchronous communication,4,3,4
+
 # ## Compiler construction and optimization
 # Solution: improving performance, reducing resource usage, and ensuring correctness
 2024,MICRO,Georgia Tech,Unleashing CPU Potential for Executing GPU Programs through Compiler/Runtime Optimizations,anti-coalescing transformation; block size invariant analysis; tail block adaptive synchronization; GPU-block dynamic tiling,2,4,3
@@ -137,9 +142,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Hardware Description Languages
 # Solution: expressive hardware specification, efficient simulation and synthesis, robust verification methodologies
 
-# #### HDL Language Design
+# #### Timing-aware HDL Language Design
 # Challenge: balancing expressiveness, usability, and synthesis efficiency in HDL design
 2024,FPGA,PKU,Cement: Streamlining FPGA Hardware Design with Cycle-Deterministic eHDL and Synthesis,incorporates an event layer and the ctrl sub-language; event-based extension; cycle-level timing analysis and control synthesis techniques,4,4,4
+2026,ASPLOS,NUS,Anvil: A General-Purpose Timing-Safe Hardware Description Language,event-parametric dynamic timing contracts; event-graph-based abstract-time reasoning; signal lifetime and register loan-time type system,4,3,3
 
 # #### Streaming Computation Models
 # Solution: high-throughput data processing, real-time analytics, efficient resource utilization for continuous data

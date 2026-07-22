@@ -11,11 +11,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Spatial Accelerator Generation
 # Challenge: Building parameterized compilation frameworks to rapidly synthesize, evaluate, and deploy diverse spatial architectures (e.g., systolic arrays) while decoupling algorithm mapping from hardware generation.
+
+# #### Spatial Architecture Generation Frameworks
+# Challenge: Spatial accelerator generators must synthesize parameterized architectures and evaluate architecture choices without hardwiring a single accelerator instance.
+# Solution: Use architecture-description graphs, configurable functional units, full-stack integration, and sparse/dense spatial-generator frameworks.
 2020,ISCA,UCLA,DSAGEN: Synthesizing Programmable Spatial Accelerators,Architecture Description Graph (ADG); solution-repairing spatial scheduler; decoupled spatial primitives; ADG-guided design space exploration (DSE),4,3,4
-2021,ASPLOS,Cornell,"A compiler infrastructure for accelerator generators",a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing,4,3,3
 2021,ISCA,CMU,"SNAFU: An Ultra-Low-Power, Energy-Minimal CGRA-Generation Framework and Architecture",Simple Network of Arbitrary Functional Units (SNAFU); SNAFU-ARCH; bring-your-own functional unit (BYOFU); statically routed bufferless multi-hop network; asynchronous dataflow firing,4,3,4
 2021,DAC,UCB,"Gemmini: Enabling Systematic Deep-Learning Architecture Evaluation via Full-Stack Integration",exploring diverse systolic array dimensions and dataflows; RoCC (Rocket Custom Coprocessor) integration with unified virtual memory support; FPGA-accelerated full-system simulation,4,5,4
-2024,MICRO,UCB,"Stellar: An Automated Design Framework for Dense and Sparse Spatial Accelerators",space-time transform for dataflow specification; fibertree-based sparse data structure abstraction;decoupled specification of dataflow, sparsity, and load-balancing,4,4,4
+2024,MICRO,UCB,Stellar: An Automated Design Framework for Dense and Sparse Spatial Accelerators,"space-time transform for dataflow specification; fibertree-based sparse data structure abstraction; decoupled specification of dataflow, sparsity, and load-balancing",4,4,4
+
+# #### Accelerator Generator Compiler Infrastructure
+# Challenge: Accelerator generators need modular compiler IRs that can compose hardware structure with control or timing semantics while supporting reusable frontends, backends, and optimizations.
+# Solution: Use pass-based accelerator-generator compiler infrastructures and unified static and dynamic control ILs to lower ADLs and hardware generators into synthesizable designs.
+2021,ASPLOS,Cornell,"A compiler infrastructure for accelerator generators",a split representation combining a high-level control flow language with a hardware-like structural language; pass-based compiler; systolic array generator; live-range-based register-sharing,4,3,3
+2024,OOPSLA,Cornell,Unifying Static and Dynamic Intermediate Languages for Accelerator Generators,enhance the static control over dynamic Calyx; use relative timing guards for cycle-level static groups; static inference and promotion from dynamic Calyx,4,4,4
 
 # ### CGRA Mapping algorithm
 # Challenge: The scalability bottleneck in space-time mapping for large-scale CGRAs due to the exponential growth of the combined search space.

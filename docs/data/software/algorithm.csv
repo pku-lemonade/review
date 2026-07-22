@@ -269,9 +269,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Dynamic Graph Storage Systems
 # Challenge: Maintaining the latest mutable graph state under high-rate edge updates while preserving efficient neighbor scans and concurrent analytics.
 # Solution: Combine update-friendly logs or mutable indexes with read-friendly adjacency/CSR layouts, plus version control for consistent latest-state graph analytics.
+
+# ##### Log-Structured and CSR-Based Stores
+# Challenge: High-rate updates arrive incrementally, but latest-snapshot graph analytics still need sequential adjacency access and durable storage-friendly layouts.
+# Solution: Buffer updates in edge logs, transactional logs, or memory caches, then expose compact adjacency/CSR views with version control for consistent latest-state reads.
 2019,FAST,GWU,GraphOne: A Data Store for Real-time Analytics on Evolving Graphs,hybrid edge-log adjacency store; dual versioning; GraphView abstraction; edge-sharding archiving,4,4,4
-2024,SIGMOD,USTC,Spruce: A Fast yet Space-saving Structure for Dynamic Graph Storage,van Emde Boas (vEB) tree-like vertex index; bufferblock and sortedblock edge storage; improved Read-Optimized Write EXclusion (ROWEX) protocol; per-vertex logblock multi-version concurrency control (MVCC),4,4,4
+2020,VLDB,THU,LiveGraph: A Transactional Graph Storage System with Purely Sequential Adjacency List Scans,Transactional Edge Log (TEL); double-timestamp edge visibility; transaction-private negative timestamps; dirty-vertex compaction,4,4,4
 2025,SIGMOD,NEU & Alibaba,LSMGraph: A High-Performance Dynamic Graph Storage System with Multi-Level CSR,MemGraph memory cache; multi-level CSR; multi-level index; vertex-grained version control,4,4,4
+
+# ##### Indexed In-Memory Stores
+# Challenge: In-memory dynamic graphs need fast scans, edge search, and concurrent updates without excessive per-edge versioning or vertex-table bottlenecks.
+# Solution: Organize adjacency through tree/sparse-array indexes and coarse-grained versioning, separating read-optimized layouts from write-friendly update paths.
+2021,VLDB,CWI,Teseo and the Analysis of Structural Dynamic Graphs,fat tree graph layout; sparse-array read-optimized segment (ROS) / write-optimized segment (WOS); asynchronous leaf rebalancing; logical vertex materialized view,4,4,4
+2024,SIGMOD,USTC,Spruce: A Fast yet Space-saving Structure for Dynamic Graph Storage,van Emde Boas (vEB) tree-like vertex index; bufferblock and sortedblock edge storage; improved Read-Optimized Write EXclusion (ROWEX) protocol; per-vertex logblock multi-version concurrency control (MVCC),4,4,4
+2025,VLDB,SJTU,RapidStore: An Efficient Dynamic Graph Storage System for Concurrent Queries,subgraph-centric concurrency control; coarse-grained subgraph versioning; Compressed Adaptive Radix Tree (C-ART); clustered index for low-degree neighbors,4,4,4
 
 # #### In-Memory Data Structures
 # Solution: Data organizations optimizing in-memory topology updates and local access on GPUs.
