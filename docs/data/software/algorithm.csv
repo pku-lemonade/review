@@ -287,7 +287,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### In-Memory Data Structures
 # Solution: Data organizations optimizing in-memory topology updates and local access on GPUs.
-2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
+2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array (LPMA); bottom-up/top-down/on-demand hybrid rebalancing; Opera consistency-guaranteed concurrent update-query processing,4,4,3
 2023,SC,IIT Ropar,GraphVine: A Data Structure to Optimize Dynamic Graph Processing on GPUs,Complete Binary Tree (CBT) organization for adjacency edge blocks; edge pre-allocated queue with prefix-sum popping to eliminate runtime allocation,3,4,3
 
 # #### Out-of-Core & Heterogeneous Systems
