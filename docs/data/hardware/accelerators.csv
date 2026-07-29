@@ -26,12 +26,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,FCCM,THU & UCB,NewGraph: Balanced Large-scale Graph Processing on FPGAs with Low Preprocessing Overheads,URAM-based large partitions reducing count by 3 orders of magnitude vs ForeGraph; FIFO-based dynamic crossbar eliminating pre-sorting; balanced workload without static edge shuffling,3,4,2
 2019,FPL,NUS,On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs,on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture,3,4,2
 # #### Memory-Optimized Graph Accelerators
-# Solution: Address the memory bottleneck (bandwidth and latency) through specialized memory hierarchies, HBM optimizations, or caching mechanisms.
+# Challenge: Graph accelerators suffer from irregular memory latency and off-chip bandwidth pressure when graph data exceed on-chip memory.
+# Solution: Reduce memory traffic and irregular access cost with compact graph layouts, locality-aware caching, or processing-in-memory-friendly partitioning.
 2014,IPDPSW,ISU,CyGraph: A Reconfigurable Architecture for Parallel Breadth-First Search,custom 64-bit CSR combining visited-flag/row-offset/neighbor-count in single memory word; token-ring kernel-to-kernel interface for distributed next-queue coordination across multi-FPGA,3,4,2
 2019,FPGA,HUST,Improving Performance of Graph Processing on FPGA-DRAM Platform by Two-level Vertex Caching,two-level vertex caching (L1 BRAM/L2 UltraRAM); Hilbert-order window sliding for locality; dual-pipeline computation-communication overlapping,4,4,3
-2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
-2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 2019,ASPDAC,THU & UCB,GraphSAR: A Sparsity-Aware Processing-in-Memory Architecture for Large-Scale Graph Processing on ReRAMs,sparsity-aware recursive block partitioning with density threshold 0.5; hybrid-centric block-list and edge-list processing model; lightweight graph clustering via vertex index remapping; single-bit ReRAM cell implementation for unweighted algorithms,3,3,3
+# #### HBM-Enabled FPGA Graph Accelerators
+# Challenge: High-bandwidth memory (HBM)-enabled FPGAs provide many memory channels, but irregular graph accesses, limited on-chip resources, and costly data dispatch make it hard to translate peak HBM bandwidth into graph-processing throughput.
+# Solution: Co-design graph layout, memory access paths, processing pipelines, and scheduling or dispatch mechanisms to better match graph workloads to HBM channel bandwidth.
+2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
+2022,MICRO,NUS,ReGraph: Scaling Graph Processing on HBM-enabled FPGAs with Heterogeneous Pipelines,dense/sparse partition classification; Little/Big heterogeneous pipelines; graph-aware task scheduling; resource-efficient high-bandwidth memory (HBM) scaling,4,4,3
+2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 # #### Multi-FPGA Graph Accelerators
 # Challenge: Scaling FPGA graph processing across boards creates irregular communication, cross-board workload imbalance, and low overlap between graph computation and remote vertex/update exchange.
 # Solution: Partition graph work across FPGAs with scheduling, work stealing, and communication-computation overlap to keep multiple boards busy while reducing remote-transfer overhead.
@@ -47,7 +52,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,MICRO,UCR,JetStream: Graph Analytics on Streaming Data with Event-Driven Hardware Accelerator,first streaming graph accelerator; asynchronous incremental algorithms; asynchronous edge deletion handling (VAP; DAP),3,3,4
 2022,ISCA,HUST,TDGraph: A Topology-Driven Accelerator for High-Performance Streaming Graph Processing,topology-driven incremental execution; streaming graph processing; regularized state propagation; vertex states coalescing,4,4,3
 2023,MICRO,UCR,MEGA Evolving Graph Accelerator,first evolving graph accelerator; Batch-Oriented Execution (BOE); deletion-free based on CommonGraph; Batch Pipelining,3,3,4
-2024,TRETS,UoV,Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs,a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning,4,4,3
+2024,TRETS,UoV,Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs,a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning; runtime function selection for PageRank/single-source shortest path (SSSP)/hubs and authorities (HITS)/sparse matrix-vector multiplication (SpMV),4,4,3
 # #### Hypergraph Accelerators
 # Solution: Realize the shared parts in hyperedges
 2022,MICRO,HUST,A Data-Centric Accelerator for High-Performance Hypergraph Processing,Data-Centric; Load-Trigger-Reduce (LTR); Adaptive Data Loading,4,4,3
