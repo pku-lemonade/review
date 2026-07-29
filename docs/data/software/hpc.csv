@@ -38,6 +38,11 @@ Challenge: The nature of modern GPUs as heterogeneous computing platforms. Tenso
 Solution: Perform intelligent task decomposition and scheduling at the system level.
 2023,ATC,University of California,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,highly sparse and irregular graph operations;Sparse Graph Translation technique;collaborative execution strategy between CUDA cores and TCUs,3,3,3
 2025,IPDPS,HUST,BRP-SpMM: Block-Row Partition Based Sparse Matrix Multiplication with Tensor and CUDA Cores,Block-Row Partition;“Fixed Non-zero” strategy;customized storage forma;two lightweight GPU kernels for the TC Block and for the Residual Row part,3,3,3
+# #### Tall-and-Skinny MM optimization
+Challenge: Traditional matrix multiplication assumes regular shapes and high data reuse. For tall-and-skinny matrices, extreme low arithmetic intensity renders standard tiling strategies ineffective, leading to severe memory bandwidth bottlenecks, uncoalesced memory accesses, and massive underutilization of parallel compute units.
+Solution: Solutions focus on redesigning computation schemas and memory access patterns.
+2019,ICS,UCR,TSM2: Optimizing Tall-and-Skinny Matrix-Matrix Multiplication on GPUs,outer-product based multiplication; shared memory optimization; double-buffer prefetching; Little's Law based gradient descent,4,4,2
+2020,arXiv,RRZE,Performance Engineering for Real and Complex Tall & Skinny Matrix Multiplication Kernels on GPUs,hardcoded code generation; transposed thread mapping; leap frogging,3,4,2
 # ### Dynamic Graph Analytics
 # Challenge: maintaining exact results on evolving graphs under high update rates without recomputing the whole graph or flooding the machine/cluster with unnecessary work.
 # #### Incremental GNN Inference
