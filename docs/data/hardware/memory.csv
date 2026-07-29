@@ -186,6 +186,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Univ. of Virginia,Sangam: A Chiplet-Based DRAM-PIM Accelerator with CXL Integration for LLM Inferencing, decoupling logic and memory dies by chiplet; bank-level systolic arrays for flat-GEMM acceleration,4,3,4
 2025,ICCAD,SEU,H3D-LLM: Heterogeneous 3D Chiplet Design for LLM Inference with Dynamic Task Scheduling and Memory-Aware Orchestration,Sparse-aware dynamic execution with precision-adaptive quantization; runtime-aware encoding and dynamic cluster allocation,3,3,2
 2026,ISCA,UCSD,CHIME: Chiplet-based Heterogeneous Near-Memory Acceleration for Edge Multimodal LLM Inference,monolithic 3D DRAM and RRAM chiplet integration; endurance-aware KV cache tiering policy; two-cut-point dataflow mapping framework with hardware-aware kernel fusion,4,3,2
+2026,ISCA,THU,SHyLA: 3D-Stacked NVM-DRAM Hybrid LLM-Inference Architecture Exploiting Data and Memory Heterogeneity,3D-stacked DRAM-NVM chiplets; LLM-data-aware weight KV-cache and intermediate-activation placement; bandwidth-utilization-centric dataflow for areal TSV bandwidth; two-stage memory and deployment DSE,4,3,2
 # ### 3D-Stacked PIM
 # Challenge: There is no direct physical interconnection paths in DIMM-based, bank-level uniform NDP like UPMEM.
 # Solution: Put the logical, computational layer at the bottom of the die, and stack DRAM layers on top of it. Use TSVs to build thousands of physical paths between the logical and the DRAM layers.
