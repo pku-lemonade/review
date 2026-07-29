@@ -116,8 +116,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ISCA,THU,PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer,mesh-switch physical topology; dual-granularity logical topology,4,3,2
 2025,ISCA,THU,WSC-LLM: Efficient LLM Service and Architecture Co-exploration for Wafer-scale Chips,optimal resource partition algorithm; optimal KV cache placement algorithm,4,3,2
 2025,ISCA,THU,"Cramming a Data Center into One Cabinet, a Co-Exploration of Computing and Hardware Architecture of Waferscale Chip",vertical area-constrained architecture; configurable on-wafer memory die architecture,3,4,3
+2025,ICCD,THU,RAM-Wafer: RL-Based Automatic Mapping Framework for Large-Scale AI Training on Wafer-Scale Computing,reinforcement-learning-based automatic mapping framework; topology-aware collective communication scheduling,3,3,2
 2026,HPCA,THU,WATOS: Efficient LLM Training Strategies and Architecture Co-exploration for Wafer-scale Chip,globally coordinated memory-efficient recomputation; location-aware resource placement; 3-stage system-level robustness design,4,4,2
-2025,ICCD,THU,RAM-Wafer: RL-Based Automatic Mapping Framework for Large-Scale AI Training on Wafer-Scale Computing,RL-based automatic mapping framework; topology-aware collective communication scheduling,3,3,2
 # #### Quantized DNN Accelerators
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
 # ##### General-Purpose and Edge Quantized DNN Accelerators
