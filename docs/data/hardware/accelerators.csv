@@ -108,6 +108,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Full attention performs redundant score computation and data movement when only a small subset of tokens or heads materially affects the output.
 2020,HPCA,Seoul National,A3: Accelerating Attention Mechanisms in Neural Networks with Approximation,greedy candidate search for reducing search targets; post-scoring selection with dynamic thresholding for softmax; lookup-table-based exponent modules,4,3,2
 2021,HPCA,MIT,SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning,cascade pruning; high-parallelism top-K engine; progressive quantization,3,4,4
+2026,HPCA,THU,PADE: A Predictor-Free Sparse Attention Accelerator via Unified Execution and Stage Fusion,predictor-free stage fusion; bit-wise uncertainty interval-enabled filtering; interleaving-based sparsity-tiled attention,3,3,4
 # ##### Speculative Decoding Accelerators
 # Challenge: Speculative decoding must generate useful draft tokens cheaply and verify them in parallel without draft-model capacity or cross-device synchronization erasing the speedup.
 2024,ASPLOS,CMU,SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification,tree-based speculative inference; topology-aware causal mask; multi-step speculative sampling,4,4,4
@@ -117,6 +118,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Adopt holistic hardware-software co-design to integrate high-bandwidth Network-on-Wafer (NoW) architectures with fault-tolerant mapping strategies, thereby mitigating yield limitations and communication bottlenecks to maximize system throughput.
 2025,ISCA,THU,PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer,mesh-switch physical topology; dual-granularity logical topology,4,3,2
 2025,ISCA,THU,WSC-LLM: Efficient LLM Service and Architecture Co-exploration for Wafer-scale Chips,optimal resource partition algorithm; optimal KV cache placement algorithm,4,3,2
+2025,ISCA,THU,"Cramming a Data Center into One Cabinet, a Co-Exploration of Computing and Hardware Architecture of Waferscale Chip",vertical area-constrained architecture; configurable on-wafer memory die architecture,3,4,3
+2025,ICCD,THU,RAM-Wafer: RL-Based Automatic Mapping Framework for Large-Scale AI Training on Wafer-Scale Computing,reinforcement-learning-based automatic mapping framework; topology-aware collective communication scheduling,3,3,2
 2026,HPCA,THU,WATOS: Efficient LLM Training Strategies and Architecture Co-exploration for Wafer-scale Chip,globally coordinated memory-efficient recomputation; location-aware resource placement; 3-stage system-level robustness design,4,4,2
 # #### Quantized DNN Accelerators
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
