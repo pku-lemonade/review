@@ -229,6 +229,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,MICRO,Gatech&MIT,TACOS: Topology-Aware Collective Algorithm Synthesizer for Distributed Machine Learning,topology-aware collective algorithm synthesis; time-expanded network; link-chunk matching; greedy network utilization maximization,4,3,2
 2024,SIGCOMM,UPenn&Microsoft,Rethinking Machine Learning Collective Communication as a Multi-Commodity Flow Problem,traffic engineering based collective communication optimization; mixed-integer linear program; A* technique for scaling,4,3,2
 2025,NSDI,USTC,AutoCCL: Automated Collective Communication Tuning for Accelerating Distributed and Parallel DNN Training,low-level performance parameters tuning; subspace division and intra-subspace coordinate descent search algorithms,4,4,2
+2025,NeurIPS,SJTU,ClusterFusion: Expanding Operator Fusion Scope for LLM Inference via Cluster-Level Collective Primitive,binary-tree pattern based cluster level comminucation primitives; cluster-centric dataflow; expanded kernel fusion,4,4,2
 
 # ### Fail-Slow Detection
 # Solution: investigating how modern distributed systems detect and mitigate fail-slow behaviors, focusing on the design of detection mechanisms, threshold policies, and recovery strategies to improve system resilience under partial performance degradation
