@@ -86,7 +86,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Provide reusable compiler abstractions, optimization frameworks, and declarative ISA specifications that generate efficient mappings and validation tooling.
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
 2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation; ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
-2025,MICRO,UIUC,TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles,TAIDL tensor-accelerator ISA specification; tensor-buffer and control-register data model; XLA-HLO instruction semantics; TAIDL-TO test-oracle generation; GPU-backed functional simulation,4,5,4
+2025,MICRO,UIUC,TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles,TAIDL tensor-accelerator instruction set architecture (ISA) specification; tensor-buffer and control-register data model; XLA (Accelerated Linear Algebra) HLO (High-Level Optimizer) instruction semantics; TAIDL test oracle (TAIDL-TO) generation; GPU-backed functional simulation,4,5,4
 
 # #### Embedded DSL Compiler Frameworks
 # Challenge: Developing high-performance parallel DSLs for heterogeneous hardware requires significant repetitive effort in building IRs, optimizers, and code generators from scratch.
