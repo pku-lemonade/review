@@ -79,14 +79,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,ISCA,UCB,"CoSA: Scheduling by Constrained Optimization for Spatial Accelerators",mixed-integer programming (MIP) for scheduling; prime-factor allocation; constant binary matrices for algorithm-hardware constraints,5,3,4
 2022,ISCA,PKU,AMOS: Enabling Automatic Mapping for Tensor Computations On Spatial Accelerators with Hardware Abstraction,hardware abstraction; constraints based mapping generation; binary matrix based validation; hierarchical level performance model,3,4,2
 
-# #### Programming Models and Compiler Frameworks for Spatial/Dataflow Accelerators
-# Challenge: Spatial accelerators require compiler abstractions that expose machine-specific execution structures without forcing programmers to manually manage low-level placement, synchronization, and data movement.
-# Solution: Provide programmable hardware abstractions, intermediate representations, and compilation frameworks that lower high-level programs into efficient spatial or streaming executions.
-2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
+# #### Programming Models for Spatial and Dataflow Accelerators
+# Challenge: Spatial and dataflow accelerators expose nontraditional execution models, explicit communication, and dynamic parallelism that are difficult to express safely and productively in conventional languages.
+# Solution: Provide task, thread, and streaming abstractions with compiler support for lowering control, communication, and dynamic execution onto accelerator dataflow.
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
-2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation; ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
+2025,arXiv,Cornell,Dato: A Task-Based Programming Model for Dataflow Accelerators,task-based spatial dataflow programming model; linear-capability Stream type for FIFO safety; layout refinement type,4,4,3
 2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;dynamic hardware configuration time-multiplexing for MoE,4,3,4
 2026,OSDI,NUS,TileLoom: Automatic Dataflow Planning for Tile-Based Languages on Spatial Dataflow Accelerators,logical launch-grid to physical core-array and temporal-wave mapping;grid-level scale-out planning for block-centric tile DSLs such as Triton and Helion,3,4,3
+
+# #### Compiler Frameworks and Interface Tooling for Emerging Accelerators
+# Challenge: Emerging accelerators require compiler and validation stacks tailored to changing hardware interfaces, but building them separately for every design is costly and error-prone.
+# Solution: Provide reusable compiler abstractions, optimization frameworks, and declarative ISA specifications that generate efficient mappings and validation tooling.
+2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
+2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation; ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
+2025,MICRO,UIUC,TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles,TAIDL tensor-accelerator instruction set architecture (ISA) specification; tensor-buffer and control-register data model; XLA (Accelerated Linear Algebra) HLO (High-Level Optimizer) instruction semantics; TAIDL test oracle (TAIDL-TO) generation; GPU-backed functional simulation,4,5,4
 
 # #### Embedded DSL Compiler Frameworks
 # Challenge: Developing high-performance parallel DSLs for heterogeneous hardware requires significant repetitive effort in building IRs, optimizers, and code generators from scratch.
@@ -113,6 +119,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: balancing expressiveness, usability, and performance in graph DSL design
 2012,ASPLOS,Stanford,Green-Marl: A DSL for Easy and Efficient Graph Analysis,domain-specific breadth-first/depth-first ordered traversal primitives; deferred data-parallel assignment for bulk synchronous consistency; architecture-independent loop fusion and reduction bounds relaxation,4,4,4
 2018,OOPSLA,MIT,GraphIt: A High-Performance Graph DSL,algorithm-schedule decoupling for graph; Graph Iteration Space (GIS); scheduling language for traversal strategies; compiler-guided autotuning,4,4,4
+2025,OOPSLA,UIUC,GALA: A High Performance Graph Neural Network Acceleration LAnguage and Compiler,GNN algorithm-schedule language; paired Data-IR and Compute-IR; training-aware subgraph creation; training-invariant code motion; sparsity-aware operator rewrites,4,5,4
 
 # #### Sparse Tensor Algebra Compilers
 # Solution: multi-format iteration efficiency, format combination optimization, architecture-agnostic code generation
@@ -123,6 +130,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,OOPSLA,MIT,Format Abstraction for Sparse Tensor Algebra Compilers,coordinate hierarchies; level formats abstraction; property-based merge lattice optimizations; level iterator conversion,4,4,3
 2020,PLDI,MIT,Automatic Generation of Efficient Sparse Tensor Format Conversion Routines,coordinate remapping notation; attribute query language; tensor assembly abstract interface; three-phase conversion decomposition,4,4,4
 2025,OOPSLA,MIT,Finch: Sparse and Structured Tensor Programming with Control Flow,looplet-based structured coiteration; control flow over structured tensors (if/break/multiple assignment); level-format structure abstraction; automatic concordization pass,4,4,4
+2026,PLDI,MIT,A Mechanized Algebra of Verified Data Structures for Optimizing Sparse Tensor Programs,mechanized level-format algebra; format-agnostic compression-decompression soundness theorem; adjoint-pair sparse scheduling rewrite; verified compositional level-format instances; ATL scatter and coiteration constructs,4,4,4
 
 # ### Sparse Tensor Scheduling and Assembly
 

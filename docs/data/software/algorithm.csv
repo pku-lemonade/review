@@ -205,6 +205,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,JSTSP,Fraunhofer HHI,DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks,identify set of priors in DNN; redefine CABAC's core scheme to capture priors,3,5,3
 2022,ICLR,Samsung,Language model compression with weighted low-rank factorization,fisher-weighted frobenius norm; alternating least squares (ALS) for matrix factorization,4,4,4
 2026,ISCA,NUS,Approaching Shannon Bound with Lossless LLM Weight Compression,information-theoretic entropy profiling across BF16 FP8 INT8 INT4 and quantized LLM weights; tile-addressable Asymmetric Numeral Systems (ANS) compression aligned with GEMM tiling; warp-cooperative on-the-fly decompression fused into GPU GEMM; SGLang multi-GPU integration without global-memory materialization,4,4,4
+2026,ISCA,ICT/CAS,ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs,block-based fixed-length lossless weight encoding; hierarchical halving bit-packing after bit-width quantization; vectorized branch-free integer transformation; dependency-decoupled intra-segment scan on Ascend NPUs,4,5,2
 
 # ### Statistical Parameter Estimation
 # Solution: infer the distribution of variables using statistical methods from observed data
@@ -290,7 +291,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### In-Memory Data Structures
 # Solution: Data organizations optimizing in-memory topology updates and local access on GPUs.
-2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array; redundancy-free top-down re-balancing method; con-concurrent strategy Opera,4,4,3
+2023,TKDE,PKU,An Efficient Data Structure for Dynamic Graph on GPUs,leveled packed memory array (LPMA); bottom-up/top-down/on-demand hybrid rebalancing; Opera consistency-guaranteed concurrent update-query processing,4,4,3
 2023,SC,IIT Ropar,GraphVine: A Data Structure to Optimize Dynamic Graph Processing on GPUs,Complete Binary Tree (CBT) organization for adjacency edge blocks; edge pre-allocated queue with prefix-sum popping to eliminate runtime allocation,3,4,3
 
 # #### Out-of-Core & Heterogeneous Systems

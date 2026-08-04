@@ -15,7 +15,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,IEEE Micro,UCLA,Systematically Understanding Graph Accelerator Dimensions and the Value of Hardware Flexibility,Taskflow execution model unifying task and dataflow parallelism; graph algorithm variant taxonomy; multi-level spatial partitioning; asynchronous hardware task scheduling priority queue,,,
 # #### Pipelined & Event-Driven Graph Accelerators
 # Solution: Optimize data flow and execution models using pipelining and event-driven mechanisms to handle irregular graph workloads across hardware architectures.
-2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,4,4
+2016,MICRO,Princeton,Graphicionado: A High-Performance and Energy-Efficient Accelerator for Graph Analytics,vertex-programming based pipeline; on-chip scratchpad optimization; source/destination-oriented parallel streams,4,3,4
 2016,ISCA,Bilkent,Energy Efficient Architecture for Graph Analytics Accelerators,configurable SystemC-based GAS architecture template with application-pluggable data structures; monotonic-rank RAW/WAR hazard detection; bit-vector/queue dual structure; lock-free active vertex scheduling,3,3,3
 2020,MICRO,UCR,GraphPulse: An Event-Driven Hardware Accelerator for Asynchronous Graph Processing,asynchronous event-driven model; in-place event coalescing; delta-based accumulative processing,3,3,4
 2024,FPGA,HKUST,GraFlex: Flexible Graph Processing on FPGAs through Customized Scalable Interconnection Network,scatter-gather BSP paradigm; customizable multi-stage butterfly interconnection network with virtual-channel flow control; HLS-level coalesced memory; throughput-matching design methodology,3,4,3
@@ -26,12 +26,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,FCCM,THU & UCB,NewGraph: Balanced Large-scale Graph Processing on FPGAs with Low Preprocessing Overheads,URAM-based large partitions reducing count by 3 orders of magnitude vs ForeGraph; FIFO-based dynamic crossbar eliminating pre-sorting; balanced workload without static edge shuffling,3,4,2
 2019,FPL,NUS,On-The-Fly Parallel Data Shuffling for Graph Processing on OpenCL-Based FPGAs,on-the-fly parallel data shuffling; OpenCL-based data dispatcher; runtime data dependency resolution; decoder-filter shuffling architecture,3,4,2
 # #### Memory-Optimized Graph Accelerators
-# Solution: Address the memory bottleneck (bandwidth and latency) through specialized memory hierarchies, HBM optimizations, or caching mechanisms.
+# Challenge: Graph accelerators suffer from irregular memory latency and off-chip bandwidth pressure when graph data exceed on-chip memory.
+# Solution: Reduce memory traffic and irregular access cost with compact graph layouts, locality-aware caching, or processing-in-memory-friendly partitioning.
 2014,IPDPSW,ISU,CyGraph: A Reconfigurable Architecture for Parallel Breadth-First Search,custom 64-bit CSR combining visited-flag/row-offset/neighbor-count in single memory word; token-ring kernel-to-kernel interface for distributed next-queue coordination across multi-FPGA,3,4,2
 2019,FPGA,HUST,Improving Performance of Graph Processing on FPGA-DRAM Platform by Two-level Vertex Caching,two-level vertex caching (L1 BRAM/L2 UltraRAM); Hilbert-order window sliding for locality; dual-pipeline computation-communication overlapping,4,4,3
-2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
-2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 2019,ASPDAC,THU & UCB,GraphSAR: A Sparsity-Aware Processing-in-Memory Architecture for Large-Scale Graph Processing on ReRAMs,sparsity-aware recursive block partitioning with density threshold 0.5; hybrid-centric block-list and edge-list processing model; lightweight graph clustering via vertex index remapping; single-bit ReRAM cell implementation for unweighted algorithms,3,3,3
+# #### HBM-Enabled FPGA Graph Accelerators
+# Challenge: High-bandwidth memory (HBM)-enabled FPGAs provide many memory channels, but irregular graph accesses, limited on-chip resources, and costly data dispatch make it hard to translate peak HBM bandwidth into graph-processing throughput.
+# Solution: Co-design graph layout, memory access paths, processing pipelines, and scheduling or dispatch mechanisms to better match graph workloads to HBM channel bandwidth.
+2021,ICCAD,Cornell,GraphLily: Accelerating Graph Linear Algebra on HBM-Equipped FPGAs,GraphBLAS; FPGA overlay; HBM-optimized; SpMV/SpMSpV accelerator; CPSR sparse format; software-hardware co-design,4,4,3
+2022,MICRO,NUS,ReGraph: Scaling Graph Processing on HBM-enabled FPGAs with Heterogeneous Pipelines,dense/sparse partition classification; Little/Big heterogeneous pipelines; graph-aware task scheduling; resource-efficient high-bandwidth memory (HBM) scaling,4,4,3
+2024,TRETS,HUST,ScalaBFS2: A High-performance BFS Accelerator on an HBM-enhanced FPGA Chip,HBM-enhanced BFS accelerator; independent HBM Reader; hybrid-mode PE; multi-layer crossbar,3,4,3
 # #### Multi-FPGA Graph Accelerators
 # Challenge: Scaling FPGA graph processing across boards creates irregular communication, cross-board workload imbalance, and low overlap between graph computation and remote vertex/update exchange.
 # Solution: Partition graph work across FPGAs with scheduling, work stealing, and communication-computation overlap to keep multiple boards busy while reducing remote-transfer overhead.
@@ -47,7 +52,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,MICRO,UCR,JetStream: Graph Analytics on Streaming Data with Event-Driven Hardware Accelerator,first streaming graph accelerator; asynchronous incremental algorithms; asynchronous edge deletion handling (VAP; DAP),3,3,4
 2022,ISCA,HUST,TDGraph: A Topology-Driven Accelerator for High-Performance Streaming Graph Processing,topology-driven incremental execution; streaming graph processing; regularized state propagation; vertex states coalescing,4,4,3
 2023,MICRO,UCR,MEGA Evolving Graph Accelerator,first evolving graph accelerator; Batch-Oriented Execution (BOE); deletion-free based on CommonGraph; Batch Pipelining,3,3,4
-2024,TRETS,UoV,Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs,a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning,4,4,3
+2024,TRETS,UoV,Dynamic-ACTS - A Dynamic Graph Analytics Accelerator For HBM-Enabled FPGAs,a novel edge packing format (ACTPACK); hashed edge updates; low-overhead online partitioning; runtime function selection for PageRank/single-source shortest path (SSSP)/hubs and authorities (HITS)/sparse matrix-vector multiplication (SpMV),4,4,3
 # #### Hypergraph Accelerators
 # Solution: Realize the shared parts in hyperedges
 2022,MICRO,HUST,A Data-Centric Accelerator for High-Performance Hypergraph Processing,Data-Centric; Load-Trigger-Reduce (LTR); Adaptive Data Loading,4,4,3
@@ -108,6 +113,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Full attention performs redundant score computation and data movement when only a small subset of tokens or heads materially affects the output.
 2020,HPCA,Seoul National,A3: Accelerating Attention Mechanisms in Neural Networks with Approximation,greedy candidate search for reducing search targets; post-scoring selection with dynamic thresholding for softmax; lookup-table-based exponent modules,4,3,2
 2021,HPCA,MIT,SpAtten: Efficient Sparse Attention Architecture with Cascade Token and Head Pruning,cascade pruning; high-parallelism top-K engine; progressive quantization,3,4,4
+2026,HPCA,THU,PADE: A Predictor-Free Sparse Attention Accelerator via Unified Execution and Stage Fusion,predictor-free stage fusion; bit-wise uncertainty interval-enabled filtering; interleaving-based sparsity-tiled attention,3,3,4
 # ##### Speculative Decoding Accelerators
 # Challenge: Speculative decoding must generate useful draft tokens cheaply and verify them in parallel without draft-model capacity or cross-device synchronization erasing the speedup.
 2024,ASPLOS,CMU,SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification,tree-based speculative inference; topology-aware causal mask; multi-step speculative sampling,4,4,4
@@ -117,6 +123,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Adopt holistic hardware-software co-design to integrate high-bandwidth Network-on-Wafer (NoW) architectures with fault-tolerant mapping strategies, thereby mitigating yield limitations and communication bottlenecks to maximize system throughput.
 2025,ISCA,THU,PD Constraint-aware Physical/Logical Topology Co-Design for Network on Wafer,mesh-switch physical topology; dual-granularity logical topology,4,3,2
 2025,ISCA,THU,WSC-LLM: Efficient LLM Service and Architecture Co-exploration for Wafer-scale Chips,optimal resource partition algorithm; optimal KV cache placement algorithm,4,3,2
+2025,ISCA,THU,"Cramming a Data Center into One Cabinet, a Co-Exploration of Computing and Hardware Architecture of Waferscale Chip",vertical area-constrained architecture; configurable on-wafer memory die architecture,3,4,3
+2025,ICCD,THU,RAM-Wafer: RL-Based Automatic Mapping Framework for Large-Scale AI Training on Wafer-Scale Computing,reinforcement-learning-based automatic mapping framework; topology-aware collective communication scheduling,3,3,2
 2026,HPCA,THU,WATOS: Efficient LLM Training Strategies and Architecture Co-exploration for Wafer-scale Chip,globally coordinated memory-efficient recomputation; location-aware resource placement; 3-stage system-level robustness design,4,4,2
 # #### Quantized DNN Accelerators
 # Solution: Quantized DNN accelerators are designed to efficiently execute quantized neural networks, which use lower precision representations for weights and activations.
@@ -125,6 +133,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2018,ISCA,SNU,Energy-Efficient Neural Network Accelerator Based on Outlier-Aware Low-Precision Computation,accelerator architecture for outlier-aware quantized models; outlier-aware low-precision computation; separate outlier MAC unit,4,3,2
 2023,HPCA,UPC,Mix-GEMM: An efficient HW-SW Architecture for Mixed-Precision Quantized Deep Neural Networks Inference on Edge Devices,Complete mixed-precision flexibility; hardware accelerator & BLIS-based library with custom RISC-V ISA extensions,3,2,3
 2024,DAC,ASU,Algorithm-Hardware Co-Design of Distribution-Aware Logarithmic-Posit Encodings for Efficient DNN Inference,composite data type Logarithmic Posits (LP); automated post training LP Quantization (LPQ) Framework based on genetic algorithms; mixed-precision LP Accelerator (LPA),3,3,2
+2026,ISCA,SJTU,AQuant: Repurposing CODEC for VLM Acceleration via Adaptive Quantization,visual-token delta quantization from inter-token similarity; exponent-based similarity detection; repurposed video CODEC with adaptive-quantization extensions; CODEC-NPU mixed-precision co-execution,4,3,2
 # ##### Outlier-Aware Quantized Transformer and Foundation-Model Accelerators
 # Challenge: Transformer-scale quantization must protect rare high-magnitude values while preserving low-bit storage and compute efficiency.
 2020,MICRO,UToronto,GOBO: Quantizing Attention-Based NLP Models for Low Latency and Energy Efficient Inference,Gaussian-outlier weight splitting; per-layer centroid dictionary quantization; 3-bit index storage for BERT weights; GOBO low-bit accelerator,4,3,4
