@@ -41,6 +41,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
 2023,ASPLOS,UToronto,Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs,task-mapping based programming; hardware-centric schedule space; post-scheduling operator fusion,4,4,3
 
+# #### GPU Tensor Layout Synthesis
+# Challenge: High-performance GPU kernels require mutually compatible data layouts across threads, registers, shared memory, and collective hardware instructions, while manual layout specification is complex and heuristic layout propagation is difficult to generalize to emerging operators.
+# Solution: Model tensor layouts as composable functions and automatically synthesize thread-value layouts, shared-memory layouts, and collective instruction choices through constraint propagation, layout unification, search, and analytical cost modeling.
+2026,CGO,UToronto,Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs,CuTe style data layout synthesis; type-inference-based thread-value layout propagation; alignment-aware shared-memory layout unification,4,5,4
+
 # #### Tensor & Pipeline Optimization
 # Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
 # Solution: Use MLIR-based abstractions, novel programming models, and automatic tuning to generate efficient code for tensor programs and pipelines.
@@ -80,6 +85,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 2025,arXiv,Cornell,Dato: A Task-Based Programming Model for Dataflow Accelerators,task-based spatial dataflow programming model; linear-capability Stream type for FIFO safety; layout refinement type,4,4,3
 2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;dynamic hardware configuration time-multiplexing for MoE,4,3,4
+2026,OSDI,NUS,TileLoom: Automatic Dataflow Planning for Tile-Based Languages on Spatial Dataflow Accelerators,logical launch-grid to physical core-array and temporal-wave mapping;grid-level scale-out planning for block-centric tile DSLs such as Triton and Helion,3,4,3
 
 # #### Compiler Frameworks and Interface Tooling for Emerging Accelerators
 # Challenge: Emerging accelerators require compiler and validation stacks tailored to changing hardware interfaces, but building them separately for every design is costly and error-prone.
