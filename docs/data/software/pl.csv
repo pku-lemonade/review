@@ -54,6 +54,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,tvm-based compiler; compared to triton is more flexible,4,4,3
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
 2025,arXiv,CMU,Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs,mega-kernelization; SM level parallel optimization; SM level representation,3,3,3
+2026,HPCA,SJTU,FlashFuser: Expanding the Scale of Kernel Fusion for Compute-Intensive Operators via Inter-Core Connection,DSM based comminucation primitives; hierarchical dataflow analyzer; pruning based fusion search engine,4,4,2
 
 # #### Graph-Level Transformation and Optimization
 # Challenge: Large DNN topologies and massive tensor sizes easily exceed hardware memory capacities and execution efficiency limits, making isolated operator-level optimizations insufficient.
