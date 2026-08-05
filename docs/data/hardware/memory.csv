@@ -6,11 +6,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: stack multiple DRAM dies and use TSVs to provide TB/s level bandwidth.
 2023,JSSC,SK Hyrix,A 192-Gb 12-High 896-GB/s HBM3 DRAM With a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization, detailed HBM3e structure and specifications,3,4,5
 2024,ISSCC,SK Hyrix,A 48GB 16-High 1280GB/s HBM3E DRAM with All-Around Power TSV and a 6-Phase RDQS Scheme for TSV Area Optimization, supports both power TSV and data TSV; first 16-Hi Stacking HBM with 1/4 more capacity and BW,4,4,5
+2026,HPCA,Harvard,RPU – A Reasoning Processing Unit,"Capacity-Optimized HBM design; bandwidth-first power and area provisioning; decoupled memory, compute, and network pipelines",3,4,2
 # #### HBF
 # Challenge: SSD can only provide GB/s level bandwidth, also has low IOPS, high latency and weak random access performance caused by the SSD controller.
 # Solution: Like HBM, stack multiple NAND Flash dies and use TSVs to provide TB/s level bandwidth, TB-level system capacity and place the stack package near the GPU.
 2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
 2026,arXiv,UCSD,HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration, add a near-storage reranking in HBF base die as NMP engine; detailed HBF energy-latency and BW modeling based on thermal simulation,5,4,2
+2026,arXiv,ICT,FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference, SRAM for prefetching; plane-balanced weight and KV cache layout; FTL (Flash Translation Layer)-free storage management layer,3,4,4
 
 # ### Multi-Level PIM/NDP Architectures
 # Challenge: PIM core can be placed at bank level, off-chip buffer level and even inside the SSD controller, and the communication between different levels of PIM/NDP is challenging.

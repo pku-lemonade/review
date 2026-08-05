@@ -56,7 +56,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,Samsung,Towards Efficient Flash Caches with Emerging NVMe Flexible Data Placement SSDs,NVMe Flexible Data Placement (FDP) SSDs for data segregation; targeted data placement for reduced device write amplification; FDP-enabled CacheLib architecture; theoretical DLWA model for CacheLib,,,
 2025,arXiv,SDU,Managing Hybrid Solid-State Drives Using Large Language Models,LLM-based auto-tuning framework for hybrid SSD management; hybrid SSD parameter categorization; performance-sensitive parameter selection; prompt engineering for LLM integration; dynamic configuration optimization in hybrid SSDs,,,
 2025,arXiv,ETHZ,Harmonia: A Multi-Agent Reinforcement Learning Approach to Data Placement and Migration in Hybrid Storage Systems,dual RL agents for data placement & migration; I/O latency-based reward shaping,3,4,4
-
+2026,FAST,SNU,Unleashing Zoned UFS: Cross-Layer Optimizations for Next-Generation Mobile Storage,scatter-gather Buffer Manager for dynamic SRAM allocation; synchronous clock ungating for write ordering; proactive background garbage collection scheme in F2FS,4,4,4
 
 # ## Virtualization
 # Solution: efficiently managing and isolating multiple virtual machines (VMs) or containers on a single physical machine, allowing them to share hardware resources securely and independently while maintaining performance and flexibility.
