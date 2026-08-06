@@ -96,7 +96,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Attention Pipeline Fusion and Intermediate Reuse
 # Challenge: Attention consists of dependent matrix multiplications and nonlinear operators that can materialize large score and activation intermediates; accelerators must fuse or pipeline these operators and preserve intermediate data on chip.
-2023,FPL,PKU,Calabash: Accelerating Attention using a Systolic Array Chain on FPGAs,dual output-stationary (OS) systolic-array chain for GEMM-softmax-GEMM; Q/K row partition and V column partition for on-chip score-tile reuse; analytical resource-latency model for TQ/TK/TV sizing and two-array workload balancing,3,4,2
+2023,FPL,PKU,Calabash: Accelerating Attention using a Systolic Array Chain on FPGAs,dual output-stationary (OS) systolic-array chain for GEMM-softmax-GEMM; Q/K row partition and V column partition for on-chip score-tile reuse; analytical resource-latency model for Q/K/V tile sizing (TQ/TK/TV) and two-array workload balancing,3,4,2
 2023,ASPLOS,Gatech,FLAT: An Optimized Dataflow for Mitigating Attention Bottlenecks,inter-operator tensor-tensor fusion; fine-grained execution tiling; map-space exploration,3,3,2
 2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
 
