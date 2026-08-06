@@ -199,6 +199,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,HPCA,Georgia Tech,MAGMA: An Optimization Framework for Mapping Multiple DNNs on Multiple Accelerator Cores,sub-accelerator selection; fine-grained job prioritization; MANGA crossover genetic operators,,,
 2023,ISCA,THU,MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search,GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration,,,
 2023,VLSI,IIT Kharagpur,Application Mapping Onto Manycore Processor Architectures Using Active Search Framework,RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining,,,
+2025,TACO,ICT,GenCNN: A Partition-Aware Multi-Objective Mapping Framework for CNN Accelerators Based on Genetic Algorithm,off-chip data access/on-chip data processing modeling; gene coding of partitioning and parallelization; multi-objective optimization,4,4,2
 # ##### Optimization Modeling
 2020,FPGA,ETH Zurich,Flexible Communication Avoiding Matrix Multiplication on FPGA with High-Level Synthesis,computation and I/O decomposition model for matrix multiplication; 1D array collapse mapping method; internal double buffering,,,
 2021,HPCA,Georgia Tech,Heterogeneous Dataflow Accelerators for Multi-DNN Workloads,heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators,,,
@@ -228,6 +229,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,HPCA,THU,Atomic Dataflow based Graph-Level Workload Orchestration for Scalable DNN Accelerators,SA based atomic generation; DP&priority based atomic graph scheduling; NoC topology-aware mapping,4,4,2
 2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,4,3,2
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
+2026,TACO,ICT,TOSCA: Towards Semi-Centralized Scheduling in Dataflow Architectures via Hardware-Software Co-Design,on-demand triggering; global monitoring; peer-to-peer task flow; data flow plane & task flow plane decomposition,3,4,2
 # ### Many-core Architecture
 # Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.
 # #### Resource Management
