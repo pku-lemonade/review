@@ -45,10 +45,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General Application-Specific Optimization
 # Challenge: Existing NDP architecture are designed for general-purpose computing; not efficient for specific tasks like graph processing.
 2022,ISCA,Micron,To PIM or Not for Emerging General Purpose Processing in DDR Memory Systems, vector engine inside NDP bank; intelligent code offload decision,2,3,2
-2023,EuroSys,Univ. of Virginia,NearPM: A Near-Data Processing System for Storage-Class Applications,partitioned persist ordering for asynchronous CPU-NDP execution; delayed synchronization for multi-device consistency,4,3,3
 2024,ISCA,Samsung,pSyncPIM: Partially Synchronous Execution of Sparse Matrix Operations for All-Bank PIM Architectures,partially synchronous PIM control; predicated execution; sparse matrix distribution & compaction,3,3,3
 2025,ATC,RUC,Turbocharge ANNS on Real Processing-in-Memory by Enabling Fine-Grained Per-PIM-Core Scheduling,per-PU scheduling; persistent PIM kernel; per-PU dispatching with selective replication,3,4,4
 2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
+2025,IEEE CAL,ICT,Exploring the DIMM PIM Architecture for Accelerating Time Series Analysis,matrix profile acceleration on UPMEM; DPU pipeline with Wallace tree multiplier and MAC unit,3,3,2
 # #### DNN-Specific Optimization
 2021,HPCA,Seoul National,GradPIM: A Practical Processing-in-DRAM Architecture for Gradient Descent,fixed-function PIM architecture for DNN gradient descent; non-invasive PIM operations using reserved DDR commands,3,3,2
 2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
@@ -80,6 +80,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM Quantization & Capacity Optimization
 # Challenge: Bank-level PIM systems face tight capacity budgets and quantization overhead in long-context LLM serving.
 2025,IEEE LCA,POSTECH,Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization,scale cascading for simplifying dequantization; zero-offset removal for reduced circuit complexity,3,2,2
+2025,DAC,ICT,BlockPIM: Optimizing Memory Management for PIM-enabled Long-Context LLM Inference,cross-channel block memory layout strategy; cross-channel attention computation algorithm,4,3,3
 2026,HPCA,ISCT,AQPIM: Breaking the PIM Capacity Wall for LLMs with in-Memory Activation Quantization,lookup-based attention; importance-weighted K-means clustering; channel pre-sorting for subvector affinity,3,3,4
 2026,ISCA,THU,Bringing Near Data Processing into the Low-Bit Floating-Point Era,scale-value interleaved FP layout; dequantization-hiding via instruction reordering; compilation space pruning,3,3,3
 # #### MoE-LLM Optimization
@@ -100,6 +101,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Host pages need to enable interleaving to improve concurrent throughput, while PIM pages need to disable it to maintain better locality, creating a conflict.
 2023,DAC,Georgia Tech,vPIM: Efficient Virtual Address Translation for Scalable Processing-in-Memory Architectures,network-contention-aware hashing to minimize cross-stack page table walks; pre-translation using repurposed PIM cores to move page table walks off the critical path,4,4,3
 2024,ISCA,SJTU,UM-PIM: DRAM-based PIM with Uniform & Shared Memory Space,Uniform shared CPU-PIM memory; dual-track memory management; zero-copy data re-layout,3,3,4
+2026,MICRO,ICT,Rethinking Unified Memory for NPU–PIM Systems: Dual-View Memory for Dynamic Inference of LLM,offline dual-view mapping optimization; address remapping unit for dynamic address translation; flexible access scheduler for dual-view memory request scheduling,3,3,3
 # #### Memory Allocation & Management
 # Challenge: Existing NDP architecture has numerous independent memory spaces; lacks unified management; and features inefficient memory allocation.
 2024,ISCA,KAIST,PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memory (PIM) Architectures,PIM-specific memory allocator; hierarchical memory allocation scheme; hardware metadata cache,4,2,3
