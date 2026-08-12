@@ -49,3 +49,8 @@ Solution: Solutions focus on redesigning computation schemas and memory access p
 # Solution: reuse prior embeddings and propagate only affected changes for message-passing GNNs on dynamic graphs, extending the parent parallel-algorithm idea to graph learning workloads.
 2025,IPDPS,NUS,InkStream: Instantaneous GNN Inference on Dynamic Graphs via Incremental Update,real affected area; resilient nodes; event-based computing model; incremental neighborhood update,4,4,3
 2025,ICDCS,IISc,Ripple: Scalable Incremental GNN Inferencing on Large Streaming Graphs,generalized incremental programming model; delta undo-redo aggregation; distributed incremental inferencing; request batching and routing,4,4,3
+
+# ### Extreme-Scale Graph Traversal on Heterogeneous Supercomputers
+# Challenge: Irregular graph algorithms like BFS exhibit random memory access, load imbalance from power-law degree distributions, and massive small-message overhead at supercomputer scale, while heterogeneous many-core processors lack cache coherence, have limited on-chip memory, and restrict inter-core communication patterns.
+# Solution: Decompose the algorithm into pipelined modules mapped to heterogeneous cores, design contention-free data shuffling via producer-router-consumer roles over mesh interconnects, and batch messages through relay-based two-stage communication to adapt to oversubscribed fat-tree networks.
+2017,IPDPS,THU,Scalable Graph Traversal on Sunway TaihuLight with Ten Million Cores,pipelined module mapping for heterogeneous MPE/CPE cores; contention-free data shuffling via producer-router-consumer on 8x8 mesh; group-based message batching with relay nodes for fat-tree oversubscription; direction-optimized BFS,4,4,4
