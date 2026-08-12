@@ -209,6 +209,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ##### Optimization Modeling
 2020,FPGA,ETH Zurich,Flexible Communication Avoiding Matrix Multiplication on FPGA with High-Level Synthesis,computation and I/O decomposition model for matrix multiplication; 1D array collapse mapping method; internal double buffering,,,
 2021,HPCA,Georgia Tech,Heterogeneous Dataflow Accelerators for Multi-DNN Workloads,heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators,,,
+2021,ASPLOS,Illinois,Mind Mappings: Enabling Efficient Algorithm-Accelerator Mapping Space Search,differentiable surrogate modeling; projected gradient descent; meta-statistics prediction,4,3,2
 2023,MICRO,Alibaba; CUHK,ArchExplorer: Microarchitecture Exploration Via Bottleneck Analysis,dynamic event-dependence graph(EDG); induced DEG based critical path construction; bottleneck-removal-driven DSE,,,
 2023,ISCA,THU,Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators,inter-layer encoding method; temperal cut; spatial cut; RA tree analysis,,,
 # ##### Fault Tolerant Mapping
