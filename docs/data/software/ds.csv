@@ -702,19 +702,16 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UTA,Software-Defined Agentic Serving,use LLM to generate the cpp code of agent network; dynamic agent graph support,2,2,1
 2026,arXiv,UT-Austin,Nalar: An agent serving framework,frontend agent expression for dynamic graph; agent based scheduling,3,2,1
 
-# #### CPU based Optimizations for Large Scale Multi-Agent Systems
-# Challenge: Large number will lead to high communication overhead on CPU based systems. The database, scheduler and communication need to be optimized.
+# #### Runtime Optimizations for Large Scale Multi-Agent Systems
+# Challenge: Large-scale multi-agent simulations create communication, scheduling, and runtime overhead across agent execution and state management.
 2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
 2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
 2025,arXiv,ZJU,Agent-Kernel: A MicroKernel Multi-Agent System Framework for Adaptive Social Simulation Powered by LLMs,micro-kernel MAS; decouple system function to enable more flexible and adaptive computation,3,3,2
-
-# #### GPU based Optimizations for Multi-Agent Systems
-# Challenge: Using GPU to run multi-agent systems can reduce the communication overhead. However, the GPU memory is limited, which requires optimization for memory management and communication.
-2025,AAMAS,MIT,On the limits of agency in agent-based models,LLM archetypes for million-scale ABM; computational efficiency via representative agent grouping; counterfactual behavioral analysis with LLM-driven agents,3,3,3
 2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
 
 # #### Reuse Optimizations for Multi-Agent Systems
 # Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
+2025,AAMAS,MIT,On the limits of agency in agent-based models,LLM archetypes for million-scale ABM; computational efficiency via representative agent grouping; counterfactual behavioral analysis with LLM-driven agents,3,3,3
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
 2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
