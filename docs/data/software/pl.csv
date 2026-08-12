@@ -86,6 +86,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Provide task, thread, and streaming abstractions with compiler support for lowering control, communication, and dynamic execution onto accelerator dataflow.
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 2025,arXiv,Cornell,Dato: A Task-Based Programming Model for Dataflow Accelerators,task-based spatial dataflow programming model; linear-capability Stream type for FIFO safety; layout refinement type,4,4,3
+2025,PLDI,CMU,Ripple: Asynchronous Programming for Spatial Dataflow Architectures,asynchronous iterator with implicit FIFO task queues; arb-queue lowering to hardware token queues;direct mapping of asynchronous task communication to hardware token queues with arbitration,4,2,4
 2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;dynamic hardware configuration time-multiplexing for MoE,4,3,4
 2026,OSDI,NUS,TileLoom: Automatic Dataflow Planning for Tile-Based Languages on Spatial Dataflow Accelerators,logical launch-grid to physical core-array and temporal-wave mapping;grid-level scale-out planning for block-centric tile DSLs such as Triton and Helion,3,4,3
 
