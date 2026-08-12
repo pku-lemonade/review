@@ -711,8 +711,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Reuse Optimizations for Multi-Agent Systems
 # Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
-2025,AAMAS,MIT,On the limits of agency in agent-based models,LLM archetypes for million-scale ABM; computational efficiency via representative agent grouping; counterfactual behavioral analysis with LLM-driven agents,3,3,3
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
+2025,AAMAS,MIT,On the limits of agency in agent-based models,LLM archetypes for million-scale agent-based model (ABM); computational efficiency via representative agent grouping; counterfactual behavioral analysis with LLM-driven agents,3,3,3
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
 2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
 2026,arXiv,UVA,[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows,stateful operator abstraction for kv cache; distributed kv materialization and transfer; copy-on-write kv fork; compatibility-constrained kv composition; transfer-versus-recompute cost model; zero-copy state transport,3,3,2
