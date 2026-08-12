@@ -90,11 +90,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MICRO,KAIST,HLX: A Unified Pipelined Architecture for Optimized Performance of Hybrid Transformer-Mamba Language Models,PipeFlash fine-grained pipelining for Attention; PipeSSD fused pipelined execution for Mamba-2; Unified Reconfigurable Streamlined Core (URSC); inter-operation dependency mitigation,4,3,3
 # ##### LLM Memory-Wall Dataflow and Compute
 # Challenge: LLM accelerators must reduce movement of weights, activations, and attention intermediates without relying only on larger memory capacity.
-2023,ASPLOS,Gatech,FLAT: An Optimized Dataflow for Mitigating Attention Bottlenecks,inter-operator tensor-tensor fusion; fine-grained execution tiling; map-space exploration,3,3,2
 2024,ISCA,Furiosa AI,TCP: A Tensor Contraction Processor for AI Workloads,tensor contraction as a hardware primitive; circuit-switched fetch network for hierarchical data reuse; Einstein summation for tactic exploration,4,3,3
-2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
 2026,ISCA,ICT/CAS,MLX: Multi-Layer Execution for Structured LLM Workload Acceleration on Spatial Architectures,semantic-aware FFT compression for structured LLM token mixing; hierarchical butterfly sparse projection with tile-wise BSMM; Closed Dependency Components (CDC) for layer-folded spatial dataflow; bounded-hop skip-hop routing and tag-based scheduling; decoupled compute-transfer pipelines on compact mesh,4,4,4
 2026,ISCA,Imperial,Combating the Memory Walls: Optimization Pathways for Long-Context Agentic LLM Inference,flattened output-stationary systolic array for skinny/fat GEMM; asymmetric MXINT/MXFP datapath with selective Hadamard rotation; transpose-on-read Matrix SRAM with HBM prefetch; native tile-level FlashAttention ISA; output-norm-guided blockwise clipping and multi-objective co-design,4,3,4
+
+# ##### Attention Pipeline Fusion and Intermediate Reuse
+# Challenge: Attention consists of dependent matrix multiplications and nonlinear operators that can materialize large score and activation intermediates; accelerators must fuse or pipeline these operators and preserve intermediate data on chip.
+2023,FPL,PKU,Calabash: Accelerating Attention using a Systolic Array Chain on FPGAs,dual output-stationary (OS) systolic-array chain for GEMM-softmax-GEMM; Q/K row partition and V column partition for on-chip score-tile reuse; analytical resource-latency model for Q/K/V tile sizing (TQ/TK/TV) and two-array workload balancing,3,4,2
+2023,ASPLOS,Gatech,FLAT: An Optimized Dataflow for Mitigating Attention Bottlenecks,inter-operator tensor-tensor fusion; fine-grained execution tiling; map-space exploration,3,3,2
+2024,DATE,NTU,ViTA: A Highly Efficient Dataflow and Architecture for Vision Transformers,highly efficient memory-centric dataflow; fused special function module for non-linear functions; A comprehensive DSE of ViTA Kernels and VMUs,,,
+
+
 # ##### LLM On-Chip Storage and Runtime Memory Management
 # Challenge: Edge LLM accelerators have too little on-chip storage for model and KV state, while static tensor/tile allocation cannot exploit bursty bandwidth slack or promptly reclaim fragmented buffers.
 2025,arXiv,SJTU,ROMA: A Read-Only-Memory-based Accelerator for QLoRA-based On-Device LLM,hybrid ROM-SRAM architecture for on-device LLM; B-ROM design for area-efficient ROM; fused cell integration of ROM and compute unit; QLoRA rank adaptation for task-specific tuning; on-chip storage optimization for quantized models,,,
@@ -199,6 +205,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,HPCA,Georgia Tech,MAGMA: An Optimization Framework for Mapping Multiple DNNs on Multiple Accelerator Cores,sub-accelerator selection; fine-grained job prioritization; MANGA crossover genetic operators,,,
 2023,ISCA,THU,MapZero: Mapping for Coarse-grained Reconfigurable Architectures with Reinforcement Learning and Monte-Carlo Tree Search,GAT based DFG and CGRA embedding; routing penalty based reinforcement learning; Monte-Carlo tree search space exploration,,,
 2023,VLSI,IIT Kharagpur,Application Mapping Onto Manycore Processor Architectures Using Active Search Framework,RNN based active search framework; IP-Core Numbering Scheme; active search with/without pretraining,,,
+2025,TACO,ICT,GenCNN: A Partition-Aware Multi-Objective Mapping Framework for CNN Accelerators Based on Genetic Algorithm,off-chip data access/on-chip data processing modeling; gene coding of partitioning and parallelization; multi-objective optimization,4,4,2
 # ##### Optimization Modeling
 2020,FPGA,ETH Zurich,Flexible Communication Avoiding Matrix Multiplication on FPGA with High-Level Synthesis,computation and I/O decomposition model for matrix multiplication; 1D array collapse mapping method; internal double buffering,,,
 2021,HPCA,Georgia Tech,Heterogeneous Dataflow Accelerators for Multi-DNN Workloads,heterogeneous dataflow accelerators (HDAs) for DNN; dataflow flexibility; high utilization across the sub-accelerators,,,
@@ -228,6 +235,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,HPCA,THU,Atomic Dataflow based Graph-Level Workload Orchestration for Scalable DNN Accelerators,SA based atomic generation; DP&priority based atomic graph scheduling; NoC topology-aware mapping,4,4,2
 2023,ICCAD,PKU,Memory-aware Scheduling for Complex Wired Networks with Iterative Graph Optimization,topology-aware pruning algorithm; integer linear programming scheduling method; sub-graph fusion algorithm ; memory-aware graph partitioning,4,3,2
 2023,MICRO,Duke,Si-Kintsugi: Towards Recovering Golden-Like Performance of Defective Many-Core Spatial Architectures for AI,graph alignment algorithm for dataflow graph and platform pe grap; producer-consumer pattern dataflow generation algorithm,,,
+2026,TACO,ICT,TOSCA: Towards Semi-Centralized Scheduling in Dataflow Architectures via Hardware-Software Co-Design,on-demand triggering; global monitoring; peer-to-peer task flow; data flow plane & task flow plane decomposition,3,4,2
 # ### Many-core Architecture
 # Challenge: Many-core architectures are designed to handle a large number of cores; but they face challenges in terms of power consumption; performance; and resource allocation.
 # #### Resource Management
