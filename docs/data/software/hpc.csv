@@ -38,9 +38,19 @@ Challenge: The nature of modern GPUs as heterogeneous computing platforms. Tenso
 Solution: Perform intelligent task decomposition and scheduling at the system level.
 2023,ATC,University of California,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,highly sparse and irregular graph operations;Sparse Graph Translation technique;collaborative execution strategy between CUDA cores and TCUs,3,3,3
 2025,IPDPS,HUST,BRP-SpMM: Block-Row Partition Based Sparse Matrix Multiplication with Tensor and CUDA Cores,Block-Row Partition;“Fixed Non-zero” strategy;customized storage forma;two lightweight GPU kernels for the TC Block and for the Residual Row part,3,3,3
+# #### Tall-and-Skinny MM optimization
+Challenge: Traditional matrix multiplication assumes regular shapes and high data reuse. For tall-and-skinny matrices, extreme low arithmetic intensity renders standard tiling strategies ineffective, leading to severe memory bandwidth bottlenecks, uncoalesced memory accesses, and massive underutilization of parallel compute units.
+Solution: Solutions focus on redesigning computation schemas and memory access patterns.
+2019,ICS,UCR,TSM2: Optimizing Tall-and-Skinny Matrix-Matrix Multiplication on GPUs,outer-product based multiplication; shared memory optimization; double-buffer prefetching; Little's Law based gradient descent,4,4,2
+2020,arXiv,RRZE,Performance Engineering for Real and Complex Tall & Skinny Matrix Multiplication Kernels on GPUs,hardcoded code generation; transposed thread mapping; leap frogging,3,4,2
 # ### Dynamic Graph Analytics
 # Challenge: maintaining exact results on evolving graphs under high update rates without recomputing the whole graph or flooding the machine/cluster with unnecessary work.
 # #### Incremental GNN Inference
 # Solution: reuse prior embeddings and propagate only affected changes for message-passing GNNs on dynamic graphs, extending the parent parallel-algorithm idea to graph learning workloads.
 2025,IPDPS,NUS,InkStream: Instantaneous GNN Inference on Dynamic Graphs via Incremental Update,real affected area; resilient nodes; event-based computing model; incremental neighborhood update,4,4,3
 2025,ICDCS,IISc,Ripple: Scalable Incremental GNN Inferencing on Large Streaming Graphs,generalized incremental programming model; delta undo-redo aggregation; distributed incremental inferencing; request batching and routing,4,4,3
+
+# ### Extreme-Scale Graph Traversal on Heterogeneous Supercomputers
+# Challenge: Irregular graph algorithms like BFS exhibit random memory access, load imbalance from power-law degree distributions, and massive small-message overhead at supercomputer scale, while heterogeneous many-core processors lack cache coherence, have limited on-chip memory, and restrict inter-core communication patterns.
+# Solution: Decompose the algorithm into pipelined modules mapped to heterogeneous cores, design contention-free data shuffling via producer-router-consumer roles over mesh interconnects, and batch messages through relay-based two-stage communication to adapt to oversubscribed fat-tree networks.
+2017,IPDPS,THU,Scalable Graph Traversal on Sunway TaihuLight with Ten Million Cores,pipelined module mapping for heterogeneous MPE/CPE cores; contention-free data shuffling via producer-router-consumer on 8x8 mesh; group-based message batching with relay nodes for fat-tree oversubscription; direction-optimized BFS,4,4,4
