@@ -177,7 +177,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### Benchmark
 # Solution: benchmark targeted at performance analysis and characterization.
 2018,ICPP,WUSTL,Varbench: an Experimental Framework to Measure and Characterize Performance Variability,spatial/temperal variability; Resource Variability (RV) statistic,,,
+
+# #### Data Movement Workload Characterization
+# challenge: data movement bottlenecks depend on workload-specific access, locality, and routing patterns that must be measured before effective system or architecture optimizations can be selected.
 2021,IEEE Access,D-ITET,DAMOV: A New Methodology and Benchmark Suite for Evaluating Data Movement Bottlenecks,NDP focused workload characterization methodology; memory-bound function identification; locality-based clustering; memory bottlenecks classification,,,
+2026,ISCA,UCSD,Patterns behind Chaos: Forecasting Data Movement for Efficient Large-Scale MoE LLM Inference,large-scale moe expert-selection trace characterization; layer-token and prefill-decode temporal correlation; expert skew and pair co-activation analysis; prefill-aware expert placement; data-placement-aware command processor and hardware-managed hbm,4,4,3
 
 # ### LLM Serving Benchmarks
 # Challenge: There is different optimize targets for different LLM serving systems. Develop a fair benchmark is crucial.

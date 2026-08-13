@@ -194,6 +194,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,XMU,Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving,GPU-native SSD KV block object abstraction; gio_uring for asynchronous GPU direct object I/O,3,3,4
 2026,FAST,THU,Bidaw: Enhancing Key-Value Caching for Interactive LLM Serving via Bidirectional Computation–Storage Awareness,I/O-aware request scheduling by dual queues and disk-Highest Response Ratio Next policy; previous-answer-based KVC eviction; selective caching of storage-efficient activation tensors,4,3,2
 
+# #### Predictive Sparse KV Prefetching
+# challenge: sparse kv retrieval must predict the next step's important blocks early enough to hide slow host or remote transfers without recreating hbm pressure through prediction metadata or speculative buffers.
+2026,arXiv,Fudan,DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch,speculated-token-based kv retrieval prediction; dual-token decoding pipeline; layer-aware kv transfer scheduling; prediction-miss correction; layer-scoped sparse kv buffer,3,3,3
+2026,arXiv,MSR,OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching,speculative-decoding lookahead for kv block prediction; asynchronous attention background pipeline; delta selection with capped eviction; head-wise sparse kv working set; remote partial kv fetching,3,1,2
+
 # #### KV Cache Evict Systems
 # Challenge: selectively discard the least important key-value pairs to free up memory for longer contexts or larger batch sizes without significantly degrading the model's generation quality or increasing computational overhead for the eviction process itself.
 2023,NIPS,UT-Austin,H$_2$O: Heavy-Hitter Oracle for Efficient Generative Inference of Large Language Models,sparsity for small cache size; heavy-hitters; greedy algorithm for low-cost policy,,,
@@ -612,6 +617,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,StepFun,Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding,detailed AFD math analysis; co-design of model and system; low decode latenty implementation,3,4,2
 2025,arXiv,SJTU,Expert-as-a-Service: Towards Efficient Scalable and Robust Large-scale MoE Serving,treat expert on independent servers; expert as a service enable scalable MoE serving,3,3,2
 2026,arXiv,HKUST(GZ),KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding,weightless attention nodes; elastic token-range routing; query-first core-attention dispatch; inter-layer kernel pipelining; decode-time kv capacity scaling,3,3,2
+2026,technical blog,UCSD,FastAFD: Open-Source Large-Scale Attention-FFN Disaggregation on Blackwell NVL72,gpu-resident m2n and n2m control path; megamoe fused dispatch-expert-compute-combine megakernel; two-microbatch attention-ffn pipeline; cuda graph replay; overlap-aware zero-overhead scheduling,4,3,2
+2024,arXiv,THU,Efficient Heterogeneous Large Language Model Decoding with Model-Attention Disaggregation,model-attention disaggregation across compute- and memory-optimized gpus; fully host-bypassed gpu-nic network stack; automated model splitting and operator reordering; rotational staggered pipelining,3,3,3
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
