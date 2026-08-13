@@ -228,9 +228,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Many-Core Systems
 # Challenge: the heterogeneity of cores, the load imbalance, and the communication overhead.
 
+# ### Single-Node Graph Analytics Frameworks
+# Challenge: Single-node graph analytics frameworks must hide irregular graph traversal, memory access, and work imbalance while exposing a productive programming model for multicore CPUs or GPUs.
+# Solution: Provide graph-specific abstractions such as sparse-linear-algebra vertex programs or frontier operators and implement optimized runtime scheduling and load balancing underneath.
+2015,VLDB,Intel,GraphMat: High performance graph analytics made productive,vertex program to sparse matrix mapping; generalized SPMV for graph analytics; single-node multicore framework,4,4,4
+2016,PPoPP,UC Davis,Gunrock: A High-Performance Graph Processing Library on the GPU,data-centric vertex/edge frontier abstraction; advance/filter/compute operators; bulk-synchronous GPU graph processing; kernel fusion and push-pull traversal support; idempotent traversal and priority-queue optimizations; load-balanced graph primitives,4,4,4
+
 # ### Workload Characterization
 # Challenge: dynamic workloads across numerous cores, resource contention for shared hardware.
-2015,VLDB,Intel,GraphMat: High performance graph analytics made productive,vertex program to sparse matrix mapping; generalized SPMV for graph analytics; single-node multicore framework,4,4,4
 2018,SC,Intel,Many-Core Graph Workload Analysis,multicore simulator sniper; selective caching and prefetching; heterogeneous high-performance low-power cores,,,
 2018,DATE,UGA,Parallel Code Generation of Synchronous Programs for a Many-core Architecture,banked memory mapping; worst-case response time analysis,,,
 2025,IPDPS,UChicago,Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems,lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing,,,
