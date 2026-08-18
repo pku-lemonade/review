@@ -37,22 +37,29 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Decouple algorithm specification from its execution schedule to enable performance portability and automated optimization.
 2013,PLDI,MIT,"Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines",algorithm-schedule decoupling; image processing DSL; explicit scheduling language,4,4,4
 2018,OSDI,UW,TVM: An Automated End-to-End Optimizing Compiler for Deep Learning,operator fusion; graph-level DL compiler; automatic code generation; tensor expression simplification,4,4,4
-2019,MAPL,Harvard,Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations,tile-based single program, multiple data (SPMD) programming model; predicated SSA (PSSA) for tile-level control flow; hierarchical tiling; automatic memory coalescing; shared-memory auto-allocation and synchronization,4,3,4
 2020,OSDI,UCB,Ansor: Generating High-Performance Tensor Programs for Deep Learning,hierarchical search space program sampler; evolutionary fine-tuning&learned cost model; gradient descent based task scheduler,4,4,3
 2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
 2023,ASPLOS,UToronto,Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs,task-mapping based programming; hardware-centric schedule space; post-scheduling operator fusion,4,4,3
 
-# #### GPU Tensor Layout Synthesis
-# Challenge: High-performance GPU kernels require mutually compatible data layouts across threads, registers, shared memory, and collective hardware instructions, while manual layout specification is complex and heuristic layout propagation is difficult to generalize to emerging operators.
-# Solution: Model tensor layouts as composable functions and automatically synthesize thread-value layouts, shared-memory layouts, and collective instruction choices through constraint propagation, layout unification, search, and analytical cost modeling.
+# #### Tile-Based GPU Kernel DSLs
+# Challenge: GPU programmers need concise tile-level abstractions while retaining enough control over memory hierarchy, asynchronous execution, and launch structure to approach hand-tuned kernel performance.
+# Solution: Expose hierarchical tile data and operations through domain-specific languages and embedded frameworks, with compiler or library support for layouts, synchronization, pipelines, and grid scheduling.
+2019,MAPL,Harvard,Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations,"tile-based single program, multiple data (SPMD) programming model; predicated SSA (PSSA) for tile-level control flow; hierarchical tiling; automatic memory coalescing; shared-memory auto-allocation and synchronization",4,3,4
+2025,ICLR,Stanford,"ThunderKittens: Simple, Fast, and Adorable Kernels",16x16 warp-owned matrix tiles; PyTorch-like bulk tile operations; load-compute-store-finish (LCSF) asynchronous template; automatic swizzled shared-memory layouts; persistent-grid block scheduling,4,5,3
+2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,explicit memory hierarchy allocation; layout inference for thread binding; composable fragment layout; software-defined pipeline; automatic warp specialization for Hopper; CuTe/CK tensorization integration,4,4,3
+
+# #### Automatic GPU Tile and Pipeline Synthesis
+# Challenge: Choosing hardware-aligned tile shapes, compatible memory layouts, and pipelined warp assignments requires searching tightly coupled hardware constraints that change across accelerator generations.
+# Solution: Construct or synthesize tile programs, layouts, and schedules using hardware alignment rules, type and constraint solving, and analytical performance models.
+2022,OSDI,UToronto & MSR,ROLLER: Fast and Efficient Tensor Compilation for Deep Learning,rolling tile (rTile) hardware alignment; rTile program (rProgram); scale-up-then-scale-out construction; micro-performance model; Load-Compute-Store hardware abstraction layer,4,5,4
 2026,CGO,UToronto,Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs,CuTe style data layout synthesis; type-inference-based thread-value layout propagation; alignment-aware shared-memory layout unification,4,5,4
+2026,OSDI,Stanford & NVIDIA,Optimal Software Pipelining and Warp Specialization for Tensor Core GPUs,Twill joint software-pipelining and warp-specialization formulation; modulo-schedule integer linear program; warp-assignment satisfiability modulo theories constraints; register-aware cross-warp spill modeling; architecture-parametric operation costs,4,4,4
 
 # #### Tensor & Pipeline Optimization
-# Challenge: Manually writing high-performance kernels for diverse tensor operations is difficult and not portable.
-# Solution: Use MLIR-based abstractions, novel programming models, and automatic tuning to generate efficient code for tensor programs and pipelines.
+# Challenge: Optimizing complete tensor workloads requires coordinating memory traffic, fusion, and execution pipelines across operators rather than tuning each isolated tile kernel independently.
+# Solution: Use tile graphs, tensor properties, software-defined pipelines, persistent kernels, and inter-core communication to optimize data movement and fusion across tensor computations.
 2023,OSDI,Microsoft Research,WELDER: Scheduling Deep Learning Memory Access via Tile-graph,Tile-graph abstraction for fine-grained memory management; inter-layer independence for optimization space decoupling; tile traffic-based cost model,3,4,4
 2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
-2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,explicit memory hierarchy allocation; layout inference for thread binding; composable fragment layout; software-defined pipeline; automatic warp specialization for Hopper; CuTe/CK tensorization integration,4,4,3
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
 2025,arXiv,CMU,Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs,mega-kernelization; SM level parallel optimization; SM level representation,3,3,3
 2026,HPCA,SJTU,FlashFuser: Expanding the Scale of Kernel Fusion for Compute-Intensive Operators via Inter-Core Connection,DSM based comminucation primitives; hierarchical dataflow analyzer; pruning based fusion search engine,4,4,2
@@ -86,6 +93,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Provide task, thread, and streaming abstractions with compiler support for lowering control, communication, and dynamic execution onto accelerator dataflow.
 2024,HPCA,Stanford,Revet: A Language and Compiler for Dataflow Threads,dataflow threads execution model for vRDA; structured-link tensor format (SLTF) for control flow encoding; compiler lowering from imperative control flow to streaming dataflow,4,3,4
 2025,arXiv,Cornell,Dato: A Task-Based Programming Model for Dataflow Accelerators,task-based spatial dataflow programming model; linear-capability Stream type for FIFO safety; layout refinement type,4,4,3
+2025,PLDI,CMU,Ripple: Asynchronous Programming for Spatial Dataflow Architectures,asynchronous iterator with implicit FIFO task queues; arb-queue lowering to hardware token queues; direct mapping of asynchronous task communication to hardware token queues with arbitration,4,2,4
 2026,ASPLOS,Stanford,Streaming Tensor Programs: A Streaming Abstraction for Dynamic Parallelism,asynchronous dataflow streaming abstraction;symbolic shape notation for dynamic tiling;dynamic hardware configuration time-multiplexing for MoE,4,3,4
 2026,OSDI,NUS,TileLoom: Automatic Dataflow Planning for Tile-Based Languages on Spatial Dataflow Accelerators,logical launch-grid to physical core-array and temporal-wave mapping;grid-level scale-out planning for block-centric tile DSLs such as Triton and Helion,3,4,3
 
@@ -105,6 +113,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Compared to dense tensors, sparse tensors have more complex data structure and computation patterns.
 2023,ASPLOS,UW,SparseTIR: Composable Abstractions for Sparse Compilation in Deep Learning,use composable formats for the expression for sparse matrix; divide the compute to different stages and reuse current optimizations;TensorIR-based sparse compiler,4,3,3
 2024,OOPSLA,Cornell,UniSparse: An Intermediate Language for General Sparse Format Customization,language-based holistic format abstraction; decoupled logical (data structure) vs. physical (memory layout) representation; index map & orthogonal primitives (mutation/layout/query) for customization,4,4,4
+2026,ASPLOS,Stanford,FuseFlow: A Fusion-Centric Compilation Framework for Sparse Deep Learning on Streaming Dataflow,cross-expression Einsum inlining; fusion table for intermediate stream memoization,4,4,4
 
 # ### Graph Mining Compilers
 # Challenge: generic runtime algorithms, automatically compile high-level specifications into efficient code.
