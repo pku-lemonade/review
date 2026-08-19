@@ -214,6 +214,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,ASPLOS,Illinois,Mind Mappings: Enabling Efficient Algorithm-Accelerator Mapping Space Search,differentiable surrogate modeling; projected gradient descent; meta-statistics prediction,4,3,2
 2023,MICRO,Alibaba; CUHK,ArchExplorer: Microarchitecture Exploration Via Bottleneck Analysis,dynamic event-dependence graph(EDG); induced DEG based critical path construction; bottleneck-removal-driven DSE,,,
 2023,ISCA,THU,Inter-layer Scheduling Space Definition and Exploration for Tiled Accelerators,inter-layer encoding method; temperal cut; spatial cut; RA tree analysis,,,
+2023,ISPASS,UBC,Sunstone: A Scalable and Versatile Scheduler for Mapping Tensor Algebra on Spatial Accelerators,algebra-driven tiling and unrolling principles; trie-based loop order representation; bottom-up hierarchical optimization,3,3,2
 # ##### Fault Tolerant Mapping
 2017,SC,NIT,High-performance and energy-efficient fault-tolerance core mapping in NoC,weighted communication energy; placing unmapped vertices region; application core graph; spare core placement algorithm,,,
 2019,IVLSI,UESTC,Optimized mapping algorithm to extend lifetime of both NoC and cores in many-core system,lifetime budget metric; LBC-LBL mapping algorithm; electro-migration fault model,,,
@@ -222,6 +223,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ASPLOS,THU,Cocco: Hardware-Mapping Co-Exploration towards Memory Capacity-Communication Optimization,consumption-centric flow based subgraph execution scheme; main/side region based memory management,,,
 2025,HPCA,THU,"SoMa: Identifying, Exploring, and Understanding the DRAM Communication Scheduling Space for DNN Accelerators","tensor-centric notation; two-stage(LFA,DLSA) simulated annealing; Prefetching and Delayed Storing",4,3,2
 2025,DAC,THU,Buffer Prospector: Discovering and Exploiting Untapped Buffer Resources in Many-Core DNN Accelerators,data-compute ratio; buffer requirement calculator; layer-pipeline (LP) mapping optimization; greedy based buffer allocator,4,3,2
+2026,HPCA,THU,TEMP: A Memory Efficient Physical-aware Tensor Partition-Mapping Framework on Wafer-scale Chips,relay-based bidirectional tensor streaming; congestion-aware routing optimization; framework-level fault tolerance,4,4,2
 # ##### Reliability Management
 2018,DATE,NUST,Variation-Aware Task Allocation and Scheduling for Improving Reliability of Real-Time MPSoCs,variation-aware task allocation; soft-error reliability maximization; cross entropy based task scheduling,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance-centric aging management; frequency-based core binning; DRL based task mapping,3,3,2
