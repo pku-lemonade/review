@@ -175,6 +175,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: balancing expressiveness, usability, and synthesis efficiency in HDL design
 2024,FPGA,PKU,Cement: Streamlining FPGA Hardware Design with Cycle-Deterministic eHDL and Synthesis,incorporates an event layer and the ctrl sub-language; event-based extension; cycle-level timing analysis and control synthesis techniques,4,4,4
 2026,ASPLOS,NUS,Anvil: A General-Purpose Timing-Safe Hardware Description Language,event-parametric dynamic timing contracts; event-graph-based abstract-time reasoning; signal lifetime and register loan-time type system,4,3,3
+2026,ASPLOS,Cornell,Parameterized Hardware Design with Latency-Abstract Interfaces,latency-abstract interfaces ; output parameters for bottom-up timing propagation; parameterized timeline types with SMT-based structural hazard checking; generator-aware bottom-up elaboration,4,3,4
 
 # #### Streaming Computation Models
 # Solution: high-throughput data processing, real-time analytics, efficient resource utilization for continuous data
