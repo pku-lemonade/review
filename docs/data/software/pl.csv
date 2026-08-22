@@ -88,6 +88,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,ISCA,UCB,"CoSA: Scheduling by Constrained Optimization for Spatial Accelerators",mixed-integer programming (MIP) for scheduling; prime-factor allocation; constant binary matrices for algorithm-hardware constraints,5,3,4
 2022,ISCA,PKU,AMOS: Enabling Automatic Mapping for Tensor Computations On Spatial Accelerators with Hardware Abstraction,hardware abstraction; constraints based mapping generation; binary matrix based validation; hierarchical level performance model,3,4,2
 
+# #### CGRA Compilation Frameworks
+# Challenge: Coarse-grained reconfigurable architectures (CGRAs) require compilers to transform loop- and control-heavy kernels into efficient dataflow execution while coordinating spatial/temporal mapping, pipelining, and architecture-specific execution mechanisms.
+# Solution: Develop CGRA-specific intermediate representations and compiler transformations that restructure loops and control flow into dataflow representations, expose inter-iteration and task-level parallelism, and retarget the resulting computation to reconfigurable fabrics.
+2025,DAC,FDU,Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs,polyhedral model for CGRA loop transformation; ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
+2026,PLDI,Google,NEURA: A Unified and Retargetable Compilation Framework for Coarse-Grained Reconfigurable Architectures,hierarchical predicated type system for CGRA control flow; deterministic control-flow flattening from CDFG to a single unified DFG,4,3,4
+
 # #### Programming Models for Spatial and Dataflow Accelerators
 # Challenge: Spatial and dataflow accelerators expose nontraditional execution models, explicit communication, and dynamic parallelism that are difficult to express safely and productively in conventional languages.
 # Solution: Provide task, thread, and streaming abstractions with compiler support for lowering control, communication, and dynamic execution onto accelerator dataflow.
@@ -101,7 +107,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Emerging accelerators require compiler and validation stacks tailored to changing hardware interfaces, but building them separately for every design is costly and error-prone.
 # Solution: Provide reusable compiler abstractions, optimization frameworks, and declarative ISA specifications that generate efficient mappings and validation tooling.
 2022,PLDI,MIT,Exocompilation for Productive Programming of Hardware Accelerators,Exocompilation; externalized accelerator specification; user-defined instructions; rewrite-based scheduling; effect analysis for safety,4,4,3
-2025,DAC,FDU,"Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs",polyhedral model for CGRA loop transformation; ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
 2025,MICRO,UIUC,TAIDL: Tensor Accelerator ISA Definition Language with Auto-generation of Scalable Test Oracles,TAIDL tensor-accelerator instruction set architecture (ISA) specification; tensor-buffer and control-register data model; XLA (Accelerated Linear Algebra) HLO (High-Level Optimizer) instruction semantics; TAIDL test oracle (TAIDL-TO) generation; GPU-backed functional simulation,4,5,4
 
 # #### Embedded DSL Compiler Frameworks
@@ -170,6 +175,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: balancing expressiveness, usability, and synthesis efficiency in HDL design
 2024,FPGA,PKU,Cement: Streamlining FPGA Hardware Design with Cycle-Deterministic eHDL and Synthesis,incorporates an event layer and the ctrl sub-language; event-based extension; cycle-level timing analysis and control synthesis techniques,4,4,4
 2026,ASPLOS,NUS,Anvil: A General-Purpose Timing-Safe Hardware Description Language,event-parametric dynamic timing contracts; event-graph-based abstract-time reasoning; signal lifetime and register loan-time type system,4,3,3
+2026,ASPLOS,Cornell,Parameterized Hardware Design with Latency-Abstract Interfaces,latency-abstract interfaces ; output parameters for bottom-up timing propagation; parameterized timeline types with SMT-based structural hazard checking; generator-aware bottom-up elaboration,4,3,4
 
 # #### Streaming Computation Models
 # Solution: high-throughput data processing, real-time analytics, efficient resource utilization for continuous data
