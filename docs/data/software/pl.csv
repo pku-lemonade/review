@@ -46,14 +46,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Expose hierarchical tile data and operations through domain-specific languages and embedded frameworks, with compiler or library support for layouts, synchronization, pipelines, and grid scheduling.
 2019,MAPL,Harvard,Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations,"tile-based single program, multiple data (SPMD) programming model; predicated SSA (PSSA) for tile-level control flow; hierarchical tiling; automatic memory coalescing; shared-memory auto-allocation and synchronization",4,3,4
 2025,ICLR,Stanford,"ThunderKittens: Simple, Fast, and Adorable Kernels",16x16 warp-owned matrix tiles; PyTorch-like bulk tile operations; load-compute-store-finish (LCSF) asynchronous template; automatic swizzled shared-memory layouts; persistent-grid block scheduling,4,5,3
+2025,PLDI,Stanford & NVIDIA,Task-Based Tensor Computations on Modern GPUs,sequential task semantics; task mapping specification; processor-annotated event arrays; copy-in/copy-out elimination; static warp-specialization graph partitioning,4,4,4
+2026,MLSys,Stanford,HipKittens: Fast and Furious AMD Kernels,explicit register scheduling; MFMA-layout tile swizzling; 8-wave ping-pong schedule; 4-wave interleave schedule; XCD-aware chiplet swizzling,4,5,3
 2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,explicit memory hierarchy allocation; layout inference for thread binding; composable fragment layout; software-defined pipeline; automatic warp specialization for Hopper; CuTe/CK tensorization integration,4,4,3
 
 # #### Automatic GPU Tile and Pipeline Synthesis
-# Challenge: Choosing hardware-aligned tile shapes, compatible memory layouts, and pipelined warp assignments requires searching tightly coupled hardware constraints that change across accelerator generations.
-# Solution: Construct or synthesize tile programs, layouts, and schedules using hardware alignment rules, type and constraint solving, and analytical performance models.
+# Challenge: Choosing hardware-aligned tile shapes, compatible memory layouts, pipelined warp assignments, and communication-aware tile schedules requires searching tightly coupled hardware and workload constraints that change across accelerator generations and device topologies.
+# Solution: Construct or synthesize tile programs, layouts, and local or distributed schedules using hardware alignment rules, type and constraint solving, communication-chunk dependencies, and analytical or empirical performance models.
 2022,OSDI,UToronto & MSR,ROLLER: Fast and Efficient Tensor Compilation for Deep Learning,rolling tile (rTile) hardware alignment; rTile program (rProgram); scale-up-then-scale-out construction; micro-performance model; Load-Compute-Store hardware abstraction layer,4,5,4
 2026,CGO,UToronto,Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs,CuTe style data layout synthesis; type-inference-based thread-value layout propagation; alignment-aware shared-memory layout unification,4,5,4
 2026,OSDI,Stanford & NVIDIA,Optimal Software Pipelining and Warp Specialization for Tensor Core GPUs,Twill joint software-pipelining and warp-specialization formulation; modulo-schedule integer linear program; warp-assignment satisfiability modulo theories constraints; register-aware cross-warp spill modeling; architecture-parametric operation costs,4,4,4
+2026,OSDI,UCSD & Meta,Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap,communication chunk abstraction; chunk-tile dependency graph; chunk-aligned tile-scheduler swizzling; five-backend communication lowering; communication-centric autotuning,4,4,4
 
 # #### Tensor & Pipeline Optimization
 # Challenge: Optimizing complete tensor workloads requires coordinating memory traffic, fusion, and execution pipelines across operators rather than tuning each isolated tile kernel independently.
