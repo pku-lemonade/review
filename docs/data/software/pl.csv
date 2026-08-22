@@ -92,7 +92,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Coarse-grained reconfigurable architectures (CGRAs) require compilers to transform loop- and control-heavy kernels into efficient dataflow execution while coordinating spatial/temporal mapping, pipelining, and architecture-specific execution mechanisms.
 # Solution: Develop CGRA-specific intermediate representations and compiler transformations that restructure loops and control flow into dataflow representations, expose inter-iteration and task-level parallelism, and retarget the resulting computation to reconfigurable fabrics.
 2025,DAC,FDU,Adora Compiler: End-to-End Optimization for High-Efficiency Dataflow Acceleration and Task Pipelining on CGRAs,polyhedral model for CGRA loop transformation; ping-pong buffering via out-of-order RS (Reservation Station) scheduling,4,3,4
-2026,PLDI,Google,NEURA: A Unified and Retargetable Compilation Framework for Coarse-Grained Reconfigurable Architectures,hierarchical predicated type system for CGRA control flow;deterministic control-flow flattening from CDFG to a single unified DFG,4,3,4
+2026,PLDI,Google,NEURA: A Unified and Retargetable Compilation Framework for Coarse-Grained Reconfigurable Architectures,hierarchical predicated type system for CGRA control flow; deterministic control-flow flattening from CDFG to a single unified DFG,4,3,4
 
 # #### Programming Models for Spatial and Dataflow Accelerators
 # Challenge: Spatial and dataflow accelerators expose nontraditional execution models, explicit communication, and dynamic parallelism that are difficult to express safely and productively in conventional languages.
