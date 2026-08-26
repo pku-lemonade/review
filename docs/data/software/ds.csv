@@ -83,6 +83,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: reclaim resources that have been allocated to users but are temporarily idle without affecting user experience
 2021,EuroSys,Stanford,SmartHarvest: harvesting idle CPUs safely and efficiently in the cloud,ElasticVM for dynamically harvesting; cost-sensitive multi-class classification; two-level safeguard mechanism,3,4,2
 2022,ASPLOS,Stanford,SOL: Safe On-Node Learning in Cloud Platforms,model and actuator decoupled interface; watchdog-style safeguards to avoiding bad models,3,3,2
+2025,ASPLOS,Illinois,FleetIO: Managing Multi-Tenant Cloud Storage with Multi-Agent Reinforcement Learning,dynamic storage harvesting & I/O scheduling; workload-aware reward fine-tuning; ghost superblock (gSB) abstraction,4,4,2
+2025,ASPLOS,Illinois,Coach: Exploiting Temporal Patterns for All-Resource Oversubscription in Cloud Platforms,time-window-based predictive scheduling; temporal pattern multiplexing; two-level contention forecasting,4,4,2
 
 # ### LLM for Cloud Networks
 # Challenge: leverage LLMs to process massive, noisy, and multi-modal telemetry data for accurate diagnosis and management in complex, dynamic cloud environments
