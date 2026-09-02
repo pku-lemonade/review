@@ -11,7 +11,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,HPCA,Harvard,RPU – A Reasoning Processing Unit,"Capacity-Optimized HBM design; bandwidth-first power and area provisioning; decoupled memory, compute, and network pipelines",3,4,2
 # ### HBF
 # Challenge: SSD can only provide GB/s level bandwidth, also has low IOPS, high latency and weak random access performance caused by the SSD controller.
-# Solution: Like HBM, stack multiple NAND Samsung LPDDR5X-PIM: World’s First LPDDR based Processing in Memory (PIM) Solution for AI InferenceFlash dies and use TSVs to provide TB/s level bandwidth, TB-level system capacity and place the stack package near the GPU.
+# Solution: Like HBM, stack multiple NAND Flash dies and use TSVs to provide TB/s level bandwidth, TB-level system capacity and place the stack package near the GPU.
 2026,arXiv,UCSD,HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration, add a near-storage reranking in HBF base die as NMP engine; detailed HBF energy-latency and BW modeling based on thermal simulation,5,4,2
 2026,HotChips,Oxmiq Labs,HBF in AI Compute - A System Architect’s view,cost-model based HBF benefit analysis; potential benefits are on low-batch single-card long-context scenarios,3,4,2
 
