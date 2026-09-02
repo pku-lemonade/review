@@ -83,6 +83,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: reclaim resources that have been allocated to users but are temporarily idle without affecting user experience
 2021,EuroSys,Stanford,SmartHarvest: harvesting idle CPUs safely and efficiently in the cloud,ElasticVM for dynamically harvesting; cost-sensitive multi-class classification; two-level safeguard mechanism,3,4,2
 2022,ASPLOS,Stanford,SOL: Safe On-Node Learning in Cloud Platforms,model and actuator decoupled interface; watchdog-style safeguards to avoiding bad models,3,3,2
+2022,ASPLOS,Microsoft,Memory-Harvesting VMs in Cloud Platforms,contiguous large-page reclamation; NUMA-aware memory resizing; pre-reclamation and batching; proactive application notification,4,4,2
+2022,OSDI,UIUC,BlockFlex: Enabling Storage Harvesting with Software-Defined Flash in Modern Cloud Platforms,software-defined flash; LSTM-based online prediction; transparent block-level mapping,4,4,2
 2025,ASPLOS,Illinois,FleetIO: Managing Multi-Tenant Cloud Storage with Multi-Agent Reinforcement Learning,dynamic storage harvesting & I/O scheduling; workload-aware reward fine-tuning; ghost superblock (gSB) abstraction,4,4,2
 2025,ASPLOS,Illinois,Coach: Exploiting Temporal Patterns for All-Resource Oversubscription in Cloud Platforms,time-window-based predictive scheduling; temporal pattern multiplexing; two-level contention forecasting,4,4,2
 
@@ -458,20 +460,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### LLM Training Systems
 # Solution: arrange model parameters and data across multiple devices, reduce the time spent communicating, scale up smoothly as models and data keep growing—all while staying efficient and speeding up training.
 
-# #### Pipeline and Workload Co-Optimization
-# Challenge: LLM training must coordinate pipeline execution, memory pressure, communication, and variable-length workloads without leaving devices idle or exceeding capacity.
-# Solution: Jointly optimize pipeline schedules, memory offloading, data assignment, communication overlap, and weight movement for scalable training.
+# #### General Optimizations
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
-2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
-
-# #### Declarative Distributed Tensor Programming
-# Challenge: Symmetric SPMD abstractions cannot naturally preserve eager tensor semantics while expressing asymmetric sharding and communication across heterogeneous or changing resources.
-# Solution: Extend tensor-level SPMD annotations and compiler/runtime specialization so a single-device program can derive distributed execution, communication, and dynamic reconfiguration.
 2025,arXiv,ByteDance,veScale: Consistent and Efficient Tensor Programming with Eager-Mode SPMD,guaranteed single device consistency; zero overhead tensor alloc mode; fused communication,3,3,3
-2026,OSDI,PKU,Hetu v2: A General and Scalable Deep Learning System with Hierarchical and Heterogeneous Single Program Multiple Data Annotations,hierarchical and heterogeneous SPMD (HSPMD); DG Union and DS Union sharding; heterogeneous dimension and size annotations; batched-send-receive (BSR); progressive graph specialization; fused-BSR graph switching,4,5,4
+2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
 
 # #### Optimizations on Special Scene
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
