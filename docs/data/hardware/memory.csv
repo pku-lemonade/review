@@ -2,18 +2,26 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### 3D-Stacked Memory
 # Challenge: current DDR and PCIe can only provide limited channels, causing bandwidth and capacity bottlenecks for data-intensive applications.
 # Solution: 3D-stacked 6-16 memory dies and use hundreds to thousands of TSVs to provide independent channels, enabling high bandwidth and capacity.
-# #### HBM
+# ### HBM
 # Solution: stack multiple DRAM dies and use TSVs to provide TB/s level bandwidth.
-2023,JSSC,SK Hyrix,A 192-Gb 12-High 896-GB/s HBM3 DRAM With a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization, detailed HBM3e structure and specifications,3,4,5
-2024,ISSCC,SK Hyrix,A 48GB 16-High 1280GB/s HBM3E DRAM with All-Around Power TSV and a 6-Phase RDQS Scheme for TSV Area Optimization, supports both power TSV and data TSV; first 16-Hi Stacking HBM with 1/4 more capacity and BW,4,4,5
+2023,JSSC,SK Hynix,A 192-Gb 12-High 896-GB/s HBM3 DRAM With a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization, detailed HBM3e structure and specifications,3,4,5
+2024,ISSCC,SK Hynix,A 48GB 16-High 1280GB/s HBM3E DRAM with All-Around Power TSV and a 6-Phase RDQS Scheme for TSV Area Optimization, supports both power TSV and data TSV; first 16-Hi Stacking HBM with 1/4 more capacity and BW,4,4,5
+2026,Hot Chips,SK Hynix,Advanced packaging for High Bandwidth Memory (HBM), integrated cooling stacks "ICE" for D2D PHY overheat problem; Hybrid-bonding for HBM will be introduced in HBM5,1,5,5
+2026,Hot Chips,Samsung,HBM Base Die: How HBM Will Evolve Using Advanced Logic Processes, customized base die with Samsung 4nm process for wider channels; stack the HBM chips directly on the XPU chip for high-density d2d interconnects (zHBM),5,4,5
 2026,HPCA,Harvard,RPU – A Reasoning Processing Unit,"Capacity-Optimized HBM design; bandwidth-first power and area provisioning; decoupled memory, compute, and network pipelines",3,4,2
-# #### HBF
+# ### HBF
 # Challenge: SSD can only provide GB/s level bandwidth, also has low IOPS, high latency and weak random access performance caused by the SSD controller.
 # Solution: Like HBM, stack multiple NAND Flash dies and use TSVs to provide TB/s level bandwidth, TB-level system capacity and place the stack package near the GPU.
-2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
 2026,arXiv,UCSD,HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration, add a near-storage reranking in HBF base die as NMP engine; detailed HBF energy-latency and BW modeling based on thermal simulation,5,4,2
-2026,arXiv,ICT,FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference, SRAM for prefetching; plane-balanced weight and KV cache layout; FTL (Flash Translation Layer)-free storage management layer,3,4,4
+2026,HotChips,Oxmiq Labs,HBF in AI Compute - A System Architect’s view,cost-model based HBF benefit analysis; potential benefits are on low-batch single-card long-context scenarios,3,4,2
 
+# #### HBF for LLM inference
+# Challenge: KV Cache needs more capacity than HBM can provide so HBF offloading may be promising; but HBF has write endurance and latency issues, which may cause performance degradation.
+2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
+2026,IEEE CAL,POSTECH,Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges,Full HBF-based GPU memory; HBF-aware LLM inference timing model; on-die SRAM buffering for intermediate data,3,2,2
+2026,arXiv,ICT,FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference, SRAM for prefetching; plane-balanced weight and KV cache layout; FTL (Flash Translation Layer)-free storage management layer,3,4,4
+2026,arXiv,KAIST,Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths,concurrent dual-path delivery via direct and HBM-relayed flash interconnects; lookahead expert selection mechanism for read latency-hiding; phase-aware hierarchical KV-cache buffering and batched writeback,4,4,4
+2026,arXiv,Alibaba,Potential Applications of HBF in LLM Serving Systems,HBM/HBF heterogeneous stacking for bandwidth preservation; capacity-residency analytical model for locality and load balancing; HBF-backed expert and model weight replication for cross-node communication reduction,3,2,3
 # ### Multi-Level PIM/NDP Architectures
 # Challenge: PIM core can be placed at bank level, off-chip buffer level and even inside the SSD controller, and the communication between different levels of PIM/NDP is challenging.
 2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
@@ -39,7 +47,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
 2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
 2026,ASPLOS,Seoul National,A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs, delayed KV Cache writeback avoiding write amplification; cooperative X-cache for cooperative utilization,2,2,2
-# ### DIMM-PIMs
+
+# ### Processing-in-Memory (PIM) 
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
 # #### General Application-Specific Optimization
@@ -213,10 +222,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,DAC,SNU,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models,NDP for MoE; activation movement; GPU-MoNDE load-balancing scheme,,,
 2024,ASPLOS,PKU,SpecPIM: Accelerating Speculative Inference on PIM-Enabled System via Architecture-Dataflow Co-Exploration,algorithmic and architectural heterogeneity; PIM resource allocation; multi-model collaboration workflow,,,
 2025,MICRO,UCSD,Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving,monolithic 3D-Stackable DRAM without TSV; in-memory tiering for vertical latency variation; topic-based expert usage prediction for MoE serving,4,3,3
+# ### Bank-level PIM
+# Solution: Directly integrate logic units into the DRAM bank to enable massive bank-level parallelism.
+# #### DDR-based PIM
+2022,Hot Chips,Samsung,"Aquabolt-XL HBM2-PIM, LPDDR5-PIM With In-Memory Processing, and AXDIMM With Acceleration Buffer",HBM2-PIM with bank-level SIMD programmable computing units; Acceleration DIMM with acceleration buffers for rank-level parallelism,2,5,3
+2026,Hot Chips,Samsung,Samsung LPDDR5X-PIM: World’s First LPDDR based Processing in Memory (PIM) Solution for AI Inference, industrial product for LPDDR5X-PIM with bank-level parallelism; FP8 SIMD MAC units; 614G/s bandwidth with xlow power consumption,3,5,5
 # #### HBM2-PIM
 # Solution: HBM2-PIM is the first commercial HBM-PIM product, and 4 out of 8 DRAM layers are PIM-enabled layers, while the other 4 layers are standard DRAM layers.
 2021,ISCA,Samsung,Hardware Architecture and Software Stack for PIM Based on Commercial DRAM Technology Industrial Product, drop-in replacement for standard HBM2; bank-level parallelism using standard DRAM commands; address aligned mode to tolerate host-side command reordering,3,5,3
-2022,Hot Chips,Samsung,"Aquabolt-XL HBM2-PIM, LPDDR5-PIM With In-Memory Processing, and AXDIMM With Acceleration Buffer",HBM2-PIM with bank-level SIMD programmable computing units; Acceleration DIMM with acceleration buffers for rank-level parallelism,2,5,3
 2023,MICRO,Yonsei,AESPA: Asynchronous Execution Scheme to Exploit Bank-Level Parallelism of Processing-in-Memory, Single-Instruction Long-Data execution model; asynchronous bank operation via long-data commands; column-major GEMV dataflow with shared accumulators,3,3,3
 # #### HBM3-PIM
 # Solution: HBM3-PIM further increases the capacity and the parallelism by stacking more DRAM layers and all the layers are the PIM-enabled layer.
