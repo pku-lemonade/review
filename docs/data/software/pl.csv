@@ -43,6 +43,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
 2023,ASPLOS,UToronto,Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs,task-mapping based programming; hardware-centric schedule space; post-scheduling operator fusion,4,4,3
 
+# #### Distributed Deep Learning Compilers
+# Challenge: Distributed deep learning compilers must expose inter-device data movement and coordinate it with local tensor computation; treating communication as opaque whole-kernel collectives limits automatic optimization and fine-grained overlap.
+# Solution: Make remote memory accesses and communication schedules explicit in compiler intermediate representations (IRs), then synthesize hardware-aware point-to-point transfers, collectives, and fused multi-GPU kernels.
+2025,SOSP,Meta,Mercury: Unlocking Multi-GPU Operator Optimization for LLMs via Remote Memory Scheduling,loop-based intermediate representation for distributed operators; remote GPU memory scheduling as an explicit memory-hierarchy layer; collective communication synthesis from shard and replicate annotations,4,4,3
+2026,OSDI,Meta,Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap,chunk-based communication abstraction for reusable point-to-point and collective schedules; communication-driven tile scheduling for overlapping data transfer with computation inside a fused kernel,4,4,3
+
 # #### Tile-Based GPU Kernel DSLs
 # Challenge: GPU programmers need concise tile-level abstractions while retaining enough control over memory hierarchy, asynchronous execution, and launch structure to approach hand-tuned kernel performance.
 # Solution: Expose hierarchical tile data and operations through domain-specific languages and embedded frameworks, with compiler or library support for layouts, synchronization, pipelines, and grid scheduling.
