@@ -105,7 +105,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Retrieving the top-k results from a vectorized database is also a memory-bound operation.
 2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
 2025,MICRO,Yonsei,Accelerating Retrieval Augmented Language Model via PIM and PNM Integration, heterogeneous architecture integrating PIM for LLMs and PNM for retrievers; RALM scheduling strategy with selective batching and early generation,4,2,3
-# ### PIM KVCache Mapping
+# ### PIM KV Cache Mapping
 # Challenge: Bank-level PIM processes one row at a time, needs data locality, making the data interleaving in HBM and host memory inefficient. 
 # #### KV-Cache Mapping & Offloading
 2026,ASPLOS,SJTU,REPA: Reconfigurable PIM for the Joint Acceleration of KV Cache Offloading and Processing,reconfigurable ReRAM-PIM for KV cache offload and in-situ processing; bulk-wise memory setting instructions for wordline parallelism; locality-aware data mapping and transfer overlapping,2,2,2
