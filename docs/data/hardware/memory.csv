@@ -21,8 +21,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,IEEE CAL,POSTECH,Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges,Full HBF-based GPU memory; HBF-aware LLM inference timing model; on-die SRAM buffering for intermediate data,3,2,2
 2026,arXiv,ICT,FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference, SRAM for prefetching; plane-balanced weight and KV cache layout; FTL (Flash Translation Layer)-free storage management layer,3,4,4
 2026,arXiv,Huawei,FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration,hardware burst-buffer controller for dynamic read coalescing; phantom-plane refresh using plane-level redundancy; burst-granular read-only FTL (Flash Translation Layer),3,2,4
-# #### HBF for KVCache Pooling
-# Challenge: KVCache is dynamic and easy to be evicted, leaving writing endurance a major problem.
+# #### HBF for KV Cache Pooling
+# Challenge: KV Cache is dynamic and easy to be evicted, leaving writing endurance a major problem.
 2026,arXiv,Alibaba,Potential Applications of HBF in LLM Serving Systems,HBM/HBF heterogeneous stacking for bandwidth preservation; capacity-residency analytical model for locality and load balancing; HBF-backed expert and model weight replication for cross-node communication reduction,3,2,3
 2026,arXiv,KAIST,Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths,concurrent dual-path delivery via direct and HBM-relayed flash interconnects; lookahead expert selection mechanism for read latency-hiding; phase-aware hierarchical KV-cache buffering and batched writeback,4,4,4
 
