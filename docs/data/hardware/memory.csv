@@ -16,7 +16,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,HotChips,Oxmiq Labs,HBF in AI Compute - A System Architect’s view,cost-model based HBF benefit analysis; potential benefits are on low-batch single-card long-context scenarios,3,4,2
 
 # #### HBF for Weight Offloading Only
-# Challenge: HBF has much higher latency compared to HBM so naive weight reading will slow down the prefill.
+# Challenge: HBF has much higher latency compared to HBM, so naively reading weights will slow down the prefill.
 2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
 2026,IEEE CAL,POSTECH,Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges,Full HBF-based GPU memory; HBF-aware LLM inference timing model; on-die SRAM buffering for intermediate data,3,2,2
 2026,arXiv,ICT,FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference, SRAM for prefetching; plane-balanced weight and KV cache layout; FTL (Flash Translation Layer)-free storage management layer,3,4,4
