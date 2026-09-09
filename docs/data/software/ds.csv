@@ -126,6 +126,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ASPLOS,Miscrosoft,vAttention: Dynamic Memory Management for Serving LLMs without PagedAttention,use cuda hardware page table instead of vllm's; hack cuda's driver to support page table modify,2,3,3
 2025,arXiv,SJTU,eLLM: Elastic Memory Management Framework for Efficient LLM Serving,activation weight paged; all scene virtual memory; cpu memory swap,3,2,2
 2025,arXiv,SJTU,Reducing GPU Memory Fragmentation via Spatio-Temporal Planning for Efficient Large-Scale Model Training,offline planning and online patch; MoE-aware reuse pockets; time-aware reuse,3,3,2
+2026,OSDI,ICT/CAS,MoonBright: A GPU Memory Allocator with Device-Side Page Table Materialization and Deferred TLB Coherence,device-side GPU page-table materialization; deferred TLB coherence; fresh virtual-address allocation; host-side validation and metadata management,4,4,2
 
 # #### General LLM Memory Management
 # Challenge: LLM memory management faces challenges like limited HBM memory, efficient KV Cache management, memory sharing between multiple GPUs, multi-level memory management.
@@ -133,6 +134,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SOSP,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,two-level LCM allocator; customizable prefix caching; request-aware allocation,4,4,2
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 2025,SOSP,SJTU,KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider,real-world KVCache trace anatomy; workload-aware eviction; analysis of KVCache hit in the real-world,4,4,2
+2026,OSDI,UVA,"No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs",DirectKV zero-copy KV cache offloading; direct GPU access to CPU-resident KV cache over NVLink-C2C; fused KV generation and attention; warp-level fetch-compute-writeback pipeline,4,4,2
 
 # ##### Application specific memory management
 # Solution: Memory management is actually the core for request scheduling. Application specific memory management use the application information to manage the memory.
@@ -225,6 +227,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,ASPLOS,CMU,Livia: Data-Centric Computing Throughout the Memory Hierarchy, Memory service programming model; task graphs linked to data location; dynamic task/data scheduling for minimal movement,2,4,3
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
 2025,arXiv,ETH,TeraAgent: A Distributed Agent-Based Simulation Engine for Simulating Half a Trillion Agents,IO optimization for large scale agent simulation; distributed agent simulation engine; communication optimization for agent scenarios,3,2,2
+2026,OSDI,HKUST(GZ),CoPilotIO: CPU as a Co-Pilot for GPU I/O to Free GPU Compute,CPU-assisted GPU I/O; GPU-initiated asynchronous I/O; split submission/completion queues; hardware-barrier completion synchronization; adaptive CPU-GPU co-polling,4,4,2
 
 # ### GPU-GPU Communication
 # Challenge: limited interconnect bandwidth between GPUs using nvLink, PCIe, synchronization delays in parallel workloads, load imbalance across GPUs. The GPU-GPU can also across different nodes.
