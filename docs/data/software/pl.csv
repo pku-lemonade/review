@@ -55,6 +55,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,MAPL,Harvard,Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations,"tile-based single program, multiple data (SPMD) programming model; predicated SSA (PSSA) for tile-level control flow; hierarchical tiling; automatic memory coalescing; shared-memory auto-allocation and synchronization",4,3,4
 2025,ICLR,Stanford,"ThunderKittens: Simple, Fast, and Adorable Kernels",16x16 warp-owned matrix tiles; PyTorch-like bulk tile operations; load-compute-store-finish (LCSF) asynchronous template; automatic swizzled shared-memory layouts; persistent-grid block scheduling,4,5,3
 2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,explicit memory hierarchy allocation; layout inference for thread binding; composable fragment layout; software-defined pipeline; automatic warp specialization for Hopper; CuTe/CK tensorization integration,4,4,3
+2026,PLDI,MIT,Modular GPU Programming with Typed Perspectives,thread-group size and alignment types; per-group value-uniformity checking; collective-call thread and shared-memory requirement checking,4,4,4
 
 # #### Automatic GPU Tile and Pipeline Synthesis
 # Challenge: Choosing hardware-aligned tile shapes, compatible memory layouts, and pipelined warp assignments requires searching tightly coupled hardware constraints that change across accelerator generations.
