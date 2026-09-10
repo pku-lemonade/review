@@ -15,13 +15,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,UCSD,HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration, add a near-storage reranking in HBF base die as NMP engine; detailed HBF energy-latency and BW modeling based on thermal simulation,5,4,2
 2026,HotChips,Oxmiq Labs,HBF in AI Compute - A System Architect’s view,cost-model based HBF benefit analysis; potential benefits are on low-batch single-card long-context scenarios,3,4,2
 
-# #### HBF for LLM inference
-# Challenge: KV Cache needs more capacity than HBM can provide so HBF offloading may be promising; but HBF has write endurance and latency issues, which may cause performance degradation.
+# #### HBF for Weight Offloading Only
+# Challenge: HBF has much higher latency compared to HBM, so naively reading weights will slow down the prefill.
 2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
 2026,IEEE CAL,POSTECH,Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges,Full HBF-based GPU memory; HBF-aware LLM inference timing model; on-die SRAM buffering for intermediate data,3,2,2
 2026,arXiv,ICT,FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference, SRAM for prefetching; plane-balanced weight and KV cache layout; FTL (Flash Translation Layer)-free storage management layer,3,4,4
-2026,arXiv,KAIST,Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths,concurrent dual-path delivery via direct and HBM-relayed flash interconnects; lookahead expert selection mechanism for read latency-hiding; phase-aware hierarchical KV-cache buffering and batched writeback,4,4,4
+2026,arXiv,Huawei,FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration,hardware burst-buffer controller for dynamic read coalescing; phantom-plane refresh using plane-level redundancy; burst-granular read-only FTL (Flash Translation Layer),3,2,4
+# #### HBF for KV Cache Pooling
+# Challenge: KV Cache is dynamic and easy to be evicted, leaving writing endurance a major problem.
 2026,arXiv,Alibaba,Potential Applications of HBF in LLM Serving Systems,HBM/HBF heterogeneous stacking for bandwidth preservation; capacity-residency analytical model for locality and load balancing; HBF-backed expert and model weight replication for cross-node communication reduction,3,2,3
+2026,arXiv,KAIST,Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths,concurrent dual-path delivery via direct and HBM-relayed flash interconnects; lookahead expert selection mechanism for read latency-hiding; phase-aware hierarchical KV-cache buffering and batched writeback,4,4,4
+
 # ### Multi-Level PIM/NDP Architectures
 # Challenge: PIM core can be placed at bank level, off-chip buffer level and even inside the SSD controller, and the communication between different levels of PIM/NDP is challenging.
 2026,arXiv,ICT,PAM: Processing Across Memory Hierarchy for Efficient KV-centric LLM Serving System,HBM-PIM/DDR-PIM/SSD-PIM heterogeneous 3-tier request scheduling; PAMattention via online softmax for distributed token-wise parallelism; importance-aware greedy KV scheduling for load balancing,4,4,3
@@ -101,7 +105,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Retrieving the top-k results from a vectorized database is also a memory-bound operation.
 2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
 2025,MICRO,Yonsei,Accelerating Retrieval Augmented Language Model via PIM and PNM Integration, heterogeneous architecture integrating PIM for LLMs and PNM for retrievers; RALM scheduling strategy with selective batching and early generation,4,2,3
-# ### PIM KVCache Mapping
+# ### PIM KV Cache Mapping
 # Challenge: Bank-level PIM processes one row at a time, needs data locality, making the data interleaving in HBM and host memory inefficient. 
 # #### KV-Cache Mapping & Offloading
 2026,ASPLOS,SJTU,REPA: Reconfigurable PIM for the Joint Acceleration of KV Cache Offloading and Processing,reconfigurable ReRAM-PIM for KV cache offload and in-situ processing; bulk-wise memory setting instructions for wordline parallelism; locality-aware data mapping and transfer overlapping,2,2,2

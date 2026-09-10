@@ -23,10 +23,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Program Optimization and Rewriting Frameworks
 # Challenge: Traditional sequential compiler optimizations suffer from the phase-ordering problem, while existing equational reasoning tools are often too slow or rigid for domain-specific, non-syntactic analyses.
-# Solution: Utilize equality saturation with efficient data structures (e.g., e-graphs) and extensible analysis mechanisms to explore the space of equivalent programs without strict ordering.
+# Solution: Explore equivalent programs without strict optimization ordering through equality saturation with efficient e-graphs and extensible analyses, or through semantics-guided program synthesis with cost-aware pruning.
+# Related: See [Configuration Optimization](ds.md#configuration-optimization) for search-based tensor optimization systems such as Mirage.
 2021,POPL,UW,"egg: Fast and Extensible Equality Saturation",equality saturation algorithm;e-graphs (Equality Graphs);deferred rebuilding technique,3,4,4
 2025,ASPLOS,Cornell,SmoothE: Differentiable E-Graph Extraction,differentiable e-graph extraction;probabilistic continuous relaxation;learning-based (MLP) cost model,4,5,5
 2026,ASPLOS,PKU,"Finding Reusable Instructions via E-Graph Anti-Unification",e-graph anti-unification algorithm for custom instruction identification;pattern vectorization;hardware-aware cost model,4,4,4
+2026,CGO,Edinburgh,Tensor Program Superoptimization through Cost-Guided Symbolic Program Synthesis,STENSO (Sketch-based Tensor Super Optimizer); symbolic execution with algebraic hole solving; monotonic specification-simplification pruning,3,4,3
 2026,ASPLOS,KAIST,Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation,stateful equality saturation via expression propagation; context-aware two-pass extraction algorithm,3,5,4
 
 # ### Deep Learning Compilers
@@ -40,6 +42,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2020,OSDI,UCB,Ansor: Generating High-Performance Tensor Programs for Deep Learning,hierarchical search space program sampler; evolutionary fine-tuning&learned cost model; gradient descent based task scheduler,4,4,3
 2023,ASPLOS,CMU,TensorIR: An Abstraction for Automatic Tensorized Program Optimization,use block abstraction for computation isolation and loop transformations; tensor intrinsic matching algorithm; evolutionary search-based automatic scheduling,4,4,4
 2023,ASPLOS,UToronto,Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs,task-mapping based programming; hardware-centric schedule space; post-scheduling operator fusion,4,4,3
+
+# #### Distributed Deep Learning Compilers
+# Challenge: Distributed deep learning compilers must expose inter-device data movement and coordinate it with local tensor computation; treating communication as opaque whole-kernel collectives limits automatic optimization and fine-grained overlap.
+# Solution: Make remote memory accesses and communication schedules explicit in compiler intermediate representations (IRs), then synthesize hardware-aware point-to-point transfers, collectives, and fused multi-GPU kernels.
+2025,SOSP,Meta,Mercury: Unlocking Multi-GPU Operator Optimization for LLMs via Remote Memory Scheduling,loop-based intermediate representation for distributed operators; remote GPU memory scheduling as an explicit memory-hierarchy layer; collective communication synthesis from shard and replicate annotations,4,4,3
+2026,OSDI,Meta,Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap,chunk-based communication abstraction for reusable point-to-point and collective schedules; communication-driven tile scheduling for overlapping data transfer with computation inside a fused kernel,4,4,3
 
 # #### Tile-Based GPU Kernel DSLs
 # Challenge: GPU programmers need concise tile-level abstractions while retaining enough control over memory hierarchy, asynchronous execution, and launch structure to approach hand-tuned kernel performance.
@@ -234,7 +242,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Provide automated compilation flows and programming models to efficiently map algorithms, especially for AI workloads, onto specialized compute fabrics like systolic arrays and AI Engines.
 2017,DAC,PKU & Falcon & UCLA,Automated Systolic Array Architecture Synthesis for High Throughput CNN Inference on FPGAs,2D systolic array architecture; analytical model for performance and resource; two-phase design space exploration; end-to-end C-to-FPGA automation flow,3,4,3
 2019,ISCAS,PKU & UCLA,Frequency Improvement of Systolic Array-Based CNNs on FPGAs,front-end accumulation chain segmentation; back-end topology-aware floorplanning constraints; frequency optimization for systolic arrays,3,4,3
-2020,ICCAD,Cornell,SuSy: A Programming Model for Productive Construction of High-Performance Systolic Arrays on FPGAs,decoupled algorithm (Uniform Recurrence Equations, UREs) and spatial mapping (schedule) for systolic arrays; high-level space-time transformation primitive for architectural exploration; Uniform Recurrence Equation (URE)-based temporal definition for broad systolic algorithm coverage,4,4,3
+2020,ICCAD,Cornell,SuSy: A Programming Model for Productive Construction of High-Performance Systolic Arrays on FPGAs,"decoupled algorithm (Uniform Recurrence Equations, UREs) and spatial mapping (schedule) for systolic arrays; high-level space-time transformation primitive for architectural exploration; Uniform Recurrence Equation (URE)-based temporal definition for broad systolic algorithm coverage",4,4,3
 2021,FPGA,UCLA,AutoSA: A Polyhedral Compiler for High-Performance Systolic Arrays on FPGA,polyhedral space-time transformation; array partitioning for systolic arrays; latency hiding via double buffering; SIMD vectorization; two-level analytical+learned design space exploration,4,4,4
 2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
 
