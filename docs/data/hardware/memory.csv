@@ -102,9 +102,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MICRO,Samsung,"Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching", replace the GPU HBM memory die with HBM-PIM die; expert and attention co-processing for dynamic workload splitting within MoE/attn layers,4,4,4
 2025,ICCAD,PKU,HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing,LP-based hybrid TP and EP mapping; bayesian optimization for topology-aware link balancing; online dynamic expert placement with predictive pre-broadcast,3,3,2
 # #### RAG-Specific Optimization
-# Challenge: Retrieving the top-k results from a vectorized database is also a memory-bound operation.
+# Challenge: RAG retrieval is memory-bound, while generation with precomputed document KV caches suffers from costly KV transfers and low arithmetic intensity.
 2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
 2025,MICRO,Yonsei,Accelerating Retrieval Augmented Language Model via PIM and PNM Integration, heterogeneous architecture integrating PIM for LLMs and PNM for retrievers; RALM scheduling strategy with selective batching and early generation,4,2,3
+2026,ISCA,HUST,MERIDIAN: In-Memory Acceleration for RAG with Document Attention Decomposition,document-context attention decomposition with stationary head-sharded document KV caches; LPDDR-PIM buffer replication for skinny GEMM; piecewise-linear nonlinear approximation using shared arithmetic units; interleaved document-attention and context-execution scheduling,3,2,3
 # ### PIM KV Cache Mapping
 # Challenge: Bank-level PIM processes one row at a time, needs data locality, making the data interleaving in HBM and host memory inefficient. 
 # #### KV-Cache Mapping & Offloading
