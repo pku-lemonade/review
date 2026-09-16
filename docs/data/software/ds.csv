@@ -504,6 +504,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UCAS,ApproxABFT: Approximate Algorithm-Based Fault Tolerance for Neural Network Processing,adaptive error tolerance thresholds; reduction in error detection overhead,3,3,3
 2023,VLSI,ICT,Soft Error Reliability Analysis of Vision Transformers,error injection experiment on ViT; block-wise ABFT optimizations,4,3,3
 
+# #### Straggler Related Optimizations
+# Challenge: Dynamic stragglers severely degrade overall training throughput due to the tightly coupled synchronization mechanisms of large-scale LLM training.
+2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
+2024,SOSP,Stanford,ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation,dynamic micro-batch re-routing; input/weight gradients separation; staggered optimizer for warm-up bubbles harvest,4,4,3
+2025,SIGMOD,PKU,Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization,per-GPU straggler quantification; Bi-level parallelization planning; asynchronous re-planning with overlapping,4,4,2
+2026,HPDC,HKUST,ResiHP: Taming LLM Training Failures with Dynamic Hybrid Parallelism,workload-aware time prediction; dynamic hybrid-parallel scheduling; asymmetric P2P communication optimization,
+
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
 2025,ISCA,DeepSeek,Insights into DeepSeek-V3: Scaling Challenges and Reflections on Hardware for AI Architectures,software-hardware co-design for deepseek-v3; insight into hardware for ai architectures,5,5,4
