@@ -730,6 +730,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,Penn State,Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation,gaiatrace token-level traces; vidur-agent trace-driven simulation; multi-model agentic workload characterization; task-level latency metrics; prefix caching impact,3,2,2
 2026,arXiv,KAIST,The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective,system breakdown for agent system; large-scale analysis on LLM agents system design; test-time scaling,4,4,3
 
+# #### Agent-Based Simulation Acceleration
+# Challenge: Large-scale agent-based simulations require repeated state updates and interaction queries; on accelerators, storing or traversing the full population state can exceed on-chip memory and make heterogeneous CPU/GPU/FPGA implementations hard to maintain.
+# Solution: Use domain-specific code generation or model-specific FPGA pipelines to aggregate agent interactions, keep compact simulation state on chip, and coordinate host precomputation with accelerator execution.
+2020,CPE,TUMCREATE & Sheffield,OpenABLext: An automatic code generation framework for agent-based simulations on CPU-GPU-FPGA heterogeneous platforms,device-aware OpenCL backend for CPU/GPU/FPGA co-execution; online dispatching for runtime hardware assignment; graph-based agent-based simulation (ABS) spaces; generated parallel conflict resolution from user-specified rules,3,4,3
+2020,AICCSA,Imperial,Accelerating Simulation for Agent-Based Epidemic Models using FPGAs,cluster-centroid infection probability approximation; constant on-chip memory health-status update; host-FPGA precomputation and simulation split; OpenCL-based Arria 10 FPGA epidemic simulation,3,3,3
+
 # #### DSL for agent representation
 # Challenge: designing a domain-specific language (DSL) for representing agents can help to simplify the development and deployment of multi-agent systems.
 2025,arXiv,UTA,Software-Defined Agentic Serving,use LLM to generate the cpp code of agent network; dynamic agent graph support,2,2,1
