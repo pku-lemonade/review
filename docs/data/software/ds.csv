@@ -135,6 +135,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SOSP,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,two-level LCM allocator; customizable prefix caching; request-aware allocation,4,4,2
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 2025,SOSP,SJTU,KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider,real-world KVCache trace anatomy; workload-aware eviction; analysis of KVCache hit in the real-world,4,4,2
+2026,OSDI,Peng Cheng Laboratory,Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing,online neuron balancing for GPU-CPU hybrid inference; co-activation-aware neuron grouping and weight reordering; live-pipeline neuron prefetching; temporal activation momentum (TAM) cache policy; feedback-driven CPU-I/O balancing,4,4,4
 
 # ##### Application specific memory management
 # Solution: Memory management is actually the core for request scheduling. Application specific memory management use the application information to manage the memory.
@@ -464,6 +465,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General Optimizations
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
+2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
+
+# #### Pipeline Workload and Overlap Co-Optimization
+# Challenge: Variable workloads and heterogeneous layers make serial-cost pipeline partitions imbalanced after communication is overlapped with computation.
+# Solution: Jointly optimize workload assignment, post-overlap stage costs, and runtime bubble filling for balanced pipeline execution.
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
 2025,arXiv,ByteDance,veScale: Consistent and Efficient Tensor Programming with Eager-Mode SPMD,guaranteed single device consistency; zero overhead tensor alloc mode; fused communication,3,3,3
