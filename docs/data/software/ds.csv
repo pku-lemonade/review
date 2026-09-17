@@ -151,7 +151,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Prefix Sharing
 # Solution: reuse KV Cache when the input sequence has shared or repeated parts, use prefix tree to manage KV Cache.
-2023,Nips,Stanford,SGLang: Efficient Execution of Structured Language Model Programs,KV-Cache share; python-like DSL; compute graph; LRU cache management stragety,4,4,3
+2024,Nips,Stanford,SGLang: Efficient Execution of Structured Language Model Programs,RadixAttention for radix-tree-based KV cache reuse; longest-shared-prefix-first cache-aware scheduling; Python-embedded DSL with generation and fork/join primitives; compressed FSM for multi-token constrained decoding,4,4,3
 2024,ACL,Microsoft,ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition,prefix aware attention compute; manage kv-cache chunks as prefix tree; reduce kv-cache redundancy,3,4,2
 2024,arXiv,Microsoft,BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching,global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel,,,
 2024,arXiv,Berkeley,BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching,offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests,,,
