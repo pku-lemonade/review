@@ -83,6 +83,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: reclaim resources that have been allocated to users but are temporarily idle without affecting user experience
 2021,EuroSys,Stanford,SmartHarvest: harvesting idle CPUs safely and efficiently in the cloud,ElasticVM for dynamically harvesting; cost-sensitive multi-class classification; two-level safeguard mechanism,3,4,2
 2022,ASPLOS,Stanford,SOL: Safe On-Node Learning in Cloud Platforms,model and actuator decoupled interface; watchdog-style safeguards to avoiding bad models,3,3,2
+2022,ASPLOS,Microsoft,Memory-Harvesting VMs in Cloud Platforms,contiguous large-page reclamation; NUMA-aware memory resizing; pre-reclamation and batching; proactive application notification,4,4,2
+2022,OSDI,UIUC,BlockFlex: Enabling Storage Harvesting with Software-Defined Flash in Modern Cloud Platforms,software-defined flash; LSTM-based online prediction; transparent block-level mapping,4,4,2
 2025,ASPLOS,Illinois,FleetIO: Managing Multi-Tenant Cloud Storage with Multi-Agent Reinforcement Learning,dynamic storage harvesting & I/O scheduling; workload-aware reward fine-tuning; ghost superblock (gSB) abstraction,4,4,2
 2025,ASPLOS,Illinois,Coach: Exploiting Temporal Patterns for All-Resource Oversubscription in Cloud Platforms,time-window-based predictive scheduling; temporal pattern multiplexing; two-level contention forecasting,4,4,2
 
@@ -187,6 +189,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
 2025,Nips,Duke,KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems,estimates and adjusts KV-caches for shared conten; KVC pool fot observed cache deviations,3,3,2
 2025,Mlsys,UCSB,FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference,kernel optimization for prefix cache; optimization for redundant KVC loading when shared; finding optimal context-queries groups,3,3,3
+2026,DAC,PKU,KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning,Static-Dynamic Memory Construction for reducing KV cache invalidation; Multi-hop Memory Re-computation for dynamic cross-attention recovery,3,2,4
 
 # #### KV Cache Storage Systems
 # Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
@@ -459,9 +462,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### LLM Training Systems
 # Solution: arrange model parameters and data across multiple devices, reduce the time spent communicating, scale up smoothly as models and data keep growing—all while staying efficient and speeding up training.
 
-# #### Pipeline Memory and Weight Management
-# Challenge: Pipeline training must keep activations and weights within device memory budgets without exposing transfers or leaving stages idle.
-# Solution: Schedule activation offloading and weight movement across microbatches to reduce peak memory and hide communication.
+# #### General Optimizations
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
@@ -471,13 +472,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Jointly optimize workload assignment, post-overlap stage costs, and runtime bubble filling for balanced pipeline execution.
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
-2026,OSDI,HUST & Alibaba,Tessera: A Holistic Pipeline Parallelism Framework for Trillion-Parameter Heterogeneous MoE Training (Operational Systems),per-layer-combination overlap schedule synthesis; post-overlap-cost pipeline partitioning; dynamic bubble filling for routing-induced idle slots; heterogeneous MoE training at 12K-GPU scale,4,5,2
-
-# #### Declarative Distributed Tensor Programming
-# Challenge: Symmetric SPMD abstractions cannot naturally preserve eager tensor semantics while expressing asymmetric sharding and communication across heterogeneous or changing resources.
-# Solution: Extend tensor-level SPMD annotations and compiler/runtime specialization so a single-device program can derive distributed execution, communication, and dynamic reconfiguration.
 2025,arXiv,ByteDance,veScale: Consistent and Efficient Tensor Programming with Eager-Mode SPMD,guaranteed single device consistency; zero overhead tensor alloc mode; fused communication,3,3,3
-2026,OSDI,PKU,Hetu v2: A General and Scalable Deep Learning System with Hierarchical and Heterogeneous Single Program Multiple Data Annotations,hierarchical and heterogeneous SPMD (HSPMD); DG Union and DS Union sharding; heterogeneous dimension and size annotations; batched-send-receive (BSR); progressive graph specialization; fused-BSR graph switching,4,5,4
+2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
 
 # #### Optimizations on Special Scene
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
@@ -513,6 +509,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Gensyn,All is Not Lost: LLM Recovery without Checkpoints,replace two layer's value to recover from fault; out-of-order pipeline execution to tolerate crash,2,1,2
 2025,arXiv,UCAS,ApproxABFT: Approximate Algorithm-Based Fault Tolerance for Neural Network Processing,adaptive error tolerance thresholds; reduction in error detection overhead,3,3,3
 2023,VLSI,ICT,Soft Error Reliability Analysis of Vision Transformers,error injection experiment on ViT; block-wise ABFT optimizations,4,3,3
+
+# #### Straggler Related Optimizations
+# Challenge: Dynamic stragglers severely degrade overall training throughput due to the tightly coupled synchronization mechanisms of large-scale LLM training.
+2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
+2024,SOSP,Stanford,ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation,dynamic micro-batch re-routing; input/weight gradients separation; staggered optimizer for warm-up bubbles harvest,4,4,3
+2025,SIGMOD,PKU,Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization,per-GPU straggler quantification; Bi-level parallelization planning; asynchronous re-planning with overlapping,4,4,2
+2026,HPDC,HKUST,ResiHP: Taming LLM Training Failures with Dynamic Hybrid Parallelism,workload-aware time prediction; dynamic hybrid-parallel scheduling; asymmetric P2P communication optimization,
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
