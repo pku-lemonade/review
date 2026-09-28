@@ -63,13 +63,15 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: how to decide the parallel strategy for LLM training, the upper decision of parallelism strategies and kernel fusion of each worker.
 2024,EuroSys,Miscrosoft,Aceso: Efficient Parallel DNN Training through Iterative Bottleneck Alleviation,iterative bottleneck alleviation paradigm; resource trading perspective; discovery of asymmetrical configurations,3,3,2
 2025,EuroSys,CentML,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,comprehensive memory parallelism co-optimization; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,3,2
+2026,EuroSys,HKU,HetAuto: Cross-Cluster Auto-Parallelism for Heterogeneous Distributed Training,principle-guided MCTS; random forest-enhanced hybrid cost model; virtual-1F1B; optimized resharding,4,4,2
 
 # #### Hardware componment co-design
 # Challenge: rencent accelerator like GPU has many components, such as tensor cores, SRAM, etc. How to co-design the software and hardware to improve the performance.
-2023,ATC,UC,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,use cuda core to transform sparse graph martix into dense for tensor core; codesign of tensor core and cuda core for GNN application,3,4,4
 2022,HPCA,SJTU,Tacker: Tensor-CUDA Core Kernel Fusion for Improving the GPU Utilization while Ensuring QoS,cuda core and tensor core operator fuse; a static kernel fusion and scheduling approach to improve GPU utilization; best-effort schedule,3,3,3
+2023,ATC,UC,TC-GNN: Bridging Sparse GNN Computation and Dense Tensor Cores on GPUs,use cuda core to transform sparse graph matrix into dense for tensor core; codesign of tensor core and cuda core for GNN application,3,4,4
 2025,arXiv,BJPT,Libra: Synergizing CUDA and Tensor Cores for High-Performance Sparse Matrix Multiplication,mapping computation to cuda core and tensor core; different mapping stragety for different sparse matrix,3,3,3
 2025,arXiv,Sabanci,BLEST: Blazingly Efficient BFS using Tensor Cores,BVSS workload normalization; MMA layout transformation; warp-level cooperative scheduling,3,4,3
+2026,HPCA,Microsoft Research,BitDecoding: Unlocking Tensor Cores for Long-Context LLMs with Low-Bit KV Cache,hardware-instruction-induced low-bit KV layout for Tensor Cores; Tensor Core-aligned residual KV blocks with fused online quantization and packing; grouped-query and multi-query attention query transformation; cross-warp cooperative softmax; CUDA-core dequantization overlapped with Tensor Core matrix multiply-accumulate; Hopper warpgroup matrix multiply-accumulate and Blackwell microscaling floating-point-4 specialization,4,5,3
 
 # ## Cloud computing platforms and architectures
 # Challenge: when providing services to users, facing scalability, resource management, fault tolerance, and cost-effectiveness for building and deploying large-scale distributed applications and services.
@@ -82,6 +84,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: reclaim resources that have been allocated to users but are temporarily idle without affecting user experience
 2021,EuroSys,Stanford,SmartHarvest: harvesting idle CPUs safely and efficiently in the cloud,ElasticVM for dynamically harvesting; cost-sensitive multi-class classification; two-level safeguard mechanism,3,4,2
 2022,ASPLOS,Stanford,SOL: Safe On-Node Learning in Cloud Platforms,model and actuator decoupled interface; watchdog-style safeguards to avoiding bad models,3,3,2
+2022,ASPLOS,Microsoft,Memory-Harvesting VMs in Cloud Platforms,contiguous large-page reclamation; NUMA-aware memory resizing; pre-reclamation and batching; proactive application notification,4,4,2
+2022,OSDI,UIUC,BlockFlex: Enabling Storage Harvesting with Software-Defined Flash in Modern Cloud Platforms,software-defined flash; LSTM-based online prediction; transparent block-level mapping,4,4,2
+2025,ASPLOS,Illinois,FleetIO: Managing Multi-Tenant Cloud Storage with Multi-Agent Reinforcement Learning,dynamic storage harvesting & I/O scheduling; workload-aware reward fine-tuning; ghost superblock (gSB) abstraction,4,4,2
+2025,ASPLOS,Illinois,Coach: Exploiting Temporal Patterns for All-Resource Oversubscription in Cloud Platforms,time-window-based predictive scheduling; temporal pattern multiplexing; two-level contention forecasting,4,4,2
 
 # ### LLM for Cloud Networks
 # Challenge: leverage LLMs to process massive, noisy, and multi-modal telemetry data for accurate diagnosis and management in complex, dynamic cloud environments
@@ -130,6 +136,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SOSP,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,two-level LCM allocator; customizable prefix caching; request-aware allocation,4,4,2
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 2025,SOSP,SJTU,KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider,real-world KVCache trace anatomy; workload-aware eviction; analysis of KVCache hit in the real-world,4,4,2
+2026,OSDI,Peng Cheng Laboratory,Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing,online neuron balancing for GPU-CPU hybrid inference; co-activation-aware neuron grouping and weight reordering; live-pipeline neuron prefetching; temporal activation momentum (TAM) cache policy; feedback-driven CPU-I/O balancing,4,4,4
 
 # ##### Application specific memory management
 # Solution: Memory management is actually the core for request scheduling. Application specific memory management use the application information to manage the memory.
@@ -145,7 +152,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Prefix Sharing
 # Solution: reuse KV Cache when the input sequence has shared or repeated parts, use prefix tree to manage KV Cache.
-2023,Nips,Stanford,SGLang: Efficient Execution of Structured Language Model Programs,KV-Cache share; python-like DSL; compute graph; LRU cache management stragety,4,4,3
+2024,Nips,Stanford,SGLang: Efficient Execution of Structured Language Model Programs,RadixAttention for radix-tree-based KV cache reuse; longest-shared-prefix-first cache-aware scheduling; Python-embedded DSL with generation and fork/join primitives; compressed FSM for multi-token constrained decoding,4,4,3
 2024,ACL,Microsoft,ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition,prefix aware attention compute; manage kv-cache chunks as prefix tree; reduce kv-cache redundancy,3,4,2
 2024,arXiv,Microsoft,BatchLLM: Optimizing Large Batched LLM Inference with Global Prefix Sharing and Throughput-oriented Token Batching,global prefix tree ahead-of-time; request reorder; horizontal fusioned prefix-shared attention kernel,,,
 2024,arXiv,Berkeley,BlendServe: Optimizing Offline Inference for Auto-regressive Large Models with Resource-aware Batching,offline batch inference; resource-aware prefix tree; compute-intensive / memory-intensive requests,,,
@@ -183,6 +190,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,Berkeley,Optimizing LLM Queries in Relational Workloads,prefix sharing maximization; KV cache hit rate; deduplication and cost estimation techniques,,,
 2025,Nips,Duke,KVCOMM: Online Cross-context KV-cache Communication for Efficient LLM-based Multi-agent Systems,estimates and adjusts KV-caches for shared conten; KVC pool fot observed cache deviations,3,3,2
 2025,Mlsys,UCSB,FastTree: Optimizing Attention Kernel and Runtime for Tree-Structured LLM Inference,kernel optimization for prefix cache; optimization for redundant KVC loading when shared; finding optimal context-queries groups,3,3,3
+2026,DAC,PKU,KEEP: A KV-Cache-Centric Memory Management System for Efficient Embodied Planning,Static-Dynamic Memory Construction for reducing KV cache invalidation; Multi-hop Memory Re-computation for dynamic cross-attention recovery,3,2,4
 
 # #### KV Cache Storage Systems
 # Solution: efficiently storing and retrieving the key-value cache, thus reuse when needed.
@@ -192,6 +200,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,FAST,SJTU,SolidAttention: Low-Latency SSD-based Serving on Memory-Constrained PCs,token-level interleaving of KV cache for SSD bandwidth; speculative prefetcher for predictive cache loading; fine-grained microtask orchestration and synchronization reuse,4,3,2
 2026,arXiv,XMU,Tutti: Making SSD-Backed KV Cache Practical for Long-Context LLM Serving,GPU-native SSD KV block object abstraction; gio_uring for asynchronous GPU direct object I/O,3,3,4
 2026,FAST,THU,Bidaw: Enhancing Key-Value Caching for Interactive LLM Serving via Bidirectional Computation–Storage Awareness,I/O-aware request scheduling by dual queues and disk-Highest Response Ratio Next policy; previous-answer-based KVC eviction; selective caching of storage-efficient activation tensors,4,3,2
+
+# #### Predictive Sparse KV Prefetching
+# challenge: sparse kv retrieval must predict the next step's important blocks early enough to hide slow host or remote transfers without recreating hbm pressure through prediction metadata or speculative buffers.
+2026,arXiv,Fudan,DualDecoder: Accelerate Long Context LLM Inference by Predictive Prefetch,speculated-token-based kv retrieval prediction; dual-token decoding pipeline; layer-aware kv transfer scheduling; prediction-miss correction; layer-scoped sparse kv buffer,3,3,3
+2026,arXiv,MSR,OasisKV: Scaling In-Decode KV Cache Beyond HBM with Lookahead Sparse Prefetching,speculative-decoding lookahead for kv block prediction; asynchronous attention background pipeline; delta selection with capped eviction; head-wise sparse kv working set; remote partial kv fetching,3,1,2
 
 # #### KV Cache Evict Systems
 # Challenge: selectively discard the least important key-value pairs to free up memory for longer contexts or larger batch sizes without significantly degrading the model's generation quality or increasing computational overhead for the eviction process itself.
@@ -227,9 +240,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ## Many-Core Systems
 # Challenge: the heterogeneity of cores, the load imbalance, and the communication overhead.
 
+# ### Single-Node Graph Analytics Frameworks
+# Challenge: Single-node graph analytics frameworks must hide irregular graph traversal, memory access, and work imbalance while exposing a productive programming model for multicore CPUs or GPUs.
+# Solution: Provide graph-specific abstractions such as sparse-linear-algebra vertex programs or frontier operators and implement optimized runtime scheduling and load balancing underneath.
+2015,VLDB,Intel,GraphMat: High performance graph analytics made productive,vertex program to sparse matrix mapping; generalized SPMV for graph analytics; single-node multicore framework,4,4,4
+2016,PPoPP,UC Davis,Gunrock: A High-Performance Graph Processing Library on the GPU,data-centric vertex/edge frontier abstraction; advance/filter/compute operators; bulk-synchronous GPU graph processing; kernel fusion and push-pull traversal support; idempotent traversal and priority-queue optimizations; load-balanced graph primitives,4,4,4
+
 # ### Workload Characterization
 # Challenge: dynamic workloads across numerous cores, resource contention for shared hardware.
-2015,VLDB,Intel,GraphMat: High performance graph analytics made productive,vertex program to sparse matrix mapping; generalized SPMV for graph analytics; single-node multicore framework,4,4,4
 2018,SC,Intel,Many-Core Graph Workload Analysis,multicore simulator sniper; selective caching and prefetching; heterogeneous high-performance low-power cores,,,
 2018,DATE,UGA,Parallel Code Generation of Synchronous Programs for a Many-core Architecture,banked memory mapping; worst-case response time analysis,,,
 2025,IPDPS,UChicago,Optimizing Fine-Grained Parallelism Through Dynamic Load Balancing on Multi-Socket Many-Core Systems,lock-less and concurrent task queue xqueue; distributed tree barrier; NUMA-aware redirect push/work stealing,,,
@@ -422,6 +440,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2015,DATE,NYU,Variability-Aware Dark Silicon Management in On-Chip Many-Core Systems,variability-aware dark core patterning; joint thread-to-core mapping and power-state control; temperature-dependent leakage feedback modeling,3,3,2
 2018,DATE,NTU,HiMap: A Hierarchical Mapping Approach for Enhancing Lifetime Reliability of Dark Silicon Manycore Systems,two-level hierarchical mapping for lifetime reliability; block-based selection; cluster-based adjustment,4,3,2
 2019,DAC,NTU,LifeGuard: A Reinforcement Learning-Based Task Mapping Strategy for Performance-Centric Aging Management,performance- and aging-aware objective formulation; reaction–diffusion (R–D)-based NBTI aging model,3,3,2
+2020,TC,SCUT,Performance Optimization of Many-core Systems by Exploiting Task Migration and Dark Core Allocation,application-aware confined migration modes; predictive response time modeling; branch-and-bound dark core budgeting,3,3,2 
 
 # ### RL-based Scheduling
 # Solution: learn high-quality scheduling policies via ‘trial and error’ without relying on minimal manual interventions or expert knowledge
@@ -447,6 +466,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### General Optimizations
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
+2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
+
+# #### Pipeline Workload and Overlap Co-Optimization
+# Challenge: Variable workloads and heterogeneous layers make serial-cost pipeline partitions imbalanced after communication is overlapped with computation.
+# Solution: Jointly optimize workload assignment, post-overlap stage costs, and runtime bubble filling for balanced pipeline execution.
 2025,arXiv,UCSD,WLB-LLM: Workload-Balanced 4D Parallelism for Large Language Model Training,workload-aware variable-length document packing; per-document sharding strategy; adaptive sharding selection mechanism; delay execution of extremely long documents,4,5,2
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
 2025,arXiv,ByteDance,veScale: Consistent and Efficient Tensor Programming with Eager-Mode SPMD,guaranteed single device consistency; zero overhead tensor alloc mode; fused communication,3,3,3
@@ -486,6 +510,21 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Gensyn,All is Not Lost: LLM Recovery without Checkpoints,replace two layer's value to recover from fault; out-of-order pipeline execution to tolerate crash,2,1,2
 2025,arXiv,UCAS,ApproxABFT: Approximate Algorithm-Based Fault Tolerance for Neural Network Processing,adaptive error tolerance thresholds; reduction in error detection overhead,3,3,3
 2023,VLSI,ICT,Soft Error Reliability Analysis of Vision Transformers,error injection experiment on ViT; block-wise ABFT optimizations,4,3,3
+
+# #### Straggler Related Optimizations
+# Challenge: Dynamic stragglers severely degrade overall training throughput due to the tightly coupled synchronization mechanisms of large-scale LLM training.
+
+# ##### Straggler Mitigation
+# Challenge: Once stragglers are identified, mitigating their impact without interrupting ongoing training is difficult, as naive approaches like node replacement or job restart incur costly checkpoint-rollback overhead and idle GPU time.
+2024,Arxiv,HKUST&Alibaba,FALCON: Pinpointing and Mitigating Stragglers for Large-Scale Hybrid-Parallel Training,Bayesian online change-point detection algorithm; adaptive multi-level mitigation mechanism,4,4,2
+2024,SOSP,Stanford,ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation,dynamic micro-batch re-routing; input/weight gradients separation; staggered optimizer for warm-up bubbles harvest,4,4,3
+2025,SIGMOD,PKU,Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization,per-GPU straggler quantification; Bi-level parallelization planning; asynchronous re-planning with overlapping,4,4,2
+2026,HPDC,HKUST,ResiHP: Taming LLM Training Failures with Dynamic Hybrid Parallelism,workload-aware time prediction; dynamic hybrid-parallel scheduling; asymmetric P2P communication optimization,
+
+# ##### Straggler Detection
+# Challenge: Grey nodes that pass standard health checks yet silently degrade performance under real workloads are extremely hard to detect, as their symptoms are workload-dependent, intermittent, and masked by fault-tolerant communication rerouting.
+2025,NSDI,Harvard&ByteDance,Minder: Faulty Machine Detection for Large-scale Distributed Model Training,per-metric LSTM-VAE denoising; metric prioritization via Z-score and decision tree; pairwise Euclidean distance outlier detection,4,4,2
+2026,MLSys,Umich,Guard: Scalable Straggler Detection and Node Health Management for Large-Scale Training,online peer-relative health monitoring; multi-signal temporal filtering; tiered severity-based response policy,3,4,2
 
 # ### LLM Inference Systems
 # Focusing on the optimizations for LLM inference systems.
@@ -607,6 +646,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,StepFun,Step-3 is Large yet Affordable: Model-system Co-design for Cost-effective Decoding,detailed AFD math analysis; co-design of model and system; low decode latenty implementation,3,4,2
 2025,arXiv,SJTU,Expert-as-a-Service: Towards Efficient Scalable and Robust Large-scale MoE Serving,treat expert on independent servers; expert as a service enable scalable MoE serving,3,3,2
 2026,arXiv,HKUST(GZ),KernelFlume: Elastic Core-Attention Scaling for Agentic Long-Context Decoding,weightless attention nodes; elastic token-range routing; query-first core-attention dispatch; inter-layer kernel pipelining; decode-time kv capacity scaling,3,3,2
+2026,technical blog,UCSD,FastAFD: Open-Source Large-Scale Attention-FFN Disaggregation on Blackwell NVL72,gpu-resident m2n and n2m control path; megamoe fused dispatch-expert-compute-combine megakernel; two-microbatch attention-ffn pipeline; cuda graph replay; overlap-aware zero-overhead scheduling,4,3,2
+2024,arXiv,THU,Efficient Heterogeneous Large Language Model Decoding with Model-Attention Disaggregation,model-attention disaggregation across compute- and memory-optimized gpus; fully host-bypassed gpu-nic network stack; automated model splitting and operator reordering; rotational staggered pipelining,3,3,3
 
 # #### Throughput-Optimized Systems
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
@@ -698,25 +739,28 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,Penn State,Characterization of Multi-Model Agentic AI Systems on General Tasks via Trace-Driven Simulation,gaiatrace token-level traces; vidur-agent trace-driven simulation; multi-model agentic workload characterization; task-level latency metrics; prefix caching impact,3,2,2
 2026,arXiv,KAIST,The Cost of Dynamic Reasoning: Demystifying AI Agents and Test-Time Scaling from an AI Infrastructure Perspective,system breakdown for agent system; large-scale analysis on LLM agents system design; test-time scaling,4,4,3
 
+# #### Agent-Based Simulation Acceleration
+# Challenge: Large-scale agent-based simulations require repeated state updates and interaction queries; on accelerators, storing or traversing the full population state can exceed on-chip memory and make heterogeneous CPU/GPU/FPGA implementations hard to maintain.
+# Solution: Use domain-specific code generation or model-specific FPGA pipelines to aggregate agent interactions, keep compact simulation state on chip, and coordinate host precomputation with accelerator execution.
+2020,CPE,TUMCREATE & Sheffield,OpenABLext: An automatic code generation framework for agent-based simulations on CPU-GPU-FPGA heterogeneous platforms,device-aware OpenCL backend for CPU/GPU/FPGA co-execution; online dispatching for runtime hardware assignment; graph-based agent-based simulation (ABS) spaces; generated parallel conflict resolution from user-specified rules,3,4,3
+2020,AICCSA,Imperial,Accelerating Simulation for Agent-Based Epidemic Models using FPGAs,cluster-centroid infection probability approximation; constant on-chip memory health-status update; host-FPGA precomputation and simulation split; OpenCL-based Arria 10 FPGA epidemic simulation,3,3,3
+
 # #### DSL for agent representation
 # Challenge: designing a domain-specific language (DSL) for representing agents can help to simplify the development and deployment of multi-agent systems.
 2025,arXiv,UTA,Software-Defined Agentic Serving,use LLM to generate the cpp code of agent network; dynamic agent graph support,2,2,1
 2026,arXiv,UT-Austin,Nalar: An agent serving framework,frontend agent expression for dynamic graph; agent based scheduling,3,2,1
 
-# #### CPU based Optimizations for Large Scale Multi-Agent Systems
-# Challenge: Large number will lead to high communication overhead on CPU based systems. The database, scheduler and communication need to be optimized.
+# #### Runtime Optimizations for Large Scale Multi-Agent Systems
+# Challenge: Large-scale multi-agent simulations create communication, scheduling, and runtime overhead across agent execution and state management.
 2025,arXiv,RUC,YuLan-OneSim: Towards the Next Generation of Social Simulator with Large Language Models,vllm based LLM running; CPU overhead optimization for communication between agents; agent num is about 100000,3,3,2
 2025,arXiv,AiLab,OASIS: Open Agent Social Interaction Simulations with One Million Agents,agent simulation with large scale; run LLM on local; optimization for large scale agent simulation; agent num is about 1 million,4,3,3
 2025,arXiv,ZJU,Agent-Kernel: A MicroKernel Multi-Agent System Framework for Adaptive Social Simulation Powered by LLMs,micro-kernel MAS; decouple system function to enable more flexible and adaptive computation,3,3,2
-
-# #### GPU based Optimizations for Multi-Agent Systems
-# Challenge: Using GPU to run multi-agent systems can reduce the communication overhead. However, the GPU memory is limited, which requires optimization for memory management and communication.
-2025,AAMAS,MIT,On the limits of agency in agent-based models,LLM archetypes for million-scale ABM; computational efficiency via representative agent grouping; counterfactual behavioral analysis with LLM-driven agents,3,3,3
 2025,arXiv,THU,AgentSociety: Large-Scale Simulation of LLM-Driven Generative Agents Advances Understanding of Human Behaviors and Society,large simulation for limited TCP connection port; use ray for distributed execution; change information subscribe method,4,3,2
 
 # #### Reuse Optimizations for Multi-Agent Systems
 # Challenge: in multi-agent systems, many agents may share similar characteristics or behaviors. By identifying and reusing these commonalities, we can reduce redundant computations and improve overall system efficiency.
 2024,TMLR,Tencent,Affordable Generative Agents,based on Generative Aggets; system optimization for LLM behavior reuse; optimization for token consumption,3,3,2
+2025,AAMAS,MIT,On the limits of agency in agent-based models,LLM archetypes for million-scale agent-based model (ABM); computational efficiency via representative agent grouping; counterfactual behavioral analysis with LLM-driven agents,3,3,3
 2025,arXiv,individual,"Warp-Cortex: An Asynchronous, Memory-Efficient Architecture for Million-Agent Cognitive Scaling on Consumer Hardware",KVC injection for agent memory reuse; CUDA stream,1,2,1
 2026,arXiv,UCSB,ScaleSim: Serving Large-Scale Multi-Agent Simulation with Invocation Distance-Based Memory Management,agent aware version of InferCept; KVC swap out and swap in,3,3,1
 2026,arXiv,UVA,[AAFLOW+] Stateful Operator Abstraction with Zero-Copy Distributed KV Cache Orchestration for Multi-Agent Workflows,stateful operator abstraction for kv cache; distributed kv materialization and transfer; copy-on-write kv fork; compatibility-constrained kv composition; transfer-versus-recompute cost model; zero-copy state transport,3,3,2

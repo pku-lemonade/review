@@ -2,15 +2,29 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # ### 3D-Stacked Memory
 # Challenge: current DDR and PCIe can only provide limited channels, causing bandwidth and capacity bottlenecks for data-intensive applications.
 # Solution: 3D-stacked 6-16 memory dies and use hundreds to thousands of TSVs to provide independent channels, enabling high bandwidth and capacity.
-# #### HBM
+# ### HBM
 # Solution: stack multiple DRAM dies and use TSVs to provide TB/s level bandwidth.
-2023,JSSC,SK Hyrix,A 192-Gb 12-High 896-GB/s HBM3 DRAM With a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization, detailed HBM3e structure and specifications,3,4,5
-2024,ISSCC,SK Hyrix,A 48GB 16-High 1280GB/s HBM3E DRAM with All-Around Power TSV and a 6-Phase RDQS Scheme for TSV Area Optimization, supports both power TSV and data TSV; first 16-Hi Stacking HBM with 1/4 more capacity and BW,4,4,5
-# #### HBF
+2023,JSSC,SK Hynix,A 192-Gb 12-High 896-GB/s HBM3 DRAM With a TSV Auto-Calibration Scheme and Machine-Learning-Based Layout Optimization, detailed HBM3e structure and specifications,3,4,5
+2024,ISSCC,SK Hynix,A 48GB 16-High 1280GB/s HBM3E DRAM with All-Around Power TSV and a 6-Phase RDQS Scheme for TSV Area Optimization, supports both power TSV and data TSV; first 16-Hi Stacking HBM with 1/4 more capacity and BW,4,4,5
+2026,Hot Chips,SK Hynix,Advanced packaging for High Bandwidth Memory (HBM), integrated cooling stacks "ICE" for D2D PHY overheat problem; Hybrid-bonding for HBM will be introduced in HBM5,1,5,5
+2026,Hot Chips,Samsung,HBM Base Die: How HBM Will Evolve Using Advanced Logic Processes, customized base die with Samsung 4nm process for wider channels; stack the HBM chips directly on the XPU chip for high-density d2d interconnects (zHBM),5,4,5
+2026,HPCA,Harvard,RPU – A Reasoning Processing Unit,"Capacity-Optimized HBM design; bandwidth-first power and area provisioning; decoupled memory, compute, and network pipelines",3,4,2
+# ### HBF
 # Challenge: SSD can only provide GB/s level bandwidth, also has low IOPS, high latency and weak random access performance caused by the SSD controller.
 # Solution: Like HBM, stack multiple NAND Flash dies and use TSVs to provide TB/s level bandwidth, TB-level system capacity and place the stack package near the GPU.
-2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
 2026,arXiv,UCSD,HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration, add a near-storage reranking in HBF base die as NMP engine; detailed HBF energy-latency and BW modeling based on thermal simulation,5,4,2
+2026,HotChips,Oxmiq Labs,HBF in AI Compute - A System Architect’s view,cost-model based HBF benefit analysis; potential benefits are on low-batch single-card long-context scenarios,3,4,2
+
+# #### HBF for Weight Offloading Only
+# Challenge: HBF has much higher latency compared to HBM, so naively reading weights will slow down the prefill.
+2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
+2026,IEEE CAL,POSTECH,Exploring High-Bandwidth Flash for Modern LLM Inference: Opportunities and Challenges,Full HBF-based GPU memory; HBF-aware LLM inference timing model; on-die SRAM buffering for intermediate data,3,2,2
+2026,arXiv,ICT,FlashAccel: Leveraging High-Bandwidth Flash for High-Throughput LLM Inference, SRAM for prefetching; plane-balanced weight and KV cache layout; FTL (Flash Translation Layer)-free storage management layer,3,4,4
+2026,arXiv,Huawei,FLINT: Efficiently Leveraging High Bandwidth Flash for Capacity-Scalable LLM Inference Acceleration,hardware burst-buffer controller for dynamic read coalescing; phantom-plane refresh using plane-level redundancy; burst-granular read-only FTL (Flash Translation Layer),3,2,4
+# #### HBF for KV Cache Pooling
+# Challenge: KV Cache is dynamic and easy to be evicted, leaving writing endurance a major problem.
+2026,arXiv,Alibaba,Potential Applications of HBF in LLM Serving Systems,HBM/HBF heterogeneous stacking for bandwidth preservation; capacity-residency analytical model for locality and load balancing; HBF-backed expert and model weight replication for cross-node communication reduction,3,2,3
+2026,arXiv,KAIST,Beyond Capacity: Scalable MoE LLM Inference via High-Bandwidth Flash with Direct GPU and HBM Paths,concurrent dual-path delivery via direct and HBM-relayed flash interconnects; lookahead expert selection mechanism for read latency-hiding; phase-aware hierarchical KV-cache buffering and batched writeback,4,4,4
 
 # ### Multi-Level PIM/NDP Architectures
 # Challenge: PIM core can be placed at bank level, off-chip buffer level and even inside the SSD controller, and the communication between different levels of PIM/NDP is challenging.
@@ -37,16 +51,17 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,HPCA,PKU,InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference,offloading decoding-phase attention computation to computational SSDs; SparF Attention flash-aware sparse algorithm,4,2,2
 2025,ASPLOS,ETHZ,CIPHERMATCH: Accelerating Homomorphic Encryption-Based String Matching via Memory-Efficient Data Packing and In-Flash Processing, memory-efficient data packing scheme for HE; in-NAND XOR & AND operations,3,4,2
 2026,ASPLOS,Seoul National,A Cost-Effective Near-Storage Processing Solution for Offline Inference of Long-Context LLMs, delayed KV Cache writeback avoiding write amplification; cooperative X-cache for cooperative utilization,2,2,2
-# ### DIMM-PIMs
+
+# ### Processing-in-Memory (PIM) 
 # Challenge: Memory wall causing high latency of data transfer between CPU and memory.
 # Solution: Put the compute unit in the memory or near the memory to reduce the data transfer overhead.
 # #### General Application-Specific Optimization
 # Challenge: Existing NDP architecture are designed for general-purpose computing; not efficient for specific tasks like graph processing.
 2022,ISCA,Micron,To PIM or Not for Emerging General Purpose Processing in DDR Memory Systems, vector engine inside NDP bank; intelligent code offload decision,2,3,2
-2023,EuroSys,Univ. of Virginia,NearPM: A Near-Data Processing System for Storage-Class Applications,partitioned persist ordering for asynchronous CPU-NDP execution; delayed synchronization for multi-device consistency,4,3,3
 2024,ISCA,Samsung,pSyncPIM: Partially Synchronous Execution of Sparse Matrix Operations for All-Bank PIM Architectures,partially synchronous PIM control; predicated execution; sparse matrix distribution & compaction,3,3,3
 2025,ATC,RUC,Turbocharge ANNS on Real Processing-in-Memory by Enabling Fine-Grained Per-PIM-Core Scheduling,per-PU scheduling; persistent PIM kernel; per-PU dispatching with selective replication,3,4,4
 2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
+2025,IEEE CAL,ICT,Exploring the DIMM PIM Architecture for Accelerating Time Series Analysis,matrix profile acceleration on UPMEM; DPU pipeline with Wallace tree multiplier and MAC unit,3,3,2
 # #### DNN-Specific Optimization
 2021,HPCA,Seoul National,GradPIM: A Practical Processing-in-DRAM Architecture for Gradient Descent,fixed-function PIM architecture for DNN gradient descent; non-invasive PIM operations using reserved DDR commands,3,3,2
 2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
@@ -78,6 +93,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### LLM Quantization & Capacity Optimization
 # Challenge: Bank-level PIM systems face tight capacity budgets and quantization overhead in long-context LLM serving.
 2025,IEEE LCA,POSTECH,Cost-Effective Extension of DRAM-PIM for Group-Wise LLM Quantization,scale cascading for simplifying dequantization; zero-offset removal for reduced circuit complexity,3,2,2
+2025,DAC,ICT,BlockPIM: Optimizing Memory Management for PIM-enabled Long-Context LLM Inference,cross-channel block memory layout strategy; cross-channel attention computation algorithm,4,3,3
 2026,HPCA,ISCT,AQPIM: Breaking the PIM Capacity Wall for LLMs with in-Memory Activation Quantization,lookup-based attention; importance-weighted K-means clustering; channel pre-sorting for subvector affinity,3,3,4
 2026,ISCA,THU,Bringing Near Data Processing into the Low-Bit Floating-Point Era,scale-value interleaved FP layout; dequantization-hiding via instruction reordering; compilation space pruning,3,3,3
 # #### MoE-LLM Optimization
@@ -86,10 +102,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MICRO,Samsung,"Duplex: A Device for Large Language Models with Mixture of Experts, Grouped Query Attention, and Continuous Batching", replace the GPU HBM memory die with HBM-PIM die; expert and attention co-processing for dynamic workload splitting within MoE/attn layers,4,4,4
 2025,ICCAD,PKU,HD-MoE: Hybrid and Dynamic Parallelism for Mixture-of-Expert LLMs with 3D Near-Memory Processing,LP-based hybrid TP and EP mapping; bayesian optimization for topology-aware link balancing; online dynamic expert placement with predictive pre-broadcast,3,3,2
 # #### RAG-Specific Optimization
-# Challenge: Retrieving the top-k results from a vectorized database is also a memory-bound operation.
+# Challenge: RAG retrieval is memory-bound, while generation with precomputed document KV caches suffers from costly KV transfers and low arithmetic intensity.
 2025,ISCA,HUST,HeterRAG: Heterogeneous Processing-in-Memory Acceleration for Retrieval-augmented Generation,combine DIMM-PIM and HBM-PIM for acceleration; locality-aware retrieval and generation; fine-grained parallel pipelining,2,3,3
 2025,MICRO,Yonsei,Accelerating Retrieval Augmented Language Model via PIM and PNM Integration, heterogeneous architecture integrating PIM for LLMs and PNM for retrievers; RALM scheduling strategy with selective batching and early generation,4,2,3
-# ### PIM KVCache Mapping
+2026,ISCA,HUST,MERIDIAN: In-Memory Acceleration for RAG with Document Attention Decomposition,document-context attention decomposition with stationary head-sharded document KV caches; LPDDR-PIM buffer replication for skinny GEMM; piecewise-linear nonlinear approximation using shared arithmetic units; interleaved document-attention and context-execution scheduling,3,2,3
+# ### PIM KV Cache Mapping
 # Challenge: Bank-level PIM processes one row at a time, needs data locality, making the data interleaving in HBM and host memory inefficient. 
 # #### KV-Cache Mapping & Offloading
 2026,ASPLOS,SJTU,REPA: Reconfigurable PIM for the Joint Acceleration of KV Cache Offloading and Processing,reconfigurable ReRAM-PIM for KV cache offload and in-situ processing; bulk-wise memory setting instructions for wordline parallelism; locality-aware data mapping and transfer overlapping,2,2,2
@@ -98,6 +115,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: Host pages need to enable interleaving to improve concurrent throughput, while PIM pages need to disable it to maintain better locality, creating a conflict.
 2023,DAC,Georgia Tech,vPIM: Efficient Virtual Address Translation for Scalable Processing-in-Memory Architectures,network-contention-aware hashing to minimize cross-stack page table walks; pre-translation using repurposed PIM cores to move page table walks off the critical path,4,4,3
 2024,ISCA,SJTU,UM-PIM: DRAM-based PIM with Uniform & Shared Memory Space,Uniform shared CPU-PIM memory; dual-track memory management; zero-copy data re-layout,3,3,4
+2026,MICRO,ICT,Rethinking Unified Memory for NPU–PIM Systems: Dual-View Memory for Dynamic Inference of LLM,offline dual-view mapping optimization; address remapping unit for dynamic address translation; flexible access scheduler for dual-view memory request scheduling,3,3,3
 # #### Memory Allocation & Management
 # Challenge: Existing NDP architecture has numerous independent memory spaces; lacks unified management; and features inefficient memory allocation.
 2024,ISCA,KAIST,PIM-malloc: A Fast and Scalable Dynamic Memory Allocator for Processing-In-Memory (PIM) Architectures,PIM-specific memory allocator; hierarchical memory allocation scheme; hardware metadata cache,4,2,3
@@ -209,10 +227,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,DAC,SNU,MoNDE: Mixture of Near-Data Experts for Large-Scale Sparse Models,NDP for MoE; activation movement; GPU-MoNDE load-balancing scheme,,,
 2024,ASPLOS,PKU,SpecPIM: Accelerating Speculative Inference on PIM-Enabled System via Architecture-Dataflow Co-Exploration,algorithmic and architectural heterogeneity; PIM resource allocation; multi-model collaboration workflow,,,
 2025,MICRO,UCSD,Stratum: System-Hardware Co-Design with Tiered Monolithic 3D-Stackable DRAM for Efficient MoE Serving,monolithic 3D-Stackable DRAM without TSV; in-memory tiering for vertical latency variation; topic-based expert usage prediction for MoE serving,4,3,3
+# ### Bank-level PIM
+# Solution: Directly integrate logic units into the DRAM bank to enable massive bank-level parallelism.
+# #### DDR-based PIM
+2022,Hot Chips,Samsung,"Aquabolt-XL HBM2-PIM, LPDDR5-PIM With In-Memory Processing, and AXDIMM With Acceleration Buffer",HBM2-PIM with bank-level SIMD programmable computing units; Acceleration DIMM with acceleration buffers for rank-level parallelism,2,5,3
+2026,Hot Chips,Samsung,Samsung LPDDR5X-PIM: World’s First LPDDR based Processing in Memory (PIM) Solution for AI Inference, industrial product for LPDDR5X-PIM with bank-level parallelism; FP8 SIMD MAC units; 614G/s bandwidth with xlow power consumption,3,5,5
 # #### HBM2-PIM
 # Solution: HBM2-PIM is the first commercial HBM-PIM product, and 4 out of 8 DRAM layers are PIM-enabled layers, while the other 4 layers are standard DRAM layers.
 2021,ISCA,Samsung,Hardware Architecture and Software Stack for PIM Based on Commercial DRAM Technology Industrial Product, drop-in replacement for standard HBM2; bank-level parallelism using standard DRAM commands; address aligned mode to tolerate host-side command reordering,3,5,3
-2022,Hot Chips,Samsung,"Aquabolt-XL HBM2-PIM, LPDDR5-PIM With In-Memory Processing, and AXDIMM With Acceleration Buffer",HBM2-PIM with bank-level SIMD programmable computing units; Acceleration DIMM with acceleration buffers for rank-level parallelism,2,5,3
 2023,MICRO,Yonsei,AESPA: Asynchronous Execution Scheme to Exploit Bank-Level Parallelism of Processing-in-Memory, Single-Instruction Long-Data execution model; asynchronous bank operation via long-data commands; column-major GEMV dataflow with shared accumulators,3,3,3
 # #### HBM3-PIM
 # Solution: HBM3-PIM further increases the capacity and the parallelism by stacking more DRAM layers and all the layers are the PIM-enabled layer.
