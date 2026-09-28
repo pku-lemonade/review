@@ -136,7 +136,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,SOSP,THU,Jenga: Effective Memory Management for Serving LLM with Heterogeneity,two-level LCM allocator; customizable prefix caching; request-aware allocation,4,4,2
 2025,FAST,THU,Mooncake: Trading More Storage for Less Computation — A KVCache-centric Architecture for Serving LLM Chatbot,PD-disaggregate system; kv-cache centered; global kv-cache pool; dynamic SLO scheduler; paged KV-Cache storage,3,4,2
 2025,SOSP,SJTU,KVCache Cache in the Wild: Characterizing and Optimizing KVCache Cache at a Large Cloud Provider,real-world KVCache trace anatomy; workload-aware eviction; analysis of KVCache hit in the real-world,4,4,2
-2026,OSDI,Peng Cheng Laboratory,Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing,online neuron balancing for GPU-CPU hybrid inference; co-activation-aware neuron grouping and weight reordering; live-pipeline neuron prefetching; temporal activation momentum (TAM) cache policy; feedback-driven CPU-I/O balancing,4,4,4
+2026,OSDI,Sun Yat-sen University,Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing,online neuron balancing for GPU-CPU hybrid inference; co-activation-aware neuron grouping and weight reordering; live-pipeline neuron prefetching; temporal activation momentum (TAM) cache policy; feedback-driven CPU-I/O balancing,4,4,4
 
 # ##### Application specific memory management
 # Solution: Memory management is actually the core for request scheduling. Application specific memory management use the application information to manage the memory.
