@@ -159,6 +159,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MLSys,Cornell,Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training,trace-driven performance modeling and estimation toolkit; the first system to provide accurate performance models that effectively capture the execution behaviors of LLMs; modify and generate new execution graphs from existing traces,3,4,2
 2026,arXiv,Alibaba,"A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with PrismLLM",slicing-based execution graph; hybrid emulation with virtual participants; PrismTrace minimal tracing format; context-switching execution,3,3,3
 2026,INFOCOM,NJU,Chameleon: Adaptive Fault Tolerance for Distributed Training via Real-time Policy Selection,dynamic programing based estimator; bipartite graph matching and graph coloring based restorer; heuristic planner,4,4,2
+2026,WWW,ZJU,HeteroSim: Towards High-Fidelity Heterogeneous LLM Training Simulation on GPUs,Roofline-inspired cross-generation compute scaling; NCCL-aligned message-level communication planning; heterogeneity-aware device placement via SA,4,4,2
 
 # ### Thermal Modeling
 # Challenge: precisely capturing the nonlinear, multi-scale and heterogeneous thermal behaviors on different architecture

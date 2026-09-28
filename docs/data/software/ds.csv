@@ -54,6 +54,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2021,SC,NVIDIA,Efficient Large-Scale Language Model Training on GPU Clusters Using Megatron-LM,Megatron2; dive deep into tensor parallelism; how to train a LLM on 1000 GPUs,4,4,3
 2021,SC,ETHZ,Chimera: Efficiently Training Large-Scale Neural Networks with Bidirectional Pipelines,bidirectional pipeline; eager gradient synchronization; batch size concatenation,4,4,3
 2022,arXiv,NVIDIA,Reducing Activation Recomputation in Large Transformer Models,Megatron3; sequence parallel; selective activation recomputation; reduce the amount of recomputed activation,3,4,3
+2024,arXiv,SeaAI,Zero Bubble Pipeline Parallelism,B/W splitting; handcrafted zero-bubble scheduling; automatic schedule search via heuristic + ILP,3,4,2
 
 # #### LLM-specific Parallel Strategies
 # Focusing on the parallel strategies for LLM-specific deep learning systems.
@@ -520,6 +521,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,SOSP,Stanford,ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation,dynamic micro-batch re-routing; input/weight gradients separation; staggered optimizer for warm-up bubbles harvest,4,4,3
 2025,SIGMOD,PKU,Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization,per-GPU straggler quantification; Bi-level parallelization planning; asynchronous re-planning with overlapping,4,4,2
 2026,HPDC,HKUST,ResiHP: Taming LLM Training Failures with Dynamic Hybrid Parallelism,workload-aware time prediction; dynamic hybrid-parallel scheduling; asymmetric P2P communication optimization,
+2026,NSDI,HKUST&Alibaba,ADAPTRA: Straggler-Resilient Hybrid-Parallel Training with Pipeline Adaptation,slackness-aware pipeline adaptation; HOL blocking elimination via compute-communication decoupling; host-memory activation offloading,4,4,3
 
 # ##### Straggler Detection
 # Challenge: Grey nodes that pass standard health checks yet silently degrade performance under real workloads are extremely hard to detect, as their symptoms are workload-dependent, intermittent, and masked by fault-tolerant communication rerouting.
