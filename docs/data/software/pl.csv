@@ -23,10 +23,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ### Program Optimization and Rewriting Frameworks
 # Challenge: Traditional sequential compiler optimizations suffer from the phase-ordering problem, while existing equational reasoning tools are often too slow or rigid for domain-specific, non-syntactic analyses.
-# Solution: Utilize equality saturation with efficient data structures (e.g., e-graphs) and extensible analysis mechanisms to explore the space of equivalent programs without strict ordering.
+# Solution: Explore equivalent programs without strict optimization ordering through equality saturation with efficient e-graphs and extensible analyses, or through semantics-guided program synthesis with cost-aware pruning.
+# Related: See [Configuration Optimization](ds.md#configuration-optimization) for search-based tensor optimization systems such as Mirage.
 2021,POPL,UW,"egg: Fast and Extensible Equality Saturation",equality saturation algorithm;e-graphs (Equality Graphs);deferred rebuilding technique,3,4,4
 2025,ASPLOS,Cornell,SmoothE: Differentiable E-Graph Extraction,differentiable e-graph extraction;probabilistic continuous relaxation;learning-based (MLP) cost model,4,5,5
 2026,ASPLOS,PKU,"Finding Reusable Instructions via E-Graph Anti-Unification",e-graph anti-unification algorithm for custom instruction identification;pattern vectorization;hardware-aware cost model,4,4,4
+2026,CGO,Edinburgh,Tensor Program Superoptimization through Cost-Guided Symbolic Program Synthesis,STENSO (Sketch-based Tensor Super Optimizer); symbolic execution with algebraic hole solving; monotonic specification-simplification pruning,3,4,3
 2026,ASPLOS,KAIST,Trinity: Three-Dimensional Tensor Program Optimization via Tile-level Equality Saturation,stateful equality saturation via expression propagation; context-aware two-pass extraction algorithm,3,5,4
 
 # ### Deep Learning Compilers
@@ -53,6 +55,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2019,MAPL,Harvard,Triton: An Intermediate Language and Compiler for Tiled Neural Network Computations,"tile-based single program, multiple data (SPMD) programming model; predicated SSA (PSSA) for tile-level control flow; hierarchical tiling; automatic memory coalescing; shared-memory auto-allocation and synchronization",4,3,4
 2025,ICLR,Stanford,"ThunderKittens: Simple, Fast, and Adorable Kernels",16x16 warp-owned matrix tiles; PyTorch-like bulk tile operations; load-compute-store-finish (LCSF) asynchronous template; automatic swizzled shared-memory layouts; persistent-grid block scheduling,4,5,3
 2026,ICLR,PKU,TILELANG: Bridge Programmability and Performance in Modern Neural Kernels,explicit memory hierarchy allocation; layout inference for thread binding; composable fragment layout; software-defined pipeline; automatic warp specialization for Hopper; CuTe/CK tensorization integration,4,4,3
+2026,PLDI,MIT,Modular GPU Programming with Typed Perspectives,thread-group size and alignment types; per-group value-uniformity checking; collective-call thread and shared-memory requirement checking,4,4,4
 
 # #### Automatic GPU Tile and Pipeline Synthesis
 # Challenge: Choosing hardware-aligned tile shapes, compatible memory layouts, and pipelined warp assignments requires searching tightly coupled hardware constraints that change across accelerator generations.
@@ -60,6 +63,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,OSDI,UToronto & MSR,ROLLER: Fast and Efficient Tensor Compilation for Deep Learning,rolling tile (rTile) hardware alignment; rTile program (rProgram); scale-up-then-scale-out construction; micro-performance model; Load-Compute-Store hardware abstraction layer,4,5,4
 2026,CGO,UToronto,Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs,CuTe style data layout synthesis; type-inference-based thread-value layout propagation; alignment-aware shared-memory layout unification,4,5,4
 2026,OSDI,Stanford & NVIDIA,Optimal Software Pipelining and Warp Specialization for Tensor Core GPUs,Twill joint software-pipelining and warp-specialization formulation; modulo-schedule integer linear program; warp-assignment satisfiability modulo theories constraints; register-aware cross-warp spill modeling; architecture-parametric operation costs,4,4,4
+2026,SOSP,HKUST,Ave: Guiding Agentic GPU Optimization Using Data-Flow Invariants,data-flow invariant-guided agentic GPU kernel optimization; MLIR abstract interpretation and SMT-based layout checking; in-context reinforcement learning (ICRL) planner,3,4,3
 
 # #### Tensor & Pipeline Optimization
 # Challenge: Optimizing complete tensor workloads requires coordinating memory traffic, fusion, and execution pipelines across operators rather than tuning each isolated tile kernel independently.
@@ -240,7 +244,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Provide automated compilation flows and programming models to efficiently map algorithms, especially for AI workloads, onto specialized compute fabrics like systolic arrays and AI Engines.
 2017,DAC,PKU & Falcon & UCLA,Automated Systolic Array Architecture Synthesis for High Throughput CNN Inference on FPGAs,2D systolic array architecture; analytical model for performance and resource; two-phase design space exploration; end-to-end C-to-FPGA automation flow,3,4,3
 2019,ISCAS,PKU & UCLA,Frequency Improvement of Systolic Array-Based CNNs on FPGAs,front-end accumulation chain segmentation; back-end topology-aware floorplanning constraints; frequency optimization for systolic arrays,3,4,3
-2020,ICCAD,Cornell,SuSy: A Programming Model for Productive Construction of High-Performance Systolic Arrays on FPGAs,decoupled algorithm (Uniform Recurrence Equations, UREs) and spatial mapping (schedule) for systolic arrays; high-level space-time transformation primitive for architectural exploration; Uniform Recurrence Equation (URE)-based temporal definition for broad systolic algorithm coverage,4,4,3
+2020,ICCAD,Cornell,SuSy: A Programming Model for Productive Construction of High-Performance Systolic Arrays on FPGAs,"decoupled algorithm (Uniform Recurrence Equations, UREs) and spatial mapping (schedule) for systolic arrays; high-level space-time transformation primitive for architectural exploration; Uniform Recurrence Equation (URE)-based temporal definition for broad systolic algorithm coverage",4,4,3
 2021,FPGA,UCLA,AutoSA: A Polyhedral Compiler for High-Performance Systolic Arrays on FPGA,polyhedral space-time transformation; array partitioning for systolic arrays; latency hiding via double buffering; SIMD vectorization; two-level analytical+learned design space exploration,4,4,4
 2025,FPGA,Brown University,ARIES: An Agile MLIR-Based Compilation Flow for Reconfigurable Devices with AI Engines,MLIR-based AIE compilation; Unified AIE+PL IR; Tile-based parallelism; ADF dialect; Automated AIE placement,4,5,4
 
