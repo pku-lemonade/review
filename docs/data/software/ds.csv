@@ -10,11 +10,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2004,OSDI,Google,MapReduce: simplified data processing on large clusters,divife the data processing into map and reduce stages; use master-worker architecture,4,5,5
 
 # #### Domain Specific Computing Framework
-# Challenge: specific bounds of different situations
+# Challenge: distributed graph analytics must coordinate irregular dependencies while balancing replica memory, synchronization, and inter-host communication.
 2012,OSDI,CMU,PowerGraph: Distributed Graph-Parallel Computation on Natural Graphs,GAS (Gather-Apply-Scatter) decomposition; vertex-cut partitioning; delta caching; parallel locking for high-degree vertices,4,4,4
 2018,PLDI,UT Austin & UIUC,Gluon: A Communication-Optimizing Substrate for Distributed Heterogeneous Graph Analytics,communication-optimizing substrate; heterogeneous processor support; structural/temporal invariant-based communication optimization; memoization of address translation,4,4,4
 2020,PLDI,USC,SympleGraph: Distributed Graph Processing with Precise Loop-Carried Dependency Guarantee,loop-carried dependency guarantee; dependency communication primitives; circulant scheduling; differentiated dependency propagation; dependency double buffering,4,4,4
 2024,PPoPP,NUDT,GraphCube: Interconnection Hierarchy-aware Graph Processing,interconnection hierarchy-aware; topology-aware graph partitioning; extreme-scale graph processing,4,5,5
+2026,OSDI,UT Austin,"Pluto: High-Performance, Memory-Efficient Distributed Graph Analytics through Advanced Mirroring",static partial mirroring of productive remote vertices; mirror-free pull under outgoing edge-cut partitioning; on-demand work migration preserving bulk-synchronous parallel (BSP) semantics; dirty-phantom tracking to suppress redundant updates,4,4,4
 
 # #### Graph Partitioning for Distributed Processing
 # Challenge: Distributed graph processing performance is often limited by communication overhead and load imbalance; partitioners must handle graph skew, hierarchy-aware communication costs, and balanced vertex/edge placement without loading the full graph into memory.
@@ -230,10 +231,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,ETH,TeraAgent: A Distributed Agent-Based Simulation Engine for Simulating Half a Trillion Agents,IO optimization for large scale agent simulation; distributed agent simulation engine; communication optimization for agent scenarios,3,2,2
 
 # ### GPU-GPU Communication
-# Challenge: limited interconnect bandwidth between GPUs using nvLink, PCIe, synchronization delays in parallel workloads, load imbalance across GPUs. The GPU-GPU can also across different nodes.
+# Challenge: intra- and inter-node GPU communication must overcome bandwidth limits, synchronization overhead, and load imbalance while preserving correct delivery semantics across heterogeneous accelerators and interconnects.
 2025,arXiv,Apple,SPD: Sync-Point Drop for efficient tensor parallelism of Large Language Models,sync-point drop; block-wise sensitivity analysis; attention output synchronization reduction,,,
 2025,arXiv,Miscrosoft,Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters,heterogeneous pipeline stages with flexible GPU counts and types; CPU offloading of both parameters and activations,4,4,2
 2025,SIGCOMM,PKU,InfiniteHBD: Building Datacenter-Scale High-Bandwidth Domain for LLM with Optical Circuit Switching Transceivers,optical circuit switching; node-level fault isolation; optimize TP in DCN network,4,3,3
+2026,OSDI,UC Berkeley,UEP: Portable Expert-Parallel Communication,GPU-initiated token routing through multithreaded CPU proxies; lock-free GPU-CPU command queues; immediate-data-based completion fences and partial delivery ordering; direct GPU-to-GPU payload transfer via remote direct memory access (RDMA),3,4,4
 
 
 # ## Many-Core Systems
@@ -572,7 +574,6 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # ##### Batching and Scheduling
 2025,arXiv,Alibaba,Static Batching of Irregular Workloads on GPUs: Framework and Application to Efficient MoE Model Inference,statically batching irregular workloads; batch-task-tile partition; decompress the mapping and dispatch the workload,,,
-2025,arXiv,Edinburgh,MoE-Gen: High-Throughput MoE Inference on a Single GPU with Module-Based Batching,module-based batching; high-throughput MoE inference; full KV-cache offloading,,,
 2025,arXiv,KTH,Priority-Aware Preemptive Scheduling for Mixed-Priority Workloads in MoE Inference,fine-grained preemption; priority-aware scheduling; per-expert queues; expert-level preemption,,,
 2025,arXiv,UMich,MoE-Lens: Towards the Hardware Limit of High-Throughput MoE LLM Serving Under Resource Constraints,two-stage performance modeling; analyzes the theoretical performance upper bound; captures how system execution mechanisms,4,4,2
 2025,Arxiv,Nvidia,MoE Parallel Folding: Heterogeneous Parallelism Mappings for Efficient Large-Scale MoE Model Training with Megatron Core,decouples parallelization strategies for attention and MoE layers; flexible and efficient token-level dispatcher; 5-D hybrid parallelism,4,5,2
@@ -641,8 +642,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,arXiv,THU,Efficient Heterogeneous Large Language Model Decoding with Model-Attention Disaggregation,model-attention disaggregation across compute- and memory-optimized gpus; fully host-bypassed gpu-nic network stack; automated model splitting and operator reordering; rotational staggered pipelining,3,3,3
 
 # #### Throughput-Optimized Systems
+# Challenge: large or bursty inference workloads require batching and scheduling that balance heterogeneous operator demands, memory pressure, and stragglers against completion-time and response-time requirements.
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
 2025,EuroSys,SJTU,TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling,brust scene target; tradeoff between TTFT and throughout; slowdown some TOT to human's read speed,4,3,2
+2026,OSDI,Edinburgh,BatchGen: An Architecture for Scalable and Efficient Batch Inference,event-driven sequence coroutines with yield/combine/partition/migrate primitives; attention-expert module-level batch accumulation; host-backed paged key-value (KV) state management; dynamic tensor-parallel straggler acceleration; profile-guided execution-plan search,4,4,4
 
 # #### MTP LLM Systems
 # Challenge: Traditional autoregressive LLM is slow, MTP, multi-token parallel, can speed up the inference. The challenge include how to tradeoff between throughput and accuracy.
