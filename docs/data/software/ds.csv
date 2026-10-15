@@ -523,10 +523,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,SOSP,Stanford,ReCycle: Resilient Training of Large DNNs using Pipeline Adaptation,dynamic micro-batch re-routing; input/weight gradients separation; staggered optimizer for warm-up bubbles harvest,4,4,3
 2025,SIGMOD,PKU,Malleus: Straggler-Resilient Hybrid Parallel Training of Large-scale Models via Malleable Data and Model Parallelization,per-GPU straggler quantification; Bi-level parallelization planning; asynchronous re-planning with overlapping,4,4,2
 2026,HPDC,HKUST,ResiHP: Taming LLM Training Failures with Dynamic Hybrid Parallelism,workload-aware time prediction; dynamic hybrid-parallel scheduling; asymmetric P2P communication optimization,
+2026,ISCA,UCF,Lit Silicon: A Case Where Thermal Imbalance Couples Concurrent Execution in Multiple GPUs,analytical performance and power modeling; lead-value-based straggler detection; GPU-Red/Realloc, CPU-Slosh strategy,4,3,2
 
 # ##### Straggler Detection
 # Challenge: Grey nodes that pass standard health checks yet silently degrade performance under real workloads are extremely hard to detect, as their symptoms are workload-dependent, intermittent, and masked by fault-tolerant communication rerouting.
 2025,NSDI,Harvard&ByteDance,Minder: Faulty Machine Detection for Large-scale Distributed Model Training,per-metric LSTM-VAE denoising; metric prioritization via Z-score and decision tree; pairwise Euclidean distance outlier detection,4,4,2
+2025,HPCA,Meta,Revisiting Reliability in Large-Scale Machine Learning Research Clusters,failure cascades through job preemption; analytical modeling of Effective Training Time Ratio (ETTR); proactive detection and isolation of faulty nodes,4,2,1
 2026,MLSys,Umich,Guard: Scalable Straggler Detection and Node Health Management for Large-Scale Training,online peer-relative health monitoring; multi-signal temporal filtering; tiered severity-based response policy,3,4,2
 
 # ### LLM Inference Systems
