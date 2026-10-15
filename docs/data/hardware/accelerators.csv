@@ -290,6 +290,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ASPDAC,CUHK,SoC-Tuner: An Importance-guided Exploration Framework for DNN-targeting SoC Design,intercluster distance algorithm; importance-based pruning and initialization,3,2,2
 2024,Arxiv,Georgia Tech,PIPEORGAN: Efficient Inter-operation Pipelining with Flexible Spatial Org,spatial organization strategy pipeorgan for inter-operator pipelining; augmented mesh for pipelining(AMP) topology,4,2,2
 2025,ASPDAC,THU,KAPLA: Scalable NN Accelerator Dataflow Design Space Structuring and Fast Exploring,tensor-centric dataflow directives; bottom-up cost descending; inter-layer pruning and decoupling,3,3,2
+2026,MICRO,MIT,The Turbo-Charged Mapper: Fast and Optimal Mapping for Energy-efficient and Low-latency Accelerator Design,dataplacement-first mapspace exploration; optimality-preserving loop and dataflow pruning; partial tile-shape Pareto pruning,3,3,1
 
 # #### Microarchitecture & Cross-Architecture DSE
 # Challenge: Efficiently explore and optimize design spaces across microarchitectures and heterogeneous hardware.
