@@ -71,8 +71,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,OSDI,Microsoft Research,WELDER: Scheduling Deep Learning Memory Access via Tile-graph,Tile-graph abstraction for fine-grained memory management; inter-layer independence for optimization space decoupling; tile traffic-based cost model,3,4,4
 2025,PPoPP,Thu,FlashTensor: Optimizing Tensor Programs by Leveraging Fine-grained Tensor Property,dataflow centered code recognition and optimization; two-stage heuristic algorithm to optimize tensor computation; kernel fusion,4,4,2
 2025,OSDI,PKU,PipeThreader: Software-Defined Pipelining for Efficient DNN Execution,Pipeline programming abstraction and orchestration mechanism for heterogeneous computing units; tile size and pipeline stage number tradeoff,4,4,4
+
+# #### Kernel Fusion and cross SM Cooperation
+# Challenge: Kernel boundaries and coarse-grained cross-SM dependencies cause idle SMs and intermediate-state traffic; efficient fusion must coordinate fine-grained task dependencies and communication across SMs.
+# Solution: Expose inter-SM tasks and data exchange, then coordinate persistent or fused execution with dependency-aware scheduling and inter-core communication.
+# Related: See [Compute-Kernel-Level Optimizations](ds.md#compute-kernel-level-optimizations) for dynamic megakernel execution, and [Collective Communication](algorithm.md#collective-communication) for related cluster-level communication primitives.
 2025,OSDI,CMU,Mirage Persistent Kernel: A Compiler and Runtime for Mega-Kernelizing Tensor Programs,mega-kernelization; SM level parallel optimization; SM level representation,3,3,3
 2026,HPCA,SJTU,FlashFuser: Expanding the Scale of Kernel Fusion for Compute-Intensive Operators via Inter-Core Connection,DSM based comminucation primitives; hierarchical dataflow analyzer; pruning based fusion search engine,4,4,2
+2026,SOSP,SJTU,Taming Dynamism on GPUs: Cross-SM Kernel Fusion via SM Cooperation and Just-in-Time Reduction,cross-SM kernel fusion; just-in-time reduction; operator-based declarative programming model,4,4,4
 
 # #### Cross-Kernel Data Movement and Launch Optimization
 # Challenge: Even after kernel generation and fusion, tensor materialization, parameter staging, and repeated CPU launches can dominate execution at kernel boundaries.
