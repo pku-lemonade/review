@@ -17,6 +17,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Auto Regressive Models for Image
 2024,NeurIPS,PKU,Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction,VAR modeling with next-scale prediction; multi-scale quantization for coarse-to-fine tokenization; power-law scaling laws for visual AR models,4,5,5
 
+# #### Linear Attention State Capacity and Retention
+# Challenge: Fixed-size recurrent states limit long-context recall; increasing state capacity or enriching decay must preserve affordable per-token computation and parallel training.
+# Solution: Expand memory through sparse addressing or improve retention through structured higher-rank decay and chunk-wise parallel state updates.
+# Related: See [Distributed Deep Learning Compilers](pl.md#distributed-deep-learning-compilers) for compiling linear-attention state propagation into GPU kernels with compute-communication overlap.
+2026,ICLR,CASIA,Householder-Diagonalized Linear Attention (HDLA): Utilizing Enhanced Decay Mechanism for Efficient Sequence Modeling,Householder-diagonalized decay; diagonal-plus-rank-2 state transitions; rank-generalized chunk-wise parallel algorithm,3,4,4
+2026,NeurIPS,Meta,Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity,product-key top-k sparse memory addressing; selected-slot gated delta updates; learned initial memory state; sparse-update rollback for memory-efficient backpropagation,4,4,4
+
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.
 2020,arXiv,OpenAI,Scaling Laws for Neural Language Models,fundamentals of LLM; increase model size and performance raise,4,5,5
