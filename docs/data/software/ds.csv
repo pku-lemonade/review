@@ -140,14 +140,19 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,OSDI,UVA,"No Buffer, No Bottleneck: Efficient Zero-Copy KV Cache Offloading for Long-Context LLMs",DirectKV zero-copy KV cache offloading; direct GPU access to CPU-resident KV cache over NVLink-C2C; fused KV generation and attention; warp-level fetch-compute-writeback pipeline,4,4,2
 2026,OSDI,Peng Cheng Laboratory,Kairox: Adaptive GPU-CPU Hybrid LLM Inference via Online Neuron Balancing,online neuron balancing for GPU-CPU hybrid inference; co-activation-aware neuron grouping and weight reordering; live-pipeline neuron prefetching; temporal activation momentum (TAM) cache policy; feedback-driven CPU-I/O balancing,4,4,4
 
-# ##### Application specific memory management
-# Solution: Memory management is actually the core for request scheduling. Application specific memory management use the application information to manage the memory.
+# #### Application specific memory management
+# Challenge: application-specific request dependencies and memory pressure require tailored KV-cache reuse, state movement, and model-weight management.
 2025,arXiv,UCSD,KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows,agent grapg; prefetch KV Cache from CPU for next agent; agent-aware prefix cache management,2,2,2
+2025,OSDI,Stanford,Strata: Hierarchical Context Caching for Long Context Language Model Serving,GPU-assisted I/O for mitigating key-value cache fragmentation; decoupled CPU and GPU memory layouts via on-the-fly transformation,3,3,3
+2026,Eurosys,SJTU,KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving,parameter-centric memory management for coping with memory overloading; online parameter dropping,2,2,3
+2026,arXiv,UCSD,SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering,lookahead context engineering; segment-decomposable transformations; asynchronous transformed kv precompute; slo-aware lookahead scheduling; agent framework integration,4,3,3
+
+# #### Multi-Model Colocation and Elastic Serving
+# Challenge: colocate heterogeneous full-weight models under limited device memory while meeting latency SLOs and absorbing uneven or bursty application demand.
+# Related: [Memory Management Algorithms](#memory-management-algorithms) and [SLO-Aware Systems](#slo-aware-systems).
 2024,ICML,PKU,MuxServe: Flexible Spatial-Temporal Multiplexing for Multiple LLM Serving,multi-LLM serving; colocating multi LLM in one GPU-instance; CUDA MPS based optimization; PD based scheduler,3,3,3
 2025,ATC,THU,Weaver: Efficient Multi-LLM Serving with Attention Offloading,GPU memory harvest across GPU; harvest GPU memory and SM for hot LLM attention computation; GPU control flow optimization,3,3,3
-2026,Eurosys,SJTU,KUNSERVE: Parameter-centric Memory Management for Efficient Memory Overloading Handling in LLM Serving,parameter-centric memory management for coping with memory overloading; online parameter dropping,2,2,3
-2025,OSDI,Stanford,Strata: Hierarchical Context Caching for Long Context Language Model Serving,GPU-assisted I/O for mitigating key-value cache fragmentation; decoupled CPU and GPU memory layouts via on-the-fly transformation,3,3,3
-2026,arXiv,UCSD,SmoothAgent: Efficient Long-Horizon LLM-Based Agent Serving with Lookahead Context Engineering,lookahead context engineering; segment-decomposable transformations; asynchronous transformed kv precompute; slo-aware lookahead scheduling; agent framework integration,4,3,3
+2026,SOSP,PKU & JD,"Janus: Multi-LLM Serving at Production Scale","dual-timescale Steady/Elastic pool scheduling; Gaussian-process capacity and elasticity models; three-dimensional vector bin-packing; xTensor virtual high-bandwidth-memory (HBM) pool for weights and key-value (KV) caches and activations; Active/Warm/Cold model lifecycle; device-to-device weight fork; Latest-Start-Time Iterative Moore-Hodgson (LST-IMH) deadline-aware request scheduling",3,4,4
 
 # #### KV Cache Reuse Systems
 # Solution: reduce redundant computation and high memory consumption during inference by allowing the reuse of previously computed key-value pairs for shared or repeated parts of input sequences.
@@ -706,9 +711,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### RLHF System
 # Challenge: RL system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
+# Related: [GPU-GPU Communication](#gpu-gpu-communication) for the interconnect constraints of trainer-to-rollout weight transfer.
 2025,EuroSys,HKU,HybridFlow: A Flexible and Efficient RLHF Framework,auto-mapping model placement; 3D-HybridEngine to reduce the communication overhead; hybrid programming,4,4,3
 2025,arXiv,Alibaba,Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library,bind many LLMs in one device cluster; fix the batch problem of long tail requests; reuse many utils in HybridFlow,4,4,2
 2025,arXiv,FDU,DistFlow: A Fully Distributed RL Framework for Scalable and Efficient LLM Post-Training,distributed controller for better scalability; fully decoupled DAG-defined RL pipeline; linear scalability,3,3,2
+2026,SOSP,UW-Madison,"TensorHub: Scalable and Elastic Weight Transfer for LLM RL Training","Reference-Oriented Storage (ROS) over application-owned weight replicas; publish/unpublish mutability contract; retention protocol with last-replica CPU offload; topology-aware pipelined remote direct memory access (RDMA) replication; replica-level control-plane transactions; cross-datacenter seeding with smart skipping",4,5,4
 
 # #### Agentic RL System
 # Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
