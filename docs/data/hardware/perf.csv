@@ -23,10 +23,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ISCA,SYSU,Soter: Analytical Tensor-Architecture Modeling and Automatic Tensor Program Tuning for Spatial Accelerators,analytical tensor-architecture model; transformer based optimizer; coordination between analytical modeling and automatic tuning,4,4,2
 # #### Mapping
 # Challenge: Tiling the dataflow graph onto PEs and interconnects while minimizing buffering, balancing load, and meeting throughput/latency targets.
+# Related: See [Tensor & Pipeline Optimization](../software/pl.md#tensor-pipeline-optimization) for tile-graph-based memory scheduling and cross-operator fusion in deep learning compilers.
 2022,OSDI,UCB,Alpa: Automating Inter- and Intra-Operator Parallelism for Distributed Deep Learning,inter-operator parallelisms; intra-operator parallelisms; ILP and DP hierarchical optimization,4,4,2
 2023,MICRO,PKU,TileFlow: A Framework for Modeling Fusion Dataflow via Tree-based Analysis,3D design space of fusion dataflow; tree-based description; tile-centric notation,,,
 2024,ICCD,SYSU,TileMap: Mapping Multi-Head Attention on Spatial Accelerators with Tile-based Analysis,tile-based parallelism analysis; tensor life; RL-based searching algorithm for mapping DSE,3,3,2
 2025,DATE,SYSU,Poros: One-Level Architecture-Mapping Co-Exploration for Tensor Algorithms,gradient-based search in non-smooth space; policy sampling to address non-convexity; batch sampling for faster convergence,4,3,2
+2026,HPCA,SYSU,SFD: Towards Segment Fusion Dataflow for Spatial Accelerators,post-mapping fusion without predefined templates; tensor-lifetime-based greedy network segmentation,4,4,2
 # ### Connection Architecture
 2014,JPDC,Inria,"Versatile, scalable, and accurate simulation of distributed applications and platforms",API based communication&computation description; informed model of TCP for moderate size grids; file based modular network representation technique,,,
 2020,MICRO,Georgia Tech; NVIDIA,"MAESTRO: A Data-Centric Approach to Understand Reuse, Performance, and Hardware Cost of DNN Mappings",data-centric mapping; data reuse analysis; TemperalMap; SpatialMap; analytical cost model,,,
