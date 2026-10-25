@@ -97,8 +97,10 @@ Year,Venue,Authors,Title,Tags,P,E,N
 
 # #### Distributed Tracing
 # Solution: A technique used for monitoring and diagnosing errors in microserves systems by recording full request paths.
+# Challenge: preserve distributed request causality with low tracing overhead while enabling cross-service diagnosis and resource-cost attribution.
 2015,SOSP,Brown,Pivot Tracing: Dynamic Causal Monitoring for Distributed Systems,happened-beforejoin for arbitrary event correlation; dynamic instrumentation; metadata propagation technique baggage,4,3,2
 2017,SOSP,Facebook&Brown,Canopy: An End-to-End Performance Tracing And Analysis System,tracing decouple for separate modeling and analyzing; trace feature extraction pipeline,4,4,2
+2026,SOSP,Google,"QProf: Fleetwide Transitive Cost Profiling of Warehouse-Scale Services","root-initiated invisible skeletal tracing; ambient per-query CPU sampling into trace-context counters; independently sampled batched trace contexts; inverse-probability-weighted batch attribution; remote-procedure-call (RPC) callstack transitive cost aggregation",4,5,4
 
 # ##### Tracing Optimization
 # Challenge: Tradeoff between tracing storage overhead and the effectiveness of preserved data. 
@@ -159,6 +161,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,MLSys,Cornell,Lumos: Efficient Performance Modeling and Estimation for Large-scale LLM Training,trace-driven performance modeling and estimation toolkit; the first system to provide accurate performance models that effectively capture the execution behaviors of LLMs; modify and generate new execution graphs from existing traces,3,4,2
 2026,arXiv,Alibaba,"A Few GPUs, A Whole Lotta Scale: Faithful LLM Training Emulation with PrismLLM",slicing-based execution graph; hybrid emulation with virtual participants; PrismTrace minimal tracing format; context-switching execution,3,3,3
 2026,INFOCOM,NJU,Chameleon: Adaptive Fault Tolerance for Distributed Training via Real-time Policy Selection,dynamic programing based estimator; bipartite graph matching and graph coloring based restorer; heuristic planner,4,4,2
+2026,WWW,ZJU,HeteroSim: Towards High-Fidelity Heterogeneous LLM Training Simulation on GPUs,Roofline-inspired cross-generation compute scaling; NCCL-aligned message-level communication planning; heterogeneity-aware device placement via SA,4,4,2
 
 # ### Thermal Modeling
 # Challenge: precisely capturing the nonlinear, multi-scale and heterogeneous thermal behaviors on different architecture
