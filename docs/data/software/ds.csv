@@ -79,9 +79,11 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: when providing services to users, facing scalability, resource management, fault tolerance, and cost-effectiveness for building and deploying large-scale distributed applications and services.
 
 # ### Cloud Platform LLM Scheduling
-# Challenge: meet the SLO when providing LLM service on cloud platform.
+# Challenge: meet latency and availability service-level objectives (SLOs) despite changing power budgets and uneven regional demand and capacity.
+# Related: [SLO-Aware Systems](#slo-aware-systems) for request scheduling under latency constraints.
 2025,ASPLOS,Azure,TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms,thermal/power property characterization; dynamically adjust in response to power or cooling failures; thermal- and poweraware manner,4,3,2
 2026,ISCA,Meta,Power Sloshing in Compound Servers for Large-Scale AI Inference Workloads,dynamic CPU–GPU power budget reallocation; fast upscaling and gradual downscaling; SLO-Aware utilization targeting,4,4,2
+2026,SOSP,AWS,Taming Inference Workloads at Global Scale: Foundation Model Serving in Amazon Bedrock,bounded-staleness token-bucket admission; consistent-hash quota-writer subsetting; streaming token reconciliation; prompt-cache-stable cross-region routing; stochastic fair queueing (SFQ) and deficit round-robin (DRR); feedback-driven concurrency control,3,5,3
 
 # ### Resource Management in Cloud Platform
 # Challenge: reclaim resources that have been allocated to users but are temporarily idle without affecting user experience
@@ -717,12 +719,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,NTU,ReSpec: Towards Optimizing Speculative Decoding in Reinforcement Learning Systems,spec in RL LLM acceleration; dynamic batch size adjustment in runtime; lets the drafter chase high-reward modes only,4,3,3
 
 # #### RLHF System
-# Challenge: RL system includes both training and inference. On top of that, multi agents(LLMs) when running in parallel, which makes the data flow more complex.
+# Challenge: coordinate trainer and rollout execution and model-weight consistency while containing long-tail delays and failures in reinforcement learning from human feedback (RLHF) and other RL post-training pipelines.
 # Related: [GPU-GPU Communication](#gpu-gpu-communication) for the interconnect constraints of trainer-to-rollout weight transfer.
 2025,EuroSys,HKU,HybridFlow: A Flexible and Efficient RLHF Framework,auto-mapping model placement; 3D-HybridEngine to reduce the communication overhead; hybrid programming,4,4,3
 2025,arXiv,Alibaba,Reinforcement Learning Optimization for Large-Scale Learning: An Efficient and User-Friendly Scaling Library,bind many LLMs in one device cluster; fix the batch problem of long tail requests; reuse many utils in HybridFlow,4,4,2
 2025,arXiv,FDU,DistFlow: A Fully Distributed RL Framework for Scalable and Efficient LLM Post-Training,distributed controller for better scalability; fully decoupled DAG-defined RL pipeline; linear scalability,3,3,2
 2026,SOSP,UW-Madison,"TensorHub: Scalable and Elastic Weight Transfer for LLM RL Training","Reference-Oriented Storage (ROS) over application-owned weight replicas; publish/unpublish mutability contract; retention protocol with last-replica CPU offload; topology-aware pipelined remote direct memory access (RDMA) replication; replica-level control-plane transactions; cross-datacenter seeding with smart skipping",4,5,4
+2026,OSDI,ZJU,RobustRL: Role-based Fault Tolerance System for RL Post-Training,role-phase-aware failure detection; trainer-rollout failure isolation; rollout-backed trainer warm standbys; per-step asynchronous checkpointing; dynamic Unified Communication X (UCX) GPU-to-GPU weight synchronization; relay-assisted rollout weight synchronization,3,4,4
 
 # #### Agentic RL System
 # Challenge: multi-agent systems require efficient communication and coordination among agents, which can lead to increased complexity and overhead in system design and implementation.
