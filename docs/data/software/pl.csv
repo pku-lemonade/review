@@ -79,6 +79,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # #### Cross-Kernel Data Movement and Launch Optimization
 # Challenge: Even after kernel generation and fusion, tensor materialization, parameter staging, and repeated CPU launches can dominate execution at kernel boundaries.
 # Solution: Use compiler-managed tensor mappings and graph-capture transformations to remove physical transfers, amortize launches, and selectively retain only profitable cross-kernel optimizations.
+2024,OSDI,USYD,MonoNN: Enabling a New Monolithic Optimization Space for Neural Network Inference Tasks on Modern GPU-Centric Architectures,instruction-level parallelism; global thread barrier merging,4,4,2
 2026,OSDI,UIUC,VTC: DNN Compilation with Virtual Tensors for Data Movement Elimination,virtual tensor index mapping; partially contiguous global-memory I/O; virtual tensor opportunity graph (VTOG); points-to graph construction; profile-guided global greedy virtualization,4,4,4
 2026,OSDI,IISc,GraCE: Unlocking CUDA Graphs with Compiler Support for ML Workloads,CUDA Graph-aware code transformation (CGCT); kernel parameter indirection; vendor-kernel prelude update; selective CUDA Graph profiling,4,5,3
 
