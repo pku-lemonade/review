@@ -212,11 +212,18 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,HKU & ByteDance,Scaling Law for Quantization-Aware Training,a mathematical model for QAT quantization error,4,4,4
 # ### DNN Compression
 # Solution: DNN compression aims to reduce the size and computational requirements of deep neural networks
+# #### Lossy Model Compression
+# Challenge: reduce model size and computation through pruning or approximate weight representations while controlling accuracy loss.
 2016,ICLR,Stanford,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding","three stage pipeline: pruning, trained quantization and Huffman coding",4,4,4
 2020,JSTSP,Fraunhofer HHI,DeepCABAC: A Universal Compression Algorithm for Deep Neural Networks,identify set of priors in DNN; redefine CABAC's core scheme to capture priors,3,5,3
 2022,ICLR,Samsung,Language model compression with weighted low-rank factorization,fisher-weighted frobenius norm; alternating least squares (ALS) for matrix factorization,4,4,4
+
+# #### Lossless Model Weight Compression
+# Challenge: preserve bit-exact model weights while reducing stored bytes and avoiding reconstruction bottlenecks during model retrieval or execution.
+# Related: [Storage Systems](os.md#storage-systems) for storage layout and retrieval mechanisms.
 2026,ISCA,NUS,Approaching Shannon Bound with Lossless LLM Weight Compression,information-theoretic entropy profiling across BF16 FP8 INT8 INT4 and quantized LLM weights; tile-addressable Asymmetric Numeral Systems (ANS) compression aligned with GEMM tiling; warp-cooperative on-the-fly decompression fused into GPU GEMM; SGLang multi-GPU integration without global-memory materialization,4,4,4
 2026,ISCA,ICT/CAS,ENEC: A Lossless AI Model Compression Method Enabling Fast Inference on Ascend NPUs,block-based fixed-length lossless weight encoding; hierarchical halving bit-packing after bit-width quantization; vectorized branch-free integer transformation; dependency-decoupled intra-segment scan on Ascend NPUs,4,5,2
+2026,SOSP,UVA,"TensorDex: A Compact, Tensor-Centric Storage System for Modern AI Models",tensor-granularity cross-model delta compression; bit-level CountSketch fingerprints (TensorSketch); entropy-aware compressibility prediction (TensorPred); incremental multi-center base selection (FlexSplit); single-hop base-delta reconstruction; vectorized exclusive-or (XOR) and byte-plane codecs,4,4,4
 
 # ### Statistical Parameter Estimation
 # Solution: infer the distribution of variables using statistical methods from observed data
