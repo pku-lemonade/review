@@ -15,6 +15,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,arXiv,UCSD,HAVEN: High-Bandwidth Flash Augmented Vector Engine for Large-Scale Approximate Nearest-Neighbor Search Acceleration, add a near-storage reranking in HBF base die as NMP engine; detailed HBF energy-latency and BW modeling based on thermal simulation,5,4,2
 2026,HotChips,Oxmiq Labs,HBF in AI Compute - A System Architect’s view,cost-model based HBF benefit analysis; potential benefits are on low-batch single-card long-context scenarios,3,4,2
 2026,arXiv,Connecticut,HBFSim: Fast and Faithful Simulation of High-Bandwidth Flash Under Real GPU Execution,"extended GPGPU simulator; simulating timing, capacity, and thermal effects of HBF on real workloads;",2,3,5
+2026,arXiv,SK Hyrix,HyPAIC: Personal AI Computer with High Bandwidth Flash for High Performance Trillion-Parameter LLM Inference, LPDDR-HBF heterogeneous system; workload exploration that is suitable for the HBF on DGX-spark like system,2,2,5
 # #### HBF for Weight Offloading Only
 # Challenge: HBF has much higher latency compared to HBM, so naively reading weights will slow down the prefill.
 2026,IEEE CAL,SK Hyrix,H3: Hybrid Architecture Using High Bandwidth Memory and High Bandwidth Flash for Cost-Efficient LLM Inference, first-gen HBF specification; HBF-HBM hybrid data layout for NAND writing optimiations,4,4,5
@@ -61,8 +62,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2022,ISCA,Micron,To PIM or Not for Emerging General Purpose Processing in DDR Memory Systems, vector engine inside NDP bank; intelligent code offload decision,2,3,2
 2024,ISCA,Samsung,pSyncPIM: Partially Synchronous Execution of Sparse Matrix Operations for All-Bank PIM Architectures,partially synchronous PIM control; predicated execution; sparse matrix distribution & compaction,3,3,3
 2025,ATC,RUC,Turbocharge ANNS on Real Processing-in-Memory by Enabling Fine-Grained Per-PIM-Core Scheduling,per-PU scheduling; persistent PIM kernel; per-PU dispatching with selective replication,3,4,4
-2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
 2025,IEEE CAL,ICT,Exploring the DIMM PIM Architecture for Accelerating Time Series Analysis,matrix profile acceleration on UPMEM; DPU pipeline with Wallace tree multiplier and MAC unit,3,3,2
+2027,HPCA,ICT,GSPIM: A Temporal-Locality-Aware 4D Gaussian Splatting Accelerator with Polymorphic PIM and Multi-Frame Rendering Dataflow, bank- and die-level data compaction and datapath; multi-frame hybrid rendering dataflow scheduling,3,3,3
 # #### DNN-Specific Optimization
 2021,HPCA,Seoul National,GradPIM: A Practical Processing-in-DRAM Architecture for Gradient Descent,fixed-function PIM architecture for DNN gradient descent; non-invasive PIM operations using reserved DDR commands,3,3,2
 2024,ASPLOS,PKU,PIM-DL: Expanding the Applicability of Commodity DRAM-PIMs for Deep Learning via Algorithm-System Co-Optimization,algorithm for DNN to look-up-table conversion; auto-tuner for optimizing LUT-NN mapping on DRAM-PIMs,3,4,3
@@ -76,6 +77,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Solution: Reorganize graph data and execution around graph-aware partitions, structured batched communication, and overlapped local computation to exploit 3D-stacked PIM bandwidth efficiently.
 2018,HPCA,THU & USC,GraphP: Reducing Communication for PIM-based Graph Processing with Efficient Data Partition,source-cut partitioning; Two-Phase Vertex Program; GenUpdate and ApplyUpdate APIs; hierarchical communication and overlapping,4,3,4
 2019,MICRO,USC,GraphQ: Scalable PIM-Based Graph Processing,batched inter-cube communication; rounded execution; heterogeneous Process Unit and Apply Unit cores; hybrid execution model for inter-node latency,4,3,4
+2025,HPCA,UC Davis,NOVA: A Novel Vertex Management Architecture for Scalable Graph Processing,message-driven processors capable of executing algorithms; a direct-mapped cache with a write-back policy; support both asynchronous and bulk synchronous parallel execution models,3,3,3
 # #### Bank-Level PIM Graph Processing
 # Challenge: Graph processing is fundamentally limited by memory bandwidth and requires frequent random accesses, which are not efficiently supported by non-interleaved, bank-level PIM architectures.
 # Solution: Adapt PIM mapping, host cooperation, and fine-grained memory-side operations to graph-specific access patterns and graph neural network pipelines.
