@@ -44,10 +44,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2023,ASPLOS,UToronto,Hidet: Task-Mapping Programming Paradigm for Deep Learning Tensor Programs,task-mapping based programming; hardware-centric schedule space; post-scheduling operator fusion,4,4,3
 
 # #### Distributed Deep Learning Compilers
-# Challenge: Distributed deep learning compilers must expose inter-device data movement and coordinate it with local tensor computation; treating communication as opaque whole-kernel collectives limits automatic optimization and fine-grained overlap.
-# Solution: Make remote memory accesses and communication schedules explicit in compiler intermediate representations (IRs), then synthesize hardware-aware point-to-point transfers, collectives, and fused multi-GPU kernels.
+# Challenge: Distributed deep learning compilers must map high-level tensor programs to efficient local GPU kernels while exposing inter-device data movement; treating communication as opaque whole-kernel collectives limits fine-grained scheduling and compute-communication overlap.
+# Solution: Expose computation phases and remote data dependencies in compiler abstractions, then synthesize hardware-aware kernels and communication schedules with tile- or chunk-level overlap.
+# Related: See [Linear Attention State Capacity and Retention](algorithm.md#linear-attention-state-capacity-and-retention) for model designs whose recurrent state updates motivate specialized kernel compilation.
 2025,SOSP,Meta,Mercury: Unlocking Multi-GPU Operator Optimization for LLMs via Remote Memory Scheduling,loop-based intermediate representation for distributed operators; remote GPU memory scheduling as an explicit memory-hierarchy layer; collective communication synthesis from shard and replicate annotations,4,4,3
 2026,OSDI,Meta,Syncopate: Efficient Multi-GPU AI Kernels via Automatic Chunk-Centric Compute-Communication Overlap,chunk-based communication abstraction for reusable point-to-point and collective schedules; communication-driven tile scheduling for overlapping data transfer with computation inside a fused kernel,4,4,3
+2026,ICLR,ByteDance,FlexLinearAttention: Compiling a Unified Abstraction into Scalable Kernels for Linear Attention,three-phase domain-specific language (DSL) for linear attention; Torch.fx lowering to Triton-Distributed; tile-level compute-communication fusion; ahead-of-time compilation with static kernel dispatch,4,4,4
 
 # #### Tile-Based GPU Kernel DSLs
 # Challenge: GPU programmers need concise tile-level abstractions while retaining enough control over memory hierarchy, asynchronous execution, and launch structure to approach hand-tuned kernel performance.
