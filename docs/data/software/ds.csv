@@ -84,13 +84,20 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,ISCA,Meta,Power Sloshing in Compound Servers for Large-Scale AI Inference Workloads,dynamic CPU–GPU power budget reallocation; fast upscaling and gradual downscaling; SLO-Aware utilization targeting,4,4,2
 
 # ### Resource Management in Cloud Platform
-# Challenge: reclaim resources that have been allocated to users but are temporarily idle without affecting user experience
+# Challenge: recover idle or stranded compute capacity while respecting workload priorities, placement constraints, and service guarantees.
+# Related: [Cloud Storage Cost and Resource Management](#cloud-storage-cost-and-resource-management) for storage-side resource sharing and cost trade-offs.
 2021,EuroSys,Stanford,SmartHarvest: harvesting idle CPUs safely and efficiently in the cloud,ElasticVM for dynamically harvesting; cost-sensitive multi-class classification; two-level safeguard mechanism,3,4,2
 2022,ASPLOS,Stanford,SOL: Safe On-Node Learning in Cloud Platforms,model and actuator decoupled interface; watchdog-style safeguards to avoiding bad models,3,3,2
 2022,ASPLOS,Microsoft,Memory-Harvesting VMs in Cloud Platforms,contiguous large-page reclamation; NUMA-aware memory resizing; pre-reclamation and batching; proactive application notification,4,4,2
+2025,ASPLOS,Illinois,Coach: Exploiting Temporal Patterns for All-Resource Oversubscription in Cloud Platforms,time-window-based predictive scheduling; temporal pattern multiplexing; two-level contention forecasting,4,4,2
+2026,OSDI,HKUST,Heterogeneity at Hyperscale: Characterization and Scheduling of Large Production AI Clusters at Alibaba (Operational Systems),multi-vendor production GPU trace; iterative partition consolidation with bounded-depth ejection chains; standby-capacity harvesting; checkpoint-cost-aware spot-job preemption,3,5,3
+
+# ### Cloud Storage Cost and Resource Management
+# Challenge: lower cloud storage cost through resource sharing or cheaper durability substrates while preserving the required isolation and service guarantees.
+# Related: [Resource Management in Cloud Platform](#resource-management-in-cloud-platform) for compute-side capacity reclamation under service guarantees.
 2022,OSDI,UIUC,BlockFlex: Enabling Storage Harvesting with Software-Defined Flash in Modern Cloud Platforms,software-defined flash; LSTM-based online prediction; transparent block-level mapping,4,4,2
 2025,ASPLOS,Illinois,FleetIO: Managing Multi-Tenant Cloud Storage with Multi-Agent Reinforcement Learning,dynamic storage harvesting & I/O scheduling; workload-aware reward fine-tuning; ghost superblock (gSB) abstraction,4,4,2
-2025,ASPLOS,Illinois,Coach: Exploiting Temporal Patterns for All-Resource Oversubscription in Cloud Platforms,time-window-based predictive scheduling; temporal pattern multiplexing; two-level contention forecasting,4,4,2
+2026,OSDI,Confluent,The LogDrive: Composable Durability for Cloud-Based Shared Logs,bounded-hole weak tail discovery; single-value-register durability abstraction; quorum replication and striping over cloud storage; soft-state sequencing with virtual-log reconfiguration,3,5,4
 
 # ### LLM for Cloud Networks
 # Challenge: leverage LLMs to process massive, noisy, and multi-modal telemetry data for accurate diagnosis and management in complex, dynamic cloud environments
@@ -247,6 +254,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,Miscrosoft,Zorse: Optimizing LLM Training Efficiency on Heterogeneous GPU Clusters,heterogeneous pipeline stages with flexible GPU counts and types; CPU offloading of both parameters and activations,4,4,2
 2025,SIGCOMM,PKU,InfiniteHBD: Building Datacenter-Scale High-Bandwidth Domain for LLM with Optical Circuit Switching Transceivers,optical circuit switching; node-level fault isolation; optimize TP in DCN network,4,3,3
 2026,OSDI,UC Berkeley,UEP: Portable Expert-Parallel Communication,GPU-initiated token routing through multithreaded CPU proxies; lock-free GPU-CPU command queues; immediate-data-based completion fences and partial delivery ordering; direct GPU-to-GPU payload transfer via remote direct memory access (RDMA),3,4,4
+2026,SOSP,USC,StreamEP: Straggler-Tolerant MoE Decoding without Communication Barriers,per-layer token queues for asynchronous mixture-of-experts decoding; defragmenting scheduler for partial-batch consolidation; fused batch reformation; two-phase variable-size point-to-point communication,4,4,4
 
 
 # ## Many-Core Systems
