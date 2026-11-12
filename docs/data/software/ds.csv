@@ -488,6 +488,8 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,THU,Enhancing Memory Efficiency in Large Language Model Training Through Chronos-aware Pipeline Parallelism,chronos-aware pipeline parallelism; temporal locality optimization; activation balancing,,,
 2025,arXiv,NUS,PipeOffload: Improving Scalability of Pipeline Parallelism with Memory Optimization,selective offload strategy; memory offload optimization; pipeline parallelism scalability; lifespan-based offloading,,,
 2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
+2026,FAST,NUDT,AdaCheck: An Adaptive Checkpointing System for Efficient LLM Training with Redundancy Utilization,tensor redundancy detection via ring-based comparison; redundancy-aware checkpoint selection; gradient-based incremental checkpointing with remote CPU optimizer updates,4,4,2
+2026,EuroSys,NUS&ByteDance,Handling Network Faults in Distributed AI Training: Failover is Now an Option,software bonding for primary-backup RDMA failover; sender-receiver state synchronization for safe failover and recovery; dynamic channel rebalancing,3,4,2
 
 # #### Pipeline Workload and Overlap Co-Optimization
 # Challenge: Variable workloads and heterogeneous layers make serial-cost pipeline partitions imbalanced after communication is overlapped with computation.
