@@ -66,6 +66,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2026,CGO,UToronto,Hexcute: A Compiler Framework for Automating Layout Synthesis in GPU Programs,CuTe style data layout synthesis; type-inference-based thread-value layout propagation; alignment-aware shared-memory layout unification,4,5,4
 2026,OSDI,Stanford & NVIDIA,Optimal Software Pipelining and Warp Specialization for Tensor Core GPUs,Twill joint software-pipelining and warp-specialization formulation; modulo-schedule integer linear program; warp-assignment satisfiability modulo theories constraints; register-aware cross-warp spill modeling; architecture-parametric operation costs,4,4,4
 2026,SOSP,HKUST,Ave: Guiding Agentic GPU Optimization Using Data-Flow Invariants,data-flow invariant-guided agentic GPU kernel optimization; MLIR abstract interpretation and SMT-based layout checking; in-context reinforcement learning (ICRL) planner,3,4,3
+2026,arXiv,PKU,PipeLink: Contract-Guided Linking of GPU Kernel Components,component contracts for separate compilation; satisfiability modulo theories for joint on-chip resource placement; layout-guided tensor transfer synthesis,4,3,4
 
 # #### Tensor & Pipeline Optimization
 # Challenge: Optimizing complete tensor workloads requires coordinating memory traffic, fusion, and execution pipelines across operators rather than tuning each isolated tile kernel independently.
