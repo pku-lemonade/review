@@ -250,6 +250,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,UOregon,Parallel I/O Characterization and Optimization on Large-Scale HPC Systems: A 360-Degree Survey,different HPC I/O stack layers; profiling and tracing tools; tuning echniques,,,
 2025,arXiv,ETH,TeraAgent: A Distributed Agent-Based Simulation Engine for Simulating Half a Trillion Agents,IO optimization for large scale agent simulation; distributed agent simulation engine; communication optimization for agent scenarios,3,2,2
 2026,OSDI,HKUST(GZ),CoPilotIO: CPU as a Co-Pilot for GPU I/O to Free GPU Compute,CPU-assisted GPU I/O; GPU-initiated asynchronous I/O; split submission/completion queues; hardware-barrier completion synchronization; adaptive CPU-GPU co-polling,4,4,2
+2026,SC,UH,BatchFlow: Benefit-Aware Data Pipeline Allocation and Batch Reuse for Multi-Job Training,consumption-to-preparation-rate lookahead sizing; normalized target-coverage worker allocation; shared mini-batch task deduplication; demand-cost-shortage batch-value scoring for prefetch and cache retention; epoch-sequence assignment for cross-job reuse,3,4,2
 
 # ### GPU-GPU Communication
 # Challenge: intra- and inter-node GPU communication must overcome bandwidth limits, synchronization overhead, and load imbalance while preserving correct delivery semantics across heterogeneous accelerators and interconnects.
@@ -499,6 +500,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,EuroSys,UToronto,Mist: Efficient Distributed Training of Large Language Models via Memory-Parallelism Co-Optimization,fine-grained overlap-centric scheduling; symbolic-based performance analysis; imbalance-aware hierarchical tuning,4,4,2
 2025,arXiv,ByteDance,veScale: Consistent and Efficient Tensor Programming with Eager-Mode SPMD,guaranteed single device consistency; zero overhead tensor alloc mode; fused communication,3,3,3
 2025,PPoPP,THU,WeiPipe: Weight Pipeline Parallelism for Communication-Effective Long-Context Large Model Training,weight-passing pipeline parallelism; long-context training; communication optimization,4,4,2
+2026,SC,HKUST & THU,"OctoPipe: Reducing Pipeline Bubbles for Heterogeneous Models via Co-Optimizing Partitioning, Placement, and Scheduling",graph-based pipeline simulation with computation and communication and memory nodes; bubble-aware joint tuning of partitioning and placement and scheduling; stage dispersion and layer exchange; selective weight-gradient advancement for peak-memory control; dependency-graph-driven execution with deadlock-free overlap-aware communication reordering,4,4,4
 
 # #### Optimizations on Special Scene
 2025,arXiv,HKU,Hecate: Unlocking Efficient Sparse Model Training via Fully Sharded Sparse Data Parallelism,Fully Sharded Sparse Data Parallelism (FSSDP); sparsely materializes MoE parameters; two sparse collective communications,,,
@@ -680,6 +682,7 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,arXiv,HKUST,Improving the End-to-End Efficiency of Offline Inference for Multi-LLM Applications Based on Sampling and Simulation,sampling-then-simulation cost model; model-level pipeline parallelism; minimumtotal-latency application scheduling,4,4,3
 2025,EuroSys,SJTU,TokenFlow: Responsive LLM Text Streaming Serving under Request Burst via Preemptive Scheduling,brust scene target; tradeoff between TTFT and throughout; slowdown some TOT to human's read speed,4,3,2
 2026,OSDI,Edinburgh,BatchGen: An Architecture for Scalable and Efficient Batch Inference,event-driven sequence coroutines with yield/combine/partition/migrate primitives; attention-expert module-level batch accumulation; host-backed paged key-value (KV) state management; dynamic tensor-parallel straggler acceleration; profile-guided execution-plan search,4,4,4
+2026,SOSP,Alibaba & SJTU,Batched in Back: Characterizing and Optimizing Offline LLM Inference in Production with ACDC,task-sampled tensor/data/expert parallelism selection with rotating-host reconfiguration; prefix-tree depth-first scheduling and last-use eviction of key-value (KV) state and image embeddings; batch-size-aware speculative decoding; probability-guided offline chunk scheduling into online prefill bubbles with KV-capacity reservation; separate online and offline decode pools,4,5,4
 
 # #### MTP LLM Systems
 # Challenge: Traditional autoregressive LLM is slow, MTP, multi-token parallel, can speed up the inference. The challenge include how to tradeoff between throughput and accuracy.
