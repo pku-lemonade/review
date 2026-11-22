@@ -18,11 +18,14 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,NeurIPS,PKU,Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction,VAR modeling with next-scale prediction; multi-scale quantization for coarse-to-fine tokenization; power-law scaling laws for visual AR models,4,5,5
 
 # #### Linear Attention State Capacity and Retention
-# Challenge: Fixed-size recurrent states limit long-context recall; increasing state capacity or enriching decay must preserve affordable per-token computation and parallel training.
-# Solution: Expand memory through sparse addressing or improve retention through structured higher-rank decay and chunk-wise parallel state updates.
+# Challenge: Fixed-size recurrent states limit long-context recall; expanding capacity or refining state updates must preserve affordable per-token computation and parallel training.
+# Solution: Expand memory with sparse addressing or hierarchical state buckets. Improve retention with structured decay or independent erase and write gates while retaining chunkwise parallel training.
 # Related: See [Distributed Deep Learning Compilers](pl.md#distributed-deep-learning-compilers) for compiling linear-attention state propagation into GPU kernels with compute-communication overlap.
+# Related: See [Tiling Optimizations](ds.md#tiling-optimizations) for reducing recurrent-state traffic with tiled linear-attention kernels.
 2026,ICLR,CASIA,Householder-Diagonalized Linear Attention (HDLA): Utilizing Enhanced Decay Mechanism for Efficient Sequence Modeling,Householder-diagonalized decay; diagonal-plus-rank-2 state transitions; rank-generalized chunk-wise parallel algorithm,3,4,4
+2026,ICLR,MIT,Log-Linear Attention,Fenwick-tree partitioning with logarithmically growing recurrent state; input-dependent weighting of memory levels; hierarchical low-rank causal mask; chunkwise parallel scan in Triton,4,4,4
 2026,NeurIPS,Meta,Sparse Delta Memory: Scaling the State of Linear RNNs through Sparsity,product-key top-k sparse memory addressing; selected-slot gated delta updates; learned initial memory state; sparse-update rollback for memory-efficient backpropagation,4,4,4
+2026,NeurIPS,NVIDIA,Gated DeltaNet-2: Decoupling Erase and Write in Linear Attention,independent key-channel erase and value-channel write gates; channel-wise state decay; compact WY representation of asymmetric rank-one updates for chunkwise training; gate-aware Triton backward pass,4,4,4
 
 # #### LLM Algorithm
 # Solution: enable ai chat with human, some people think is the way to AGI.

@@ -825,10 +825,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 # Challenge: GPU kernel optimizations can significantly improve the performance of systems by reducing computation time and memory usage.
 
 # #### Tiling Optimizations
+# Challenge: Attention kernels must fit working tiles in on-chip SRAM while limiting high-bandwidth memory (HBM) traffic.
 # Solution: Tiling is a common optimization technique that can improve data locality and reduce memory access overhead.
+# Related: See [Distributed Deep Learning Compilers](pl.md#distributed-deep-learning-compilers) for FlexLinearAttention's compilation of chunkwise linear attention.
 2022,NIPS,Stanford,FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness,Generalized Acceleration of Attention Mechanisms; Change attention to utilize the SRAM on GPU; use recompute to reduce IO burden; matrix tiling with online softmax,4,5,4
 2023,ICLR,Stanford,FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning,optimize the thread block parallelization of attention; parallel memory access; reduce no-malmul operation; sequence parallelism; warp-level split-Q optimization,4,4,3
 2024,Nips,Stanford,FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision,Hopper architecture based optimization; fp8 quantization; backward support,3,3,3
+2025,NeurIPS,JKU & NXAI,Tiled Flash Linear Attention: More Efficient Linear RNN and xLSTM Kernels,chunkwise state propagation; intra-chunk sequence tiling; fused local and recurrent-state matrix multiplications; sigmoid mLSTM input gate without max and normalizer states,4,4,4
 
 # #### GPU level kernel svcheduling optimizations
 # Solution: GPU kernel scheduling optimizations can improve the performance of systems by reducing kernel launch overhead
