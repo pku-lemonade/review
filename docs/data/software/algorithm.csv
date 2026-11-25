@@ -37,6 +37,13 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2024,ACL,Meta,LayerSkip: Enabling Early Exit Inference and Self-Speculative Decoding,layer dropout with shared-head early exit; self-speculative decoding; KVQ cache reuse,4,4,4
 2024,arXiv,Princeton & UIUC,Medusa: Simple LLM Inference Acceleration Framework with Multiple Decoding Heads,medusa heads appended to the last layer; medusa-2 joint training,4,4,4
 
+# ##### Runtime Optimization for Speculative Decoding
+# Serial draft–verify rounds expose draft latency, and shifts in draft–target agreement can make fixed draft budgets and fixed drafters waste work.
+# See [Speculative Decoding](#speculative-decoding) for the decoding algorithms and [Speculative Decoding Accelerators](../hardware/accelerators.md#speculative-decoding-accelerators) for hardware implementations.
+2026,ICLR,Stanford,Speculative Speculative Decoding,lossless asynchronous drafting across verification outcomes; geometric fan-out over accepted lengths and bonus tokens; cache-aware draft sampling; batch-size-aware cache-miss fallback,4,4,4
+2026,ICML,NJU,When Drafts Evolve: Speculative Decoding Meets Online Learning,verification feedback for online draft adaptation; dynamic regret bound on decoding speedup; previous-gradient hints for Hydra; exponentially weighted EAGLE draft ensembles; preference updates for lookahead reasoning,4,4,4
+2026,arXiv,Cambridge & Samsung AI Center,"Margins, Not Windows: Training-Free Per-Step Lossy Speculative Decoding","first-mismatch target probability-ratio verification; per-step tree depth, width, and node budget from draft confidence and rolling acceptance; pre-captured CUDA graphs for draft-tree shapes",4,4,4
+
 # ##### LLM Inference Based on Activation Sparsity 
 # Solution: Activation sparsity-based LLM inference aims to optimize the computational efficiency of large language models by leveraging the inherent sparsity in their activations, allowing for reduced resource consumption during inference.
 2023,ICML,Rice,Deja Vu: Contextual Sparsity for Efficient LLMs at Inference Time,asynchronous lookahead predictor; hardware-aware contextual sparsity; layer-wise activation similarity,3,4,4
