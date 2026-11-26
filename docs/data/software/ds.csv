@@ -83,6 +83,12 @@ Year,Venue,Authors,Title,Tags,P,E,N
 2025,ASPLOS,Azure,TAPAS: Thermal- and Power-Aware Scheduling for LLM Inference in Cloud Platforms,thermal/power property characterization; dynamically adjust in response to power or cooling failures; thermal- and poweraware manner,4,3,2
 2026,ISCA,Meta,Power Sloshing in Compound Servers for Large-Scale AI Inference Workloads,dynamic CPU–GPU power budget reallocation; fast upscaling and gradual downscaling; SLO-Aware utilization targeting,4,4,2
 
+# ### Machine Learning on Preemptible GPU Instances
+# Challenge: Low-cost cloud GPU instances can be reclaimed on short notice. Distributed training and serving systems must adapt their parallel configurations and migrate state quickly enough to limit lost work and tail latency.
+# Related: [Cloud Platform LLM Scheduling](#cloud-platform-llm-scheduling) for serving under infrastructure constraints and [ML Training Systems](#ml-training-systems) for distributed training recovery.
+2024,ASPLOS,CMU,SpotServe: Serving Generative Large Language Models on Preemptible Instances,"adaptive data, pipeline, and tensor parallelism; Kuhn-Munkres device matching to reuse model weights and key-value (KV) cache; memory-bounded progressive context migration; token-level inference recovery within the preemption grace period",4,4,3
+2024,NSDI,CMU,"Parcae: Proactive, Liveput-Optimized DNN Training on Preemptible Instances",spot capacity forecasting with autoregressive integrated moving average (ARIMA); Monte Carlo preemption sampling; dynamic programming for liveput (expected training throughput under preemption); pipeline-aware live migration,4,3,3
+
 # ### Resource Management in Cloud Platform
 # Challenge: recover idle or stranded compute capacity while respecting workload priorities, placement constraints, and service guarantees.
 # Related: [Cloud Storage Cost and Resource Management](#cloud-storage-cost-and-resource-management) for storage-side resource sharing and cost trade-offs.
